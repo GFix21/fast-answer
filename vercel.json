@@ -21,6 +21,14 @@
   ],
   "rewrites": [
     {
+      "source": "/dojo",
+      "destination": "/dojo.html"
+    },
+    {
+      "source": "/dojo/",
+      "destination": "/dojo.html"
+    },
+    {
       "source": "/directions",
       "destination": "/directions.html"
     },
