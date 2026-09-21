@@ -45,8 +45,18 @@ export default async function handler(req, res) {
     cur.buzzes = cur.buzzes || [];
     cur.buzzes.push({ name: body.name, at: Date.now() });
     if (!cur.state.buzzed) {
-      cur.state = { ...cur.state, buzzed: true, buzzBy: body.name, phase: "answer" };
+      cur.state = { ...cur.state, buzzed: true, buzzBy: body.name, buzzId: body.id || "", phase: "answer" };
     }
+    rooms.set(code, cur);
+  } else if (body.action === "map") {
+    cur.state = cur.state || {};
+    cur.state.maps = { ...(cur.state.maps || {}) };
+    if (body.target) cur.state.maps[body.id] = body.target;
+    else delete cur.state.maps[body.id];
+    rooms.set(code, cur);
+  } else if (body.action === "wager") {
+    cur.state = cur.state || {};
+    cur.state.lastWager = { id: body.id, side: body.side, amount: body.amount, at: Date.now() };
     rooms.set(code, cur);
   }
   res.status(200).end(JSON.stringify(rooms.get(code)));

@@ -13,6 +13,9 @@ const POSE = {
   win: "./jeremy/jeremy-win.png",
   loss: "./jeremy/jeremy-loss.png",
 };
+const TITLE_3D = "./promo/fast-answer-3d-flying.jpg";
+const FLOW_URL = "https://gmgbrand.vercel.app/flow";
+const PROFILE_KEY = "fa-profile-v1";
 const READ_S = 10;
 const POINTS = { easy: 100, hard: 500, difficult: 1000, extreme: 5000 };
 const DEAL = { easy: 20, hard: 10, difficult: 5, extreme: 2 };
@@ -23,16 +26,46 @@ const LOCKDOWN_Q = 500;
 const WAGER_S = 60;
 const WAGER_AMTS = [100, 500, 1000];
 const LETTERS = "ABCD";
+const PLACE_N = 10;
+const PLACE_MS = 90 * 24 * 60 * 60 * 1000;
+const TIER_LADDER = ["easy", "hard", "difficult", "extreme"];
+const BELT_ORDER = ["white", "yellow", "orange", "green", "blue", "purple", "brown", "black"];
+const BELT_META = {
+  white: { label: "White", color: "#f5f5f5" },
+  yellow: { label: "Yellow", color: "#f5d76e" },
+  orange: { label: "Orange", color: "#e67e22" },
+  green: { label: "Green", color: "#27ae60" },
+  blue: { label: "Blue", color: "#3498db" },
+  purple: { label: "Purple", color: "#9b59b6" },
+  brown: { label: "Brown", color: "#8b5a2b" },
+  black: { label: "Black", color: "#1a1a1a" },
+};
+const ABILITY_META = {
+  bronze: { label: "Bronze", color: "#cd7f32" },
+  silver: { label: "Silver", color: "#c0c0c0" },
+  gold: { label: "Gold", color: "#f5d76e" },
+};
+
+/** Celebrity first-name bots fill empty seats (2–12). Skill + buzz delay like the old dojo AI. */
+const CELEB_BOTS = [
+  { id: "oprah", name: "Oprah", skill: 0.62, buzzDelayMs: [900, 2400], blurb: "Composed. Reads the room." },
+  { id: "elton", name: "Elton", skill: 0.55, buzzDelayMs: [1200, 3000], blurb: "Showy. Fashionably late." },
+  { id: "serena", name: "Serena", skill: 0.6, buzzDelayMs: [700, 1800], blurb: "Competitive. First strike." },
+  { id: "usain", name: "Usain", skill: 0.48, buzzDelayMs: [500, 1400], blurb: "Fastest buzz. Coin-flip answers." },
+  { id: "adele", name: "Adele", skill: 0.58, buzzDelayMs: [1100, 2600], blurb: "Holds the note." },
+  { id: "idris", name: "Idris", skill: 0.61, buzzDelayMs: [1000, 2200], blurb: "Cool under lights." },
+  { id: "keanu", name: "Keanu", skill: 0.5, buzzDelayMs: [1400, 3200], blurb: "Chill. Occasionally lethal." },
+  { id: "zendaya", name: "Zendaya", skill: 0.56, buzzDelayMs: [800, 2100], blurb: "Poised, then pounces." },
+  { id: "rihanna", name: "Rihanna", skill: 0.52, buzzDelayMs: [750, 2000], blurb: "Works. Works. Works." },
+  { id: "denzel", name: "Denzel", skill: 0.64, buzzDelayMs: [1000, 2400], blurb: "Precision over panic." },
+  { id: "meryl", name: "Meryl", skill: 0.66, buzzDelayMs: [1300, 2800], blurb: "Never first. Rarely wrong." },
+];
+
 const $ = (s, r = document) => r.querySelector(s);
 const params = new URLSearchParams(location.search);
 const role = params.get("role") || (params.get("pad") ? "pad" : "host");
 const joinCode = (params.get("room") || "").toUpperCase();
 const ROOM_API = location.pathname.includes("/fast-answer") ? "/api/fa/rooms" : "/api/rooms";
-
-const BOTS = [
-  { id: "hammond", name: "Hammond" },
-  { id: "may", name: "May" },
-];
 
 const state = {
   phase: "lobby",
@@ -61,6 +94,14 @@ const state = {
   rules: false,
   aiBuzzT: null,
   spent: new Set(),
+  playerCount: Math.min(12, Math.max(2, Number(localStorage.getItem("fa-seats") || 3))),
+  lobbyOpen: "room",
+  profile: null,
+  dojo: null,
+  seatBots: [],
+  guests: [],
+  tally: { correct: 0, wrong: 0 },
+  joinInput: "",
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
@@ -91,10 +132,7 @@ function escapeHtml(s) {
   return d.innerHTML;
 }
 function currentQ() {
-  if (state.lockdown && state.lockdown.phase === "play") {
-    return state.lockdown.qs[state.lockdown.qi] || null;
-  }
-  if (state.lockdown && state.lockdown.phase === "flash") {
+  if (state.lockdown && (state.lockdown.phase === "play" || state.lockdown.phase === "flash")) {
     return state.lockdown.qs[state.lockdown.qi] || null;
   }
   return state.qs[state.i] || null;
@@ -107,7 +145,6 @@ function shuffle(a) {
   }
   return x;
 }
-/** Deal show size from weekly pool: random within tier (20/10/5/2). */
 function deal(all) {
   const by = (t) => shuffle(all.filter((q) => q.tier === t));
   return [
@@ -134,6 +171,137 @@ function playSound(kind) {
     a.volume = 0.55;
     void a.play();
   } catch { /* ignore */ }
+}
+function clamp(n, lo, hi) {
+  return Math.max(lo, Math.min(hi, n));
+}
+function uid() {
+  return (crypto.randomUUID && crypto.randomUUID()) || `p-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+function emptyStats() {
+  return { gamesPlayed: 0, totalPoints: 0, correctAnswers: 0, wrongAnswers: 0, bestScore: 0 };
+}
+function beltFromPoints(pts) {
+  const n = Math.max(0, pts || 0);
+  if (n >= 4200) return "black";
+  if (n >= 3600) return "brown";
+  if (n >= 3000) return "purple";
+  if (n >= 2400) return "blue";
+  if (n >= 1800) return "green";
+  if (n >= 1200) return "orange";
+  if (n >= 600) return "yellow";
+  return "white";
+}
+function addMonthsIso(iso, months) {
+  const d = new Date(iso);
+  d.setMonth(d.getMonth() + months);
+  return d.toISOString();
+}
+function formatDue(iso) {
+  try {
+    return new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "short", day: "numeric" }).format(new Date(iso));
+  } catch {
+    return String(iso).slice(0, 10);
+  }
+}
+function needsPlacement(p) {
+  if (!p || !p.placementCompletedAt || !p.nextPlacementDueAt) return true;
+  const due = Date.parse(p.nextPlacementDueAt);
+  if (!Number.isFinite(due)) return true;
+  return Date.now() >= due;
+}
+function isPlaced() {
+  return Boolean(state.profile && !needsPlacement(state.profile));
+}
+function loadProfile() {
+  try {
+    const raw = localStorage.getItem(PROFILE_KEY);
+    if (!raw) return seedProfile();
+    const p = JSON.parse(raw);
+    if (!p || typeof p !== "object") return seedProfile();
+    p.stats = { ...emptyStats(), ...(p.stats || {}) };
+    p.belt = beltFromPoints(p.stats.totalPoints);
+    p.displayName = String(p.displayName || state.name || "Player").slice(0, 40);
+    p.email = String(p.email || "").slice(0, 120);
+    return p;
+  } catch {
+    return seedProfile();
+  }
+}
+function seedProfile() {
+  return {
+    id: uid(),
+    displayName: state.name || "Player",
+    email: "",
+    thumb: "",
+    belt: "white",
+    abilityTier: null,
+    stats: emptyStats(),
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  };
+}
+function saveProfile(patch = {}) {
+  const prev = state.profile || seedProfile();
+  const next = { ...prev, ...patch, updatedAt: new Date().toISOString() };
+  next.stats = { ...emptyStats(), ...(prev.stats || {}), ...(patch.stats || {}) };
+  next.belt = beltFromPoints(next.stats.totalPoints);
+  next.displayName = String(next.displayName || "Player").trim().slice(0, 40) || "Player";
+  next.email = String(next.email || "").trim().slice(0, 120);
+  state.profile = next;
+  state.name = next.displayName;
+  localStorage.setItem("fa-name", state.name);
+  try {
+    localStorage.setItem(PROFILE_KEY, JSON.stringify(next));
+  } catch {
+    const slim = { ...next, thumb: "" };
+    localStorage.setItem(PROFILE_KEY, JSON.stringify(slim));
+  }
+  return next;
+}
+function nextPlacementTier(current, correct) {
+  const i = TIER_LADDER.indexOf(current);
+  if (correct) return TIER_LADDER[Math.min(TIER_LADDER.length - 1, i + 1)];
+  return TIER_LADDER[Math.max(0, i - 1)];
+}
+function pickPlacementQuestion(tier, exclude) {
+  const skip = new Set(exclude || []);
+  const available = shuffle(state.questions.filter((q) => !skip.has(q.id)));
+  const order = {
+    easy: ["easy", "hard", "difficult", "extreme"],
+    hard: ["hard", "easy", "difficult", "extreme"],
+    difficult: ["difficult", "hard", "extreme", "easy"],
+    extreme: ["extreme", "difficult", "hard", "easy"],
+  }[tier] || TIER_LADDER;
+  for (const t of order) {
+    const hit = available.find((q) => q.tier === t);
+    if (hit) return hit;
+  }
+  return available[0] || null;
+}
+function abilityFromDojo(answers) {
+  const total = answers.length || PLACE_N;
+  const correct = answers.filter((a) => a.correct).length;
+  const pct = correct / total;
+  const hardHits = answers.filter((a) => a.correct && (a.question.tier === "difficult" || a.question.tier === "extreme")).length;
+  if (pct >= 0.7 || (pct >= 0.55 && hardHits >= 2)) return "gold";
+  if (pct >= 0.4) return "silver";
+  return "bronze";
+}
+function fillSeats() {
+  const need = Math.max(1, Math.min(11, (state.playerCount || 3) - 1));
+  const have = [...(state.seatBots || [])];
+  const used = new Set(have.map((b) => b.id));
+  const extra = shuffle(CELEB_BOTS.filter((b) => !used.has(b.id)));
+  while (have.length < need && extra.length) have.push(extra.shift());
+  state.seatBots = have.slice(0, need);
+}
+function seatedPreview() {
+  const you = { id: "you", name: state.name || "Player", human: true, you: true, score: 0 };
+  const guests = state.guests || [];
+  const remain = Math.max(0, state.playerCount - 1 - guests.length);
+  const bots = (state.seatBots || []).slice(0, remain);
+  return [you, ...guests.map((g) => ({ ...g, human: true, you: false, score: 0 })), ...bots.map((b) => ({ ...b, human: false, score: 0 }))].slice(0, 12);
 }
 
 async function rooms(method, body) {
@@ -170,6 +338,7 @@ function snapshot() {
     mapLive: state.mapLive,
     lockdownAt: state.lockdownAt,
     lockdown: state.lockdown,
+    playerCount: state.playerCount,
   };
 }
 function publish() {
@@ -244,19 +413,29 @@ function clockText() {
 
 function seatPlayers() {
   state.youId = "you";
+  fillSeats();
+  const guests = state.guests || [];
+  const remain = Math.max(0, state.playerCount - 1 - guests.length);
+  const bots = (state.seatBots || []).slice(0, remain);
   state.players = [
     { id: "you", name: state.name || "Player", score: 0, human: true, you: true },
-    ...BOTS.map((b) => ({ ...b, score: 0, human: false, you: false })),
-  ];
+    ...guests.map((g) => ({ id: g.id, name: g.name, score: 0, human: true, you: false })),
+    ...bots.map((b) => ({
+      id: b.id,
+      name: b.name,
+      score: 0,
+      human: false,
+      you: false,
+      skill: b.skill,
+      buzzDelayMs: b.buzzDelayMs,
+    })),
+  ].slice(0, 12);
 }
 
 function startRead() {
   const q = currentQ();
   if (!q) {
-    state.phase = "end";
-    state.pose = (me()?.score || 0) >= 4000 ? "win" : "idle";
-    paint();
-    publish();
+    finishShow();
     return;
   }
   state.phase = "read";
@@ -292,12 +471,16 @@ function scheduleAiBuzz() {
   clearAiBuzz();
   const ais = state.players.filter((p) => !p.human);
   if (!ais.length) return;
+  const ranked = ais.map((bot) => {
+    const [a, b] = bot.buzzDelayMs || [1800, 3600];
+    return { bot, delay: a + Math.random() * (b - a) };
+  }).sort((x, y) => x.delay - y.delay);
+  const first = ranked[0];
   state.aiBuzzT = setTimeout(() => {
     if (state.phase !== "buzz" || state.buzzed) return;
-    const bot = ais[Math.floor(Math.random() * ais.length)];
-    takeBuzz(bot.id, bot.name);
-    setTimeout(() => aiPick(bot), 700);
-  }, 2400 + Math.random() * 1600);
+    takeBuzz(first.bot.id, first.bot.name);
+    setTimeout(() => aiPick(first.bot), 500 + Math.random() * 400);
+  }, first.delay);
 }
 
 function takeBuzz(id, name) {
@@ -333,11 +516,20 @@ function armMap(targetId) {
   if (state.room) void rooms("POST", { action: "map", code: state.room, id: state.youId, target: state.maps[state.youId] });
 }
 
+function aiCorrectChance(bot, tier) {
+  let m = bot.skill || 0.5;
+  if (tier === "easy") m += 0.12;
+  if (tier === "hard") m -= 0.05;
+  if (tier === "difficult") m -= 0.15;
+  if (tier === "extreme") m -= 0.28;
+  return clamp(m, 0.12, 0.92);
+}
 function aiPick(bot) {
   const q = currentQ();
   if (!q || state.phase !== "answer") return;
-  const hit = { easy: 0.72, hard: 0.5, difficult: 0.32, extreme: 0.18 }[q.tier] || 0.4;
-  const i = Math.random() < hit ? q.correctIndex : [0, 1, 2, 3].filter((n) => n !== q.correctIndex)[Math.floor(Math.random() * 3)];
+  const i = Math.random() < aiCorrectChance(bot, q.tier)
+    ? q.correctIndex
+    : [0, 1, 2, 3].filter((n) => n !== q.correctIndex)[Math.floor(Math.random() * 3)];
   pick(i, bot.id);
 }
 
@@ -362,15 +554,36 @@ function settleMain(ok, q, answererId) {
   }
 }
 
+function recordCareer() {
+  const p = state.profile;
+  if (!p) return;
+  const score = me()?.score || 0;
+  const stats = {
+    ...emptyStats(),
+    ...(p.stats || {}),
+    gamesPlayed: (p.stats?.gamesPlayed || 0) + 1,
+    totalPoints: (p.stats?.totalPoints || 0) + Math.max(0, score),
+    correctAnswers: (p.stats?.correctAnswers || 0) + (state.tally.correct || 0),
+    wrongAnswers: (p.stats?.wrongAnswers || 0) + (state.tally.wrong || 0),
+    bestScore: Math.max(p.stats?.bestScore || 0, score),
+    lastPlayedAt: new Date().toISOString(),
+  };
+  saveProfile({ stats });
+}
+
+function finishShow() {
+  state.phase = "end";
+  state.pose = (me()?.score || 0) >= 4000 ? "win" : "idle";
+  recordCareer();
+  paint();
+  publish();
+}
+
 function continueRound() {
   state.lockdown = null;
   state.i += 1;
-  if (state.i >= state.qs.length) {
-    state.phase = "end";
-    state.pose = (me()?.score || 0) >= 4000 ? "win" : "idle";
-    paint();
-    publish();
-  } else {
+  if (state.i >= state.qs.length) finishShow();
+  else {
     state.pose = "next";
     paint();
     setTimeout(startRead, 450);
@@ -405,6 +618,10 @@ function pick(i, asId) {
   state.pose = ok ? "win" : "loss";
   playSound(ok ? "correct" : "miss");
   settleMain(ok, q, answerer);
+  if (answerer === state.youId) {
+    if (ok) state.tally.correct += 1;
+    else state.tally.wrong += 1;
+  }
   state.phase = "reveal";
   paint();
   publish();
@@ -440,9 +657,7 @@ function startLockdown(playerId) {
   state.pose = "wait";
   paint();
   publish();
-  BOTS.forEach((b) => {
-    const p = playerById(b.id);
-    if (!p || p.id === hero.id) return;
+  state.players.filter((p) => !p.human && p.id !== hero.id).forEach((p) => {
     const amt = Math.min(100, Math.max(100, p.score || 100));
     const side = Math.random() < 0.55 ? "win" : "lose";
     applyWager(p.id, side, amt);
@@ -504,7 +719,7 @@ function runLockdownClock() {
     state.tick = setTimeout(() => {
       const q = ld.qs[ld.qi];
       if (!q || state.lockdown?.phase !== "play") return;
-      const i = Math.random() < 0.42 ? q.correctIndex : (q.correctIndex + 1 + Math.floor(Math.random() * 3)) % 4;
+      const i = Math.random() < aiCorrectChance(hero, q.tier) ? q.correctIndex : (q.correctIndex + 1 + Math.floor(Math.random() * 3)) % 4;
       lockdownPick(i, true);
     }, 1600);
     return;
@@ -660,50 +875,218 @@ function rulesHTML() {
       <li><b>10-second read</b>, then buzz. First buzz answers. Miss = $0. You do not lose points.</li>
       <li><b>MAP</b> — during the read, tap a rival. Stake = this question. Buzz first and hit it: you bank double, they lose the stake. Miss: you lose the stake. If someone else buzzes, MAP is off.</li>
       <li><b>Lockdown</b> twice per show, after a correct buzz. That player plays 5. Opponents tap WIN or LOSE and a stake (60s, or instant when all lock). 4/5 pays WIN even money; otherwise LOSE pays. The 5 bank at $500 each only if they clear it.</li>
+      <li><b>Dojo</b> — ten tap questions, no buzz. Bronze / Silver / Gold for three months. Belts rise with career points.</li>
+      <li><b>Room</b> — 2 to 12 seats. Phones join the TV over On Screen. Empty seats are celebrity bots.</li>
     </ul>
     <button class="primary" id="rulesX" type="button">Close</button>
   </div>`;
 }
 
+function footHTML() {
+  return `<div class="buzzbar foot">
+    <a class="flow" href="${FLOW_URL}" target="_blank" rel="noopener noreferrer">Flow</a>
+    <span class="copy">© GMG Brand Label</span>
+  </div>`;
+}
+
+function ensureDojo() {
+  if (state.dojo && state.dojo.q) return;
+  const used = new Set(state.profile?.placementQuestionIds || []);
+  const q = pickPlacementQuestion("hard", used);
+  state.dojo = { q, answers: [], used, picked: -1, tier: "hard" };
+}
+
+function finishDojo() {
+  const d = state.dojo;
+  if (!d) return;
+  const correct = d.answers.filter((a) => a.correct).length;
+  const abilityTier = abilityFromDojo(d.answers);
+  const completedAt = new Date().toISOString();
+  const ids = d.answers.map((a) => a.question.id);
+  saveProfile({
+    abilityTier,
+    placementScore: correct,
+    placementCompletedAt: completedAt,
+    nextPlacementDueAt: addMonthsIso(completedAt, 3),
+    placementQuestionIds: [...(state.profile?.placementQuestionIds || []), ...ids].slice(-200),
+  });
+  state.dojo = { ...d, done: true, q: null, picked: -1 };
+  state.lobbyOpen = "room";
+  paint(true);
+}
+
+function dojoPick(i) {
+  const d = state.dojo;
+  if (!d || !d.q || d.done) return;
+  const ok = i === d.q.correctIndex;
+  d.picked = i;
+  d.answers.push({ question: d.q, correct: ok });
+  d.used.add(d.q.id);
+  playSound(ok ? "correct" : "miss");
+  paint(true);
+  setTimeout(() => {
+    if (d.answers.length >= PLACE_N) {
+      finishDojo();
+      return;
+    }
+    d.tier = nextPlacementTier(d.tier, ok);
+    d.q = pickPlacementQuestion(d.tier, d.used);
+    d.picked = -1;
+    paint(true);
+  }, 420);
+}
+
+function startDojo() {
+  const used = new Set(state.profile?.placementQuestionIds || []);
+  const q = pickPlacementQuestion("hard", used);
+  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", done: false };
+  state.lobbyOpen = "dojo";
+  paint(true);
+}
+
+function acc(id, title, extra, body) {
+  const open = state.lobbyOpen === id;
+  return `<section class="acc ${open ? "open" : ""}">
+    <button type="button" class="acc-h" data-acc="${id}"><span>${title}</span>${extra || ""}</button>
+    ${open ? `<div class="acc-body">${body}</div>` : ""}
+  </section>`;
+}
+
+function profileBody() {
+  const p = state.profile || {};
+  const belt = BELT_META[p.belt || "white"];
+  const ab = p.abilityTier ? ABILITY_META[p.abilityTier] : null;
+  return `
+    <label class="field" for="nm">Name</label>
+    <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
+    <label class="field" for="em">Email</label>
+    <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="optional"/>
+    <label class="field" for="th">Photo</label>
+    <div class="thumb-row">
+      ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
+      <input id="th" type="file" accept="image/*"/>
+    </div>
+    <p class="meta">${escapeHtml(belt.label)} belt${ab ? " · " + ab.label + " ability" : ""} · ${(p.stats?.totalPoints || 0)} career</p>
+  `;
+}
+
+function dojoBody() {
+  const p = state.profile;
+  const placed = isPlaced();
+  const d = state.dojo;
+  if (d && d.q && !d.done) {
+    const n = d.answers.length + 1;
+    const reveal = d.picked >= 0;
+    return `
+      <p class="meta">Dojo ${n}/${PLACE_N} · tap an answer · no buzz</p>
+      <p class="dojo-q">${escapeHtml(d.q.prompt)}</p>
+      <div class="dojo-ans">
+        ${d.q.choices.map((c, i) => {
+          let cls = "ans";
+          if (reveal) {
+            if (i === d.q.correctIndex) cls += " ok";
+            else if (i === d.picked) cls += " bad";
+          }
+          return `<button class="${cls}" type="button" data-dojo="${i}" ${reveal ? "disabled" : ""}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
+        }).join("")}
+      </div>
+    `;
+  }
+  if (placed) {
+    const ab = ABILITY_META[p.abilityTier] || ABILITY_META.bronze;
+    return `
+      <p class="meta">${escapeHtml(ab.label)} · ${p.placementScore || 0}/${PLACE_N} · retake after ${formatDue(p.nextPlacementDueAt)}</p>
+      <button class="ghost" id="retake" type="button">Retake dojo</button>
+    `;
+  }
+  return `
+    <p class="meta">Ten tap questions. No buzz. Places you Bronze, Silver, or Gold for three months.</p>
+    <button class="primary" id="dojoGo" type="button">Start dojo</button>
+  `;
+}
+
+function roomBody() {
+  const pad = role === "pad";
+  const seats = seatedPreview();
+  const humans = seats.filter((s) => s.human).length;
+  if (pad) {
+    return `
+      <label class="field" for="nm">Your name</label>
+      <input id="nm" type="text" value="${escapeHtml(state.name)}" maxlength="18" autocomplete="nickname"/>
+      <label class="field" for="jc">Room code</label>
+      <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off"/>
+      <p class="meta">This phone is the buzzer. Join the TV, then buzz.</p>
+    `;
+  }
+  return `
+    <label class="field">Players <b>${state.playerCount}</b></label>
+    <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
+    <div class="seats">
+      ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
+    </div>
+    <label class="toggle">
+      <input id="os" type="checkbox" ${state.onScreen ? "checked" : ""}/>
+      <span>On Screen — TV shows Jeremy; phones are buzzers. Empty seats stay celebrity bots.</span>
+    </label>
+    ${state.onScreen ? `
+      <p class="room-code">Room <b id="codeCopy">${escapeHtml(state.room || "····")}</b></p>
+      ${state.room ? `<img class="qr" alt="Join on your phone" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(shareUrl())}"/>` : ""}
+      <p class="meta">${humans} human${humans === 1 ? "" : "s"} · ${seats.length - humans} bot${seats.length - humans === 1 ? "" : "s"} · phones replace bots as they join</p>
+    ` : `<p class="meta">Local show — you plus celebrity bots. Flip On Screen to open a room for pads.</p>`}
+  `;
+}
+
+function setBody() {
+  return `
+    <div class="dock in-acc">
+      <label>Jeremy <input id="hs" type="range" min="24" max="62" value="${state.hostH}"/></label>
+      <label>Studio <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}"/></label>
+    </div>
+    <p class="meta">Live on this page. Host and studio stay in frame — nothing scrolls.</p>
+  `;
+}
+
 function lobbyHTML() {
   const pad = role === "pad";
+  const p = state.profile || {};
+  const placed = isPlaced();
+  const belt = BELT_META[p.belt || "white"];
+  const ab = p.abilityTier ? ABILITY_META[p.abilityTier] : null;
+  const goLabel = pad ? "Join as buzzer" : (state.onScreen ? "Open TV" : "Play");
+  const goOff = !pad && !placed;
+  const d = state.dojo;
+  const dojoLive = Boolean(d && d.q && !d.done);
+  const dojoExtra = dojoLive
+    ? `<small>${d.answers.length}/${PLACE_N}</small>`
+    : (placed ? `<small>${escapeHtml((ab && ab.label) || "Placed")}</small>` : `<small>Required</small>`);
   return `
     <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
     <div class="veil"></div>
     <div class="top">
       <div class="logo">Fast Answer!<small>The game show that flies…?</small></div>
       <div class="grow"></div>
+      ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
       <button class="word" id="rulesBtn" type="button">Rules</button>
     </div>
     <div class="lobby">
       <div class="lobby-copy">
-        <h1>Fast Answer!</h1>
-        <p>${pad
-          ? "This phone is your buzzer. During the 10-second read, tap a rival to MAP. Then buzz."
-          : "One locked page. 37 questions. MAP during the read. Lockdown twice."}</p>
-        <p class="points">Easy $100 · Hard $500 · Difficult $1,000 · Extreme $5,000</p>
-        <label class="field" for="nm">Your name</label>
-        <input id="nm" type="text" value="${escapeHtml(state.name)}" maxlength="18" autocomplete="nickname"/>
-        ${pad ? "" : `
-        <label class="toggle">
-          <input id="os" type="checkbox" ${state.onScreen ? "checked" : ""}/>
-          <span>On Screen — TV shows Jeremy; phones are buzzers.</span>
-        </label>
-        ${state.onScreen ? "" : `
-        <div class="dock">
-          <label>Jeremy <input id="hs" type="range" min="24" max="62" value="${state.hostH}"/></label>
-          <label>Studio <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}"/></label>
-        </div>`}
-        `}
-        <div class="row">
-          <button class="primary" id="go" type="button">${pad ? "Join as buzzer" : (state.onScreen ? "Open TV" : "Play")}</button>
+        <h1 class="sr-only">Fast Answer!</h1>
+        <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
+        <div class="accord">
+          ${pad || dojoLive ? "" : acc("profile", "Profile", `<small>${escapeHtml(belt.label)}${ab ? " · " + ab.label : ""}</small>`, profileBody())}
+          ${pad ? "" : acc("dojo", "Dojo", dojoExtra, dojoBody())}
+          ${dojoLive ? "" : acc("room", pad ? "Join" : "Room", `<small>${pad ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
+          ${pad || dojoLive ? "" : acc("set", "Set", "", setBody())}
         </div>
-        <p class="status" id="stt">${joinCode ? "Joining room " + joinCode : ""}</p>
+        <div class="row">
+          <button class="primary" id="go" type="button" ${goOff ? "disabled" : ""}>${goOff ? "Dojo first" : goLabel}</button>
+        </div>
+        <p class="status" id="stt">${goOff ? "Finish the 10-question dojo to play." : (joinCode ? "Joining room " + joinCode : "")}</p>
       </div>
       ${pad ? "" : `<div class="host" style="--host-h:${state.hostH}vh"><img src="${POSE.idle}" alt="Jeremy"/></div>`}
     </div>
     <div></div>
-    <div class="buzzbar"></div>
+    ${footHTML()}
     ${rulesHTML()}
   `;
 }
@@ -779,24 +1162,74 @@ function playHTML() {
   `;
 }
 
+async function openRoom() {
+  state.room = state.room || code();
+  await rooms("POST", { action: "create", code: state.room, host: state.name });
+  startPoll();
+}
+
 function bindLobby() {
+  document.querySelectorAll("[data-acc]").forEach((b) => {
+    b.onclick = () => {
+      const id = b.dataset.acc;
+      state.lobbyOpen = state.lobbyOpen === id ? "" : id;
+      if (id === "dojo" && state.lobbyOpen === "dojo" && needsPlacement(state.profile) && !state.dojo) startDojo();
+      paint(true);
+    };
+  });
   const nm = $("#nm");
   if (nm) nm.oninput = (e) => {
     state.name = e.target.value;
     localStorage.setItem("fa-name", state.name);
+    if (role !== "pad") saveProfile({ displayName: state.name });
   };
-  const os = $("#os");
-  if (os) os.onchange = (e) => {
-    state.onScreen = e.target.checked;
-    localStorage.setItem("fa-onscreen", state.onScreen ? "1" : "0");
+  const em = $("#em");
+  if (em) em.oninput = (e) => saveProfile({ email: e.target.value });
+  const th = $("#th");
+  if (th) th.onchange = (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    if (file.size > 400000) {
+      const stt = $("#stt");
+      if (stt) stt.textContent = "Photo is too large — keep it under 400 KB.";
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => saveProfile({ thumb: String(reader.result || "") }) && paint(true);
+    reader.readAsDataURL(file);
+  };
+  const pc = $("#pc");
+  if (pc) pc.oninput = (e) => {
+    state.playerCount = clamp(Number(e.target.value), 2, 12);
+    localStorage.setItem("fa-seats", String(state.playerCount));
+    fillSeats();
     paint(true);
   };
+  const os = $("#os");
+  if (os) os.onchange = async (e) => {
+    state.onScreen = e.target.checked;
+    localStorage.setItem("fa-onscreen", state.onScreen ? "1" : "0");
+    if (state.onScreen) await openRoom();
+    paint(true);
+  };
+  const jc = $("#jc");
+  if (jc) jc.oninput = (e) => {
+    state.joinInput = e.target.value.toUpperCase();
+    state.room = state.joinInput;
+  };
+  const dojoGo = $("#dojoGo");
+  if (dojoGo) dojoGo.onclick = () => startDojo();
+  const retake = $("#retake");
+  if (retake) retake.onclick = () => startDojo();
+  document.querySelectorAll("[data-dojo]").forEach((b) => {
+    b.onclick = () => dojoPick(Number(b.dataset.dojo));
+  });
   bindSliders();
   bindRules();
   const go = $("#go");
   if (go) go.onclick = async () => {
     if (role === "pad") {
-      state.room = joinCode || code();
+      state.room = (state.room || state.joinInput || joinCode || code()).toUpperCase();
       state.onScreen = true;
       state.youId = "p-" + (state.name || "pad").toLowerCase().replace(/\s+/g, "");
       await rooms("POST", { action: "join", code: state.room, name: state.name, id: state.youId });
@@ -804,10 +1237,14 @@ function bindLobby() {
       paint();
       return;
     }
-    if (state.onScreen) {
-      state.room = code();
-      await rooms("POST", { action: "create", code: state.room, host: state.name });
+    if (!isPlaced()) {
+      state.lobbyOpen = "dojo";
+      if (!state.dojo || !state.dojo.q) startDojo();
+      else paint(true);
+      return;
     }
+    saveProfile({ displayName: state.name });
+    if (state.onScreen) await openRoom();
     startGame();
   };
 }
@@ -854,6 +1291,7 @@ function bindPlay() {
         paint();
       }
       if (bc) bc.postMessage({ type: "wager", id: state.youId, side: next.side, amount: next.amount });
+      if (state.room) void rooms("POST", { action: "wager", code: state.room, id: state.youId, side: next.side, amount: next.amount });
     };
   });
   document.querySelectorAll("[data-amt]").forEach((b) => {
@@ -863,6 +1301,7 @@ function bindPlay() {
       const prev = ld.wagers[state.youId] || { side: "win" };
       applyWager(state.youId, prev.side || "win", Number(b.dataset.amt));
       if (bc) bc.postMessage({ type: "wager", id: state.youId, side: prev.side || "win", amount: Number(b.dataset.amt) });
+      if (state.room) void rooms("POST", { action: "wager", code: state.room, id: state.youId, side: prev.side || "win", amount: Number(b.dataset.amt) });
     };
   });
   const bz = $("#buzz");
@@ -870,23 +1309,38 @@ function bindPlay() {
   const mic = $("#mic");
   if (mic) mic.onclick = listenVoice;
   const quit = $("#quit");
-  if (quit) quit.onclick = () => { stopTick(); clearAiBuzz(); state.lockdown = null; state.phase = "lobby"; paint(true); };
+  if (quit) quit.onclick = () => {
+    stopTick();
+    clearAiBuzz();
+    state.lockdown = null;
+    state.phase = "lobby";
+    paint(true);
+  };
   bindSliders();
   bindRules();
 }
 
 function ingestGuests(guests) {
-  if (!Array.isArray(guests) || !guests.length) return;
-  guests.forEach((g) => {
-    const id = g.id || ("p-" + String(g.name || "pad").toLowerCase().replace(/\s+/g, ""));
-    if (state.players.some((p) => p.id === id || p.name === g.name)) return;
+  if (!Array.isArray(guests)) return;
+  state.guests = guests
+    .filter((g) => g && (g.id || g.name) && String(g.id) !== "you")
+    .map((g) => ({
+      id: g.id || ("p-" + String(g.name || "pad").toLowerCase().replace(/\s+/g, "")),
+      name: g.name || "Player",
+    }))
+    .slice(0, 11);
+  if (state.phase === "lobby") return;
+  state.guests.forEach((g) => {
+    if (state.players.some((p) => p.id === g.id || p.name === g.name)) return;
     const bot = state.players.find((p) => !p.human);
     if (bot) {
-      bot.id = id;
+      bot.id = g.id;
       bot.name = g.name;
       bot.human = true;
-    } else {
-      state.players.push({ id, name: g.name, score: 0, human: true, you: false });
+      delete bot.skill;
+      delete bot.buzzDelayMs;
+    } else if (state.players.length < 12) {
+      state.players.push({ id: g.id, name: g.name, score: 0, human: true, you: false });
     }
   });
 }
@@ -899,6 +1353,7 @@ function startGame() {
   state.lockdownAt = pickLockdownSlots();
   state.lockdown = null;
   state.maps = {};
+  state.tally = { correct: 0, wrong: 0 };
   if (state.onScreen && !state.room) state.room = code();
   startPoll();
   startRead();
@@ -911,7 +1366,12 @@ function startPoll() {
     if (!state.room) return;
     const j = await rooms("GET");
     if (!j) return;
-    if (j.guests) ingestGuests(j.guests);
+    if (j.guests) {
+      const before = (state.guests || []).map((g) => g.id).join(",");
+      ingestGuests(j.guests);
+      const after = (state.guests || []).map((g) => g.id).join(",");
+      if (state.phase === "lobby" && before !== after) paint(true);
+    }
     if (role === "pad" && j.state && j.state.phase) {
       const keep = state.name;
       const keepId = state.youId;
@@ -926,6 +1386,10 @@ function startPoll() {
     }
     if (role !== "pad" && j.state?.maps) {
       state.maps = { ...state.maps, ...j.state.maps };
+    }
+    if (role !== "pad" && j.state?.lastWager && state.lockdown?.phase === "wager") {
+      const w = j.state.lastWager;
+      if (w.id && !state.lockdown.wagers[w.id]) applyWager(w.id, w.side, w.amount);
     }
   }, 400);
 }
@@ -944,6 +1408,8 @@ function paint(force = false) {
     frame, role, state.onScreen, state.phase, state.i, state.buzzed, state.picked, state.pose,
     state.studioI, state.maps[state.youId], state.mapLive, ld?.phase, ld?.qi, ld?.picked,
     state.rules, state.players.map((p) => p.score).join(","),
+    state.lobbyOpen, state.playerCount, (state.guests || []).length,
+    state.dojo?.answers?.length, state.dojo?.picked, state.profile?.abilityTier, state.profile?.belt,
   ].join("|");
   if (!force && key === lastKey && frame === "play") {
     const clock = $("#clock");
@@ -969,10 +1435,22 @@ window.addEventListener("keydown", (e) => {
 
 const bank = await fetch("./questions.json").then((r) => r.json());
 state.questions = bank;
+state.profile = loadProfile();
+if (state.profile?.displayName) state.name = state.profile.displayName;
+fillSeats();
+if (needsPlacement(state.profile) && role !== "pad") {
+  state.lobbyOpen = "dojo";
+  ensureDojo();
+} else {
+  state.lobbyOpen = "room";
+}
 if (role === "pad") {
   state.onScreen = true;
+  state.lobbyOpen = "room";
   if (joinCode) state.room = joinCode;
   startPoll();
+} else if (state.onScreen) {
+  void openRoom();
 }
 paint(true);
 window.__fa = state;
