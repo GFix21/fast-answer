@@ -1,4 +1,5 @@
-import { getRoom, hasRoom, saveRoom, listRooms } from "../lib/room-store.js";
+import { getRoom, hasRoom, saveRoom, listRooms, deleteRoom } from "../lib/room-store.js";
+import { requireAuth } from "../lib/flow-auth.js";
 
 function touch(cur) {
   return saveRoom(cur);
@@ -40,6 +41,17 @@ export default async function handler(req, res) {
 
   if (!code) {
     res.status(400).end(JSON.stringify({ error: "code" }));
+    return;
+  }
+
+  // Delete stays on this route so Flow does not add a 13th Hobby function.
+  if (body.action === "delete") {
+    if (!requireAuth(req, res)) return;
+    if (!deleteRoom(code)) {
+      res.status(404).end(JSON.stringify({ error: "missing" }));
+      return;
+    }
+    res.status(200).end(JSON.stringify({ ok: true, rooms: listRooms() }));
     return;
   }
 

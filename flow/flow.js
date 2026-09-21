@@ -49,7 +49,7 @@ const state = {
 
 function withLocale(path) {
   const loc = state.locale || "en";
-  if (!path || path.startsWith("login") || path.startsWith("logout") || path.startsWith("session") || path.startsWith("topics") || path.startsWith("profiles") || path.startsWith("rooms")) {
+  if (!path || path.startsWith("login") || path.startsWith("logout") || path.startsWith("session") || path.startsWith("topics") || path.startsWith("profiles")) {
     return path;
   }
   const join = path.includes("?") ? "&" : "?";
@@ -945,7 +945,11 @@ async function loadQueue(rerender) {
     api("reject"),
     api("placement?rejections=1"),
     api("profiles"),
-    api("rooms"),
+    fetch("/api/rooms?list=1", { credentials: "same-origin" }).then(async (res) => {
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || res.statusText);
+      return data;
+    }),
   ]);
   const [week, placement, weekRej, placeRej, profiles, rooms] = jobs;
   const errors = [];
@@ -968,10 +972,14 @@ async function loadQueue(rerender) {
 
 async function deleteFlowRoom(code) {
   try {
-    const data = await api("rooms", {
+    const res = await fetch("/api/rooms", {
       method: "POST",
+      credentials: "same-origin",
+      headers: { "content-type": "application/json" },
       body: JSON.stringify({ action: "delete", code }),
     });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || res.statusText);
     state.queue.rooms = data.rooms || [];
     state.message = `Deleted room ${code}.`;
   } catch (e) {
