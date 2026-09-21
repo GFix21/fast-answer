@@ -27,7 +27,7 @@ const POSE = {
   loss: "./jeremy/jeremy-loss.png",
 };
 const TITLE_3D = "./promo/fast-answer-3d-flying.jpg";
-const FLOW_URL = "/flow";
+const FLOW_URL = "/flow/index.html";
 const PROFILE_KEY = "fa-profile-v1";
 const RECENT_Q_KEY = "fa-recent-qids-v1";
 const RECENT_Q_MAX = 240;
@@ -1840,6 +1840,7 @@ function dojoPageHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       <a class="word" href="/">${tt("lobby")}</a>
+      <a class="word" href="${FLOW_URL}">Flow</a>
     </div>
     <div class="dojo-page">
       <div class="dojo-page-scroll">
@@ -1964,12 +1965,16 @@ function dojoModeForGate() {
   if (!state.profileUnlocked) return "unlock";
   return "home";
 }
+function dojoHref(mode) {
+  const next = mode || dojoModeForGate();
+  return "/dojo.html?mode=" + encodeURIComponent(next);
+}
 function openDojoPage(mode) {
   const next = mode || dojoModeForGate();
   state.dojoMode = next;
   try { sessionStorage.setItem("fa-dojo-mode", next); } catch { /* ignore */ }
   if (!isDojoPage) {
-    location.href = "/dojo?mode=" + encodeURIComponent(next);
+    location.href = dojoHref(next);
     return;
   }
   if (next === "home" && state.profileUnlocked && needsPlacement(state.profile) && !(state.dojo && state.dojo.q)) {
@@ -1986,7 +1991,7 @@ function startDojo() {
   state.dojoMode = "home";
   try { sessionStorage.setItem("fa-dojo-mode", "home"); } catch { /* ignore */ }
   if (!isDojoPage) {
-    location.href = "/dojo?mode=home";
+    location.href = dojoHref("home");
     return;
   }
   armDojoRead();
@@ -2238,7 +2243,7 @@ function roomDojoEntryHTML() {
       ${dojoGateChipsHTML()}
       ${gate ? `<p class="dir-copy"><b>${escapeHtml(gate)}</b></p>` : ""}
       <div class="row dojo-gate-actions" role="group" aria-label="${escapeHtml(tt("dojo"))}">
-        <button class="primary" type="button" id="goToDojo">${tt("goToDojo")}</button>
+        <a class="primary" id="goToDojo" href="${dojoHref()}">${tt("goToDojo")}</a>
         <button class="ghost ${panel === "create" ? "on" : ""}" type="button" id="roomCreateProfile">${tt("createShort")}</button>
         <button class="ghost ${panel === "unlock" ? "on" : ""}" type="button" id="roomShowUnlock">${tt("unlockShort")}</button>
       </div>
@@ -2293,7 +2298,7 @@ function roomBody() {
     return `
       ${roomModeButtons()}
       <div class="dojo-gate-actions">
-        <button class="ghost" type="button" id="goToDojo">${tt("goToDojo")}</button>
+        <a class="ghost" id="goToDojo" href="${dojoHref()}">${tt("goToDojo")}</a>
       </div>
       <div class="player-ready" role="status">
         <b>${escapeHtml(readyName)}</b>
@@ -2480,6 +2485,8 @@ function entryHTML() {
       <div class="logo">Fast Answer!<small>${tt("tagline")}</small></div>
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
+      <a class="word" href="${dojoHref()}">${tt("dojo")}</a>
+      <a class="word" href="${FLOW_URL}">Flow</a>
     </div>
     <div class="entry-stage">
       <img class="entry-title" src="${TITLE_3D}" alt="Fast Answer!"/>
@@ -2585,7 +2592,8 @@ function lobbyHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
-      ${tv ? "" : `<a class="word" href="/dojo?mode=${encodeURIComponent(dojoModeForGate())}">${tt("dojo")}</a>`}
+      ${tv ? "" : `<a class="word" href="${dojoHref()}">${tt("dojo")}</a>`}
+      ${tv ? "" : `<a class="word" href="${FLOW_URL}">Flow</a>`}
       <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
       <a class="word" href="./directions.html">${tt("directions")}</a>
     </div>
@@ -3040,7 +3048,10 @@ function bindLobby() {
   });
   const routeToDojo = () => openDojoPage(dojoModeForGate());
   const goToDojoBtn = $("#goToDojo");
-  if (goToDojoBtn) goToDojoBtn.onclick = () => routeToDojo();
+  if (goToDojoBtn) goToDojoBtn.onclick = (e) => {
+    e.preventDefault();
+    routeToDojo();
+  };
   const bannerGoDojo = $("#bannerGoDojo");
   if (bannerGoDojo) bannerGoDojo.onclick = () => routeToDojo();
   const toggleRoomPanel = (which) => {
@@ -3640,7 +3651,11 @@ if (isDirections) {
     window.__fa = state;
   }
 } else {
-  await loadBanksForLocale(state.locale);
+  try {
+    await loadBanksForLocale(state.locale);
+  } catch {
+    state.statusMsg = "Questions did not load.";
+  }
   state.profile = loadProfile();
   if (state.profile?.displayName) state.name = state.profile.displayName;
   state.botFill = localStorage.getItem("fa-bots") !== "0";

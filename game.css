@@ -208,7 +208,8 @@ img.brand{
   border-radius:var(--radius-md);
   flex-shrink:0;
 }
-.acc.open{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.acc.open{flex:1;min-height:220px;display:flex;flex-direction:column;overflow:hidden}
+.lobby .acc.open .acc-body{min-height:160px}
 .acc-h{
   width:100%;display:flex;align-items:center;justify-content:space-between;gap:8px;
   background:transparent;border:0;color:var(--fg);
