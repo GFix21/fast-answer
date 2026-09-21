@@ -26,7 +26,7 @@ const POSE = {
   loss: "./jeremy/jeremy-loss.png",
 };
 const TITLE_3D = "./promo/fast-answer-3d-flying.jpg";
-const FLOW_URL = "https://gmgbrand.vercel.app/flow";
+const FLOW_URL = "/flow";
 const PROFILE_KEY = "fa-profile-v1";
 const RECENT_Q_KEY = "fa-recent-qids-v1";
 const RECENT_Q_MAX = 240;
@@ -141,7 +141,7 @@ const state = {
   dirOpen: "tv",
   qrOpen: false,
   readyIds: {},
-  mpMode: localStorage.getItem("fa-mp") || (role === "pad" ? "join" : "host"),
+  mpMode: localStorage.getItem("fa-mp") || ((role === "pad" || !forcedDisplay) ? "join" : "host"),
   statusMsg: "",
   placementQs: [],
   botFill: true,
@@ -152,6 +152,9 @@ const state = {
   lastAnswerAt: 0,
   /** Inline Create / Unlock on the Join TV card ("" | "create" | "unlock"). */
   roomDojoPanel: "",
+  /** Phone entry gate (name, email, password) before the lobby. */
+  entered: false,
+  entryDraft: null,
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
@@ -485,6 +488,78 @@ function seedProfile() {
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
+}
+function validEmail(value) {
+  const email = String(value || "").trim();
+  return email.length <= 120 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+function entryReady(name, email, pw) {
+  return String(name || "").trim().length > 0 && validEmail(email) && String(pw || "").length >= 4;
+}
+function needsEntryGate() {
+  if (isDirections || forcedDisplay) return false;
+  return !state.entered;
+}
+async function activateGameProfile(profile) {
+  if (!profile?.email || !profile?.displayName) return;
+  try {
+    await fetch("/api/profiles", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        id: profile.id,
+        displayName: profile.displayName,
+        email: profile.email,
+      }),
+    });
+  } catch { /* lobby still opens if the list is unreachable */ }
+}
+function markEntered() {
+  state.entered = true;
+  state.profileUnlocked = true;
+  try { sessionStorage.setItem("fa-entered", "1"); } catch { /* private mode */ }
+  if (!isTvDisplay()) {
+    state.mpMode = "join";
+    state.lobbyOpen = "room";
+    try { localStorage.setItem("fa-mp", "join"); } catch { /* ignore */ }
+  }
+}
+async function commitNewProfile(name, email, pw) {
+  const cleanName = String(name || "").trim().slice(0, 18);
+  const cleanEmail = String(email || "").trim();
+  if (!cleanName) {
+    state.statusMsg = tt("gateProfile");
+    paint(true);
+    return false;
+  }
+  if (!validEmail(cleanEmail)) {
+    state.statusMsg = tt("emailInvalid");
+    paint(true);
+    return false;
+  }
+  if (String(pw || "").length < 4) {
+    state.statusMsg = tt("passwordHint");
+    paint(true);
+    return false;
+  }
+  const passwordHash = await hashPassword(pw);
+  const base = state.profile || seedProfile();
+  state.profile = {
+    ...base,
+    id: base.passwordHash ? base.id : (base.id || uid()),
+    displayName: cleanName,
+    email: cleanEmail,
+    passwordHash,
+    createdAt: base.passwordHash ? base.createdAt : new Date().toISOString(),
+  };
+  saveProfile({ displayName: cleanName, email: cleanEmail, passwordHash });
+  state.dojoMode = "home";
+  state.roomDojoPanel = "";
+  state.statusMsg = tt("profileEntered");
+  markEntered();
+  await activateGameProfile(state.profile);
+  paint(true);
+  return true;
 }
 function saveProfile(patch = {}) {
   const prev = state.profile || seedProfile();
@@ -1734,16 +1809,16 @@ function dojoBody() {
       <p class="dir-copy">${tt("createProfileIntro")}</p>
       <label class="field" for="nm">${tt("name")}</label>
       <input id="nm" type="text" value="${escapeHtml(p.displayName && hasPhoneProfile() ? p.displayName : "")}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
+      <label class="field" for="emNew">${tt("email")}</label>
+      <input id="emNew" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
       <label class="field" for="pwNew">${tt("password")}</label>
       <input id="pwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
-      <label class="field" for="pwConfirm">${tt("confirmPassword")}</label>
-      <input id="pwConfirm" type="password" maxlength="64" autocomplete="new-password"/>
       <label class="field" for="thDojo">${tt("photoTv")}</label>
       <div class="thumb-row">
         ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
         <input id="thDojo" type="file" accept="image/*"/>
       </div>
-      <button class="primary" id="createProfile" type="button">${tt("createAndPlace")}</button>
+      <button class="primary" id="createProfile" type="button">${tt("enterProfile")}</button>
       ${hasPhoneProfile() ? `<button class="ghost" id="dojoCancelMode" type="button">${tt("cancel")}</button>` : ""}
     `);
   }
@@ -1838,13 +1913,13 @@ function roomDojoEntryHTML() {
         <p class="dir-copy">${tt("createProfileIntro")}</p>
         <label class="field" for="roomNm">${tt("name")}</label>
         <input id="roomNm" type="text" value="${escapeHtml(hasPhoneProfile() ? (p.displayName || "") : (state.name || ""))}" maxlength="18" autocomplete="nickname"/>
+        <label class="field" for="roomEm">${tt("email")}</label>
+        <input id="roomEm" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email"/>
         <label class="field" for="roomPwNew">${tt("password")}</label>
         <input id="roomPwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
-        <label class="field" for="roomPwConfirm">${tt("confirmPassword")}</label>
-        <input id="roomPwConfirm" type="password" maxlength="64" autocomplete="new-password"/>
         <label class="field" for="roomTh">${tt("photoTv")}</label>
         <input id="roomTh" type="file" accept="image/*"/>
-        <button class="primary" id="roomCreateSubmit" type="button">${tt("createAndPlace")}</button>
+        <button class="primary" id="roomCreateSubmit" type="button">${tt("enterProfile")}</button>
       </div>`;
   } else if (panel === "unlock") {
     if (!hasPhoneProfile()) {
@@ -1882,6 +1957,7 @@ function roomDojoEntryHTML() {
         <button class="ghost ${panel === "create" ? "on" : ""}" type="button" id="roomCreateProfile">${tt("createShort")}</button>
         <button class="ghost ${panel === "unlock" ? "on" : ""}" type="button" id="roomShowUnlock">${tt("unlockShort")}</button>
       </div>
+      ${hasPhoneProfile() ? `<p class="meta">${escapeHtml(p.displayName || "")}${p.email ? ` · ${escapeHtml(p.email)}` : ""}</p>` : ""}
       ${extra}
     </div>`;
 }
@@ -2051,6 +2127,99 @@ function lobbyGateReason() {
   return "";
 }
 
+function entryHTML() {
+  const p = state.profile || {};
+  const draft = state.entryDraft || {};
+  const name = draft.name != null ? draft.name : (hasPhoneProfile() ? (p.displayName || "") : (state.name && state.name !== "Player" ? state.name : ""));
+  const email = draft.email != null ? draft.email : (p.email || "");
+  const pw = draft.password || "";
+  const ready = entryReady(name, email, pw);
+  return `
+    <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
+    <div class="veil"></div>
+    <div class="top">
+      <div class="logo">Fast Answer!<small>${tt("tagline")}</small></div>
+      <div class="grow"></div>
+      ${languageSwitcherHtml(state.locale)}
+    </div>
+    <div class="entry-stage">
+      <img class="entry-title" src="${TITLE_3D}" alt="Fast Answer!"/>
+      <form class="entry-card" id="entryForm" autocomplete="on">
+        <p class="dir-copy">${tt("entryLead")}</p>
+        <label class="field" for="entryName">${tt("name")}</label>
+        <input id="entryName" type="text" value="${escapeHtml(name)}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
+        <label class="field" for="entryEmail">${tt("email")}</label>
+        <input id="entryEmail" type="email" value="${escapeHtml(email)}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
+        <label class="field" for="entryPw">${tt("password")}</label>
+        <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${hasPhoneProfile() ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
+        <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${tt("enterProfile")}</button>
+        <p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>
+      </form>
+    </div>
+    <div></div>
+    ${footHTML()}
+  `;
+}
+
+function bindEntry() {
+  document.querySelectorAll("[data-locale]").forEach((b) => {
+    b.onclick = () => { syncEntryDraft(); void setLocale(b.dataset.locale); };
+  });
+  const nameEl = $("#entryName");
+  const emailEl = $("#entryEmail");
+  const pwEl = $("#entryPw");
+  const btn = $("#enterProfile");
+  const sync = () => {
+    syncEntryDraft();
+    if (!btn) return;
+    const ready = entryReady(nameEl && nameEl.value, emailEl && emailEl.value, pwEl && pwEl.value);
+    btn.classList.toggle("hidden", !ready);
+  };
+  if (nameEl) nameEl.oninput = sync;
+  if (emailEl) emailEl.oninput = sync;
+  if (pwEl) {
+    pwEl.oninput = sync;
+    pwEl.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); void submitEntry(); } };
+  }
+  const form = $("#entryForm");
+  if (form) form.onsubmit = (e) => { e.preventDefault(); void submitEntry(); };
+  if (btn) btn.onclick = () => { void submitEntry(); };
+}
+
+function syncEntryDraft() {
+  state.entryDraft = {
+    name: String(($("#entryName") && $("#entryName").value) || ""),
+    email: String(($("#entryEmail") && $("#entryEmail").value) || ""),
+    password: String(($("#entryPw") && $("#entryPw").value) || ""),
+  };
+}
+
+async function submitEntry() {
+  syncEntryDraft();
+  const name = String(state.entryDraft?.name || "").trim().slice(0, 18);
+  const email = String(state.entryDraft?.email || "").trim();
+  const pw = String(state.entryDraft?.password || "");
+  if (!entryReady(name, email, pw)) return;
+  if (hasPhoneProfile() && state.profile?.passwordHash) {
+    const ok = await verifyProfilePassword(pw);
+    if (!ok) {
+      state.statusMsg = tt("wrongPassword");
+      paint(true);
+      return;
+    }
+    saveProfile({ displayName: name, email });
+    state.dojoMode = "home";
+    state.roomDojoPanel = "";
+    state.statusMsg = "";
+    state.entryDraft = null;
+    markEntered();
+    await activateGameProfile(state.profile);
+    paint(true);
+    return;
+  }
+  await commitNewProfile(name, email, pw);
+}
+
 function lobbyHTML() {
   const pad = isPad();
   const tv = isTvDisplay();
@@ -2090,6 +2259,7 @@ function lobbyHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
+      <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
       <a class="word" href="./directions.html">${tt("directions")}</a>
     </div>
     <div class="lobby">
@@ -2388,38 +2558,6 @@ function bindLobby() {
   if (roomCreateProfile) roomCreateProfile.onclick = () => toggleRoomPanel("create");
   const roomShowUnlock = $("#roomShowUnlock");
   if (roomShowUnlock) roomShowUnlock.onclick = () => toggleRoomPanel("unlock");
-  const commitNewProfile = async (name, pw, pw2) => {
-    if (!name) {
-      state.statusMsg = tt("gateProfile");
-      paint(true);
-      return;
-    }
-    if (pw.length < 4) {
-      state.statusMsg = tt("passwordHint");
-      paint(true);
-      return;
-    }
-    if (pw !== pw2) {
-      state.statusMsg = tt("passwordMismatch");
-      paint(true);
-      return;
-    }
-    const passwordHash = await hashPassword(pw);
-    const base = state.profile || seedProfile();
-    state.profile = {
-      ...base,
-      id: base.passwordHash ? base.id : uid(),
-      displayName: name,
-      passwordHash,
-      createdAt: base.passwordHash ? base.createdAt : new Date().toISOString(),
-    };
-    saveProfile({ displayName: name, passwordHash });
-    state.profileUnlocked = true;
-    state.dojoMode = "home";
-    state.roomDojoPanel = "";
-    state.statusMsg = tt("profileCreated");
-    startDojo();
-  };
   const roomUnlockProfile = $("#roomUnlockProfile");
   if (roomUnlockProfile) roomUnlockProfile.onclick = async () => {
     const pw = String(($("#pwUnlockRoom") && $("#pwUnlockRoom").value) || "");
@@ -2441,16 +2579,16 @@ function bindLobby() {
   const createProfile = $("#createProfile");
   if (createProfile) createProfile.onclick = async () => {
     const name = String(($("#nm") && $("#nm").value) || "").trim().slice(0, 18);
+    const email = String(($("#emNew") && $("#emNew").value) || "");
     const pw = String(($("#pwNew") && $("#pwNew").value) || "");
-    const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
-    await commitNewProfile(name, pw, pw2);
+    await commitNewProfile(name, email, pw);
   };
   const roomCreateSubmit = $("#roomCreateSubmit");
   if (roomCreateSubmit) roomCreateSubmit.onclick = async () => {
     const name = String(($("#roomNm") && $("#roomNm").value) || "").trim().slice(0, 18);
+    const email = String(($("#roomEm") && $("#roomEm").value) || "");
     const pw = String(($("#roomPwNew") && $("#roomPwNew").value) || "");
-    const pw2 = String(($("#roomPwConfirm") && $("#roomPwConfirm").value) || "");
-    await commitNewProfile(name, pw, pw2);
+    await commitNewProfile(name, email, pw);
   };
   const commitPassword = async (pw, pw2) => {
     if (pw.length < 4) {
@@ -3016,7 +3154,10 @@ function paint(force = false) {
     return;
   }
   lastKey = key;
-  if (state.phase === "lobby") {
+  if (state.phase === "lobby" && needsEntryGate()) {
+    app.innerHTML = entryHTML();
+    bindEntry();
+  } else if (state.phase === "lobby") {
     app.innerHTML = lobbyHTML();
     bindLobby();
   } else {
@@ -3045,6 +3186,10 @@ if (isDirections) {
   fillSeats();
   const tv = isTvDisplay() || forcedDisplay;
   state.profileUnlocked = false;
+  let sessionEntered = false;
+  try { sessionEntered = sessionStorage.getItem("fa-entered") === "1"; } catch { /* ignore */ }
+  state.entered = Boolean(forcedDisplay || (sessionEntered && hasPhoneProfile()));
+  if (state.entered && !forcedDisplay) state.profileUnlocked = true;
   // Keep the room card open (Join TV when that mode is selected) so Create / Unlock
   // sit on the same card after a refresh. Dojo stays one tap away.
   state.lobbyOpen = "room";

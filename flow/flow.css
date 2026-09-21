@@ -76,4 +76,8 @@ button.arch-row b{font-family:var(--font-display);font-size:16px}
 
 .lang-switch{display:inline-flex;gap:6px;align-items:center}
 .lang-btn{min-width:40px}
+.plist{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
+.plist th,.plist td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.plist th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:600}
+.plist td:nth-child(3){font-variant-numeric:tabular-nums;color:var(--mut);white-space:nowrap}
 

@@ -22,6 +22,7 @@ const state = {
   locked: new URLSearchParams(location.search).get("locked") === "1",
   filterTier: "all",
   locale: loadFlowLocale(),
+  profiles: null,
   archive: {
     months: null,
     placementPages: null,
@@ -40,7 +41,7 @@ const state = {
 
 function withLocale(path) {
   const loc = state.locale || "en";
-  if (!path || path.startsWith("login") || path.startsWith("logout") || path.startsWith("session") || path.startsWith("topics")) {
+  if (!path || path.startsWith("login") || path.startsWith("logout") || path.startsWith("session") || path.startsWith("topics") || path.startsWith("profiles")) {
     return path;
   }
   const join = path.includes("?") ? "&" : "?";
@@ -128,9 +129,9 @@ function render() {
     </div>
     ${state.message ? `<div class="banner ok-banner">${esc(state.message)}</div>` : ""}
     <nav class="tabs">
-      ${["overview","bank","archive","topic","reject"].map((t) =>
+      ${["overview","bank","archive","profiles","topic","reject"].map((t) =>
         `<button data-tab="${t}" class="${state.tab===t?"on":""}">${
-          t==="overview"?"Overview":t==="bank"?"Weekly bank":t==="archive"?"Archives":t==="topic"?"Add topic":"Reject / regen"
+          t==="overview"?"Overview":t==="bank"?"Weekly bank":t==="archive"?"Archives":t==="profiles"?"Profiles":t==="topic"?"Add topic":"Reject / regen"
         }</button>`
       ).join("")}
     </nav>
@@ -147,6 +148,10 @@ function render() {
       state.message = "";
       if (state.tab === "archive" && !state.archive.months) {
         loadArchiveMonths(true);
+        return;
+      }
+      if (state.tab === "profiles") {
+        loadProfiles(true);
         return;
       }
       render();
@@ -183,6 +188,34 @@ function render() {
       </div>`;
     document.getElementById("publish")?.addEventListener("click", doPublish);
     document.getElementById("refresh")?.addEventListener("click", () => loadWeek(true));
+  } else if (state.tab === "profiles") {
+    const rows = state.profiles || [];
+    panel.innerHTML = `
+      <div class="card">
+        <div class="row spread">
+          <h2>Activated profiles</h2>
+          <div class="row">
+            <button class="btn" id="refreshProfiles">Refresh</button>
+            <button class="btn primary" id="downloadMail" ${rows.length ? "" : "disabled"}>Download mailing list</button>
+          </div>
+        </div>
+        <p class="mut">Players who tap <b>Enter Profile</b> (name, email, password) are activated here. The mailing list is every email on this list.</p>
+        <p class="mut" style="margin-top:8px">${rows.length} active · ${rows.length} email${rows.length === 1 ? "" : "s"}</p>
+        ${rows.length ? `
+          <table class="plist">
+            <thead><tr><th>Name</th><th>Email</th><th>Activated</th><th>Status</th></tr></thead>
+            <tbody>
+              ${rows.map((p) => `<tr>
+                <td>${esc(p.displayName)}</td>
+                <td>${esc(p.email)}</td>
+                <td>${esc(p.activatedAt ? String(p.activatedAt).replace("T", " ").slice(0, 16) : "")}</td>
+                <td>Active</td>
+              </tr>`).join("")}
+            </tbody>
+          </table>` : `<p class="mut" style="margin-top:16px">No activated profiles yet.</p>`}
+      </div>`;
+    document.getElementById("refreshProfiles")?.addEventListener("click", () => loadProfiles(true));
+    document.getElementById("downloadMail")?.addEventListener("click", downloadMailingList);
   } else if (state.tab === "bank") {
     const tiers = ["all", "easy", "hard", "difficult", "finale"];
     const qs = (pack?.questions || []).filter(
@@ -773,6 +806,43 @@ function armIdle() {
     window.addEventListener(ev, bump, { capture: true, passive: true }),
   );
   bump();
+}
+
+async function loadProfiles(force) {
+  if (!force && state.profiles) {
+    render();
+    return;
+  }
+  try {
+    const data = await api("profiles");
+    state.profiles = data.profiles || [];
+    state.message = "";
+  } catch (e) {
+    state.message = e.message;
+    state.profiles = state.profiles || [];
+  }
+  render();
+}
+
+async function downloadMailingList() {
+  try {
+    const res = await fetch("/api/flow/profiles?download=1", { credentials: "same-origin" });
+    if (!res.ok) throw new Error("Could not download mailing list");
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "fast-answer-mailing-list.csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    state.message = "Mailing list downloaded.";
+    render();
+  } catch (e) {
+    state.message = e.message;
+    render();
+  }
 }
 
 async function boot() {
