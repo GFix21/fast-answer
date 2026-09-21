@@ -31,9 +31,10 @@ Password-gated admin at **`/flow`**:
 
 - Overview / publish status
 - Weekly bank review (approve / reject by tier)
+- Monthly archive (read-only browse of published weeks by America/Toronto month)
 - Add topic (Q-and-A-shaped)
 - Reject → log (+ optional replacement)
-- Publish week → writes mapped `questions.json` (`finale`→`extreme`, topic id remap)
+- Publish week → writes mapped `questions.json` (`finale`→`extreme`, topic id remap) and snapshots into `banks/archive/YYYY-MM/`
 
 Set **`FLOW_PASSWORD`** in the environment (Vercel project env). No password is committed. Session cookie: HttpOnly + Secure (on Vercel) + SameSite=Lax. Idle auto-lock ~30s.
 
@@ -41,8 +42,10 @@ Durable publish on Hobby:
 
 ```bash
 node scripts/publish-week.mjs 2026-W39   # or path to Q-and-A week JSON
-git add questions.json banks/weekly && git commit && git push
+git add questions.json banks/weekly banks/archive lib/archive-manifest.js && git commit && git push
 ```
+
+Archive layout: `banks/archive/YYYY-MM/{index.json,<weekKey>.json}` plus `banks/archive/registry.json` and static requires in `lib/archive-manifest.js` so Vercel bundles the packs. API: `GET /api/flow/archive`, `?month=YYYY-MM`, `?month=YYYY-MM&week=YYYY-Www`.
 
 ## Deploy
 
@@ -51,7 +54,7 @@ Static files plus serverless APIs:
 ```
 index.html  game.css  game.js  questions.json
 flow/       api/rooms.js  api/flow/*
-banks/weekly/  scripts/publish-week.mjs  q-and-a/map.js
+banks/weekly/  banks/archive/  scripts/publish-week.mjs  q-and-a/map.js
 ```
 
 Import the repo in Vercel (or `vercel --yes`). Set `FLOW_PASSWORD`. The in-memory room map keeps a TV and nearby phones in sync on a single instance.

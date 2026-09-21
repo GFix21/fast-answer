@@ -65,3 +65,11 @@ label{display:block;font-size:12px;color:var(--mut);margin-top:4px}
   z-index:50;backdrop-filter:blur(4px);
 }
 .tier-h{margin-top:20px;font-size:18px}
+.arch-list{display:flex;flex-direction:column;gap:8px}
+button.arch-row{
+  display:block;width:100%;text-align:left;cursor:pointer;font:inherit;color:var(--fg);
+  background:#0e0e10;border:1px solid var(--line);border-radius:var(--radius-md);
+  padding:12px 14px;
+}
+button.arch-row:hover{border-color:color-mix(in oklab, var(--accent) 50%, var(--line))}
+button.arch-row b{font-family:var(--font-display);font-size:16px}

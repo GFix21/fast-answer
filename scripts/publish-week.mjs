@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Publish a Q-and-A (or local) weekly pack into Fast Answer questions.json.
+ * Publish a Q-and-A (or local) weekly pack into Fast Answer questions.json
+ * and snapshot it into banks/archive/YYYY-MM/ (America/Toronto month key).
  *
  * Usage:
  *   node scripts/publish-week.mjs [weekKey|path]
@@ -13,6 +14,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { exportPack, countByTier } from "../q-and-a/map.js";
+import {
+  archivePublishedWeek,
+  torontoMonthKey,
+} from "../lib/archive-store.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const BANKS = path.join(ROOT, "banks/weekly");
@@ -35,6 +40,7 @@ function resolvePack(arg) {
 const packPath = resolvePack(process.argv[2]);
 const pack = JSON.parse(fs.readFileSync(packPath, "utf8"));
 const exported = exportPack(pack);
+const publishedAt = new Date().toISOString();
 
 fs.mkdirSync(BANKS, { recursive: true });
 const current = {
@@ -48,7 +54,7 @@ fs.writeFileSync(path.join(BANKS, "current.json"), `${JSON.stringify(current, nu
 fs.writeFileSync(path.join(ROOT, "questions.json"), `${JSON.stringify(exported, null, 2)}\n`);
 const meta = {
   weekKey: pack.weekKey,
-  publishedAt: new Date().toISOString(),
+  publishedAt,
   source: packPath,
   counts: countByTier(exported),
   questionCount: exported.length,
@@ -56,8 +62,18 @@ const meta = {
 };
 fs.writeFileSync(path.join(BANKS, "publish-meta.json"), `${JSON.stringify(meta, null, 2)}\n`);
 
+const archive = archivePublishedWeek(current, {
+  publishedAt,
+  counts: meta.counts,
+  monthKey: torontoMonthKey(publishedAt),
+});
+
 console.log("=== publish-week ===");
 console.log("source:", packPath);
 console.log("weekKey:", pack.weekKey);
 console.log("counts:", meta.counts);
 console.log(`Wrote ${exported.length} → questions.json + banks/weekly/current.json`);
+console.log(
+  `Archived → banks/archive/${archive.monthKey}/${pack.weekKey}.json` +
+    (archive.wroteToDisk ? "" : ` (memory only: ${archive.writeError})`),
+);

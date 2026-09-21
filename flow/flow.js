@@ -10,6 +10,17 @@ const state = {
   message: "",
   locked: new URLSearchParams(location.search).get("locked") === "1",
   filterTier: "all",
+  archive: {
+    months: null,
+    monthKey: null,
+    index: null,
+    weekKey: null,
+    pack: null,
+    studioCounts: null,
+    filterTier: "all",
+    filterTopic: "",
+    loading: false,
+  },
 };
 
 async function api(path, opts = {}) {
@@ -34,6 +45,18 @@ function esc(s) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function fmtCounts(c) {
+  if (!c) return "—";
+  const order = ["easy", "hard", "difficult", "finale", "extreme"];
+  const parts = order
+    .filter((k) => c[k] != null)
+    .map((k) => `${c[k]} ${k}`);
+  for (const [k, v] of Object.entries(c)) {
+    if (!order.includes(k)) parts.push(`${v} ${k}`);
+  }
+  return parts.join(" · ") || "—";
 }
 
 function render() {
@@ -75,9 +98,9 @@ function render() {
     </div>
     ${state.message ? `<div class="banner ok-banner">${esc(state.message)}</div>` : ""}
     <nav class="tabs">
-      ${["overview","bank","topic","reject"].map((t) =>
+      ${["overview","bank","archive","topic","reject"].map((t) =>
         `<button data-tab="${t}" class="${state.tab===t?"on":""}">${
-          t==="overview"?"Overview":t==="bank"?"Weekly bank":t==="topic"?"Add topic":"Reject / regen"
+          t==="overview"?"Overview":t==="bank"?"Weekly bank":t==="archive"?"Monthly archive":t==="topic"?"Add topic":"Reject / regen"
         }</button>`
       ).join("")}
     </nav>
@@ -89,6 +112,10 @@ function render() {
     b.addEventListener("click", () => {
       state.tab = b.dataset.tab;
       state.message = "";
+      if (state.tab === "archive" && !state.archive.months) {
+        loadArchiveMonths(true);
+        return;
+      }
       render();
     }),
   );
@@ -119,7 +146,7 @@ function render() {
           <button class="btn primary" id="publish">Publish week → questions.json</button>
           <button class="btn" id="refresh">Refresh</button>
         </div>
-        <p class="mut" style="margin-top:12px">Durable Hobby path: <code>node scripts/publish-week.mjs</code> then git push / redeploy. FLOW_PASSWORD is env-only.</p>
+        <p class="mut" style="margin-top:12px">Durable Hobby path: <code>node scripts/publish-week.mjs</code> then git push / redeploy. FLOW_PASSWORD is env-only. Publish also snapshots into <code>banks/archive/YYYY-MM/</code>.</p>
       </div>`;
     document.getElementById("publish")?.addEventListener("click", doPublish);
     document.getElementById("refresh")?.addEventListener("click", () => loadWeek(true));
@@ -161,6 +188,8 @@ function render() {
     panel.querySelectorAll("[data-pending]").forEach((b) =>
       b.addEventListener("click", () => setStatus(b.dataset.pending, "pending")),
     );
+  } else if (state.tab === "archive") {
+    renderArchivePanel(panel);
   } else if (state.tab === "topic") {
     const topics = state.topics?.topics || [];
     panel.innerHTML = `
@@ -193,6 +222,196 @@ function render() {
   }
 }
 
+function renderArchivePanel(panel) {
+  const a = state.archive;
+  if (a.loading) {
+    panel.innerHTML = `<div class="card"><p class="mut">Loading archive…</p></div>`;
+    return;
+  }
+
+  // Week detail (read-only browse)
+  if (a.pack && a.weekKey && a.monthKey) {
+    const tiers = ["all", "easy", "hard", "difficult", "finale"];
+    const topicQ = (a.filterTopic || "").trim().toLowerCase();
+    const qs = (a.pack.questions || []).filter((q) => {
+      if (a.filterTier !== "all" && q.tier !== a.filterTier) return false;
+      if (!topicQ) return true;
+      const hay = `${q.topic || ""} ${q.categoryTitle || ""} ${q.prompt || ""} ${q.id || ""}`.toLowerCase();
+      return hay.includes(topicQ);
+    });
+    const sc = a.studioCounts || {};
+    panel.innerHTML = `
+      <div class="card">
+        <div class="row spread">
+          <div>
+            <button class="btn" id="archBackWeek">← ${esc(a.monthKey)}</button>
+            <h2 style="margin-top:12px">${esc(a.weekKey)} <span class="mut" style="font-size:14px;font-family:var(--font-body)">(archived · read-only)</span></h2>
+            <p class="mut">${esc(a.pack.inspirationSummary || "")}</p>
+            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions</p>
+          </div>
+        </div>
+        <div class="row" style="margin-top:12px;gap:12px">
+          <select id="archTier" style="width:auto;margin:0">${tiers.map((t)=>`<option value="${t}" ${a.filterTier===t?"selected":""}>${t}</option>`).join("")}</select>
+          <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="Filter topic / prompt…" value="${esc(a.filterTopic)}"/>
+        </div>
+        <div class="q-list" style="margin-top:12px">
+          ${qs.map((q) => `
+            <div class="q-item ${esc(q.status||"")}">
+              <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation||"")}${q.status?` · <b>${esc(q.status)}</b>`:""} · ${esc(q.id)}</div>
+              <div class="q-prompt">${esc(q.categoryTitle)} — ${esc(q.prompt)}</div>
+              <div class="choices">${(q.choices||[]).map((c,i)=>`<div class="${i===q.correctIndex?"hit":""}">${String.fromCharCode(65+i)}. ${esc(c)}</div>`).join("")}</div>
+            </div>`).join("") || `<p class="mut">No questions in filter.</p>`}
+        </div>
+      </div>`;
+    document.getElementById("archBackWeek")?.addEventListener("click", () => {
+      a.pack = null;
+      a.weekKey = null;
+      a.studioCounts = null;
+      a.filterTier = "all";
+      a.filterTopic = "";
+      render();
+    });
+    document.getElementById("archTier")?.addEventListener("change", (e) => {
+      a.filterTier = e.target.value;
+      render();
+    });
+    const topicInput = document.getElementById("archTopic");
+    topicInput?.addEventListener("input", (e) => {
+      a.filterTopic = e.target.value;
+      const topicQ = (a.filterTopic || "").trim().toLowerCase();
+      const filtered = (a.pack.questions || []).filter((q) => {
+        if (a.filterTier !== "all" && q.tier !== a.filterTier) return false;
+        if (!topicQ) return true;
+        const hay = `${q.topic || ""} ${q.categoryTitle || ""} ${q.prompt || ""} ${q.id || ""}`.toLowerCase();
+        return hay.includes(topicQ);
+      });
+      const list = panel.querySelector(".q-list");
+      if (!list) return;
+      list.innerHTML = filtered.map((q) => `
+            <div class="q-item ${esc(q.status||"")}">
+              <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation||"")}${q.status?` · <b>${esc(q.status)}</b>`:""} · ${esc(q.id)}</div>
+              <div class="q-prompt">${esc(q.categoryTitle)} — ${esc(q.prompt)}</div>
+              <div class="choices">${(q.choices||[]).map((c,i)=>`<div class="${i===q.correctIndex?"hit":""}">${String.fromCharCode(65+i)}. ${esc(c)}</div>`).join("")}</div>
+            </div>`).join("") || `<p class="mut">No questions in filter.</p>`;
+    });
+    return;
+  }
+
+  // Month weeks list
+  if (a.monthKey && a.index) {
+    const weeks = [...(a.index.weeks || [])].sort((x, y) =>
+      String(y.weekKey).localeCompare(String(x.weekKey)),
+    );
+    panel.innerHTML = `
+      <div class="card">
+        <div class="row spread">
+          <div>
+            <button class="btn" id="archBackMonths">← All months</button>
+            <h2 style="margin-top:12px">${esc(a.monthKey)}</h2>
+            <p class="mut">${weeks.length} week${weeks.length===1?"":"s"} · updated ${esc(a.index.updatedAt || "—")}</p>
+          </div>
+        </div>
+        <div class="arch-list" style="margin-top:14px">
+          ${weeks.map((w) => `
+            <button class="arch-row" data-week="${esc(w.weekKey)}">
+              <div class="row spread">
+                <div>
+                  <b>${esc(w.weekKey)}</b>
+                  <div class="mut">${w.questionCount ?? "—"} questions · ${esc(fmtCounts(w.studioCounts || w.counts))}</div>
+                </div>
+                <span class="mut">${esc((w.publishedAt || "").slice(0, 10) || "")}</span>
+              </div>
+            </button>`).join("") || `<p class="mut">No weeks archived this month.</p>`}
+        </div>
+      </div>`;
+    document.getElementById("archBackMonths")?.addEventListener("click", () => {
+      a.monthKey = null;
+      a.index = null;
+      render();
+    });
+    panel.querySelectorAll("[data-week]").forEach((b) =>
+      b.addEventListener("click", () => openArchiveWeek(a.monthKey, b.dataset.week)),
+    );
+    return;
+  }
+
+  // Months list
+  const months = a.months || [];
+  panel.innerHTML = `
+    <div class="card">
+      <h2>Monthly archive</h2>
+      <p class="mut">Published week packs by America/Toronto month. Read-only browse.</p>
+      <div class="arch-list" style="margin-top:14px">
+        ${months.map((m) => `
+          <button class="arch-row" data-month="${esc(m.monthKey)}">
+            <div class="row spread">
+              <div>
+                <b>${esc(m.monthKey)}</b>
+                <div class="mut">${m.weekCount || 0} week${m.weekCount===1?"":"s"} · ${m.questionCount || 0} questions</div>
+              </div>
+              <span class="mut">${esc((m.updatedAt || "").slice(0, 10) || "")}</span>
+            </div>
+          </button>`).join("") || `<p class="mut">Archive empty — publish a week to seed it.</p>`}
+      </div>
+    </div>`;
+  panel.querySelectorAll("[data-month]").forEach((b) =>
+    b.addEventListener("click", () => openArchiveMonth(b.dataset.month)),
+  );
+}
+
+async function loadArchiveMonths(rerender) {
+  state.archive.loading = true;
+  if (rerender) render();
+  try {
+    const data = await api("archive");
+    state.archive.months = data.months || [];
+  } catch (e) {
+    state.message = e.message || "Failed to load archive";
+    state.archive.months = [];
+  } finally {
+    state.archive.loading = false;
+    if (rerender || state.tab === "archive") render();
+  }
+}
+
+async function openArchiveMonth(monthKey) {
+  state.archive.loading = true;
+  render();
+  try {
+    const data = await api(`archive?month=${encodeURIComponent(monthKey)}`);
+    state.archive.monthKey = monthKey;
+    state.archive.index = data.index;
+    state.archive.pack = null;
+    state.archive.weekKey = null;
+  } catch (e) {
+    state.message = e.message;
+  } finally {
+    state.archive.loading = false;
+    render();
+  }
+}
+
+async function openArchiveWeek(monthKey, weekKey) {
+  state.archive.loading = true;
+  render();
+  try {
+    const data = await api(
+      `archive?month=${encodeURIComponent(monthKey)}&week=${encodeURIComponent(weekKey)}`,
+    );
+    state.archive.monthKey = monthKey;
+    state.archive.weekKey = weekKey;
+    state.archive.pack = data.pack;
+    state.archive.studioCounts = data.studioCounts;
+    state.archive.filterTier = "all";
+    state.archive.filterTopic = "";
+  } catch (e) {
+    state.message = e.message;
+  } finally {
+    state.archive.loading = false;
+    render();
+  }
+}
+
 async function doLogin() {
   const password = document.getElementById("pw")?.value || "";
   try {
@@ -215,6 +434,17 @@ async function doLogout() {
   } catch { /* ignore */ }
   state.authed = false;
   state.week = null;
+  state.archive = {
+    months: null,
+    monthKey: null,
+    index: null,
+    weekKey: null,
+    pack: null,
+    studioCounts: null,
+    filterTier: "all",
+    filterTopic: "",
+    loading: false,
+  };
   render();
 }
 
@@ -236,7 +466,11 @@ async function setStatus(id, status) {
 async function doPublish() {
   try {
     const data = await api("publish", { method: "POST", body: "{}" });
-    state.message = `Published ${data.meta?.questionCount} qs. ${data.note || ""}`;
+    const arch = data.archive
+      ? ` Archived ${data.archive.monthKey}/${data.archive.weekKey}.`
+      : "";
+    state.message = `Published ${data.meta?.questionCount} qs.${arch} ${data.note || ""}`;
+    state.archive.months = null;
     await loadWeek(true);
   } catch (e) {
     state.message = e.message;
