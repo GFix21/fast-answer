@@ -2,6 +2,40 @@ const g = globalThis;
 if (!g.__faRooms) g.__faRooms = new Map();
 const rooms = g.__faRooms;
 
+const ROOM_TTL_MS = 6 * 60 * 60 * 1000;
+
+function pruneStale() {
+  const now = Date.now();
+  for (const [code, room] of rooms.entries()) {
+    const t = room.updatedAt || room.createdAt || 0;
+    if (t && now - t > ROOM_TTL_MS) rooms.delete(code);
+  }
+}
+
+function touch(cur) {
+  cur.updatedAt = Date.now();
+  return cur;
+}
+
+function listRooms() {
+  pruneStale();
+  const out = [];
+  for (const room of rooms.values()) {
+    if (!room || !room.code) continue;
+    const st = room.state || {};
+    out.push({
+      code: room.code,
+      host: room.host || "",
+      guests: (room.guests || []).length,
+      phase: st.phase || "lobby",
+      createdAt: room.createdAt || 0,
+      updatedAt: room.updatedAt || room.createdAt || 0,
+    });
+  }
+  out.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+  return out;
+}
+
 export default async function handler(req, res) {
   res.setHeader("content-type", "application/json");
   res.setHeader("access-control-allow-origin", "*");
@@ -13,7 +47,12 @@ export default async function handler(req, res) {
   }
 
   if (req.method === "GET") {
+    pruneStale();
     const code = String(req.query.code || "").toUpperCase();
+    if (!code || req.query.list === "1") {
+      res.status(200).end(JSON.stringify({ rooms: listRooms() }));
+      return;
+    }
     const room = rooms.get(code) || null;
     res.status(200).end(JSON.stringify(room || { error: "missing" }));
     return;
@@ -26,6 +65,12 @@ export default async function handler(req, res) {
 
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : (req.body || {});
   const code = String(body.code || "").toUpperCase();
+
+  if (body.action === "list") {
+    res.status(200).end(JSON.stringify({ rooms: listRooms() }));
+    return;
+  }
+
   if (!code) {
     res.status(400).end(JSON.stringify({ error: "code" }));
     return;
@@ -33,12 +78,12 @@ export default async function handler(req, res) {
 
   if (body.action === "create") {
     const cur = rooms.get(code) || { code, host: "", state: {}, buzzes: [], guests: [] };
-    rooms.set(code, {
+    rooms.set(code, touch({
       ...cur,
       host: body.host || cur.host,
-      createdAt: Date.now(),
+      createdAt: cur.createdAt || Date.now(),
       guests: cur.guests || [],
-    });
+    }));
     res.status(200).end(JSON.stringify(rooms.get(code)));
     return;
   }
@@ -56,42 +101,92 @@ export default async function handler(req, res) {
 
   if (body.action === "join") {
     cur.guests = cur.guests || [];
-    const guest = { name: body.name || "Player", id: body.id || ("p-" + String(body.name || "pad")) };
-    if (!cur.guests.some((g) => g.id === guest.id || g.name === guest.name)) cur.guests.push(guest);
-    rooms.set(code, cur);
+    const guest = {
+      name: body.name || "Player",
+      id: body.id || ("p-" + String(body.name || "pad")),
+      thumb: body.thumb || "",
+    };
+    const existing = cur.guests.find((g) => g.id === guest.id || g.name === guest.name);
+    if (existing) {
+      existing.name = guest.name;
+      if (guest.thumb) existing.thumb = guest.thumb;
+    } else {
+      cur.guests.push(guest);
+    }
+    rooms.set(code, touch(cur));
+  } else if (body.action === "leave") {
+    const id = body.id || "";
+    cur.guests = (cur.guests || []).filter((g) => g.id !== id && g.name !== body.name);
+    cur.state = cur.state || {};
+    if (cur.state.readyIds && id) {
+      const next = { ...cur.state.readyIds };
+      delete next[id];
+      cur.state.readyIds = next;
+    }
+    rooms.set(code, touch(cur));
+  } else if (body.action === "kick") {
+    const id = body.id || "";
+    cur.guests = (cur.guests || []).filter((g) => g.id !== id && g.name !== body.name);
+    cur.state = cur.state || {};
+    if (cur.state.readyIds && id) {
+      const next = { ...cur.state.readyIds };
+      delete next[id];
+      cur.state.readyIds = next;
+    }
+    cur.state.kickedId = id;
+    cur.state.kickedAt = Date.now();
+    rooms.set(code, touch(cur));
   } else if (body.action === "state") {
     cur.state = body.state || {};
-    rooms.set(code, cur);
+    rooms.set(code, touch(cur));
   } else if (body.action === "buzz") {
     cur.buzzes = cur.buzzes || [];
     cur.buzzes.push({ name: body.name, at: Date.now() });
     if (!cur.state.buzzed) {
       cur.state = { ...cur.state, buzzed: true, buzzBy: body.name, buzzId: body.id || "", phase: "answer" };
     }
-    rooms.set(code, cur);
+    rooms.set(code, touch(cur));
+  } else if (body.action === "answer") {
+    // Pad / voice submit — host applies via poll.
+    cur.state = cur.state || {};
+    cur.state.lastAnswer = {
+      id: body.id || "",
+      index: Number(body.index),
+      at: Date.now(),
+      lockdown: Boolean(body.lockdown),
+      name: body.name || "",
+    };
+    rooms.set(code, touch(cur));
   } else if (body.action === "map") {
     cur.state = cur.state || {};
     cur.state.maps = { ...(cur.state.maps || {}) };
     if (body.target) cur.state.maps[body.id] = body.target;
     else delete cur.state.maps[body.id];
-    rooms.set(code, cur);
+    rooms.set(code, touch(cur));
   } else if (body.action === "wager") {
     cur.state = cur.state || {};
-    cur.state.lastWager = { id: body.id, side: body.side, amount: body.amount, at: Date.now() };
-    rooms.set(code, cur);
+    cur.state.lastWager = {
+      id: body.id,
+      side: body.side,
+      amount: body.amount,
+      locked: body.locked !== false,
+      at: Date.now(),
+    };
+    rooms.set(code, touch(cur));
   } else if (body.action === "ready") {
     cur.guests = cur.guests || [];
     const id = body.id || ("p-" + String(body.name || "pad"));
     let guest = cur.guests.find((g) => g.id === id || g.name === body.name);
     if (!guest) {
-      guest = { name: body.name || "Player", id, ready: true };
+      guest = { name: body.name || "Player", id, ready: true, thumb: body.thumb || "" };
       cur.guests.push(guest);
     } else {
       guest.ready = true;
+      if (body.thumb) guest.thumb = body.thumb;
     }
     cur.state = cur.state || {};
     cur.state.readyIds = { ...(cur.state.readyIds || {}), [id]: true };
-    rooms.set(code, cur);
+    rooms.set(code, touch(cur));
   } else {
     res.status(400).end(JSON.stringify({ error: "action" }));
     return;

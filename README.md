@@ -46,8 +46,11 @@ Discreet **Flow** + © GMG Brand Label sit at the bottom on phone/desktop (hidde
 
 ## Play
 
-- **Single page (On Screen off)** — TV, tablet, or phone shows Jeremy, the question, the answers, and the buzzer together. Drag **Jeremy** and **Studio** to resize. Nothing scrolls.
-- **On Screen** — put this page on the television. Jeremy, the question, and the answers stay there. Each player’s phone is a buzzer pad: answers at the top, a large **Buzz** at the bottom. After a buzz they can **speak** the answer or tap A–D.
+- **Off Screen** — pad / buzzer on this phone without forcing the full TV UI. Local host play keeps Jeremy, answers, and buzzer together.
+- **On Screen** — television owns the room. Phones join as pads. Tap or **speak** an answer on the pad — both submit to the TV room.
+- **Lobby** on the pad (including after the show) leaves the room and returns to the lobby.
+- **MAP** — arm during the read; after you buzz, steal targets appear under the answers (2× points if correct).
+- **Lockdown** — Lock in WIN/LOSE + stake; ~7s rules countdown; up to 3 minutes per hard Q with points $5000→$0; waiters get a 60s wait without seeing the hero’s response.
 
 Phone pad URL: `/?role=pad&room=XXXX` (the TV prints a QR).
 

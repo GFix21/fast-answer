@@ -34,7 +34,11 @@ const DEAL = { easy: 20, hard: 10, difficult: 5, extreme: 2 };
 const ROUND = DEAL.easy + DEAL.hard + DEAL.difficult + DEAL.extreme;
 const LOCKDOWN_N = 5;
 const LOCKDOWN_WIN_AT = 4;
-const LOCKDOWN_Q = 500;
+const LOCKDOWN_Q = 500; // legacy fallback; live points decay from LOCKDOWN_PTS
+const LOCKDOWN_PTS = 5000;
+const LOCKDOWN_ANSWER_S = 180; // 3 minutes per lockdown question
+const LOCKDOWN_INTRO_S = 7; // pre-question rules countdown
+const LOCKDOWN_WAIT_S = 60; // waiting players countdown during hero play
 const WAGER_S = 60;
 const WAGER_AMTS = [100, 500, 1000];
 const LETTERS = "ABCD";
@@ -138,9 +142,15 @@ const state = {
   placementQs: [],
   botFill: true,
   locale: loadStoredLocale(),
+  activeRooms: [],
+  leftPad: false,
+  wagerDraft: null,
+  lastAnswerAt: 0,
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
+let poll = null;
+let pollN = 0;
 
 function tt(key, ...args) {
   return t(state.locale, key, ...args);
@@ -290,8 +300,18 @@ function pickLockdownSlots() {
   while (Math.abs(b - a) < 6) b = lo + Math.floor(Math.random() * (hi - lo));
   return [a, b].sort((x, y) => x - y);
 }
-function leftoverQs() {
-  return shuffle(state.questions.filter((q) => !state.spent.has(q.id)));
+function leftoverQs(preferHard = false) {
+  const pool = state.questions.filter((q) => !state.spent.has(q.id));
+  if (!preferHard) return shuffle(pool);
+  const hard = shuffle(pool.filter((q) => q.tier === "difficult" || q.tier === "extreme"));
+  const rest = shuffle(pool.filter((q) => q.tier !== "difficult" && q.tier !== "extreme"));
+  return [...hard, ...rest];
+}
+function lockdownPointsNow(ld = state.lockdown) {
+  if (!ld) return 0;
+  const left = Math.max(0, Number(ld.qLeft) || 0);
+  const total = LOCKDOWN_ANSWER_S;
+  return Math.max(0, Math.round(LOCKDOWN_PTS * (left / total)));
 }
 function playSound(kind) {
   try {
@@ -439,7 +459,12 @@ function seatedPreview() {
 
 async function rooms(method, body) {
   try {
-    const qs = method === "GET" && state.room ? `?code=${encodeURIComponent(state.room)}` : "";
+    let qs = "";
+    if (method === "GET") {
+      if (body && body.list) qs = "?list=1";
+      else if (state.room) qs = `?code=${encodeURIComponent(state.room)}`;
+      else qs = "?list=1";
+    }
     const res = await fetch(ROOM_API + qs, {
       method: method === "GET" ? "GET" : "POST",
       headers: { "content-type": "application/json" },
@@ -451,6 +476,25 @@ async function rooms(method, body) {
   } catch {
     return null;
   }
+}
+async function refreshActiveRooms() {
+  const data = await rooms("GET", { list: true });
+  if (data && Array.isArray(data.rooms)) {
+    state.activeRooms = data.rooms.filter((r) => r && r.code);
+  }
+}
+function submitAnswerToRoom(index, lockdown = false) {
+  if (!state.room) return;
+  const payload = {
+    action: "answer",
+    code: state.room,
+    id: state.youId,
+    name: state.name,
+    index: Number(index),
+    lockdown: Boolean(lockdown),
+  };
+  if (bc) bc.postMessage({ type: "answer", ...payload });
+  void rooms("POST", payload);
 }
 
 function snapshot() {
@@ -504,10 +548,14 @@ if (bc) {
       return;
     }
     if (d.type === "wager" && role !== "pad" && state.lockdown?.phase === "wager") {
-      applyWager(d.id, d.side, d.amount);
+      applyWager(d.id, d.side, d.amount, Boolean(d.locked));
       return;
     }
-    if (role === "pad" && d.phase) {
+    if (d.type === "answer" && role !== "pad") {
+      applyRemoteAnswer(d.id, d.index, Boolean(d.lockdown));
+      return;
+    }
+    if (role === "pad" && !state.leftPad && d.phase) {
       const keepName = state.name;
       const keepId = state.youId;
       Object.assign(state, d);
@@ -534,7 +582,13 @@ function clockText() {
   const q = currentQ();
   const ld = state.lockdown;
   if (ld?.phase === "wager") return `Lockdown wagers — ${ld.wagerLeft}s`;
-  if (ld?.phase === "play") return `Lockdown ${ld.qi + 1}/${LOCKDOWN_N} · ${ld.qLeft}s`;
+  if (ld?.phase === "intro") return `Lockdown rules — ${ld.introLeft}s`;
+  if (ld?.phase === "play") {
+    const pts = lockdownPointsNow(ld);
+    const isHero = state.youId === ld.playerId;
+    if (!isHero && role === "pad") return `Waiting — ${ld.waitLeft ?? LOCKDOWN_WAIT_S}s · hero plays`;
+    return `Lockdown ${ld.qi + 1}/${LOCKDOWN_N} · ${ld.qLeft}s · $${pts}`;
+  }
   if (ld?.phase === "result") return ld.won ? "Lockdown cleared" : "Lockdown broken";
   if (state.phase === "read") {
     const t = playerById(state.maps[state.youId]);
@@ -561,8 +615,8 @@ function seatPlayers() {
   const remain = Math.max(0, state.playerCount - 1 - guests.length);
   const bots = (state.seatBots || []).slice(0, remain);
   state.players = [
-    { id: "you", name: state.name || "Player", score: 0, human: true, you: true },
-    ...guests.map((g) => ({ id: g.id, name: g.name, score: 0, human: true, you: false })),
+    { id: "you", name: state.name || "Player", score: 0, human: true, you: true, thumb: state.profile?.thumb || "" },
+    ...guests.map((g) => ({ id: g.id, name: g.name, score: 0, human: true, you: false, thumb: g.thumb || "" })),
     ...bots.map((b) => ({
       id: b.id,
       name: b.name,
@@ -571,6 +625,7 @@ function seatPlayers() {
       you: false,
       skill: b.skill,
       buzzDelayMs: b.buzzDelayMs,
+      thumb: "",
     })),
   ].slice(0, 12);
 }
@@ -679,14 +734,19 @@ function buzz() {
 }
 
 function armMap(targetId) {
-  if (state.phase !== "read") return;
-  if (targetId === state.youId) return;
-  if (state.maps[state.youId] === targetId) delete state.maps[state.youId];
-  else state.maps[state.youId] = targetId;
+  const answerPhase = state.phase === "answer";
+  const readPhase = state.phase === "read";
+  if (!readPhase && !answerPhase) return;
+  const owner = answerPhase ? (state.buzzId || state.youId) : state.youId;
+  if (answerPhase && role === "pad" && owner !== state.youId) return;
+  if (targetId === owner) return;
+  if (state.maps[owner] === targetId) delete state.maps[owner];
+  else state.maps[owner] = targetId;
+  if (answerPhase) state.mapLive = Boolean(state.maps[owner]);
   paint();
   publish();
-  if (bc) bc.postMessage({ type: "map", id: state.youId, target: state.maps[state.youId], name: state.name });
-  if (state.room) void rooms("POST", { action: "map", code: state.room, id: state.youId, target: state.maps[state.youId] });
+  if (bc) bc.postMessage({ type: "map", id: owner, target: state.maps[owner], name: state.name });
+  if (state.room) void rooms("POST", { action: "map", code: state.room, id: owner, target: state.maps[owner] });
 }
 
 function aiCorrectChance(bot, tier) {
@@ -744,7 +804,51 @@ function recordCareer() {
   saveProfile({ stats });
 }
 
+function leaveToLobby() {
+  stopTick();
+  clearAiBuzz();
+  clearDojoTick();
+  if (state._ldWait) {
+    clearInterval(state._ldWait);
+    state._ldWait = null;
+  }
+  if (state.room && role === "pad" && state.youId) {
+    void rooms("POST", { action: "leave", code: state.room, id: state.youId, name: state.name });
+  }
+  if (poll) {
+    clearInterval(poll);
+    poll = null;
+  }
+  state.leftPad = true;
+  state.lockdown = null;
+  state.phase = "lobby";
+  state.readyIds = {};
+  state.wagerDraft = null;
+  state.statusMsg = "";
+  state.maps = {};
+  state.mapLive = false;
+  if (role === "pad") {
+    role = "host";
+    state.onScreen = false;
+    state.mpMode = "host";
+    localStorage.setItem("fa-onscreen", "0");
+    localStorage.setItem("fa-mp", "host");
+    try {
+      const u = new URL(location.href);
+      u.searchParams.delete("role");
+      u.searchParams.delete("room");
+      u.searchParams.delete("pad");
+      history.replaceState(null, "", u.pathname + (u.searchParams.toString() ? "?" + u.searchParams.toString() : ""));
+    } catch { /* ignore */ }
+    state.room = "";
+    state.joinInput = "";
+  }
+  state.lobbyOpen = "room";
+  paint(true);
+}
+
 function finishShow() {
+
   state.phase = "end";
   state.pose = (me()?.score || 0) >= 4000 ? "win" : "idle";
   recordCareer();
@@ -771,18 +875,50 @@ function afterReveal(ok) {
   }, 1400);
 }
 
-function pick(i, asId) {
-  if (state.lockdown?.phase === "wager") return;
+function applyRemoteAnswer(id, index, lockdown = false) {
+  if (role === "pad") return;
+  const i = Number(index);
+  if (!Number.isFinite(i)) return;
+  if (lockdown || state.lockdown?.phase === "play") {
+    if (!state.lockdown || state.lockdown.phase !== "play") return;
+    if (id && state.lockdown.playerId && id !== state.lockdown.playerId) return;
+    lockdownPick(i, true);
+    return;
+  }
+  if (state.phase !== "answer") return;
+  if (state.buzzed && id && state.buzzId && id !== state.buzzId) return;
+  pick(i, id || state.buzzId || state.youId, true);
+}
+
+function pick(i, asId, fromRemote = false) {
+  if (state.lockdown?.phase === "wager" || state.lockdown?.phase === "intro") return;
   if (state.lockdown?.phase === "play") {
-    lockdownPick(i);
+    // Pad hero sends to room; host applies. Local solo applies directly.
+    if (role === "pad" && !fromRemote) {
+      if (state.youId !== state.lockdown.playerId) return;
+      submitAnswerToRoom(i, true);
+      state.picked = i;
+      paint();
+      return;
+    }
+    lockdownPick(i, fromRemote);
     return;
   }
   if (state.phase === "reveal" || state.phase === "end" || state.phase === "read" || state.phase === "lobby") return;
-  if (state.onScreen && role === "pad" && !state.buzzed) return;
-  if (!state.onScreen && state.phase === "buzz" && !asId) {
+  if (role === "pad" && !state.buzzed) return;
+  if (!state.onScreen && state.phase === "buzz" && !asId && !fromRemote) {
     takeBuzz(state.youId, state.name);
   }
   if (state.phase !== "answer") return;
+  // Pad answers must reach the TV room (voice + tap).
+  if (role === "pad" && !fromRemote && state.room) {
+    const answerer = state.buzzId || state.youId;
+    if (answerer !== state.youId) return;
+    submitAnswerToRoom(i, false);
+    state.picked = i;
+    paint();
+    return;
+  }
   const q = currentQ();
   if (!q) return;
   const answerer = asId || state.buzzId || state.youId;
@@ -807,12 +943,13 @@ function startLockdown(playerId) {
     continueRound();
     return;
   }
-  const qs = leftoverQs().slice(0, LOCKDOWN_N);
+  const qs = leftoverQs(true).slice(0, LOCKDOWN_N);
   if (qs.length < LOCKDOWN_N) {
     continueRound();
     return;
   }
   qs.forEach((q) => state.spent.add(q.id));
+  state.wagerDraft = null;
   state.lockdown = {
     phase: "wager",
     playerId: hero.id,
@@ -820,9 +957,12 @@ function startLockdown(playerId) {
     qs,
     qi: 0,
     hits: 0,
+    earned: 0,
     picked: -1,
     wagerLeft: WAGER_S,
-    qLeft: 8,
+    introLeft: LOCKDOWN_INTRO_S,
+    qLeft: LOCKDOWN_ANSWER_S,
+    waitLeft: LOCKDOWN_WAIT_S,
     wagers: {},
     won: false,
   };
@@ -831,9 +971,9 @@ function startLockdown(playerId) {
   paint();
   publish();
   state.players.filter((p) => !p.human && p.id !== hero.id).forEach((p) => {
-    const amt = Math.min(100, Math.max(100, p.score || 100));
+    const amt = Math.min(WAGER_AMTS[WAGER_AMTS.length - 1], Math.max(100, p.score || 100));
     const side = Math.random() < 0.55 ? "win" : "lose";
-    applyWager(p.id, side, amt);
+    applyWager(p.id, side, amt, true);
   });
   maybeCloseWagers();
   stopTick();
@@ -848,16 +988,47 @@ function startLockdown(playerId) {
   }, 1000);
 }
 
-function applyWager(id, side, amount) {
+function applyWager(id, side, amount, locked = true) {
   const ld = state.lockdown;
   if (!ld || ld.phase !== "wager") return;
   if (id === ld.playerId) return;
   const p = playerById(id);
-  const amt = Math.min(amount, Math.max(100, p?.score || 100));
-  ld.wagers[id] = { side, amount: amt, locked: true };
+  const capped = Math.min(Number(amount) || 100, Math.max(100, p?.score || 100));
+  const amt = WAGER_AMTS.includes(capped) ? capped : Math.min(WAGER_AMTS[WAGER_AMTS.length - 1], Math.max(WAGER_AMTS[0], capped));
+  ld.wagers[id] = { side, amount: amt, locked: Boolean(locked) };
+  if (id === state.youId) {
+    state.wagerDraft = locked ? null : { side, amount: amt };
+  }
   paint();
   publish();
-  maybeCloseWagers();
+  if (locked) maybeCloseWagers();
+}
+
+function setWagerDraft(side, amount) {
+  const ld = state.lockdown;
+  if (!ld || ld.phase !== "wager") return;
+  if (state.youId === ld.playerId) return;
+  const prev = state.wagerDraft || ld.wagers[state.youId] || { side: "win", amount: 100 };
+  const next = {
+    side: side || prev.side || "win",
+    amount: amount != null ? Number(amount) : (prev.amount || 100),
+    locked: false,
+  };
+  state.wagerDraft = next;
+  ld.wagers[state.youId] = { ...next, locked: false };
+  paint(true);
+}
+
+function lockInWager() {
+  const ld = state.lockdown;
+  if (!ld || ld.phase !== "wager") return;
+  if (state.youId === ld.playerId) return;
+  const draft = state.wagerDraft || ld.wagers[state.youId];
+  if (!draft || !draft.side || !draft.amount) return;
+  applyWager(state.youId, draft.side, draft.amount, true);
+  state.wagerDraft = null;
+  if (bc) bc.postMessage({ type: "wager", id: state.youId, side: draft.side, amount: draft.amount, locked: true });
+  if (state.room) void rooms("POST", { action: "wager", code: state.room, id: state.youId, side: draft.side, amount: draft.amount, locked: true });
 }
 
 function maybeCloseWagers() {
@@ -871,12 +1042,56 @@ function closeWagers() {
   const ld = state.lockdown;
   if (!ld || ld.phase !== "wager") return;
   stopTick();
-  ld.phase = "play";
+  // Auto-lock any unfinished human drafts as lose@$100 so play can start.
+  state.players.filter((p) => p.id !== ld.playerId).forEach((p) => {
+    if (!ld.wagers[p.id]?.locked) {
+      const d = ld.wagers[p.id] || { side: "lose", amount: 100 };
+      ld.wagers[p.id] = { side: d.side || "lose", amount: d.amount || 100, locked: true };
+    }
+  });
+  ld.phase = "intro";
+  ld.introLeft = LOCKDOWN_INTRO_S;
   ld.qi = 0;
   ld.hits = 0;
+  ld.earned = 0;
   ld.picked = -1;
-  ld.qLeft = 8;
   state.picked = -1;
+  state.wagerDraft = null;
+  paint();
+  publish();
+  runLockdownIntro();
+}
+
+function runLockdownIntro() {
+  stopTick();
+  const ld = state.lockdown;
+  if (!ld || ld.phase !== "intro") return;
+  ld.introLeft = LOCKDOWN_INTRO_S;
+  paint();
+  publish();
+  state.tick = setInterval(() => {
+    if (!state.lockdown || state.lockdown.phase !== "intro") return;
+    state.lockdown.introLeft -= 1;
+    if (state.lockdown.introLeft <= 0) {
+      stopTick();
+      beginLockdownQuestion();
+    } else {
+      const clock = $("#clock");
+      if (clock) clock.textContent = clockText();
+      paint();
+    }
+  }, 1000);
+}
+
+function beginLockdownQuestion() {
+  const ld = state.lockdown;
+  if (!ld) return;
+  stopTick();
+  ld.phase = "play";
+  ld.picked = -1;
+  state.picked = -1;
+  ld.qLeft = LOCKDOWN_ANSWER_S;
+  ld.waitLeft = LOCKDOWN_WAIT_S;
   paint();
   publish();
   runLockdownClock();
@@ -886,26 +1101,45 @@ function runLockdownClock() {
   stopTick();
   const ld = state.lockdown;
   if (!ld || ld.phase !== "play") return;
-  ld.qLeft = 8;
+  ld.qLeft = LOCKDOWN_ANSWER_S;
+  ld.waitLeft = LOCKDOWN_WAIT_S;
   const hero = playerById(ld.playerId);
   if (hero && !hero.human) {
+    const delay = 4000 + Math.random() * 8000;
     state.tick = setTimeout(() => {
       const q = ld.qs[ld.qi];
       if (!q || state.lockdown?.phase !== "play") return;
-      const i = Math.random() < aiCorrectChance(hero, q.tier) ? q.correctIndex : (q.correctIndex + 1 + Math.floor(Math.random() * 3)) % 4;
+      const i = Math.random() < aiCorrectChance(hero, q.tier) * 0.75
+        ? q.correctIndex
+        : (q.correctIndex + 1 + Math.floor(Math.random() * 3)) % 4;
       lockdownPick(i, true);
-    }, 1600);
+    }, delay);
+    // Still tick wait/points for UI
+    const waitTick = setInterval(() => {
+      if (!state.lockdown || state.lockdown.phase !== "play") {
+        clearInterval(waitTick);
+        return;
+      }
+      state.lockdown.qLeft = Math.max(0, state.lockdown.qLeft - 1);
+      state.lockdown.waitLeft = Math.max(0, (state.lockdown.waitLeft || 0) - 1);
+      const clock = $("#clock");
+      if (clock) clock.textContent = clockText();
+    }, 1000);
+    state._ldWait = waitTick;
     return;
   }
   state.tick = setInterval(() => {
     if (!state.lockdown || state.lockdown.phase !== "play") return;
     state.lockdown.qLeft -= 1;
+    state.lockdown.waitLeft = Math.max(0, (state.lockdown.waitLeft || 0) - 1);
     if (state.lockdown.qLeft <= 0) {
       stopTick();
       lockdownPick(-1, true);
     } else {
       const clock = $("#clock");
       if (clock) clock.textContent = clockText();
+      // Force paint every ~5s so decaying points show on pads
+      if (state.lockdown.qLeft % 5 === 0) paint();
     }
   }, 1000);
 }
@@ -914,47 +1148,64 @@ function lockdownPick(i, forced = false) {
   const ld = state.lockdown;
   if (!ld || ld.phase !== "play") return;
   const isHero = state.youId === ld.playerId;
-  if (!forced && !isHero) return;
+  if (!forced && !isHero && role !== "pad") return;
+  if (!forced && role === "pad" && !isHero) return;
   const q = ld.qs[ld.qi];
   if (!q) return;
   stopTick();
+  if (state._ldWait) {
+    clearInterval(state._ldWait);
+    state._ldWait = null;
+  }
+  const pts = lockdownPointsNow(ld);
   const ok = i === q.correctIndex;
   ld.picked = i;
   state.picked = i;
-  if (ok) ld.hits += 1;
+  if (ok) {
+    ld.hits += 1;
+    ld.earned = (ld.earned || 0) + pts;
+    addScore(ld.playerId, pts);
+  }
   playSound(ok ? "correct" : "miss");
   state.pose = ok ? "win" : "loss";
   ld.phase = "flash";
   paint();
+  publish();
   setTimeout(() => {
     ld.qi += 1;
     ld.picked = -1;
     state.picked = -1;
     if (ld.qi >= LOCKDOWN_N) finishLockdown();
     else {
-      ld.phase = "play";
+      ld.phase = "intro";
+      ld.introLeft = LOCKDOWN_INTRO_S;
       paint();
       publish();
-      runLockdownClock();
+      runLockdownIntro();
     }
-  }, 900);
+  }, 1100);
 }
 
 function finishLockdown() {
   const ld = state.lockdown;
   if (!ld) return;
   stopTick();
+  if (state._ldWait) {
+    clearInterval(state._ldWait);
+    state._ldWait = null;
+  }
   ld.won = ld.hits >= LOCKDOWN_WIN_AT;
   ld.phase = "result";
-  if (ld.won) addScore(ld.playerId, ld.hits * LOCKDOWN_Q);
+  // Points already banked per-hit via decaying value; wager settles now.
   Object.entries(ld.wagers).forEach(([id, w]) => {
+    if (!w?.locked) return;
     const hit = (w.side === "win" && ld.won) || (w.side === "lose" && !ld.won);
     addScore(id, hit ? w.amount : -w.amount);
   });
   state.pose = ld.won ? "win" : "loss";
   paint();
   publish();
-  setTimeout(() => continueRound(), 1800);
+  setTimeout(() => continueRound(), 2000);
 }
 
 function listenVoice() {
@@ -998,8 +1249,13 @@ function applyHostSize() {
 }
 
 function scoreboard() {
-  const line = state.players.map((p) => `${p.name} $${p.score}`).join(" · ");
-  return `<span class="chip scores">${escapeHtml(line)}</span>`;
+  const cells = state.players.map((p) => {
+    const thumb = p.thumb
+      ? `<img class="av" src="${p.thumb}" alt=""/>`
+      : `<span class="av empty" aria-hidden="true"></span>`;
+    return `<span class="score-cell ${p.you ? "you" : ""}">${thumb}<span class="score-name">${escapeHtml(p.name)}</span><b>$${p.score}</b></span>`;
+  }).join("");
+  return `<div class="scores-row">${cells}</div>`;
 }
 
 function rivalsHTML() {
@@ -1018,24 +1274,59 @@ function rivalsHTML() {
 
 function wagerHTML() {
   const ld = state.lockdown;
-  if (!ld || ld.phase !== "wager") return "";
-  const mine = ld.wagers[state.youId];
+  if (!ld) return "";
+  if (ld.phase === "intro") {
+    return `<div class="wager intro">
+      <p class="wager-copy"><b>Lockdown</b> — ${escapeHtml(ld.name)} plays ${LOCKDOWN_N}. Need ${LOCKDOWN_WIN_AT}/${LOCKDOWN_N}.</p>
+      <p class="wager-copy">Each question: up to <b>3 minutes</b>. Points start at <b>$${LOCKDOWN_PTS}</b> and decay to <b>$0</b>.</p>
+      <p class="wager-copy">Opponents already locked WIN/LOSE. Starting in <b>${ld.introLeft}s</b>.</p>
+    </div>`;
+  }
+  if (ld.phase !== "wager") return "";
+  const mine = ld.wagers[state.youId] || state.wagerDraft;
   const isHero = state.youId === ld.playerId;
   if (isHero) {
     return `<div class="wager"><p class="wager-copy">${tt("lockdownWagerHero", ld.wagerLeft)}</p></div>`;
   }
+  const locked = Boolean(mine?.locked);
+  const side = mine?.side || state.wagerDraft?.side || "";
+  const amount = mine?.amount || state.wagerDraft?.amount || 0;
   return `<div class="wager">
-    <p class="wager-copy">${tt("lockdownWagerOpp", escapeHtml(ld.name))}</p>
+    <p class="wager-copy">${tt("lockdownWagerOpp", escapeHtml(ld.name))} · ${ld.wagerLeft}s</p>
     <div class="wager-row">
-      <button type="button" class="side ${mine?.side === "win" ? "on" : ""}" data-side="win">${tt("win")}</button>
-      <button type="button" class="side lose ${mine?.side === "lose" ? "on" : ""}" data-side="lose">${tt("lose")}</button>
+      <button type="button" class="side ${side === "win" ? "on" : ""}" data-side="win" ${locked ? "disabled" : ""}>${tt("win")}</button>
+      <button type="button" class="side lose ${side === "lose" ? "on" : ""}" data-side="lose" ${locked ? "disabled" : ""}>${tt("lose")}</button>
     </div>
     <div class="wager-row">
       ${WAGER_AMTS.map((n) =>
-        `<button type="button" class="amt ${mine?.amount === n ? "on" : ""}" data-amt="${n}">$${n}</button>`
+        `<button type="button" class="amt ${amount === n ? "on" : ""}" data-amt="${n}" ${locked ? "disabled" : ""}>$${n}</button>`
       ).join("")}
     </div>
-    <p class="meta">${mine?.locked ? tt("lockedSide", mine.side, mine.amount) : tt("twoTaps")}</p>
+    ${locked
+      ? `<p class="meta">${tt("lockedSide", mine.side, mine.amount)}</p>`
+      : `<button type="button" class="primary" id="lockWager" ${side && amount ? "" : "disabled"}>${tt("lockIn")}</button>
+         <p class="meta">${tt("pickThenLock")}</p>`}
+  </div>`;
+}
+
+function mapStealHTML() {
+  const q = currentQ();
+  if (!q || state.lockdown) return "";
+  if (state.phase !== "answer") return "";
+  const answerer = state.buzzId || state.youId;
+  // PWHB pad (or local) — steal prompt below answers
+  if (role === "pad" && answerer !== state.youId) return "";
+  if (role !== "pad" && state.onScreen) return ""; // TV display skips steal chrome
+  const stake = stakeOf(q);
+  const doubled = stake * 2;
+  const armed = state.maps[answerer] || state.maps[state.youId];
+  const rivals = state.players.filter((p) => p.id !== answerer);
+  if (!rivals.length) return "";
+  return `<div class="map-steal">
+    <span class="rivals-lab">${tt("mapStealLab", doubled)}</span>
+    ${rivals.map((p) =>
+      `<button type="button" class="rival ${armed === p.id ? "on" : ""}" data-map="${p.id}">${escapeHtml(p.name)} <b>−$${stake}</b></button>`
+    ).join("")}
   </div>`;
 }
 
@@ -1136,11 +1427,15 @@ function directionsHTML() {
             </div>
             <p class="dir-copy">A miss on a regular question is <b>$0</b> — you do not lose points. <b>MAP</b> during the read can put stakes at risk. <b>Lockdown</b> hits twice per show (see below).</p>
           `)}
-          ${dirAcc("map", "MAP", "<small>During the read</small>", `
-            <p class="dir-copy">During the 10-second read, tap a rival once. Stake = this question. If you buzz first and hit it, you bank <b>double</b> and they lose the stake. Miss, and you lose the stake. If someone else buzzes, MAP is off.</p>
+          ${dirAcc("map", "MAP (Make-a-Point)", "<small>Read + answer</small>", `
+            <p class="dir-copy"><b>Make-a-Point</b> lets the person who hits the buzzer (PWHB) risk stakes against a rival.</p>
+            <p class="dir-copy">During the <b>10-second read</b>, tap a rival to arm MAP. Stake = this question’s point value. After you buzz, your phone also shows a <b>steal prompt below the answer options</b> — opponents’ names as choices, with the displayed amount = question points <b>doubled</b> for you if you hit it (they lose the stake). Miss, and you lose the stake. If someone else buzzes first, your MAP is off.</p>
           `)}
           ${dirAcc("lock", "Lockdown", "<small>Twice a show</small>", `
-            <p class="dir-copy">Twice per show, after a correct buzz. That player plays <b>5</b>. Opponents tap WIN or LOSE and $100 / $500 / $1,000. Sixty seconds, or it skips ahead when everyone has locked. 4/5 pays WIN even money; otherwise LOSE pays. Those five bank at <b>$500 each</b> only if they clear the set.</p>
+            <p class="dir-copy">Twice per show, after a correct buzz. That player faces <b>5 hard questions</b>.</p>
+            <p class="dir-copy"><b>Wagers:</b> opponents pick WIN or LOSE and $100 / $500 / $1,000, then tap <b>Lock in</b> (60s, or when everyone locks).</p>
+            <p class="dir-copy"><b>Rules countdown:</b> about <b>7 seconds</b> before each lockdown question — explains the rules and lets the table settle.</p>
+            <p class="dir-copy"><b>Answer window:</b> up to <b>3 minutes</b> per question. Points start at <b>$5,000</b> and <b>decay linearly to $0</b> as time runs out. Need <b>4/5</b> for WIN wagers; otherwise LOSE pays. Waiting players see a <b>60-second</b> wait countdown (glimpse only — they do not see the hero’s response).</p>
           `)}
           ${dirAcc("dojo", "Dojo", "<small>10 placements</small>", `
             <p class="dir-copy">Ten placement questions in the lobby <b>on the phone</b> (not on the TV). Each prompt shows for <b>10 seconds</b>, then the answers appear — tap one. No player name or points on the Dojo card. Places you Bronze, Silver, or Gold for about three months. Play stays gated until placement is current. Karate belts rise with career points, separate from ability.</p>
@@ -1276,7 +1571,10 @@ function profileBody() {
   const p = state.profile || {};
   const belt = BELT_META[p.belt || "white"];
   const ab = p.abilityTier ? ABILITY_META[p.abilityTier] : null;
+  const named = Boolean(String(p.displayName || "").trim());
+  const placed = isPlaced();
   return `
+    <p class="dir-copy">${tt("profileIntro")}</p>
     <label class="field" for="nm">${tt("name")}</label>
     <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
     <label class="field" for="em">${tt("email")}</label>
@@ -1287,6 +1585,8 @@ function profileBody() {
       <input id="th" type="file" accept="image/*"/>
     </div>
     <p class="meta">${escapeHtml(tt("beltCareer", belt.label, ab ? ab.label : "", p.stats?.totalPoints || 0))}</p>
+    ${named && !placed ? `<button class="primary" id="profileToDojo" type="button">${tt("continueDojo")}</button>` : ""}
+    ${named && placed ? `<button class="ghost" id="profileToRoom" type="button">${tt("continueRoom")}</button>` : ""}
   `;
 }
 
@@ -1319,11 +1619,21 @@ function dojoBody() {
     const ab = ABILITY_META[p.abilityTier] || ABILITY_META.bronze;
     return `
       <p class="meta">${escapeHtml(tt("abilityRetake", ab.label, formatDue(p.nextPlacementDueAt)))}</p>
+      <label class="field" for="thDojo">${tt("photoTv")}</label>
+      <div class="thumb-row">
+        ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
+        <input id="thDojo" type="file" accept="image/*"/>
+      </div>
       <button class="ghost" id="retake" type="button">${tt("retakeDojo")}</button>
     `;
   }
   return `
     <p class="meta">${tt("dojoIntro")}</p>
+    <label class="field" for="thDojo">${tt("photoTv")}</label>
+    <div class="thumb-row">
+      ${p?.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
+      <input id="thDojo" type="file" accept="image/*"/>
+    </div>
     <button class="primary" id="dojoGo" type="button">${tt("startDojo")}</button>
   `;
 }
@@ -1349,6 +1659,9 @@ function roomBody() {
   const bots = seats.length - humans;
   const silk = state.room ? tvSilkUrl(state.room) : "";
   const mode = pad ? "join" : (state.mpMode || "host");
+  const roomsList = (state.activeRooms || [])
+    .filter((r) => r.phase !== "end")
+    .slice(0, 12);
 
   if (pad || mode === "join") {
     return `
@@ -1358,6 +1671,15 @@ function roomBody() {
       <input id="nm" type="text" value="${escapeHtml(state.name)}" maxlength="18" autocomplete="nickname"/>
       <label class="field" for="jc">${tt("tvRoomCode")}</label>
       <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off" autocapitalize="characters"/>
+      <div class="rooms-list">
+        <p class="rivals-lab">${tt("activeRooms")}</p>
+        ${roomsList.length
+          ? roomsList.map((r) =>
+              `<button type="button" class="room-pick" data-join-room="${escapeHtml(r.code)}"><b>${escapeHtml(r.code)}</b> · ${escapeHtml(r.host || "TV")} · ${r.guests || 0} pads · ${escapeHtml(r.phase || "lobby")}</button>`
+            ).join("")
+          : `<p class="meta">${tt("noActiveRooms")}</p>`}
+        <button type="button" class="ghost" id="refreshRooms">${tt("refreshRooms")}</button>
+      </div>
       <p class="meta">${tt("joinGateMeta")}</p>
     `;
   }
@@ -1400,10 +1722,17 @@ function roomBody() {
       ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
     </div>
     ${isTvDisplay() ? "" : `
-    <label class="toggle">
-      <input id="os" type="checkbox" ${state.onScreen ? "checked" : ""} ${forcedDisplay ? "disabled" : ""}/>
-      <span>${tt("onScreen")}</span>
-    </label>`}
+    <div class="screen-modes" role="radiogroup" aria-label="Screen mode">
+      <label class="toggle">
+        <input id="osOff" type="radio" name="screenMode" ${!state.onScreen ? "checked" : ""} ${forcedDisplay ? "disabled" : ""}/>
+        <span>${tt("offScreen")}</span>
+      </label>
+      <label class="toggle">
+        <input id="os" type="radio" name="screenMode" ${state.onScreen ? "checked" : ""} ${forcedDisplay ? "disabled" : ""}/>
+        <span>${tt("onScreenShort")}</span>
+      </label>
+    </div>
+    <p class="meta">${state.onScreen ? tt("onScreen") : tt("offScreenHint")}</p>`}
     ${state.onScreen || isTvDisplay() ? `
       <p class="dir-copy">${tt("onScreenOwns")}</p>
       <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
@@ -1415,6 +1744,16 @@ function roomBody() {
         <img class="qr" alt="Join" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(shareUrl())}"/>
       ` : ""}
       <p class="meta">${escapeHtml(tt("humansBots", humans, bots))}</p>
+      ${isTvDisplay() || state.onScreen ? `
+        <div class="tv-players">
+          <p class="rivals-lab">${tt("tvPlayers")}</p>
+          ${(state.guests || []).map((g) =>
+            `<div class="tv-player-row">
+              <span class="seat human">${escapeHtml(g.name)}</span>
+              <button type="button" class="ghost danger" data-kick="${escapeHtml(g.id)}">${tt("removePlayer")}</button>
+            </div>`
+          ).join("") || `<p class="meta">${tt("noPadsYet")}</p>`}
+        </div>` : ""}
     ` : `<p class="meta">${tt("offScreenHint")}</p>`}
   `;
 }
@@ -1508,7 +1847,10 @@ function readyCardHTML() {
   const rows = pads.length
     ? pads.map((g) => {
         const on = Boolean(state.readyIds[g.id]);
-        return `<span class="seat ${on ? "human" : "bot"}">${escapeHtml(g.name)}${on ? tt("phoneReady") : ""}</span>`;
+        const kick = role !== "pad"
+          ? `<button type="button" class="ghost danger seat-kick" data-kick="${escapeHtml(g.id)}">${tt("removePlayer")}</button>`
+          : "";
+        return `<span class="seat-row"><span class="seat ${on ? "human" : "bot"}">${escapeHtml(g.name)}${on ? tt("phoneReady") : ""}</span>${kick}</span>`;
       }).join("")
     : `<span class="seat bot">${tt("waitingPhones")}</span>`;
   const pad = role === "pad";
@@ -1531,77 +1873,98 @@ function readyCardHTML() {
 function playHTML() {
   const q = currentQ();
   const tv = isTvDisplay();
-  const pad = state.onScreen && role === "pad";
+  const pad = isPad(); // Off Screen pad = buzzer UI without forcing full TV chrome on phone
   const ld = state.lockdown;
   const readyPhase = state.phase === "ready";
+  const endPhase = state.phase === "end";
   const lockdownPlay = ld?.phase === "play" || ld?.phase === "flash";
+  const lockdownIntro = ld?.phase === "intro";
+  const isHero = ld ? ld.playerId === state.youId : true;
+  const waiterPad = pad && ld && lockdownPlay && !isHero;
   const showAns = ld
-    ? lockdownPlay
+    ? (lockdownPlay && (isHero || !pad) && !waiterPad)
     : ["buzz", "answer", "reveal"].includes(state.phase);
   const canBuzz = readyPhase
     ? (pad || !state.onScreen) && !state.readyIds[state.youId]
     : (!ld && (pad || !state.onScreen) && state.phase === "buzz" && !state.buzzed);
-  const hero = ld ? ld.playerId === state.youId : true;
   const canPick = ld
-    ? lockdownPlay && hero && ld.phase === "play"
-    : state.phase === "answer" || (!state.onScreen && state.phase === "buzz");
+    ? lockdownPlay && isHero && ld.phase === "play"
+    : state.phase === "answer" || (!state.onScreen && !pad && state.phase === "buzz");
   let prompt;
   if (readyPhase) prompt = "";
+  else if (endPhase) prompt = tt("showEnd");
   else if (ld?.phase === "wager") prompt = `LOCKDOWN — ${ld.name} · ${tt("lockdownWagers")}`;
-  else if (ld?.phase === "result") prompt = ld.won ? `${ld.name} cleared Lockdown ${ld.hits}/5.` : `${ld.name} broke Lockdown ${ld.hits}/5.`;
+  else if (ld?.phase === "intro") prompt = `Lockdown rules · ${ld.introLeft}s`;
+  else if (ld?.phase === "result") prompt = ld.won
+    ? `${ld.name} cleared Lockdown ${ld.hits}/5 · $${ld.earned || 0}`
+    : `${ld.name} broke Lockdown ${ld.hits}/5 · $${ld.earned || 0}`;
   else if (!q) prompt = tt("showEnd");
-  else if (pad && !lockdownPlay) prompt = state.phase === "read" ? tt("padRead") : tt("padBuzz");
+  else if (waiterPad) prompt = tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S);
+  else if (pad && !lockdownPlay && !lockdownIntro) prompt = state.phase === "read" ? tt("padRead") : tt("padBuzz");
   else prompt = escapeHtml(q.prompt);
   const cat = readyPhase
     ? tt("ready")
-    : (ld
-      ? `Lockdown · ${ld.phase === "play" || ld.phase === "flash" ? `${ld.qi + 1}/${LOCKDOWN_N}` : ld.phase}`
-      : (q && !pad ? escapeHtml(q.categoryTitle) : (pad ? tt("yourPad") : "")));
-  const tier = readyPhase ? "READY" : (ld ? "LOCKDOWN" : (q ? q.tier.toUpperCase() : "END"));
-  const n = readyPhase || ld ? "" : ` · ${state.i + 1}/${state.qs.length || ROUND}`;
+    : endPhase
+      ? "END"
+      : (ld
+        ? `Lockdown · ${ld.phase === "play" || ld.phase === "flash" ? `${ld.qi + 1}/${LOCKDOWN_N}` : ld.phase}`
+        : (q && !pad ? escapeHtml(q.categoryTitle) : (pad ? tt("yourPad") : "")));
+  const tier = readyPhase ? "READY" : (endPhase ? "END" : (ld ? "LOCKDOWN" : (q ? q.tier.toUpperCase() : "END")));
+  const n = readyPhase || ld || endPhase ? "" : ` · ${state.i + 1}/${state.qs.length || ROUND}`;
   const buzzLabel = readyPhase
     ? (state.readyIds[state.youId] ? tt("ready") : tt("buzzReady"))
     : tt("buzz");
+  const showLobbyBtn = true;
   return `
     <img class="bg" alt="" src="${STUDIOS[state.studioI % STUDIOS.length]}"/>
     <div class="veil"></div>
     <div class="top">
       <div class="logo">Fast Answer!<small>${tier}${n}</small></div>
       <div class="grow"></div>
-      ${readyPhase ? "" : scoreboard()}
+      ${readyPhase || endPhase ? "" : scoreboard()}
       <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
-      <button class="word" id="quit" type="button">${tt("lobby")}</button>
+      ${showLobbyBtn ? `<button class="word" id="quit" type="button">${tt("lobby")}</button>` : ""}
     </div>
     <div class="play">
-      ${readyPhase ? readyCardHTML() : `<div class="qwrap">
+      ${readyPhase ? readyCardHTML() : (endPhase ? `<div class="qwrap"><div class="qcard">
+        <p class="cat">END</p>
+        <p class="qtext">${tt("showEnd")}</p>
+        <p class="meta" id="clock">${scoreboard()}</p>
+        <div class="row" style="margin-top:12px">
+          <button class="primary" id="quit" type="button">${tt("lobby")}</button>
+        </div>
+      </div></div>` : `<div class="qwrap">
         <div class="qcard ${ld ? "lock" : ""} ${state.mapLive ? "map-on" : ""}">
           <p class="cat">${cat}</p>
           <p class="qtext">${prompt}</p>
           <p class="meta" id="clock">${clockText()}</p>
           ${rivalsHTML()}
         </div>
-      </div>`}
+      </div>`)}
       ${pad ? "" : `<div class="host"><img src="${POSE[state.pose] || POSE.idle}" alt="Jeremy" style="height:var(--host-h)"/></div>`}
     </div>
-    ${readyPhase ? `<div></div>` : (ld?.phase === "wager" ? wagerHTML() : (showAns && q ? `<div class="answers">${q.choices.map((c, i) => {
+    ${readyPhase || endPhase ? `<div></div>` : (ld?.phase === "wager" || ld?.phase === "intro" ? wagerHTML() : (showAns && q ? `<div class="answers">${q.choices.map((c, i) => {
       let cls = "ans";
       const picked = ld ? ld.picked : state.picked;
       const reveal = state.phase === "reveal" || ld?.phase === "flash" || ld?.phase === "result";
+      // Waiters must not see hero's response until flash/result
+      const hidePick = waiterPad && !reveal;
       if (reveal) {
         if (i === q.correctIndex) cls += " ok";
-        else if (i === picked) cls += " bad";
-      } else if (i === picked) cls += " on";
+        else if (i === picked && !hidePick) cls += " bad";
+      } else if (i === picked && !hidePick) cls += " on";
       const dis = canPick && !reveal ? "" : "disabled";
       return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
-    }).join("")}</div>` : `<div></div>`))}
+    }).join("")}${mapStealHTML()}</div>` : (waiterPad ? `<div class="wager"><p class="wager-copy">${tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S)}</p><p class="meta">Glimpse only — hero answers privately.</p></div>` : `<div></div>`)))}
     <div class="buzzbar">
-      ${!state.onScreen && !ld && !readyPhase ? `<div class="dock set-dock">
+      ${!state.onScreen && !pad && !ld && !readyPhase && !endPhase ? `<div class="dock set-dock">
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
         <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
       </div>` : ""}
-      ${(pad || !tv) && !ld ? `<button class="buzzer ${canBuzz ? "lit" : ""} ${readyPhase && state.readyIds[state.youId] ? "ready-on" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
-      ${ld ? `<div class="lock-flag">${ld.phase === "wager" ? tt("lockdownWagers") : `${escapeHtml(ld.name)} · ${ld.hits} hit`}</div>` : ""}
-      ${(pad && state.phase === "answer") ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
+      ${(pad || !tv) && !ld && !endPhase ? `<button class="buzzer ${canBuzz ? "lit" : ""} ${readyPhase && state.readyIds[state.youId] ? "ready-on" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
+      ${ld ? `<div class="lock-flag">${ld.phase === "wager" ? tt("lockdownWagers") : ld.phase === "intro" ? `Rules · ${ld.introLeft}s` : `${escapeHtml(ld.name)} · ${ld.hits} hit · $${ld.earned || 0}`}</div>` : ""}
+      ${(pad && (state.phase === "answer" || (ld?.phase === "play" && isHero))) ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
+      ${pad || endPhase ? `<button class="ghost" id="quitBar" type="button">${tt("lobby")}</button>` : ""}
     </div>
     ${joinQrChip(140)}
     ${rulesHTML()}
@@ -1632,7 +1995,7 @@ function bindLobby() {
       localStorage.setItem("fa-mp", state.mpMode);
       state.statusMsg = "";
       if (state.mpMode === "join") {
-        // Stay host UI until Join as buzzer succeeds — room form shows join fields.
+        void refreshActiveRooms().then(() => paint(true));
       } else if (state.mpMode === "cast" && !state.room) {
         // room created on go
       }
@@ -1675,13 +2038,71 @@ function bindLobby() {
     fillSeats();
     paint(true);
   };
-  const os = $("#os");
-  if (os) os.onchange = async (e) => {
-    state.onScreen = e.target.checked;
+  const bindScreen = async (on) => {
+    state.onScreen = Boolean(on);
     localStorage.setItem("fa-onscreen", state.onScreen ? "1" : "0");
     if (state.onScreen) await openRoom();
     paint(true);
   };
+  const os = $("#os");
+  if (os) os.onchange = () => { if (os.checked) void bindScreen(true); };
+  const osOff = $("#osOff");
+  if (osOff) osOff.onchange = () => { if (osOff.checked) void bindScreen(false); };
+  const refreshRooms = $("#refreshRooms");
+  if (refreshRooms) refreshRooms.onclick = async () => {
+    await refreshActiveRooms();
+    paint(true);
+  };
+  document.querySelectorAll("[data-join-room]").forEach((b) => {
+    b.onclick = () => {
+      const code = String(b.dataset.joinRoom || "").toUpperCase();
+      state.joinInput = code;
+      state.room = code;
+      const jc = $("#jc");
+      if (jc) jc.value = code;
+      state.statusMsg = "Selected room " + code;
+      paint(true);
+    };
+  });
+  document.querySelectorAll("[data-kick]").forEach((b) => {
+    b.onclick = async () => {
+      const id = b.dataset.kick;
+      if (!id || !state.room) return;
+      await rooms("POST", { action: "kick", code: state.room, id });
+      state.guests = (state.guests || []).filter((g) => g.id !== id);
+      paint(true);
+      publish();
+    };
+  });
+  const profileToDojo = $("#profileToDojo");
+  if (profileToDojo) profileToDojo.onclick = () => {
+    saveProfile({ displayName: state.name });
+    state.lobbyOpen = "dojo";
+    if (!isPlaced() && (!state.dojo || !state.dojo.q)) startDojo();
+    else paint(true);
+  };
+  const profileToRoom = $("#profileToRoom");
+  if (profileToRoom) profileToRoom.onclick = () => {
+    saveProfile({ displayName: state.name });
+    state.lobbyOpen = "room";
+    paint(true);
+  };
+  const bindThumb = (el) => {
+    if (!el) return;
+    el.onchange = (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      if (file.size > 400000) {
+        state.statusMsg = tt("photoBig");
+        paint(true);
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => saveProfile({ thumb: String(reader.result || "") }) && paint(true);
+      reader.readAsDataURL(file);
+    };
+  };
+  bindThumb($("#thDojo"));
   const jc = $("#jc");
   if (jc) jc.oninput = (e) => {
     state.joinInput = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
@@ -1740,7 +2161,8 @@ async function joinAsBuzzer() {
   state.onScreen = true;
   state.youId = "p-" + (state.profile?.id || state.name || "pad").toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16);
   if (!state.youId || state.youId === "p-") state.youId = "p-" + uid().slice(0, 8);
-  const joined = await rooms("POST", { action: "join", code: state.room, name: state.name, id: state.youId });
+  state.leftPad = false;
+  const joined = await rooms("POST", { action: "join", code: state.room, name: state.name, id: state.youId, thumb: state.profile?.thumb || "" });
   if (!joined || joined.error) {
     state.statusMsg = (joined && joined.message)
       || tt("roomMissing", code);
@@ -1895,47 +2317,49 @@ function bindPlay() {
   document.querySelectorAll("[data-side]").forEach((b) => {
     b.onclick = () => {
       const ld = state.lockdown;
-      if (!ld) return;
-      const prev = ld.wagers[state.youId] || { amount: 100, side: "win" };
-      const next = { side: b.dataset.side, amount: prev.amount };
-      if (next.amount) applyWager(state.youId, next.side, next.amount);
-      else {
-        ld.wagers[state.youId] = next;
-        paint();
-      }
-      if (bc) bc.postMessage({ type: "wager", id: state.youId, side: next.side, amount: next.amount });
-      if (state.room) void rooms("POST", { action: "wager", code: state.room, id: state.youId, side: next.side, amount: next.amount });
+      if (!ld || ld.phase !== "wager") return;
+      if (ld.wagers[state.youId]?.locked) return;
+      const prev = state.wagerDraft || ld.wagers[state.youId] || { amount: 100 };
+      setWagerDraft(b.dataset.side, prev.amount || 100);
     };
   });
   document.querySelectorAll("[data-amt]").forEach((b) => {
     b.onclick = () => {
       const ld = state.lockdown;
-      if (!ld) return;
-      const prev = ld.wagers[state.youId] || { side: "win" };
-      applyWager(state.youId, prev.side || "win", Number(b.dataset.amt));
-      if (bc) bc.postMessage({ type: "wager", id: state.youId, side: prev.side || "win", amount: Number(b.dataset.amt) });
-      if (state.room) void rooms("POST", { action: "wager", code: state.room, id: state.youId, side: prev.side || "win", amount: Number(b.dataset.amt) });
+      if (!ld || ld.phase !== "wager") return;
+      if (ld.wagers[state.youId]?.locked) return;
+      const prev = state.wagerDraft || ld.wagers[state.youId] || { side: "win" };
+      setWagerDraft(prev.side || "win", Number(b.dataset.amt));
     };
   });
+  const lockWager = $("#lockWager");
+  if (lockWager) lockWager.onclick = () => lockInWager();
   const bz = $("#buzz");
   if (bz) bz.onclick = () => buzz();
   const mic = $("#mic");
   if (mic) mic.onclick = listenVoice;
+  const goLobby = () => leaveToLobby();
   const quit = $("#quit");
-  if (quit) quit.onclick = () => {
-    stopTick();
-    clearAiBuzz();
-    clearDojoTick();
-    state.lockdown = null;
-    state.phase = "lobby";
-    state.readyIds = {};
-    paint(true);
-  };
+  if (quit) quit.onclick = goLobby;
+  const quitBar = $("#quitBar");
+  if (quitBar) quitBar.onclick = goLobby;
+  document.querySelectorAll("#quit").forEach((el) => { el.onclick = goLobby; });
   const force = $("#forceStart");
   if (force) force.onclick = () => {
     if (role === "pad" || state.phase !== "ready") return;
     startGame();
   };
+  document.querySelectorAll("[data-kick]").forEach((b) => {
+    b.onclick = async () => {
+      const id = b.dataset.kick;
+      if (!id || !state.room || role === "pad") return;
+      await rooms("POST", { action: "kick", code: state.room, id });
+      state.guests = (state.guests || []).filter((g) => g.id !== id);
+      state.players = state.players.filter((p) => p.id !== id);
+      paint(true);
+      publish();
+    };
+  });
   bindSliders();
   bindRules();
   bindQrChip();
@@ -1948,6 +2372,7 @@ function ingestGuests(guests) {
     .map((g) => ({
       id: g.id || ("p-" + String(g.name || "pad").toLowerCase().replace(/\s+/g, "")),
       name: g.name || "Player",
+      thumb: g.thumb || "",
     }))
     .slice(0, 11);
   if (state.phase === "lobby") return;
@@ -1958,10 +2383,14 @@ function ingestGuests(guests) {
       bot.id = g.id;
       bot.name = g.name;
       bot.human = true;
+      bot.thumb = g.thumb || bot.thumb || "";
       delete bot.skill;
       delete bot.buzzDelayMs;
     } else if (state.players.length < 12) {
-      state.players.push({ id: g.id, name: g.name, score: 0, human: true, you: false });
+      state.players.push({ id: g.id, name: g.name, score: 0, human: true, you: false, thumb: g.thumb || "" });
+    } else {
+      const existing = state.players.find((p) => p.id === g.id || p.name === g.name);
+      if (existing && g.thumb) existing.thumb = g.thumb;
     }
   });
 }
@@ -1980,14 +2409,12 @@ function startGame() {
   startRead();
 }
 
-let poll = null;
-let pollN = 0;
 function startPoll() {
   if (poll) return;
   poll = setInterval(async () => {
-    if (!state.room) return;
+    if (!state.room || state.leftPad) return;
     const j = await rooms("GET");
-    if (!j) return;
+    if (!j || j.error) return;
     pollN += 1;
     if (j.guests) {
       const before = (state.guests || []).map((g) => g.id).join(",");
@@ -2004,7 +2431,6 @@ function startPoll() {
           changed = true;
         }
       });
-      // Also mark ready from guest flags if present
       (j.guests || []).forEach((g) => {
         if (g && g.ready && g.id && !state.readyIds[g.id]) {
           state.readyIds[g.id] = true;
@@ -2017,12 +2443,21 @@ function startPoll() {
       }
     }
     if (role === "pad" && j.state && j.state.phase) {
+      // Kicked from TV?
+      if (j.state.kickedId && j.state.kickedId === state.youId && (j.state.kickedAt || 0) > (state.lastKickAt || 0)) {
+        state.lastKickAt = j.state.kickedAt;
+        state.statusMsg = "Removed from room by TV.";
+        leaveToLobby();
+        return;
+      }
       const keep = state.name;
       const keepId = state.youId;
       const keepReady = { ...(state.readyIds || {}) };
+      const keepProfile = state.profile;
       Object.assign(state, j.state);
       state.name = keep;
       state.youId = keepId;
+      state.profile = keepProfile;
       state.readyIds = { ...keepReady, ...(j.state.readyIds || {}) };
       if (Array.isArray(j.state.qs) && j.state.qs.length) state.qs = j.state.qs;
       if (j.guests) ingestGuests(j.guests);
@@ -2036,7 +2471,17 @@ function startPoll() {
     }
     if (role !== "pad" && j.state?.lastWager && state.lockdown?.phase === "wager") {
       const w = j.state.lastWager;
-      if (w.id && !state.lockdown.wagers[w.id]) applyWager(w.id, w.side, w.amount);
+      if (w.id && w.at && w.at !== state.lastWagerAt) {
+        state.lastWagerAt = w.at;
+        applyWager(w.id, w.side, w.amount, w.locked !== false);
+      }
+    }
+    if (role !== "pad" && j.state?.lastAnswer) {
+      const a = j.state.lastAnswer;
+      if (a && a.at && a.at !== state.lastAnswerAt) {
+        state.lastAnswerAt = a.at;
+        applyRemoteAnswer(a.id, a.index, Boolean(a.lockdown));
+      }
     }
     // TV re-publishes periodically so pads on other serverless instances catch up.
     if (role !== "pad" && state.onScreen && state.phase !== "lobby" && pollN % 5 === 0) {
@@ -2064,12 +2509,15 @@ function paint(force = false) {
   const frame = state.phase === "lobby" ? "lobby" : "play";
   const key = [
     frame, role, state.onScreen, state.phase, state.i, state.buzzed, state.picked, state.pose,
-    state.studioI, state.hostH, state.maps[state.youId], state.mapLive, ld?.phase, ld?.qi, ld?.picked,
-    state.rules, state.players.map((p) => p.score).join(","),
+    state.studioI, state.hostH, state.maps[state.youId], state.mapLive, ld?.phase, ld?.qi, ld?.picked, ld?.introLeft, ld?.waitLeft, ld?.earned,
+    state.rules, state.players.map((p) => `${p.score}:${p.thumb ? 1 : 0}`).join(","),
     state.lobbyOpen, state.playerCount, (state.guests || []).length,
     state.dojo?.answers?.length, state.dojo?.picked, state.dojo?.showAnswers, state.dojo?.readLeft,
-    state.profile?.abilityTier, state.profile?.belt,
-    state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale, Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
+    state.profile?.abilityTier, state.profile?.belt, state.profile?.thumb ? 1 : 0,
+    state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
+    Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
+    state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => r.code).join(","),
+    ld?.wagers?.[state.youId]?.locked, ld?.wagers?.[state.youId]?.side, ld?.wagers?.[state.youId]?.amount,
   ].join("|");
   if (!force && key === lastKey && frame === "play") {
     const clock = $("#clock");
@@ -2112,11 +2560,14 @@ if (isDirections) {
     state.lobbyOpen = "room";
   }
   if (role === "pad") {
-    state.onScreen = true;
+    state.onScreen = true; // pad follows TV room; UI is pad (Off Screen chrome), not full TV
     state.mpMode = "join";
     state.lobbyOpen = "room";
     if (joinCode) state.room = joinCode;
+    void refreshActiveRooms();
     startPoll();
+  } else if (state.mpMode === "join") {
+    void refreshActiveRooms();
   } else if (state.onScreen) {
     if (forcedDisplay) {
       localStorage.setItem("fa-onscreen", "1");
