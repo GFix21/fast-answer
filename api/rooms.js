@@ -30,10 +30,31 @@ export default async function handler(req, res) {
     res.status(400).end(JSON.stringify({ error: "code" }));
     return;
   }
-  const cur = rooms.get(code) || { code, host: body.host || "", state: {}, buzzes: [], guests: [] };
+
   if (body.action === "create") {
-    rooms.set(code, { ...cur, host: body.host || cur.host, createdAt: Date.now(), guests: cur.guests || [] });
-  } else if (body.action === "join") {
+    const cur = rooms.get(code) || { code, host: "", state: {}, buzzes: [], guests: [] };
+    rooms.set(code, {
+      ...cur,
+      host: body.host || cur.host,
+      createdAt: Date.now(),
+      guests: cur.guests || [],
+    });
+    res.status(200).end(JSON.stringify(rooms.get(code)));
+    return;
+  }
+
+  // All other actions require an existing room (TV / Cast create first).
+  if (!rooms.has(code)) {
+    res.status(404).end(JSON.stringify({
+      error: "missing",
+      message: "Room not found. Open the TV or Cast TV link first, then Join as buzzer.",
+    }));
+    return;
+  }
+
+  const cur = rooms.get(code);
+
+  if (body.action === "join") {
     cur.guests = cur.guests || [];
     const guest = { name: body.name || "Player", id: body.id || ("p-" + String(body.name || "pad")) };
     if (!cur.guests.some((g) => g.id === guest.id || g.name === guest.name)) cur.guests.push(guest);
@@ -71,6 +92,9 @@ export default async function handler(req, res) {
     cur.state = cur.state || {};
     cur.state.readyIds = { ...(cur.state.readyIds || {}), [id]: true };
     rooms.set(code, cur);
+  } else {
+    res.status(400).end(JSON.stringify({ error: "action" }));
+    return;
   }
   res.status(200).end(JSON.stringify(rooms.get(code)));
 }

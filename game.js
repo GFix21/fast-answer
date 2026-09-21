@@ -390,8 +390,9 @@ async function rooms(method, body) {
       headers: { "content-type": "application/json" },
       body: method === "GET" ? undefined : JSON.stringify(body),
     });
-    if (!res.ok) return null;
-    return await res.json();
+    const data = await res.json().catch(() => null);
+    if (!res.ok) return data || { error: "http", status: res.status };
+    return data;
   } catch {
     return null;
   }
@@ -1663,6 +1664,7 @@ async function joinAsBuzzer() {
     return false;
   }
   saveProfile({ displayName: state.name });
+  const prevRole = role;
   role = "pad";
   state.mpMode = "join";
   localStorage.setItem("fa-mp", "join");
@@ -1673,7 +1675,9 @@ async function joinAsBuzzer() {
   if (!state.youId || state.youId === "p-") state.youId = "p-" + uid().slice(0, 8);
   const joined = await rooms("POST", { action: "join", code: state.room, name: state.name, id: state.youId });
   if (!joined || joined.error) {
-    state.statusMsg = "Could not reach room " + code + " — check the TV is On Screen and try again.";
+    state.statusMsg = (joined && joined.message)
+      || ("Room " + code + " not found — open Cast TV / Silk on the set first, then Join as buzzer.");
+    role = prevRole;
     paint(true);
     return false;
   }
