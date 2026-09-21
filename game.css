@@ -69,8 +69,9 @@ button:disabled{cursor:not-allowed}
   position:relative;z-index:2;
   min-height:0;overflow:hidden;
   display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);
-  align-items:end;gap:8px;padding:0 12px;
+  align-items:stretch;gap:8px;padding:0 12px;
 }
+.qwrap{align-self:start;min-width:0;max-width:100%}
 .qcard{
   background:color-mix(in oklab, var(--elev) 78%, transparent);
   border:1px solid var(--line);
@@ -170,8 +171,9 @@ input[type=text]{
 @media (max-width:700px){
   .play{grid-template-columns:1fr}
   .host{position:absolute;right:0;bottom:0;z-index:1}
-  .host img{max-width:46vw;height:var(--host-h)}
-  .qcard{max-width:72%}
+  .host img{max-width:42vw;height:var(--host-h)}
+  .qwrap{max-width:70%}
+  .qcard{max-width:100%}
   .lobby{grid-template-columns:1fr}
   .lobby .host{position:absolute;right:0;bottom:8%;max-height:42%}
   .answers{max-height:30vh}
