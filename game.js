@@ -49,6 +49,7 @@ const PLACE_N = 10;
 const PLACE_MS = 90 * 24 * 60 * 60 * 1000;
 const TIER_LADDER = ["easy", "hard", "difficult", "extreme"];
 const BELT_ORDER = ["white", "yellow", "orange", "green", "blue", "purple", "brown", "black"];
+const BELT_STEP = 10000;
 const BELT_META = {
   white: { label: "White", color: "#f5f5f5" },
   yellow: { label: "Yellow", color: "#f5d76e" },
@@ -66,6 +67,18 @@ const ABILITY_META = {
 };
 
 /** Celebrity first-name bots fill empty seats (2–12). Skill + buzz delay like the old dojo AI. */
+const DOJO_BACKGROUNDS = [
+  { id: "lantern", src: "/dojo/lantern-hall.jpg", labelKey: "bgLantern" },
+  { id: "garden", src: "/dojo/garden-shoji.jpg", labelKey: "bgGarden" },
+  { id: "night", src: "/dojo/night-tatami.jpg", labelKey: "bgNight" },
+];
+function dojoBackground(id) {
+  return DOJO_BACKGROUNDS.find((b) => b.id === id) || DOJO_BACKGROUNDS[0];
+}
+function botAvatar(id) {
+  return id ? `/bots/${id}.jpg` : "";
+}
+
 const CELEB_BOTS = [
   { id: "oprah", name: "Oprah", skill: 0.62, buzzDelayMs: [900, 2400], blurb: "Composed. Reads the room." },
   { id: "elton", name: "Elton", skill: 0.55, buzzDelayMs: [1200, 3000], blurb: "Showy. Fashionably late." },
@@ -138,6 +151,7 @@ const state = {
   profile: null,
   profileUnlocked: false,
   dojoMode: "home", // home | create | unlock | setpw
+  dojoScroll: "scores",
   dojo: null,
   seatBots: [],
   guests: [],
@@ -435,6 +449,34 @@ function lockdownPointsNow(ld = state.lockdown) {
   const total = LOCKDOWN_ANSWER_S;
   return Math.max(0, Math.round(LOCKDOWN_PTS * (left / total)));
 }
+function fileToAvatar(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error("read"));
+    reader.onload = () => {
+      const img = new Image();
+      img.onload = () => {
+        const size = 128;
+        const canvas = document.createElement("canvas");
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) {
+          reject(new Error("canvas"));
+          return;
+        }
+        const scale = Math.max(size / img.width, size / img.height);
+        const w = img.width * scale;
+        const h = img.height * scale;
+        ctx.drawImage(img, (size - w) / 2, (size - h) / 2, w, h);
+        resolve(canvas.toDataURL("image/jpeg", 0.82));
+      };
+      img.onerror = () => reject(new Error("image"));
+      img.src = String(reader.result || "");
+    };
+    reader.readAsDataURL(file);
+  });
+}
 function playSound(kind) {
   try {
     const a = new Audio(`./sounds/${kind}.wav`);
@@ -452,15 +494,26 @@ function emptyStats() {
   return { gamesPlayed: 0, totalPoints: 0, correctAnswers: 0, wrongAnswers: 0, bestScore: 0 };
 }
 function beltFromPoints(pts) {
-  const n = Math.max(0, pts || 0);
-  if (n >= 4200) return "black";
-  if (n >= 3600) return "brown";
-  if (n >= 3000) return "purple";
-  if (n >= 2400) return "blue";
-  if (n >= 1800) return "green";
-  if (n >= 1200) return "orange";
-  if (n >= 600) return "yellow";
-  return "white";
+  const n = Math.max(0, Math.floor(Number(pts) || 0));
+  const index = Math.min(BELT_ORDER.length - 1, Math.floor(n / BELT_STEP));
+  return BELT_ORDER[index];
+}
+function beltClimb(pts) {
+  const points = Math.max(0, Math.floor(Number(pts) || 0));
+  const index = Math.min(BELT_ORDER.length - 1, Math.floor(points / BELT_STEP));
+  const belt = BELT_ORDER[index];
+  const topped = index >= BELT_ORDER.length - 1;
+  const into = points - index * BELT_STEP;
+  const left = topped ? 0 : BELT_STEP - into;
+  const next = topped ? belt : BELT_ORDER[index + 1];
+  const pct = topped ? 100 : Math.max(0, Math.min(100, (into / BELT_STEP) * 100));
+  return { belt, points, next, left, pct, topped };
+}
+function playerThumb(p) {
+  if (!p) return "";
+  if (p.thumb) return p.thumb;
+  if (!p.human && p.id) return botAvatar(p.id);
+  return "";
 }
 function addMonthsIso(iso, months) {
   const d = new Date(iso);
@@ -837,7 +890,7 @@ function seatPlayers() {
       you: false,
       skill: b.skill,
       buzzDelayMs: b.buzzDelayMs,
-      thumb: "",
+      thumb: botAvatar(b.id),
     })),
   ].slice(0, 12);
 }
@@ -1002,10 +1055,33 @@ function settleMain(ok, q, answererId) {
   }
 }
 
+function mergeTopScores(existing, row) {
+  const rows = [...(existing || [])];
+  if (row && Number(row.score) > 0) rows.push(row);
+  rows.sort((a, b) => Number(b.score) - Number(a.score) || String(b.at).localeCompare(String(a.at)));
+  const seen = new Set();
+  const out = [];
+  for (const item of rows) {
+    const score = Math.round(Number(item.score));
+    if (!Number.isFinite(score) || score < 0) continue;
+    const at = String(item.at || "");
+    const key = `${score}|${at}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push({
+      score,
+      at,
+      displayName: String(item.displayName || "").slice(0, 40),
+    });
+    if (out.length >= 12) break;
+  }
+  return out;
+}
 function recordCareer() {
   const p = state.profile;
   if (!p) return;
   const score = me()?.score || 0;
+  const at = new Date().toISOString();
   const stats = {
     ...emptyStats(),
     ...(p.stats || {}),
@@ -1014,9 +1090,41 @@ function recordCareer() {
     correctAnswers: (p.stats?.correctAnswers || 0) + (state.tally.correct || 0),
     wrongAnswers: (p.stats?.wrongAnswers || 0) + (state.tally.wrong || 0),
     bestScore: Math.max(p.stats?.bestScore || 0, score),
-    lastPlayedAt: new Date().toISOString(),
+    lastPlayedAt: at,
   };
-  saveProfile({ stats });
+  const topScores = mergeTopScores(p.topScores, {
+    score,
+    at,
+    displayName: p.displayName || state.name,
+  });
+  saveProfile({ stats, topScores });
+  if (score > 0 && p.id) {
+    void fetch("/api/profiles", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        action: "score",
+        id: p.id,
+        displayName: p.displayName || state.name,
+        score,
+        at,
+      }),
+    }).catch(() => {});
+  }
+}
+async function syncTopScores() {
+  const id = state.profile?.id;
+  if (!id) return;
+  try {
+    const res = await fetch(`/api/profiles?scores=1&id=${encodeURIComponent(id)}`);
+    if (!res.ok) return;
+    const data = await res.json();
+    const combined = mergeTopScores([...(state.profile?.topScores || []), ...(data.scores || [])], null);
+    if (JSON.stringify(combined) !== JSON.stringify(state.profile?.topScores || [])) {
+      saveProfile({ topScores: combined });
+      paint(true);
+    }
+  } catch { /* vault unreachable; local scores stay */ }
 }
 
 function leaveToLobby() {
@@ -1519,8 +1627,9 @@ function applyHostSize() {
 
 function scoreboard() {
   const cells = state.players.map((p) => {
-    const thumb = p.thumb
-      ? `<img class="av" src="${p.thumb}" alt=""/>`
+    const src = playerThumb(p);
+    const thumb = src
+      ? `<img class="av" src="${src}" alt=""/>`
       : `<span class="av empty" aria-hidden="true"></span>`;
     return `<span class="score-cell ${p.you ? "you" : ""}">${thumb}<span class="score-name">${escapeHtml(p.name)}</span><b>$${p.score}</b></span>`;
   }).join("");
@@ -1722,14 +1831,15 @@ function directionsHTML() {
 }
 
 function dojoPageHTML() {
+  const bg = dojoBackground(state.profile?.dojoBg);
   return `
-    <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
+    <img class="bg" alt="" src="${bg.src}"/>
     <div class="veil"></div>
     <div class="top">
       <div class="logo">Fast Answer!<small>${tt("dojo")}</small></div>
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
-      <a class="word" href="./index.html">${tt("lobby")}</a>
+      <a class="word" href="/">${tt("lobby")}</a>
     </div>
     <div class="dojo-page">
       <div class="dojo-page-scroll">
@@ -1859,7 +1969,7 @@ function openDojoPage(mode) {
   state.dojoMode = next;
   try { sessionStorage.setItem("fa-dojo-mode", next); } catch { /* ignore */ }
   if (!isDojoPage) {
-    location.href = "./dojo.html?mode=" + encodeURIComponent(next);
+    location.href = "/dojo?mode=" + encodeURIComponent(next);
     return;
   }
   if (next === "home" && state.profileUnlocked && needsPlacement(state.profile) && !(state.dojo && state.dojo.q)) {
@@ -1876,7 +1986,7 @@ function startDojo() {
   state.dojoMode = "home";
   try { sessionStorage.setItem("fa-dojo-mode", "home"); } catch { /* ignore */ }
   if (!isDojoPage) {
-    location.href = "./dojo.html?mode=home";
+    location.href = "/dojo?mode=home";
     return;
   }
   armDojoRead();
@@ -1891,16 +2001,24 @@ function acc(id, title, extra, body, scope = "lobby") {
   </section>`;
 }
 
-function beltStripHTML(activeBelt) {
-  const cur = activeBelt || "white";
-  return `<div class="belt-strip" role="img" aria-label="${escapeHtml(tt("beltAria", (BELT_META[cur] || BELT_META.white).label))}">
+function beltStripHTML(activeBelt, points) {
+  const climb = beltClimb(points);
+  const cur = activeBelt || climb.belt || "white";
+  const meta = BELT_META[cur] || BELT_META.white;
+  const nextMeta = BELT_META[climb.next] || meta;
+  const line = climb.topped
+    ? tt("beltMax", meta.label, climb.points)
+    : tt("beltClimb", meta.label, climb.points, nextMeta.label, climb.left);
+  return `<div class="belt-strip" role="img" aria-label="${escapeHtml(tt("beltAria", meta.label))}">
     ${BELT_ORDER.map((id) => {
       const m = BELT_META[id];
       const on = id === cur ? " on" : "";
       return `<span class="belt-seg${on}" style="--belt:${m.color}" title="${escapeHtml(m.label)}"></span>`;
     }).join("")}
   </div>
-  <p class="belt-lab">${escapeHtml(tt("beltName", (BELT_META[cur] || BELT_META.white).label))}</p>`;
+  <div class="belt-meter" aria-hidden="true"><span style="width:${climb.pct}%"></span></div>
+  <p class="belt-lab">${escapeHtml(line)}</p>
+  <p class="meta">${escapeHtml(tt("beltStep"))}</p>`;
 }
 
 function medalHTML(tier) {
@@ -1977,7 +2095,7 @@ function dojoBody() {
     return dojoChrome(`
       <p class="dir-copy">${tt("setPasswordIntro")}</p>
       <p class="meta">${escapeHtml(p.displayName || "")}</p>
-      ${beltStripHTML(p.belt)}
+      ${beltStripHTML(p.belt, p.stats?.totalPoints)}
       ${p.abilityTier ? medalHTML(p.abilityTier) : ""}
       <label class="field" for="pwNew">${tt("password")}</label>
       <input id="pwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
@@ -1992,7 +2110,7 @@ function dojoBody() {
     return dojoChrome(`
       <p class="dir-copy">${tt("unlockIntro")}</p>
       <p class="meta">${escapeHtml(p.displayName || "")}</p>
-      ${beltStripHTML(p.belt)}
+      ${beltStripHTML(p.belt, p.stats?.totalPoints)}
       ${p.abilityTier ? medalHTML(p.abilityTier) : `<p class="meta">${tt("medalPending")}</p>`}
       <label class="field" for="pwUnlock">${tt("password")}</label>
       <input id="pwUnlock" type="password" maxlength="64" autocomplete="current-password"/>
@@ -2003,11 +2121,30 @@ function dojoBody() {
 
   // Unlocked home / edit
   const ab = p.abilityTier ? ABILITY_META[p.abilityTier] : null;
+  const scores = p.topScores || [];
+  const scrollOpen = state.dojoScroll !== "closed";
   return dojoChrome(`
     <p class="dir-copy">${tt("dojoUnlockedIntro")}</p>
-    ${beltStripHTML(p.belt)}
+    ${beltStripHTML(p.belt, p.stats?.totalPoints)}
     ${medalHTML(p.abilityTier)}
     <p class="meta">${escapeHtml(tt("beltCareer", (BELT_META[p.belt || "white"] || BELT_META.white).label, ab ? ab.label : "", p.stats?.totalPoints || 0))}</p>
+    <section class="scroll-acc ${scrollOpen ? "open" : ""}">
+      <button type="button" class="scroll-h" id="scoreScroll">${escapeHtml(tt("topScores"))}</button>
+      ${scrollOpen ? `<div class="scroll-roll">
+        <p class="scroll-note">${escapeHtml(tt("scoreVault"))}</p>
+        ${scores.length ? `<ol class="score-list">
+          ${scores.map((row) => `<li><b>$${Number(row.score).toLocaleString()}</b><span>${escapeHtml(String(row.at || "").replace("T", " ").slice(0, 16))}</span></li>`).join("")}
+        </ol>` : `<p class="scroll-note">${escapeHtml(tt("topScoresEmpty"))}</p>`}
+      </div>` : ""}
+    </section>
+    <p class="field-lab">${escapeHtml(tt("dojoBg"))}</p>
+    <div class="dojo-bgs">
+      ${DOJO_BACKGROUNDS.map((b) => `
+        <button type="button" class="dojo-bg ${dojoBackground(p.dojoBg).id === b.id ? "on" : ""}" data-dojo-bg="${b.id}">
+          <img src="${b.src}" alt=""/>
+          <span>${escapeHtml(tt(b.labelKey))}</span>
+        </button>`).join("")}
+    </div>
     <label class="field" for="nm">${tt("name")}</label>
     <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
     <label class="field" for="em">${tt("email")}</label>
@@ -2023,10 +2160,9 @@ function dojoBody() {
     <input id="pwConfirm" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("optional")}"/>
     <button class="ghost" id="saveProfileEdit" type="button">${tt("saveProfile")}</button>
     ${placed
-      ? `<p class="meta">${escapeHtml(tt("abilityRetake", (ab && ab.label) || tt("placed"), formatDue(p.nextPlacementDueAt)))}</p>
-         <button class="ghost" id="retake" type="button">${tt("retakeDojo")}</button>`
-      : `<p class="meta">${tt("dojoIntro")}</p>
-         <button class="primary" id="dojoGo" type="button">${tt("startDojo")}</button>`}
+      ? `<p class="meta">${escapeHtml(tt("abilityRetake", (ab && ab.label) || tt("placed"), formatDue(p.nextPlacementDueAt)))}</p>`
+      : `<p class="meta">${tt("dojoIntro")}</p>`}
+    <button class="primary" id="${p.abilityTier ? "retake" : "dojoGo"}" type="button">${p.abilityTier ? tt("retakeMedal") : tt("startDojo")}</button>
     <button class="ghost" id="lockProfile" type="button">${tt("lockProfile")}</button>
   `);
 }
@@ -2449,7 +2585,7 @@ function lobbyHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
-      ${tv ? "" : `<a class="word" href="./dojo.html?mode=${encodeURIComponent(dojoModeForGate())}">${tt("dojo")}</a>`}
+      ${tv ? "" : `<a class="word" href="/dojo?mode=${encodeURIComponent(dojoModeForGate())}">${tt("dojo")}</a>`}
       <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
       <a class="word" href="./directions.html">${tt("directions")}</a>
     </div>
@@ -2778,18 +2914,29 @@ function bindDojoSurface() {
     el.onchange = (e) => {
       const file = e.target.files && e.target.files[0];
       if (!file) return;
-      if (file.size > 400000) {
+      void fileToAvatar(file).then((thumb) => {
+        saveProfile({ thumb });
+        state.statusMsg = tt("profileSaved");
+        paint(true);
+      }).catch(() => {
         state.statusMsg = tt("photoBig");
         paint(true);
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = () => saveProfile({ thumb: String(reader.result || "") }) && paint(true);
-      reader.readAsDataURL(file);
+      });
     };
   };
   bindThumb($("#thDojo"));
   bindThumb($("#roomTh"));
+  const scoreScroll = $("#scoreScroll");
+  if (scoreScroll) scoreScroll.onclick = () => {
+    state.dojoScroll = state.dojoScroll === "closed" ? "scores" : "closed";
+    paint(true);
+  };
+  document.querySelectorAll("[data-dojo-bg]").forEach((b) => {
+    b.onclick = () => {
+      saveProfile({ dojoBg: b.dataset.dojoBg });
+      paint(true);
+    };
+  });
   const dojoGo = $("#dojoGo");
   if (dojoGo) dojoGo.onclick = () => startDojo();
   const retake = $("#retake");
@@ -2830,14 +2977,13 @@ function bindLobby() {
   if (th) th.onchange = (e) => {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
-    if (file.size > 400000) {
+    void fileToAvatar(file).then((thumb) => {
+      saveProfile({ thumb });
+      paint(true);
+    }).catch(() => {
       state.statusMsg = tt("photoBig");
       paint(true);
-      return;
-    }
-    const reader = new FileReader();
-    reader.onload = () => saveProfile({ thumb: String(reader.result || "") }) && paint(true);
-    reader.readAsDataURL(file);
+    });
   };
   const pc = $("#pc");
   if (pc) pc.oninput = (e) => {
@@ -3406,13 +3552,8 @@ function paint(force = false) {
     return;
   }
   if (isDojoPage) {
-    app.className = "stage dojo-page";
+    app.className = "stage dojo";
     applyHostSize();
-    if (needsEntryGate()) {
-      app.innerHTML = entryHTML();
-      bindEntry();
-      return;
-    }
     app.innerHTML = dojoPageHTML();
     bindDojoPage();
     return;
@@ -3432,6 +3573,7 @@ function paint(force = false) {
     state.lobbyOpen, state.playerCount, (state.guests || []).length,
     state.dojo?.answers?.length, state.dojo?.picked, state.dojo?.showAnswers, state.dojo?.readLeft,
     state.profile?.abilityTier, state.profile?.belt, state.profile?.thumb ? 1 : 0,
+    state.profile?.dojoBg, (state.profile?.topScores || []).length, state.dojoScroll,
     state.profileUnlocked ? 1 : 0, state.dojoMode, state.roomDojoPanel, state.profile?.passwordHash ? 1 : 0,
     state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
@@ -3474,9 +3616,13 @@ if (isDirections) {
   window.__fa = state;
 } else if (isDojoPage) {
   if (forcedDisplay) {
-    location.replace("./index.html");
+    location.replace("/");
   } else {
-    await loadBanksForLocale(state.locale);
+    try {
+      await loadBanksForLocale(state.locale);
+    } catch {
+      state.statusMsg = "Questions did not load.";
+    }
     state.profile = loadProfile();
     if (state.profile?.displayName) state.name = state.profile.displayName;
     state.profileUnlocked = false;
@@ -3489,11 +3635,8 @@ if (isDirections) {
     try { stored = sessionStorage.getItem("fa-dojo-mode") || ""; } catch { /* ignore */ }
     const allowed = ["create", "unlock", "setpw", "home"];
     state.dojoMode = allowed.includes(qMode) ? qMode : (allowed.includes(stored) ? stored : dojoModeForGate());
-    if (state.entered && state.profileUnlocked && state.dojoMode === "home" && needsPlacement(state.profile)) {
-      startDojo();
-    } else {
-      paint(true);
-    }
+    paint(true);
+    void syncTopScores();
     window.__fa = state;
   }
 } else {

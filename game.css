@@ -235,9 +235,14 @@ img.brand{
 .dojo-page{
   position:relative;z-index:2;
   min-height:0;height:100%;overflow:hidden;
-  display:flex;justify-content:center;
-  padding:0 16px 8px;
+  display:flex;justify-content:flex-start;
+  padding:0 18vw 8px 4vw;
 }
+.stage.dojo{
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr) auto auto;
+}
+.stage.dojo .dojo-page{height:auto}
 .dojo-page-scroll{
   width:min(100%,520px);
   min-height:0;height:100%;
@@ -563,9 +568,54 @@ img.brand{
   transform:scaleY(1.25);
 }
 .belt-lab{
-  margin:0 0 8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  margin:6px 0 2px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
   color:#f3e6d0;font-weight:600;
 }
+.belt-meter{
+  height:6px;border-radius:99px;overflow:hidden;
+  background:rgba(0,0,0,.35);margin-top:6px;
+}
+.belt-meter span{
+  display:block;height:100%;
+  background:linear-gradient(90deg,#f5d76e,#e8a87c);
+}
+.scroll-acc{margin:8px 0 4px}
+.scroll-h{
+  width:100%;
+  font-family:var(--font-display);
+  font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:#2a160c;
+  border:0;border-radius:999px;
+  padding:14px 28px;min-height:48px;
+  background:
+    radial-gradient(120% 80% at 50% 0%, #f3e6c8, #d7b98a 42%, #8a5a32 78%, #4a2c16);
+  box-shadow:inset 0 0 0 2px rgba(74,44,22,.35), 0 8px 16px rgba(0,0,0,.28);
+}
+.scroll-acc.open .scroll-h{border-radius:999px 999px 12px 12px}
+.scroll-roll{
+  max-height:220px;overflow:auto;
+  margin-top:-6px;padding:16px 18px 14px;
+  color:#2a160c;
+  background:
+    linear-gradient(180deg, rgba(90,50,20,.18), transparent 18px),
+    repeating-linear-gradient(0deg, transparent 0 22px, rgba(90,50,20,.08) 22px 23px),
+    linear-gradient(180deg, #f4ead4, #e6d2ae);
+  border-radius:0 0 46% 18px;
+  box-shadow:inset 0 10px 16px rgba(74,44,22,.18);
+}
+.scroll-note{margin:0 0 8px;font-size:12px;color:#5c3b22}
+.score-list{margin:0;padding-left:18px}
+.score-list li{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin:4px 0}
+.score-list span{font-variant-numeric:tabular-nums;color:#6b4a2e}
+.field-lab{margin:8px 0 4px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#f3e6d0}
+.dojo-bgs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dojo-bg{
+  padding:0;border-radius:10px;overflow:hidden;border:1px solid rgba(243,230,208,.25);
+  background:#1a120c;color:#f3e6d0;font-size:10px;letter-spacing:.04em;
+}
+.dojo-bg img{display:block;width:100%;height:52px;object-fit:cover}
+.dojo-bg span{display:block;padding:4px 4px 6px}
+.dojo-bg.on{border-color:#e8a87c;box-shadow:0 0 0 1px #e8a87c}
 
 /* Placement medals */
 .medal-row{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}

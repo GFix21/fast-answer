@@ -1,4 +1,5 @@
 import { activateProfile, isEmail } from "../lib/profile-store.js";
+import { readScores, recordScore } from "../lib/score-vault.js";
 
 function json(res, status, body) {
   res.statusCode = status;
@@ -7,7 +8,20 @@ function json(res, status, body) {
   res.end(JSON.stringify(body));
 }
 
+function queryOf(req) {
+  if (req.query && typeof req.query === "object") return req.query;
+  try {
+    return Object.fromEntries(new URL(req.url || "/", "http://local").searchParams);
+  } catch {
+    return {};
+  }
+}
+
 export default async function handler(req, res) {
+  const query = queryOf(req);
+  if (req.method === "GET" && String(query.scores || "") === "1") {
+    return json(res, 200, { ok: true, scores: readScores(query.id) });
+  }
   if (req.method !== "POST") return json(res, 405, { error: "method" });
   let body = req.body;
   if (body == null) {
@@ -25,6 +39,18 @@ export default async function handler(req, res) {
     catch { body = null; }
   }
   if (!body) return json(res, 400, { error: "Invalid JSON" });
+  if (body.action === "score") {
+    try {
+      const scores = recordScore(body.id, {
+        score: body.score,
+        at: body.at,
+        displayName: body.displayName,
+      });
+      return json(res, 200, { ok: true, scores });
+    } catch (err) {
+      return json(res, 400, { error: err.code || "invalid" });
+    }
+  }
   if (!isEmail(body.email)) return json(res, 400, { error: "email" });
   try {
     const profile = activateProfile({
