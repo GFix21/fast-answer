@@ -9,6 +9,7 @@ import {
   t,
   languageSwitcherHtml,
 } from "./i18n.js";
+import { dropoutEndsGame, nextQuestionAllowsJoin } from "./lib/seat-rules.js";
 
 const STUDIOS = [
   "./studio/studio-01-contestant-pov.jpg",
@@ -154,8 +155,14 @@ const state = {
   leftPad: false,
   wagerDraft: null,
   lastAnswerAt: 0,
-  /** Inline Create / Unlock on the Join TV card ("" | "create" | "unlock"). */
+  /** Inline Create / Unlock on the Host / Cast card ("" | "create" | "unlock"). */
   roomDojoPanel: "",
+  /** Join a live show as a player, or watch and leave anytime. */
+  viewing: false,
+  seatIntent: "play",
+  joinOffer: null,
+  pendingJoins: [],
+  dropoutIds: {},
   /** Phone entry gate (name, email, password) before the lobby. */
   entered: false,
   entryDraft: null,
@@ -314,7 +321,19 @@ async function copyText(value) {
   }
 }
 function humanPads() {
-  return (state.guests || []).filter((g) => g && g.id);
+  return (state.guests || []).filter((g) => g && g.id && g.seat !== "view");
+}
+function humanPlayerIds() {
+  return (state.players || []).filter((p) => p && p.human).map((p) => p.id);
+}
+function canLeaveNow() {
+  if (state.viewing) return true;
+  return state.phase === "lobby" || state.phase === "ready" || state.phase === "end";
+}
+function isSeatedPlay() {
+  if (state.viewing) return false;
+  if (role !== "pad") return true;
+  return (state.players || []).some((p) => p.id === state.youId);
 }
 function allPadsReady() {
   const pads = humanPads();
@@ -695,6 +714,8 @@ function snapshot() {
     playerCount: state.playerCount,
     readyIds: state.readyIds,
     guests: state.guests,
+    dropoutIds: state.dropoutIds || {},
+    pendingJoins: (state.pendingJoins || []).map((g) => g.id),
   };
 }
 function publish() {
@@ -731,11 +752,7 @@ if (bc) {
       return;
     }
     if (role === "pad" && !state.leftPad && d.phase) {
-      const keepName = state.name;
-      const keepId = state.youId;
-      Object.assign(state, d);
-      state.name = keepName;
-      state.youId = keepId;
+      applyHostState(d);
       paint();
     }
   };
@@ -783,10 +800,28 @@ function clockText() {
   return "";
 }
 
+function applyHostState(next) {
+  const keepName = state.name;
+  const keepId = state.youId;
+  const keepProfile = state.profile;
+  const keepViewing = state.viewing;
+  const keepIntent = state.seatIntent;
+  const keepReady = { ...(state.readyIds || {}) };
+  const keepDropout = { ...(state.dropoutIds || {}) };
+  Object.assign(state, next || {});
+  state.name = keepName;
+  state.youId = keepId;
+  state.profile = keepProfile;
+  state.viewing = keepViewing;
+  state.seatIntent = keepIntent;
+  state.readyIds = { ...keepReady, ...((next && next.readyIds) || {}) };
+  state.dropoutIds = { ...keepDropout, ...((next && next.dropoutIds) || {}) };
+}
+
 function seatPlayers() {
   state.youId = "you";
   fillSeats();
-  const guests = state.guests || [];
+  const guests = (state.guests || []).filter((g) => g.seat !== "view");
   const remain = Math.max(0, state.playerCount - 1 - guests.length);
   const bots = (state.seatBots || []).slice(0, remain);
   state.players = [
@@ -897,11 +932,14 @@ function enterReady() {
 }
 
 function buzz() {
+  if (state.viewing) return;
   if (state.lockdown) return;
   if (state.phase === "ready") {
+    if (!isSeatedPlay()) return;
     markReady();
     return;
   }
+  if (!isSeatedPlay()) return;
   if (state.phase !== "buzz" || state.buzzed) return;
   takeBuzz(state.youId, state.name);
   if (bc) bc.postMessage({ type: "buzz", name: state.name, id: state.youId, room: state.room });
@@ -995,6 +1033,9 @@ function leaveToLobby() {
     poll = null;
   }
   state.leftPad = true;
+  state.viewing = false;
+  state.seatIntent = "play";
+  state.joinOffer = null;
   state.lockdown = null;
   state.phase = "lobby";
   state.readyIds = {};
@@ -1031,13 +1072,61 @@ function finishShow() {
   publish();
 }
 
+function seatPendingJoins() {
+  if (role === "pad") return;
+  const next = state.qs[state.i];
+  if (!next || !nextQuestionAllowsJoin(state.qs, state.i - 1)) return;
+  const pending = state.pendingJoins || [];
+  if (!pending.length) return;
+  for (const g of pending) {
+    if (state.players.some((p) => p.id === g.id || p.name === g.name)) continue;
+    const bot = state.players.find((p) => !p.human);
+    if (bot) {
+      bot.id = g.id;
+      bot.name = g.name;
+      bot.human = true;
+      bot.you = false;
+      bot.thumb = g.thumb || "";
+      delete bot.skill;
+      delete bot.buzzDelayMs;
+    } else if (state.players.length < 12) {
+      state.players.push({ id: g.id, name: g.name, score: 0, human: true, you: false, thumb: g.thumb || "" });
+    }
+  }
+  state.pendingJoins = pending.filter((g) => !state.players.some((p) => p.id === g.id));
+}
+
+function pressDropout() {
+  if (canLeaveNow()) {
+    leaveToLobby();
+    return;
+  }
+  const id = state.youId;
+  if (!id) return;
+  state.dropoutIds = { ...(state.dropoutIds || {}), [id]: true };
+  if (state.room) void rooms("POST", { action: "dropout", code: state.room, id });
+  publish();
+  maybeEndFromDropout();
+  paint(true);
+}
+
+function maybeEndFromDropout() {
+  if (role === "pad") return;
+  if (state.phase === "lobby" || state.phase === "ready" || state.phase === "end") return;
+  if (dropoutEndsGame(humanPlayerIds(), state.dropoutIds)) finishShow();
+}
+
 function continueRound() {
   state.lockdown = null;
   state.i += 1;
   if (state.i >= state.qs.length) finishShow();
   else {
+    seatPendingJoins();
+    maybeEndFromDropout();
+    if (state.phase === "end") return;
     state.pose = "next";
     paint();
+    publish();
     setTimeout(startRead, 450);
   }
 }
@@ -1066,6 +1155,8 @@ function applyRemoteAnswer(id, index, lockdown = false) {
 }
 
 function pick(i, asId, fromRemote = false) {
+  if (state.viewing) return;
+  if (role === "pad" && !fromRemote && !isSeatedPlay()) return;
   if (state.lockdown?.phase === "wager" || state.lockdown?.phase === "intro") return;
   if (state.lockdown?.phase === "play") {
     // Pad hero sends to room; host applies. Local solo applies directly.
@@ -2058,12 +2149,18 @@ function roomBody() {
     .slice(0, 12);
 
   if (pad || mode === "join") {
+    const readyName = (state.profile && state.profile.displayName) || state.name || "Player";
+    const offer = state.joinOffer;
     return `
       ${roomModeButtons()}
-      ${roomDojoEntryHTML()}
+      <div class="dojo-gate-actions">
+        <button class="ghost" type="button" id="goToDojo">${tt("goToDojo")}</button>
+      </div>
+      <div class="player-ready" role="status">
+        <b>${escapeHtml(readyName)}</b>
+        <span>${tt("activeReady")}</span>
+      </div>
       <p class="dir-copy"><b>${tt("joinCopy")}</b></p>
-      <label class="field" for="nm">${tt("yourName")}</label>
-      <input id="nm" type="text" value="${escapeHtml(state.name)}" maxlength="18" autocomplete="nickname"/>
       <label class="field" for="jc">${tt("tvRoomCode")}</label>
       <div class="copy-row join-code-row">
         <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off" autocapitalize="characters"/>
@@ -2080,6 +2177,15 @@ function roomBody() {
             ).join("")
           : `<p class="meta">${tt("noActiveRooms")}</p>`}
       </div>
+      ${offer ? `
+        <div class="join-offer">
+          <p class="dir-copy"><b>${tt("joinInAction")}</b> ${escapeHtml(String(offer.tier || offer.phase || "").toUpperCase())}</p>
+          <div class="row">
+            <button class="ghost" type="button" id="joinView">${tt("viewShow")}</button>
+            <button class="primary" type="button" id="joinPlay" ${offer.canPlay ? "" : "disabled"}>${tt("playShow")}</button>
+          </div>
+          <p class="meta">${offer.canPlay ? tt("playSeatOpen") : tt("playSeatClosed")}</p>
+        </div>` : ""}
     `;
   }
 
@@ -2376,12 +2482,15 @@ function playHTML() {
   const showAns = ld
     ? (lockdownPlay && (isHero || !pad) && !waiterPad)
     : ["buzz", "answer", "reveal"].includes(state.phase);
+  const seated = isSeatedPlay();
   const canBuzz = readyPhase
-    ? (pad || !state.onScreen) && !state.readyIds[state.youId]
-    : (!ld && (pad || !state.onScreen) && state.phase === "buzz" && !state.buzzed);
-  const canPick = ld
-    ? lockdownPlay && isHero && ld.phase === "play"
-    : state.phase === "answer" || (!state.onScreen && !pad && state.phase === "buzz");
+    ? seated && (pad || !state.onScreen) && !state.readyIds[state.youId]
+    : (!ld && seated && (pad || !state.onScreen) && state.phase === "buzz" && !state.buzzed);
+  const canPick = state.viewing || (pad && !seated)
+    ? false
+    : ld
+      ? lockdownPlay && isHero && ld.phase === "play"
+      : state.phase === "answer" || (!state.onScreen && !pad && state.phase === "buzz");
   let prompt;
   if (readyPhase) prompt = "";
   else if (endPhase) prompt = tt("showEnd");
@@ -2391,6 +2500,8 @@ function playHTML() {
     ? `${ld.name} cleared Lockdown ${ld.hits}/5 · $${ld.earned || 0}`
     : `${ld.name} broke Lockdown ${ld.hits}/5 · $${ld.earned || 0}`;
   else if (!q) prompt = tt("showEnd");
+  else if (state.viewing) prompt = tt("viewingNow");
+  else if (pad && !seated) prompt = tt("queuedPlay");
   else if (waiterPad) prompt = tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S);
   else if (pad && !lockdownPlay && !lockdownIntro) prompt = state.phase === "read" ? tt("padRead") : tt("padBuzz");
   else prompt = escapeHtml(q.prompt);
@@ -2406,7 +2517,14 @@ function playHTML() {
   const buzzLabel = readyPhase
     ? (state.readyIds[state.youId] ? tt("ready") : tt("buzzReady"))
     : tt("buzz");
-  const showLobbyBtn = true;
+  const leaveLabel = state.viewing && !endPhase ? tt("exitShow") : tt("lobby");
+  const dropped = Boolean(state.dropoutIds && state.dropoutIds[state.youId]);
+  const leaveTop = canLeaveNow()
+    ? `<button class="word" id="quit" type="button">${leaveLabel}</button>`
+    : "";
+  const dropoutBtn = !canLeaveNow() && !endPhase
+    ? `<button class="ghost" id="dropout" type="button" ${dropped ? "disabled" : ""}>${dropped ? tt("dropoutPressed") : tt("dropout")}</button>`
+    : "";
   return `
     <img class="bg" alt="" src="${STUDIOS[state.studioI % STUDIOS.length]}"/>
     <div class="veil"></div>
@@ -2415,7 +2533,7 @@ function playHTML() {
       <div class="grow"></div>
       ${readyPhase || endPhase ? "" : scoreboard()}
       <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
-      ${showLobbyBtn ? `<button class="word" id="quit" type="button">${tt("lobby")}</button>` : ""}
+      ${leaveTop}
     </div>
     <div class="play">
       ${readyPhase ? readyCardHTML() : (endPhase ? `<div class="qwrap"><div class="qcard">
@@ -2453,10 +2571,12 @@ function playHTML() {
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
         <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
       </div>` : ""}
-      ${(pad || !tv) && !ld && !endPhase ? `<button class="buzzer ${canBuzz ? "lit" : ""} ${readyPhase && state.readyIds[state.youId] ? "ready-on" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
+      ${(pad || !tv) && !ld && !endPhase && !state.viewing && seated ? `<button class="buzzer ${canBuzz ? "lit" : ""} ${readyPhase && state.readyIds[state.youId] ? "ready-on" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
       ${ld ? `<div class="lock-flag">${ld.phase === "wager" ? tt("lockdownWagers") : ld.phase === "intro" ? `Rules · ${ld.introLeft}s` : `${escapeHtml(ld.name)} · ${ld.hits} hit · $${ld.earned || 0}`}</div>` : ""}
       ${(pad && (state.phase === "answer" || (ld?.phase === "play" && isHero))) ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
-      ${pad || endPhase ? `<button class="ghost" id="quitBar" type="button">${tt("lobby")}</button>` : ""}
+      ${dropoutBtn}
+      ${dropped && !canLeaveNow() ? `<p class="meta">${tt("dropoutWait")}</p>` : ""}
+      ${(canLeaveNow() && (pad || endPhase || state.viewing)) ? `<button class="ghost" id="quitBar" type="button">${leaveLabel}</button>` : ""}
     </div>
     ${joinQrChip(140)}
     ${rulesHTML()}
@@ -2671,23 +2791,22 @@ function bindLobby() {
   const joinRoomBtn = $("#joinRoom");
   if (joinRoomBtn) joinRoomBtn.onclick = () => {
     const jc = $("#jc");
-    if (jc) {
-      state.joinInput = String(jc.value || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
-      state.room = state.joinInput;
-    }
-    void joinAsBuzzer();
+    const code = jc ? String(jc.value || "") : (state.joinInput || "");
+    void beginJoin(code);
   };
   document.querySelectorAll("[data-join-now]").forEach((b) => {
     b.onclick = () => {
-      const code = String(b.dataset.joinNow || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
+      const code = String(b.dataset.joinNow || "");
       if (!code) return;
-      state.joinInput = code;
-      state.room = code;
       const jc = $("#jc");
-      if (jc) jc.value = code;
-      void joinAsBuzzer();
+      if (jc) jc.value = code.toUpperCase();
+      void beginJoin(code);
     };
   });
+  const joinView = $("#joinView");
+  if (joinView) joinView.onclick = () => { void confirmJoin("view"); };
+  const joinPlay = $("#joinPlay");
+  if (joinPlay) joinPlay.onclick = () => { void confirmJoin("play"); };
   document.querySelectorAll("[data-kick]").forEach((b) => {
     b.onclick = async () => {
       const id = b.dataset.kick;
@@ -2750,6 +2869,72 @@ function bindLobby() {
   bindQrChip();
 }
 
+async function beginJoin(raw) {
+  const code = String(raw || state.room || state.joinInput || joinCode || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
+  if (!code || code.length < 3) {
+    state.statusMsg = tt("enterCode");
+    state.lobbyOpen = "room";
+    state.mpMode = "join";
+    paint(true);
+    return false;
+  }
+  if (!hasPhoneProfile()) {
+    state.statusMsg = tt("gateProfile");
+    openDojoPage("create");
+    return false;
+  }
+  if (needsPasswordSetup() || !state.profileUnlocked) {
+    state.statusMsg = needsPasswordSetup() ? tt("gateSetPassword") : tt("gatePassword");
+    openDojoPage(dojoModeForGate());
+    return false;
+  }
+  if (!isPlaced()) {
+    state.statusMsg = tt("dojoPhone");
+    openDojoPage("home");
+    return false;
+  }
+  state.room = code;
+  state.joinInput = code;
+  const live = await rooms("GET");
+  const phase = live && live.state && live.state.phase;
+  if (!live || live.error || !phase || phase === "lobby" || phase === "ready") {
+    state.viewing = false;
+    state.seatIntent = "play";
+    state.joinOffer = null;
+    return joinAsBuzzer();
+  }
+  const qs = live.state.qs || [];
+  const index = Number(live.state.i) || 0;
+  const current = (live.state.q && live.state.q.tier) || (qs[index] && qs[index].tier) || "";
+  state.joinOffer = {
+    code,
+    phase,
+    canPlay: phase !== "end" && nextQuestionAllowsJoin(qs, index),
+    tier: current,
+  };
+  state.lobbyOpen = "room";
+  state.mpMode = "join";
+  state.statusMsg = "";
+  paint(true);
+  return false;
+}
+
+async function confirmJoin(intent) {
+  const offer = state.joinOffer;
+  if (!offer) return beginJoin(state.room);
+  if (intent === "play" && !offer.canPlay) {
+    state.statusMsg = tt("playSeatClosed");
+    paint(true);
+    return false;
+  }
+  state.viewing = intent === "view";
+  state.seatIntent = intent === "view" ? "view" : "play";
+  state.room = offer.code;
+  state.joinInput = offer.code;
+  state.joinOffer = null;
+  return joinAsBuzzer();
+}
+
 async function joinAsBuzzer() {
   const code = String(state.room || state.joinInput || joinCode || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
   if (!code || code.length < 3) {
@@ -2761,26 +2946,12 @@ async function joinAsBuzzer() {
   }
   if (!hasPhoneProfile()) {
     state.statusMsg = tt("gateProfile");
-    state.lobbyOpen = "room";
-    state.mpMode = "join";
-    state.roomDojoPanel = "create";
-    paint(true);
+    openDojoPage("create");
     return false;
   }
-  if (needsPasswordSetup()) {
-    state.statusMsg = tt("gateSetPassword");
-    state.lobbyOpen = "room";
-    state.mpMode = "join";
-    state.roomDojoPanel = "unlock";
-    paint(true);
-    return false;
-  }
-  if (!state.profileUnlocked) {
-    state.statusMsg = tt("gatePassword");
-    state.lobbyOpen = "room";
-    state.mpMode = "join";
-    state.roomDojoPanel = "unlock";
-    paint(true);
+  if (needsPasswordSetup() || !state.profileUnlocked) {
+    state.statusMsg = needsPasswordSetup() ? tt("gateSetPassword") : tt("gatePassword");
+    openDojoPage(dojoModeForGate());
     return false;
   }
   if (!isPlaced()) {
@@ -2799,7 +2970,14 @@ async function joinAsBuzzer() {
   state.youId = "p-" + (state.profile?.id || state.name || "pad").toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16);
   if (!state.youId || state.youId === "p-") state.youId = "p-" + uid().slice(0, 8);
   state.leftPad = false;
-  const joined = await rooms("POST", { action: "join", code: state.room, name: state.name, id: state.youId, thumb: state.profile?.thumb || "" });
+  const joined = await rooms("POST", {
+    action: "join",
+    code: state.room,
+    name: state.name,
+    id: state.youId,
+    thumb: state.profile?.thumb || "",
+    seat: state.viewing ? "view" : "play",
+  });
   if (!joined || joined.error) {
     state.statusMsg = (joined && joined.message)
       || tt("roomMissing", code);
@@ -2811,18 +2989,17 @@ async function joinAsBuzzer() {
   const live = await rooms("GET");
   if (live?.guests) ingestGuests(live.guests);
   if (live?.state?.phase && live.state.phase !== "lobby") {
-    const keep = state.name;
-    const keepId = state.youId;
-    Object.assign(state, live.state);
-    state.name = keep;
-    state.youId = keepId;
-    state.readyIds = { ...(live.state.readyIds || {}) };
+    applyHostState(live.state);
     if (live.guests) ingestGuests(live.guests);
   } else {
     // TV still in lobby — stay as pad waiting; prefer ready UI once TV opens room.
     state.phase = "lobby";
   }
-  state.statusMsg = "Joined room " + code + " as buzzer. Waiting for the TV…";
+  state.statusMsg = state.viewing
+    ? tt("joinedView", code)
+    : (live?.state?.phase && live.state.phase !== "lobby" && live.state.phase !== "ready"
+      ? tt("queuedPlay")
+      : tt("joinedPlay", code));
   // Persist pad role in URL so refresh keeps pad mode.
   try {
     const u = new URL(location.href);
@@ -2839,20 +3016,7 @@ async function onLobbyGo() {
   state.statusMsg = "";
 
   if (isPad() || mode === "join") {
-    const gate = lobbyGateReason();
-    if (gate) {
-      state.statusMsg = gate;
-      state.lobbyOpen = "room";
-      state.mpMode = isPad() ? "join" : (state.mpMode || "join");
-      if (!hasPhoneProfile()) { state.roomDojoPanel = "create"; paint(true); return; }
-      if (needsPasswordSetup() || !state.profileUnlocked) { state.roomDojoPanel = "unlock"; paint(true); return; }
-      if (!isPlaced()) {
-        state.roomDojoPanel = "";
-        openDojoPage("home");
-        return;
-      }
-    }
-    await joinAsBuzzer();
+    await beginJoin(state.room || state.joinInput || joinCode);
     return;
   }
 
@@ -2979,11 +3143,9 @@ function bindPlay() {
   const mic = $("#mic");
   if (mic) mic.onclick = listenVoice;
   const goLobby = () => leaveToLobby();
-  const quit = $("#quit");
-  if (quit) quit.onclick = goLobby;
-  const quitBar = $("#quitBar");
-  if (quitBar) quitBar.onclick = goLobby;
-  document.querySelectorAll("#quit").forEach((el) => { el.onclick = goLobby; });
+  document.querySelectorAll("#quit, #quitBar").forEach((el) => { el.onclick = goLobby; });
+  const dropout = $("#dropout");
+  if (dropout) dropout.onclick = () => pressDropout();
   const force = $("#forceStart");
   if (force) force.onclick = () => {
     if (role === "pad" || state.phase !== "ready") return;
@@ -3013,26 +3175,22 @@ function ingestGuests(guests) {
       id: g.id || ("p-" + String(g.name || "pad").toLowerCase().replace(/\s+/g, "")),
       name: g.name || "Player",
       thumb: g.thumb || "",
+      seat: g.seat === "view" ? "view" : "play",
     }))
     .slice(0, 11);
-  if (state.phase === "lobby") return;
+  if (state.phase === "lobby" || state.phase === "ready") return;
+  if (role === "pad") return;
+  const queued = [];
   state.guests.forEach((g) => {
-    if (state.players.some((p) => p.id === g.id || p.name === g.name)) return;
-    const bot = state.players.find((p) => !p.human);
-    if (bot) {
-      bot.id = g.id;
-      bot.name = g.name;
-      bot.human = true;
-      bot.thumb = g.thumb || bot.thumb || "";
-      delete bot.skill;
-      delete bot.buzzDelayMs;
-    } else if (state.players.length < 12) {
-      state.players.push({ id: g.id, name: g.name, score: 0, human: true, you: false, thumb: g.thumb || "" });
-    } else {
+    if (g.seat === "view") return;
+    if (state.players.some((p) => p.id === g.id || p.name === g.name)) {
       const existing = state.players.find((p) => p.id === g.id || p.name === g.name);
       if (existing && g.thumb) existing.thumb = g.thumb;
+      return;
     }
+    queued.push(g);
   });
+  state.pendingJoins = queued;
 }
 
 function startGame() {
@@ -3083,6 +3241,10 @@ function startPoll() {
         maybeStartFromReady();
       }
     }
+    if (role !== "pad" && j.dropoutIds) {
+      state.dropoutIds = { ...(state.dropoutIds || {}), ...j.dropoutIds };
+      maybeEndFromDropout();
+    }
     if (role === "pad" && j.state && j.state.phase) {
       // Kicked from TV?
       if (j.state.kickedId && j.state.kickedId === state.youId && (j.state.kickedAt || 0) > (state.lastKickAt || 0)) {
@@ -3091,15 +3253,8 @@ function startPoll() {
         leaveToLobby();
         return;
       }
-      const keep = state.name;
-      const keepId = state.youId;
-      const keepReady = { ...(state.readyIds || {}) };
-      const keepProfile = state.profile;
-      Object.assign(state, j.state);
-      state.name = keep;
-      state.youId = keepId;
-      state.profile = keepProfile;
-      state.readyIds = { ...keepReady, ...(j.state.readyIds || {}) };
+      applyHostState(j.state);
+      if (j.dropoutIds) state.dropoutIds = { ...(state.dropoutIds || {}), ...j.dropoutIds };
       if (Array.isArray(j.state.qs) && j.state.qs.length) state.qs = j.state.qs;
       if (j.guests) ingestGuests(j.guests);
       paint();
@@ -3171,6 +3326,9 @@ function paint(force = false) {
     state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
     state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => r.code).join(","),
+    state.viewing ? 1 : 0, state.joinOffer?.code || "", state.joinOffer?.canPlay ? 1 : 0,
+    Object.keys(state.dropoutIds || {}).sort().join(","),
+    (state.pendingJoins || []).map((g) => g.id).join(","),
     ld?.wagers?.[state.youId]?.locked, ld?.wagers?.[state.youId]?.side, ld?.wagers?.[state.youId]?.amount,
   ].join("|");
   if (!force && key === lastKey && frame === "play") {

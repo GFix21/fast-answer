@@ -72,10 +72,12 @@ export default async function handler(req, res) {
       name: body.name || "Player",
       id: body.id || ("p-" + String(body.name || "pad")),
       thumb: body.thumb || "",
+      seat: body.seat === "view" ? "view" : "play",
     };
     const existing = cur.guests.find((g) => g.id === guest.id || g.name === guest.name);
     if (existing) {
       existing.name = guest.name;
+      existing.seat = guest.seat;
       if (guest.thumb) existing.thumb = guest.thumb;
     } else {
       cur.guests.push(guest);
@@ -84,6 +86,11 @@ export default async function handler(req, res) {
   } else if (body.action === "leave") {
     const id = body.id || "";
     cur.guests = (cur.guests || []).filter((g) => g.id !== id && g.name !== body.name);
+    if (cur.dropoutIds && id) {
+      const next = { ...cur.dropoutIds };
+      delete next[id];
+      cur.dropoutIds = next;
+    }
     cur.state = cur.state || {};
     if (cur.state.readyIds && id) {
       const next = { ...cur.state.readyIds };
@@ -102,6 +109,14 @@ export default async function handler(req, res) {
     }
     cur.state.kickedId = id;
     cur.state.kickedAt = Date.now();
+    touch(cur);
+  } else if (body.action === "dropout") {
+    const id = body.id || "";
+    if (!id) {
+      res.status(400).end(JSON.stringify({ error: "id" }));
+      return;
+    }
+    cur.dropoutIds = { ...(cur.dropoutIds || {}), [id]: true };
     touch(cur);
   } else if (body.action === "state") {
     cur.state = body.state || {};
