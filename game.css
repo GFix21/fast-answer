@@ -565,6 +565,13 @@ img.brand{
   color:#a7f3d0;background:color-mix(in oklab, #34d399 16%, transparent);
 }
 .dojo-gate-actions{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.dojo-gate-actions .primary,.dojo-gate-actions .ghost{flex:1 1 6.5rem}
+.dojo-gate-actions .ghost.on{
+  color:var(--fg);
+  border-color:color-mix(in oklab, var(--accent, #d4af37) 55%, transparent);
+  background:color-mix(in oklab, var(--accent, #d4af37) 18%, transparent);
+}
+.dojo-inline{display:flex;flex-direction:column;gap:6px}
 .dojo-unlock-mini{display:flex;flex-direction:column;gap:4px}
 .dojo-unlock-mini .copy-row{display:flex;gap:6px;align-items:center}
 .dojo-unlock-mini .copy-row input{flex:1;min-width:0}
