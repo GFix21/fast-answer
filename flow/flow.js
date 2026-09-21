@@ -12,9 +12,12 @@ const state = {
   filterTier: "all",
   archive: {
     months: null,
+    placementPages: null,
     monthKey: null,
     index: null,
     weekKey: null,
+    pageKey: null,
+    kind: null,
     pack: null,
     studioCounts: null,
     filterTier: "all",
@@ -100,7 +103,7 @@ function render() {
     <nav class="tabs">
       ${["overview","bank","archive","topic","reject"].map((t) =>
         `<button data-tab="${t}" class="${state.tab===t?"on":""}">${
-          t==="overview"?"Overview":t==="bank"?"Weekly bank":t==="archive"?"Monthly archive":t==="topic"?"Add topic":"Reject / regen"
+          t==="overview"?"Overview":t==="bank"?"Weekly bank":t==="archive"?"Archives":t==="topic"?"Add topic":"Reject / regen"
         }</button>`
       ).join("")}
     </nav>
@@ -209,8 +212,13 @@ function render() {
     panel.innerHTML = `
       <div class="card">
         <h2>Reject → regenerate</h2>
-        <p class="mut">Logs rejection + optional replacement. Prefer full regen in Q-and-A studio.</p>
-        <label>question id</label><input id="rid" placeholder="w39-e-…"/>
+        <p class="mut">Logs rejection + optional replacement. Weekly bank or Placement archive. Prefer full regen in Q-and-A studio.</p>
+        <label>bank</label>
+        <select id="rbank">
+          <option value="week">Weekly bank</option>
+          <option value="placement">Placement (Dojo)</option>
+        </select>
+        <label>question id</label><input id="rid" placeholder="w39-e-… or place-…"/>
         <label>reason codes (comma)</label><input id="rreasons" value="weak-distractors"/>
         <label>note</label><textarea id="rnote" rows="2"></textarea>
         <label>replacement prompt (optional)</label><textarea id="rprompt" rows="2"></textarea>
@@ -226,6 +234,89 @@ function renderArchivePanel(panel) {
   const a = state.archive;
   if (a.loading) {
     panel.innerHTML = `<div class="card"><p class="mut">Loading archive…</p></div>`;
+    return;
+  }
+
+  // Placement archive page (reject / regen enabled)
+  if (a.kind === "placement" && a.pack) {
+    const tiers = ["all", "easy", "hard", "difficult", "extreme"];
+    const topicQ = (a.filterTopic || "").trim().toLowerCase();
+    const qs = (a.pack.questions || []).filter((q) => {
+      if (a.filterTier !== "all" && q.tier !== a.filterTier) return false;
+      if (!topicQ) return true;
+      const hay = `${q.topic || ""} ${q.categoryTitle || ""} ${q.prompt || ""} ${q.id || ""} ${q.generation || ""}`.toLowerCase();
+      return hay.includes(topicQ);
+    });
+    const sc = a.studioCounts || {};
+    panel.innerHTML = `
+      <div class="card">
+        <div class="row spread">
+          <div>
+            <button class="btn" id="archBackPlacement">← Archives</button>
+            <h2 style="margin-top:12px">Placement <span class="mut" style="font-size:14px;font-family:var(--font-body)">(Dojo · reject / regen)</span></h2>
+            <p class="mut">${esc(a.pack.title || a.pack.id || "")}</p>
+            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · Q-and-A banks/placement</p>
+          </div>
+        </div>
+        <div class="row" style="margin-top:12px;gap:12px">
+          <select id="archTier" style="width:auto;margin:0">${tiers.map((t)=>`<option value="${t}" ${a.filterTier===t?"selected":""}>${t}</option>`).join("")}</select>
+          <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="Filter topic / generation / prompt…" value="${esc(a.filterTopic)}"/>
+        </div>
+        <div class="q-list" style="margin-top:12px">
+          ${qs.map((q) => `
+            <div class="q-item ${esc(q.status||"pending")}">
+              <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation||"")} · <b>${esc(q.status||"pending")}</b> · ${esc(q.id)}</div>
+              <div class="q-prompt">${esc(q.categoryTitle)} — ${esc(q.prompt)}</div>
+              <div class="choices">${(q.choices||[]).map((c,i)=>`<div class="${i===q.correctIndex?"hit":""}">${String.fromCharCode(65+i)}. ${esc(c)}</div>`).join("")}</div>
+              <div class="row" style="margin-top:10px">
+                <button class="btn ok" data-p-approve="${esc(q.id)}">Approve</button>
+                <button class="btn danger" data-p-reject="${esc(q.id)}">Reject</button>
+                <button class="btn" data-p-pending="${esc(q.id)}">Pending</button>
+                <button class="btn" data-p-regen="${esc(q.id)}">Reject → regen form</button>
+              </div>
+            </div>`).join("") || `<p class="mut">No questions in filter.</p>`}
+        </div>
+      </div>`;
+    document.getElementById("archBackPlacement")?.addEventListener("click", () => {
+      a.kind = null;
+      a.pack = null;
+      a.pageKey = null;
+      a.monthKey = null;
+      a.studioCounts = null;
+      a.filterTier = "all";
+      a.filterTopic = "";
+      render();
+    });
+    document.getElementById("archTier")?.addEventListener("change", (e) => {
+      a.filterTier = e.target.value;
+      render();
+    });
+    document.getElementById("archTopic")?.addEventListener("input", (e) => {
+      a.filterTopic = e.target.value;
+      render();
+    });
+    panel.querySelectorAll("[data-p-approve]").forEach((b) =>
+      b.addEventListener("click", () => setPlacementStatus(b.dataset.pApprove, "approved")),
+    );
+    panel.querySelectorAll("[data-p-pending]").forEach((b) =>
+      b.addEventListener("click", () => setPlacementStatus(b.dataset.pPending, "pending")),
+    );
+    panel.querySelectorAll("[data-p-reject]").forEach((b) =>
+      b.addEventListener("click", () => rejectPlacementQuick(b.dataset.pReject)),
+    );
+    panel.querySelectorAll("[data-p-regen]").forEach((b) =>
+      b.addEventListener("click", () => {
+        state.tab = "reject";
+        state.message = "";
+        render();
+        queueMicrotask(() => {
+          const bank = document.getElementById("rbank");
+          const rid = document.getElementById("rid");
+          if (bank) bank.value = "placement";
+          if (rid) rid.value = b.dataset.pRegen;
+        });
+      }),
+    );
     return;
   }
 
@@ -335,10 +426,27 @@ function renderArchivePanel(panel) {
     return;
   }
 
-  // Months list
+  // Root: placement pages + monthly weeks
   const months = a.months || [];
+  const placementPages = a.placementPages || [];
   panel.innerHTML = `
     <div class="card">
+      <h2>Placement</h2>
+      <p class="mut">Dojo placement bank from Q-and-A — separate archive page for reject / regenerate.</p>
+      <div class="arch-list" style="margin-top:14px">
+        ${placementPages.map((p) => `
+          <button class="arch-row" data-placement="${esc(p.id)}">
+            <div class="row spread">
+              <div>
+                <b>${esc(p.title || p.id)}</b>
+                <div class="mut">${p.questionCount || 0} questions · ${(p.generations||[]).length} generations</div>
+              </div>
+              <span class="mut">placement</span>
+            </div>
+          </button>`).join("") || `<p class="mut">No placement pack bundled.</p>`}
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
       <h2>Monthly archive</h2>
       <p class="mut">Published week packs by America/Toronto month. Read-only browse.</p>
       <div class="arch-list" style="margin-top:14px">
@@ -357,6 +465,9 @@ function renderArchivePanel(panel) {
   panel.querySelectorAll("[data-month]").forEach((b) =>
     b.addEventListener("click", () => openArchiveMonth(b.dataset.month)),
   );
+  panel.querySelectorAll("[data-placement]").forEach((b) =>
+    b.addEventListener("click", () => openPlacementPage(b.dataset.placement)),
+  );
 }
 
 async function loadArchiveMonths(rerender) {
@@ -365,9 +476,11 @@ async function loadArchiveMonths(rerender) {
   try {
     const data = await api("archive");
     state.archive.months = data.months || [];
+    state.archive.placementPages = data.placementPages || [];
   } catch (e) {
     state.message = e.message || "Failed to load archive";
     state.archive.months = [];
+    state.archive.placementPages = [];
   } finally {
     state.archive.loading = false;
     if (rerender || state.tab === "archive") render();
@@ -436,9 +549,12 @@ async function doLogout() {
   state.week = null;
   state.archive = {
     months: null,
+    placementPages: null,
     monthKey: null,
     index: null,
     weekKey: null,
+    pageKey: null,
+    kind: null,
     pack: null,
     studioCounts: null,
     filterTier: "all",
@@ -515,10 +631,74 @@ async function doReject() {
       };
     }
   }
+  const bank = document.getElementById("rbank")?.value || "week";
   try {
-    const data = await api("reject", { method: "POST", body: JSON.stringify(body) });
+    const endpoint = bank === "placement" ? "placement" : "reject";
+    if (bank === "placement") body.action = "reject";
+    const data = await api(endpoint, { method: "POST", body: JSON.stringify(body) });
     state.message = `Rejected ${data.rejection?.questionId}. ${data.learningBrief || ""}`;
-    await loadWeek(true);
+    if (bank === "placement") {
+      state.archive.months = null;
+      if (state.archive.kind === "placement") await openPlacementPage(state.archive.pageKey || "placement");
+      else render();
+    } else {
+      await loadWeek(true);
+    }
+  } catch (e) {
+    state.message = e.message;
+    render();
+  }
+}
+
+async function openPlacementPage(pageId) {
+  state.archive.loading = true;
+  render();
+  try {
+    const data = await api(`archive?month=placement&page=${encodeURIComponent(pageId || "placement")}`);
+    state.archive.kind = "placement";
+    state.archive.monthKey = "placement";
+    state.archive.pageKey = pageId || data.pack?.id || "placement";
+    state.archive.weekKey = null;
+    state.archive.index = null;
+    state.archive.pack = data.pack;
+    state.archive.studioCounts = data.studioCounts;
+    state.archive.filterTier = "all";
+    state.archive.filterTopic = "";
+    if (data.pages) state.archive.placementPages = data.pages;
+  } catch (e) {
+    state.message = e.message;
+  } finally {
+    state.archive.loading = false;
+    render();
+  }
+}
+
+async function setPlacementStatus(id, status) {
+  try {
+    await api("placement", {
+      method: "POST",
+      body: JSON.stringify({ action: "status", questionId: id, status }),
+    });
+    await openPlacementPage(state.archive.pageKey || "placement");
+  } catch (e) {
+    state.message = e.message;
+    render();
+  }
+}
+
+async function rejectPlacementQuick(id) {
+  try {
+    const data = await api("placement", {
+      method: "POST",
+      body: JSON.stringify({
+        action: "reject",
+        questionId: id,
+        reasonCodes: ["flow-quick-reject"],
+        note: "Rejected from Placement archive page",
+      }),
+    });
+    state.message = `Rejected ${data.rejection?.questionId}.`;
+    await openPlacementPage(state.archive.pageKey || "placement");
   } catch (e) {
     state.message = e.message;
     render();

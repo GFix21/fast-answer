@@ -63,7 +63,7 @@ const CELEB_BOTS = [
 
 const $ = (s, r = document) => r.querySelector(s);
 const params = new URLSearchParams(location.search);
-const role = params.get("role") || (params.get("pad") ? "pad" : "host");
+let role = params.get("role") || (params.get("pad") ? "pad" : "host");
 const joinCode = (params.get("room") || "").toUpperCase();
 const isDirections =
   params.get("page") === "directions" ||
@@ -121,6 +121,10 @@ const state = {
   dirOpen: "tv",
   qrOpen: false,
   readyIds: {},
+  mpMode: localStorage.getItem("fa-mp") || (role === "pad" ? "join" : "host"),
+  statusMsg: "",
+  placementQs: [],
+  botFill: true,
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
@@ -145,8 +149,47 @@ function shareUrl() {
   u.search = `?role=pad&room=${encodeURIComponent(state.room)}`;
   return u.toString();
 }
+function tvSilkUrl(roomCode = state.room) {
+  const path = location.pathname.replace(/\/index\.html$/i, "").replace(/\/$/, "");
+  const base = `${location.origin}${path || ""}`;
+  const code = String(roomCode || "").toUpperCase();
+  return `${base}/?tv=1${code ? `&room=${encodeURIComponent(code)}` : ""}`;
+}
 function isTvDisplay() {
   return Boolean(state.onScreen && role !== "pad");
+}
+function isPad() {
+  return role === "pad";
+}
+function hasPhoneProfile() {
+  const p = state.profile;
+  return Boolean(p && String(p.displayName || "").trim());
+}
+function canPlayScored() {
+  return hasPhoneProfile() && isPlaced();
+}
+async function copyText(value) {
+  const text = String(value || "");
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(text);
+      return true;
+    }
+  } catch { /* fall through */ }
+  try {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    const ok = document.execCommand("copy");
+    ta.remove();
+    return ok;
+  } catch {
+    return false;
+  }
 }
 function humanPads() {
   return (state.guests || []).filter((g) => g && g.id);
@@ -296,7 +339,10 @@ function nextPlacementTier(current, correct) {
 }
 function pickPlacementQuestion(tier, exclude) {
   const skip = new Set(exclude || []);
-  const available = shuffle(state.questions.filter((q) => !skip.has(q.id)));
+  const pool = (state.placementQs && state.placementQs.length)
+    ? state.placementQs
+    : state.questions;
+  const available = shuffle(pool.filter((q) => !skip.has(q.id) && q.tier !== "finale"));
   const order = {
     easy: ["easy", "hard", "difficult", "extreme"],
     hard: ["hard", "easy", "difficult", "extreme"],
@@ -319,7 +365,9 @@ function abilityFromDojo(answers) {
   return "bronze";
 }
 function fillSeats() {
-  const need = Math.max(1, Math.min(11, (state.playerCount || 3) - 1));
+  const guests = state.guests || [];
+  const empty = Math.max(0, (state.playerCount || 3) - 1 - guests.length);
+  const need = state.botFill ? Math.min(11, empty) : 0;
   const have = [...(state.seatBots || [])];
   const used = new Set(have.map((b) => b.id));
   const extra = shuffle(CELEB_BOTS.filter((b) => !used.has(b.id)));
@@ -1214,35 +1262,95 @@ function dojoBody() {
   `;
 }
 
+function roomModeButtons() {
+  if (isTvDisplay()) return "";
+  const modes = [
+    ["host", "Host"],
+    ["join", "Join TV"],
+    ["cast", "Cast TV"],
+  ];
+  return `<div class="mp-modes" role="tablist">
+    ${modes.map(([id, label]) =>
+      `<button type="button" class="mp-mode ${state.mpMode === id ? "on" : ""}" data-mp="${id}">${label}</button>`
+    ).join("")}
+  </div>`;
+}
+
 function roomBody() {
-  const pad = role === "pad";
+  const pad = isPad();
   const seats = seatedPreview();
   const humans = seats.filter((s) => s.human).length;
-  if (pad) {
+  const bots = seats.length - humans;
+  const silk = state.room ? tvSilkUrl(state.room) : "";
+  const mode = pad ? "join" : (state.mpMode || "host");
+
+  if (pad || mode === "join") {
     return `
-      <label class="field" for="nm">Your name</label>
+      ${roomModeButtons()}
+      <p class="dir-copy"><b>Join TV / Join as buzzer.</b> Enter the room code from the TV (Silk / On Screen). This phone becomes the pad.</p>
+      <label class="field" for="nm">Your name (phone profile)</label>
       <input id="nm" type="text" value="${escapeHtml(state.name)}" maxlength="18" autocomplete="nickname"/>
-      <label class="field" for="jc">Room code</label>
-      <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off"/>
-      <p class="meta">This phone is the buzzer. Join the TV room, then Buzz to ready up.</p>
+      <label class="field" for="jc">TV room code</label>
+      <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off" autocapitalize="characters"/>
+      <p class="meta">Profile + Dojo placement required before scored play. Buzz on the pad to ready once the TV is waiting.</p>
     `;
   }
+
+  if (mode === "cast") {
+    return `
+      ${roomModeButtons()}
+      <p class="dir-copy"><b>Cast to Fire Stick Silk.</b> Generates a TV room and a Silk URL with <code>?tv=1&amp;room=</code>. Open that link on the set; phones Join TV with the same code.</p>
+      <label class="field">Players <b>${state.playerCount}</b></label>
+      <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
+      <label class="toggle">
+        <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
+        <span>Fill empty seats with celebrity bots</span>
+      </label>
+      <div class="seats">
+        ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
+      </div>
+      <p class="room-code">Room <b id="codeCopy">${escapeHtml(state.room || "····")}</b></p>
+      ${state.room ? `
+        <label class="field" for="silkUrl">Silk / Fire TV link</label>
+        <div class="copy-row">
+          <input id="silkUrl" type="text" readonly value="${escapeHtml(silk)}"/>
+          <button class="ghost" id="copySilk" type="button">Copy</button>
+        </div>
+        <img class="qr" alt="Open on TV" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(silk)}"/>
+        <p class="meta">Pad join: <code>?role=pad&amp;room=${escapeHtml(state.room)}</code> · ${humans} human · ${bots} bot</p>
+      ` : `<p class="meta">Tap <b>Make TV link</b> below to create the room and copyable Silk URL.</p>`}
+    `;
+  }
+
+  // Host (alone / local / optional On Screen on this device)
   return `
+    ${roomModeButtons()}
     <label class="field">Players <b>${state.playerCount}</b></label>
     <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
+    <label class="toggle">
+      <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
+      <span>Fill empty seats with celebrity bots</span>
+    </label>
     <div class="seats">
       ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
     </div>
+    ${isTvDisplay() ? "" : `
     <label class="toggle">
       <input id="os" type="checkbox" ${state.onScreen ? "checked" : ""} ${forcedDisplay ? "disabled" : ""}/>
-      <span>On Screen — this display owns the TV room. Phones join as pads. Fast Answer does not send AirPlay.</span>
-    </label>
-    ${state.onScreen ? `
-      <p class="dir-copy">This page <b>creates the room</b>. Phones expand the corner Join chip / QR on the set, or open the pad URL. Game state follows the TV.</p>
+      <span>On Screen — this display owns the TV room. Phones join as pads.</span>
+    </label>`}
+    ${state.onScreen || isTvDisplay() ? `
+      <p class="dir-copy">This page <b>owns the room</b>. Share the Silk link or corner QR so phones Join TV as buzzers.</p>
       <p class="room-code">Room <b id="codeCopy">${escapeHtml(state.room || "····")}</b></p>
-      ${state.room ? `<img class="qr" alt="Join on your phone" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(shareUrl())}"/>` : ""}
-      <p class="meta">${humans} human${humans === 1 ? "" : "s"} · ${seats.length - humans} bot${seats.length - humans === 1 ? "" : "s"} · pads replace bots · all pads Buzz to start</p>
-    ` : `<p class="meta">Local show — buzzer on this page, celebrity bots in empty seats. On Screen splits picture (TV) from buzzers (phones).</p>`}
+      ${state.room ? `
+        <div class="copy-row">
+          <input id="silkUrl" type="text" readonly value="${escapeHtml(silk || tvSilkUrl(state.room))}"/>
+          <button class="ghost" id="copySilk" type="button">Copy</button>
+        </div>
+        <img class="qr" alt="Join on your phone" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(shareUrl())}"/>
+      ` : ""}
+      <p class="meta">${humans} human${humans === 1 ? "" : "s"} · ${bots} bot${bots === 1 ? "" : "s"} · pads replace bots · all pads Buzz to start</p>
+    ` : `<p class="meta">Solo / local show — buzzer on this phone, bots in empty seats. Use <b>Cast TV</b> for a Silk link, or <b>Join TV</b> to pad into an existing room.</p>`}
   `;
 }
 
@@ -1256,19 +1364,46 @@ function setBody() {
   `;
 }
 
+function lobbyGoLabel() {
+  const pad = isPad();
+  const mode = pad ? "join" : (state.mpMode || "host");
+  if (pad || mode === "join") return "Join as buzzer";
+  if (mode === "cast") return state.room ? "Copy Silk link" : "Make TV link";
+  if (isTvDisplay() || state.onScreen) return "Open TV room";
+  return "Play";
+}
+
+function lobbyGateReason() {
+  if (isTvDisplay()) return "";
+  if (!hasPhoneProfile()) return "Set your phone profile name to play.";
+  if (!isPlaced()) return "Finish the 10-question Dojo placement to play.";
+  return "";
+}
+
 function lobbyHTML() {
-  const pad = role === "pad";
+  const pad = isPad();
+  const tv = isTvDisplay();
   const p = state.profile || {};
   const placed = isPlaced();
   const belt = BELT_META[p.belt || "white"];
   const ab = p.abilityTier ? ABILITY_META[p.abilityTier] : null;
-  const goLabel = pad ? "Join as buzzer" : (state.onScreen ? "Open TV room" : "Play");
-  const goOff = !pad && !placed;
+  const mode = pad ? "join" : (state.mpMode || "host");
+  const gate = lobbyGateReason();
+  const joining = pad || mode === "join";
+  // TV cast / Make TV link can run without placement on the set itself.
+  const goOff = Boolean(gate) && !(tv && (mode === "host" || mode === "cast"));
+  const goLabel = goOff
+    ? (!hasPhoneProfile() ? "Profile first" : "Dojo first")
+    : lobbyGoLabel();
   const d = state.dojo;
   const dojoLive = Boolean(d && d.q && !d.done);
   const dojoExtra = dojoLive
     ? `<small>${d.answers.length}/${PLACE_N}</small>`
     : (placed ? `<small>${escapeHtml((ab && ab.label) || "Placed")}</small>` : `<small>Required</small>`);
+  const status = state.statusMsg
+    || gate
+    || (joining && (state.room || joinCode) ? "Joining room " + (state.room || joinCode) : "")
+    || (state.onScreen && state.room ? "TV owns room " + state.room : "");
   return `
     <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
     <div class="veil"></div>
@@ -1283,15 +1418,15 @@ function lobbyHTML() {
         <h1 class="sr-only">Fast Answer!</h1>
         <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
         <div class="accord">
-          ${pad || dojoLive ? "" : acc("profile", "Profile", `<small>${escapeHtml(belt.label)}${ab ? " · " + ab.label : ""}</small>`, profileBody())}
-          ${pad ? "" : acc("dojo", "Dojo", dojoExtra, dojoBody())}
-          ${dojoLive ? "" : acc("room", pad ? "Join" : "Room", `<small>${pad ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
-          ${pad || dojoLive ? "" : acc("set", "Set", "", setBody())}
+          ${tv || dojoLive ? "" : acc("profile", "Profile", `<small>${escapeHtml(belt.label)}${ab ? " · " + ab.label : ""}</small>`, profileBody())}
+          ${tv || pad ? "" : acc("dojo", "Dojo", dojoExtra, dojoBody())}
+          ${dojoLive && !tv ? "" : acc("room", joining ? "Join TV" : (mode === "cast" ? "Cast TV" : "Room"), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
+          ${pad || tv || dojoLive ? "" : acc("set", "Set", "", setBody())}
         </div>
         <div class="row">
-          <button class="primary" id="go" type="button" ${goOff ? "disabled" : ""}>${goOff ? "Dojo first" : goLabel}</button>
+          <button class="primary" id="go" type="button" ${goOff ? "disabled" : ""}>${goLabel}</button>
         </div>
-        <p class="status" id="stt">${goOff ? "Finish the 10-question dojo to play." : (joinCode ? "Joining room " + joinCode : (state.onScreen && state.room ? "TV owns room " + state.room : ""))}</p>
+        <p class="status" id="stt">${escapeHtml(status)}</p>
       </div>
       ${pad ? "" : `<div class="host" style="--host-h:${state.hostH}vh"><img src="${POSE.idle}" alt="Jeremy" style="height:var(--host-h)"/></div>`}
     </div>
@@ -1419,7 +1554,21 @@ function bindLobby() {
     b.onclick = () => {
       const id = b.dataset.acc;
       state.lobbyOpen = state.lobbyOpen === id ? "" : id;
-      if (id === "dojo" && state.lobbyOpen === "dojo" && needsPlacement(state.profile) && !state.dojo) startDojo();
+      if (id === "dojo" && state.lobbyOpen === "dojo" && !isTvDisplay() && needsPlacement(state.profile) && !state.dojo) startDojo();
+      paint(true);
+    };
+  });
+  document.querySelectorAll("[data-mp]").forEach((b) => {
+    b.onclick = () => {
+      state.mpMode = b.dataset.mp;
+      localStorage.setItem("fa-mp", state.mpMode);
+      state.statusMsg = "";
+      if (state.mpMode === "join") {
+        // Stay host UI until Join as buzzer succeeds — room form shows join fields.
+      } else if (state.mpMode === "cast" && !state.room) {
+        // room created on go
+      }
+      state.lobbyOpen = "room";
       paint(true);
     };
   });
@@ -1427,7 +1576,7 @@ function bindLobby() {
   if (nm) nm.oninput = (e) => {
     state.name = e.target.value;
     localStorage.setItem("fa-name", state.name);
-    if (role !== "pad") saveProfile({ displayName: state.name });
+    saveProfile({ displayName: state.name });
   };
   const em = $("#em");
   if (em) em.oninput = (e) => saveProfile({ email: e.target.value });
@@ -1436,8 +1585,8 @@ function bindLobby() {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
     if (file.size > 400000) {
-      const stt = $("#stt");
-      if (stt) stt.textContent = "Photo is too large — keep it under 400 KB.";
+      state.statusMsg = "Photo is too large — keep it under 400 KB.";
+      paint(true);
       return;
     }
     const reader = new FileReader();
@@ -1451,6 +1600,13 @@ function bindLobby() {
     fillSeats();
     paint(true);
   };
+  const botFill = $("#botFill");
+  if (botFill) botFill.onchange = (e) => {
+    state.botFill = Boolean(e.target.checked);
+    localStorage.setItem("fa-bots", state.botFill ? "1" : "0");
+    fillSeats();
+    paint(true);
+  };
   const os = $("#os");
   if (os) os.onchange = async (e) => {
     state.onScreen = e.target.checked;
@@ -1460,8 +1616,15 @@ function bindLobby() {
   };
   const jc = $("#jc");
   if (jc) jc.oninput = (e) => {
-    state.joinInput = e.target.value.toUpperCase();
+    state.joinInput = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
     state.room = state.joinInput;
+  };
+  const copySilk = $("#copySilk");
+  if (copySilk) copySilk.onclick = async () => {
+    const url = ($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room);
+    const ok = await copyText(url);
+    state.statusMsg = ok ? "Silk link copied." : ("Copy failed — select the link: " + url);
+    paint(true);
   };
   const dojoGo = $("#dojoGo");
   if (dojoGo) dojoGo.onclick = () => startDojo();
@@ -1473,41 +1636,133 @@ function bindLobby() {
   bindSliders();
   bindRules();
   const go = $("#go");
-  if (go) go.onclick = async () => {
-    if (role === "pad") {
-      state.room = (state.room || state.joinInput || joinCode || code()).toUpperCase();
-      state.onScreen = true;
-      state.youId = "p-" + (state.name || "pad").toLowerCase().replace(/\s+/g, "");
-      await rooms("POST", { action: "join", code: state.room, name: state.name, id: state.youId });
-      startPoll();
-      const live = await rooms("GET");
-      if (live?.state?.phase && live.state.phase !== "lobby") {
-        const keep = state.name;
-        const keepId = state.youId;
-        Object.assign(state, live.state);
-        state.name = keep;
-        state.youId = keepId;
-        state.readyIds = { ...(live.state.readyIds || {}) };
-        if (live.guests) ingestGuests(live.guests);
+  if (go) go.onclick = () => void onLobbyGo();
+  bindQrChip();
+}
+
+async function joinAsBuzzer() {
+  const code = String(state.room || state.joinInput || joinCode || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+  if (!code || code.length < 3) {
+    state.statusMsg = "Enter the TV room code to Join as buzzer.";
+    state.lobbyOpen = "room";
+    state.mpMode = "join";
+    paint(true);
+    return false;
+  }
+  if (!hasPhoneProfile()) {
+    state.statusMsg = "Set your phone profile name before joining.";
+    state.lobbyOpen = "profile";
+    paint(true);
+    return false;
+  }
+  if (!isPlaced()) {
+    state.statusMsg = "Finish Dojo placement on this phone before scored multiplayer.";
+    state.lobbyOpen = "dojo";
+    if (!state.dojo || !state.dojo.q) startDojo();
+    else paint(true);
+    return false;
+  }
+  saveProfile({ displayName: state.name });
+  role = "pad";
+  state.mpMode = "join";
+  localStorage.setItem("fa-mp", "join");
+  state.room = code;
+  state.joinInput = code;
+  state.onScreen = true;
+  state.youId = "p-" + (state.profile?.id || state.name || "pad").toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16);
+  if (!state.youId || state.youId === "p-") state.youId = "p-" + uid().slice(0, 8);
+  const joined = await rooms("POST", { action: "join", code: state.room, name: state.name, id: state.youId });
+  if (!joined || joined.error) {
+    state.statusMsg = "Could not reach room " + code + " — check the TV is On Screen and try again.";
+    paint(true);
+    return false;
+  }
+  startPoll();
+  const live = await rooms("GET");
+  if (live?.guests) ingestGuests(live.guests);
+  if (live?.state?.phase && live.state.phase !== "lobby") {
+    const keep = state.name;
+    const keepId = state.youId;
+    Object.assign(state, live.state);
+    state.name = keep;
+    state.youId = keepId;
+    state.readyIds = { ...(live.state.readyIds || {}) };
+    if (live.guests) ingestGuests(live.guests);
+  } else {
+    // TV still in lobby — stay as pad waiting; prefer ready UI once TV opens room.
+    state.phase = "lobby";
+  }
+  state.statusMsg = "Joined room " + code + " as buzzer. Waiting for the TV…";
+  // Persist pad role in URL so refresh keeps pad mode.
+  try {
+    const u = new URL(location.href);
+    u.searchParams.set("role", "pad");
+    u.searchParams.set("room", code);
+    history.replaceState(null, "", u.pathname + u.search);
+  } catch { /* ignore */ }
+  paint(true);
+  return true;
+}
+
+async function onLobbyGo() {
+  const mode = isPad() ? "join" : (state.mpMode || "host");
+  state.statusMsg = "";
+
+  if (isPad() || mode === "join") {
+    await joinAsBuzzer();
+    return;
+  }
+
+  if (mode === "cast") {
+    if (!isTvDisplay()) {
+      const gate = lobbyGateReason();
+      // Host phone generating a link for Silk still needs profile/placement for their seat.
+      if (gate) {
+        state.statusMsg = gate;
+        state.lobbyOpen = !hasPhoneProfile() ? "profile" : "dojo";
+        if (!hasPhoneProfile()) { paint(true); return; }
+        if (!isPlaced()) {
+          if (!state.dojo || !state.dojo.q) startDojo();
+          else paint(true);
+          return;
+        }
       }
-      paint(true);
-      return;
-    }
-    if (!isPlaced()) {
-      state.lobbyOpen = "dojo";
-      if (!state.dojo || !state.dojo.q) startDojo();
-      else paint(true);
-      return;
     }
     saveProfile({ displayName: state.name });
-    if (state.onScreen) {
-      await openRoom();
-      enterReady();
-      return;
+    state.onScreen = true;
+    localStorage.setItem("fa-onscreen", "1");
+    await openRoom();
+    const url = tvSilkUrl(state.room);
+    const ok = await copyText(url);
+    state.statusMsg = ok
+      ? ("TV room " + state.room + " ready — Silk link copied.")
+      : ("TV room " + state.room + " — copy: " + url);
+    state.lobbyOpen = "room";
+    paint(true);
+    return;
+  }
+
+  // Host play / Open TV room
+  if (!isTvDisplay()) {
+    const gate = lobbyGateReason();
+    if (gate) {
+      state.statusMsg = gate;
+      state.lobbyOpen = !hasPhoneProfile() ? "profile" : "dojo";
+      if (!hasPhoneProfile()) { paint(true); return; }
+      if (!isPlaced()) {
+        if (!state.dojo || !state.dojo.q) startDojo();
+        else paint(true);
+        return;
+      }
     }
-    startGame();
-  };
-  bindQrChip();
+  }
+  saveProfile({ displayName: state.name });
+  if (state.onScreen || isTvDisplay()) {
+    await openRoom();
+    enterReady();
+    return;
+  }
+  startGame();
 }
 
 function bindSliders() {
@@ -1743,7 +1998,7 @@ function paint(force = false) {
     state.lobbyOpen, state.playerCount, (state.guests || []).length,
     state.dojo?.answers?.length, state.dojo?.picked, state.dojo?.showAnswers, state.dojo?.readLeft,
     state.profile?.abilityTier, state.profile?.belt,
-    state.dirOpen, state.qrOpen, Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
+    state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
   ].join("|");
   if (!force && key === lastKey && frame === "play") {
     const clock = $("#clock");
@@ -1774,10 +2029,18 @@ if (isDirections) {
 } else {
   const bank = await fetch("./questions.json").then((r) => r.json());
   state.questions = bank;
+  try {
+    const place = await fetch("./banks/placement/generational-first-pass.json").then((r) => r.ok ? r.json() : null);
+    state.placementQs = Array.isArray(place?.questions) ? place.questions : [];
+  } catch {
+    state.placementQs = [];
+  }
   state.profile = loadProfile();
   if (state.profile?.displayName) state.name = state.profile.displayName;
+  state.botFill = localStorage.getItem("fa-bots") !== "0";
   fillSeats();
-  if (needsPlacement(state.profile) && role !== "pad") {
+  const tv = isTvDisplay() || forcedDisplay;
+  if (needsPlacement(state.profile) && role !== "pad" && !tv) {
     state.lobbyOpen = "dojo";
     ensureDojo();
   } else {
@@ -1785,6 +2048,7 @@ if (isDirections) {
   }
   if (role === "pad") {
     state.onScreen = true;
+    state.mpMode = "join";
     state.lobbyOpen = "room";
     if (joinCode) state.room = joinCode;
     startPoll();
@@ -1792,6 +2056,7 @@ if (isDirections) {
     if (forcedDisplay) {
       localStorage.setItem("fa-onscreen", "1");
       state.lobbyOpen = "room";
+      state.mpMode = "host";
     }
     void openRoom();
   }

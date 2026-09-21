@@ -4,6 +4,7 @@ import {
   loadMonthIndex,
   loadArchivedWeek,
 } from "../../lib/archive-store.js";
+import { listPlacementPages, loadPlacementPack } from "../../lib/placement-store.js";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") return json(res, 405, { error: "method" });
@@ -14,7 +15,27 @@ export default async function handler(req, res) {
   const week = url.searchParams.get("week");
 
   if (!month) {
-    return json(res, 200, { months: listArchiveMonths() });
+    return json(res, 200, {
+      months: listArchiveMonths(),
+      placementPages: listPlacementPages(),
+    });
+  }
+
+  if (month === "placement") {
+    const pack = loadPlacementPack();
+    const page = url.searchParams.get("page") || pack.id || "placement";
+    const studioCounts = {};
+    for (const q of pack.questions || []) {
+      studioCounts[q.tier] = (studioCounts[q.tier] || 0) + 1;
+    }
+    return json(res, 200, {
+      kind: "placement",
+      monthKey: "placement",
+      pageKey: page,
+      pack,
+      studioCounts,
+      pages: listPlacementPages(),
+    });
   }
 
   if (!/^\d{4}-\d{2}$/.test(month)) {

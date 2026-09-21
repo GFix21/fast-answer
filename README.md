@@ -78,3 +78,12 @@ Import the repo in Vercel. The in-memory room map keeps a TV and nearby phones i
 | `sounds/` | Buzz / correct / miss |
 
 PG-13. Flow on GMGbrand stays password-gated and is not part of this game.
+
+## Multiplayer (lobby Room)
+
+- **Host** — set seat count (2–12), optionally fill empty seats with celebrity bots, Play locally or On Screen.
+- **Join TV / Join as buzzer** — enter the TV room code on a phone (profile + Dojo placement required). Pad joins via `/api/rooms`.
+- **Cast TV** — creates a room and a copyable Silk link: `/?tv=1&room=CODE` for Fire Stick. Phones Join TV with the same code.
+- Dojo placement is **phone-only** (hidden on TV / `?tv=1`).
+- Flow **Archives** includes a **Placement** page (Q-and-A bank) for reject / regenerate alongside monthly weeks.
+

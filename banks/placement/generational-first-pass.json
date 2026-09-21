@@ -1,0 +1,568 @@
+{
+  "id": "placement-gen-first-pass-2026",
+  "title": "Generational placement — first pass (Silent / Boomer / Gen X / Y / Z / Alpha + multi-gen)",
+  "generations": [
+    "silent-generation",
+    "baby-boomer",
+    "gen-x",
+    "gen-y",
+    "gen-z",
+    "gen-alpha",
+    "multi-gen"
+  ],
+  "scoringSummary": "Adaptive 10Q dojo: start at hard; correct → difficult; miss → easy. Score correct/10 → Bronze (<0.5), Silver (0.5–0.79), Gold (≥0.8). Starting match band: bronze→easy, silver→hard, gold→difficult. Prefer unseen placement ids. Generational tags guide fairness — multi-gen items are anchors.",
+  "questions": [
+    {
+      "id": "place-mg-e-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Map",
+      "prompt": "What is the capital of Canada?",
+      "choices": [
+        "Ottawa",
+        "Toronto",
+        "Montreal",
+        "Vancouver"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Multi-gen anchor — should nearly always hit; misses signal low band.",
+      "sources": [
+        {
+          "label": "Wikipedia — Ottawa"
+        },
+        {
+          "label": "Government of Canada"
+        }
+      ]
+    },
+    {
+      "id": "place-mg-h-enterprise",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Sci-Fi",
+      "prompt": "What is the name of the starship commanded by Captain Kirk in the original Star Trek series?",
+      "choices": [
+        "Enterprise",
+        "Falcon",
+        "Serenity",
+        "Galactica"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Mid discriminator across ages; famous franchise, not meme-dependent.",
+      "sources": [
+        {
+          "label": "Wikipedia — USS Enterprise (NCC-1701)"
+        },
+        {
+          "label": "Star Trek: The Original Series"
+        }
+      ]
+    },
+    {
+      "id": "place-mg-d-stravinsky",
+      "tier": "difficult",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Deep Cut",
+      "prompt": "Who composed The Rite of Spring?",
+      "choices": [
+        "Igor Stravinsky",
+        "Pyotr Tchaikovsky",
+        "Ludwig van Beethoven",
+        "John Williams"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Top-band probe — rewards generalist culture, not age slang.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Rite of Spring"
+        },
+        {
+          "label": "Ballet / programme histories"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-e-fdr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Who was US President for most of World War II?",
+      "choices": [
+        "Franklin D. Roosevelt",
+        "Harry S. Truman",
+        "Dwight D. Eisenhower",
+        "Herbert Hoover"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Silent Gen easy — textbook mid-century civics; fair via schooling.",
+      "sources": [
+        {
+          "label": "Wikipedia — Franklin D. Roosevelt"
+        },
+        {
+          "label": "US National Archives / WWII chronology"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-e-ike",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "The 1950s campaign slogan “I Like Ike” promoted which future US President?",
+      "choices": [
+        "Dwight D. Eisenhower",
+        "John F. Kennedy",
+        "Lyndon B. Johnson",
+        "Richard Nixon"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Silent Gen easy — widely taught Cold War-era slogan.",
+      "sources": [
+        {
+          "label": "Wikipedia — Dwight D. Eisenhower"
+        },
+        {
+          "label": "Smithsonian / campaign history primers"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-h-transistor",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "In which year was the first commercial transistor radio (Regency TR-1) introduced?",
+      "choices": [
+        "1954",
+        "1945",
+        "1962",
+        "1971"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Silent Gen hard — verifiable mid-century tech chronology.",
+      "sources": [
+        {
+          "label": "Wikipedia — Regency TR-1"
+        },
+        {
+          "label": "IEEE Spectrum / Computer History Museum notes"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-h-kerouac",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Who wrote the Beat Generation novel On the Road?",
+      "choices": [
+        "Jack Kerouac",
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald",
+        "J. D. Salinger"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Silent Gen hard — canonical mid-century literature, unambiguous.",
+      "sources": [
+        {
+          "label": "Wikipedia — On the Road"
+        },
+        {
+          "label": "Library of Congress / Beat Generation primers"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-e-armstrong",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Who was the first person to walk on the Moon?",
+      "choices": [
+        "Neil Armstrong",
+        "Buzz Aldrin",
+        "Yuri Gagarin",
+        "John Glenn"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Boomer easy — Apollo-era cultural universal.",
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 mission pages"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-e-apollo11",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In which year did Apollo 11 land the first humans on the Moon?",
+      "choices": [
+        "1969",
+        "1957",
+        "1975",
+        "1963"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Boomer easy — year-level Moon-landing fact, textbook-known.",
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 11"
+        },
+        {
+          "label": "NASA Apollo program chronology"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-h-woodstock",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In which year did the original Woodstock music festival take place?",
+      "choices": [
+        "1969",
+        "1967",
+        "1972",
+        "1964"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Boomer hard — iconic year discriminator; still verifiable.",
+      "sources": [
+        {
+          "label": "Wikipedia — Woodstock"
+        },
+        {
+          "label": "Contemporary festival / NY history coverage"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-h-sullivan",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In which year did The Beatles first appear on The Ed Sullivan Show in the US?",
+      "choices": [
+        "1964",
+        "1960",
+        "1969",
+        "1970"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Boomer hard — British Invasion landmark year.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Ed Sullivan Show"
+        },
+        {
+          "label": "Beatles / CBS broadcast histories — Feb 1964"
+        }
+      ]
+    },
+    {
+      "id": "place-x-h-mtv",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Gen X",
+      "prompt": "Which US cable channel launched in 1981 with a focus on music videos?",
+      "choices": [
+        "MTV",
+        "CNN",
+        "Nickelodeon",
+        "ESPN"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen X-leaning mid item; still fair to others via cultural osmosis.",
+      "sources": [
+        {
+          "label": "Wikipedia — MTV"
+        },
+        {
+          "label": "Contemporary launch coverage — 1981"
+        }
+      ]
+    },
+    {
+      "id": "place-x-e-back-future",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · 80s Screen",
+      "prompt": "In Back to the Future, what kind of vehicle is the time machine?",
+      "choices": [
+        "A DeLorean car",
+        "A phone booth",
+        "A steam train",
+        "A helicopter"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy Gen X flavour — still widely known.",
+      "sources": [
+        {
+          "label": "Wikipedia — Back to the Future"
+        },
+        {
+          "label": "Film itself (1985)"
+        }
+      ]
+    },
+    {
+      "id": "place-y-h-matrix",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Gen Y",
+      "prompt": "In The Matrix (1999), which pill does Neo take to see the truth?",
+      "choices": [
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Millennial mid probe — iconic, unambiguous.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Matrix"
+        },
+        {
+          "label": "The Matrix (1999) film"
+        }
+      ]
+    },
+    {
+      "id": "place-y-d-ipod",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Early iPod",
+      "prompt": "In which year did Apple introduce the original iPod?",
+      "choices": [
+        "2001",
+        "1998",
+        "2004",
+        "2007"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Harder Millennial tech chronology.",
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple press archive — 2001"
+        }
+      ]
+    },
+    {
+      "id": "place-z-h-fortnite",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Gen Z",
+      "prompt": "Fortnite is primarily known as which type of game?",
+      "choices": [
+        "A battle royale / online multiplayer game",
+        "A tax preparation tool",
+        "A chess engine",
+        "A flight simulator from the 1980s"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen Z mid — still readable for others; avoid slang traps.",
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games product pages"
+        }
+      ]
+    },
+    {
+      "id": "place-z-e-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Streams",
+      "prompt": "Which of these is a major music streaming service?",
+      "choices": [
+        "Spotify",
+        "Blockbuster",
+        "Napster CD shop",
+        "Betamax Radio"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy modern music-culture check.",
+      "sources": [
+        {
+          "label": "Wikipedia — Spotify"
+        },
+        {
+          "label": "Company / press materials"
+        }
+      ]
+    },
+    {
+      "id": "place-a-e-tablet",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Gen Alpha",
+      "prompt": "Which device is designed mainly for touch-screen apps and video, not physical keyboards?",
+      "choices": [
+        "Tablet",
+        "Fax machine",
+        "Turntable",
+        "CRT television remote only"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Age-fair easy item — object recognition, not meme fluency.",
+      "sources": [
+        {
+          "label": "Wikipedia — Tablet computer"
+        },
+        {
+          "label": "Consumer electronics definitions"
+        }
+      ]
+    },
+    {
+      "id": "place-a-h-youtube",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Creators",
+      "prompt": "YouTube is primarily a platform for what?",
+      "choices": [
+        "User-uploaded and streamed video",
+        "Overnight postal shipping",
+        "Satellite weather balloons only",
+        "Vinyl pressing"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen Alpha-relevant mid; still universal.",
+      "sources": [
+        {
+          "label": "Wikipedia — YouTube"
+        },
+        {
+          "label": "Google / YouTube about pages"
+        }
+      ]
+    },
+    {
+      "id": "place-gt-h-hammond",
+      "tier": "hard",
+      "topic": "grand-tour-top-gear",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Petrol",
+      "prompt": "Which Top Gear / Grand Tour presenter is nicknamed the Hamster?",
+      "choices": [
+        "Richard Hammond",
+        "James May",
+        "Jeremy Clarkson",
+        "The Stig"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Product-core topic mid item.",
+      "sources": [
+        {
+          "label": "Wikipedia — Richard Hammond"
+        },
+        {
+          "label": "BBC Top Gear materials"
+        }
+      ]
+    },
+    {
+      "id": "place-cars-e-abs",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Garage",
+      "prompt": "What does ABS stand for in car safety systems?",
+      "choices": [
+        "Anti-lock Braking System",
+        "Automatic Boost System",
+        "Axle Balance Sensor",
+        "Advanced Battery Switch"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy motoring literacy.",
+      "sources": [
+        {
+          "label": "Wikipedia — Anti-lock braking system"
+        },
+        {
+          "label": "NHTSA glossaries"
+        }
+      ]
+    },
+    {
+      "id": "place-gigi-e-flagship",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Gigi",
+      "prompt": "DJ Gigi is the flagship artist of which Montréal label?",
+      "choices": [
+        "GMG Brand Label",
+        "Motown",
+        "XL Recordings",
+        "Island Records"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Brand easy-only — never escalate Gigi tier in placement.",
+      "sources": [
+        {
+          "label": "GMG Brand Label roster"
+        },
+        {
+          "label": "DJ Gigi public bio"
+        }
+      ]
+    },
+    {
+      "id": "place-art-d-braque",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Cubism",
+      "prompt": "Picasso co-founded Cubism with which artist?",
+      "choices": [
+        "Georges Braque",
+        "Andy Warhol",
+        "Jackson Pollock",
+        "Frida Kahlo"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Difficult culture probe — ability gold signal.",
+      "sources": [
+        {
+          "label": "Wikipedia — Cubism"
+        },
+        {
+          "label": "MoMA / Tate primers"
+        }
+      ]
+    }
+  ]
+}

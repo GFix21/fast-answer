@@ -360,3 +360,17 @@ img.brand{
 .buzzer.ready-on{filter:grayscale(.2);opacity:.85}
 .ready-seats{margin-top:10px}
 .pad .qr-chip{display:none}
+
+/* Multiplayer mode chips + Silk copy row */
+.mp-modes{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.mp-mode{
+  border:1px solid var(--line);background:color-mix(in oklab, var(--elev) 80%, transparent);
+  color:var(--mut);border-radius:999px;padding:8px 12px;font-size:12px;font-weight:600;min-height:36px;
+}
+.mp-mode.on{color:var(--fg);border-color:color-mix(in oklab, var(--fg) 35%, transparent);background:color-mix(in oklab, var(--accent) 22%, transparent)}
+.copy-row{display:flex;gap:6px;align-items:center;margin:4px 0 8px}
+.copy-row input{
+  flex:1;min-width:0;font-size:11px;padding:8px 10px;border-radius:var(--radius-md);
+  border:1px solid var(--line);background:color-mix(in oklab, var(--elev) 90%, transparent);color:var(--fg);
+}
+.copy-row .ghost{flex-shrink:0;min-height:40px;padding:8px 12px}
