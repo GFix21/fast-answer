@@ -44,12 +44,12 @@
       "categoryTitle": "Dojo · Sci-Fi",
       "prompt": "Comment s’appelle le vaisseau commandé par le capitaine Kirk dans la série originale Star Trek ?",
       "choices": [
-        "Enterprise",
         "Falcon",
+        "Enterprise",
         "Serenity",
         "Galactica"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Discriminateur moyen selon les âges ; franchise célèbre, pas dépendante des mèmes.",
       "sources": [
         {
@@ -68,12 +68,12 @@
       "categoryTitle": "Dojo · Deep Cut",
       "prompt": "Qui a composé Le Sacre du printemps ?",
       "choices": [
-        "Igor Stravinsky",
         "Piotr Tchaïkovski",
+        "Igor Stravinsky",
         "Ludwig van Beethoven",
         "John Williams"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Sonde de bande haute — récompense la culture généraliste, pas l’argot générationnel.",
       "sources": [
         {
@@ -92,12 +92,12 @@
       "categoryTitle": "Dojo · Silent Gen",
       "prompt": "Qui était président des États-Unis pendant la plus grande partie de la Seconde Guerre mondiale ?",
       "choices": [
-        "Franklin D. Roosevelt",
         "Harry S. Truman",
+        "Franklin D. Roosevelt",
         "Dwight D. Eisenhower",
         "Herbert Hoover"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Silent Gen facile — civisme milieu de siècle de manuel ; juste via la scolarité.",
       "sources": [
         {
@@ -116,12 +116,12 @@
       "categoryTitle": "Dojo · Silent Gen",
       "prompt": "Le slogan de campagne des années 1950 « I Like Ike » promouvait quel futur président américain ?",
       "choices": [
-        "Dwight D. Eisenhower",
+        "Richard Nixon",
         "John F. Kennedy",
         "Lyndon B. Johnson",
-        "Richard Nixon"
+        "Dwight D. Eisenhower"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Silent Gen facile — slogan de Guerre froide largement enseigné.",
       "sources": [
         {
@@ -140,12 +140,12 @@
       "categoryTitle": "Dojo · Silent Gen",
       "prompt": "En quelle année le premier radio à transistors commercial (Regency TR-1) a-t-il été introduit ?",
       "choices": [
-        "1954",
+        "1971",
         "1945",
         "1962",
-        "1971"
+        "1954"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Silent Gen difficile — chronologie tech milieu de siècle vérifiable.",
       "sources": [
         {
@@ -164,12 +164,12 @@
       "categoryTitle": "Dojo · Silent Gen",
       "prompt": "Qui a écrit le roman de la Beat Generation On the Road ?",
       "choices": [
-        "Jack Kerouac",
         "Ernest Hemingway",
+        "Jack Kerouac",
         "F. Scott Fitzgerald",
         "J. D. Salinger"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Silent Gen difficile — littérature canonique milieu de siècle, sans ambiguïté.",
       "sources": [
         {
@@ -188,12 +188,12 @@
       "categoryTitle": "Dojo · Boomer",
       "prompt": "Qui a été la première personne à marcher sur la Lune ?",
       "choices": [
-        "Neil Armstrong",
-        "Buzz Aldrin",
         "Youri Gagarine",
+        "Buzz Aldrin",
+        "Neil Armstrong",
         "John Glenn"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Boomer facile — universel culturel de l’ère Apollo.",
       "sources": [
         {
@@ -212,12 +212,12 @@
       "categoryTitle": "Dojo · Boomer",
       "prompt": "En quelle année Apollo 11 a-t-il fait atterrir les premiers humains sur la Lune ?",
       "choices": [
-        "1969",
-        "1957",
         "1975",
+        "1957",
+        "1969",
         "1963"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Boomer facile — fait d’année sur l’alunissage, connu des manuels.",
       "sources": [
         {
@@ -236,12 +236,12 @@
       "categoryTitle": "Dojo · Boomer",
       "prompt": "En quelle année s’est tenu le festival de musique original de Woodstock ?",
       "choices": [
-        "1969",
+        "1964",
         "1967",
         "1972",
-        "1964"
+        "1969"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Boomer difficile — discriminateur d’année iconique ; toujours vérifiable.",
       "sources": [
         {
@@ -260,12 +260,12 @@
       "categoryTitle": "Dojo · Boomer",
       "prompt": "En quelle année les Beatles sont-ils apparus pour la première fois dans The Ed Sullivan Show aux États-Unis ?",
       "choices": [
-        "1964",
-        "1960",
         "1969",
+        "1960",
+        "1964",
         "1970"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Boomer difficile — année repère de la British Invasion.",
       "sources": [
         {
@@ -284,12 +284,12 @@
       "categoryTitle": "Dojo · Gen X",
       "prompt": "Quelle chaîne câblée américaine a été lancée en 1981 avec un focus sur les clips musicaux ?",
       "choices": [
-        "MTV",
-        "CNN",
         "Nickelodeon",
+        "CNN",
+        "MTV",
         "ESPN"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Item médian orienté Gen X ; juste pour les autres via osmose culturelle.",
       "sources": [
         {
@@ -308,12 +308,12 @@
       "categoryTitle": "Dojo · Écran 80s",
       "prompt": "Dans Retour vers le futur, quel type de véhicule est la machine à remonter le temps ?",
       "choices": [
-        "Une DeLorean",
+        "Un hélicoptère",
         "Une cabine téléphonique",
         "Un train à vapeur",
-        "Un hélicoptère"
+        "Une DeLorean"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Facile avec saveur Gen X — encore très connu.",
       "sources": [
         {
@@ -356,12 +356,12 @@
       "categoryTitle": "Dojo · Early iPod",
       "prompt": "En quelle année Apple a-t-il présenté l’iPod original ?",
       "choices": [
-        "2001",
         "1998",
+        "2001",
         "2004",
         "2007"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Chronologie tech milléniale plus difficile.",
       "sources": [
         {
@@ -404,12 +404,12 @@
       "categoryTitle": "Dojo · Streams",
       "prompt": "Lequel de ceux-ci est un grand service de streaming musical ?",
       "choices": [
-        "Spotify",
         "Blockbuster",
+        "Spotify",
         "Boutique CD Napster",
         "Betamax Radio"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Contrôle facile de la culture musicale moderne.",
       "sources": [
         {
@@ -428,12 +428,12 @@
       "categoryTitle": "Dojo · Gen Alpha",
       "prompt": "Quel appareil est conçu surtout pour les applis et la vidéo sur écran tactile, pas pour un clavier physique ?",
       "choices": [
-        "Tablette",
-        "Télécopieur",
         "Tourne-disque",
+        "Télécopieur",
+        "Tablette",
         "Uniquement une télécommande de téléviseur CRT"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Item facile équitable selon l’âge — reconnaissance d’objet, pas fluence mème.",
       "sources": [
         {
@@ -476,12 +476,12 @@
       "categoryTitle": "Dojo · Essence",
       "prompt": "Quel présentateur de Top Gear / The Grand Tour est surnommé le Hamster ?",
       "choices": [
-        "Richard Hammond",
-        "James May",
         "Jeremy Clarkson",
+        "James May",
+        "Richard Hammond",
         "The Stig"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Item médian du sujet cœur produit.",
       "sources": [
         {
@@ -524,12 +524,12 @@
       "categoryTitle": "Dojo · Gigi",
       "prompt": "DJ Gigi est l’artiste phare de quel label montréalais ?",
       "choices": [
-        "GMG Brand Label",
+        "Island Records",
         "Motown",
         "XL Recordings",
-        "Island Records"
+        "GMG Brand Label"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Marque easy-only — ne jamais monter le tier Gigi en placement.",
       "sources": [
         {

@@ -44,12 +44,12 @@
       "categoryTitle": "Dojo · Sci-Fi",
       "prompt": "Wie heißt das Raumschiff unter Captain Kirk in der Originalserie Star Trek?",
       "choices": [
-        "Enterprise",
         "Falcon",
+        "Enterprise",
         "Serenity",
         "Galactica"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Mittlerer Diskriminator über Altersgruppen; bekannte Franchise, nicht meme-abhängig.",
       "sources": [
         {
@@ -68,12 +68,12 @@
       "categoryTitle": "Dojo · Deep Cut",
       "prompt": "Wer komponierte Le Sacre du printemps (The Rite of Spring)?",
       "choices": [
-        "Igor Strawinsky",
         "Pjotr Tschaikowski",
+        "Igor Strawinsky",
         "Ludwig van Beethoven",
         "John Williams"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Top-Band-Sonde — belohnt allgemeine Kulturkenntnis, nicht Altersslang.",
       "sources": [
         {
@@ -92,12 +92,12 @@
       "categoryTitle": "Dojo · Silent Gen",
       "prompt": "Wer war während des größten Teils des Zweiten Weltkriegs US-Präsident?",
       "choices": [
-        "Franklin D. Roosevelt",
         "Harry S. Truman",
+        "Franklin D. Roosevelt",
         "Dwight D. Eisenhower",
         "Herbert Hoover"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Silent Gen leicht — Lehrbuch-Civics der Jahrhundertmitte; über Schule fair.",
       "sources": [
         {
@@ -116,12 +116,12 @@
       "categoryTitle": "Dojo · Silent Gen",
       "prompt": "Welchen späteren US-Präsidenten bewarb der Wahlkampfslogan der 1950er „I Like Ike“?",
       "choices": [
-        "Dwight D. Eisenhower",
+        "Richard Nixon",
         "John F. Kennedy",
         "Lyndon B. Johnson",
-        "Richard Nixon"
+        "Dwight D. Eisenhower"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Silent Gen leicht — weithin gelehrter Slogan der Kalter-Krieg-Ära.",
       "sources": [
         {
@@ -140,12 +140,12 @@
       "categoryTitle": "Dojo · Silent Gen",
       "prompt": "In welchem Jahr kam das erste kommerzielle Transistorradio (Regency TR-1) auf den Markt?",
       "choices": [
-        "1954",
+        "1971",
         "1945",
         "1962",
-        "1971"
+        "1954"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Silent Gen schwer — überprüfbare Tech-Chronologie der Jahrhundertmitte.",
       "sources": [
         {
@@ -164,12 +164,12 @@
       "categoryTitle": "Dojo · Silent Gen",
       "prompt": "Wer schrieb den Beat-Generation-Roman On the Road?",
       "choices": [
-        "Jack Kerouac",
         "Ernest Hemingway",
+        "Jack Kerouac",
         "F. Scott Fitzgerald",
         "J. D. Salinger"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Silent Gen schwer — kanonische Literatur der Jahrhundertmitte, eindeutig.",
       "sources": [
         {
@@ -188,12 +188,12 @@
       "categoryTitle": "Dojo · Boomer",
       "prompt": "Wer war der erste Mensch auf dem Mond?",
       "choices": [
-        "Neil Armstrong",
-        "Buzz Aldrin",
         "Juri Gagarin",
+        "Buzz Aldrin",
+        "Neil Armstrong",
         "John Glenn"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Boomer leicht — kulturelles Universale der Apollo-Ära.",
       "sources": [
         {
@@ -212,12 +212,12 @@
       "categoryTitle": "Dojo · Boomer",
       "prompt": "In welchem Jahr landete Apollo 11 die ersten Menschen auf dem Mond?",
       "choices": [
-        "1969",
-        "1957",
         "1975",
+        "1957",
+        "1969",
         "1963"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Boomer leicht — Jahresfakt zur Mondlandung, lehrbuchbekannt.",
       "sources": [
         {
@@ -236,12 +236,12 @@
       "categoryTitle": "Dojo · Boomer",
       "prompt": "In welchem Jahr fand das originale Woodstock-Musikfestival statt?",
       "choices": [
-        "1969",
+        "1964",
         "1967",
         "1972",
-        "1964"
+        "1969"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Boomer schwer — ikonischer Jahres-Diskriminator; weiterhin überprüfbar.",
       "sources": [
         {
@@ -260,12 +260,12 @@
       "categoryTitle": "Dojo · Boomer",
       "prompt": "In welchem Jahr traten The Beatles erstmals in The Ed Sullivan Show in den USA auf?",
       "choices": [
-        "1964",
-        "1960",
         "1969",
+        "1960",
+        "1964",
         "1970"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Boomer schwer — Meilensteinjahr der British Invasion.",
       "sources": [
         {
@@ -284,12 +284,12 @@
       "categoryTitle": "Dojo · Gen X",
       "prompt": "Welcher US-Kabelsender startete 1981 mit Fokus auf Musikvideos?",
       "choices": [
-        "MTV",
-        "CNN",
         "Nickelodeon",
+        "CNN",
+        "MTV",
         "ESPN"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Gen-X-lastiges Mittelitem; für andere über kulturelle Osmose fair.",
       "sources": [
         {
@@ -308,12 +308,12 @@
       "categoryTitle": "Dojo · 80er-Screen",
       "prompt": "Was für ein Fahrzeug ist die Zeitmaschine in Zurück in die Zukunft?",
       "choices": [
-        "Ein DeLorean",
+        "Ein Hubschrauber",
         "Eine Telefonzelle",
         "Ein Dampfzug",
-        "Ein Hubschrauber"
+        "Ein DeLorean"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Leicht mit Gen-X-Flavour — weiterhin weithin bekannt.",
       "sources": [
         {
@@ -356,12 +356,12 @@
       "categoryTitle": "Dojo · Early iPod",
       "prompt": "In welchem Jahr stellte Apple den originalen iPod vor?",
       "choices": [
-        "2001",
         "1998",
+        "2001",
         "2004",
         "2007"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Schwierigere Millennial-Tech-Chronologie.",
       "sources": [
         {
@@ -404,12 +404,12 @@
       "categoryTitle": "Dojo · Streams",
       "prompt": "Welcher davon ist ein großer Musik-Streamingdienst?",
       "choices": [
-        "Spotify",
         "Blockbuster",
+        "Spotify",
         "Napster-CD-Shop",
         "Betamax Radio"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "scoringNote": "Leichter Check moderner Musikkultur.",
       "sources": [
         {
@@ -428,12 +428,12 @@
       "categoryTitle": "Dojo · Gen Alpha",
       "prompt": "Welches Gerät ist vor allem für Touchscreen-Apps und Video gedacht, nicht für physische Tastaturen?",
       "choices": [
-        "Tablet",
-        "Faxgerät",
         "Plattenspieler",
+        "Faxgerät",
+        "Tablet",
         "Nur CRT-Fernbedienungen"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Altersfaires leichtes Item — Objekterkennung, keine Mem-Fluency.",
       "sources": [
         {
@@ -476,12 +476,12 @@
       "categoryTitle": "Dojo · Benzin",
       "prompt": "Welcher Top-Gear- / Grand-Tour-Moderator trägt den Spitznamen Hamster?",
       "choices": [
-        "Richard Hammond",
-        "James May",
         "Jeremy Clarkson",
+        "James May",
+        "Richard Hammond",
         "The Stig"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "scoringNote": "Produktkern-Thema Mittelitem.",
       "sources": [
         {
@@ -524,12 +524,12 @@
       "categoryTitle": "Dojo · Gigi",
       "prompt": "DJ Gigi ist der Flaggschiff-Künstler welches Montréaler Labels?",
       "choices": [
-        "GMG Brand Label",
+        "Island Records",
         "Motown",
         "XL Recordings",
-        "Island Records"
+        "GMG Brand Label"
       ],
-      "correctIndex": 0,
+      "correctIndex": 3,
       "scoringNote": "Brand easy-only — Gigi-Tier im Placement nie eskalieren.",
       "sources": [
         {

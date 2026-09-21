@@ -3,7 +3,7 @@
   "weeks": [
     {
       "weekKey": "2026-W39",
-      "publishedAt": "2026-09-21T18:45:50.229Z",
+      "publishedAt": "2026-09-21T18:48:05.346Z",
       "counts": {
         "easy": 40,
         "hard": 40,
@@ -19,5 +19,5 @@
       "questionCount": 96
     }
   ],
-  "updatedAt": "2026-09-21T18:45:50.229Z"
+  "updatedAt": "2026-09-21T18:48:05.346Z"
 }
