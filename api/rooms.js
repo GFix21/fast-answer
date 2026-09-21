@@ -1,39 +1,7 @@
-const g = globalThis;
-if (!g.__faRooms) g.__faRooms = new Map();
-const rooms = g.__faRooms;
-
-const ROOM_TTL_MS = 6 * 60 * 60 * 1000;
-
-function pruneStale() {
-  const now = Date.now();
-  for (const [code, room] of rooms.entries()) {
-    const t = room.updatedAt || room.createdAt || 0;
-    if (t && now - t > ROOM_TTL_MS) rooms.delete(code);
-  }
-}
+import { getRoom, hasRoom, saveRoom, listRooms } from "../lib/room-store.js";
 
 function touch(cur) {
-  cur.updatedAt = Date.now();
-  return cur;
-}
-
-function listRooms() {
-  pruneStale();
-  const out = [];
-  for (const room of rooms.values()) {
-    if (!room || !room.code) continue;
-    const st = room.state || {};
-    out.push({
-      code: room.code,
-      host: room.host || "",
-      guests: (room.guests || []).length,
-      phase: st.phase || "lobby",
-      createdAt: room.createdAt || 0,
-      updatedAt: room.updatedAt || room.createdAt || 0,
-    });
-  }
-  out.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
-  return out;
+  return saveRoom(cur);
 }
 
 export default async function handler(req, res) {
@@ -47,13 +15,12 @@ export default async function handler(req, res) {
   }
 
   if (req.method === "GET") {
-    pruneStale();
     const code = String(req.query.code || "").toUpperCase();
     if (!code || req.query.list === "1") {
       res.status(200).end(JSON.stringify({ rooms: listRooms() }));
       return;
     }
-    const room = rooms.get(code) || null;
+    const room = getRoom(code);
     res.status(200).end(JSON.stringify(room || { error: "missing" }));
     return;
   }
@@ -77,19 +44,19 @@ export default async function handler(req, res) {
   }
 
   if (body.action === "create") {
-    const cur = rooms.get(code) || { code, host: "", state: {}, buzzes: [], guests: [] };
-    rooms.set(code, touch({
+    const cur = getRoom(code) || { code, host: "", state: {}, buzzes: [], guests: [] };
+    touch({
       ...cur,
       host: body.host || cur.host,
       createdAt: cur.createdAt || Date.now(),
       guests: cur.guests || [],
-    }));
-    res.status(200).end(JSON.stringify(rooms.get(code)));
+    });
+    res.status(200).end(JSON.stringify(getRoom(code)));
     return;
   }
 
   // All other actions require an existing room (TV / Cast create first).
-  if (!rooms.has(code)) {
+  if (!hasRoom(code)) {
     res.status(404).end(JSON.stringify({
       error: "missing",
       message: "Room not found. Open the TV or Cast TV link first, then Join as buzzer.",
@@ -97,7 +64,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const cur = rooms.get(code);
+  const cur = getRoom(code);
 
   if (body.action === "join") {
     cur.guests = cur.guests || [];
@@ -113,7 +80,7 @@ export default async function handler(req, res) {
     } else {
       cur.guests.push(guest);
     }
-    rooms.set(code, touch(cur));
+    touch(cur);
   } else if (body.action === "leave") {
     const id = body.id || "";
     cur.guests = (cur.guests || []).filter((g) => g.id !== id && g.name !== body.name);
@@ -123,7 +90,7 @@ export default async function handler(req, res) {
       delete next[id];
       cur.state.readyIds = next;
     }
-    rooms.set(code, touch(cur));
+    touch(cur);
   } else if (body.action === "kick") {
     const id = body.id || "";
     cur.guests = (cur.guests || []).filter((g) => g.id !== id && g.name !== body.name);
@@ -135,17 +102,17 @@ export default async function handler(req, res) {
     }
     cur.state.kickedId = id;
     cur.state.kickedAt = Date.now();
-    rooms.set(code, touch(cur));
+    touch(cur);
   } else if (body.action === "state") {
     cur.state = body.state || {};
-    rooms.set(code, touch(cur));
+    touch(cur);
   } else if (body.action === "buzz") {
     cur.buzzes = cur.buzzes || [];
     cur.buzzes.push({ name: body.name, at: Date.now() });
     if (!cur.state.buzzed) {
       cur.state = { ...cur.state, buzzed: true, buzzBy: body.name, buzzId: body.id || "", phase: "answer" };
     }
-    rooms.set(code, touch(cur));
+    touch(cur);
   } else if (body.action === "answer") {
     // Pad / voice submit — host applies via poll.
     cur.state = cur.state || {};
@@ -156,13 +123,13 @@ export default async function handler(req, res) {
       lockdown: Boolean(body.lockdown),
       name: body.name || "",
     };
-    rooms.set(code, touch(cur));
+    touch(cur);
   } else if (body.action === "map") {
     cur.state = cur.state || {};
     cur.state.maps = { ...(cur.state.maps || {}) };
     if (body.target) cur.state.maps[body.id] = body.target;
     else delete cur.state.maps[body.id];
-    rooms.set(code, touch(cur));
+    touch(cur);
   } else if (body.action === "wager") {
     cur.state = cur.state || {};
     cur.state.lastWager = {
@@ -172,7 +139,7 @@ export default async function handler(req, res) {
       locked: body.locked !== false,
       at: Date.now(),
     };
-    rooms.set(code, touch(cur));
+    touch(cur);
   } else if (body.action === "ready") {
     cur.guests = cur.guests || [];
     const id = body.id || ("p-" + String(body.name || "pad"));
@@ -186,10 +153,10 @@ export default async function handler(req, res) {
     }
     cur.state = cur.state || {};
     cur.state.readyIds = { ...(cur.state.readyIds || {}), [id]: true };
-    rooms.set(code, touch(cur));
+    touch(cur);
   } else {
     res.status(400).end(JSON.stringify({ error: "action" }));
     return;
   }
-  res.status(200).end(JSON.stringify(rooms.get(code)));
+  res.status(200).end(JSON.stringify(getRoom(code)));
 }

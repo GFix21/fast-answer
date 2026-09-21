@@ -2065,15 +2065,20 @@ function roomBody() {
       <label class="field" for="nm">${tt("yourName")}</label>
       <input id="nm" type="text" value="${escapeHtml(state.name)}" maxlength="18" autocomplete="nickname"/>
       <label class="field" for="jc">${tt("tvRoomCode")}</label>
-      <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off" autocapitalize="characters"/>
+      <div class="copy-row join-code-row">
+        <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off" autocapitalize="characters"/>
+        <button class="primary" id="joinRoom" type="button">${tt("joinRoom")}</button>
+      </div>
       <div class="rooms-list">
         <p class="rivals-lab">${tt("activeRooms")}</p>
         ${roomsList.length
           ? roomsList.map((r) =>
-              `<button type="button" class="room-pick" data-join-room="${escapeHtml(r.code)}"><b>${escapeHtml(r.code)}</b> · ${escapeHtml(r.host || "TV")} · ${r.guests || 0} pads · ${escapeHtml(r.phase || "lobby")}</button>`
+              `<div class="room-row">
+                <span class="room-meta"><b>${escapeHtml(r.code)}</b> · ${escapeHtml(r.host || "TV")} · ${r.guests || 0} pads · ${escapeHtml(r.phase || "lobby")}</span>
+                <button type="button" class="primary" data-join-now="${escapeHtml(r.code)}">${tt("joinShort")}</button>
+              </div>`
             ).join("")
           : `<p class="meta">${tt("noActiveRooms")}</p>`}
-        <button type="button" class="ghost" id="refreshRooms">${tt("refreshRooms")}</button>
       </div>
     `;
   }
@@ -2663,20 +2668,24 @@ function bindLobby() {
   if (os) os.onchange = () => { if (os.checked) void bindScreen(true); };
   const osOff = $("#osOff");
   if (osOff) osOff.onchange = () => { if (osOff.checked) void bindScreen(false); };
-  const refreshRooms = $("#refreshRooms");
-  if (refreshRooms) refreshRooms.onclick = async () => {
-    await refreshActiveRooms();
-    paint(true);
+  const joinRoomBtn = $("#joinRoom");
+  if (joinRoomBtn) joinRoomBtn.onclick = () => {
+    const jc = $("#jc");
+    if (jc) {
+      state.joinInput = String(jc.value || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
+      state.room = state.joinInput;
+    }
+    void joinAsBuzzer();
   };
-  document.querySelectorAll("[data-join-room]").forEach((b) => {
+  document.querySelectorAll("[data-join-now]").forEach((b) => {
     b.onclick = () => {
-      const code = String(b.dataset.joinRoom || "").toUpperCase();
+      const code = String(b.dataset.joinNow || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
+      if (!code) return;
       state.joinInput = code;
       state.room = code;
       const jc = $("#jc");
       if (jc) jc.value = code;
-      state.statusMsg = "Selected room " + code;
-      paint(true);
+      void joinAsBuzzer();
     };
   });
   document.querySelectorAll("[data-kick]").forEach((b) => {
@@ -3242,10 +3251,10 @@ if (isDirections) {
     state.mpMode = "join";
     state.lobbyOpen = "room";
     if (joinCode) state.room = joinCode;
-    void refreshActiveRooms();
+    void refreshActiveRooms().then(() => paint(true));
     startPoll();
   } else if (state.mpMode === "join") {
-    void refreshActiveRooms();
+    void refreshActiveRooms().then(() => paint(true));
   } else if (state.onScreen) {
     if (forcedDisplay) {
       localStorage.setItem("fa-onscreen", "1");

@@ -15,7 +15,7 @@ function loadFlowLocale() {
 const state = {
   authed: false,
   configured: true,
-  tab: "overview",
+  tab: "queue",
   week: null,
   topics: null,
   message: "",
@@ -23,6 +23,14 @@ const state = {
   filterTier: "all",
   locale: loadFlowLocale(),
   profiles: null,
+  queue: {
+    placement: null,
+    weekRejections: [],
+    placementRejections: [],
+    rooms: [],
+    error: "",
+    loading: false,
+  },
   archive: {
     months: null,
     placementPages: null,
@@ -41,7 +49,7 @@ const state = {
 
 function withLocale(path) {
   const loc = state.locale || "en";
-  if (!path || path.startsWith("login") || path.startsWith("logout") || path.startsWith("session") || path.startsWith("topics") || path.startsWith("profiles")) {
+  if (!path || path.startsWith("login") || path.startsWith("logout") || path.startsWith("session") || path.startsWith("topics") || path.startsWith("profiles") || path.startsWith("rooms")) {
     return path;
   }
   const join = path.includes("?") ? "&" : "?";
@@ -129,10 +137,16 @@ function render() {
     </div>
     ${state.message ? `<div class="banner ok-banner">${esc(state.message)}</div>` : ""}
     <nav class="tabs">
-      ${["overview","bank","archive","profiles","topic","reject"].map((t) =>
-        `<button data-tab="${t}" class="${state.tab===t?"on":""}">${
-          t==="overview"?"Overview":t==="bank"?"Weekly bank":t==="archive"?"Archives":t==="profiles"?"Profiles":t==="topic"?"Add topic":"Reject / regen"
-        }</button>`
+      ${[
+        ["queue", "Queue"],
+        ["overview", "Overview"],
+        ["bank", "Weekly bank"],
+        ["archive", "Archives"],
+        ["profiles", "Profiles"],
+        ["topic", "Add topic"],
+        ["reject", "Reject / regen"],
+      ].map(([t, label]) =>
+        `<button data-tab="${t}" class="${state.tab===t?"on":""}">${label}</button>`
       ).join("")}
     </nav>
     <div id="panel"></div>
@@ -146,6 +160,10 @@ function render() {
     b.addEventListener("click", () => {
       state.tab = b.dataset.tab;
       state.message = "";
+      if (state.tab === "queue") {
+        loadQueue(true);
+        return;
+      }
       if (state.tab === "archive" && !state.archive.months) {
         loadArchiveMonths(true);
         return;
@@ -159,7 +177,9 @@ function render() {
   );
 
   const panel = document.getElementById("panel");
-  if (state.tab === "overview") {
+  if (state.tab === "queue") {
+    renderQueue(panel);
+  } else if (state.tab === "overview") {
     panel.innerHTML = `
       <div class="card">
         <h2>Publish status</h2>
@@ -196,7 +216,7 @@ function render() {
           <h2>Activated profiles</h2>
           <div class="row">
             <button class="btn" id="refreshProfiles">Refresh</button>
-            <button class="btn primary" id="downloadMail" ${rows.length ? "" : "disabled"}>Download mailing list</button>
+            <button class="btn primary" id="downloadMail">Download mailing list</button>
           </div>
         </div>
         <p class="mut">Players who tap <b>Enter Profile</b> (name, email, password) are activated here. The mailing list is every email on this list.</p>
@@ -291,6 +311,110 @@ function render() {
       </div>`;
     document.getElementById("doReject")?.addEventListener("click", doReject);
   }
+}
+
+function qCard(q, bank) {
+  const status = q.status || "pending";
+  return `
+    <div class="q-item ${esc(status)}">
+      <div class="q-meta">${esc(bank)} · ${esc(q.tier || "")} · ${esc(q.topic || "")} · <b>${esc(status)}</b> · ${esc(q.id)}</div>
+      <div class="q-prompt">${esc(q.categoryTitle || "")}${q.categoryTitle ? " — " : ""}${esc(q.prompt || "")}</div>
+    </div>`;
+}
+
+function renderQueue(panel) {
+  if (state.queue.loading && !state.week && !state.queue.placement) {
+    panel.innerHTML = `<div class="card"><p class="mut">Loading questions, profiles, and rooms…</p></div>`;
+    return;
+  }
+
+  const weekQs = state.week?.pack?.questions || [];
+  const placeQs = state.queue.placement?.pack?.questions || [];
+  const pending = [
+    ...weekQs.filter((q) => (q.status || "pending") === "pending").map((q) => ({ ...q, bank: "Weekly" })),
+    ...placeQs.filter((q) => (q.status || "pending") === "pending").map((q) => ({ ...q, bank: "Placement" })),
+  ];
+  const rejected = [
+    ...weekQs.filter((q) => q.status === "rejected").map((q) => ({ ...q, bank: "Weekly" })),
+    ...placeQs.filter((q) => q.status === "rejected").map((q) => ({ ...q, bank: "Placement" })),
+  ];
+  const regen = [
+    ...(state.queue.weekRejections || []).map((r) => ({ ...r, bank: "Weekly" })),
+    ...(state.queue.placementRejections || []).map((r) => ({ ...r, bank: "Placement" })),
+  ];
+  const profiles = state.profiles || [];
+  const rooms = state.queue.rooms || [];
+  const list = (items, empty) =>
+    items.length
+      ? `<div class="q-list cap">${items.map((q) => qCard(q, q.bank)).join("")}</div>`
+      : `<p class="mut">${empty}</p>`;
+
+  panel.innerHTML = `
+    ${state.queue.error ? `<div class="banner">${esc(state.queue.error)}</div>` : ""}
+    <div class="card">
+      <div class="row spread">
+        <h2>Review queue</h2>
+        <button class="btn" id="refreshQueue">Refresh</button>
+      </div>
+      <p class="mut">Every question still awaiting review, already rejected, or logged for regeneration — weekly bank and Dojo placement, locale <b>${esc((state.locale || "en").toUpperCase())}</b>.</p>
+      <h3 class="queue-sec">Awaiting review <span class="mut">(${pending.length})</span></h3>
+      ${state.week || state.queue.placement
+        ? list(pending, "No questions are waiting for review.")
+        : `<p class="mut">Week and placement banks did not load.</p>`}
+      <h3 class="queue-sec">Rejection <span class="mut">(${rejected.length})</span></h3>
+      ${list(rejected, "No rejected questions.")}
+      <h3 class="queue-sec">Regeneration <span class="mut">(${regen.length})</span></h3>
+      ${regen.length ? `<div class="q-list cap">${regen.map((r) => {
+        const snap = r.snapshot || {};
+        const needs = r.regeneratedQuestionId ? "Replacement drafted" : "Needs regeneration";
+        return `
+          <div class="q-item rejected">
+            <div class="q-meta">${esc(r.bank)} · ${esc(snap.tier || "")} · ${esc(needs)} · ${esc(r.questionId)} · ${(r.reasonCodes || []).map(esc).join(", ")}</div>
+            <div class="q-prompt">${esc(snap.categoryTitle || "")}${snap.categoryTitle ? " — " : ""}${esc(snap.prompt || r.note || "")}</div>
+          </div>`;
+      }).join("")}</div>` : `<p class="mut">No questions are logged for regeneration.</p>`}
+    </div>
+    <div class="card">
+      <div class="row spread">
+        <h2>Profiles</h2>
+        <button class="btn primary" id="downloadMail">Download mailing list</button>
+      </div>
+      <p class="mut">${profiles.length} activated · ${profiles.length} email${profiles.length === 1 ? "" : "s"}. The CSV is every email on this list.</p>
+      ${profiles.length ? `
+        <table class="plist">
+          <thead><tr><th>Name</th><th>Email</th><th>Activated</th><th>Status</th></tr></thead>
+          <tbody>
+            ${profiles.map((p) => `<tr>
+              <td>${esc(p.displayName)}</td>
+              <td>${esc(p.email)}</td>
+              <td>${esc(p.activatedAt ? String(p.activatedAt).replace("T", " ").slice(0, 16) : "")}</td>
+              <td>Active</td>
+            </tr>`).join("")}
+          </tbody>
+        </table>` : `<p class="mut" style="margin-top:12px">No activated profiles yet. They appear when a player taps Enter Profile.</p>`}
+    </div>
+    <div class="card">
+      <div class="row spread">
+        <h2>Open rooms</h2>
+        <button class="btn" id="refreshRooms">Refresh rooms</button>
+      </div>
+      <p class="mut">Shared folder <code>data/rooms</code>. Anyone who can open the game can view and join. Delete removes the room from that folder.</p>
+      ${rooms.length ? rooms.map((r) => `
+        <div class="room-admin">
+          <div>
+            <b>${esc(r.code)}</b>
+            <span class="mut"> · ${esc(r.host || "TV")} · ${r.guests || 0} pads · ${esc(r.phase || "lobby")}</span>
+          </div>
+          <button class="btn danger" type="button" data-delete-room="${esc(r.code)}">Delete</button>
+        </div>`).join("") : `<p class="mut" style="margin-top:12px">No open rooms.</p>`}
+    </div>`;
+
+  document.getElementById("refreshQueue")?.addEventListener("click", () => loadQueue(true));
+  document.getElementById("refreshRooms")?.addEventListener("click", () => loadQueue(true));
+  document.getElementById("downloadMail")?.addEventListener("click", downloadMailingList);
+  panel.querySelectorAll("[data-delete-room]").forEach((b) =>
+    b.addEventListener("click", () => deleteFlowRoom(b.dataset.deleteRoom)),
+  );
 }
 
 function renderArchivePanel(panel) {
@@ -595,7 +719,7 @@ async function doLogin() {
     state.authed = true;
     state.locked = false;
     state.message = "";
-    await Promise.all([loadWeek(false), loadTopics(false)]);
+    await Promise.all([loadQueue(false), loadTopics(false)]);
     armIdle();
     render();
   } catch (e) {
@@ -637,8 +761,11 @@ async function setFlowLocale(next) {
   state.archive.pack = null;
   state.archive.monthKey = null;
   try {
-    await loadWeek(false);
-    if (state.tab === "archive") await loadArchiveMonths(false);
+    if (state.tab === "queue") await loadQueue(false);
+    else {
+      await loadWeek(false);
+      if (state.tab === "archive") await loadArchiveMonths(false);
+    }
   } catch (e) {
     state.message = e.message;
   }
@@ -808,6 +935,51 @@ function armIdle() {
   bump();
 }
 
+async function loadQueue(rerender) {
+  state.queue.loading = true;
+  state.queue.error = "";
+  if (rerender) render();
+  const jobs = await Promise.allSettled([
+    api("week"),
+    api("placement"),
+    api("reject"),
+    api("placement?rejections=1"),
+    api("profiles"),
+    api("rooms"),
+  ]);
+  const [week, placement, weekRej, placeRej, profiles, rooms] = jobs;
+  const errors = [];
+  if (week.status === "fulfilled") state.week = week.value;
+  else errors.push(week.reason?.message || "Could not load the weekly bank");
+  if (placement.status === "fulfilled") state.queue.placement = placement.value;
+  else errors.push(placement.reason?.message || "Could not load placement");
+  state.queue.weekRejections = weekRej.status === "fulfilled" ? (weekRej.value.rejections || []) : [];
+  if (weekRej.status === "rejected") errors.push(weekRej.reason?.message || "Could not load rejections");
+  state.queue.placementRejections = placeRej.status === "fulfilled" ? (placeRej.value.rejections || []) : [];
+  if (placeRej.status === "rejected") errors.push(placeRej.reason?.message || "Could not load placement rejections");
+  if (profiles.status === "fulfilled") state.profiles = profiles.value.profiles || [];
+  else errors.push(profiles.reason?.message || "Could not load profiles");
+  if (rooms.status === "fulfilled") state.queue.rooms = rooms.value.rooms || [];
+  else errors.push(rooms.reason?.message || "Could not load rooms");
+  state.queue.error = errors.filter(Boolean).join(" · ");
+  state.queue.loading = false;
+  if (rerender) render();
+}
+
+async function deleteFlowRoom(code) {
+  try {
+    const data = await api("rooms", {
+      method: "POST",
+      body: JSON.stringify({ action: "delete", code }),
+    });
+    state.queue.rooms = data.rooms || [];
+    state.message = `Deleted room ${code}.`;
+  } catch (e) {
+    state.message = e.message || "Could not delete room";
+  }
+  render();
+}
+
 async function loadProfiles(force) {
   if (!force && state.profiles) {
     render();
@@ -851,7 +1023,7 @@ async function boot() {
     state.configured = s.configured !== false;
     state.authed = Boolean(s.ok);
     if (state.authed) {
-      await Promise.all([loadWeek(false), loadTopics(false)]);
+      await Promise.all([loadQueue(false), loadTopics(false)]);
       armIdle();
     }
   } catch {

@@ -80,4 +80,7 @@ button.arch-row b{font-family:var(--font-display);font-size:16px}
 .plist th,.plist td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 .plist th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:600}
 .plist td:nth-child(3){font-variant-numeric:tabular-nums;color:var(--mut);white-space:nowrap}
+.queue-sec{margin:18px 0 8px;font-size:18px}
+.q-list.cap{max-height:64vh;overflow:auto;padding-right:4px}
+.room-admin{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
 
