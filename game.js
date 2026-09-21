@@ -86,6 +86,10 @@ const joinCode = (params.get("room") || "").toUpperCase();
 const isDirections =
   params.get("page") === "directions" ||
   /(?:^|\/)directions\.html$/i.test(location.pathname);
+const isDojoPage =
+  params.get("page") === "dojo" ||
+  /(?:^|\/)dojo\.html$/i.test(location.pathname) ||
+  /(?:^|\/)dojo\/?$/i.test(location.pathname);
 const ROOM_API = location.pathname.includes("/fast-answer") ? "/api/fa/rooms" : "/api/rooms";
 
 function detectDisplayMode() {
@@ -199,8 +203,7 @@ async function setLocale(next) {
         && !isTvDisplay()
         && isProfileUnlocked()
       ) {
-        state.lobbyOpen = "dojo";
-        ensureDojo();
+        if (isDojoPage) ensureDojo();
       }
     }
   }
@@ -1625,6 +1628,34 @@ function directionsHTML() {
   `;
 }
 
+function dojoPageHTML() {
+  return `
+    <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
+    <div class="veil"></div>
+    <div class="top">
+      <div class="logo">Fast Answer!<small>${tt("dojo")}</small></div>
+      <div class="grow"></div>
+      ${languageSwitcherHtml(state.locale)}
+      <a class="word" href="./index.html">${tt("lobby")}</a>
+    </div>
+    <div class="dojo-page">
+      <div class="dojo-page-scroll">
+        ${dojoBody()}
+        <p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>
+      </div>
+    </div>
+    <div></div>
+    ${footHTML()}
+  `;
+}
+
+function bindDojoPage() {
+  document.querySelectorAll("[data-locale]").forEach((b) => {
+    b.onclick = () => { void setLocale(b.dataset.locale); };
+  });
+  bindDojoSurface();
+}
+
 function bindDirections() {
   document.querySelectorAll("[data-locale]").forEach((b) => {
     b.onclick = () => { void setLocale(b.dataset.locale); };
@@ -1668,7 +1699,6 @@ function finishDojo() {
     placementQuestionIds: [...(state.profile?.placementQuestionIds || []), ...ids].slice(-200),
   });
   state.dojo = { ...d, done: true, q: null, picked: -1, showAnswers: false };
-  state.lobbyOpen = "dojo";
   state.dojoMode = "home";
   state.statusMsg = tt("placementDone", (ABILITY_META[abilityTier] || ABILITY_META.bronze).label);
   paint(true);
@@ -1725,12 +1755,37 @@ function dojoPick(i) {
   setTimeout(() => advanceDojo(ok), 520);
 }
 
+function dojoModeForGate() {
+  if (!hasPhoneProfile()) return "create";
+  if (needsPasswordSetup()) return "setpw";
+  if (!state.profileUnlocked) return "unlock";
+  return "home";
+}
+function openDojoPage(mode) {
+  const next = mode || dojoModeForGate();
+  state.dojoMode = next;
+  try { sessionStorage.setItem("fa-dojo-mode", next); } catch { /* ignore */ }
+  if (!isDojoPage) {
+    location.href = "./dojo.html?mode=" + encodeURIComponent(next);
+    return;
+  }
+  if (next === "home" && state.profileUnlocked && needsPlacement(state.profile) && !(state.dojo && state.dojo.q)) {
+    startDojo();
+    return;
+  }
+  paint(true);
+}
 function startDojo() {
   clearDojoTick();
   const used = new Set(state.profile?.placementQuestionIds || []);
   const q = pickPlacementQuestion("hard", used);
   state.dojo = { q, answers: [], used, picked: -1, tier: "hard", done: false, showAnswers: false, readLeft: READ_S };
-  state.lobbyOpen = "dojo";
+  state.dojoMode = "home";
+  try { sessionStorage.setItem("fa-dojo-mode", "home"); } catch { /* ignore */ }
+  if (!isDojoPage) {
+    location.href = "./dojo.html?mode=home";
+    return;
+  }
   armDojoRead();
 }
 
@@ -2223,30 +2278,17 @@ async function submitEntry() {
 function lobbyHTML() {
   const pad = isPad();
   const tv = isTvDisplay();
-  const p = state.profile || {};
-  const placed = isPlaced();
-  const belt = BELT_META[p.belt || "white"];
-  const ab = p.abilityTier ? ABILITY_META[p.abilityTier] : null;
   const mode = pad ? "join" : (state.mpMode || "host");
   const gate = lobbyGateReason();
   const joining = pad || mode === "join";
   // Phone: keep primary enabled — when gated it is a clear Dojo CTA, not a grey dead button.
   const goGated = Boolean(gate) && !(tv && (mode === "host" || mode === "cast"));
-  const goOff = false;
   const goLabel = goGated
     ? (!hasPhoneProfile() ? tt("profileFirst")
       : needsPasswordSetup() ? tt("passwordFirst")
       : !state.profileUnlocked ? tt("unlockFirst")
       : tt("dojoFirst"))
     : lobbyGoLabel();
-  const d = state.dojo;
-  const dojoLive = Boolean(d && d.q && !d.done);
-  const dojoExtra = dojoLive
-    ? `<small>${d.answers.length}/${PLACE_N}</small>`
-    : (!hasPhoneProfile() ? `<small>${tt("createProfile")}</small>`
-      : needsPasswordSetup() ? `<small>${tt("setPassword")}</small>`
-      : !state.profileUnlocked ? `<small>${tt("locked")}</small>`
-      : (placed ? `<small>${escapeHtml((ab && ab.label) || tt("placed"))}</small>` : `<small>${tt("required")}</small>`));
   const status = state.statusMsg
     || gate
     || (joining && (state.room || joinCode) ? "Joining room " + (state.room || joinCode) : "")
@@ -2259,6 +2301,7 @@ function lobbyHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
+      ${tv ? "" : `<a class="word" href="./dojo.html?mode=${encodeURIComponent(dojoModeForGate())}">${tt("dojo")}</a>`}
       <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
       <a class="word" href="./directions.html">${tt("directions")}</a>
     </div>
@@ -2268,9 +2311,8 @@ function lobbyHTML() {
         <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
         ${lobbySetupBannerHTML()}
         <div class="accord">
-          ${dojoLive && !tv ? "" : acc("room", joining ? tt("joinTv") : (mode === "cast" ? tt("castTv") : tt("room")), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
-          ${tv ? "" : acc("dojo", tt("dojo"), dojoExtra, dojoBody())}
-          ${pad || tv || dojoLive ? "" : acc("set", tt("set"), "", setBody())}
+          ${acc("room", joining ? tt("joinTv") : (mode === "cast" ? tt("castTv") : tt("room")), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
+          ${pad || tv ? "" : acc("set", tt("set"), "", setBody())}
         </div>
         <div class="row">
           <button class="primary ${goGated ? "go-dojo-cta" : ""}" id="go" type="button">${goLabel}</button>
@@ -2422,6 +2464,135 @@ async function openRoom() {
   startPoll();
 }
 
+function bindDojoSurface() {
+  const createProfile = $("#createProfile");
+  if (createProfile) createProfile.onclick = async () => {
+    const name = String(($("#nm") && $("#nm").value) || "").trim().slice(0, 18);
+    const email = String(($("#emNew") && $("#emNew").value) || "");
+    const pw = String(($("#pwNew") && $("#pwNew").value) || "");
+    await commitNewProfile(name, email, pw);
+  };
+  const roomCreateSubmit = $("#roomCreateSubmit");
+  if (roomCreateSubmit) roomCreateSubmit.onclick = async () => {
+    const name = String(($("#roomNm") && $("#roomNm").value) || "").trim().slice(0, 18);
+    const email = String(($("#roomEm") && $("#roomEm").value) || "");
+    const pw = String(($("#roomPwNew") && $("#roomPwNew").value) || "");
+    await commitNewProfile(name, email, pw);
+  };
+  const commitPassword = async (pw, pw2) => {
+    if (pw.length < 4) {
+      state.statusMsg = tt("passwordHint");
+      paint(true);
+      return;
+    }
+    if (pw !== pw2) {
+      state.statusMsg = tt("passwordMismatch");
+      paint(true);
+      return;
+    }
+    const passwordHash = await hashPassword(pw);
+    saveProfile({ passwordHash });
+    state.profileUnlocked = true;
+    state.dojoMode = "home";
+    state.roomDojoPanel = "";
+    state.statusMsg = tt("passwordSaved");
+    if (needsPlacement(state.profile)) startDojo();
+    else paint(true);
+  };
+  const setProfilePw = $("#setProfilePw");
+  if (setProfilePw) setProfilePw.onclick = async () => {
+    const pw = String(($("#pwNew") && $("#pwNew").value) || "");
+    const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
+    await commitPassword(pw, pw2);
+  };
+  const roomSetPw = $("#roomSetPw");
+  if (roomSetPw) roomSetPw.onclick = async () => {
+    const pw = String(($("#roomPwNew") && $("#roomPwNew").value) || "");
+    const pw2 = String(($("#roomPwConfirm") && $("#roomPwConfirm").value) || "");
+    await commitPassword(pw, pw2);
+  };
+  const unlockProfile = $("#unlockProfile");
+  if (unlockProfile) unlockProfile.onclick = async () => {
+    const pw = String(($("#pwUnlock") && $("#pwUnlock").value) || "");
+    const ok = await verifyProfilePassword(pw);
+    if (!ok) {
+      state.statusMsg = tt("wrongPassword");
+      paint(true);
+      return;
+    }
+    state.profileUnlocked = true;
+    state.dojoMode = "home";
+    state.statusMsg = "";
+    if (needsPlacement(state.profile)) startDojo();
+    else paint(true);
+  };
+  const lockProfile = $("#lockProfile");
+  if (lockProfile) lockProfile.onclick = () => {
+    state.profileUnlocked = false;
+    state.dojoMode = "unlock";
+    try { sessionStorage.setItem("fa-dojo-mode", "unlock"); } catch { /* ignore */ }
+    state.statusMsg = tt("profileLocked");
+    paint(true);
+  };
+  const dojoCreateAlt = $("#dojoCreateAlt");
+  if (dojoCreateAlt) dojoCreateAlt.onclick = () => openDojoPage("create");
+  const dojoCancelMode = $("#dojoCancelMode");
+  if (dojoCancelMode) dojoCancelMode.onclick = () => {
+    state.dojoMode = needsPasswordSetup() ? "setpw" : (state.profileUnlocked ? "home" : "unlock");
+    try { sessionStorage.setItem("fa-dojo-mode", state.dojoMode); } catch { /* ignore */ }
+    paint(true);
+  };
+  const saveProfileEdit = $("#saveProfileEdit");
+  if (saveProfileEdit) saveProfileEdit.onclick = async () => {
+    if (!state.profileUnlocked) return;
+    const name = String(($("#nm") && $("#nm").value) || state.name).trim().slice(0, 18);
+    const email = String(($("#em") && $("#em").value) || "").trim().slice(0, 120);
+    const pw = String(($("#pwNew") && $("#pwNew").value) || "");
+    const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
+    const patch = { displayName: name || state.name, email };
+    if (pw || pw2) {
+      if (pw.length < 4) {
+        state.statusMsg = tt("passwordHint");
+        paint(true);
+        return;
+      }
+      if (pw !== pw2) {
+        state.statusMsg = tt("passwordMismatch");
+        paint(true);
+        return;
+      }
+      patch.passwordHash = await hashPassword(pw);
+    }
+    saveProfile(patch);
+    state.statusMsg = tt("profileSaved");
+    paint(true);
+  };
+  const bindThumb = (el) => {
+    if (!el) return;
+    el.onchange = (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      if (file.size > 400000) {
+        state.statusMsg = tt("photoBig");
+        paint(true);
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => saveProfile({ thumb: String(reader.result || "") }) && paint(true);
+      reader.readAsDataURL(file);
+    };
+  };
+  bindThumb($("#thDojo"));
+  bindThumb($("#roomTh"));
+  const dojoGo = $("#dojoGo");
+  if (dojoGo) dojoGo.onclick = () => startDojo();
+  const retake = $("#retake");
+  if (retake) retake.onclick = () => startDojo();
+  document.querySelectorAll("[data-dojo]").forEach((b) => {
+    b.onclick = () => dojoPick(Number(b.dataset.dojo));
+  });
+}
+
 function bindLobby() {
   document.querySelectorAll("[data-locale]").forEach((b) => {
     b.onclick = () => { void setLocale(b.dataset.locale); };
@@ -2430,18 +2601,6 @@ function bindLobby() {
     b.onclick = () => {
       const id = b.dataset.acc;
       state.lobbyOpen = state.lobbyOpen === id ? "" : id;
-      if (id === "dojo" && state.lobbyOpen === "dojo" && !isTvDisplay()) {
-        if (!hasPhoneProfile()) state.dojoMode = "create";
-        else if (needsPasswordSetup()) state.dojoMode = "setpw";
-        else if (!state.profileUnlocked) state.dojoMode = "unlock";
-        else if (needsPlacement(state.profile) && !state.dojo) {
-          // Unlocked + no placement: start placement when opening Dojo
-          startDojo();
-          return;
-        } else {
-          state.dojoMode = "home";
-        }
-      }
       paint(true);
     };
   });
@@ -2530,21 +2689,7 @@ function bindLobby() {
       publish();
     };
   });
-  const openDojoGate = (mode) => {
-    state.lobbyOpen = "dojo";
-    state.dojoMode = mode || "home";
-    if (mode === "home" && state.profileUnlocked && needsPlacement(state.profile) && !(state.dojo && state.dojo.q)) {
-      startDojo();
-      return;
-    }
-    paint(true);
-  };
-  const routeToDojo = () => {
-    if (!hasPhoneProfile()) openDojoGate("create");
-    else if (needsPasswordSetup()) openDojoGate("setpw");
-    else if (!state.profileUnlocked) openDojoGate("unlock");
-    else openDojoGate("home");
-  };
+  const routeToDojo = () => openDojoPage(dojoModeForGate());
   const goToDojoBtn = $("#goToDojo");
   if (goToDojoBtn) goToDojoBtn.onclick = () => routeToDojo();
   const bannerGoDojo = $("#bannerGoDojo");
@@ -2576,123 +2721,7 @@ function bindLobby() {
     if (needsPlacement(state.profile)) startDojo();
     else paint(true);
   };
-  const createProfile = $("#createProfile");
-  if (createProfile) createProfile.onclick = async () => {
-    const name = String(($("#nm") && $("#nm").value) || "").trim().slice(0, 18);
-    const email = String(($("#emNew") && $("#emNew").value) || "");
-    const pw = String(($("#pwNew") && $("#pwNew").value) || "");
-    await commitNewProfile(name, email, pw);
-  };
-  const roomCreateSubmit = $("#roomCreateSubmit");
-  if (roomCreateSubmit) roomCreateSubmit.onclick = async () => {
-    const name = String(($("#roomNm") && $("#roomNm").value) || "").trim().slice(0, 18);
-    const email = String(($("#roomEm") && $("#roomEm").value) || "");
-    const pw = String(($("#roomPwNew") && $("#roomPwNew").value) || "");
-    await commitNewProfile(name, email, pw);
-  };
-  const commitPassword = async (pw, pw2) => {
-    if (pw.length < 4) {
-      state.statusMsg = tt("passwordHint");
-      paint(true);
-      return;
-    }
-    if (pw !== pw2) {
-      state.statusMsg = tt("passwordMismatch");
-      paint(true);
-      return;
-    }
-    const passwordHash = await hashPassword(pw);
-    saveProfile({ passwordHash });
-    state.profileUnlocked = true;
-    state.dojoMode = "home";
-    state.roomDojoPanel = "";
-    state.statusMsg = tt("passwordSaved");
-    if (needsPlacement(state.profile)) startDojo();
-    else paint(true);
-  };
-  const setProfilePw = $("#setProfilePw");
-  if (setProfilePw) setProfilePw.onclick = async () => {
-    const pw = String(($("#pwNew") && $("#pwNew").value) || "");
-    const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
-    await commitPassword(pw, pw2);
-  };
-  const roomSetPw = $("#roomSetPw");
-  if (roomSetPw) roomSetPw.onclick = async () => {
-    const pw = String(($("#roomPwNew") && $("#roomPwNew").value) || "");
-    const pw2 = String(($("#roomPwConfirm") && $("#roomPwConfirm").value) || "");
-    await commitPassword(pw, pw2);
-  };
-  const unlockProfile = $("#unlockProfile");
-  if (unlockProfile) unlockProfile.onclick = async () => {
-    const pw = String(($("#pwUnlock") && $("#pwUnlock").value) || "");
-    const ok = await verifyProfilePassword(pw);
-    if (!ok) {
-      state.statusMsg = tt("wrongPassword");
-      paint(true);
-      return;
-    }
-    state.profileUnlocked = true;
-    state.dojoMode = "home";
-    state.statusMsg = "";
-    if (needsPlacement(state.profile)) startDojo();
-    else paint(true);
-  };
-  const lockProfile = $("#lockProfile");
-  if (lockProfile) lockProfile.onclick = () => {
-    state.profileUnlocked = false;
-    state.dojoMode = "unlock";
-    state.statusMsg = tt("profileLocked");
-    paint(true);
-  };
-  const dojoCreateAlt = $("#dojoCreateAlt");
-  if (dojoCreateAlt) dojoCreateAlt.onclick = () => openDojoGate("create");
-  const dojoCancelMode = $("#dojoCancelMode");
-  if (dojoCancelMode) dojoCancelMode.onclick = () => {
-    state.dojoMode = needsPasswordSetup() ? "setpw" : (state.profileUnlocked ? "home" : "unlock");
-    paint(true);
-  };
-  const saveProfileEdit = $("#saveProfileEdit");
-  if (saveProfileEdit) saveProfileEdit.onclick = async () => {
-    if (!state.profileUnlocked) return;
-    const name = String(($("#nm") && $("#nm").value) || state.name).trim().slice(0, 18);
-    const email = String(($("#em") && $("#em").value) || "").trim().slice(0, 120);
-    const pw = String(($("#pwNew") && $("#pwNew").value) || "");
-    const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
-    const patch = { displayName: name || state.name, email };
-    if (pw || pw2) {
-      if (pw.length < 4) {
-        state.statusMsg = tt("passwordHint");
-        paint(true);
-        return;
-      }
-      if (pw !== pw2) {
-        state.statusMsg = tt("passwordMismatch");
-        paint(true);
-        return;
-      }
-      patch.passwordHash = await hashPassword(pw);
-    }
-    saveProfile(patch);
-    state.statusMsg = tt("profileSaved");
-    paint(true);
-  };
-  const bindThumb = (el) => {
-    if (!el) return;
-    el.onchange = (e) => {
-      const file = e.target.files && e.target.files[0];
-      if (!file) return;
-      if (file.size > 400000) {
-        state.statusMsg = tt("photoBig");
-        paint(true);
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = () => saveProfile({ thumb: String(reader.result || "") }) && paint(true);
-      reader.readAsDataURL(file);
-    };
-  };
-  bindThumb($("#thDojo"));
-  bindThumb($("#roomTh"));
+  bindDojoSurface();
   const jc = $("#jc");
   if (jc) jc.oninput = (e) => {
     state.joinInput = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
@@ -2705,13 +2734,6 @@ function bindLobby() {
     state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
     paint(true);
   };
-  const dojoGo = $("#dojoGo");
-  if (dojoGo) dojoGo.onclick = () => startDojo();
-  const retake = $("#retake");
-  if (retake) retake.onclick = () => startDojo();
-  document.querySelectorAll("[data-dojo]").forEach((b) => {
-    b.onclick = () => dojoPick(Number(b.dataset.dojo));
-  });
   bindSliders();
   bindRules();
   const go = $("#go");
@@ -2754,9 +2776,7 @@ async function joinAsBuzzer() {
   }
   if (!isPlaced()) {
     state.statusMsg = tt("dojoPhone");
-    state.lobbyOpen = "dojo";
-    if (!state.dojo || !state.dojo.q) startDojo();
-    else paint(true);
+    openDojoPage("home");
     return false;
   }
   saveProfile({ displayName: state.name });
@@ -2819,9 +2839,7 @@ async function onLobbyGo() {
       if (needsPasswordSetup() || !state.profileUnlocked) { state.roomDojoPanel = "unlock"; paint(true); return; }
       if (!isPlaced()) {
         state.roomDojoPanel = "";
-        state.lobbyOpen = "dojo";
-        if (!state.dojo || !state.dojo.q) startDojo();
-        else paint(true);
+        openDojoPage("home");
         return;
       }
     }
@@ -2835,15 +2853,8 @@ async function onLobbyGo() {
       // Host phone generating a link for Silk still needs profile/placement for their seat.
       if (gate) {
         state.statusMsg = gate;
-        state.lobbyOpen = "dojo";
-        if (!hasPhoneProfile()) { state.dojoMode = "create"; paint(true); return; }
-        if (needsPasswordSetup()) { state.dojoMode = "setpw"; paint(true); return; }
-        if (!state.profileUnlocked) { state.dojoMode = "unlock"; paint(true); return; }
-        if (!isPlaced()) {
-          if (!state.dojo || !state.dojo.q) startDojo();
-          else paint(true);
-          return;
-        }
+        openDojoPage(dojoModeForGate());
+        return;
       }
     }
     saveProfile({ displayName: state.name });
@@ -2865,15 +2876,8 @@ async function onLobbyGo() {
     const gate = lobbyGateReason();
     if (gate) {
       state.statusMsg = gate;
-      state.lobbyOpen = "dojo";
-      if (!hasPhoneProfile()) { state.dojoMode = "create"; paint(true); return; }
-      if (needsPasswordSetup()) { state.dojoMode = "setpw"; paint(true); return; }
-      if (!state.profileUnlocked) { state.dojoMode = "unlock"; paint(true); return; }
-      if (!isPlaced()) {
-        if (!state.dojo || !state.dojo.q) startDojo();
-        else paint(true);
-        return;
-      }
+      openDojoPage(dojoModeForGate());
+      return;
     }
   }
   saveProfile({ displayName: state.name });
@@ -3128,6 +3132,18 @@ function paint(force = false) {
     bindDirections();
     return;
   }
+  if (isDojoPage) {
+    app.className = "stage dojo-page";
+    applyHostSize();
+    if (needsEntryGate()) {
+      app.innerHTML = entryHTML();
+      bindEntry();
+      return;
+    }
+    app.innerHTML = dojoPageHTML();
+    bindDojoPage();
+    return;
+  }
   app.className = "stage"
     + (role === "pad" ? " pad" : "")
     + (state.onScreen && role !== "pad" ? " tv" : "")
@@ -3167,7 +3183,7 @@ function paint(force = false) {
 }
 
 window.addEventListener("keydown", (e) => {
-  if (isDirections) return;
+  if (isDirections || isDojoPage) return;
   if (e.target && ["INPUT", "TEXTAREA"].includes(e.target.tagName)) return;
   if (e.code === "Space") { e.preventDefault(); buzz(); }
   const n = e.key && "1234abcd".includes(e.key.toLowerCase()) ? "1234abcd".indexOf(e.key.toLowerCase()) % 4 : -1;
@@ -3178,6 +3194,30 @@ if (isDirections) {
   document.documentElement.lang = state.locale;
   paint(true);
   window.__fa = state;
+} else if (isDojoPage) {
+  if (forcedDisplay) {
+    location.replace("./index.html");
+  } else {
+    await loadBanksForLocale(state.locale);
+    state.profile = loadProfile();
+    if (state.profile?.displayName) state.name = state.profile.displayName;
+    state.profileUnlocked = false;
+    let sessionEntered = false;
+    try { sessionEntered = sessionStorage.getItem("fa-entered") === "1"; } catch { /* ignore */ }
+    state.entered = Boolean(sessionEntered && hasPhoneProfile());
+    if (state.entered) state.profileUnlocked = true;
+    const qMode = params.get("mode");
+    let stored = "";
+    try { stored = sessionStorage.getItem("fa-dojo-mode") || ""; } catch { /* ignore */ }
+    const allowed = ["create", "unlock", "setpw", "home"];
+    state.dojoMode = allowed.includes(qMode) ? qMode : (allowed.includes(stored) ? stored : dojoModeForGate());
+    if (state.entered && state.profileUnlocked && state.dojoMode === "home" && needsPlacement(state.profile)) {
+      startDojo();
+    } else {
+      paint(true);
+    }
+    window.__fa = state;
+  }
 } else {
   await loadBanksForLocale(state.locale);
   state.profile = loadProfile();
