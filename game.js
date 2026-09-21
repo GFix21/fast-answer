@@ -55,9 +55,9 @@ function shareUrl() {
   return u.toString();
 }
 function escapeHtml(s) {
-  return String(s || "").replace(/[&<>"']/g, (c) => (
-    { "&": "&", "<": "<", ">": ">", '"': """, "'": "&#39;" }[c]
-  ));
+  const d = document.createElement("div");
+  d.textContent = String(s || "");
+  return d.innerHTML;
 }
 function currentQ() {
   return state.qs[state.i] || null;
