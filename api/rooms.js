@@ -30,9 +30,14 @@ export default async function handler(req, res) {
     res.status(400).end(JSON.stringify({ error: "code" }));
     return;
   }
-  const cur = rooms.get(code) || { code, host: body.host || "", state: {}, buzzes: [] };
+  const cur = rooms.get(code) || { code, host: body.host || "", state: {}, buzzes: [], guests: [] };
   if (body.action === "create") {
-    rooms.set(code, { ...cur, host: body.host || cur.host, createdAt: Date.now() });
+    rooms.set(code, { ...cur, host: body.host || cur.host, createdAt: Date.now(), guests: cur.guests || [] });
+  } else if (body.action === "join") {
+    cur.guests = cur.guests || [];
+    const guest = { name: body.name || "Player", id: body.id || ("p-" + String(body.name || "pad")) };
+    if (!cur.guests.some((g) => g.id === guest.id || g.name === guest.name)) cur.guests.push(guest);
+    rooms.set(code, cur);
   } else if (body.action === "state") {
     cur.state = body.state || {};
     rooms.set(code, cur);

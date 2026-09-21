@@ -15,7 +15,11 @@ Phone pad URL: `/?role=pad&room=XXXX` (the TV prints a QR).
 
 Space bar buzzes. Keys `1–4` or `A–D` pick an answer.
 
-A round is 12 questions: 6 easy ($100), 3 hard ($500), 2 difficult ($1,000), 1 finale ($10,000).
+A round is **37 questions**: 20 Easy ($100), 10 Hard ($500), 5 Difficult ($1,000), 2 Extreme ($5,000). Ten seconds to read, then buzz.
+
+**MAP** happens *during* that read — tap a rival (one tap, stake = this question). If you buzz first and hit it, you bank double and they lose the stake. Miss, and you lose the stake. Nobody else loses points on a normal miss.
+
+**Lockdown** hits twice per show, after a correct buzz. That player plays 5. Opponents tap WIN or LOSE and a stake (60 seconds max; it skips ahead when everyone has locked). 4/5 pays WIN even money; otherwise LOSE pays. Those five bank at $500 each only if they clear the set.
 
 ## Deploy
 
