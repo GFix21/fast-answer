@@ -159,7 +159,7 @@ const state = {
   dirOpen: "tv",
   qrOpen: false,
   readyIds: {},
-  mpMode: localStorage.getItem("fa-mp") || ((role === "pad" || !forcedDisplay) ? "join" : "host"),
+  mpMode: localStorage.getItem("fa-mp") || ((role === "pad" || joinCode) ? "join" : "host"),
   statusMsg: "",
   placementQs: [],
   botFill: true,
@@ -594,10 +594,14 @@ function markEntered() {
   state.entered = true;
   state.profileUnlocked = true;
   try { sessionStorage.setItem("fa-entered", "1"); } catch { /* private mode */ }
-  if (!isTvDisplay()) {
+  if (role === "pad" || joinCode) {
     state.mpMode = "join";
     state.lobbyOpen = "room";
     try { localStorage.setItem("fa-mp", "join"); } catch { /* ignore */ }
+  } else if (!isTvDisplay()) {
+    state.mpMode = "host";
+    state.lobbyOpen = "room";
+    try { localStorage.setItem("fa-mp", "host"); } catch { /* ignore */ }
   }
 }
 async function commitNewProfile(name, email, pw) {
@@ -2390,6 +2394,7 @@ function roomBody() {
       </div>
       <button class="primary" id="startPhone" type="button">${tt("startPhone")}</button>
       <p class="meta">${tt("phoneLockHint")}</p>
+      ${roomDojoEntryHTML()}
     `;
   }
 
@@ -3584,7 +3589,7 @@ function paint(force = false) {
     state.dojo?.answers?.length, state.dojo?.picked, state.dojo?.showAnswers, state.dojo?.readLeft,
     state.profile?.abilityTier, state.profile?.belt, state.profile?.thumb ? 1 : 0,
     state.profile?.dojoBg, (state.profile?.topScores || []).length, state.dojoScroll,
-    state.profileUnlocked ? 1 : 0, state.dojoMode, state.roomDojoPanel, state.profile?.passwordHash ? 1 : 0,
+    state.profileUnlocked ? 1 : 0, state.entered ? 1 : 0, state.dojoMode, state.roomDojoPanel, state.profile?.passwordHash ? 1 : 0,
     state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
     state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => r.code).join(","),
@@ -3601,6 +3606,7 @@ function paint(force = false) {
   }
   lastKey = key;
   if (state.phase === "lobby" && needsEntryGate()) {
+    if (app.querySelector("#entryName")) syncEntryDraft();
     app.innerHTML = entryHTML();
     bindEntry();
   } else if (state.phase === "lobby") {
@@ -3665,8 +3671,11 @@ if (isDirections) {
   try { sessionEntered = sessionStorage.getItem("fa-entered") === "1"; } catch { /* ignore */ }
   state.entered = Boolean(forcedDisplay || (sessionEntered && hasPhoneProfile()));
   if (state.entered && !forcedDisplay) state.profileUnlocked = true;
-  // Keep the room card open (Join TV when that mode is selected) so Create / Unlock
-  // sit on the same card after a refresh. Dojo stays one tap away.
+  if (role === "pad" || joinCode) state.mpMode = "join";
+  else if (forcedDisplay) state.mpMode = "host";
+  else if (localStorage.getItem("fa-mp") === "cast") state.mpMode = "cast";
+  else state.mpMode = "host";
+  // Keep the room card open so Create / Unlock sit on the same card after a refresh.
   state.lobbyOpen = "room";
   state.roomDojoPanel = "";
   if (!hasPhoneProfile()) state.dojoMode = "create";
@@ -3677,10 +3686,10 @@ if (isDirections) {
     state.mpMode = "join";
     state.lobbyOpen = "room";
     if (joinCode) state.room = joinCode;
-    void refreshActiveRooms().then(() => paint(true));
+    if (!needsEntryGate()) void refreshActiveRooms().then(() => paint(true));
     startPoll();
   } else if (state.mpMode === "join") {
-    void refreshActiveRooms().then(() => paint(true));
+    if (!needsEntryGate()) void refreshActiveRooms().then(() => paint(true));
   } else if (state.onScreen) {
     if (forcedDisplay) {
       localStorage.setItem("fa-onscreen", "1");
