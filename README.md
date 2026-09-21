@@ -37,8 +37,10 @@ English remains the source of truth for ids and `correctIndex`. Sync locale pack
 
 One page. Collapsible menus. Jeremy and the studio stay live behind the card.
 
-- **Profile** — name, email, photo. Karate belt from career points. Bronze / Silver / Gold from the dojo.
-- **Dojo** — ten placement questions. Prompt for 10s, then answers. No name/points on the Dojo card. Places you for three months.
+- **Dojo (profile)** — below Join TV in the lobby (phone only; hidden on TV / `?tv=1`). Create a profile (name + password + photo) or unlock with the profile password; avatar upload stays here. Create profile starts placement immediately.
+- **Karate belt** — white→black from career points, shown as a belt strip in Dojo.
+- **Medals** — Bronze / Silver / Gold from the 10-question placement (valid ~three months).
+- **Placement** — ten questions. Prompt for 10s, then answers. No name/points on the live Dojo card.
 - **Room** — 2 to 12 seats. TV owns the room on On Screen / Silk / `?tv=1`. Phones join as pads (corner QR), Buzz to ready, all-buzz starts the show. Empty seats are celebrity bots.
 - **Set** — Jeremy height and studio angle, live on this phone (sliders work on mobile).
 

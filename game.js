@@ -131,6 +131,8 @@ const state = {
   playerCount: Math.min(12, Math.max(2, Number(localStorage.getItem("fa-seats") || 3))),
   lobbyOpen: "room",
   profile: null,
+  profileUnlocked: false,
+  dojoMode: "home", // home | create | unlock | setpw
   dojo: null,
   seatBots: [],
   guests: [],
@@ -186,7 +188,12 @@ async function setLocale(next) {
     if (state.dojo && state.dojo.q && !state.dojo.done) {
       clearDojoTick();
       state.dojo = null;
-      if (needsPlacement(state.profile) && role !== "pad" && !isTvDisplay()) {
+      if (
+        needsPlacement(state.profile)
+        && role !== "pad"
+        && !isTvDisplay()
+        && isProfileUnlocked()
+      ) {
         state.lobbyOpen = "dojo";
         ensureDojo();
       }
@@ -228,12 +235,52 @@ function isTvDisplay() {
 function isPad() {
   return role === "pad";
 }
+function hasStoredProfileRecord() {
+  try {
+    const raw = localStorage.getItem(PROFILE_KEY);
+    if (!raw) return false;
+    const p = JSON.parse(raw);
+    if (!p || !String(p.displayName || "").trim()) return false;
+    // Ready once password is set, or legacy placed/played profiles (migrate to password in Dojo).
+    return Boolean(p.passwordHash || p.placementCompletedAt || p.abilityTier || (p.stats && p.stats.gamesPlayed > 0));
+  } catch {
+    return false;
+  }
+}
 function hasPhoneProfile() {
   const p = state.profile;
-  return Boolean(p && String(p.displayName || "").trim());
+  return Boolean(p && hasStoredProfileRecord() && String(p.displayName || "").trim());
+}
+function needsPasswordSetup() {
+  return hasPhoneProfile() && !state.profile?.passwordHash;
+}
+function isProfileUnlocked() {
+  return Boolean(state.profileUnlocked && hasPhoneProfile() && state.profile?.passwordHash);
 }
 function canPlayScored() {
-  return hasPhoneProfile() && isPlaced();
+  return isProfileUnlocked() && isPlaced();
+}
+async function hashPassword(pw) {
+  const raw = String(pw || "");
+  const enc = new TextEncoder().encode("fa-dojo-v1:" + raw);
+  try {
+    if (crypto.subtle) {
+      const buf = await crypto.subtle.digest("SHA-256", enc);
+      return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+    }
+  } catch { /* fall through */ }
+  let h = 2166136261;
+  for (let i = 0; i < enc.length; i++) {
+    h ^= enc[i];
+    h = Math.imul(h, 16777619);
+  }
+  return "fb-" + (h >>> 0).toString(16);
+}
+async function verifyProfilePassword(pw) {
+  const want = state.profile?.passwordHash;
+  if (!want) return false;
+  const got = await hashPassword(pw);
+  return got === want;
 }
 async function copyText(value) {
   const text = String(value || "");
@@ -417,6 +464,7 @@ function loadProfile() {
     p.belt = beltFromPoints(p.stats.totalPoints);
     p.displayName = String(p.displayName || state.name || "Player").slice(0, 40);
     p.email = String(p.email || "").slice(0, 120);
+    p.passwordHash = String(p.passwordHash || "");
     return p;
   } catch {
     return seedProfile();
@@ -430,6 +478,7 @@ function seedProfile() {
     thumb: "",
     belt: "white",
     abilityTier: null,
+    passwordHash: "",
     stats: emptyStats(),
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
@@ -1542,7 +1591,9 @@ function finishDojo() {
     placementQuestionIds: [...(state.profile?.placementQuestionIds || []), ...ids].slice(-200),
   });
   state.dojo = { ...d, done: true, q: null, picked: -1, showAnswers: false };
-  state.lobbyOpen = "room";
+  state.lobbyOpen = "dojo";
+  state.dojoMode = "home";
+  state.statusMsg = tt("placementDone", (ABILITY_META[abilityTier] || ABILITY_META.bronze).label);
   paint(true);
 }
 
@@ -1614,38 +1665,50 @@ function acc(id, title, extra, body) {
   </section>`;
 }
 
+function beltStripHTML(activeBelt) {
+  const cur = activeBelt || "white";
+  return `<div class="belt-strip" role="img" aria-label="${escapeHtml(tt("beltAria", (BELT_META[cur] || BELT_META.white).label))}">
+    ${BELT_ORDER.map((id) => {
+      const m = BELT_META[id];
+      const on = id === cur ? " on" : "";
+      return `<span class="belt-seg${on}" style="--belt:${m.color}" title="${escapeHtml(m.label)}"></span>`;
+    }).join("")}
+  </div>
+  <p class="belt-lab">${escapeHtml(tt("beltName", (BELT_META[cur] || BELT_META.white).label))}</p>`;
+}
+
+function medalHTML(tier) {
+  const order = ["bronze", "silver", "gold"];
+  return `<div class="medal-row" role="list">
+    ${order.map((id) => {
+      const m = ABILITY_META[id];
+      const on = tier === id ? " on" : "";
+      const label = id === "bronze" ? tt("medalBronze") : id === "silver" ? tt("medalSilver") : tt("medalGold");
+      return `<span class="medal${on}" role="listitem" style="--medal:${m.color}" title="${escapeHtml(label)}"><i></i><b>${escapeHtml(label)}</b></span>`;
+    }).join("")}
+  </div>`;
+}
+
+function dojoChrome(inner) {
+  return `<div class="dojo-stage">${inner}</div>`;
+}
+
 function profileBody() {
-  const p = state.profile || {};
-  const belt = BELT_META[p.belt || "white"];
-  const ab = p.abilityTier ? ABILITY_META[p.abilityTier] : null;
-  const named = Boolean(String(p.displayName || "").trim());
-  const placed = isPlaced();
-  return `
-    <p class="dir-copy">${tt("profileIntro")}</p>
-    <label class="field" for="nm">${tt("name")}</label>
-    <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
-    <label class="field" for="em">${tt("email")}</label>
-    <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("optional")}"/>
-    <label class="field" for="th">${tt("photo")}</label>
-    <div class="thumb-row">
-      ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
-      <input id="th" type="file" accept="image/*"/>
-    </div>
-    <p class="meta">${escapeHtml(tt("beltCareer", belt.label, ab ? ab.label : "", p.stats?.totalPoints || 0))}</p>
-    ${named && !placed ? `<button class="primary" id="profileToDojo" type="button">${tt("continueDojo")}</button>` : ""}
-    ${named && placed ? `<button class="ghost" id="profileToRoom" type="button">${tt("continueRoom")}</button>` : ""}
-  `;
+  // Profile lives inside Dojo; kept for any residual callers.
+  return dojoBody();
 }
 
 function dojoBody() {
-  const p = state.profile;
+  const p = state.profile || {};
   const placed = isPlaced();
   const d = state.dojo;
+  const mode = state.dojoMode || "home";
+
   if (d && d.q && !d.done) {
     const n = d.answers.length + 1;
     const reveal = d.picked >= 0;
     const showAns = Boolean(d.showAnswers);
-    return `
+    return dojoChrome(`
       <p class="meta" id="dojoClock">${showAns
         ? (reveal ? tt("dojoN", n, PLACE_N) : `${tt("dojoN", n, PLACE_N)} · ${tt("dojoTap")}`)
         : tt("dojoRead", d.readLeft ?? READ_S)}</p>
@@ -1660,29 +1723,86 @@ function dojoBody() {
           return `<button class="${cls}" type="button" data-dojo="${i}" ${reveal ? "disabled" : ""}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
         }).join("")}
       </div>` : `<p class="dir-copy">${tt("dojoHold")}</p>`}
-    `;
+    `);
   }
-  if (placed) {
-    const ab = ABILITY_META[p.abilityTier] || ABILITY_META.bronze;
-    return `
-      <p class="meta">${escapeHtml(tt("abilityRetake", ab.label, formatDue(p.nextPlacementDueAt)))}</p>
+
+  // Create profile (no stored profile yet)
+  if (!hasPhoneProfile() || mode === "create") {
+    return dojoChrome(`
+      <p class="dir-copy">${tt("createProfileIntro")}</p>
+      <label class="field" for="nm">${tt("name")}</label>
+      <input id="nm" type="text" value="${escapeHtml(p.displayName && hasPhoneProfile() ? p.displayName : "")}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
+      <label class="field" for="pwNew">${tt("password")}</label>
+      <input id="pwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
+      <label class="field" for="pwConfirm">${tt("confirmPassword")}</label>
+      <input id="pwConfirm" type="password" maxlength="64" autocomplete="new-password"/>
       <label class="field" for="thDojo">${tt("photoTv")}</label>
       <div class="thumb-row">
         ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
         <input id="thDojo" type="file" accept="image/*"/>
       </div>
-      <button class="ghost" id="retake" type="button">${tt("retakeDojo")}</button>
-    `;
+      <button class="primary" id="createProfile" type="button">${tt("createAndPlace")}</button>
+      ${hasPhoneProfile() ? `<button class="ghost" id="dojoCancelMode" type="button">${tt("cancel")}</button>` : ""}
+    `);
   }
-  return `
-    <p class="meta">${tt("dojoIntro")}</p>
+
+  // Legacy: profile exists but no password yet
+  if (needsPasswordSetup() || mode === "setpw") {
+    return dojoChrome(`
+      <p class="dir-copy">${tt("setPasswordIntro")}</p>
+      <p class="meta">${escapeHtml(p.displayName || "")}</p>
+      ${beltStripHTML(p.belt)}
+      ${p.abilityTier ? medalHTML(p.abilityTier) : ""}
+      <label class="field" for="pwNew">${tt("password")}</label>
+      <input id="pwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
+      <label class="field" for="pwConfirm">${tt("confirmPassword")}</label>
+      <input id="pwConfirm" type="password" maxlength="64" autocomplete="new-password"/>
+      <button class="primary" id="setProfilePw" type="button">${tt("savePassword")}</button>
+    `);
+  }
+
+  // Unlock with password
+  if (!state.profileUnlocked || mode === "unlock") {
+    return dojoChrome(`
+      <p class="dir-copy">${tt("unlockIntro")}</p>
+      <p class="meta">${escapeHtml(p.displayName || "")}</p>
+      ${beltStripHTML(p.belt)}
+      ${p.abilityTier ? medalHTML(p.abilityTier) : `<p class="meta">${tt("medalPending")}</p>`}
+      <label class="field" for="pwUnlock">${tt("password")}</label>
+      <input id="pwUnlock" type="password" maxlength="64" autocomplete="current-password"/>
+      <button class="primary" id="unlockProfile" type="button">${tt("unlockProfile")}</button>
+      <button class="ghost" id="dojoCreateAlt" type="button">${tt("createProfile")}</button>
+    `);
+  }
+
+  // Unlocked home / edit
+  const ab = p.abilityTier ? ABILITY_META[p.abilityTier] : null;
+  return dojoChrome(`
+    <p class="dir-copy">${tt("dojoUnlockedIntro")}</p>
+    ${beltStripHTML(p.belt)}
+    ${medalHTML(p.abilityTier)}
+    <p class="meta">${escapeHtml(tt("beltCareer", (BELT_META[p.belt || "white"] || BELT_META.white).label, ab ? ab.label : "", p.stats?.totalPoints || 0))}</p>
+    <label class="field" for="nm">${tt("name")}</label>
+    <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
+    <label class="field" for="em">${tt("email")}</label>
+    <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("optional")}"/>
     <label class="field" for="thDojo">${tt("photoTv")}</label>
     <div class="thumb-row">
-      ${p?.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
+      ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
       <input id="thDojo" type="file" accept="image/*"/>
     </div>
-    <button class="primary" id="dojoGo" type="button">${tt("startDojo")}</button>
-  `;
+    <label class="field" for="pwNew">${tt("changePassword")}</label>
+    <input id="pwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("optional")}"/>
+    <label class="field" for="pwConfirm">${tt("confirmPassword")}</label>
+    <input id="pwConfirm" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("optional")}"/>
+    <button class="ghost" id="saveProfileEdit" type="button">${tt("saveProfile")}</button>
+    ${placed
+      ? `<p class="meta">${escapeHtml(tt("abilityRetake", (ab && ab.label) || tt("placed"), formatDue(p.nextPlacementDueAt)))}</p>
+         <button class="ghost" id="retake" type="button">${tt("retakeDojo")}</button>`
+      : `<p class="meta">${tt("dojoIntro")}</p>
+         <button class="primary" id="dojoGo" type="button">${tt("startDojo")}</button>`}
+    <button class="ghost" id="lockProfile" type="button">${tt("lockProfile")}</button>
+  `);
 }
 
 function roomModeButtons() {
@@ -1827,6 +1947,8 @@ function lobbyGoLabel() {
 function lobbyGateReason() {
   if (isTvDisplay()) return "";
   if (!hasPhoneProfile()) return tt("gateProfile");
+  if (needsPasswordSetup()) return tt("gateSetPassword");
+  if (!state.profileUnlocked) return tt("gatePassword");
   if (!isPlaced()) return tt("gateDojo");
   return "";
 }
@@ -1843,13 +1965,19 @@ function lobbyHTML() {
   const joining = pad || mode === "join";
   const goOff = Boolean(gate) && !(tv && (mode === "host" || mode === "cast"));
   const goLabel = goOff
-    ? (!hasPhoneProfile() ? tt("profileFirst") : tt("dojoFirst"))
+    ? (!hasPhoneProfile() ? tt("profileFirst")
+      : needsPasswordSetup() ? tt("passwordFirst")
+      : !state.profileUnlocked ? tt("unlockFirst")
+      : tt("dojoFirst"))
     : lobbyGoLabel();
   const d = state.dojo;
   const dojoLive = Boolean(d && d.q && !d.done);
   const dojoExtra = dojoLive
     ? `<small>${d.answers.length}/${PLACE_N}</small>`
-    : (placed ? `<small>${escapeHtml((ab && ab.label) || tt("placed"))}</small>` : `<small>${tt("required")}</small>`);
+    : (!hasPhoneProfile() ? `<small>${tt("createProfile")}</small>`
+      : needsPasswordSetup() ? `<small>${tt("setPassword")}</small>`
+      : !state.profileUnlocked ? `<small>${tt("locked")}</small>`
+      : (placed ? `<small>${escapeHtml((ab && ab.label) || tt("placed"))}</small>` : `<small>${tt("required")}</small>`));
   const status = state.statusMsg
     || gate
     || (joining && (state.room || joinCode) ? "Joining room " + (state.room || joinCode) : "")
@@ -1869,9 +1997,8 @@ function lobbyHTML() {
         <h1 class="sr-only">Fast Answer!</h1>
         <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
         <div class="accord">
-          ${tv || dojoLive ? "" : acc("profile", tt("profile"), `<small>${escapeHtml(belt.label)}${ab ? " · " + ab.label : ""}</small>`, profileBody())}
-          ${tv || pad ? "" : acc("dojo", tt("dojo"), dojoExtra, dojoBody())}
           ${dojoLive && !tv ? "" : acc("room", joining ? tt("joinTv") : (mode === "cast" ? tt("castTv") : tt("room")), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
+          ${tv ? "" : acc("dojo", tt("dojo"), dojoExtra, dojoBody())}
           ${pad || tv || dojoLive ? "" : acc("set", tt("set"), "", setBody())}
         </div>
         <div class="row">
@@ -2032,7 +2159,18 @@ function bindLobby() {
     b.onclick = () => {
       const id = b.dataset.acc;
       state.lobbyOpen = state.lobbyOpen === id ? "" : id;
-      if (id === "dojo" && state.lobbyOpen === "dojo" && !isTvDisplay() && needsPlacement(state.profile) && !state.dojo) startDojo();
+      if (id === "dojo" && state.lobbyOpen === "dojo" && !isTvDisplay()) {
+        if (!hasPhoneProfile()) state.dojoMode = "create";
+        else if (needsPasswordSetup()) state.dojoMode = "setpw";
+        else if (!state.profileUnlocked) state.dojoMode = "unlock";
+        else if (needsPlacement(state.profile) && !state.dojo) {
+          // Unlocked + no placement: start placement when opening Dojo
+          startDojo();
+          return;
+        } else {
+          state.dojoMode = "home";
+        }
+      }
       paint(true);
     };
   });
@@ -2121,17 +2259,120 @@ function bindLobby() {
       publish();
     };
   });
-  const profileToDojo = $("#profileToDojo");
-  if (profileToDojo) profileToDojo.onclick = () => {
-    saveProfile({ displayName: state.name });
+  const openDojoGate = (mode) => {
     state.lobbyOpen = "dojo";
-    if (!isPlaced() && (!state.dojo || !state.dojo.q)) startDojo();
+    state.dojoMode = mode || "home";
+    paint(true);
+  };
+  const createProfile = $("#createProfile");
+  if (createProfile) createProfile.onclick = async () => {
+    const name = String(($("#nm") && $("#nm").value) || "").trim().slice(0, 18);
+    const pw = String(($("#pwNew") && $("#pwNew").value) || "");
+    const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
+    if (!name) {
+      state.statusMsg = tt("gateProfile");
+      paint(true);
+      return;
+    }
+    if (pw.length < 4) {
+      state.statusMsg = tt("passwordHint");
+      paint(true);
+      return;
+    }
+    if (pw !== pw2) {
+      state.statusMsg = tt("passwordMismatch");
+      paint(true);
+      return;
+    }
+    const passwordHash = await hashPassword(pw);
+    const base = state.profile || seedProfile();
+    state.profile = {
+      ...base,
+      id: base.passwordHash ? base.id : uid(),
+      displayName: name,
+      passwordHash,
+      createdAt: base.passwordHash ? base.createdAt : new Date().toISOString(),
+    };
+    saveProfile({ displayName: name, passwordHash });
+    state.profileUnlocked = true;
+    state.dojoMode = "home";
+    state.statusMsg = tt("profileCreated");
+    startDojo();
+  };
+  const setProfilePw = $("#setProfilePw");
+  if (setProfilePw) setProfilePw.onclick = async () => {
+    const pw = String(($("#pwNew") && $("#pwNew").value) || "");
+    const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
+    if (pw.length < 4) {
+      state.statusMsg = tt("passwordHint");
+      paint(true);
+      return;
+    }
+    if (pw !== pw2) {
+      state.statusMsg = tt("passwordMismatch");
+      paint(true);
+      return;
+    }
+    const passwordHash = await hashPassword(pw);
+    saveProfile({ passwordHash });
+    state.profileUnlocked = true;
+    state.dojoMode = "home";
+    state.statusMsg = tt("passwordSaved");
+    if (needsPlacement(state.profile)) startDojo();
     else paint(true);
   };
-  const profileToRoom = $("#profileToRoom");
-  if (profileToRoom) profileToRoom.onclick = () => {
-    saveProfile({ displayName: state.name });
-    state.lobbyOpen = "room";
+  const unlockProfile = $("#unlockProfile");
+  if (unlockProfile) unlockProfile.onclick = async () => {
+    const pw = String(($("#pwUnlock") && $("#pwUnlock").value) || "");
+    const ok = await verifyProfilePassword(pw);
+    if (!ok) {
+      state.statusMsg = tt("wrongPassword");
+      paint(true);
+      return;
+    }
+    state.profileUnlocked = true;
+    state.dojoMode = "home";
+    state.statusMsg = "";
+    if (needsPlacement(state.profile)) startDojo();
+    else paint(true);
+  };
+  const lockProfile = $("#lockProfile");
+  if (lockProfile) lockProfile.onclick = () => {
+    state.profileUnlocked = false;
+    state.dojoMode = "unlock";
+    state.statusMsg = tt("profileLocked");
+    paint(true);
+  };
+  const dojoCreateAlt = $("#dojoCreateAlt");
+  if (dojoCreateAlt) dojoCreateAlt.onclick = () => openDojoGate("create");
+  const dojoCancelMode = $("#dojoCancelMode");
+  if (dojoCancelMode) dojoCancelMode.onclick = () => {
+    state.dojoMode = needsPasswordSetup() ? "setpw" : (state.profileUnlocked ? "home" : "unlock");
+    paint(true);
+  };
+  const saveProfileEdit = $("#saveProfileEdit");
+  if (saveProfileEdit) saveProfileEdit.onclick = async () => {
+    if (!state.profileUnlocked) return;
+    const name = String(($("#nm") && $("#nm").value) || state.name).trim().slice(0, 18);
+    const email = String(($("#em") && $("#em").value) || "").trim().slice(0, 120);
+    const pw = String(($("#pwNew") && $("#pwNew").value) || "");
+    const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
+    const patch = { displayName: name || state.name, email };
+    if (pw || pw2) {
+      if (pw.length < 4) {
+        state.statusMsg = tt("passwordHint");
+        paint(true);
+        return;
+      }
+      if (pw !== pw2) {
+        state.statusMsg = tt("passwordMismatch");
+        paint(true);
+        return;
+      }
+      patch.passwordHash = await hashPassword(pw);
+    }
+    saveProfile(patch);
+    state.statusMsg = tt("profileSaved");
     paint(true);
   };
   const bindThumb = (el) => {
@@ -2186,8 +2427,23 @@ async function joinAsBuzzer() {
     return false;
   }
   if (!hasPhoneProfile()) {
-    state.statusMsg = "Set your phone profile name before joining.";
-    state.lobbyOpen = "profile";
+    state.statusMsg = tt("gateProfile");
+    state.lobbyOpen = "dojo";
+    state.dojoMode = "create";
+    paint(true);
+    return false;
+  }
+  if (needsPasswordSetup()) {
+    state.statusMsg = tt("gateSetPassword");
+    state.lobbyOpen = "dojo";
+    state.dojoMode = "setpw";
+    paint(true);
+    return false;
+  }
+  if (!state.profileUnlocked) {
+    state.statusMsg = tt("gatePassword");
+    state.lobbyOpen = "dojo";
+    state.dojoMode = "unlock";
     paint(true);
     return false;
   }
@@ -2259,8 +2515,10 @@ async function onLobbyGo() {
       // Host phone generating a link for Silk still needs profile/placement for their seat.
       if (gate) {
         state.statusMsg = gate;
-        state.lobbyOpen = !hasPhoneProfile() ? "profile" : "dojo";
-        if (!hasPhoneProfile()) { paint(true); return; }
+        state.lobbyOpen = "dojo";
+        if (!hasPhoneProfile()) { state.dojoMode = "create"; paint(true); return; }
+        if (needsPasswordSetup()) { state.dojoMode = "setpw"; paint(true); return; }
+        if (!state.profileUnlocked) { state.dojoMode = "unlock"; paint(true); return; }
         if (!isPlaced()) {
           if (!state.dojo || !state.dojo.q) startDojo();
           else paint(true);
@@ -2287,8 +2545,10 @@ async function onLobbyGo() {
     const gate = lobbyGateReason();
     if (gate) {
       state.statusMsg = gate;
-      state.lobbyOpen = !hasPhoneProfile() ? "profile" : "dojo";
-      if (!hasPhoneProfile()) { paint(true); return; }
+      state.lobbyOpen = "dojo";
+      if (!hasPhoneProfile()) { state.dojoMode = "create"; paint(true); return; }
+      if (needsPasswordSetup()) { state.dojoMode = "setpw"; paint(true); return; }
+      if (!state.profileUnlocked) { state.dojoMode = "unlock"; paint(true); return; }
       if (!isPlaced()) {
         if (!state.dojo || !state.dojo.q) startDojo();
         else paint(true);
@@ -2562,6 +2822,7 @@ function paint(force = false) {
     state.lobbyOpen, state.playerCount, (state.guests || []).length,
     state.dojo?.answers?.length, state.dojo?.picked, state.dojo?.showAnswers, state.dojo?.readLeft,
     state.profile?.abilityTier, state.profile?.belt, state.profile?.thumb ? 1 : 0,
+    state.profileUnlocked ? 1 : 0, state.dojoMode, state.profile?.passwordHash ? 1 : 0,
     state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
     state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => r.code).join(","),
@@ -2601,11 +2862,16 @@ if (isDirections) {
   state.botFill = localStorage.getItem("fa-bots") !== "0";
   fillSeats();
   const tv = isTvDisplay() || forcedDisplay;
-  if (needsPlacement(state.profile) && role !== "pad" && !tv) {
+  state.profileUnlocked = false;
+  if (role !== "pad" && !tv && !hasPhoneProfile()) {
     state.lobbyOpen = "dojo";
-    ensureDojo();
+    state.dojoMode = "create";
+  } else if (role !== "pad" && !tv && needsPasswordSetup()) {
+    state.lobbyOpen = "dojo";
+    state.dojoMode = "setpw";
   } else {
     state.lobbyOpen = "room";
+    state.dojoMode = "unlock";
   }
   if (role === "pad") {
     state.onScreen = true; // pad follows TV room; UI is pad (Off Screen chrome), not full TV

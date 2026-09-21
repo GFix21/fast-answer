@@ -159,10 +159,11 @@ button:disabled{cursor:not-allowed}
 .lobby p{color:var(--mut);margin:8px 0 12px;font-size:14px;line-height:1.45}
 .points{font-size:12px;color:var(--accent);letter-spacing:.04em;margin:0 0 10px}
 .field{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:10px 0 4px}
-input[type=text],input[type=email]{
+input[type=text],input[type=email],input[type=password]{
   width:100%;height:44px;border-radius:var(--radius-md);
   background:color-mix(in oklab, var(--elev) 80%, transparent);
   border:1px solid var(--line);padding:0 12px;
+  color:var(--fg);
 }
 .toggle{display:flex;align-items:flex-start;gap:8px;margin:12px 0;font-size:13px;color:var(--fg);line-height:1.35}
 .toggle input{margin-top:3px}
@@ -444,3 +445,94 @@ img.brand{
 .ghost.danger{border-color:#fca5a5;color:#fecdd3}
 .seat-kick{min-height:32px;padding:4px 10px;font-size:11px}
 .pad .buzzbar .ghost#quitBar{min-height:44px}
+
+
+/* Japanese dojo stage (profile + placement) */
+.dojo-stage{
+  position:relative;
+  margin:0 -4px;
+  padding:12px 10px 10px;
+  border-radius:12px;
+  overflow:hidden;
+  background:
+    linear-gradient(180deg, rgba(20,12,8,.55), rgba(10,8,6,.72)),
+    repeating-linear-gradient(90deg,
+      #6b3f24 0 14px,
+      #5a341c 14px 28px),
+    linear-gradient(180deg, #3d2918, #1a120c);
+  border:1px solid rgba(212, 175, 55, 0.35);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.06), 0 8px 24px rgba(0,0,0,.35);
+}
+.dojo-stage::before{
+  content:"";
+  position:absolute;inset:0;pointer-events:none;opacity:.22;
+  background:
+    repeating-linear-gradient(0deg,
+      transparent 0 10px,
+      rgba(245,230,200,.12) 10px 11px);
+}
+.dojo-stage > *{position:relative;z-index:1}
+.dojo-stage .dir-copy,
+.dojo-stage .meta,
+.dojo-stage .dojo-q,
+.dojo-stage .belt-lab,
+.dojo-stage .field{color:#f3e6d0}
+.dojo-stage .meta{opacity:.9}
+.dojo-stage input[type=text],
+.dojo-stage input[type=email],
+.dojo-stage input[type=password]{
+  background:rgba(18,12,8,.72);
+  border-color:rgba(212,175,55,.35);
+  color:#f8f0e4;
+}
+.acc.open:has(.dojo-stage){
+  border-color:rgba(212,175,55,.4);
+  background:
+    linear-gradient(180deg, rgba(40,24,14,.55), rgba(16,10,8,.7)),
+    color-mix(in oklab, var(--elev) 60%, transparent);
+}
+
+/* Karate belt progression strip */
+.belt-strip{
+  display:grid;grid-template-columns:repeat(8,1fr);gap:3px;
+  margin:6px 0 4px;padding:4px;border-radius:8px;
+  background:rgba(0,0,0,.28);
+}
+.belt-seg{
+  height:10px;border-radius:3px;
+  background:var(--belt,#eee);
+  opacity:.35;border:1px solid rgba(255,255,255,.12);
+}
+.belt-seg.on{
+  opacity:1;
+  box-shadow:0 0 0 1px rgba(255,255,255,.35), 0 0 10px color-mix(in oklab, var(--belt) 55%, transparent);
+  transform:scaleY(1.25);
+}
+.belt-lab{
+  margin:0 0 8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:#f3e6d0;font-weight:600;
+}
+
+/* Placement medals */
+.medal-row{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}
+.medal{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 10px 5px 6px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(0,0,0,.28);
+  opacity:.4;font-size:11px;font-weight:700;letter-spacing:.04em;
+  color:#f3e6d0;text-transform:uppercase;
+}
+.medal i{
+  width:18px;height:18px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #fff8, transparent 45%), var(--medal,#cd7f32);
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:inset 0 -2px 3px rgba(0,0,0,.35);
+}
+.medal.on{
+  opacity:1;
+  border-color:color-mix(in oklab, var(--medal) 65%, white);
+  box-shadow:0 0 12px color-mix(in oklab, var(--medal) 45%, transparent);
+}
+.medal b{font-weight:700}
+
