@@ -12,13 +12,13 @@ Open **[directions.html](./directions.html)** (also `/directions`) on its own �
 
 The television is a **web page**, not an AirPlay transmitter. Fast Answer does not send AirPlay, Chromecast, or Smart View from inside the game. The “TV” is whichever screen opens the URL (smart TV browser, Apple TV Safari / AirPlay mirror, Chromecast “Cast tab”, HDMI, Fire TV Silk, etc.).
 
-**Recommended flow:** open https://fast-answer-seven.vercel.app on the big screen → turn **On Screen** on → create/join a room → phones scan the QR or open `/?role=pad&room=CODE`.
+**Recommended flow (Silk / Fire TV):** open https://fast-answer-seven.vercel.app (or `?tv=1`) on the set. The TV **creates and owns** the room. Expand the corner **Join** chip for QR/code → phones open `/?role=pad&room=CODE` → each pad **Buzz**es to ready → when every pad is ready, the show starts on the TV.
 
-1. **Best** — open Fast Answer in the TV’s own browser. Turn **On Screen** on. The set is the host.
-2. **AirPlay** — iPhone/Mac Screen Mirroring to Apple TV, or Safari on Apple TV if available. Mirroring works; there is no special Fast Answer AirPlay receiver API.
+1. **Best** — open Fast Answer in the TV’s own browser (Silk auto-enables On Screen). The set owns the room.
+2. **AirPlay** — iPhone/Mac Screen Mirroring to Apple TV, or Safari on Apple TV if available. Prefer the set’s own browser so the TV tab owns sync.
 3. **Chromecast** — Cast the Chrome tab from a laptop. **HDMI** from a laptop is the same idea.
 
-Phones never receive the TV picture. Same Wi‑Fi helps room sync; BroadcastChannel syncs same-origin tabs; serverless rooms sync TV+phones on one Vercel instance. AirPlay can put the show on the set; it does not turn phones into buzzers.
+Phones never receive the TV picture. Flow is hidden on the TV display. Same Wi‑Fi helps room sync; BroadcastChannel syncs same-origin tabs; serverless rooms sync TV+phones on one Vercel instance.
 
 
 ## Lobby
@@ -26,11 +26,11 @@ Phones never receive the TV picture. Same Wi‑Fi helps room sync; BroadcastChan
 One page. Collapsible menus. Jeremy and the studio stay live behind the card.
 
 - **Profile** — name, email, photo. Karate belt from career points. Bronze / Silver / Gold from the dojo.
-- **Dojo** — ten tap questions, no buzz. Adaptive from Hard. Places you for three months. Play stays gated until placement is current.
-- **Room** — 2 to 12 seats. You plus celebrity first-name bots (Oprah, Elton, Serena…). **On Screen** opens a TV room; phones join as pads and replace bots.
-- **Set** — Jeremy height and studio angle, live on this page.
+- **Dojo** — ten placement questions. Prompt for 10s, then answers. No name/points on the Dojo card. Places you for three months.
+- **Room** — 2 to 12 seats. TV owns the room on On Screen / Silk / `?tv=1`. Phones join as pads (corner QR), Buzz to ready, all-buzz starts the show. Empty seats are celebrity bots.
+- **Set** — Jeremy height and studio angle, live on this phone (sliders work on mobile).
 
-Discreet **Flow** + © GMG Brand Label sit at the bottom. Flow on GMGbrand stays password-gated.
+Discreet **Flow** + © GMG Brand Label sit at the bottom on phone/desktop (hidden on TV). Flow on GMGbrand stays password-gated.
 
 ## Play
 

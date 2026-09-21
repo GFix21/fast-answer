@@ -297,14 +297,66 @@ img.brand{
   .qcard{max-width:100%}
   .lobby{grid-template-columns:1fr}
   .lobby-copy{padding-right:28vw}
-  .lobby .host{position:absolute;right:0;top:14%;bottom:auto;max-height:32%;z-index:1;opacity:.72}
-  .lobby .host img{max-width:30vw;height:20vh;max-height:140px}
+  .lobby .host{position:absolute;right:0;top:14%;bottom:auto;max-height:42%;z-index:1;opacity:.8;pointer-events:none}
+  .lobby .host img{max-width:34vw;height:var(--host-h);max-height:42vh}
   .answers{max-height:30vh}
   img.brand{height:52px;max-height:7vh}
   .stage.directions img.brand{display:none}
   .dojo-ans .ans{min-height:48px;font-size:13px}
+  .set-dock{width:100%}
+  .slider-lab{width:100%;justify-content:space-between}
+  .slider-lab input[type=range]{flex:1;width:auto;min-width:0;max-width:none}
 }
 @media (prefers-reduced-motion:reduce){
   .buzzer.lit{animation:none}
   .primary,.ghost,.buzzer{transition:none}
 }
+
+/* Host / studio sliders — touch-draggable on phones */
+.dock input[type=range],
+.slider-lab input[type=range],
+#pc,#hs,#st{
+  touch-action:none;
+  -webkit-appearance:none;
+  appearance:none;
+  height:28px;
+  background:transparent;
+  accent-color:var(--accent);
+}
+.dock input[type=range]::-webkit-slider-runnable-track,
+.slider-lab input[type=range]::-webkit-slider-runnable-track{
+  height:4px;border-radius:999px;background:var(--line);
+}
+.dock input[type=range]::-webkit-slider-thumb,
+.slider-lab input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--accent);border:0;margin-top:-9px;
+}
+.slider-lab{display:flex;align-items:center;gap:10px;width:100%;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.slider-lab input[type=range]{flex:1;min-width:120px;width:auto;max-width:none}
+.set-dock{flex-direction:column;align-items:stretch;gap:12px;width:100%;pointer-events:auto;position:relative;z-index:6}
+.dock.in-acc{pointer-events:auto}
+
+/* Collapsible corner QR on TV */
+.qr-chip{
+  position:fixed;z-index:7;
+  right:10px;bottom:calc(10px + env(safe-area-inset-bottom));
+  display:flex;flex-direction:column;align-items:flex-end;gap:6px;
+  max-width:min(42vw,200px);
+}
+.qr-toggle{
+  border:1px solid var(--line);
+  background:color-mix(in oklab, var(--elev) 88%, transparent);
+  color:var(--mut);border-radius:999px;
+  padding:6px 12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:600;min-height:32px;
+}
+.qr-chip.open .qr-toggle{color:var(--fg)}
+.qr-chip .qr.corner{width:120px;height:120px;background:#fff;border-radius:8px;padding:4px}
+.qr-code{margin:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);text-align:right}
+.qr-code b{color:var(--fg)}
+.stage.tv .foot .flow{display:none}
+.buzzer.ready-on{filter:grayscale(.2);opacity:.85}
+.ready-seats{margin-top:10px}
+.pad .qr-chip{display:none}

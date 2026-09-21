@@ -58,6 +58,19 @@ export default async function handler(req, res) {
     cur.state = cur.state || {};
     cur.state.lastWager = { id: body.id, side: body.side, amount: body.amount, at: Date.now() };
     rooms.set(code, cur);
+  } else if (body.action === "ready") {
+    cur.guests = cur.guests || [];
+    const id = body.id || ("p-" + String(body.name || "pad"));
+    let guest = cur.guests.find((g) => g.id === id || g.name === body.name);
+    if (!guest) {
+      guest = { name: body.name || "Player", id, ready: true };
+      cur.guests.push(guest);
+    } else {
+      guest.ready = true;
+    }
+    cur.state = cur.state || {};
+    cur.state.readyIds = { ...(cur.state.readyIds || {}), [id]: true };
+    rooms.set(code, cur);
   }
   res.status(200).end(JSON.stringify(rooms.get(code)));
 }
