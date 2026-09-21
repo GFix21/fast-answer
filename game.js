@@ -347,10 +347,6 @@ function playHTML() {
       <span class="chip">${escapeHtml(state.name)} <b>$${state.score}</b></span>
       ${state.room ? `<span class="chip">ROOM ${escapeHtml(state.room)}</span>` : ""}
       ${state.buzzBy ? `<span class="chip">BUZZ ${escapeHtml(state.buzzBy)}</span>` : ""}
-      ${!state.onScreen ? `<div class="dock">
-        <label>Jeremy <input id="hs" type="range" min="24" max="62" value="${state.hostH}"/></label>
-        <label>Studio <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}"/></label>
-      </div>` : ""}
       <button class="word" id="osToggle" type="button">${state.onScreen ? "On Screen" : "Single page"}</button>
       <button class="word" id="quit" type="button">Lobby</button>
     </div>
@@ -374,6 +370,10 @@ function playHTML() {
       return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
     }).join("")}</div>` : `<div></div>`}
     <div class="buzzbar">
+      ${!state.onScreen ? `<div class="dock">
+        <label>Jeremy <input id="hs" type="range" min="24" max="62" value="${state.hostH}"/></label>
+        <label>Studio <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}"/></label>
+      </div>` : ""}
       ${(pad || !tv) ? `<button class="buzzer ${canBuzz ? "lit" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>Buzz</button>` : ""}
       ${(pad && state.phase === "answer") ? `<button class="ghost mic" id="mic" type="button">Speak the answer</button>` : ""}
       ${tv && state.room ? `<img class="qr" alt="Join on your phone" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(shareUrl())}"/>` : ""}

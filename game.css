@@ -128,7 +128,7 @@ button:disabled{cursor:not-allowed}
 .mic{min-height:44px}
 
 .dock{
-  display:flex;align-items:center;gap:10px;flex-wrap:nowrap;
+  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:nowrap;
   font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);
 }
 .dock label{display:flex;align-items:center;gap:6px;white-space:nowrap}
