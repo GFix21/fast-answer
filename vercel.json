@@ -3,18 +3,38 @@
     {
       "source": "/((?!api/).*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=120" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=120"
+        }
       ]
     },
     {
       "source": "/api/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "no-store" }
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/flow", "destination": "/flow/index.html" },
-    { "source": "/flow/", "destination": "/flow/index.html" }
+    {
+      "source": "/directions",
+      "destination": "/directions.html"
+    },
+    {
+      "source": "/directions/",
+      "destination": "/directions.html"
+    },
+    {
+      "source": "/flow",
+      "destination": "/flow/index.html"
+    },
+    {
+      "source": "/flow/",
+      "destination": "/flow/index.html"
+    }
   ]
 }

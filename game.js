@@ -882,7 +882,7 @@ function rulesHTML() {
       <li><b>Dojo</b> — ten tap questions, no buzz. Bronze / Silver / Gold for three months. Belts rise with career points.</li>
       <li><b>Room</b> — 2 to 12 seats. Phones join the TV over On Screen. Empty seats are celebrity bots.</li>
     </ul>
-    <a class="word dir-full" href="./directions.html">Full directions</a>
+    <a class="word dir-full" href="./directions.html">Full directions →</a>
     <button class="primary" id="rulesX" type="button">Close</button>
   </div>`;
 }
@@ -916,33 +916,35 @@ function directionsHTML() {
         <h1 class="sr-only">Directions and Rules</h1>
         <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
         <div class="accord">
-          ${dirAcc("tv", "Television", "<small>Not AirPlay</small>", `
-            <p class="dir-copy">Two connections, not one. The TV shows the show. Phones buzz. Fast Answer never AirPlays itself.</p>
+          ${dirAcc("tv", "TV / AirPlay / Cast", "<small>Web page</small>", `
+            <p class="dir-copy">Fast Answer is a <b>web page</b>. The “TV” is whichever screen opens the URL — smart TV browser, Apple TV (Safari or AirPlay mirror), Chromecast “Cast tab”, HDMI from a laptop, Fire TV Silk, a projector, etc. There is no special Fast Answer AirPlay API.</p>
+            <p class="dir-copy"><b>Recommended.</b> Open <code>https://fast-answer-seven.vercel.app</code> on the big screen → turn <b>On Screen</b> on → create or join a room → phones scan the QR or open <code>/?role=pad&amp;room=CODE</code>.</p>
             <ol class="dir-ol">
-              <li><b>Picture.</b> Open Fast Answer on the set (TV browser), or AirPlay / Chromecast / HDMI this tab onto the set. Turn <b>On Screen</b> on. That screen is the host — Jeremy, questions, no buzzer.</li>
-              <li><b>Buzzers.</b> Scan the QR (or type the room code) on each phone. That pad is a separate page: answers on top, Buzz at the bottom. Phones do not receive the TV picture.</li>
-              <li><b>AirPlay</b> is only a way to get the host page onto a TV that has no browser. It does not join phones. Pads always join by QR.</li>
+              <li><b>Best — TV browser.</b> Open the URL on the set itself (Samsung, LG, Fire TV Silk, Apple TV Safari if available). That tab is the host: Jeremy, questions, scores — no buzzer.</li>
+              <li><b>AirPlay.</b> On iPhone/Mac use Screen Mirroring / AirPlay to Apple TV, <i>or</i> open Safari on Apple TV and type the URL. Mirroring works. Native AirPlay “receiver” for arbitrary web apps is not a Fast Answer feature — you are just putting this page on the set.</li>
+              <li><b>Chromecast / Google Cast.</b> From a laptop Chrome tab, Cast tab to the TV. HDMI from a laptop is the same idea.</li>
+              <li><b>Buzzers.</b> Phones never receive the TV picture. Each pad is a separate page (answers on top, Buzz at the bottom). Scan the QR or open the pad URL. Same Wi‑Fi helps room sync. Same-origin tabs sync over BroadcastChannel; serverless rooms sync TV + phones on one Vercel instance.</li>
             </ol>
           `)}
-          ${dirAcc("screen", "On Screen", "<small>TV + pads</small>", `
-            <p class="dir-copy"><b>On Screen off</b> — one locked page. Jeremy, the question, the answers, and the buzzer sit together. Drag Jeremy and Studio in Set. Local play: you plus celebrity bots.</p>
+          ${dirAcc("screen", "On Screen vs single-device", "<small>TV + pads</small>", `
+            <p class="dir-copy"><b>On Screen off</b> — one locked page. Jeremy, the question, the answers, and the buzzer sit together. Drag Jeremy and Studio in <b>Set</b>. Local play: you plus celebrity bots.</p>
             <p class="dir-copy"><b>On Screen on</b> — this display is the television. It hides the buzzer. Phones become pads. Empty seats stay celebrity bots until a pad takes them, up to 12.</p>
-            <p class="dir-copy">After a buzz, the pad can <b>speak</b> the answer or tap A–D. Space bar buzzes on a keyboard. Keys 1–4 or A–D pick.</p>
+            <p class="dir-copy"><b>On-screen features.</b> Jeremy host poses, studio backgrounds, first-buzz lockout, then speak / tap A–D (or keys 1–4 / A–D). Space bar buzzes on a keyboard. Pads keep answers on top and a large Buzz at the bottom.</p>
           `)}
           ${dirAcc("room", "Multiplayer", "<small>2–12</small>", `
             <p class="dir-copy">Room holds <b>2 to 12</b> seats. You take one. Empty seats fill with celebrity first names — Oprah, Elton, Serena, Usain, Adele, Idris, Keanu, Zendaya, Rihanna, Denzel, Meryl — each with its own skill and buzz timing.</p>
-            <p class="dir-copy">Turn On Screen on. Share the QR or the code. Each phone opens the pad page and joins. Pads <b>replace bots</b> as they arrive. The TV stays the picture; the phones stay the buzzers.</p>
-            <p class="dir-copy">Two tabs on the same device also sync. A pad never needs AirPlay.</p>
+            <p class="dir-copy"><b>Create a room</b> with On Screen on. The TV prints a QR and a short code. Each phone scans the QR or opens <code>/?role=pad&amp;room=CODE</code>. Pads <b>replace bots</b> as they arrive. The TV stays the picture; the phones stay the buzzers.</p>
+            <p class="dir-copy">Two tabs on the same origin also sync over BroadcastChannel. Serverless <code>api/rooms.js</code> keeps TV + nearby phones in sync on one Vercel instance. A pad never needs AirPlay.</p>
           `)}
-          ${dirAcc("points", "Points", "<small>37 questions</small>", `
-            <p class="dir-copy">One show is <b>37 questions</b>. Ten seconds to read, then buzz. First buzz answers.</p>
+          ${dirAcc("points", "Points & scoring", "<small>37Q deal</small>", `
+            <p class="dir-copy">One show deals <b>37 questions</b> from the bank: <b>20 / 10 / 5 / 2</b> Easy · Hard · Difficult · Extreme. Ten seconds to read, then buzz. First buzz answers.</p>
             <div class="points-grid">
               <span>20 Easy</span><b>$100</b>
               <span>10 Hard</span><b>$500</b>
               <span>5 Difficult</span><b>$1,000</b>
               <span>2 Extreme</span><b>$5,000</b>
             </div>
-            <p class="dir-copy">A miss on a regular question is <b>$0</b>. You do not lose points — unless MAP is armed.</p>
+            <p class="dir-copy">A miss on a regular question is <b>$0</b> — you do not lose points. <b>MAP</b> during the read can put stakes at risk. <b>Lockdown</b> hits twice per show (see below).</p>
           `)}
           ${dirAcc("map", "MAP", "<small>During the read</small>", `
             <p class="dir-copy">During the 10-second read, tap a rival once. Stake = this question. If you buzz first and hit it, you bank <b>double</b> and they lose the stake. Miss, and you lose the stake. If someone else buzzes, MAP is off.</p>
@@ -955,7 +957,7 @@ function directionsHTML() {
           `)}
         </div>
         <div class="row">
-          <a class="primary" href="./index.html">Back to lobby</a>
+          <a class="primary" href="./index.html">Lobby / Play</a>
         </div>
       </div>
       <div class="host" style="--host-h:${state.hostH}vh"><img src="${POSE.idle}" alt="Jeremy"/></div>
@@ -1153,7 +1155,7 @@ function lobbyHTML() {
       <div class="logo">Fast Answer!<small>The game show that flies…?</small></div>
       <div class="grow"></div>
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
-      <a class="word" href="./directions.html">Directions</a>
+      <a class="word" href="./directions.html">Directions &amp; Rules</a>
     </div>
     <div class="lobby">
       <div class="lobby-copy">
