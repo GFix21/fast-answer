@@ -1,6 +1,6 @@
 {
   "weekKey": "2026-W39",
-  "publishedAt": "2026-09-21T13:38:55.432Z",
+  "publishedAt": "2026-09-21T18:45:50.229Z",
   "source": "/workspace/fast-answer/banks/weekly/2026-W39.json",
   "counts": {
     "easy": 40,
@@ -9,5 +9,25 @@
     "extreme": 6
   },
   "questionCount": 96,
-  "wroteToDisk": true
+  "wroteToDisk": true,
+  "locales": {
+    "en": {
+      "easy": 40,
+      "hard": 40,
+      "difficult": 10,
+      "extreme": 6
+    },
+    "fr": {
+      "easy": 40,
+      "hard": 40,
+      "difficult": 10,
+      "extreme": 6
+    },
+    "de": {
+      "easy": 40,
+      "hard": 40,
+      "difficult": 10,
+      "extreme": 6
+    }
+  }
 }

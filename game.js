@@ -28,6 +28,8 @@ const POSE = {
 const TITLE_3D = "./promo/fast-answer-3d-flying.jpg";
 const FLOW_URL = "https://gmgbrand.vercel.app/flow";
 const PROFILE_KEY = "fa-profile-v1";
+const RECENT_Q_KEY = "fa-recent-qids-v1";
+const RECENT_Q_MAX = 240;
 const READ_S = 10;
 const POINTS = { easy: 100, hard: 500, difficult: 1000, extreme: 5000 };
 const DEAL = { easy: 20, hard: 10, difficult: 5, extreme: 2 };
@@ -283,13 +285,51 @@ function shuffle(a) {
   }
   return x;
 }
+/** Shuffle A–D at deal time so banks that store the key on A are not biased. */
+function shuffleQuestionChoices(q) {
+  if (!q || !Array.isArray(q.choices) || q.choices.length < 2) return q;
+  const correct = q.choices[q.correctIndex];
+  const choices = shuffle(q.choices);
+  let correctIndex = choices.indexOf(correct);
+  if (correctIndex < 0) correctIndex = 0;
+  return { ...q, choices, correctIndex };
+}
+function loadRecentQuestionIds() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(RECENT_Q_KEY) || "[]");
+    return Array.isArray(raw) ? raw.map(String) : [];
+  } catch {
+    return [];
+  }
+}
+function rememberDealtIds(ids) {
+  const incoming = (ids || []).map(String).filter(Boolean);
+  if (!incoming.length) return;
+  const prev = loadRecentQuestionIds().filter((id) => !incoming.includes(id));
+  const next = [...incoming, ...prev].slice(0, Math.max(RECENT_Q_MAX, state.questions.length || 0));
+  try {
+    localStorage.setItem(RECENT_Q_KEY, JSON.stringify(next));
+  } catch { /* ignore quota */ }
+}
+/** Prefer unseen bank ids across back-to-back games; fall back to least-recent. */
+function sampleByTier(all, tier, need, recentSet) {
+  const pool = all.filter((q) => q.tier === tier);
+  if (!pool.length || need <= 0) return [];
+  const fresh = shuffle(pool.filter((q) => !recentSet.has(q.id)));
+  const used = pool.filter((q) => recentSet.has(q.id));
+  // recent list is newest-first; prefer higher index (older / less recent)
+  const recentOrder = loadRecentQuestionIds();
+  const rank = new Map(recentOrder.map((id, i) => [id, i]));
+  used.sort((a, b) => (rank.get(b.id) ?? 9999) - (rank.get(a.id) ?? 9999));
+  return [...fresh, ...used].slice(0, need).map(shuffleQuestionChoices);
+}
 function deal(all) {
-  const by = (t) => shuffle(all.filter((q) => q.tier === t));
+  const recent = new Set(loadRecentQuestionIds());
   return [
-    ...by("easy").slice(0, DEAL.easy),
-    ...by("hard").slice(0, DEAL.hard),
-    ...by("difficult").slice(0, DEAL.difficult),
-    ...by("extreme").slice(0, DEAL.extreme),
+    ...sampleByTier(all, "easy", DEAL.easy, recent),
+    ...sampleByTier(all, "hard", DEAL.hard, recent),
+    ...sampleByTier(all, "difficult", DEAL.difficult, recent),
+    ...sampleByTier(all, "extreme", DEAL.extreme, recent),
   ];
 }
 function pickLockdownSlots() {
@@ -301,10 +341,16 @@ function pickLockdownSlots() {
   return [a, b].sort((x, y) => x - y);
 }
 function leftoverQs(preferHard = false) {
+  const recent = new Set(loadRecentQuestionIds());
   const pool = state.questions.filter((q) => !state.spent.has(q.id));
-  if (!preferHard) return shuffle(pool);
-  const hard = shuffle(pool.filter((q) => q.tier === "difficult" || q.tier === "extreme"));
-  const rest = shuffle(pool.filter((q) => q.tier !== "difficult" && q.tier !== "extreme"));
+  const rankFresh = (list) => {
+    const fresh = shuffle(list.filter((q) => !recent.has(q.id)));
+    const used = shuffle(list.filter((q) => recent.has(q.id)));
+    return [...fresh, ...used].map(shuffleQuestionChoices);
+  };
+  if (!preferHard) return rankFresh(pool);
+  const hard = rankFresh(pool.filter((q) => q.tier === "difficult" || q.tier === "extreme"));
+  const rest = rankFresh(pool.filter((q) => q.tier !== "difficult" && q.tier !== "extreme"));
   return [...hard, ...rest];
 }
 function lockdownPointsNow(ld = state.lockdown) {
@@ -949,6 +995,7 @@ function startLockdown(playerId) {
     return;
   }
   qs.forEach((q) => state.spent.add(q.id));
+  rememberDealtIds(qs.map((q) => q.id));
   state.wagerDraft = null;
   state.lockdown = {
     phase: "wager",
@@ -2399,6 +2446,7 @@ function startGame() {
   seatPlayers();
   state.qs = deal(state.questions);
   state.spent = new Set(state.qs.map((q) => q.id));
+  rememberDealtIds(state.qs.map((q) => q.id));
   state.i = 0;
   state.lockdownAt = pickLockdownSlots();
   state.lockdown = null;

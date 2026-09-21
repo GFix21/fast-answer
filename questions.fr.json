@@ -7,8 +7,8 @@
     "prompt": "Quel slogan de campagne est célèbrement associé à Dwight D. Eisenhower ?",
     "choices": [
       "I Like Ike",
-      "Tippecanoe and Tyler Too",
       "Morning in America",
+      "Tippecanoe and Tyler Too",
       "Yes We Can"
     ],
     "correctIndex": 0,
@@ -21,12 +21,12 @@
     "categoryTitle": "Maison-Blanche en temps de guerre",
     "prompt": "Quel président des États-Unis a dirigé le pays pendant la plus grande partie de la Seconde Guerre mondiale ?",
     "choices": [
-      "Franklin D. Roosevelt",
       "Harry S. Truman",
-      "Woodrow Wilson",
-      "Herbert Hoover"
+      "Franklin D. Roosevelt",
+      "Herbert Hoover",
+      "Woodrow Wilson"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -37,9 +37,9 @@
     "prompt": "Quel petit type de radio est devenu un hit auprès des adolescents dans les années 1950 ?",
     "choices": [
       "Radio à transistors",
-      "Radio boule de cristal",
       "Grille-pain à vide",
-      "Boombox huit pistes"
+      "Boombox huit pistes",
+      "Radio boule de cristal"
     ],
     "correctIndex": 0,
     "banterHint": "Non, pas une boule de cristal."
@@ -51,12 +51,12 @@
     "categoryTitle": "Coin du King",
     "prompt": "Quel chanteur est largement surnommé le King of Rock and Roll ?",
     "choices": [
-      "Elvis Presley",
-      "Chuck Berry",
       "Buddy Holly",
-      "Little Richard"
+      "Little Richard",
+      "Elvis Presley",
+      "Chuck Berry"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -66,12 +66,12 @@
     "categoryTitle": "Chaos cartographique",
     "prompt": "Quelle est la capitale du Canada ?",
     "choices": [
-      "Ottawa",
       "Toronto",
       "Montréal",
-      "Vancouver"
+      "Vancouver",
+      "Ottawa"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -81,12 +81,12 @@
     "categoryTitle": "Rayon Beat",
     "prompt": "Qui a écrit le roman de la Beat Generation On the Road ?",
     "choices": [
-      "Jack Kerouac",
       "Allen Ginsberg",
-      "William S. Burroughs",
-      "Neal Cassady"
+      "Neal Cassady",
+      "Jack Kerouac",
+      "William S. Burroughs"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -96,12 +96,12 @@
     "categoryTitle": "Un petit pas",
     "prompt": "Qui a été la première personne à marcher sur la Lune ?",
     "choices": [
+      "John Glenn",
       "Neil Armstrong",
       "Buzz Aldrin",
-      "Youri Gagarine",
-      "John Glenn"
+      "Youri Gagarine"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -111,12 +111,12 @@
     "categoryTitle": "Horloge Apollo",
     "prompt": "En quelle année Apollo 11 s’est-il posé sur la Lune ?",
     "choices": [
-      "1969",
       "1965",
       "1972",
-      "1961"
+      "1961",
+      "1969"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -126,12 +126,12 @@
     "categoryTitle": "Folklore festivalier",
     "prompt": "Dans quel État américain s’est tenu le festival de Woodstock en 1969 ?",
     "choices": [
-      "New York",
       "Californie",
-      "Texas",
-      "Floride"
+      "Floride",
+      "New York",
+      "Texas"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -142,9 +142,9 @@
     "prompt": "Quel groupe britannique a fait sensation aux États-Unis dans The Ed Sullivan Show en 1964 ?",
     "choices": [
       "The Beatles",
-      "The Rolling Stones",
       "The Who",
-      "The Kinks"
+      "The Kinks",
+      "The Rolling Stones"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -156,12 +156,12 @@
     "categoryTitle": "Banter sur le pont",
     "prompt": "Qui commandait le vaisseau Enterprise dans la série originale Star Trek ?",
     "choices": [
-      "James T. Kirk",
       "Jean-Luc Picard",
+      "Han Solo",
       "Spock",
-      "Han Solo"
+      "James T. Kirk"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -172,9 +172,9 @@
     "prompt": "Que signifie l’abréviation ABS dans les systèmes de sécurité automobile ?",
     "choices": [
       "Anti-lock Braking System",
-      "Automatic Boost System",
+      "Advanced Battery Switch",
       "Axle Balance Sensor",
-      "Advanced Battery Switch"
+      "Automatic Boost System"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -186,12 +186,12 @@
     "categoryTitle": "Jour un du câble",
     "prompt": "Quelle chaîne a été lancée en 1981 avec « Video Killed the Radio Star » ?",
     "choices": [
-      "MTV",
       "VH1",
+      "CNN",
       "Nickelodeon",
-      "CNN"
+      "MTV"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -202,8 +202,8 @@
     "prompt": "Dans Retour vers le futur, de quoi Doc Brown a-t-il besoin de 1,21 gigawatt ?",
     "choices": [
       "D’électricité",
-      "De poussière de plutonium",
       "De peaux de banane",
+      "De poussière de plutonium",
       "De café"
     ],
     "correctIndex": 0,
@@ -217,11 +217,11 @@
     "prompt": "Quel présentateur est célèbrement le plus petit du trio Top Gear / The Grand Tour ?",
     "choices": [
       "James May",
-      "Richard Hammond",
+      "The Stig",
       "Jeremy Clarkson",
-      "The Stig"
+      "Richard Hammond"
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "banterHint": "Hamster. Oui. On sait."
   },
   {
@@ -231,12 +231,12 @@
     "categoryTitle": "Coin du Captain Slow",
     "prompt": "Quel présentateur de The Grand Tour est surnommé Captain Slow ?",
     "choices": [
-      "James May",
       "Richard Hammond",
+      "Abie",
       "Jeremy Clarkson",
-      "Abie"
+      "James May"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -246,12 +246,12 @@
     "categoryTitle": "Fête des blocs",
     "prompt": "Quel jeu de puzzle aux blocs tombants a été créé par Alexey Pajitnov ?",
     "choices": [
-      "Tetris",
       "Pac-Man",
+      "Démineur",
       "Snake",
-      "Démineur"
+      "Tetris"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -262,8 +262,8 @@
     "prompt": "Quelle est la ville natale des Simpson ?",
     "choices": [
       "Springfield",
-      "Shelbyville",
       "Quahog",
+      "Shelbyville",
       "South Park"
     ],
     "correctIndex": 0,
@@ -291,12 +291,12 @@
     "categoryTitle": "Écouteurs blancs",
     "prompt": "En quelle année Apple a-t-il lancé le premier iPod ?",
     "choices": [
-      "2001",
       "1998",
-      "2005",
-      "2007"
+      "2001",
+      "2007",
+      "2005"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -307,9 +307,9 @@
     "prompt": "Dans Star Wars, de quelle couleur est le premier sabre laser de Luke (Un nouvel espoir) ?",
     "choices": [
       "Bleu",
-      "Vert",
       "Rouge",
-      "Violet"
+      "Violet",
+      "Vert"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -322,9 +322,9 @@
     "prompt": "Où est basée GMG Brand Label ?",
     "choices": [
       "Montréal, Canada",
-      "Toronto, Canada",
       "Paris, France",
-      "Berlin, Allemagne"
+      "Berlin, Allemagne",
+      "Toronto, Canada"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -336,12 +336,12 @@
     "categoryTitle": "Voie facile de Gigi",
     "prompt": "DJ Gigi est l’artiste phare de quel label montréalais ?",
     "choices": [
-      "GMG Brand Label",
       "Warp Records",
+      "Def Jam",
       "Sub Pop",
-      "Def Jam"
+      "GMG Brand Label"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -351,12 +351,12 @@
     "categoryTitle": "Partie de recherche",
     "prompt": "Quelle entreprise a lancé un moteur de recherche nommé Google à la fin des années 1990 ?",
     "choices": [
-      "Google",
-      "Yahoo",
       "AltaVista",
-      "Ask Jeeves"
+      "Ask Jeeves",
+      "Google",
+      "Yahoo"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": "Oui, c’était la question facile."
   },
   {
@@ -366,12 +366,12 @@
     "categoryTitle": "Bases du Battle Bus",
     "prompt": "Fortnite est avant tout quel type de jeu ?",
     "choices": [
-      "Battle royale",
       "Aventure textuelle",
       "Simulateur d’échecs",
-      "Logiciel fiscal"
+      "Logiciel fiscal",
+      "Battle royale"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -382,8 +382,8 @@
     "prompt": "Quelle entreprise suédoise est surtout connue pour l’appli de streaming musical Spotify ?",
     "choices": [
       "Spotify",
-      "Netflix",
       "Skype",
+      "Netflix",
       "IKEA"
     ],
     "correctIndex": 0,
@@ -411,12 +411,12 @@
     "categoryTitle": "Capitale express",
     "prompt": "Quelle est la capitale de la France ?",
     "choices": [
-      "Paris",
-      "Lyon",
       "Marseille",
-      "Nice"
+      "Nice",
+      "Lyon",
+      "Paris"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -427,8 +427,8 @@
     "prompt": "La musique de DJ Gigi est le plus souvent associée à quelle ambiance de ville ?",
     "choices": [
       "Nuits montréalaises",
-      "Granges country de Nashville",
       "Uniquement des valses viennoises",
+      "Granges country de Nashville",
       "Retraites silencieuses dans le désert"
     ],
     "correctIndex": 0,
@@ -441,12 +441,12 @@
     "categoryTitle": "MCU 101",
     "prompt": "L’univers cinématographique Marvel de quel studio a commencé avec Iron Man (2008) ?",
     "choices": [
-      "Marvel Studios / Disney",
       "Pixar uniquement",
       "A24",
-      "Studio Ghibli"
+      "Studio Ghibli",
+      "Marvel Studios / Disney"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -456,12 +456,12 @@
     "categoryTitle": "Bouton Play",
     "prompt": "YouTube est avant tout une plateforme pour quoi ?",
     "choices": [
-      "La vidéo en ligne",
       "Uniquement des livres imprimés",
+      "Uniquement le pressage de vinyle",
       "Uniquement des cadrans radio AM",
-      "Uniquement le pressage de vinyle"
+      "La vidéo en ligne"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -471,12 +471,12 @@
     "categoryTitle": "Le tactile d’abord",
     "prompt": "Un iPad se décrit le mieux comme quel type d’appareil ?",
     "choices": [
-      "Tablette tactile",
-      "Grille-pain",
       "Téléphone fixe",
+      "Grille-pain",
+      "Tablette tactile",
       "Projecteur de cinéma"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -487,8 +487,8 @@
     "prompt": "Dans Le Monde de Nemo, quel type de poisson est Nemo ?",
     "choices": [
       "Poisson-clown",
-      "Requin",
       "Poisson rouge",
+      "Requin",
       "Thon"
     ],
     "correctIndex": 0,
@@ -502,8 +502,8 @@
     "prompt": "Sur quelle planète vivons-nous ?",
     "choices": [
       "La Terre",
-      "Mars",
       "Jupiter",
+      "Mars",
       "Vénus"
     ],
     "correctIndex": 0,
@@ -516,12 +516,12 @@
     "categoryTitle": "Logique de brique",
     "prompt": "Les briques LEGO sont surtout célèbres comme quoi ?",
     "choices": [
-      "Jouets de construction en plastique emboîtables",
       "Bonbons comestibles",
       "Moteurs de voiture",
-      "Marques de peinture"
+      "Marques de peinture",
+      "Jouets de construction en plastique emboîtables"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -531,12 +531,12 @@
     "categoryTitle": "Quatre roues",
     "prompt": "Combien de roues a une voiture typique ?",
     "choices": [
+      "Une",
       "Quatre",
       "Deux",
-      "Huit",
-      "Une"
+      "Huit"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -547,9 +547,9 @@
     "prompt": "Quelle est la capitale du Japon ?",
     "choices": [
       "Tokyo",
-      "Osaka",
       "Kyoto",
-      "Nagoya"
+      "Nagoya",
+      "Osaka"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -561,12 +561,12 @@
     "categoryTitle": "Louvre lite",
     "prompt": "Qui a peint la Joconde ?",
     "choices": [
+      "Donatello",
       "Léonard de Vinci",
       "Michel-Ange",
-      "Raphaël",
-      "Donatello"
+      "Raphaël"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -576,12 +576,12 @@
     "categoryTitle": "Voie facile de Gigi",
     "prompt": "Vrai ou vibe-check : DJ Gigi sort sous quelle famille de labels ?",
     "choices": [
-      "GMG Brand Label",
       "Motown uniquement",
-      "Deutsche Grammophon uniquement",
-      "Nintendo Sound Team"
+      "GMG Brand Label",
+      "Nintendo Sound Team",
+      "Deutsche Grammophon uniquement"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -591,12 +591,12 @@
     "categoryTitle": "Mystère de la combinaison blanche",
     "prompt": "Dans Top Gear, comment s’appelle le pilote anonyme du show, casqué ?",
     "choices": [
-      "The Stig",
       "The Stag",
+      "The Shadow",
       "The Sprinter",
-      "The Shadow"
+      "The Stig"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -607,9 +607,9 @@
     "prompt": "Quel pays a lancé Spoutnik 1, le premier satellite artificiel, en 1957 ?",
     "choices": [
       "Union soviétique",
-      "États-Unis",
+      "France",
       "Chine",
-      "France"
+      "États-Unis"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -622,9 +622,9 @@
     "prompt": "La folie des années 1950 du cercle de plastique qui tourne autour de la taille, c’était…",
     "choices": [
       "Le hula hoop",
-      "Le bâton sauteur (pogo)",
+      "Le Tamagotchi",
       "Le Rubik’s Cube",
-      "Le Tamagotchi"
+      "Le bâton sauteur (pogo)"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -636,12 +636,12 @@
     "categoryTitle": "Santé publique",
     "prompt": "Quel scientifique américain a dirigé l’équipe derrière le premier vaccin antipoliomyélitique largement utiliséé dans les années 1950 ?",
     "choices": [
-      "Jonas Salk",
       "Alexander Fleming",
       "Louis Pasteur",
-      "Edward Jenner"
+      "Edward Jenner",
+      "Jonas Salk"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -652,8 +652,8 @@
     "prompt": "En quelle année l’armistice de la guerre de Corée a-t-il été signé ?",
     "choices": [
       "1953",
-      "1945",
       "1960",
+      "1945",
       "1975"
     ],
     "correctIndex": 0,
@@ -666,12 +666,12 @@
     "categoryTitle": "Bâtisseurs de routes",
     "prompt": "Quel président américain a signé le Federal-Aid Highway Act qui a lancé le réseau Interstate en 1956 ?",
     "choices": [
-      "Dwight D. Eisenhower",
-      "John F. Kennedy",
       "Harry Truman",
-      "Lyndon B. Johnson"
+      "Lyndon B. Johnson",
+      "John F. Kennedy",
+      "Dwight D. Eisenhower"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -681,12 +681,12 @@
     "categoryTitle": "Aube des parcs à thème",
     "prompt": "Dans quel État américain Disneyland a-t-il ouvert pour la première fois en 1955 ?",
     "choices": [
+      "New York",
       "Californie",
       "Floride",
-      "Texas",
-      "New York"
+      "Texas"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -697,9 +697,9 @@
     "prompt": "En quelle année le président américain John F. Kennedy a-t-il été assassiné ?",
     "choices": [
       "1963",
-      "1968",
+      "1972",
       "1960",
-      "1972"
+      "1968"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -711,12 +711,12 @@
     "categoryTitle": "Mémoire de la marche",
     "prompt": "Le discours « I Have a Dream » de Martin Luther King Jr. a été prononcé dans quelle ville ?",
     "choices": [
-      "Washington, D.C.",
-      "Atlanta",
       "Selma",
-      "Memphis"
+      "Memphis",
+      "Atlanta",
+      "Washington, D.C."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -726,12 +726,12 @@
     "categoryTitle": "Notes d’Abbey",
     "prompt": "Quel album des Beatles contient les chansons « Come Together » et « Here Comes the Sun » ?",
     "choices": [
+      "Let It Be",
       "Abbey Road",
       "Revolver",
-      "Help!",
-      "Let It Be"
+      "Help!"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -741,12 +741,12 @@
     "categoryTitle": "Rope-a-Dope",
     "prompt": "Sous quel nom Muhammad Ali est-il né ?",
     "choices": [
+      "Sugar Ray Robinson",
       "Cassius Clay",
       "Joe Frazier",
-      "George Foreman",
-      "Sugar Ray Robinson"
+      "George Foreman"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -757,9 +757,9 @@
     "prompt": "Concorde était un exemple célèbre de quel type d’avion de passagers ?",
     "choices": [
       "Avion de ligne supersonique",
-      "Ferry hélicoptère",
       "Montgolfière",
-      "Dirigeable cargo"
+      "Dirigeable cargo",
+      "Ferry hélicoptère"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -772,9 +772,9 @@
     "prompt": "En quelle année le film original Star Wars (plus tard Un nouvel espoir) est-il sorti ?",
     "choices": [
       "1977",
-      "1975",
       "1980",
-      "1983"
+      "1983",
+      "1975"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -786,12 +786,12 @@
     "categoryTitle": "Essence en prime time",
     "prompt": "Quel service de streaming a produit The Grand Tour ?",
     "choices": [
-      "Amazon Prime Video",
       "Netflix",
+      "Disney+",
       "Hulu",
-      "Disney+"
+      "Amazon Prime Video"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -801,12 +801,12 @@
     "categoryTitle": "Carte atomique",
     "prompt": "La catastrophe nucléaire de Tchernobyl en 1986 s’est produite dans quel pays actuel ?",
     "choices": [
+      "Suède",
       "Ukraine",
       "Pologne",
-      "Allemagne",
-      "Suède"
+      "Allemagne"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -817,8 +817,8 @@
     "prompt": "Quel album de Nirvana contient la chanson « Smells Like Teen Spirit » ?",
     "choices": [
       "Nevermind",
-      "In Utero",
       "Bleach",
+      "In Utero",
       "Unplugged in New York"
     ],
     "correctIndex": 0,
@@ -831,12 +831,12 @@
     "categoryTitle": "Aube de l’hyperlien",
     "prompt": "À qui attribue-t-on l’invention du World Wide Web ?",
     "choices": [
-      "Tim Berners-Lee",
-      "Bill Gates",
       "Steve Jobs",
-      "Mark Zuckerberg"
+      "Mark Zuckerberg",
+      "Tim Berners-Lee",
+      "Bill Gates"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -846,12 +846,12 @@
     "categoryTitle": "À propos de rien",
     "prompt": "Seinfeld se déroule principalement dans quelle ville américaine ?",
     "choices": [
-      "New York",
-      "Los Angeles",
       "Chicago",
-      "Boston"
+      "Boston",
+      "Los Angeles",
+      "New York"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -861,12 +861,12 @@
     "categoryTitle": "Histoire portable",
     "prompt": "En quelle année le Game Boy original de Nintendo est-il sorti au Japon ?",
     "choices": [
-      "1989",
-      "1985",
       "1994",
-      "1998"
+      "1998",
+      "1985",
+      "1989"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -876,12 +876,12 @@
     "categoryTitle": "Molette au fond",
     "prompt": "Le stockage du premier iPod utilisait quel type de lecteur ?",
     "choices": [
-      "Disque dur",
       "Uniquement le streaming cloud",
-      "Uniquement des disquettes",
-      "Uniquement du vinyle"
+      "Disque dur",
+      "Uniquement du vinyle",
+      "Uniquement des disquettes"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -892,9 +892,9 @@
     "prompt": "En quelle année Facebook (aujourd’hui Meta) a-t-il été fondé ?",
     "choices": [
       "2004",
-      "1998",
       "2008",
-      "2012"
+      "2012",
+      "1998"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -921,12 +921,12 @@
     "categoryTitle": "Lore du label",
     "prompt": "GMG Brand Label est principalement associé à quel domaine créatif ?",
     "choices": [
-      "La musique",
       "Le matériel agricole",
-      "La restauration aérienne",
-      "Les logiciels fiscaux"
+      "La musique",
+      "Les logiciels fiscaux",
+      "La restauration aérienne"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -936,12 +936,12 @@
     "categoryTitle": "Continuité du canapé",
     "prompt": "Dans Friends, comment s’appelle le barista de Central Perk qui devient ensuite un personnage régulier ?",
     "choices": [
-      "Gunther",
       "Gunner",
-      "Gregory",
-      "Gareth"
+      "Gareth",
+      "Gunther",
+      "Gregory"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -967,8 +967,8 @@
     "prompt": "Quelle entreprise développe Fortnite ?",
     "choices": [
       "Epic Games",
-      "Valve",
       "Nintendo",
+      "Valve",
       "Sega"
     ],
     "correctIndex": 0,
@@ -981,12 +981,12 @@
     "categoryTitle": "QG du stream",
     "prompt": "Dans quel pays Spotify a-t-il été fondé ?",
     "choices": [
-      "Suède",
       "États-Unis",
+      "Brésil",
       "Corée du Sud",
-      "Brésil"
+      "Suède"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -996,12 +996,12 @@
     "categoryTitle": "Boussole K-pop",
     "prompt": "BTS est un groupe de musique de quel pays ?",
     "choices": [
-      "Corée du Sud",
-      "Japon",
       "Chine",
-      "Thaïlande"
+      "Thaïlande",
+      "Corée du Sud",
+      "Japon"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -1027,8 +1027,8 @@
     "prompt": "Qui a réalisé le film Marvel Black Panther de 2018 ?",
     "choices": [
       "Ryan Coogler",
-      "Taika Waititi",
       "Patty Jenkins",
+      "Taika Waititi",
       "James Gunn"
     ],
     "correctIndex": 0,
@@ -1056,12 +1056,12 @@
     "categoryTitle": "Univers de blocs",
     "prompt": "Qui a créé Minecraft à l’origine ?",
     "choices": [
-      "Markus Persson (Notch)",
-      "Shigeru Miyamoto",
       "Gabe Newell",
+      "Shigeru Miyamoto",
+      "Markus Persson (Notch)",
       "Hideo Kojima"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -1071,12 +1071,12 @@
     "categoryTitle": "Place des avatars",
     "prompt": "Roblox se décrit le mieux comme quoi ?",
     "choices": [
-      "Une plateforme en ligne de jeux créés par les utilisateurs",
       "Uniquement un jeu de société physique",
-      "Une chaîne TV satellite",
-      "Un type d’huile moteur"
+      "Une plateforme en ligne de jeux créés par les utilisateurs",
+      "Un type d’huile moteur",
+      "Une chaîne TV satellite"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -1086,12 +1086,12 @@
     "categoryTitle": "Lampe et Luxo",
     "prompt": "Quel studio a réalisé Toy Story, le premier long métrage entièrement en images de synthèse ?",
     "choices": [
-      "Pixar",
       "DreamWorks uniquement",
+      "Aardman uniquement",
       "Studio Ghibli",
-      "Aardman uniquement"
+      "Pixar"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -1101,12 +1101,12 @@
     "categoryTitle": "Patrouille sus",
     "prompt": "Among Us est un jeu de déduction sociale se déroulant surtout dans quel cadre ?",
     "choices": [
-      "Un vaisseau spatial / équipage spatial",
       "Uniquement une boulangerie médiévale",
-      "Uniquement un bureau des impôts",
-      "Uniquement une bibliothèque silencieuse"
+      "Uniquement une bibliothèque silencieuse",
+      "Un vaisseau spatial / équipage spatial",
+      "Uniquement un bureau des impôts"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -1117,9 +1117,9 @@
     "prompt": "Que signifie couramment VE (EV) pour les voitures modernes ?",
     "choices": [
       "Véhicule électrique",
-      "Volume extra",
       "Vide moteur",
-      "Vinyle d’urgence"
+      "Vinyle d’urgence",
+      "Volume extra"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -1132,9 +1132,9 @@
     "prompt": "Studio Ghibli est basé dans quel pays ?",
     "choices": [
       "Japon",
-      "France",
+      "Canada",
       "Brésil",
-      "Canada"
+      "France"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -1146,12 +1146,12 @@
     "categoryTitle": "Classement des fleuves",
     "prompt": "Quel fleuve africain est traditionnellement cité parmi les plus longs du monde ?",
     "choices": [
-      "Le Nil",
       "La Tamise",
       "La Seine",
-      "L’Hudson"
+      "L’Hudson",
+      "Le Nil"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -1161,12 +1161,12 @@
     "categoryTitle": "Fait étoilé",
     "prompt": "Vincent van Gogh est fortement associé à quel tableau ?",
     "choices": [
-      "La Nuit étoilée",
-      "La Persistance de la mémoire",
       "Guernica",
-      "Le Cri comme seule œuvre"
+      "Le Cri comme seule œuvre",
+      "La Nuit étoilée",
+      "La Persistance de la mémoire"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -1176,12 +1176,12 @@
     "categoryTitle": "Compte des cylindres",
     "prompt": "Un moteur V8 a typiquement combien de cylindres ?",
     "choices": [
-      "Huit",
       "Quatre",
       "Deux",
-      "Seize"
+      "Seize",
+      "Huit"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -1191,12 +1191,12 @@
     "categoryTitle": "Rythmes Broadway",
     "prompt": "Qui a écrit la musique et les paroles de la comédie musicale Hamilton ?",
     "choices": [
-      "Lin-Manuel Miranda",
       "Andrew Lloyd Webber",
-      "Stephen Sondheim",
-      "Elton John"
+      "Lin-Manuel Miranda",
+      "Elton John",
+      "Stephen Sondheim"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -1206,12 +1206,12 @@
     "categoryTitle": "Ciel de Guerre froide",
     "prompt": "Francis Gary Powers a été abattu en 1960 à bord de quel type d’avion de reconnaissance américain ?",
     "choices": [
-      "U-2",
       "SR-71 uniquement",
       "B-29 Superfortress",
-      "P-51 Mustang"
+      "P-51 Mustang",
+      "U-2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -1222,9 +1222,9 @@
     "prompt": "L’explosion du réservoir d’oxygène d’Apollo 13 s’est produite en quelle année ?",
     "choices": [
       "1970",
-      "1969",
       "1972",
-      "1968"
+      "1968",
+      "1969"
     ],
     "correctIndex": 0,
     "banterHint": null
@@ -1236,12 +1236,12 @@
     "categoryTitle": "Chronologie studio",
     "prompt": "En quelle année The Grand Tour a-t-il été diffusé pour la première fois sur Amazon Prime Video ?",
     "choices": [
-      "2014",
-      "2015",
       "2016",
-      "2018"
+      "2018",
+      "2014",
+      "2015"
     ],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "banterHint": "Après la BBC, avant que tout le monde se dispute sur le camping."
   },
   {
@@ -1251,12 +1251,12 @@
     "categoryTitle": "Horloge du Mur",
     "prompt": "En quelle année le mur de Berlin est-il tombé ?",
     "choices": [
+      "1979",
       "1989",
       "1985",
-      "1991",
-      "1979"
+      "1991"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -1266,12 +1266,12 @@
     "categoryTitle": "Chronologie keynote",
     "prompt": "En quelle année Apple a-t-il annoncé l’iPhone original ?",
     "choices": [
+      "2010",
       "2007",
       "2005",
-      "2009",
-      "2010"
+      "2009"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   },
   {
@@ -1281,12 +1281,12 @@
     "categoryTitle": "Couches de rêve",
     "prompt": "Qui a réalisé le film Inception de 2010 ?",
     "choices": [
-      "Christopher Nolan",
-      "Denis Villeneuve",
       "Ridley Scott",
-      "James Cameron"
+      "James Cameron",
+      "Denis Villeneuve",
+      "Christopher Nolan"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -1296,12 +1296,12 @@
     "categoryTitle": "Manières de modèles",
     "prompt": "En quelle année OpenAI a-t-il mis ChatGPT à disposition du public ?",
     "choices": [
-      "2022",
       "2018",
-      "2020",
-      "2024"
+      "2024",
+      "2022",
+      "2020"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -1311,12 +1311,12 @@
     "categoryTitle": "Escaliers et sous-titres",
     "prompt": "Le film Parasite, de quel pays, a remporté l’Oscar du meilleur film ?",
     "choices": [
-      "Corée du Sud",
-      "Japon",
       "France",
+      "Japon",
+      "Corée du Sud",
       "Mexique"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -1326,12 +1326,12 @@
     "categoryTitle": "Portable hybride",
     "prompt": "En quelle année la Nintendo Switch est-elle sortie dans le monde ?",
     "choices": [
-      "2017",
       "2015",
       "2019",
-      "2013"
+      "2013",
+      "2017"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -1341,12 +1341,12 @@
     "categoryTitle": "Problème de pyramide",
     "prompt": "La pyramide de verre d’I. M. Pei est l’entrée moderne emblématique de quel musée ?",
     "choices": [
-      "Le Louvre",
-      "Le British Museum",
       "Le Met (NYC)",
+      "Le British Museum",
+      "Le Louvre",
       "Le Prado"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -1371,12 +1371,12 @@
     "categoryTitle": "Finale · Réplique lunaire",
     "prompt": "Complétez la phrase de Neil Armstrong sur la Lune : « That’s one small step for [a] man, one giant leap for ___ . »",
     "choices": [
-      "mankind",
       "NASA",
       "Texas",
-      "rockets"
+      "rockets",
+      "mankind"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "banterHint": null
   },
   {
@@ -1401,12 +1401,12 @@
     "categoryTitle": "Finale · Code vert",
     "prompt": "Dans la lore de Matrix Reloaded / Revolutions, quel titre porte le programme qui a créé la Matrice ?",
     "choices": [
-      "The Architect",
-      "The Oracle uniquement",
       "Agent Smith uniquement",
+      "The Oracle uniquement",
+      "The Architect",
       "Morpheus"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "banterHint": null
   },
   {
@@ -1431,12 +1431,12 @@
     "categoryTitle": "Finale · Deep Dark",
     "prompt": "Dans Minecraft, quelle créature hostile est fortement associée au Deep Dark / aux cités antiques ?",
     "choices": [
+      "Golem de fer",
       "Warden",
       "Creeper uniquement",
-      "Ender Dragon uniquement",
-      "Golem de fer"
+      "Ender Dragon uniquement"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "banterHint": null
   }
 ]

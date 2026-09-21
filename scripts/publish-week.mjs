@@ -10,6 +10,7 @@
  *   node scripts/publish-week.mjs ../Q-and-A/banks/weekly/2026-W39.json
  *
  * Maps finale→extreme and studio topic ids → Fast Answer ids.
+ * Shuffles choice order deterministically by id (EN/FR/DE share correctIndex).
  * Locale packs: banks/weekly/{fr,de}/<weekKey>.json → current.json + questions.{fr,de}.json
  */
 import fs from "node:fs";
