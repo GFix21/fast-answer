@@ -1,0 +1,707 @@
+[
+  {
+    "id": "fb-e1",
+    "tier": "easy",
+    "topic": "grand-tour",
+    "categoryTitle": "Hammond\u2019s Horror Corner",
+    "prompt": "Which presenter is famously the shortest of the Top Gear / Grand Tour trio?",
+    "choices": [
+      "James May",
+      "Richard Hammond",
+      "Jeremy Clarkson",
+      "The Stig"
+    ],
+    "correctIndex": 1,
+    "banterHint": "Hamster. Yes. We know."
+  },
+  {
+    "id": "fb-e2",
+    "tier": "easy",
+    "topic": "sci-fi",
+    "categoryTitle": "Sci-Fi Speed Round",
+    "prompt": "In Star Wars, what colour is Luke\u2019s first lightsaber (A New Hope)?",
+    "choices": [
+      "Blue",
+      "Green",
+      "Red",
+      "Purple"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e3",
+    "tier": "easy",
+    "topic": "gmg",
+    "categoryTitle": "Montr\u00e9al Midnight",
+    "prompt": "Where is GMG Brand Label based?",
+    "choices": [
+      "Montr\u00e9al, Canada",
+      "Toronto, Canada",
+      "Paris, France",
+      "Berlin, Germany"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e4",
+    "tier": "easy",
+    "topic": "dj-gigi",
+    "categoryTitle": "Gigi\u2019s Easy Lane",
+    "prompt": "DJ Gigi is the flagship artist of which Montr\u00e9al label?",
+    "choices": [
+      "GMG Brand Label",
+      "Warp Records",
+      "Sub Pop",
+      "Def Jam"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e5",
+    "tier": "easy",
+    "topic": "cars",
+    "categoryTitle": "Petrolhead Pop Quiz",
+    "prompt": "What does ABS stand for in car safety systems?",
+    "choices": [
+      "Anti-lock Braking System",
+      "Automatic Boost System",
+      "Axle Balance Sensor",
+      "Advanced Battery Switch"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e6",
+    "tier": "easy",
+    "topic": "geography",
+    "categoryTitle": "Map Mayhem",
+    "prompt": "What is the capital of Canada?",
+    "choices": [
+      "Ottawa",
+      "Toronto",
+      "Montreal",
+      "Vancouver"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e7",
+    "tier": "easy",
+    "topic": "film-tv",
+    "categoryTitle": "Screen Test",
+    "prompt": "Which streaming service produced The Grand Tour?",
+    "choices": [
+      "Amazon Prime Video",
+      "Netflix",
+      "Hulu",
+      "Disney+"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e8",
+    "tier": "easy",
+    "topic": "music",
+    "categoryTitle": "Hook & Chorus",
+    "prompt": "How many strings does a standard guitar usually have?",
+    "choices": [
+      "6",
+      "4",
+      "8",
+      "12"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e9",
+    "tier": "easy",
+    "topic": "culture",
+    "categoryTitle": "Today\u2019s Chatter",
+    "prompt": "What device do most people use to doomscroll social media?",
+    "choices": [
+      "Smartphone",
+      "Toaster",
+      "Fax machine",
+      "Vinyl lathe"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e10",
+    "tier": "easy",
+    "topic": "grand-tour",
+    "categoryTitle": "Captain Slow Corner",
+    "prompt": "Which Grand Tour presenter is nicknamed Captain Slow?",
+    "choices": [
+      "James May",
+      "Richard Hammond",
+      "Jeremy Clarkson",
+      "Abie"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e11",
+    "tier": "easy",
+    "topic": "sci-fi",
+    "categoryTitle": "Warp Factor Warm-Up",
+    "prompt": "What is the name of the starship in Star Trek commanded by Kirk?",
+    "choices": [
+      "Enterprise",
+      "Falcon",
+      "Discovery One",
+      "Nostromo"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e12",
+    "tier": "easy",
+    "topic": "geography",
+    "categoryTitle": "Borderline Easy",
+    "prompt": "Which ocean sits between Europe and North America?",
+    "choices": [
+      "Atlantic",
+      "Pacific",
+      "Indian",
+      "Arctic"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e13",
+    "tier": "easy",
+    "topic": "cars",
+    "categoryTitle": "Garage Giggles",
+    "prompt": "A hybrid car typically combines a petrol engine with what?",
+    "choices": [
+      "An electric motor",
+      "A steam turbine",
+      "A jet engine",
+      "A windmill"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e14",
+    "tier": "easy",
+    "topic": "film-tv",
+    "categoryTitle": "Remote Control Roulette",
+    "prompt": "Who played Iron Man in the Marvel Cinematic Universe?",
+    "choices": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Chris Hemsworth",
+      "Mark Ruffalo"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e15",
+    "tier": "easy",
+    "topic": "art",
+    "categoryTitle": "Frame & Fortune",
+    "prompt": "Who painted the Mona Lisa?",
+    "choices": [
+      "Leonardo da Vinci",
+      "Michelangelo",
+      "Raphael",
+      "Donatello"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e16",
+    "tier": "easy",
+    "topic": "music",
+    "categoryTitle": "Beat Drop Basics",
+    "prompt": "BPM in music stands for what?",
+    "choices": [
+      "Beats Per Minute",
+      "Bass Power Mode",
+      "Band Practice Manual",
+      "Big Pop Moment"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e17",
+    "tier": "easy",
+    "topic": "gmg",
+    "categoryTitle": "Label Lounge",
+    "prompt": "GMG stands for which full name?",
+    "choices": [
+      "Gregory Michael Gallagher",
+      "Great Music Group",
+      "Global Mix Guild",
+      "Gigi Music Gallery"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e18",
+    "tier": "easy",
+    "topic": "culture",
+    "categoryTitle": "Meme Adjacent",
+    "prompt": "What does \u2018IRL\u2019 mean?",
+    "choices": [
+      "In Real Life",
+      "Internet Relay Lag",
+      "Instant Remix Loop",
+      "Indie Rock Legend"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e19",
+    "tier": "easy",
+    "topic": "dj-gigi",
+    "categoryTitle": "Gigi Warm-Up",
+    "prompt": "DJ Gigi\u2019s vibe is often described as bilingual pulse from which city?",
+    "choices": [
+      "Montr\u00e9al",
+      "Nashville",
+      "Tokyo",
+      "Reykjav\u00edk"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-e20",
+    "tier": "easy",
+    "topic": "grand-tour",
+    "categoryTitle": "Power Lap Lite",
+    "prompt": "Top Gear\u2019s anonymous racing driver is known as\u2026?",
+    "choices": [
+      "The Stig",
+      "The Stag",
+      "The Spec",
+      "The Spike"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-h1",
+    "tier": "hard",
+    "topic": "grand-tour",
+    "categoryTitle": "Clarkson\u2019s Curveball",
+    "prompt": "Which car company made the original BBC Top Gear theme car often associated with the show\u2019s DNA?",
+    "choices": [
+      "Not a single marque \u2014 it\u2019s a collage",
+      "Only Ferrari",
+      "Only Lada",
+      "Only Bugatti"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Trickier than a wet roundabout."
+  },
+  {
+    "id": "fb-h2",
+    "tier": "hard",
+    "topic": "sci-fi",
+    "categoryTitle": "Timeline Trouble",
+    "prompt": "Who wrote the novel Dune?",
+    "choices": [
+      "Frank Herbert",
+      "Isaac Asimov",
+      "Arthur C. Clarke",
+      "Philip K. Dick"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-h3",
+    "tier": "hard",
+    "topic": "cars",
+    "categoryTitle": "Torque Talk",
+    "prompt": "What does EV stand for in modern motoring?",
+    "choices": [
+      "Electric Vehicle",
+      "Engine Valve",
+      "Euro Vintage",
+      "Extra Velocity"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-h4",
+    "tier": "hard",
+    "topic": "film-tv",
+    "categoryTitle": "Deep Cut Cinema",
+    "prompt": "Which film won Best Picture at the 2020 Academy Awards (for 2019 films)?",
+    "choices": [
+      "Parasite",
+      "1917",
+      "Joker",
+      "Once Upon a Time in Hollywood"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-h5",
+    "tier": "hard",
+    "topic": "geography",
+    "categoryTitle": "Atlas Assault",
+    "prompt": "Which African country has the city of Lagos?",
+    "choices": [
+      "Nigeria",
+      "Ghana",
+      "Kenya",
+      "Egypt"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-h6",
+    "tier": "hard",
+    "topic": "music",
+    "categoryTitle": "Studio Secrets",
+    "prompt": "Which Beatles album features the track \u2018A Day in the Life\u2019?",
+    "choices": [
+      "Sgt. Pepper\u2019s Lonely Hearts Club Band",
+      "Abbey Road",
+      "Revolver",
+      "Help!"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-h7",
+    "tier": "hard",
+    "topic": "gmg",
+    "categoryTitle": "House Lore",
+    "prompt": "Which artist is positioned as GMG\u2019s flagship?",
+    "choices": [
+      "DJ Gigi",
+      "The Stig",
+      "Captain Slow",
+      "Mr. Bean"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-h8",
+    "tier": "hard",
+    "topic": "art",
+    "categoryTitle": "Gallery Gauntlet",
+    "prompt": "Which Spanish artist co-founded Cubism with Braque?",
+    "choices": [
+      "Pablo Picasso",
+      "Salvador Dal\u00ed",
+      "Joan Mir\u00f3",
+      "Francisco Goya"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-h9",
+    "tier": "hard",
+    "topic": "culture",
+    "categoryTitle": "Feed Fatigue",
+    "prompt": "X (formerly Twitter) was rebranded under which owner\u2019s era?",
+    "choices": [
+      "Elon Musk",
+      "Jack Dorsey only forever",
+      "Mark Zuckerberg",
+      "Jeff Bezos"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-h10",
+    "tier": "hard",
+    "topic": "sci-fi",
+    "categoryTitle": "Android Alley",
+    "prompt": "In Blade Runner, what are the bioengineered beings called?",
+    "choices": [
+      "Replicants",
+      "Cylons",
+      "Synths",
+      "Hosts"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-d1",
+    "tier": "difficult",
+    "topic": "grand-tour",
+    "categoryTitle": "May\u2019s Masterclass",
+    "prompt": "The Grand Tour\u2019s first specials and seasons launched primarily in which year?",
+    "choices": [
+      "2016",
+      "2012",
+      "2019",
+      "2002"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-d2",
+    "tier": "difficult",
+    "topic": "sci-fi",
+    "categoryTitle": "Hard Mode Continuum",
+    "prompt": "Who directed 2001: A Space Odyssey?",
+    "choices": [
+      "Stanley Kubrick",
+      "Ridley Scott",
+      "Steven Spielberg",
+      "George Lucas"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-d3",
+    "tier": "difficult",
+    "topic": "cars",
+    "categoryTitle": "Unobtainium Garage",
+    "prompt": "The Bugatti Veyron was developed under which parent group at launch era?",
+    "choices": [
+      "Volkswagen Group",
+      "Fiat Chrysler",
+      "GM",
+      "Hyundai"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-d4",
+    "tier": "difficult",
+    "topic": "geography",
+    "categoryTitle": "Obscure Borders",
+    "prompt": "What is the capital of Kazakhstan (current)?",
+    "choices": [
+      "Astana",
+      "Almaty",
+      "Tashkent",
+      "Bishkek"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fb-d5",
+    "tier": "difficult",
+    "topic": "music",
+    "categoryTitle": "Obscure B-Side",
+    "prompt": "Which composer wrote \u2018The Rite of Spring\u2019?",
+    "choices": [
+      "Igor Stravinsky",
+      "Claude Debussy",
+      "Maurice Ravel",
+      "Sergei Prokofiev"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fin-1",
+    "tier": "finale",
+    "topic": "grand-tour",
+    "categoryTitle": "Finale \u00b7 Power Lap",
+    "prompt": "In the original Top Gear Cool Wall, which colour zone sat between 'Cool' and 'Uncool'?",
+    "choices": [
+      "Sub Zero",
+      "Seriously Uncool",
+      "Slightly Cool",
+      "Hot"
+    ],
+    "correctIndex": 1,
+    "banterHint": "The wall had feelings. Complicated ones."
+  },
+  {
+    "id": "fin-2",
+    "tier": "finale",
+    "topic": "cars",
+    "categoryTitle": "Finale \u00b7 Engineering",
+    "prompt": "What does the 'S' in ABS stand for in the full German term Antiblockiersystem?",
+    "choices": [
+      "System",
+      "Sperre",
+      "Sensor",
+      "Schaltung"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Same idea in German \u2014 still stops the lock-up."
+  },
+  {
+    "id": "fin-3",
+    "tier": "finale",
+    "topic": "sci-fi",
+    "categoryTitle": "Finale \u00b7 Continuum",
+    "prompt": "In Blade Runner (1982), what is the name of the Voight-Kampff inventor mentioned in dialogue?",
+    "choices": [
+      "Tyrell",
+      "It isn't named on-screen that way",
+      "Gaff",
+      "Bryant"
+    ],
+    "correctIndex": 1,
+    "banterHint": "Film-nerd trap. The test is named; the inventor mostly isn't."
+  },
+  {
+    "id": "fin-4",
+    "tier": "finale",
+    "topic": "geography",
+    "categoryTitle": "Finale \u00b7 Atlas",
+    "prompt": "Which Canadian province has a border with only one U.S. state?",
+    "choices": [
+      "New Brunswick",
+      "Manitoba",
+      "Saskatchewan",
+      "Alberta"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Maine. Just Maine. Cosy."
+  },
+  {
+    "id": "fin-5",
+    "tier": "finale",
+    "topic": "gmg",
+    "categoryTitle": "Finale \u00b7 Label Lore",
+    "prompt": "GMG Brand Label\u2019s Montr\u00e9al roots sit in which Canadian province?",
+    "choices": [
+      "Qu\u00e9bec",
+      "Ontario",
+      "British Columbia",
+      "Nova Scotia"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fin-6",
+    "tier": "finale",
+    "topic": "film-tv",
+    "categoryTitle": "Finale \u00b7 Credits",
+    "prompt": "The Grand Tour\u2019s first episode title referenced which classic travel phrase?",
+    "choices": [
+      "The Holy Trinity",
+      "Road Trip",
+      "Around the World",
+      "Three Men in a Boat"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Trinity. Not the Matrix one."
+  },
+  {
+    "id": "fin-7",
+    "tier": "finale",
+    "topic": "music",
+    "categoryTitle": "Finale \u00b7 Tempo",
+    "prompt": "A metronome marking of 120 BPM is typically described as:",
+    "choices": [
+      "Allegro / moderato brisk",
+      "Largo",
+      "Grave",
+      "Prestissimo only"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fin-8",
+    "tier": "finale",
+    "topic": "culture",
+    "categoryTitle": "Finale \u00b7 Culture Clash",
+    "prompt": "The ISO 8601 date format writes 20 September 2026 as:",
+    "choices": [
+      "2026-09-20",
+      "20/09/2026",
+      "09-20-2026",
+      "2026.20.09"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fin-9",
+    "tier": "finale",
+    "topic": "art",
+    "categoryTitle": "Finale \u00b7 Canvas",
+    "prompt": "Which artist painted \u2018The Persistence of Memory\u2019 (melting clocks)?",
+    "choices": [
+      "Salvador Dal\u00ed",
+      "Ren\u00e9 Magritte",
+      "Max Ernst",
+      "Joan Mir\u00f3"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fin-10",
+    "tier": "finale",
+    "topic": "sci-fi",
+    "categoryTitle": "Finale \u00b7 Warp Core",
+    "prompt": "In Star Trek, what is the fictional faster-than-light propulsion called?",
+    "choices": [
+      "Warp drive",
+      "Hyperspace jump",
+      "Slipstream only",
+      "Quantum sail"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fin-11",
+    "tier": "finale",
+    "topic": "cars",
+    "categoryTitle": "Finale \u00b7 Dyno",
+    "prompt": "One metric horsepower (PS) is defined as approximately how many watts?",
+    "choices": [
+      "735.5 W",
+      "1000 W",
+      "550 W",
+      "746 exactly only in UK"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  },
+  {
+    "id": "fin-12",
+    "tier": "finale",
+    "topic": "geography",
+    "categoryTitle": "Finale \u00b7 Meridian",
+    "prompt": "Which city does the Prime Meridian pass through?",
+    "choices": [
+      "Greenwich (London)",
+      "Paris",
+      "Rome",
+      "Madrid"
+    ],
+    "correctIndex": 0,
+    "banterHint": null
+  }
+]
