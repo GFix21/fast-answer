@@ -223,6 +223,15 @@ img.brand{
   overscroll-behavior:contain;
   touch-action:pan-y;
 }
+.phone-lock{
+  position:relative;z-index:2;
+  min-height:0;height:100%;overflow:hidden;
+  display:flex;flex-direction:column;
+  padding:0 12px 4px;
+}
+.phone-lock .accord{flex:1;min-height:0}
+.phone-lock .answers{max-height:none;padding:0}
+.stage.phone{grid-template-rows:auto minmax(0,1fr)}
 .dojo-page{
   position:relative;z-index:2;
   min-height:0;height:100%;overflow:hidden;

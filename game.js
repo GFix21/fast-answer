@@ -157,6 +157,8 @@ const state = {
   lastAnswerAt: 0,
   /** Inline Create / Unlock on the Host / Cast card ("" | "create" | "unlock"). */
   roomDojoPanel: "",
+  /** Open accordion on the locked phone game page. */
+  playOpen: "ask",
   /** Join a live show as a player, or watch and leave anytime. */
   viewing: false,
   seatIntent: "play",
@@ -1880,10 +1882,11 @@ function startDojo() {
   armDojoRead();
 }
 
-function acc(id, title, extra, body) {
-  const open = state.lobbyOpen === id;
+function acc(id, title, extra, body, scope = "lobby") {
+  const current = scope === "play" ? state.playOpen : state.lobbyOpen;
+  const open = current === id;
   return `<section class="acc ${open ? "open" : ""}">
-    <button type="button" class="acc-h" data-acc="${id}"><span>${title}</span>${extra || ""}</button>
+    <button type="button" class="acc-h" data-acc="${id}" data-acc-scope="${scope}"><span>${title}</span>${extra || ""}</button>
     ${open ? `<div class="acc-body">${body}</div>` : ""}
   </section>`;
 }
@@ -2212,7 +2215,41 @@ function roomBody() {
         <img class="qr" alt="Open on TV" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(silk)}"/>
         <p class="meta">${escapeHtml(tt("padJoinMeta", state.room, humans, bots))}</p>
       ` : `<p class="meta">${tt("makeTvLinkMeta")}</p>`}
+      <button class="primary" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
       ${roomDojoEntryHTML()}
+    `;
+  }
+
+  if (!isTvDisplay() && !state.onScreen) {
+    const readyName = (state.profile && state.profile.displayName) || state.name || "Player";
+    return `
+      ${roomModeButtons()}
+      <div class="player-ready" role="status">
+        <b>${escapeHtml(readyName)}</b>
+        <span>${tt("activeReady")}</span>
+      </div>
+      <p class="dir-copy"><b>${tt("phoneLockLead")}</b></p>
+      <div class="screen-modes" role="radiogroup" aria-label="Screen mode">
+        <label class="toggle">
+          <input id="osOff" type="radio" name="screenMode" checked/>
+          <span>${tt("offScreen")}</span>
+        </label>
+        <label class="toggle">
+          <input id="os" type="radio" name="screenMode"/>
+          <span>${tt("onScreenShort")}</span>
+        </label>
+      </div>
+      <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
+      <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
+      <label class="toggle">
+        <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
+        <span>${tt("fillBots")}</span>
+      </label>
+      <div class="seats">
+        ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
+      </div>
+      <button class="primary" id="startPhone" type="button">${tt("startPhone")}</button>
+      <p class="meta">${tt("phoneLockHint")}</p>
     `;
   }
 
@@ -2281,7 +2318,7 @@ function lobbyGoLabel() {
   if (pad || mode === "join") return tt("goJoin");
   if (mode === "cast") return state.room ? tt("goCastCopy") : tt("goCastMake");
   if (isTvDisplay() || state.onScreen) return tt("goOpenTv");
-  return tt("goPlay");
+  return tt("startPhone");
 }
 
 function lobbyGateReason() {
@@ -2525,6 +2562,50 @@ function playHTML() {
   const dropoutBtn = !canLeaveNow() && !endPhase
     ? `<button class="ghost" id="dropout" type="button" ${dropped ? "disabled" : ""}>${dropped ? tt("dropoutPressed") : tt("dropout")}</button>`
     : "";
+  if (!tv && !pad && !state.onScreen) {
+    const answersMarkup = showAns && q
+      ? `<div class="answers phone-answers">${q.choices.map((c, i) => {
+          let cls = "ans";
+          const picked = ld ? ld.picked : state.picked;
+          const reveal = state.phase === "reveal" || ld?.phase === "flash" || ld?.phase === "result";
+          if (reveal) {
+            if (i === q.correctIndex) cls += " ok";
+            else if (i === picked) cls += " bad";
+          } else if (i === picked) cls += " on";
+          const dis = canPick && !reveal ? "" : "disabled";
+          return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
+        }).join("")}</div>`
+      : `<p class="meta">${tt("answersWait")}</p>`;
+    return `
+      <img class="bg" alt="" src="${STUDIOS[state.studioI % STUDIOS.length]}"/>
+      <div class="veil"></div>
+      <div class="top">
+        <div class="logo">Fast Answer!<small>${tier}${n}</small></div>
+        <div class="grow"></div>
+        <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
+        ${canLeaveNow() ? `<button class="word" id="quit" type="button">${leaveLabel}</button>` : ""}
+      </div>
+      <div class="phone-lock">
+        <div class="accord">
+          ${acc("ask", tt("phoneAsk"), "", `
+            <p class="cat">${cat}</p>
+            <p class="qtext">${prompt}</p>
+            <p class="meta" id="clock">${endPhase ? scoreboard() : clockText()}</p>
+            ${rivalsHTML()}
+          `, "play")}
+          ${acc("answers", tt("phoneAnswers"), "", answersMarkup, "play")}
+          ${acc("players", tt("players"), "", scoreboard(), "play")}
+          ${acc("set", tt("set"), "", setBody(), "play")}
+        </div>
+        <div class="buzzbar">
+          ${!ld && !endPhase ? `<button class="buzzer ${canBuzz ? "lit" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
+          ${dropoutBtn}
+          ${dropped && !canLeaveNow() ? `<p class="meta">${tt("dropoutWait")}</p>` : ""}
+        </div>
+      </div>
+      ${rulesHTML()}
+    `;
+  }
   return `
     <img class="bg" alt="" src="${STUDIOS[state.studioI % STUDIOS.length]}"/>
     <div class="veil"></div>
@@ -2722,13 +2803,7 @@ function bindLobby() {
   document.querySelectorAll("[data-locale]").forEach((b) => {
     b.onclick = () => { void setLocale(b.dataset.locale); };
   });
-  document.querySelectorAll("[data-acc]").forEach((b) => {
-    b.onclick = () => {
-      const id = b.dataset.acc;
-      state.lobbyOpen = state.lobbyOpen === id ? "" : id;
-      paint(true);
-    };
-  });
+  bindAcc();
   document.querySelectorAll("[data-mp]").forEach((b) => {
     b.onclick = () => {
       state.mpMode = b.dataset.mp;
@@ -2866,6 +2941,10 @@ function bindLobby() {
   bindRules();
   const go = $("#go");
   if (go) go.onclick = () => void onLobbyGo();
+  const startPhone = $("#startPhone");
+  if (startPhone) startPhone.onclick = () => void startPhoneGame();
+  const castGo = $("#castGo");
+  if (castGo) castGo.onclick = () => void onLobbyGo();
   bindQrChip();
 }
 
@@ -3062,6 +3141,34 @@ async function onLobbyGo() {
   startGame();
 }
 
+function bindAcc() {
+  document.querySelectorAll("[data-acc]").forEach((b) => {
+    b.onclick = () => {
+      const id = b.dataset.acc;
+      if (b.dataset.accScope === "play") state.playOpen = state.playOpen === id ? "" : id;
+      else state.lobbyOpen = state.lobbyOpen === id ? "" : id;
+      paint(true);
+    };
+  });
+}
+
+async function startPhoneGame() {
+  const gate = lobbyGateReason();
+  if (gate) {
+    state.statusMsg = gate;
+    openDojoPage(dojoModeForGate());
+    return;
+  }
+  state.onScreen = false;
+  state.viewing = false;
+  state.mpMode = "host";
+  localStorage.setItem("fa-onscreen", "0");
+  localStorage.setItem("fa-mp", "host");
+  saveProfile({ displayName: state.name });
+  state.playOpen = "ask";
+  startGame();
+}
+
 function bindSliders() {
   const hs = $("#hs");
   if (hs) {
@@ -3162,6 +3269,7 @@ function bindPlay() {
       publish();
     };
   });
+  bindAcc();
   bindSliders();
   bindRules();
   bindQrChip();
@@ -3195,6 +3303,7 @@ function ingestGuests(guests) {
 
 function startGame() {
   seatPlayers();
+  state.playOpen = "ask";
   state.qs = deal(state.questions);
   state.spent = new Set(state.qs.map((q) => q.id));
   rememberDealtIds(state.qs.map((q) => q.id));
@@ -3311,6 +3420,7 @@ function paint(force = false) {
   app.className = "stage"
     + (role === "pad" ? " pad" : "")
     + (state.onScreen && role !== "pad" ? " tv" : "")
+    + (!state.onScreen && role !== "pad" && state.phase !== "lobby" ? " phone" : "")
     + (state.lockdown ? " lockdown" : "");
   applyHostSize();
   const ld = state.lockdown;
@@ -3327,6 +3437,7 @@ function paint(force = false) {
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
     state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => r.code).join(","),
     state.viewing ? 1 : 0, state.joinOffer?.code || "", state.joinOffer?.canPlay ? 1 : 0,
+    state.playOpen,
     Object.keys(state.dropoutIds || {}).sort().join(","),
     (state.pendingJoins || []).map((g) => g.id).join(","),
     ld?.wagers?.[state.youId]?.locked, ld?.wagers?.[state.youId]?.side, ld?.wagers?.[state.youId]?.amount,
