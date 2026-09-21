@@ -1,3 +1,15 @@
+import {
+  LOCALES,
+  loadStoredLocale,
+  storeLocale,
+  normalizeLocale,
+  speechLang,
+  questionsUrl,
+  placementUrl,
+  t,
+  languageSwitcherHtml,
+} from "./i18n.js";
+
 const STUDIOS = [
   "./studio/studio-01-contestant-pov.jpg",
   "./studio/studio-02-overhead-grid.jpg",
@@ -125,9 +137,52 @@ const state = {
   statusMsg: "",
   placementQs: [],
   botFill: true,
+  locale: loadStoredLocale(),
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
+
+function tt(key, ...args) {
+  return t(state.locale, key, ...args);
+}
+
+async function loadBanksForLocale(locale = state.locale) {
+  const loc = normalizeLocale(locale);
+  const bank = await fetch(questionsUrl(loc)).then((r) => {
+    if (!r.ok) throw new Error("questions " + loc);
+    return r.json();
+  });
+  state.questions = Array.isArray(bank) ? bank : (bank.questions || []);
+  try {
+    const place = await fetch(placementUrl(loc)).then((r) => (r.ok ? r.json() : null));
+    state.placementQs = Array.isArray(place?.questions) ? place.questions : [];
+  } catch {
+    state.placementQs = [];
+  }
+  document.documentElement.lang = loc;
+}
+
+async function setLocale(next) {
+  const loc = storeLocale(next);
+  state.locale = loc;
+  if (!isDirections) {
+    try {
+      await loadBanksForLocale(loc);
+    } catch (err) {
+      state.statusMsg = "Locale pack missing: " + loc;
+    }
+    if (state.dojo && state.dojo.q && !state.dojo.done) {
+      clearDojoTick();
+      state.dojo = null;
+      if (needsPlacement(state.profile) && role !== "pad" && !isTvDisplay()) {
+        state.lobbyOpen = "dojo";
+        ensureDojo();
+      }
+    }
+  }
+  paint(true);
+}
+
 
 function me() {
   return state.players.find((p) => p.id === state.youId) || state.players.find((p) => p.you);
@@ -488,7 +543,7 @@ function clockText() {
       : `Read ${state.readLeft}s — tap a rival to MAP, or wait and buzz`;
   }
   if (state.phase === "buzz") {
-    return state.maps[state.youId] ? "Buzz now — MAP is armed" : "Buzz now";
+    return state.maps[state.youId] ? tt("buzzMap") : tt("buzzNow");
   }
   if (state.phase === "answer") return state.buzzBy ? `${state.buzzBy} — answer` : "Your answer";
   if (state.phase === "reveal") {
@@ -906,16 +961,16 @@ function listenVoice() {
   const Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!Rec) {
     const clock = $("#clock");
-    if (clock) clock.textContent = "Voice isn't on this browser — tap an answer";
+    if (clock) clock.textContent = tt("voiceOff");
     return;
   }
   const r = new Rec();
-  r.lang = "en-US";
+  r.lang = speechLang(state.locale);
   r.interimResults = false;
   r.maxAlternatives = 3;
   state.listening = true;
   const mic = $("#mic");
-  if (mic) mic.textContent = "Listening…";
+  if (mic) mic.textContent = tt("listening");
   r.onresult = (ev) => {
     const said = String(ev.results[0][0].transcript || "").toLowerCase();
     const q = currentQ();
@@ -933,7 +988,7 @@ function listenVoice() {
   r.onend = () => {
     state.listening = false;
     const m = $("#mic");
-    if (m) m.textContent = "Speak the answer";
+    if (m) m.textContent = tt("speak");
   };
   r.start();
 }
@@ -954,7 +1009,7 @@ function rivalsHTML() {
   const show = state.phase === "read" || (state.phase === "buzz" && !state.buzzed);
   if (!show || state.lockdown) return "";
   return `<div class="rivals">
-    <span class="rivals-lab">MAP $${stake}</span>
+    <span class="rivals-lab">${tt("mapLab", stake)}</span>
     ${others().map((p) =>
       `<button type="button" class="rival ${armed === p.id ? "on" : ""}" data-map="${p.id}">${escapeHtml(p.name)} <b>$${p.score}</b></button>`
     ).join("")}
@@ -967,37 +1022,37 @@ function wagerHTML() {
   const mine = ld.wagers[state.youId];
   const isHero = state.youId === ld.playerId;
   if (isHero) {
-    return `<div class="wager"><p class="wager-copy">Opponents are locking WIN / LOSE on you. ${ld.wagerLeft}s</p></div>`;
+    return `<div class="wager"><p class="wager-copy">${tt("lockdownWagerHero", ld.wagerLeft)}</p></div>`;
   }
   return `<div class="wager">
-    <p class="wager-copy">Lockdown — ${escapeHtml(ld.name)} plays 5. Tap a side, then a stake.</p>
+    <p class="wager-copy">${tt("lockdownWagerOpp", escapeHtml(ld.name))}</p>
     <div class="wager-row">
-      <button type="button" class="side ${mine?.side === "win" ? "on" : ""}" data-side="win">Win</button>
-      <button type="button" class="side lose ${mine?.side === "lose" ? "on" : ""}" data-side="lose">Lose</button>
+      <button type="button" class="side ${mine?.side === "win" ? "on" : ""}" data-side="win">${tt("win")}</button>
+      <button type="button" class="side lose ${mine?.side === "lose" ? "on" : ""}" data-side="lose">${tt("lose")}</button>
     </div>
     <div class="wager-row">
       ${WAGER_AMTS.map((n) =>
         `<button type="button" class="amt ${mine?.amount === n ? "on" : ""}" data-amt="${n}">$${n}</button>`
       ).join("")}
     </div>
-    <p class="meta">${mine?.locked ? `Locked ${mine.side.toUpperCase()} $${mine.amount}` : "Two taps. No extra screens."}</p>
+    <p class="meta">${mine?.locked ? tt("lockedSide", mine.side, mine.amount) : tt("twoTaps")}</p>
   </div>`;
 }
 
 function rulesHTML() {
   if (!state.rules) return "";
   return `<div class="sheet" id="sheet">
-    <h2>Rules</h2>
+    <h2>${tt("rulesTitle")}</h2>
     <ul>
-      <li><b>37 questions.</b> 20 Easy $100 · 10 Hard $500 · 5 Difficult $1,000 · 2 Extreme $5,000.</li>
-      <li><b>10-second read</b>, then buzz. First buzz answers. Miss = $0. You do not lose points.</li>
-      <li><b>MAP</b> — during the read, tap a rival. Stake = this question. Buzz first and hit it: you bank double, they lose the stake. Miss: you lose the stake. If someone else buzzes, MAP is off.</li>
-      <li><b>Lockdown</b> twice per show, after a correct buzz. That player plays 5. Opponents tap WIN or LOSE and a stake (60s, or instant when all lock). 4/5 pays WIN even money; otherwise LOSE pays. The 5 bank at $500 each only if they clear it.</li>
-      <li><b>Dojo</b> — ten placement questions. Prompt for 10s, then answers. Bronze / Silver / Gold for three months. Belts rise with career points.</li>
-      <li><b>Room</b> — TV owns the room. Phones join via corner QR. Buzz to ready; when every pad is in, the show starts. Empty seats are celebrity bots.</li>
+      <li><b>${tt("rule37")}</b></li>
+      <li><b>${tt("ruleRead")}</b></li>
+      <li><b>${tt("ruleMap")}</b></li>
+      <li><b>${tt("ruleLock")}</b></li>
+      <li><b>${tt("ruleDojo")}</b></li>
+      <li><b>${tt("ruleRoom")}</b></li>
     </ul>
-    <a class="word dir-full" href="./directions.html">Full directions →</a>
-    <button class="primary" id="rulesX" type="button">Close</button>
+    <a class="word dir-full" href="./directions.html">${tt("fullDirections")}</a>
+    <button class="primary" id="rulesX" type="button">${tt("close")}</button>
   </div>`;
 }
 
@@ -1014,10 +1069,10 @@ function joinQrChip(size = 120) {
   const open = state.qrOpen;
   const url = encodeURIComponent(shareUrl());
   return `<div class="qr-chip ${open ? "open" : "collapsed"}" id="qrChip">
-    <button type="button" class="qr-toggle" id="qrToggle" aria-expanded="${open ? "true" : "false"}" title="Join code ${escapeHtml(state.room)}">
-      ${open ? "Hide join" : `Join · ${escapeHtml(state.room)}`}
+    <button type="button" class="qr-toggle" id="qrToggle" aria-expanded="${open ? "true" : "false"}" title="${escapeHtml(state.room)}">
+      ${open ? tt("hideJoin") : tt("joinChip", escapeHtml(state.room))}
     </button>
-    ${open ? `<img class="qr corner" alt="Join on your phone" src="https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${url}"/>
+    ${open ? `<img class="qr corner" alt="Join" src="https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${url}"/>
     <p class="qr-code">Room <b>${escapeHtml(state.room)}</b></p>` : ""}
   </div>`;
 }
@@ -1035,34 +1090,41 @@ function directionsHTML() {
     <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
     <div class="veil"></div>
     <div class="top">
-      <div class="logo">Fast Answer!<small>Directions & Rules</small></div>
+      <div class="logo">Fast Answer!<small>${tt("directionsTitle")}</small></div>
       <div class="grow"></div>
-      <a class="word" href="./index.html">Lobby</a>
+      ${languageSwitcherHtml(state.locale, { idPrefix: "dirlang" })}
+      <a class="word" href="./index.html">${tt("lobby")}</a>
     </div>
     <div class="lobby">
       <div class="lobby-copy">
-        <h1 class="sr-only">Directions and Rules</h1>
+        <h1 class="sr-only">${tt("directionsTitle")}</h1>
         <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
         <div class="accord">
+          ${dirAcc("lang", tt("dirLangTitle"), "<small>EN · FR · DE</small>", `
+            <p class="dir-copy">${tt("dirLangBody")}</p>
+          `)}
           ${dirAcc("tv", "TV / AirPlay / Cast", "<small>Web page</small>", `
             <p class="dir-copy">Fast Answer is a <b>web page</b>. The “TV” is whichever screen opens the URL — smart TV browser, Apple TV (Safari or AirPlay mirror), Chromecast “Cast tab”, HDMI from a laptop, Fire TV Silk, a projector, etc. There is no special Fast Answer AirPlay API.</p>
             <p class="dir-copy"><b>Recommended (Silk / Fire TV).</b> Open <code>https://fast-answer-seven.vercel.app</code> (or <code>?tv=1</code>) on the set. The TV <b>creates and owns</b> the room automatically. A small <b>Join</b> chip sits in the corner — expand it for the QR and code. Phones scan and join that room; game state follows the TV.</p>
             <ol class="dir-ol">
-              <li><b>Best — TV browser.</b> Open the URL on the set (Samsung, LG, Fire TV Silk, Apple TV Safari if available). Silk / Fire TV and <code>?tv=1</code> turn On Screen on and open a room. That tab owns Jeremy, questions, scores — no buzzer.</li>
+              <li><b>Best — TV browser.</b> Open the URL on the set (Samsung, LG, Fire TV Silk, Apple TV Safari if available). Silk / Fire TV and <code>?tv=1</code> turn <b>On Screen</b> on and open a room. That tab owns Jeremy, questions, scores — no buzzer. Flow is hidden on the TV.</li>
               <li><b>Corner QR.</b> On the TV, tap the discreet Join chip to expand the QR. Phones scan or open <code>/?role=pad&amp;room=CODE</code>. Pads are buzzers only.</li>
               <li><b>Ready → start.</b> Once everyone has joined, each phone presses <b>Buzz</b> to ready up. When every pad has buzzed in, the show starts on the TV.</li>
+              <li><b>Join only if room exists.</b> <b>Join TV / Join as buzzer</b> is rejected when the room code is not open yet — open the set (or Cast TV Silk link) first, then join.</li>
               <li><b>AirPlay / Cast / HDMI.</b> Mirroring or casting a tab still works, but the set’s own browser is best so the TV tab owns the room. Phones never receive the TV picture.</li>
             </ol>
           `)}
-          ${dirAcc("screen", "On Screen vs single-device", "<small>TV + pads</small>", `
-            <p class="dir-copy"><b>On Screen off</b> — one locked page. Jeremy, the question, the answers, and the buzzer sit together. Drag Jeremy and Studio in <b>Set</b>. Local play: you plus celebrity bots.</p>
-            <p class="dir-copy"><b>On Screen on</b> — this display is the television and <b>owns the multiplayer room</b>. It hides the buzzer and Flow. Phones join as pads. Empty seats stay celebrity bots until a pad takes them, up to 12.</p>
-            <p class="dir-copy"><b>On-screen features.</b> Jeremy host poses, studio backgrounds, first-buzz lockout, then speak / tap A–D (or keys 1–4 / A–D). Space bar buzzes on a keyboard. Pads keep answers on top and a large Buzz at the bottom.</p>
+          ${dirAcc("screen", tt("dirScreenTitle"), "<small>TV + pads</small>", `
+            <p class="dir-copy"><b>${tt("dirOff")}</b></p>
+            <p class="dir-copy"><b>${tt("dirOn")}</b></p>
+            <p class="dir-copy">${tt("dirOnFeatures")}</p>
+            <p class="dir-copy">${tt("dirDojoExtra")}</p>
           `)}
           ${dirAcc("room", "Multiplayer", "<small>2–12</small>", `
             <p class="dir-copy">Room holds <b>2 to 12</b> seats. The TV creates the room. Empty seats fill with celebrity first names — Oprah, Elton, Serena, Usain, Adele, Idris, Keanu, Zendaya, Rihanna, Denzel, Meryl — each with its own skill and buzz timing.</p>
             <p class="dir-copy"><b>TV owns the room.</b> Open the site on the set (or <code>?tv=1</code>). Expand the corner Join chip for QR/code. Phones open <code>/?role=pad&amp;room=CODE</code> and follow the TV. Pads <b>replace bots</b> as they arrive.</p>
             <p class="dir-copy"><b>All-buzz start.</b> When seats are set, each pad presses Buzz to ready. The show starts when every joined pad has buzzed in. Same-origin tabs also sync over BroadcastChannel; <code>api/rooms.js</code> syncs TV + phones.</p>
+            <p class="dir-copy"><b>Lobby modes (phone).</b> <b>Host</b> = local / Off Screen or optional On Screen on this device. <b>Cast TV</b> = make a Silk <code>?tv=1&amp;room=</code> link for the set. <b>Join TV</b> = pad into an existing TV room only.</p>
           `)}
           ${dirAcc("points", "Points & scoring", "<small>37Q deal</small>", `
             <p class="dir-copy">One show deals <b>37 questions</b> from the bank: <b>20 / 10 / 5 / 2</b> Easy · Hard · Difficult · Extreme. Ten seconds to read, then buzz. First buzz answers.</p>
@@ -1081,11 +1143,11 @@ function directionsHTML() {
             <p class="dir-copy">Twice per show, after a correct buzz. That player plays <b>5</b>. Opponents tap WIN or LOSE and $100 / $500 / $1,000. Sixty seconds, or it skips ahead when everyone has locked. 4/5 pays WIN even money; otherwise LOSE pays. Those five bank at <b>$500 each</b> only if they clear the set.</p>
           `)}
           ${dirAcc("dojo", "Dojo", "<small>10 placements</small>", `
-            <p class="dir-copy">Ten placement questions in the lobby. Each prompt shows for <b>10 seconds</b>, then the answers appear — tap one. No player name or points on the Dojo card. Places you Bronze, Silver, or Gold for about three months. Play stays gated until placement is current. Karate belts rise with career points, separate from ability.</p>
+            <p class="dir-copy">Ten placement questions in the lobby <b>on the phone</b> (not on the TV). Each prompt shows for <b>10 seconds</b>, then the answers appear — tap one. No player name or points on the Dojo card. Places you Bronze, Silver, or Gold for about three months. Play stays gated until placement is current. Karate belts rise with career points, separate from ability.</p>
           `)}
         </div>
         <div class="row">
-          <a class="primary" href="./index.html">Lobby / Play</a>
+          <a class="primary" href="./index.html">${tt("lobbyPlay")}</a>
         </div>
       </div>
       <div class="host" style="--host-h:${state.hostH}vh"><img src="${POSE.idle}" alt="Jeremy"/></div>
@@ -1096,6 +1158,9 @@ function directionsHTML() {
 }
 
 function bindDirections() {
+  document.querySelectorAll("[data-locale]").forEach((b) => {
+    b.onclick = () => { void setLocale(b.dataset.locale); };
+  });
   document.querySelectorAll("[data-dir]").forEach((b) => {
     b.onclick = () => {
       const id = b.dataset.dir;
@@ -1160,7 +1225,7 @@ function armDojoRead() {
       paint(true);
     } else {
       const clock = $("#dojoClock");
-      if (clock) clock.textContent = `Read ${cur.readLeft}s — answers next`;
+      if (clock) clock.textContent = tt("dojoRead", cur.readLeft);
     }
   }, 1000);
 }
@@ -1212,16 +1277,16 @@ function profileBody() {
   const belt = BELT_META[p.belt || "white"];
   const ab = p.abilityTier ? ABILITY_META[p.abilityTier] : null;
   return `
-    <label class="field" for="nm">Name</label>
+    <label class="field" for="nm">${tt("name")}</label>
     <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
-    <label class="field" for="em">Email</label>
-    <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="optional"/>
-    <label class="field" for="th">Photo</label>
+    <label class="field" for="em">${tt("email")}</label>
+    <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("optional")}"/>
+    <label class="field" for="th">${tt("photo")}</label>
     <div class="thumb-row">
       ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
       <input id="th" type="file" accept="image/*"/>
     </div>
-    <p class="meta">${escapeHtml(belt.label)} belt${ab ? " · " + ab.label + " ability" : ""} · ${(p.stats?.totalPoints || 0)} career</p>
+    <p class="meta">${escapeHtml(tt("beltCareer", belt.label, ab ? ab.label : "", p.stats?.totalPoints || 0))}</p>
   `;
 }
 
@@ -1235,8 +1300,8 @@ function dojoBody() {
     const showAns = Boolean(d.showAnswers);
     return `
       <p class="meta" id="dojoClock">${showAns
-        ? (reveal ? `Dojo ${n}/${PLACE_N}` : `Dojo ${n}/${PLACE_N} · tap an answer`)
-        : `Read ${d.readLeft ?? READ_S}s — answers next`}</p>
+        ? (reveal ? tt("dojoN", n, PLACE_N) : `${tt("dojoN", n, PLACE_N)} · ${tt("dojoTap")}`)
+        : tt("dojoRead", d.readLeft ?? READ_S)}</p>
       <p class="dojo-q">${escapeHtml(d.q.prompt)}</p>
       ${showAns ? `<div class="dojo-ans">
         ${d.q.choices.map((c, i) => {
@@ -1247,28 +1312,28 @@ function dojoBody() {
           }
           return `<button class="${cls}" type="button" data-dojo="${i}" ${reveal ? "disabled" : ""}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
         }).join("")}
-      </div>` : `<p class="dir-copy">Hold the question. Answers appear after the read.</p>`}
+      </div>` : `<p class="dir-copy">${tt("dojoHold")}</p>`}
     `;
   }
   if (placed) {
     const ab = ABILITY_META[p.abilityTier] || ABILITY_META.bronze;
     return `
-      <p class="meta">${escapeHtml(ab.label)} ability · retake after ${formatDue(p.nextPlacementDueAt)}</p>
-      <button class="ghost" id="retake" type="button">Retake dojo</button>
+      <p class="meta">${escapeHtml(tt("abilityRetake", ab.label, formatDue(p.nextPlacementDueAt)))}</p>
+      <button class="ghost" id="retake" type="button">${tt("retakeDojo")}</button>
     `;
   }
   return `
-    <p class="meta">Ten placement questions. Each prompt reads for 10 seconds, then answers appear.</p>
-    <button class="primary" id="dojoGo" type="button">Start dojo</button>
+    <p class="meta">${tt("dojoIntro")}</p>
+    <button class="primary" id="dojoGo" type="button">${tt("startDojo")}</button>
   `;
 }
 
 function roomModeButtons() {
   if (isTvDisplay()) return "";
   const modes = [
-    ["host", "Host"],
-    ["join", "Join TV"],
-    ["cast", "Cast TV"],
+    ["host", tt("host")],
+    ["join", tt("joinTv")],
+    ["cast", tt("castTv")],
   ];
   return `<div class="mp-modes" role="tablist">
     ${modes.map(([id, label]) =>
@@ -1288,49 +1353,48 @@ function roomBody() {
   if (pad || mode === "join") {
     return `
       ${roomModeButtons()}
-      <p class="dir-copy"><b>Join TV / Join as buzzer.</b> Enter the room code from the TV (Silk / On Screen). This phone becomes the pad.</p>
-      <label class="field" for="nm">Your name (phone profile)</label>
+      <p class="dir-copy"><b>${tt("joinCopy")}</b></p>
+      <label class="field" for="nm">${tt("yourName")}</label>
       <input id="nm" type="text" value="${escapeHtml(state.name)}" maxlength="18" autocomplete="nickname"/>
-      <label class="field" for="jc">TV room code</label>
+      <label class="field" for="jc">${tt("tvRoomCode")}</label>
       <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off" autocapitalize="characters"/>
-      <p class="meta">Profile + Dojo placement required before scored play. Buzz on the pad to ready once the TV is waiting.</p>
+      <p class="meta">${tt("joinGateMeta")}</p>
     `;
   }
 
   if (mode === "cast") {
     return `
       ${roomModeButtons()}
-      <p class="dir-copy"><b>Cast to Fire Stick Silk.</b> Generates a TV room and a Silk URL with <code>?tv=1&amp;room=</code>. Open that link on the set; phones Join TV with the same code.</p>
-      <label class="field">Players <b>${state.playerCount}</b></label>
+      <p class="dir-copy"><b>${tt("castCopy")}</b></p>
+      <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
       <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
       <label class="toggle">
         <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
-        <span>Fill empty seats with celebrity bots</span>
+        <span>${tt("fillBots")}</span>
       </label>
       <div class="seats">
         ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
       </div>
-      <p class="room-code">Room <b id="codeCopy">${escapeHtml(state.room || "····")}</b></p>
+      <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
       ${state.room ? `
-        <label class="field" for="silkUrl">Silk / Fire TV link</label>
+        <label class="field" for="silkUrl">${tt("silkLink")}</label>
         <div class="copy-row">
           <input id="silkUrl" type="text" readonly value="${escapeHtml(silk)}"/>
-          <button class="ghost" id="copySilk" type="button">Copy</button>
+          <button class="ghost" id="copySilk" type="button">${tt("copy")}</button>
         </div>
         <img class="qr" alt="Open on TV" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(silk)}"/>
-        <p class="meta">Pad join: <code>?role=pad&amp;room=${escapeHtml(state.room)}</code> · ${humans} human · ${bots} bot</p>
-      ` : `<p class="meta">Tap <b>Make TV link</b> below to create the room and copyable Silk URL.</p>`}
+        <p class="meta">${escapeHtml(tt("padJoinMeta", state.room, humans, bots))}</p>
+      ` : `<p class="meta">${tt("makeTvLinkMeta")}</p>`}
     `;
   }
 
-  // Host (alone / local / optional On Screen on this device)
   return `
     ${roomModeButtons()}
-    <label class="field">Players <b>${state.playerCount}</b></label>
+    <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
     <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
     <label class="toggle">
       <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
-      <span>Fill empty seats with celebrity bots</span>
+      <span>${tt("fillBots")}</span>
     </label>
     <div class="seats">
       ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
@@ -1338,46 +1402,46 @@ function roomBody() {
     ${isTvDisplay() ? "" : `
     <label class="toggle">
       <input id="os" type="checkbox" ${state.onScreen ? "checked" : ""} ${forcedDisplay ? "disabled" : ""}/>
-      <span>On Screen — this display owns the TV room. Phones join as pads.</span>
+      <span>${tt("onScreen")}</span>
     </label>`}
     ${state.onScreen || isTvDisplay() ? `
-      <p class="dir-copy">This page <b>owns the room</b>. Share the Silk link or corner QR so phones Join TV as buzzers.</p>
-      <p class="room-code">Room <b id="codeCopy">${escapeHtml(state.room || "····")}</b></p>
+      <p class="dir-copy">${tt("onScreenOwns")}</p>
+      <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
       ${state.room ? `
         <div class="copy-row">
           <input id="silkUrl" type="text" readonly value="${escapeHtml(silk || tvSilkUrl(state.room))}"/>
-          <button class="ghost" id="copySilk" type="button">Copy</button>
+          <button class="ghost" id="copySilk" type="button">${tt("copy")}</button>
         </div>
-        <img class="qr" alt="Join on your phone" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(shareUrl())}"/>
+        <img class="qr" alt="Join" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(shareUrl())}"/>
       ` : ""}
-      <p class="meta">${humans} human${humans === 1 ? "" : "s"} · ${bots} bot${bots === 1 ? "" : "s"} · pads replace bots · all pads Buzz to start</p>
-    ` : `<p class="meta">Solo / local show — buzzer on this phone, bots in empty seats. Use <b>Cast TV</b> for a Silk link, or <b>Join TV</b> to pad into an existing room.</p>`}
+      <p class="meta">${escapeHtml(tt("humansBots", humans, bots))}</p>
+    ` : `<p class="meta">${tt("offScreenHint")}</p>`}
   `;
 }
 
 function setBody() {
   return `
     <div class="dock in-acc set-dock">
-      <label class="slider-lab">Jeremy <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
-      <label class="slider-lab">Studio <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
+      <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
+      <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
     </div>
-    <p class="meta">Drag to resize Jeremy and change the studio angle live on this phone.</p>
+    <p class="meta">${tt("setHint")}</p>
   `;
 }
 
 function lobbyGoLabel() {
   const pad = isPad();
   const mode = pad ? "join" : (state.mpMode || "host");
-  if (pad || mode === "join") return "Join as buzzer";
-  if (mode === "cast") return state.room ? "Copy Silk link" : "Make TV link";
-  if (isTvDisplay() || state.onScreen) return "Open TV room";
-  return "Play";
+  if (pad || mode === "join") return tt("goJoin");
+  if (mode === "cast") return state.room ? tt("goCastCopy") : tt("goCastMake");
+  if (isTvDisplay() || state.onScreen) return tt("goOpenTv");
+  return tt("goPlay");
 }
 
 function lobbyGateReason() {
   if (isTvDisplay()) return "";
-  if (!hasPhoneProfile()) return "Set your phone profile name to play.";
-  if (!isPlaced()) return "Finish the 10-question Dojo placement to play.";
+  if (!hasPhoneProfile()) return tt("gateProfile");
+  if (!isPlaced()) return tt("gateDojo");
   return "";
 }
 
@@ -1391,16 +1455,15 @@ function lobbyHTML() {
   const mode = pad ? "join" : (state.mpMode || "host");
   const gate = lobbyGateReason();
   const joining = pad || mode === "join";
-  // TV cast / Make TV link can run without placement on the set itself.
   const goOff = Boolean(gate) && !(tv && (mode === "host" || mode === "cast"));
   const goLabel = goOff
-    ? (!hasPhoneProfile() ? "Profile first" : "Dojo first")
+    ? (!hasPhoneProfile() ? tt("profileFirst") : tt("dojoFirst"))
     : lobbyGoLabel();
   const d = state.dojo;
   const dojoLive = Boolean(d && d.q && !d.done);
   const dojoExtra = dojoLive
     ? `<small>${d.answers.length}/${PLACE_N}</small>`
-    : (placed ? `<small>${escapeHtml((ab && ab.label) || "Placed")}</small>` : `<small>Required</small>`);
+    : (placed ? `<small>${escapeHtml((ab && ab.label) || tt("placed"))}</small>` : `<small>${tt("required")}</small>`);
   const status = state.statusMsg
     || gate
     || (joining && (state.room || joinCode) ? "Joining room " + (state.room || joinCode) : "")
@@ -1409,20 +1472,21 @@ function lobbyHTML() {
     <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
     <div class="veil"></div>
     <div class="top">
-      <div class="logo">Fast Answer!<small>The game show that flies…?</small></div>
+      <div class="logo">Fast Answer!<small>${tt("tagline")}</small></div>
       <div class="grow"></div>
+      ${languageSwitcherHtml(state.locale)}
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
-      <a class="word" href="./directions.html">Directions &amp; Rules</a>
+      <a class="word" href="./directions.html">${tt("directions")}</a>
     </div>
     <div class="lobby">
       <div class="lobby-copy">
         <h1 class="sr-only">Fast Answer!</h1>
         <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
         <div class="accord">
-          ${tv || dojoLive ? "" : acc("profile", "Profile", `<small>${escapeHtml(belt.label)}${ab ? " · " + ab.label : ""}</small>`, profileBody())}
-          ${tv || pad ? "" : acc("dojo", "Dojo", dojoExtra, dojoBody())}
-          ${dojoLive && !tv ? "" : acc("room", joining ? "Join TV" : (mode === "cast" ? "Cast TV" : "Room"), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
-          ${pad || tv || dojoLive ? "" : acc("set", "Set", "", setBody())}
+          ${tv || dojoLive ? "" : acc("profile", tt("profile"), `<small>${escapeHtml(belt.label)}${ab ? " · " + ab.label : ""}</small>`, profileBody())}
+          ${tv || pad ? "" : acc("dojo", tt("dojo"), dojoExtra, dojoBody())}
+          ${dojoLive && !tv ? "" : acc("room", joining ? tt("joinTv") : (mode === "cast" ? tt("castTv") : tt("room")), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
+          ${pad || tv || dojoLive ? "" : acc("set", tt("set"), "", setBody())}
         </div>
         <div class="row">
           <button class="primary" id="go" type="button" ${goOff ? "disabled" : ""}>${goLabel}</button>
@@ -1444,21 +1508,21 @@ function readyCardHTML() {
   const rows = pads.length
     ? pads.map((g) => {
         const on = Boolean(state.readyIds[g.id]);
-        return `<span class="seat ${on ? "human" : "bot"}">${escapeHtml(g.name)}${on ? " · ready" : ""}</span>`;
+        return `<span class="seat ${on ? "human" : "bot"}">${escapeHtml(g.name)}${on ? tt("phoneReady") : ""}</span>`;
       }).join("")
-    : `<span class="seat bot">Waiting for phones…</span>`;
+    : `<span class="seat bot">${tt("waitingPhones")}</span>`;
   const pad = role === "pad";
   const mine = Boolean(state.readyIds[state.youId]);
   return `
     <div class="qwrap">
       <div class="qcard">
-        <p class="cat">TV room · ${escapeHtml(state.room || "····")}</p>
+        <p class="cat">${tt("tvRoom", escapeHtml(state.room || "····"))}</p>
         <p class="qtext">${pad
-          ? (mine ? "You're ready. Waiting for everyone." : "Press Buzz when you're ready.")
-          : "Phones join, then Buzz to ready up."}</p>
-        <p class="meta" id="clock">${readyN}/${Math.max(pads.length, 1)} ready · show starts when every pad buzzes in</p>
+          ? (mine ? tt("readyYou") : tt("readyPress"))
+          : tt("readyTv")}</p>
+        <p class="meta" id="clock">${tt("readyMeta", readyN, Math.max(pads.length, 1))}</p>
         <div class="seats ready-seats">${rows}</div>
-        ${role !== "pad" ? `<button class="ghost" id="forceStart" type="button" style="margin-top:10px">Start with bots</button>` : ""}
+        ${role !== "pad" ? `<button class="ghost" id="forceStart" type="button" style="margin-top:10px">${tt("startBots")}</button>` : ""}
       </div>
     </div>
   `;
@@ -1483,21 +1547,21 @@ function playHTML() {
     : state.phase === "answer" || (!state.onScreen && state.phase === "buzz");
   let prompt;
   if (readyPhase) prompt = "";
-  else if (ld?.phase === "wager") prompt = `LOCKDOWN — ${ld.name} plays five. Opponents wager.`;
+  else if (ld?.phase === "wager") prompt = `LOCKDOWN — ${ld.name} · ${tt("lockdownWagers")}`;
   else if (ld?.phase === "result") prompt = ld.won ? `${ld.name} cleared Lockdown ${ld.hits}/5.` : `${ld.name} broke Lockdown ${ld.hits}/5.`;
-  else if (!q) prompt = "That's the show.";
-  else if (pad && !lockdownPlay) prompt = state.phase === "read" ? "Listen to Jeremy. Tap a rival to MAP." : "Answers only — buzz, then speak or tap.";
+  else if (!q) prompt = tt("showEnd");
+  else if (pad && !lockdownPlay) prompt = state.phase === "read" ? tt("padRead") : tt("padBuzz");
   else prompt = escapeHtml(q.prompt);
   const cat = readyPhase
-    ? "Ready"
+    ? tt("ready")
     : (ld
       ? `Lockdown · ${ld.phase === "play" || ld.phase === "flash" ? `${ld.qi + 1}/${LOCKDOWN_N}` : ld.phase}`
-      : (q && !pad ? escapeHtml(q.categoryTitle) : (pad ? "Your pad" : "")));
+      : (q && !pad ? escapeHtml(q.categoryTitle) : (pad ? tt("yourPad") : "")));
   const tier = readyPhase ? "READY" : (ld ? "LOCKDOWN" : (q ? q.tier.toUpperCase() : "END"));
   const n = readyPhase || ld ? "" : ` · ${state.i + 1}/${state.qs.length || ROUND}`;
   const buzzLabel = readyPhase
-    ? (state.readyIds[state.youId] ? "Ready" : "Buzz to ready")
-    : "Buzz";
+    ? (state.readyIds[state.youId] ? tt("ready") : tt("buzzReady"))
+    : tt("buzz");
   return `
     <img class="bg" alt="" src="${STUDIOS[state.studioI % STUDIOS.length]}"/>
     <div class="veil"></div>
@@ -1505,8 +1569,8 @@ function playHTML() {
       <div class="logo">Fast Answer!<small>${tier}${n}</small></div>
       <div class="grow"></div>
       ${readyPhase ? "" : scoreboard()}
-      <button class="word" id="rulesBtn" type="button">Rules</button>
-      <button class="word" id="quit" type="button">Lobby</button>
+      <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
+      <button class="word" id="quit" type="button">${tt("lobby")}</button>
     </div>
     <div class="play">
       ${readyPhase ? readyCardHTML() : `<div class="qwrap">
@@ -1532,12 +1596,12 @@ function playHTML() {
     }).join("")}</div>` : `<div></div>`))}
     <div class="buzzbar">
       ${!state.onScreen && !ld && !readyPhase ? `<div class="dock set-dock">
-        <label class="slider-lab">Jeremy <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
-        <label class="slider-lab">Studio <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
+        <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
+        <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
       </div>` : ""}
       ${(pad || !tv) && !ld ? `<button class="buzzer ${canBuzz ? "lit" : ""} ${readyPhase && state.readyIds[state.youId] ? "ready-on" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
-      ${ld ? `<div class="lock-flag">${ld.phase === "wager" ? "Lockdown wagers" : `${escapeHtml(ld.name)} · ${ld.hits} hit`}</div>` : ""}
-      ${(pad && state.phase === "answer") ? `<button class="ghost mic" id="mic" type="button">Speak the answer</button>` : ""}
+      ${ld ? `<div class="lock-flag">${ld.phase === "wager" ? tt("lockdownWagers") : `${escapeHtml(ld.name)} · ${ld.hits} hit`}</div>` : ""}
+      ${(pad && state.phase === "answer") ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
     </div>
     ${joinQrChip(140)}
     ${rulesHTML()}
@@ -1551,6 +1615,9 @@ async function openRoom() {
 }
 
 function bindLobby() {
+  document.querySelectorAll("[data-locale]").forEach((b) => {
+    b.onclick = () => { void setLocale(b.dataset.locale); };
+  });
   document.querySelectorAll("[data-acc]").forEach((b) => {
     b.onclick = () => {
       const id = b.dataset.acc;
@@ -1586,7 +1653,7 @@ function bindLobby() {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
     if (file.size > 400000) {
-      state.statusMsg = "Photo is too large — keep it under 400 KB.";
+      state.statusMsg = tt("photoBig");
       paint(true);
       return;
     }
@@ -1624,7 +1691,7 @@ function bindLobby() {
   if (copySilk) copySilk.onclick = async () => {
     const url = ($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room);
     const ok = await copyText(url);
-    state.statusMsg = ok ? "Silk link copied." : ("Copy failed — select the link: " + url);
+    state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
     paint(true);
   };
   const dojoGo = $("#dojoGo");
@@ -1644,7 +1711,7 @@ function bindLobby() {
 async function joinAsBuzzer() {
   const code = String(state.room || state.joinInput || joinCode || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
   if (!code || code.length < 3) {
-    state.statusMsg = "Enter the TV room code to Join as buzzer.";
+    state.statusMsg = tt("enterCode");
     state.lobbyOpen = "room";
     state.mpMode = "join";
     paint(true);
@@ -1657,7 +1724,7 @@ async function joinAsBuzzer() {
     return false;
   }
   if (!isPlaced()) {
-    state.statusMsg = "Finish Dojo placement on this phone before scored multiplayer.";
+    state.statusMsg = tt("dojoPhone");
     state.lobbyOpen = "dojo";
     if (!state.dojo || !state.dojo.q) startDojo();
     else paint(true);
@@ -1676,7 +1743,7 @@ async function joinAsBuzzer() {
   const joined = await rooms("POST", { action: "join", code: state.room, name: state.name, id: state.youId });
   if (!joined || joined.error) {
     state.statusMsg = (joined && joined.message)
-      || ("Room " + code + " not found — open Cast TV / Silk on the set first, then Join as buzzer.");
+      || tt("roomMissing", code);
     role = prevRole;
     paint(true);
     return false;
@@ -2002,7 +2069,7 @@ function paint(force = false) {
     state.lobbyOpen, state.playerCount, (state.guests || []).length,
     state.dojo?.answers?.length, state.dojo?.picked, state.dojo?.showAnswers, state.dojo?.readLeft,
     state.profile?.abilityTier, state.profile?.belt,
-    state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
+    state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale, Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
   ].join("|");
   if (!force && key === lastKey && frame === "play") {
     const clock = $("#clock");
@@ -2028,17 +2095,11 @@ window.addEventListener("keydown", (e) => {
 });
 
 if (isDirections) {
+  document.documentElement.lang = state.locale;
   paint(true);
   window.__fa = state;
 } else {
-  const bank = await fetch("./questions.json").then((r) => r.json());
-  state.questions = bank;
-  try {
-    const place = await fetch("./banks/placement/generational-first-pass.json").then((r) => r.ok ? r.json() : null);
-    state.placementQs = Array.isArray(place?.questions) ? place.questions : [];
-  } catch {
-    state.placementQs = [];
-  }
+  await loadBanksForLocale(state.locale);
   state.profile = loadProfile();
   if (state.profile?.displayName) state.name = state.profile.displayName;
   state.botFill = localStorage.getItem("fa-bots") !== "0";

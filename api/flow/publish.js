@@ -1,35 +1,53 @@
-import { requireAuth, json } from "../../lib/flow-auth.js";
+import { requireAuth, json, readBody } from "../../lib/flow-auth.js";
 import {
   loadCurrentPack,
   applyReviewOverlay,
   publishToQuestions,
+  normalizeLocale,
 } from "../../lib/week-store.js";
 import { archivePublishedWeek } from "../../lib/archive-store.js";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return json(res, 405, { error: "method" });
   if (!requireAuth(req, res)) return;
-  const pack = loadCurrentPack();
+
+  let body = {};
+  try {
+    body = await readBody(req);
+  } catch {
+    body = {};
+  }
+  const locale = normalizeLocale(body.locale || "en");
+  const pack = loadCurrentPack(locale);
   if (!pack) return json(res, 404, { error: "no week pack" });
-  const overlaid = applyReviewOverlay(pack);
-  const { meta, exported } = publishToQuestions(overlaid);
-  const archive = archivePublishedWeek(overlaid, {
-    publishedAt: meta.publishedAt,
-    counts: meta.counts,
-  });
+  const overlaid = applyReviewOverlay(pack, locale);
+  const { meta, exported } = publishToQuestions(overlaid, locale);
+  // Monthly archive snapshots EN (source of truth). Locale packs stay beside weekly/.
+  const archive =
+    locale === "en"
+      ? archivePublishedWeek(overlaid, {
+          publishedAt: meta.publishedAt,
+          counts: meta.counts,
+        })
+      : null;
   return json(res, 200, {
     ok: true,
+    locale,
     meta,
-    archive: {
-      monthKey: archive.monthKey,
-      weekKey: archive.weekKey,
-      wroteToDisk: archive.wroteToDisk,
-      writeError: archive.writeError || undefined,
-      summary: archive.summary,
-    },
+    archive: archive
+      ? {
+          monthKey: archive.monthKey,
+          weekKey: archive.weekKey,
+          wroteToDisk: archive.wroteToDisk,
+          writeError: archive.writeError || undefined,
+          summary: archive.summary,
+        }
+      : {
+          note: "FR/DE publish is in-memory on this instance; durable locale files come from scripts/publish-week.mjs",
+        },
     note: meta.wroteToDisk
-      ? "Wrote questions.json on this instance. Commit + redeploy for durable Hobby hosting."
-      : "Filesystem read-only on this instance — bank cached in memory. Run scripts/publish-week.mjs locally and push for durable publish (includes monthly archive).",
+      ? "Wrote questions on this instance. Commit + redeploy for durable Hobby hosting."
+      : "Filesystem read-only on this instance — bank cached in memory. Run scripts/publish-week.mjs locally and push for durable publish (includes monthly archive for EN).",
     sampleIds: exported.slice(0, 5).map((q) => q.id),
   });
 }

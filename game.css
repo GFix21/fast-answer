@@ -374,3 +374,28 @@ img.brand{
   border:1px solid var(--line);background:color-mix(in oklab, var(--elev) 90%, transparent);color:var(--fg);
 }
 .copy-row .ghost{flex-shrink:0;min-height:40px;padding:8px 12px}
+
+
+/* Language switcher EN / FR / DE */
+.lang-switch {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  margin-right: 8px;
+}
+.lang-btn {
+  font: 600 12px/1 var(--font-body, Figtree, system-ui, sans-serif);
+  letter-spacing: 0.04em;
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(0,0,0,0.35);
+  color: #f5f5f5;
+  cursor: pointer;
+}
+.lang-btn.on {
+  background: rgba(245, 215, 110, 0.95);
+  color: #111;
+  border-color: transparent;
+}
+.top .lang-switch { flex-shrink: 0; }

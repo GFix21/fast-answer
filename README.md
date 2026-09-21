@@ -21,6 +21,18 @@ The television is a **web page**, not an AirPlay transmitter. Fast Answer does n
 Phones never receive the TV picture. Flow is hidden on the TV display. Same Wi‑Fi helps room sync; BroadcastChannel syncs same-origin tabs; serverless rooms sync TV+phones on one Vercel instance.
 
 
+
+## Language (EN / FR / DE)
+
+Lobby and Directions include an **EN / FR / DE** switcher (saved in `localStorage` as `fa-locale`).
+
+- Live questions: `questions.json` (EN), `questions.fr.json`, `questions.de.json`
+- Placement / Dojo: `banks/placement/[fr|de]/generational-first-pass.json`
+- Weekly studio packs: `banks/weekly/[fr|de]/<weekKey>.json` (same layout as Q-and-A)
+- Flow admin has a matching locale switcher for weekly review, placement archive, and reject/regen
+
+English remains the source of truth for ids and `correctIndex`. Sync locale packs from Q-and-A, then `npm run publish:week`.
+
 ## Lobby
 
 One page. Collapsible menus. Jeremy and the studio stay live behind the card.

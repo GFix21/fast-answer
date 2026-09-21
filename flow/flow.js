@@ -1,6 +1,17 @@
 const IDLE_MS = 30_000;
 const app = document.getElementById("app");
 
+const LOCALE_KEY = "fa-flow-locale";
+const LOCALES = ["en", "fr", "de"];
+function loadFlowLocale() {
+  try {
+    const v = (localStorage.getItem(LOCALE_KEY) || "en").toLowerCase().slice(0, 2);
+    return LOCALES.includes(v) ? v : "en";
+  } catch {
+    return "en";
+  }
+}
+
 const state = {
   authed: false,
   configured: true,
@@ -10,6 +21,7 @@ const state = {
   message: "",
   locked: new URLSearchParams(location.search).get("locked") === "1",
   filterTier: "all",
+  locale: loadFlowLocale(),
   archive: {
     months: null,
     placementPages: null,
@@ -26,8 +38,18 @@ const state = {
   },
 };
 
+function withLocale(path) {
+  const loc = state.locale || "en";
+  if (!path || path.startsWith("login") || path.startsWith("logout") || path.startsWith("session") || path.startsWith("topics")) {
+    return path;
+  }
+  const join = path.includes("?") ? "&" : "?";
+  if (/[?&]locale=/.test(path)) return path;
+  return `${path}${join}locale=${encodeURIComponent(loc)}`;
+}
+
 async function api(path, opts = {}) {
-  const res = await fetch(`/api/flow/${path}`, {
+  const res = await fetch(`/api/flow/${withLocale(path)}`, {
     credentials: "same-origin",
     headers: { "content-type": "application/json", ...(opts.headers || {}) },
     ...opts,
@@ -92,9 +114,14 @@ function render() {
     <div class="row spread">
       <div>
         <h1>Flow · Fast Answer</h1>
-        <p class="mut">Week ${esc(pack?.weekKey || "—")} · review → publish → questions.json</p>
+        <p class="mut">Week ${esc(pack?.weekKey || "—")} · locale <b>${esc((state.locale||"en").toUpperCase())}</b> · review → publish → questions.json</p>
       </div>
       <div class="row">
+        <div class="lang-switch" role="group" aria-label="Locale">
+          ${LOCALES.map((loc) =>
+            `<button type="button" class="btn lang-btn ${state.locale===loc?"primary":""}" data-flow-locale="${loc}">${loc.toUpperCase()}</button>`
+          ).join("")}
+        </div>
         <a class="btn" href="/">Play</a>
         <button class="btn" id="logout">Log out</button>
       </div>
@@ -111,6 +138,9 @@ function render() {
   `;
 
   document.getElementById("logout")?.addEventListener("click", doLogout);
+  app.querySelectorAll("[data-flow-locale]").forEach((b) =>
+    b.addEventListener("click", () => setFlowLocale(b.dataset.flowLocale)),
+  );
   app.querySelectorAll("[data-tab]").forEach((b) =>
     b.addEventListener("click", () => {
       state.tab = b.dataset.tab;
@@ -149,7 +179,7 @@ function render() {
           <button class="btn primary" id="publish">Publish week → questions.json</button>
           <button class="btn" id="refresh">Refresh</button>
         </div>
-        <p class="mut" style="margin-top:12px">Durable Hobby path: <code>node scripts/publish-week.mjs</code> then git push / redeploy. FLOW_PASSWORD is env-only. Publish also snapshots into <code>banks/archive/YYYY-MM/</code>.</p>
+        <p class="mut" style="margin-top:12px">Durable Hobby path: <code>node scripts/publish-week.mjs</code> then git push / redeploy (writes <code>questions.json</code> + <code>questions.fr.json</code> / <code>questions.de.json</code>). FLOW_PASSWORD is env-only. EN publish also snapshots into <code>banks/archive/YYYY-MM/</code>. Switch EN/FR/DE above to review locale banks.</p>
       </div>`;
     document.getElementById("publish")?.addEventListener("click", doPublish);
     document.getElementById("refresh")?.addEventListener("click", () => loadWeek(true));
@@ -212,7 +242,7 @@ function render() {
     panel.innerHTML = `
       <div class="card">
         <h2>Reject → regenerate</h2>
-        <p class="mut">Logs rejection + optional replacement. Weekly bank or Placement archive. Prefer full regen in Q-and-A studio.</p>
+        <p class="mut">Logs rejection + optional replacement for locale <b>${esc((state.locale||"en").toUpperCase())}</b>. Weekly / Placement banks. Prefer full regen in Q-and-A studio.</p>
         <label>bank</label>
         <select id="rbank">
           <option value="week">Weekly bank</option>
@@ -564,8 +594,26 @@ async function doLogout() {
   render();
 }
 
+async function setFlowLocale(next) {
+  const loc = LOCALES.includes(next) ? next : "en";
+  state.locale = loc;
+  try { localStorage.setItem(LOCALE_KEY, loc); } catch { /* ignore */ }
+  state.message = `Locale ${loc.toUpperCase()}`;
+  state.archive.months = null;
+  state.archive.kind = null;
+  state.archive.pack = null;
+  state.archive.monthKey = null;
+  try {
+    await loadWeek(false);
+    if (state.tab === "archive") await loadArchiveMonths(false);
+  } catch (e) {
+    state.message = e.message;
+  }
+  render();
+}
+
 async function loadWeek(rerender) {
-  state.week = await api("week");
+  state.week = await api("week"); // locale via withLocale
   if (rerender) render();
 }
 
@@ -575,13 +623,13 @@ async function loadTopics(rerender) {
 }
 
 async function setStatus(id, status) {
-  await api("week", { method: "POST", body: JSON.stringify({ action: "status", id, status }) });
+  await api("week", { method: "POST", body: JSON.stringify({ action: "status", id, status, locale: state.locale }) });
   await loadWeek(true);
 }
 
 async function doPublish() {
   try {
-    const data = await api("publish", { method: "POST", body: "{}" });
+    const data = await api("publish", { method: "POST", body: JSON.stringify({ locale: state.locale }) });
     const arch = data.archive
       ? ` Archived ${data.archive.monthKey}/${data.archive.weekKey}.`
       : "";
@@ -620,6 +668,7 @@ async function doReject() {
     questionId: document.getElementById("rid").value.trim(),
     reasonCodes: document.getElementById("rreasons").value.split(",").map((s) => s.trim()).filter(Boolean),
     note: document.getElementById("rnote").value.trim(),
+    locale: state.locale,
   };
   if (prompt && choicesRaw) {
     const choices = choicesRaw.split(",").map((s) => s.trim());
@@ -677,7 +726,7 @@ async function setPlacementStatus(id, status) {
   try {
     await api("placement", {
       method: "POST",
-      body: JSON.stringify({ action: "status", questionId: id, status }),
+      body: JSON.stringify({ action: "status", questionId: id, status, locale: state.locale }),
     });
     await openPlacementPage(state.archive.pageKey || "placement");
   } catch (e) {
@@ -695,6 +744,7 @@ async function rejectPlacementQuick(id) {
         questionId: id,
         reasonCodes: ["flow-quick-reject"],
         note: "Rejected from Placement archive page",
+        locale: state.locale,
       }),
     });
     state.message = `Rejected ${data.rejection?.questionId}.`;

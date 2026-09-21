@@ -1,0 +1,2229 @@
+{
+  "weekKey": "2026-W39",
+  "generatedAt": "2026-09-21T13:25:56.070Z",
+  "host": "Jeremy",
+  "inspirationSummary": "Semaine America/Toronto 2026-W39 — 40/40/10/6 sur les thèmes ; DJ Gigi easy-only ; six générations représentées dans le mix (pas 96×6) ; PG-13 ; ≥2 sources par item.",
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "banterHint": "Trois petits mots. De grands chapeaux.",
+      "id": "w39-e-silent-ike",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Devise du milieu du siècle",
+      "prompt": "Quel slogan de campagne est célèbrement associé à Dwight D. Eisenhower ?",
+      "choices": [
+        "I Like Ike",
+        "Tippecanoe and Tyler Too",
+        "Morning in America",
+        "Yes We Can"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Dwight D. Eisenhower"
+        },
+        {
+          "label": "Smithsonian / presidential campaign history"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-silent-fdr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Maison-Blanche en temps de guerre",
+      "prompt": "Quel président des États-Unis a dirigé le pays pendant la plus grande partie de la Seconde Guerre mondiale ?",
+      "choices": [
+        "Franklin D. Roosevelt",
+        "Harry S. Truman",
+        "Woodrow Wilson",
+        "Herbert Hoover"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Franklin D. Roosevelt"
+        },
+        {
+          "label": "Encyclopædia Britannica — World War II"
+        }
+      ]
+    },
+    {
+      "banterHint": "Non, pas une boule de cristal.",
+      "id": "w39-e-silent-transistor",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "L’ère de la radio de poche",
+      "prompt": "Quel petit type de radio est devenu un hit auprès des adolescents dans les années 1950 ?",
+      "choices": [
+        "Radio à transistors",
+        "Radio boule de cristal",
+        "Grille-pain à vide",
+        "Boombox huit pistes"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Transistor radio"
+        },
+        {
+          "label": "IEEE / transistor history primers"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-silent-elvis",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Coin du King",
+      "prompt": "Quel chanteur est largement surnommé le King of Rock and Roll ?",
+      "choices": [
+        "Elvis Presley",
+        "Chuck Berry",
+        "Buddy Holly",
+        "Little Richard"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Elvis Presley"
+        },
+        {
+          "label": "Rock & Roll Hall of Fame biography"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-silent-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Chaos cartographique",
+      "prompt": "Quelle est la capitale du Canada ?",
+      "choices": [
+        "Ottawa",
+        "Toronto",
+        "Montréal",
+        "Vancouver"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Ottawa"
+        },
+        {
+          "label": "Government of Canada — capital city"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-silent-road",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Rayon Beat",
+      "prompt": "Qui a écrit le roman de la Beat Generation On the Road ?",
+      "choices": [
+        "Jack Kerouac",
+        "Allen Ginsberg",
+        "William S. Burroughs",
+        "Neal Cassady"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — On the Road"
+        },
+        {
+          "label": "Library of Congress / Beat Generation primers"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-boomer-moon",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Un petit pas",
+      "prompt": "Qui a été la première personne à marcher sur la Lune ?",
+      "choices": [
+        "Neil Armstrong",
+        "Buzz Aldrin",
+        "Youri Gagarine",
+        "John Glenn"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 mission summary"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-boomer-apollo",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Horloge Apollo",
+      "prompt": "En quelle année Apollo 11 s’est-il posé sur la Lune ?",
+      "choices": [
+        "1969",
+        "1965",
+        "1972",
+        "1961"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 11"
+        },
+        {
+          "label": "NASA official mission timeline"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Folklore festivalier",
+      "prompt": "Dans quel État américain s’est tenu le festival de Woodstock en 1969 ?",
+      "choices": [
+        "New York",
+        "Californie",
+        "Texas",
+        "Floride"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Woodstock"
+        },
+        {
+          "label": "Bethel Woods Center for the Arts history"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-boomer-beatles",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dimanche Sullivan",
+      "prompt": "Quel groupe britannique a fait sensation aux États-Unis dans The Ed Sullivan Show en 1964 ?",
+      "choices": [
+        "The Beatles",
+        "The Rolling Stones",
+        "The Who",
+        "The Kinks"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Ed Sullivan Show"
+        },
+        {
+          "label": "Beatles official chronology / CBS archives"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-boomer-kirk",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Banter sur le pont",
+      "prompt": "Qui commandait le vaisseau Enterprise dans la série originale Star Trek ?",
+      "choices": [
+        "James T. Kirk",
+        "Jean-Luc Picard",
+        "Spock",
+        "Han Solo"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — James T. Kirk"
+        },
+        {
+          "label": "Star Trek: The Original Series credits"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-boomer-abs",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "baby-boomer",
+      "categoryTitle": "Quiz du petrolhead",
+      "prompt": "Que signifie l’abréviation ABS dans les systèmes de sécurité automobile ?",
+      "choices": [
+        "Anti-lock Braking System",
+        "Automatic Boost System",
+        "Axle Balance Sensor",
+        "Advanced Battery Switch"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Anti-lock braking system"
+        },
+        {
+          "label": "NHTSA / automotive safety primers"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genx-mtv",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Jour un du câble",
+      "prompt": "Quelle chaîne a été lancée en 1981 avec « Video Killed the Radio Star » ?",
+      "choices": [
+        "MTV",
+        "VH1",
+        "Nickelodeon",
+        "CNN"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — MTV"
+        },
+        {
+          "label": "Billboard / cable launch retrospectives"
+        }
+      ]
+    },
+    {
+      "banterHint": "Nom d’un tonnerre — de l’énergie, pas des fruits.",
+      "id": "w39-e-genx-bttf",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Flux et compagnie",
+      "prompt": "Dans Retour vers le futur, de quoi Doc Brown a-t-il besoin de 1,21 gigawatt ?",
+      "choices": [
+        "D’électricité",
+        "De poussière de plutonium",
+        "De peaux de banane",
+        "De café"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Back to the Future"
+        },
+        {
+          "label": "Film dialogue / Universal Pictures"
+        }
+      ]
+    },
+    {
+      "banterHint": "Hamster. Oui. On sait.",
+      "id": "w39-e-genx-hamster",
+      "tier": "easy",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Coin d’horreur de Hammond",
+      "prompt": "Quel présentateur est célèbrement le plus petit du trio Top Gear / The Grand Tour ?",
+      "choices": [
+        "James May",
+        "Richard Hammond",
+        "Jeremy Clarkson",
+        "The Stig"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Richard Hammond"
+        },
+        {
+          "label": "BBC Top Gear / Amazon Grand Tour production notes"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genx-may",
+      "tier": "easy",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Coin du Captain Slow",
+      "prompt": "Quel présentateur de The Grand Tour est surnommé Captain Slow ?",
+      "choices": [
+        "James May",
+        "Richard Hammond",
+        "Jeremy Clarkson",
+        "Abie"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — James May"
+        },
+        {
+          "label": "Top Gear / Grand Tour episode credits"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genx-tetris",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fête des blocs",
+      "prompt": "Quel jeu de puzzle aux blocs tombants a été créé par Alexey Pajitnov ?",
+      "choices": [
+        "Tetris",
+        "Pac-Man",
+        "Snake",
+        "Démineur"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Tetris"
+        },
+        {
+          "label": "Encyclopædia Britannica — Tetris"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genx-simpsons",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Famille jaune",
+      "prompt": "Quelle est la ville natale des Simpson ?",
+      "choices": [
+        "Springfield",
+        "Shelbyville",
+        "Quahog",
+        "South Park"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Simpsons"
+        },
+        {
+          "label": "Fox / series production materials"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-geny-matrix",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Manche pilule rouge",
+      "prompt": "Dans Matrix, de quelle couleur est la pilule que Neo prend pour voir la vérité ?",
+      "choices": [
+        "Rouge",
+        "Bleue",
+        "Verte",
+        "Violette"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Matrix"
+        },
+        {
+          "label": "Warner Bros. film synopsis"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-geny-ipod",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Écouteurs blancs",
+      "prompt": "En quelle année Apple a-t-il lancé le premier iPod ?",
+      "choices": [
+        "2001",
+        "1998",
+        "2005",
+        "2007"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple press archive — Oct 2001"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-geny-luke",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Manche sci-fi éclair",
+      "prompt": "Dans Star Wars, de quelle couleur est le premier sabre laser de Luke (Un nouvel espoir) ?",
+      "choices": [
+        "Bleu",
+        "Vert",
+        "Rouge",
+        "Violet"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Lightsaber"
+        },
+        {
+          "label": "Star Wars: A New Hope (1977) film"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-geny-gmg",
+      "tier": "easy",
+      "topic": "gmg-brand",
+      "generation": "gen-y",
+      "categoryTitle": "Minuit à Montréal",
+      "prompt": "Où est basée GMG Brand Label ?",
+      "choices": [
+        "Montréal, Canada",
+        "Toronto, Canada",
+        "Paris, France",
+        "Berlin, Allemagne"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "GMG Brand Label public materials"
+        },
+        {
+          "label": "Montréal music-label listings"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-geny-gigi",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "gen-y",
+      "categoryTitle": "Voie facile de Gigi",
+      "prompt": "DJ Gigi est l’artiste phare de quel label montréalais ?",
+      "choices": [
+        "GMG Brand Label",
+        "Warp Records",
+        "Sub Pop",
+        "Def Jam"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "GMG Brand Label roster notes"
+        },
+        {
+          "label": "DJ Gigi public artist pages"
+        }
+      ]
+    },
+    {
+      "banterHint": "Oui, c’était la question facile.",
+      "id": "w39-e-geny-google",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Partie de recherche",
+      "prompt": "Quelle entreprise a lancé un moteur de recherche nommé Google à la fin des années 1990 ?",
+      "choices": [
+        "Google",
+        "Yahoo",
+        "AltaVista",
+        "Ask Jeeves"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Google"
+        },
+        {
+          "label": "Stanford / company founding history"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genz-fortnite",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Bases du Battle Bus",
+      "prompt": "Fortnite est avant tout quel type de jeu ?",
+      "choices": [
+        "Battle royale",
+        "Aventure textuelle",
+        "Simulateur d’échecs",
+        "Logiciel fiscal"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games Fortnite overview"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genz-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Machine à streams",
+      "prompt": "Quelle entreprise suédoise est surtout connue pour l’appli de streaming musical Spotify ?",
+      "choices": [
+        "Spotify",
+        "Netflix",
+        "Skype",
+        "IKEA"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Spotify"
+        },
+        {
+          "label": "Company About / Stockholm HQ materials"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genz-tiktok",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Format court",
+      "prompt": "TikTok est surtout connu pour quel type de vidéos ?",
+      "choices": [
+        "Vidéos courtes",
+        "Uniquement des longs métrages",
+        "Uniquement de l’opéra en direct",
+        "Uniquement des journaux imprimés"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — TikTok"
+        },
+        {
+          "label": "ByteDance product descriptions"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genz-france",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale express",
+      "prompt": "Quelle est la capitale de la France ?",
+      "choices": [
+        "Paris",
+        "Lyon",
+        "Marseille",
+        "Nice"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Paris"
+        },
+        {
+          "label": "Encyclopædia Britannica — France"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genz-gigi2",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "gen-z",
+      "categoryTitle": "Voie facile de Gigi",
+      "prompt": "La musique de DJ Gigi est le plus souvent associée à quelle ambiance de ville ?",
+      "choices": [
+        "Nuits montréalaises",
+        "Granges country de Nashville",
+        "Uniquement des valses viennoises",
+        "Retraites silencieuses dans le désert"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "GMG Brand Label artist materials"
+        },
+        {
+          "label": "DJ Gigi public bio notes"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-genz-marvel",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "MCU 101",
+      "prompt": "L’univers cinématographique Marvel de quel studio a commencé avec Iron Man (2008) ?",
+      "choices": [
+        "Marvel Studios / Disney",
+        "Pixar uniquement",
+        "A24",
+        "Studio Ghibli"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Marvel Cinematic Universe"
+        },
+        {
+          "label": "Marvel Studios / Disney release history"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-alpha-yt",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Bouton Play",
+      "prompt": "YouTube est avant tout une plateforme pour quoi ?",
+      "choices": [
+        "La vidéo en ligne",
+        "Uniquement des livres imprimés",
+        "Uniquement des cadrans radio AM",
+        "Uniquement le pressage de vinyle"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — YouTube"
+        },
+        {
+          "label": "Google / YouTube About pages"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-alpha-tablet",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Le tactile d’abord",
+      "prompt": "Un iPad se décrit le mieux comme quel type d’appareil ?",
+      "choices": [
+        "Tablette tactile",
+        "Grille-pain",
+        "Téléphone fixe",
+        "Projecteur de cinéma"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — iPad"
+        },
+        {
+          "label": "Apple iPad product pages"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-alpha-dory",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Amis des poissons",
+      "prompt": "Dans Le Monde de Nemo, quel type de poisson est Nemo ?",
+      "choices": [
+        "Poisson-clown",
+        "Requin",
+        "Poisson rouge",
+        "Thon"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Finding Nemo"
+        },
+        {
+          "label": "Pixar / Disney film materials"
+        }
+      ]
+    },
+    {
+      "banterHint": "Si vous ratez celle-là, Jeremy aura besoin d’un café.",
+      "id": "w39-e-alpha-earth",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Bille bleue",
+      "prompt": "Sur quelle planète vivons-nous ?",
+      "choices": [
+        "La Terre",
+        "Mars",
+        "Jupiter",
+        "Vénus"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Earth"
+        },
+        {
+          "label": "NASA solar system overview"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-alpha-lego",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Logique de brique",
+      "prompt": "Les briques LEGO sont surtout célèbres comme quoi ?",
+      "choices": [
+        "Jouets de construction en plastique emboîtables",
+        "Bonbons comestibles",
+        "Moteurs de voiture",
+        "Marques de peinture"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Lego"
+        },
+        {
+          "label": "LEGO Group company history"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-alpha-cars",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "gen-alpha",
+      "categoryTitle": "Quatre roues",
+      "prompt": "Combien de roues a une voiture typique ?",
+      "choices": [
+        "Quatre",
+        "Deux",
+        "Huit",
+        "Une"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Car"
+        },
+        {
+          "label": "Standard automotive design references"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-mix-japan",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Chaos cartographique",
+      "prompt": "Quelle est la capitale du Japon ?",
+      "choices": [
+        "Tokyo",
+        "Osaka",
+        "Kyoto",
+        "Nagoya"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Tokyo"
+        },
+        {
+          "label": "Encyclopædia Britannica — Japan"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-mix-mona",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Louvre lite",
+      "prompt": "Qui a peint la Joconde ?",
+      "choices": [
+        "Léonard de Vinci",
+        "Michel-Ange",
+        "Raphaël",
+        "Donatello"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Mona Lisa"
+        },
+        {
+          "label": "Louvre Museum collection notes"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-mix-gigi3",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Voie facile de Gigi",
+      "prompt": "Vrai ou vibe-check : DJ Gigi sort sous quelle famille de labels ?",
+      "choices": [
+        "GMG Brand Label",
+        "Motown uniquement",
+        "Deutsche Grammophon uniquement",
+        "Nintendo Sound Team"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "GMG Brand Label roster"
+        },
+        {
+          "label": "DJ Gigi public credits"
+        }
+      ]
+    },
+    {
+      "id": "w39-e-mix-stig",
+      "tier": "easy",
+      "topic": "grand-tour-top-gear",
+      "generation": "multi-gen",
+      "categoryTitle": "Mystère de la combinaison blanche",
+      "prompt": "Dans Top Gear, comment s’appelle le pilote anonyme du show, casqué ?",
+      "choices": [
+        "The Stig",
+        "The Stag",
+        "The Sprinter",
+        "The Shadow"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Stig"
+        },
+        {
+          "label": "BBC Top Gear programme notes"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-silent-sputnik",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Origines orbitales",
+      "prompt": "Quel pays a lancé Spoutnik 1, le premier satellite artificiel, en 1957 ?",
+      "choices": [
+        "Union soviétique",
+        "États-Unis",
+        "Chine",
+        "France"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Sputnik 1"
+        },
+        {
+          "label": "NASA history — Space Race"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-silent-hula",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dossiers de modes",
+      "prompt": "La folie des années 1950 du cercle de plastique qui tourne autour de la taille, c’était…",
+      "choices": [
+        "Le hula hoop",
+        "Le bâton sauteur (pogo)",
+        "Le Rubik’s Cube",
+        "Le Tamagotchi"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Hula hoop"
+        },
+        {
+          "label": "Wham-O company history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-silent-polio",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Santé publique",
+      "prompt": "Quel scientifique américain a dirigé l’équipe derrière le premier vaccin antipoliomyélitique largement utiliséé dans les années 1950 ?",
+      "choices": [
+        "Jonas Salk",
+        "Alexander Fleming",
+        "Louis Pasteur",
+        "Edward Jenner"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Jonas Salk"
+        },
+        {
+          "label": "CDC / polio vaccine history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-silent-korea",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Carte de la Guerre froide",
+      "prompt": "En quelle année l’armistice de la guerre de Corée a-t-il été signé ?",
+      "choices": [
+        "1953",
+        "1945",
+        "1960",
+        "1975"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Korean War"
+        },
+        {
+          "label": "Encyclopædia Britannica — Korean War"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-silent-interstate",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "silent-generation",
+      "categoryTitle": "Bâtisseurs de routes",
+      "prompt": "Quel président américain a signé le Federal-Aid Highway Act qui a lancé le réseau Interstate en 1956 ?",
+      "choices": [
+        "Dwight D. Eisenhower",
+        "John F. Kennedy",
+        "Harry Truman",
+        "Lyndon B. Johnson"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Federal-Aid Highway Act of 1956"
+        },
+        {
+          "label": "FHWA interstate history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-silent-disneyland",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Aube des parcs à thème",
+      "prompt": "Dans quel État américain Disneyland a-t-il ouvert pour la première fois en 1955 ?",
+      "choices": [
+        "Californie",
+        "Floride",
+        "Texas",
+        "New York"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Disneyland"
+        },
+        {
+          "label": "Disney Parks historical timeline"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-boomer-jfk",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Horloge Camelot",
+      "prompt": "En quelle année le président américain John F. Kennedy a-t-il été assassiné ?",
+      "choices": [
+        "1963",
+        "1968",
+        "1960",
+        "1972"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Assassination of John F. Kennedy"
+        },
+        {
+          "label": "National Archives / JFK presidential library"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-boomer-mlk",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Mémoire de la marche",
+      "prompt": "Le discours « I Have a Dream » de Martin Luther King Jr. a été prononcé dans quelle ville ?",
+      "choices": [
+        "Washington, D.C.",
+        "Atlanta",
+        "Selma",
+        "Memphis"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — I Have a Dream"
+        },
+        {
+          "label": "National Park Service — Lincoln Memorial"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-boomer-beatles2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Notes d’Abbey",
+      "prompt": "Quel album des Beatles contient les chansons « Come Together » et « Here Comes the Sun » ?",
+      "choices": [
+        "Abbey Road",
+        "Revolver",
+        "Help!",
+        "Let It Be"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Abbey Road"
+        },
+        {
+          "label": "Apple Corps / Beatles discography"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-boomer-ali",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Rope-a-Dope",
+      "prompt": "Sous quel nom Muhammad Ali est-il né ?",
+      "choices": [
+        "Cassius Clay",
+        "Joe Frazier",
+        "George Foreman",
+        "Sugar Ray Robinson"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Muhammad Ali"
+        },
+        {
+          "label": "Encyclopædia Britannica — Muhammad Ali"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-boomer-concorde",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "baby-boomer",
+      "categoryTitle": "Quête secondaire supersonique",
+      "prompt": "Concorde était un exemple célèbre de quel type d’avion de passagers ?",
+      "choices": [
+        "Avion de ligne supersonique",
+        "Ferry hélicoptère",
+        "Montgolfière",
+        "Dirigeable cargo"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Concorde"
+        },
+        {
+          "label": "British Airways / Air France Concorde history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-boomer-starwars",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Première galactique",
+      "prompt": "En quelle année le film original Star Wars (plus tard Un nouvel espoir) est-il sorti ?",
+      "choices": [
+        "1977",
+        "1975",
+        "1980",
+        "1983"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Star Wars (film)"
+        },
+        {
+          "label": "Lucasfilm release history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genx-amazon-gt",
+      "tier": "hard",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Essence en prime time",
+      "prompt": "Quel service de streaming a produit The Grand Tour ?",
+      "choices": [
+        "Amazon Prime Video",
+        "Netflix",
+        "Hulu",
+        "Disney+"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Grand Tour"
+        },
+        {
+          "label": "Amazon MGM Studios / Prime Video listings"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genx-chernobyl",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Carte atomique",
+      "prompt": "La catastrophe nucléaire de Tchernobyl en 1986 s’est produite dans quel pays actuel ?",
+      "choices": [
+        "Ukraine",
+        "Pologne",
+        "Allemagne",
+        "Suède"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Chernobyl disaster"
+        },
+        {
+          "label": "IAEA / Chernobyl historical summaries"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genx-nirvana",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Porte grunge",
+      "prompt": "Quel album de Nirvana contient la chanson « Smells Like Teen Spirit » ?",
+      "choices": [
+        "Nevermind",
+        "In Utero",
+        "Bleach",
+        "Unplugged in New York"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Nevermind"
+        },
+        {
+          "label": "DGC Records / Nirvana discography"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genx-www",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Aube de l’hyperlien",
+      "prompt": "À qui attribue-t-on l’invention du World Wide Web ?",
+      "choices": [
+        "Tim Berners-Lee",
+        "Bill Gates",
+        "Steve Jobs",
+        "Mark Zuckerberg"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Tim Berners-Lee"
+        },
+        {
+          "label": "CERN WWW project history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genx-seinfeld",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "À propos de rien",
+      "prompt": "Seinfeld se déroule principalement dans quelle ville américaine ?",
+      "choices": [
+        "New York",
+        "Los Angeles",
+        "Chicago",
+        "Boston"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Seinfeld"
+        },
+        {
+          "label": "NBC series production notes"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genx-gameboy",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Histoire portable",
+      "prompt": "En quelle année le Game Boy original de Nintendo est-il sorti au Japon ?",
+      "choices": [
+        "1989",
+        "1985",
+        "1994",
+        "1998"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Game Boy"
+        },
+        {
+          "label": "Nintendo corporate history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-geny-ipod-hd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Molette au fond",
+      "prompt": "Le stockage du premier iPod utilisait quel type de lecteur ?",
+      "choices": [
+        "Disque dur",
+        "Uniquement le streaming cloud",
+        "Uniquement des disquettes",
+        "Uniquement du vinyle"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple iPod (2001) technical specs"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-geny-facebook",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Connexion campus",
+      "prompt": "En quelle année Facebook (aujourd’hui Meta) a-t-il été fondé ?",
+      "choices": [
+        "2004",
+        "1998",
+        "2008",
+        "2012"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Facebook"
+        },
+        {
+          "label": "Meta / company founding history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-geny-dune",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Sable et syntaxe",
+      "prompt": "Qui a écrit le roman original Dune ?",
+      "choices": [
+        "Frank Herbert",
+        "Isaac Asimov",
+        "Arthur C. Clarke",
+        "Philip K. Dick"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Dune (novel)"
+        },
+        {
+          "label": "Publisher / copyright records — Frank Herbert"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-geny-gmg2",
+      "tier": "hard",
+      "topic": "gmg-brand",
+      "generation": "gen-y",
+      "categoryTitle": "Lore du label",
+      "prompt": "GMG Brand Label est principalement associé à quel domaine créatif ?",
+      "choices": [
+        "La musique",
+        "Le matériel agricole",
+        "La restauration aérienne",
+        "Les logiciels fiscaux"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "GMG Brand Label public site / materials"
+        },
+        {
+          "label": "Montréal independent label listings"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-geny-friends",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Continuité du canapé",
+      "prompt": "Dans Friends, comment s’appelle le barista de Central Perk qui devient ensuite un personnage régulier ?",
+      "choices": [
+        "Gunther",
+        "Gunner",
+        "Gregory",
+        "Gareth"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Friends"
+        },
+        {
+          "label": "NBC / Warner Bros. Television credits"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-geny-hybrid",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "gen-y",
+      "categoryTitle": "Couple silencieux",
+      "prompt": "Quel modèle Toyota est largement crédité d’avoir popularisé les hybrides grand public ?",
+      "choices": [
+        "Prius",
+        "Corolla FX uniquement",
+        "Land Cruiser diesel uniquement",
+        "Supra Mk IV uniquement"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Toyota Prius"
+        },
+        {
+          "label": "Toyota hybrid technology history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genz-fortnite2",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Code de l’île",
+      "prompt": "Quelle entreprise développe Fortnite ?",
+      "choices": [
+        "Epic Games",
+        "Valve",
+        "Nintendo",
+        "Sega"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games corporate pages"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genz-spotify2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "QG du stream",
+      "prompt": "Dans quel pays Spotify a-t-il été fondé ?",
+      "choices": [
+        "Suède",
+        "États-Unis",
+        "Corée du Sud",
+        "Brésil"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Spotify"
+        },
+        {
+          "label": "Spotify About / company filings summaries"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genz-btsv",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Boussole K-pop",
+      "prompt": "BTS est un groupe de musique de quel pays ?",
+      "choices": [
+        "Corée du Sud",
+        "Japon",
+        "Chine",
+        "Thaïlande"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — BTS"
+        },
+        {
+          "label": "HYBE / official artist biographies"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genz-tesla",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "gen-z",
+      "categoryTitle": "Autoroute VE",
+      "prompt": "Tesla, Inc. est surtout connue pour fabriquer quoi ?",
+      "choices": [
+        "Des véhicules électriques",
+        "Uniquement des machines à écrire mécaniques",
+        "Uniquement des voiliers",
+        "Uniquement des presses à vinyle"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Tesla, Inc."
+        },
+        {
+          "label": "Company SEC / About Tesla materials"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genz-blackpanther",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Week-end Wakanda",
+      "prompt": "Qui a réalisé le film Marvel Black Panther de 2018 ?",
+      "choices": [
+        "Ryan Coogler",
+        "Taika Waititi",
+        "Patty Jenkins",
+        "James Gunn"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Black Panther (film)"
+        },
+        {
+          "label": "Marvel Studios credits"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-genz-paris-acc",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Carte climat",
+      "prompt": "L’Accord de Paris est un grand accord international portant sur quoi ?",
+      "choices": [
+        "Le changement climatique",
+        "Les timbres-poste",
+        "Les mascottes olympiques",
+        "Les polices de devises"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Paris Agreement"
+        },
+        {
+          "label": "UNFCCC official materials"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-alpha-minecraft",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Univers de blocs",
+      "prompt": "Qui a créé Minecraft à l’origine ?",
+      "choices": [
+        "Markus Persson (Notch)",
+        "Shigeru Miyamoto",
+        "Gabe Newell",
+        "Hideo Kojima"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Minecraft"
+        },
+        {
+          "label": "Mojang / Xbox Game Studios history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-alpha-roblox",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Place des avatars",
+      "prompt": "Roblox se décrit le mieux comme quoi ?",
+      "choices": [
+        "Une plateforme en ligne de jeux créés par les utilisateurs",
+        "Uniquement un jeu de société physique",
+        "Une chaîne TV satellite",
+        "Un type d’huile moteur"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Roblox"
+        },
+        {
+          "label": "Roblox Corporation About pages"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-alpha-pixar",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lampe et Luxo",
+      "prompt": "Quel studio a réalisé Toy Story, le premier long métrage entièrement en images de synthèse ?",
+      "choices": [
+        "Pixar",
+        "DreamWorks uniquement",
+        "Studio Ghibli",
+        "Aardman uniquement"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Toy Story"
+        },
+        {
+          "label": "Pixar Animation Studios history"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-alpha-among",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Patrouille sus",
+      "prompt": "Among Us est un jeu de déduction sociale se déroulant surtout dans quel cadre ?",
+      "choices": [
+        "Un vaisseau spatial / équipage spatial",
+        "Uniquement une boulangerie médiévale",
+        "Uniquement un bureau des impôts",
+        "Uniquement une bibliothèque silencieuse"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Among Us"
+        },
+        {
+          "label": "Innersloth game description"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-alpha-ev",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "gen-alpha",
+      "categoryTitle": "Brancher et rouler",
+      "prompt": "Que signifie couramment VE (EV) pour les voitures modernes ?",
+      "choices": [
+        "Véhicule électrique",
+        "Volume extra",
+        "Vide moteur",
+        "Vinyle d’urgence"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Electric vehicle"
+        },
+        {
+          "label": "IEA / EV technology overviews"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-alpha-ghibli",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Territoire Totoro",
+      "prompt": "Studio Ghibli est basé dans quel pays ?",
+      "choices": [
+        "Japon",
+        "France",
+        "Brésil",
+        "Canada"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Studio Ghibli"
+        },
+        {
+          "label": "Studio Ghibli official materials"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-mix-nile",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Classement des fleuves",
+      "prompt": "Quel fleuve africain est traditionnellement cité parmi les plus longs du monde ?",
+      "choices": [
+        "Le Nil",
+        "La Tamise",
+        "La Seine",
+        "L’Hudson"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Nile"
+        },
+        {
+          "label": "Encyclopædia Britannica — Nile River"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-mix-van-gogh",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait étoilé",
+      "prompt": "Vincent van Gogh est fortement associé à quel tableau ?",
+      "choices": [
+        "La Nuit étoilée",
+        "La Persistance de la mémoire",
+        "Guernica",
+        "Le Cri comme seule œuvre"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Starry Night"
+        },
+        {
+          "label": "MoMA collection notes"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-mix-v8",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "multi-gen",
+      "categoryTitle": "Compte des cylindres",
+      "prompt": "Un moteur V8 a typiquement combien de cylindres ?",
+      "choices": [
+        "Huit",
+        "Quatre",
+        "Deux",
+        "Seize"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — V8 engine"
+        },
+        {
+          "label": "Automotive engineering primers"
+        }
+      ]
+    },
+    {
+      "id": "w39-h-mix-hamilton",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Rythmes Broadway",
+      "prompt": "Qui a écrit la musique et les paroles de la comédie musicale Hamilton ?",
+      "choices": [
+        "Lin-Manuel Miranda",
+        "Andrew Lloyd Webber",
+        "Stephen Sondheim",
+        "Elton John"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Hamilton (musical)"
+        },
+        {
+          "label": "Official Hamilton / Miranda credits"
+        }
+      ]
+    },
+    {
+      "id": "w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Ciel de Guerre froide",
+      "prompt": "Francis Gary Powers a été abattu en 1960 à bord de quel type d’avion de reconnaissance américain ?",
+      "choices": [
+        "U-2",
+        "SR-71 uniquement",
+        "B-29 Superfortress",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — 1960 U-2 incident"
+        },
+        {
+          "label": "CIA / Cold War aviation histories"
+        }
+      ]
+    },
+    {
+      "id": "w39-d-boomer-apollo13",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "L’échec n’est pas…",
+      "prompt": "L’explosion du réservoir d’oxygène d’Apollo 13 s’est produite en quelle année ?",
+      "choices": [
+        "1970",
+        "1969",
+        "1972",
+        "1968"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 13"
+        },
+        {
+          "label": "NASA Apollo 13 mission report"
+        }
+      ]
+    },
+    {
+      "banterHint": "Après la BBC, avant que tout le monde se dispute sur le camping.",
+      "id": "w39-d-genx-gt-year",
+      "tier": "difficult",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Chronologie studio",
+      "prompt": "En quelle année The Grand Tour a-t-il été diffusé pour la première fois sur Amazon Prime Video ?",
+      "choices": [
+        "2014",
+        "2015",
+        "2016",
+        "2018"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — The Grand Tour (TV series)"
+        },
+        {
+          "label": "Contemporary reviews — Nov 2016 premiere"
+        }
+      ]
+    },
+    {
+      "id": "w39-d-genx-berlin",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Horloge du Mur",
+      "prompt": "En quelle année le mur de Berlin est-il tombé ?",
+      "choices": [
+        "1989",
+        "1985",
+        "1991",
+        "1979"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Fall of the Berlin Wall"
+        },
+        {
+          "label": "Encyclopædia Britannica — Berlin Wall"
+        }
+      ]
+    },
+    {
+      "id": "w39-d-geny-iphone",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Chronologie keynote",
+      "prompt": "En quelle année Apple a-t-il annoncé l’iPhone original ?",
+      "choices": [
+        "2007",
+        "2005",
+        "2009",
+        "2010"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — iPhone (1st generation)"
+        },
+        {
+          "label": "Apple special event — Jan 2007"
+        }
+      ]
+    },
+    {
+      "id": "w39-d-geny-inception",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Couches de rêve",
+      "prompt": "Qui a réalisé le film Inception de 2010 ?",
+      "choices": [
+        "Christopher Nolan",
+        "Denis Villeneuve",
+        "Ridley Scott",
+        "James Cameron"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Inception"
+        },
+        {
+          "label": "Warner Bros. / film credits"
+        }
+      ]
+    },
+    {
+      "id": "w39-d-genz-openai",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Manières de modèles",
+      "prompt": "En quelle année OpenAI a-t-il mis ChatGPT à disposition du public ?",
+      "choices": [
+        "2022",
+        "2018",
+        "2020",
+        "2024"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — ChatGPT"
+        },
+        {
+          "label": "OpenAI blog — Nov 2022 announcement"
+        }
+      ]
+    },
+    {
+      "id": "w39-d-genz-parasite",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Escaliers et sous-titres",
+      "prompt": "Le film Parasite, de quel pays, a remporté l’Oscar du meilleur film ?",
+      "choices": [
+        "Corée du Sud",
+        "Japon",
+        "France",
+        "Mexique"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Parasite (2019 film)"
+        },
+        {
+          "label": "Academy of Motion Picture Arts and Sciences records"
+        }
+      ]
+    },
+    {
+      "id": "w39-d-alpha-switch",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Portable hybride",
+      "prompt": "En quelle année la Nintendo Switch est-elle sortie dans le monde ?",
+      "choices": [
+        "2017",
+        "2015",
+        "2019",
+        "2013"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Nintendo Switch"
+        },
+        {
+          "label": "Nintendo corporate news — March 2017"
+        }
+      ]
+    },
+    {
+      "id": "w39-d-mix-louvre",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Problème de pyramide",
+      "prompt": "La pyramide de verre d’I. M. Pei est l’entrée moderne emblématique de quel musée ?",
+      "choices": [
+        "Le Louvre",
+        "Le British Museum",
+        "Le Met (NYC)",
+        "Le Prado"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Louvre Pyramid"
+        },
+        {
+          "label": "Louvre Museum architectural notes"
+        }
+      ]
+    },
+    {
+      "id": "w39-f-silent-cool-wall",
+      "tier": "finale",
+      "topic": "grand-tour-top-gear",
+      "generation": "silent-generation",
+      "categoryTitle": "Finale · Power Lap",
+      "prompt": "Sur le Cool Wall de Top Gear, quelle zone se situe entre Cool et Uncool ?",
+      "choices": [
+        "Subzero",
+        "Seriously Uncool",
+        "Meh",
+        "Slightly Warm"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Cool Wall"
+        },
+        {
+          "label": "BBC Top Gear Cool Wall segments"
+        }
+      ]
+    },
+    {
+      "id": "w39-f-boomer-armstrong-quote",
+      "tier": "finale",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Finale · Réplique lunaire",
+      "prompt": "Complétez la phrase de Neil Armstrong sur la Lune : « That’s one small step for [a] man, one giant leap for ___ . »",
+      "choices": [
+        "mankind",
+        "NASA",
+        "Texas",
+        "rockets"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 transcript"
+        }
+      ]
+    },
+    {
+      "id": "w39-f-genx-stig-reveal",
+      "tier": "finale",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Finale · Casque ôté",
+      "prompt": "Quel pilote de course a été révélé en 2009 comme le Stig alors en poste de la BBC Top Gear ?",
+      "choices": [
+        "Ben Collins",
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Damon Hill"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Stig"
+        },
+        {
+          "label": "Contemporary news — Ben Collins identification 2009"
+        }
+      ]
+    },
+    {
+      "id": "w39-f-geny-matrix-arch",
+      "tier": "finale",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Finale · Code vert",
+      "prompt": "Dans la lore de Matrix Reloaded / Revolutions, quel titre porte le programme qui a créé la Matrice ?",
+      "choices": [
+        "The Architect",
+        "The Oracle uniquement",
+        "Agent Smith uniquement",
+        "Morpheus"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Architect (The Matrix)"
+        },
+        {
+          "label": "Warner Bros. Matrix trilogy materials"
+        }
+      ]
+    },
+    {
+      "id": "w39-f-genz-fortnite-mode",
+      "tier": "finale",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Finale · Cercle de tempête",
+      "prompt": "Le mode PvP free-to-play original de Fortnite qui a défini son boom s’appelle couramment comment ?",
+      "choices": [
+        "Battle Royale",
+        "Save the World uniquement",
+        "Creative uniquement",
+        "Rocket Racing uniquement"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite Battle Royale"
+        },
+        {
+          "label": "Epic Games Fortnite mode history"
+        }
+      ]
+    },
+    {
+      "id": "w39-f-alpha-minecraft-biome",
+      "tier": "finale",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Finale · Deep Dark",
+      "prompt": "Dans Minecraft, quelle créature hostile est fortement associée au Deep Dark / aux cités antiques ?",
+      "choices": [
+        "Warden",
+        "Creeper uniquement",
+        "Ender Dragon uniquement",
+        "Golem de fer"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Minecraft"
+        },
+        {
+          "label": "Minecraft Wiki — Warden / Deep Dark"
+        }
+      ]
+    }
+  ],
+  "locale": "fr",
+  "sourceLocale": "en",
+  "sourceWeekKey": "2026-W39",
+  "sourceFile": "banks/weekly/2026-W39.json",
+  "translatedAt": "2026-09-21T16:52:01.000Z"
+}

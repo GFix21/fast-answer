@@ -4,7 +4,7 @@ import {
   loadMonthIndex,
   loadArchivedWeek,
 } from "../../lib/archive-store.js";
-import { listPlacementPages, loadPlacementPack } from "../../lib/placement-store.js";
+import { listPlacementPages, loadPlacementPack, normalizeLocale } from "../../lib/placement-store.js";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") return json(res, 405, { error: "method" });
@@ -13,16 +13,18 @@ export default async function handler(req, res) {
   const url = new URL(req.url || "/", "http://localhost");
   const month = url.searchParams.get("month");
   const week = url.searchParams.get("week");
+  const locale = normalizeLocale(url.searchParams.get("locale") || "en");
 
   if (!month) {
     return json(res, 200, {
+      locale,
       months: listArchiveMonths(),
-      placementPages: listPlacementPages(),
+      placementPages: listPlacementPages(locale),
     });
   }
 
   if (month === "placement") {
-    const pack = loadPlacementPack();
+    const pack = loadPlacementPack(locale);
     const page = url.searchParams.get("page") || pack.id || "placement";
     const studioCounts = {};
     for (const q of pack.questions || []) {
@@ -30,11 +32,12 @@ export default async function handler(req, res) {
     }
     return json(res, 200, {
       kind: "placement",
+      locale,
       monthKey: "placement",
       pageKey: page,
       pack,
       studioCounts,
-      pages: listPlacementPages(),
+      pages: listPlacementPages(locale),
     });
   }
 

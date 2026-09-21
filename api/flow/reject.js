@@ -4,13 +4,17 @@ import {
   setQuestionStatus,
   logRejection,
   listRejections,
+  normalizeLocale,
 } from "../../lib/week-store.js";
 
 export default async function handler(req, res) {
   if (!requireAuth(req, res)) return;
 
+  const url = new URL(req.url || "/", "http://localhost");
+  const locale = normalizeLocale(url.searchParams.get("locale") || "en");
+
   if (req.method === "GET") {
-    return json(res, 200, { rejections: listRejections() });
+    return json(res, 200, { locale, rejections: listRejections(locale) });
   }
 
   if (req.method !== "POST") return json(res, 405, { error: "method" });
@@ -22,13 +26,15 @@ export default async function handler(req, res) {
     return json(res, 400, { error: "Invalid JSON" });
   }
 
-  const pack = loadCurrentPack();
+  const loc = normalizeLocale(body.locale || locale);
+  const pack = loadCurrentPack(loc);
   const q = (pack?.questions || []).find((x) => x.id === body.questionId);
   if (!q) return json(res, 404, { error: "question not found" });
 
-  setQuestionStatus(q.id, "rejected");
+  setQuestionStatus(q.id, "rejected", loc);
   const rejection = {
     id: `rej_${Date.now()}`,
+    locale: loc,
     questionId: q.id,
     rejectedAt: new Date().toISOString(),
     reasonCodes: body.reasonCodes || ["other"],
@@ -52,17 +58,27 @@ export default async function handler(req, res) {
       status: "pending",
     };
     rejection.regeneratedQuestionId = regenerated.id;
-    // In-memory only — durable regen goes through Q-and-A studio
     const g = globalThis;
-    if (!g.__faFlowReview) g.__faFlowReview = { statuses: {}, topics: [], rejections: [] };
-    g.__faFlowReview.regen = g.__faFlowReview.regen || {};
-    g.__faFlowReview.regen[regenerated.id] = regenerated;
-    g.__faFlowReview.statuses[regenerated.id] = "pending";
+    if (!g.__faFlowReviewByLocale) g.__faFlowReviewByLocale = {};
+    if (!g.__faFlowReviewByLocale[loc]) {
+      g.__faFlowReviewByLocale[loc] = {
+        statuses: {},
+        topics: [],
+        rejections: [],
+        regen: {},
+        packOverride: null,
+      };
+    }
+    const bucket = g.__faFlowReviewByLocale[loc];
+    bucket.regen = bucket.regen || {};
+    bucket.regen[regenerated.id] = regenerated;
+    bucket.statuses[regenerated.id] = "pending";
   }
 
-  logRejection(rejection);
+  logRejection(rejection, loc);
   return json(res, 200, {
     ok: true,
+    locale: loc,
     rejection,
     regenerated,
     learningBrief:
