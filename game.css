@@ -259,7 +259,9 @@ img.brand{
   border:1px solid var(--line);border-radius:999px;padding:5px 10px;
   font-size:12px;font-weight:600;color:var(--fg);
   background:color-mix(in oklab, var(--elev) 80%, transparent);
+  display:inline-flex;align-items:center;gap:6px;
 }
+.seat-av{width:22px;height:22px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid var(--line);}
 .seat.you{border-color:color-mix(in oklab, var(--fg) 40%, transparent)}
 .seat.human{border-color:color-mix(in oklab, var(--ok) 50%, transparent)}
 .seat.bot{color:var(--mut)}

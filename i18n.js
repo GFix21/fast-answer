@@ -33,14 +33,14 @@ export function speechLang(locale) {
 /** Client bank URLs for the live game. */
 export function questionsUrl(locale) {
   const loc = normalizeLocale(locale);
-  if (loc === "en") return "./questions.json";
-  return `./questions.${loc}.json`;
+  if (loc === "en") return "/questions.json";
+  return `/questions.${loc}.json`;
 }
 
 export function placementUrl(locale) {
   const loc = normalizeLocale(locale);
-  if (loc === "en") return "./banks/placement/generational-first-pass.json";
-  return `./banks/placement/${loc}/generational-first-pass.json`;
+  if (loc === "en") return "/banks/placement/generational-first-pass.json";
+  return `/banks/placement/${loc}/generational-first-pass.json`;
 }
 
 const STRINGS = {

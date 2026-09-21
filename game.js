@@ -27,7 +27,7 @@ const POSE = {
   loss: "./jeremy/jeremy-loss.png",
 };
 const TITLE_3D = "./promo/fast-answer-3d-flying.jpg";
-const FLOW_URL = "/flow/index.html";
+const FLOW_URL = "/flow";
 const PROFILE_KEY = "fa-profile-v1";
 const RECENT_Q_KEY = "fa-recent-qids-v1";
 const RECENT_Q_MAX = 240;
@@ -68,15 +68,15 @@ const ABILITY_META = {
 
 /** Celebrity first-name bots fill empty seats (2–12). Skill + buzz delay like the old dojo AI. */
 const DOJO_BACKGROUNDS = [
-  { id: "lantern", src: "/dojo/lantern-hall.jpg", labelKey: "bgLantern" },
-  { id: "garden", src: "/dojo/garden-shoji.jpg", labelKey: "bgGarden" },
-  { id: "night", src: "/dojo/night-tatami.jpg", labelKey: "bgNight" },
+  { id: "lantern", src: "/assets/dojo/lantern-hall.jpg", labelKey: "bgLantern" },
+  { id: "garden", src: "/assets/dojo/garden-shoji.jpg", labelKey: "bgGarden" },
+  { id: "night", src: "/assets/dojo/night-tatami.jpg", labelKey: "bgNight" },
 ];
 function dojoBackground(id) {
   return DOJO_BACKGROUNDS.find((b) => b.id === id) || DOJO_BACKGROUNDS[0];
 }
 function botAvatar(id) {
-  return id ? `/bots/${id}.jpg` : "";
+  return id ? `/assets/bots/${id}.jpg` : "";
 }
 
 const CELEB_BOTS = [
@@ -102,8 +102,7 @@ const isDirections =
   /(?:^|\/)directions\.html$/i.test(location.pathname);
 const isDojoPage =
   params.get("page") === "dojo" ||
-  /(?:^|\/)dojo\.html$/i.test(location.pathname) ||
-  /(?:^|\/)dojo\/?$/i.test(location.pathname);
+  /(?:^|\/)dojo(?:\.html)?\/?$/i.test(location.pathname);
 const ROOM_API = location.pathname.includes("/fast-answer") ? "/api/fa/rooms" : "/api/rooms";
 
 function detectDisplayMode() {
@@ -1720,7 +1719,7 @@ function rulesHTML() {
       <li><b>${tt("ruleDojo")}</b></li>
       <li><b>${tt("ruleRoom")}</b></li>
     </ul>
-    <a class="word dir-full" href="./directions.html">${tt("fullDirections")}</a>
+    <a class="word dir-full" href="/directions">${tt("fullDirections")}</a>
     <button class="primary" id="rulesX" type="button">${tt("close")}</button>
   </div>`;
 }
@@ -1762,7 +1761,7 @@ function directionsHTML() {
       <div class="logo">Fast Answer!<small>${tt("directionsTitle")}</small></div>
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale, { idPrefix: "dirlang" })}
-      <a class="word" href="./index.html">${tt("lobby")}</a>
+      <a class="word" href="/">${tt("lobby")}</a>
     </div>
     <div class="lobby">
       <div class="lobby-copy">
@@ -1820,7 +1819,7 @@ function directionsHTML() {
           `)}
         </div>
         <div class="row">
-          <a class="primary" href="./index.html">${tt("lobbyPlay")}</a>
+          <a class="primary" href="/">${tt("lobbyPlay")}</a>
         </div>
       </div>
       <div class="host" style="--host-h:${state.hostH}vh"><img src="${POSE.idle}" alt="Jeremy"/></div>
@@ -1967,7 +1966,7 @@ function dojoModeForGate() {
 }
 function dojoHref(mode) {
   const next = mode || dojoModeForGate();
-  return "/dojo.html?mode=" + encodeURIComponent(next);
+  return "/dojo?mode=" + encodeURIComponent(next);
 }
 function openDojoPage(mode) {
   const next = mode || dojoModeForGate();
@@ -2344,7 +2343,7 @@ function roomBody() {
         <span>${tt("fillBots")}</span>
       </label>
       <div class="seats">
-        ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
+        ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${(!s.human && s.id) ? `<img class="seat-av" src="${botAvatar(s.id)}" alt=""/>` : (s.thumb ? `<img class="seat-av" src="${s.thumb}" alt=""/>` : "")}<span>${escapeHtml(s.name)}</span></span>`).join("")}
       </div>
       <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
       ${state.room ? `
@@ -2387,7 +2386,7 @@ function roomBody() {
         <span>${tt("fillBots")}</span>
       </label>
       <div class="seats">
-        ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
+        ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${(!s.human && s.id) ? `<img class="seat-av" src="${botAvatar(s.id)}" alt=""/>` : (s.thumb ? `<img class="seat-av" src="${s.thumb}" alt=""/>` : "")}<span>${escapeHtml(s.name)}</span></span>`).join("")}
       </div>
       <button class="primary" id="startPhone" type="button">${tt("startPhone")}</button>
       <p class="meta">${tt("phoneLockHint")}</p>
@@ -2403,7 +2402,7 @@ function roomBody() {
       <span>${tt("fillBots")}</span>
     </label>
     <div class="seats">
-      ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
+      ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${(!s.human && s.id) ? `<img class="seat-av" src="${botAvatar(s.id)}" alt=""/>` : (s.thumb ? `<img class="seat-av" src="${s.thumb}" alt=""/>` : "")}<span>${escapeHtml(s.name)}</span></span>`).join("")}
     </div>
     ${isTvDisplay() ? "" : `
     <div class="screen-modes" role="radiogroup" aria-label="Screen mode">
@@ -2595,7 +2594,7 @@ function lobbyHTML() {
       ${tv ? "" : `<a class="word" href="${dojoHref()}">${tt("dojo")}</a>`}
       ${tv ? "" : `<a class="word" href="${FLOW_URL}">Flow</a>`}
       <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
-      <a class="word" href="./directions.html">${tt("directions")}</a>
+      <a class="word" href="/directions">${tt("directions")}</a>
     </div>
     <div class="lobby">
       <div class="lobby-copy">

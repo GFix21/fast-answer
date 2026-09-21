@@ -19,19 +19,15 @@
       ]
     }
   ],
-  "redirects": [
+  "rewrites": [
     {
       "source": "/dojo",
-      "destination": "/dojo.html",
-      "permanent": false
+      "destination": "/dojo.html"
     },
     {
       "source": "/dojo/",
-      "destination": "/dojo.html",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
+      "destination": "/dojo.html"
+    },
     {
       "source": "/directions",
       "destination": "/directions.html"
