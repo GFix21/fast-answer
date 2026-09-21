@@ -29,12 +29,14 @@ h1,h2,h3{font-family:var(--font-display);font-weight:600;margin:0 0 8px}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .spread{justify-content:space-between}
 nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
-nav.tabs button{
+nav.tabs button, nav.tabs a{
   background:transparent;border:1px solid var(--line);color:var(--fg);
   border-radius:999px;padding:8px 14px;cursor:pointer;font:inherit;font-size:13px;font-weight:500;
+  text-decoration:none;
 }
-nav.tabs button.on{background:var(--accent);color:var(--accent-fg);border-color:transparent}
-button.btn{
+nav.tabs button.on{background:#e8a87c;color:#1a120c;border-color:transparent}
+nav.tabs a{border-color:color-mix(in oklab, #e8a87c 55%, var(--line));color:#e8a87c}
+button.btn, a.btn{
   border:1px solid var(--line);background:color-mix(in oklab, var(--elev) 80%, transparent);
   color:var(--fg);border-radius:var(--radius-sm);padding:8px 12px;cursor:pointer;font:inherit;font-size:13px;
 }
@@ -46,7 +48,27 @@ input,textarea,select{
   border-radius:var(--radius-sm);padding:10px 12px;font:inherit;margin:6px 0 12px;
 }
 label{display:block;font-size:12px;color:var(--mut);margin-top:4px}
-.login-wrap{max-width:380px;margin:12vh auto;text-align:left}
+.login-wrap,.login-screen{max-width:420px;margin:10vh auto;text-align:center}
+.login-screen h1{font-size:2.75rem;letter-spacing:-0.02em}
+.login-sub{max-width:28rem;margin:0 auto 8px}
+.login-card{text-align:left;margin-top:22px}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#e8a87c;margin:0 0 8px}
+.flow-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-start}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:12px;margin:12px 0 8px}
+button.metric-card{
+  text-align:left;cursor:pointer;font:inherit;color:var(--fg);
+  background:color-mix(in oklab, var(--elev) 88%, transparent);
+  border:1px solid var(--line);border-radius:18px;padding:16px 16px 14px;
+}
+button.metric-card:hover{border-color:#e8a87c}
+button.metric-card b{display:block;font-family:var(--font-display);font-size:2.4rem;line-height:1;margin-top:8px}
+button.metric-card span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.donut-row{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+.donut-legend{list-style:none;margin:0;padding:0;flex:1;min-width:180px}
+.donut-legend li{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin:6px 0}
+.swatch{display:inline-block;width:10px;height:10px;border-radius:99px;margin-right:8px}
+a.glow-link{color:#e8a87c;text-decoration:none}
+a.glow-link:hover{text-decoration:underline}
 .stat{min-width:88px}
 .stat b{display:block;font-size:22px;font-family:var(--font-display)}
 .stat span{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}

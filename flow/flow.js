@@ -1,4 +1,5 @@
 const IDLE_MS = 30_000;
+const GLOW_URL = "https://gmgbrand.vercel.app/games";
 const app = document.getElementById("app");
 
 const LOCALE_KEY = "fa-flow-locale";
@@ -15,7 +16,7 @@ function loadFlowLocale() {
 const state = {
   authed: false,
   configured: true,
-  tab: "queue",
+  tab: "console",
   week: null,
   topics: null,
   message: "",
@@ -94,23 +95,27 @@ function fmtCounts(c) {
 }
 
 function render() {
+  if (!app) return;
   if (!state.authed) {
     app.innerHTML = `
-      <div class="login-wrap card">
+      <div class="login-screen">
+        <p class="eyebrow">Private</p>
         <h1>Flow</h1>
-        <p class="mut">Fast Answer admin — password gate</p>
-        ${state.locked ? `<div class="banner">Idle lock — sign in again.</div>` : ""}
-        ${!state.configured ? `<div class="banner">Server missing FLOW_PASSWORD env.</div>` : ""}
-        ${state.message ? `<div class="banner">${esc(state.message)}</div>` : ""}
-        <label>Password</label>
-        <input id="pw" type="password" autocomplete="current-password" />
-        <button class="btn primary" id="login">Unlock</button>
-        <p class="mut" style="margin-top:16px"><a href="/" style="color:var(--accent)">← Back to game</a></p>
+        <p class="mut login-sub">Fast Answer console. The password stays on the server.</p>
+        <form id="login-form" class="card login-card">
+          ${state.locked ? `<div class="banner">Session locked — enter the password again.</div>` : ""}
+          ${state.message ? `<div class="banner">${esc(state.message)}</div>` : ""}
+          <label for="pw">Password</label>
+          <input id="pw" name="password" type="password" autocomplete="current-password" required />
+          <button class="btn primary" id="login" type="submit">Enter</button>
+        </form>
+        <p class="mut" style="margin-top:16px"><a class="glow-link" href="/">Back to the game</a></p>
       </div>`;
-    document.getElementById("login")?.addEventListener("click", doLogin);
-    document.getElementById("pw")?.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") doLogin();
+    document.getElementById("login-form")?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      doLogin();
     });
+    document.getElementById("pw")?.focus();
     return;
   }
 
@@ -120,10 +125,11 @@ function render() {
   const pack = state.week?.pack;
 
   app.innerHTML = `
-    <div class="row spread">
+    <div class="flow-head">
       <div>
-        <h1>Flow · Fast Answer</h1>
-        <p class="mut">Week ${esc(pack?.weekKey || "—")} · locale <b>${esc((state.locale||"en").toUpperCase())}</b> · review → publish → questions.json</p>
+        <p class="eyebrow">Private</p>
+        <h1>Flow</h1>
+        <p class="mut">Week ${esc(pack?.weekKey || "—")} · locale <b>${esc((state.locale||"en").toUpperCase())}</b> · review, metrics, profiles, rooms.</p>
       </div>
       <div class="row">
         <div class="lang-switch" role="group" aria-label="Locale">
@@ -138,16 +144,19 @@ function render() {
     ${state.message ? `<div class="banner ok-banner">${esc(state.message)}</div>` : ""}
     <nav class="tabs">
       ${[
+        ["console", "Console"],
+        ["metrics", "Metrics"],
         ["queue", "Queue"],
-        ["overview", "Overview"],
-        ["bank", "Weekly bank"],
-        ["archive", "Archives"],
         ["profiles", "Profiles"],
-        ["topic", "Add topic"],
-        ["reject", "Reject / regen"],
+        ["rooms", "Rooms"],
+        ["bank", "Bank"],
+        ["archive", "Archives"],
+        ["topic", "Topics"],
+        ["reject", "Reject"],
       ].map(([t, label]) =>
         `<button data-tab="${t}" class="${state.tab===t?"on":""}">${label}</button>`
       ).join("")}
+      <a href="${GLOW_URL}" target="_blank" rel="noopener noreferrer">Glow</a>
     </nav>
     <div id="panel"></div>
   `;
@@ -160,8 +169,9 @@ function render() {
     b.addEventListener("click", () => {
       state.tab = b.dataset.tab;
       state.message = "";
-      if (state.tab === "queue") {
-        loadQueue(true);
+      if (state.tab === "queue" || state.tab === "console" || state.tab === "rooms" || state.tab === "metrics") {
+        if (state.tab !== "console" || !state.week) loadQueue(true);
+        else render();
         return;
       }
       if (state.tab === "archive" && !state.archive.months) {
@@ -177,12 +187,16 @@ function render() {
   );
 
   const panel = document.getElementById("panel");
-  if (state.tab === "queue") {
+  if (state.tab === "console") {
+    renderConsole(panel);
+  } else if (state.tab === "rooms") {
+    renderRooms(panel);
+  } else if (state.tab === "queue") {
     renderQueue(panel);
-  } else if (state.tab === "overview") {
+  } else if (state.tab === "metrics" || state.tab === "overview") {
     panel.innerHTML = `
       <div class="card">
-        <h2>Publish status</h2>
+        <h2>Metrics</h2>
         <div class="row" style="margin:12px 0 16px">
           <div class="stat"><b>${sc.easy||0}</b><span>easy</span></div>
           <div class="stat"><b>${sc.hard||0}</b><span>hard</span></div>
@@ -204,7 +218,8 @@ function render() {
           <button class="btn primary" id="publish">Publish week → questions.json</button>
           <button class="btn" id="refresh">Refresh</button>
         </div>
-        <p class="mut" style="margin-top:12px">Durable Hobby path: <code>node scripts/publish-week.mjs</code> then git push / redeploy (writes <code>questions.json</code> + <code>questions.fr.json</code> / <code>questions.de.json</code>). FLOW_PASSWORD is env-only. EN publish also snapshots into <code>banks/archive/YYYY-MM/</code>. Switch EN/FR/DE above to review locale banks.</p>
+        ${metricDonut()}
+        <p class="mut" style="margin-top:12px">Durable path: <code>node scripts/publish-week.mjs</code> then git push / redeploy (writes <code>questions.json</code> + <code>questions.fr.json</code> / <code>questions.de.json</code>). EN publish also snapshots into <code>banks/archive/YYYY-MM/</code>. Switch EN/FR/DE above to review locale banks. <a class="glow-link" href="${GLOW_URL}" target="_blank" rel="noopener noreferrer">Glow</a> opens the GMG game room.</p>
       </div>`;
     document.getElementById("publish")?.addEventListener("click", doPublish);
     document.getElementById("refresh")?.addEventListener("click", () => loadWeek(true));
@@ -311,6 +326,114 @@ function render() {
       </div>`;
     document.getElementById("doReject")?.addEventListener("click", doReject);
   }
+}
+
+function flowCounts() {
+  const weekQs = state.week?.pack?.questions || [];
+  const placeQs = state.queue.placement?.pack?.questions || [];
+  const all = [...weekQs, ...placeQs];
+  return {
+    pending: all.filter((q) => (q.status || "pending") === "pending").length,
+    rejected: all.filter((q) => q.status === "rejected").length,
+    approved: all.filter((q) => q.status === "approved").length,
+    regen: (state.queue.weekRejections || []).length + (state.queue.placementRejections || []).length,
+    profiles: (state.profiles || []).length,
+    rooms: (state.queue.rooms || []).length,
+  };
+}
+
+function gotoTab(tab) {
+  state.tab = tab;
+  state.message = "";
+  render();
+}
+
+function renderConsole(panel) {
+  const c = flowCounts();
+  const cards = [
+    ["queue", "Awaiting review", c.pending],
+    ["queue", "Rejected", c.rejected],
+    ["queue", "Regeneration", c.regen],
+    ["profiles", "Profiles", c.profiles],
+    ["rooms", "Open rooms", c.rooms],
+  ];
+  panel.innerHTML = `
+    <section>
+      <h2 class="eyebrow">Analytics</h2>
+      <div class="metric-grid">
+        ${cards.map(([tab, label, value], i) => `
+          <button type="button" class="metric-card" data-goto="${tab}" data-goto-i="${i}">
+            <span>${esc(label)}</span>
+            <b>${value}</b>
+          </button>`).join("")}
+      </div>
+      <p class="mut">${state.queue.loading ? "Refreshing banks, profiles, and rooms…" : "Counts cover the weekly bank and Dojo placement for this locale, plus activated profiles and open rooms."}</p>
+    </section>
+    <section class="card">
+      <h2 class="eyebrow">Glow</h2>
+      <p class="mut">GMGbrand links Flow out to the house game room — Fast Answer, SunFun, and Last Call on the glowing cards.</p>
+      <p style="margin-top:12px"><a class="btn glow-link" href="${GLOW_URL}" target="_blank" rel="noopener noreferrer">Open Glow</a></p>
+    </section>`;
+  panel.querySelectorAll("[data-goto]").forEach((b) =>
+    b.addEventListener("click", () => gotoTab(b.dataset.goto)),
+  );
+}
+
+function renderRooms(panel) {
+  const rooms = state.queue.rooms || [];
+  panel.innerHTML = `
+    <div class="card">
+      <div class="row spread">
+        <h2>Open rooms</h2>
+        <button class="btn" id="refreshRooms">Refresh rooms</button>
+      </div>
+      <p class="mut">Shared folder <code>data/rooms</code>. Anyone who can open the game can view and join. Delete removes the room from that folder.</p>
+      ${rooms.length ? rooms.map((r) => `
+        <div class="room-admin">
+          <div>
+            <b>${esc(r.code)}</b>
+            <span class="mut"> · ${esc(r.host || "TV")} · ${r.guests || 0} pads · ${esc(r.phase || "lobby")}</span>
+          </div>
+          <button class="btn danger" type="button" data-delete-room="${esc(r.code)}">Delete</button>
+        </div>`).join("") : `<p class="mut" style="margin-top:12px">No open rooms.</p>`}
+    </div>`;
+  document.getElementById("refreshRooms")?.addEventListener("click", () => loadQueue(true));
+  panel.querySelectorAll("[data-delete-room]").forEach((b) =>
+    b.addEventListener("click", () => deleteFlowRoom(b.dataset.deleteRoom)),
+  );
+}
+
+function metricDonut() {
+  const c = flowCounts();
+  const slices = [
+    { label: "Pending", value: c.pending, color: "#e8a87c" },
+    { label: "Approved", value: c.approved, color: "#7dd3fc" },
+    { label: "Rejected", value: c.rejected, color: "#f87171" },
+    { label: "Regeneration", value: c.regen, color: "#a78bfa" },
+    { label: "Profiles", value: c.profiles, color: "#34d399" },
+  ];
+  const total = slices.reduce((s, x) => s + x.value, 0) || 1;
+  const r = 42;
+  const circ = 2 * Math.PI * r;
+  let offset = 0;
+  const arcs = slices.map((s) => {
+    const len = (s.value / total) * circ;
+    const item = { ...s, dash: `${len} ${circ - len}`, offset };
+    offset += len;
+    return item;
+  });
+  return `
+    <div class="donut-row" style="margin-top:16px">
+      <svg viewBox="0 0 100 100" width="144" height="144" aria-hidden="true" style="transform:rotate(-90deg)">
+        <circle cx="50" cy="50" r="${r}" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="12"></circle>
+        ${arcs.filter((a) => a.value > 0).map((a) => `
+          <circle cx="50" cy="50" r="${r}" fill="none" stroke="${a.color}" stroke-width="12"
+            stroke-dasharray="${a.dash}" stroke-dashoffset="${-a.offset}"></circle>`).join("")}
+      </svg>
+      <ul class="donut-legend">
+        ${slices.map((s) => `<li><span><i class="swatch" style="background:${s.color}"></i>${esc(s.label)}</span><span>${s.value}</span></li>`).join("")}
+      </ul>
+    </div>`;
 }
 
 function qCard(q, bank) {
@@ -761,7 +884,7 @@ async function setFlowLocale(next) {
   state.archive.pack = null;
   state.archive.monthKey = null;
   try {
-    if (state.tab === "queue") await loadQueue(false);
+    if (state.tab === "queue" || state.tab === "console" || state.tab === "rooms" || state.tab === "metrics") await loadQueue(false);
     else {
       await loadWeek(false);
       if (state.tab === "archive") await loadArchiveMonths(false);
