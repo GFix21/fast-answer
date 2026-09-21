@@ -6,5 +6,9 @@
         { "key": "Cache-Control", "value": "public, max-age=120" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/flow", "destination": "/flow/index.html" },
+    { "source": "/flow/", "destination": "/flow/index.html" }
   ]
 }

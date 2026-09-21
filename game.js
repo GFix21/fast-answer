@@ -107,6 +107,7 @@ function shuffle(a) {
   }
   return x;
 }
+/** Deal show size from weekly pool: random within tier (20/10/5/2). */
 function deal(all) {
   const by = (t) => shuffle(all.filter((q) => q.tier === t));
   return [

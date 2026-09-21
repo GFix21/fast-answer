@@ -1,0 +1,63 @@
+[
+  {
+    "id": "sci-fi",
+    "title": "Sci-Fi",
+    "blurb": "Space operas, robots, timelines that refuse to behave.",
+    "defaultOn": true
+  },
+  {
+    "id": "grand-tour-top-gear",
+    "title": "The Grand Tour & Top Gear",
+    "blurb": "Clarkson, May, Hammond, Amazon Prime — and the cars that survived them.",
+    "defaultOn": true
+  },
+  {
+    "id": "gmg-brand",
+    "title": "GMG Brand / music culture",
+    "blurb": "Montréal label lore, roster vibes, night-owl culture.",
+    "defaultOn": true
+  },
+  {
+    "id": "dj-gigi",
+    "title": "DJ Gigi",
+    "blurb": "Flagship artist — Easy tier only.",
+    "easyOnly": true,
+    "defaultOn": true
+  },
+  {
+    "id": "geography",
+    "title": "Geography",
+    "blurb": "Capitals, coasts, and places worth a detour.",
+    "defaultOn": true
+  },
+  {
+    "id": "film-tv",
+    "title": "Film & TV",
+    "blurb": "Screens big and small — general knowledge.",
+    "defaultOn": true
+  },
+  {
+    "id": "art",
+    "title": "Art",
+    "blurb": "Canvases, movements, and the odd scandal.",
+    "defaultOn": false
+  },
+  {
+    "id": "cars-motoring",
+    "title": "Cars & motoring",
+    "blurb": "Engines, marques, and road-trip folklore.",
+    "defaultOn": true
+  },
+  {
+    "id": "music",
+    "title": "Music",
+    "blurb": "Hits, history, and headphones at 2 a.m.",
+    "defaultOn": true
+  },
+  {
+    "id": "current-culture",
+    "title": "Current culture",
+    "blurb": "What’s buzzing — inspired by today’s chatter.",
+    "defaultOn": true
+  }
+]
