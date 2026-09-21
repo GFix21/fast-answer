@@ -4,7 +4,6 @@ import {
   applyReviewOverlay,
   setQuestionStatus,
   getPublishMeta,
-  countByTier as _unused,
 } from "../../lib/week-store.js";
 import { countByTier } from "../../q-and-a/map.js";
 
