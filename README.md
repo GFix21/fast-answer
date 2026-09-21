@@ -6,6 +6,18 @@ Jeremy hosts a locked, single-page trivia show. No scrolling. Buzz, speak, or ta
 
 This game used to live inside [GMGbrand](https://github.com/GFix21/GMGbrand) as Jeremy Trivia. It is now its own repository so the studio can stay on one screen.
 
+## Directions & Rules
+
+Open **[directions.html](./directions.html)** on its own — it does not go through the lobby. The lobby **Directions** link lands there.
+
+The television is a **web page**, not an AirPlay transmitter. Fast Answer does not send AirPlay, Chromecast, or Smart View from inside the game.
+
+1. **Best** — open Fast Answer in the TV’s own browser. Turn **On Screen** on. The set is the host.
+2. **No browser on the TV** — AirPlay / Chromecast / Smart View the Fast Answer *tab* from a phone or laptop onto the set. That mirrored device is still the host. Other phones do not watch that stream.
+3. **HDMI** from a laptop is the same idea.
+
+Phones never receive the TV picture. After On Screen is on, the TV prints a QR and a room code. Each phone opens that pad (answers on top, Buzz at the bottom). AirPlay can put the show on the set; it does not turn phones into buzzers.
+
 ## Lobby
 
 One page. Collapsible menus. Jeremy and the studio stay live behind the card.
@@ -40,6 +52,7 @@ Static files plus one serverless room sync:
 
 ```
 index.html
+directions.html
 game.css
 game.js
 questions.json

@@ -60,9 +60,11 @@ button:disabled{cursor:not-allowed}
 .chip.hot{border-color:var(--buzz);color:#fecdd3}
 .word{
   background:none;border:0;color:var(--accent);padding:6px 8px;font-size:12px;font-weight:500;
+  text-decoration:none;
 }
 .ghost,.primary{
   border-radius:999px;padding:10px 16px;font-size:13px;font-weight:600;border:1px solid transparent;
+  text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;
 }
 .ghost{background:transparent;border-color:var(--line);color:var(--fg)}
 .primary{background:var(--accent);color:var(--accent-fg)}
@@ -178,6 +180,7 @@ img.brand{
   object-fit:contain;object-position:left center;margin:0 0 8px;flex-shrink:0;
   filter:drop-shadow(0 8px 18px rgba(0,0,0,.45));
 }
+.stage.directions img.brand{height:64px;max-height:64px}
 .accord{display:flex;flex-direction:column;gap:6px;min-height:0;overflow:hidden;flex:1}
 .acc{
   border:1px solid var(--line);
@@ -230,6 +233,19 @@ img.brand{
 }
 .foot .flow:hover{color:var(--fg)}
 #pc{width:100%;accent-color:var(--accent);margin:0 0 4px}
+
+.dir-copy{margin:0;font-size:13px;line-height:1.45;color:var(--mut)}
+.dir-copy b,.dir-ol b{color:var(--fg);font-weight:600}
+.dir-ol{margin:6px 0 8px;padding:0 0 0 18px;color:var(--mut);font-size:13px;line-height:1.45}
+.dir-ol li{margin:0 0 8px}
+.points-grid{
+  display:grid;grid-template-columns:1fr auto;gap:4px 16px;
+  font-size:13px;margin:4px 0 8px;max-width:280px;
+}
+.points-grid span{color:var(--mut)}
+.points-grid b{color:var(--fg);font-variant-numeric:tabular-nums;text-align:right}
+.dir-full{align-self:flex-start;margin:0 0 10px;padding:0}
+.sheet .dir-full{color:var(--accent)}
 
 .rivals{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px}
 .rivals-lab{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
@@ -285,6 +301,7 @@ img.brand{
   .lobby .host img{max-width:30vw;height:20vh;max-height:140px}
   .answers{max-height:30vh}
   img.brand{height:52px;max-height:7vh}
+  .stage.directions img.brand{display:none}
   .dojo-ans .ans{min-height:48px;font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){

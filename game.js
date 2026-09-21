@@ -65,6 +65,9 @@ const $ = (s, r = document) => r.querySelector(s);
 const params = new URLSearchParams(location.search);
 const role = params.get("role") || (params.get("pad") ? "pad" : "host");
 const joinCode = (params.get("room") || "").toUpperCase();
+const isDirections =
+  params.get("page") === "directions" ||
+  /(?:^|\/)directions\.html$/i.test(location.pathname);
 const ROOM_API = location.pathname.includes("/fast-answer") ? "/api/fa/rooms" : "/api/rooms";
 
 const state = {
@@ -102,6 +105,7 @@ const state = {
   guests: [],
   tally: { correct: 0, wrong: 0 },
   joinInput: "",
+  dirOpen: "tv",
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
@@ -878,6 +882,7 @@ function rulesHTML() {
       <li><b>Dojo</b> — ten tap questions, no buzz. Bronze / Silver / Gold for three months. Belts rise with career points.</li>
       <li><b>Room</b> — 2 to 12 seats. Phones join the TV over On Screen. Empty seats are celebrity bots.</li>
     </ul>
+    <a class="word dir-full" href="./directions.html">Full directions</a>
     <button class="primary" id="rulesX" type="button">Close</button>
   </div>`;
 }
@@ -887,6 +892,89 @@ function footHTML() {
     <a class="flow" href="${FLOW_URL}" target="_blank" rel="noopener noreferrer">Flow</a>
     <span class="copy">© GMG Brand Label</span>
   </div>`;
+}
+
+function dirAcc(id, title, extra, body) {
+  const open = state.dirOpen === id;
+  return `<section class="acc ${open ? "open" : ""}">
+    <button type="button" class="acc-h" data-dir="${id}"><span>${title}</span>${extra || ""}</button>
+    ${open ? `<div class="acc-body dir-body">${body}</div>` : ""}
+  </section>`;
+}
+
+function directionsHTML() {
+  return `
+    <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
+    <div class="veil"></div>
+    <div class="top">
+      <div class="logo">Fast Answer!<small>Directions & Rules</small></div>
+      <div class="grow"></div>
+      <a class="word" href="./index.html">Lobby</a>
+    </div>
+    <div class="lobby">
+      <div class="lobby-copy">
+        <h1 class="sr-only">Directions and Rules</h1>
+        <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
+        <div class="accord">
+          ${dirAcc("tv", "Television", "<small>Not AirPlay</small>", `
+            <p class="dir-copy">The television is a <b>web page</b>, not a transmitter. Fast Answer does not send AirPlay, Chromecast, or Smart View from inside the game. Those belong to the phone, laptop, or TV.</p>
+            <ol class="dir-ol">
+              <li><b>Best.</b> Open Fast Answer in the TV’s own browser. Turn <b>On Screen</b> on in Room. The set is the host.</li>
+              <li><b>No browser on the TV.</b> AirPlay, Chromecast, or Smart View the Fast Answer tab from a phone or laptop onto the set. The mirrored device is still the host. Other phones do not watch that stream.</li>
+              <li><b>HDMI</b> from a laptop is the same idea — the laptop is the host.</li>
+            </ol>
+            <p class="dir-copy">Phones never receive the TV picture. After On Screen is on, the TV prints a <b>QR and a room code</b>. Each phone opens that pad: answers on top, Buzz at the bottom. The room keeps the TV and the pads in step.</p>
+            <p class="dir-copy">AirPlay can put the <b>show</b> on the set. It does not turn phones into buzzers. Pads still join by QR.</p>
+          `)}
+          ${dirAcc("screen", "On Screen", "<small>TV + pads</small>", `
+            <p class="dir-copy"><b>On Screen off</b> — one locked page. Jeremy, the question, the answers, and the buzzer sit together. Drag Jeremy and Studio in Set. Local play: you plus celebrity bots.</p>
+            <p class="dir-copy"><b>On Screen on</b> — this display is the television. It hides the buzzer. Phones become pads. Empty seats stay celebrity bots until a pad takes them, up to 12.</p>
+            <p class="dir-copy">After a buzz, the pad can <b>speak</b> the answer or tap A–D. Space bar buzzes on a keyboard. Keys 1–4 or A–D pick.</p>
+          `)}
+          ${dirAcc("room", "Multiplayer", "<small>2–12</small>", `
+            <p class="dir-copy">Room holds <b>2 to 12</b> seats. You take one. Empty seats fill with celebrity first names — Oprah, Elton, Serena, Usain, Adele, Idris, Keanu, Zendaya, Rihanna, Denzel, Meryl — each with its own skill and buzz timing.</p>
+            <p class="dir-copy">Turn On Screen on. Share the QR or the code. Each phone opens the pad page and joins. Pads <b>replace bots</b> as they arrive. The TV stays the picture; the phones stay the buzzers.</p>
+            <p class="dir-copy">Two tabs on the same device also sync. A pad never needs AirPlay.</p>
+          `)}
+          ${dirAcc("points", "Points", "<small>37 questions</small>", `
+            <p class="dir-copy">One show is <b>37 questions</b>. Ten seconds to read, then buzz. First buzz answers.</p>
+            <div class="points-grid">
+              <span>20 Easy</span><b>$100</b>
+              <span>10 Hard</span><b>$500</b>
+              <span>5 Difficult</span><b>$1,000</b>
+              <span>2 Extreme</span><b>$5,000</b>
+            </div>
+            <p class="dir-copy">A miss on a regular question is <b>$0</b>. You do not lose points — unless MAP is armed.</p>
+          `)}
+          ${dirAcc("map", "MAP", "<small>During the read</small>", `
+            <p class="dir-copy">During the 10-second read, tap a rival once. Stake = this question. If you buzz first and hit it, you bank <b>double</b> and they lose the stake. Miss, and you lose the stake. If someone else buzzes, MAP is off.</p>
+          `)}
+          ${dirAcc("lock", "Lockdown", "<small>Twice a show</small>", `
+            <p class="dir-copy">Twice per show, after a correct buzz. That player plays <b>5</b>. Opponents tap WIN or LOSE and $100 / $500 / $1,000. Sixty seconds, or it skips ahead when everyone has locked. 4/5 pays WIN even money; otherwise LOSE pays. Those five bank at <b>$500 each</b> only if they clear the set.</p>
+          `)}
+          ${dirAcc("dojo", "Dojo", "<small>10 taps</small>", `
+            <p class="dir-copy">Ten tap questions in the lobby. No buzz. Places you Bronze, Silver, or Gold for about three months. Play stays gated until placement is current. Karate belts rise with career points, separate from ability.</p>
+          `)}
+        </div>
+        <div class="row">
+          <a class="primary" href="./index.html">Back to lobby</a>
+        </div>
+      </div>
+      <div class="host" style="--host-h:${state.hostH}vh"><img src="${POSE.idle}" alt="Jeremy"/></div>
+    </div>
+    <div></div>
+    ${footHTML()}
+  `;
+}
+
+function bindDirections() {
+  document.querySelectorAll("[data-dir]").forEach((b) => {
+    b.onclick = () => {
+      const id = b.dataset.dir;
+      state.dirOpen = state.dirOpen === id ? "" : id;
+      paint(true);
+    };
+  });
 }
 
 function ensureDojo() {
@@ -1066,7 +1154,7 @@ function lobbyHTML() {
       <div class="logo">Fast Answer!<small>The game show that flies…?</small></div>
       <div class="grow"></div>
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
-      <button class="word" id="rulesBtn" type="button">Rules</button>
+      <a class="word" href="./directions.html">Directions</a>
     </div>
     <div class="lobby">
       <div class="lobby-copy">
@@ -1397,6 +1485,13 @@ function startPoll() {
 let lastKey = "";
 function paint(force = false) {
   const app = $("#app");
+  if (isDirections) {
+    app.className = "stage directions";
+    applyHostSize();
+    app.innerHTML = directionsHTML();
+    bindDirections();
+    return;
+  }
   app.className = "stage"
     + (role === "pad" ? " pad" : "")
     + (state.onScreen && role !== "pad" ? " tv" : "")
@@ -1410,6 +1505,7 @@ function paint(force = false) {
     state.rules, state.players.map((p) => p.score).join(","),
     state.lobbyOpen, state.playerCount, (state.guests || []).length,
     state.dojo?.answers?.length, state.dojo?.picked, state.profile?.abilityTier, state.profile?.belt,
+    state.dirOpen,
   ].join("|");
   if (!force && key === lastKey && frame === "play") {
     const clock = $("#clock");
@@ -1427,30 +1523,36 @@ function paint(force = false) {
 }
 
 window.addEventListener("keydown", (e) => {
+  if (isDirections) return;
   if (e.target && ["INPUT", "TEXTAREA"].includes(e.target.tagName)) return;
   if (e.code === "Space") { e.preventDefault(); buzz(); }
   const n = e.key && "1234abcd".includes(e.key.toLowerCase()) ? "1234abcd".indexOf(e.key.toLowerCase()) % 4 : -1;
   if (n >= 0) pick(n);
 });
 
-const bank = await fetch("./questions.json").then((r) => r.json());
-state.questions = bank;
-state.profile = loadProfile();
-if (state.profile?.displayName) state.name = state.profile.displayName;
-fillSeats();
-if (needsPlacement(state.profile) && role !== "pad") {
-  state.lobbyOpen = "dojo";
-  ensureDojo();
+if (isDirections) {
+  paint(true);
+  window.__fa = state;
 } else {
-  state.lobbyOpen = "room";
+  const bank = await fetch("./questions.json").then((r) => r.json());
+  state.questions = bank;
+  state.profile = loadProfile();
+  if (state.profile?.displayName) state.name = state.profile.displayName;
+  fillSeats();
+  if (needsPlacement(state.profile) && role !== "pad") {
+    state.lobbyOpen = "dojo";
+    ensureDojo();
+  } else {
+    state.lobbyOpen = "room";
+  }
+  if (role === "pad") {
+    state.onScreen = true;
+    state.lobbyOpen = "room";
+    if (joinCode) state.room = joinCode;
+    startPoll();
+  } else if (state.onScreen) {
+    void openRoom();
+  }
+  paint(true);
+  window.__fa = state;
 }
-if (role === "pad") {
-  state.onScreen = true;
-  state.lobbyOpen = "room";
-  if (joinCode) state.room = joinCode;
-  startPoll();
-} else if (state.onScreen) {
-  void openRoom();
-}
-paint(true);
-window.__fa = state;
