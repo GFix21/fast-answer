@@ -917,14 +917,12 @@ function directionsHTML() {
         <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
         <div class="accord">
           ${dirAcc("tv", "Television", "<small>Not AirPlay</small>", `
-            <p class="dir-copy">The television is a <b>web page</b>, not a transmitter. Fast Answer does not send AirPlay, Chromecast, or Smart View from inside the game. Those belong to the phone, laptop, or TV.</p>
+            <p class="dir-copy">Two connections, not one. The TV shows the show. Phones buzz. Fast Answer never AirPlays itself.</p>
             <ol class="dir-ol">
-              <li><b>Best.</b> Open Fast Answer in the TV’s own browser. Turn <b>On Screen</b> on in Room. The set is the host.</li>
-              <li><b>No browser on the TV.</b> AirPlay, Chromecast, or Smart View the Fast Answer tab from a phone or laptop onto the set. The mirrored device is still the host. Other phones do not watch that stream.</li>
-              <li><b>HDMI</b> from a laptop is the same idea — the laptop is the host.</li>
+              <li><b>Picture.</b> Open Fast Answer on the set (TV browser), or AirPlay / Chromecast / HDMI this tab onto the set. Turn <b>On Screen</b> on. That screen is the host — Jeremy, questions, no buzzer.</li>
+              <li><b>Buzzers.</b> Scan the QR (or type the room code) on each phone. That pad is a separate page: answers on top, Buzz at the bottom. Phones do not receive the TV picture.</li>
+              <li><b>AirPlay</b> is only a way to get the host page onto a TV that has no browser. It does not join phones. Pads always join by QR.</li>
             </ol>
-            <p class="dir-copy">Phones never receive the TV picture. After On Screen is on, the TV prints a <b>QR and a room code</b>. Each phone opens that pad: answers on top, Buzz at the bottom. The room keeps the TV and the pads in step.</p>
-            <p class="dir-copy">AirPlay can put the <b>show</b> on the set. It does not turn phones into buzzers. Pads still join by QR.</p>
           `)}
           ${dirAcc("screen", "On Screen", "<small>TV + pads</small>", `
             <p class="dir-copy"><b>On Screen off</b> — one locked page. Jeremy, the question, the answers, and the buzzer sit together. Drag Jeremy and Studio in Set. Local play: you plus celebrity bots.</p>
@@ -1114,13 +1112,14 @@ function roomBody() {
     </div>
     <label class="toggle">
       <input id="os" type="checkbox" ${state.onScreen ? "checked" : ""}/>
-      <span>On Screen — TV shows Jeremy; phones are buzzers. Empty seats stay celebrity bots.</span>
+      <span>On Screen — this display is the TV. Phones buzz. Fast Answer does not send AirPlay.</span>
     </label>
     ${state.onScreen ? `
+      <p class="dir-copy">Put <b>this page</b> on the set: TV browser, or AirPlay / Chromecast / HDMI the tab. Then phones <b>scan the QR</b>. They never receive the TV picture.</p>
       <p class="room-code">Room <b id="codeCopy">${escapeHtml(state.room || "····")}</b></p>
       ${state.room ? `<img class="qr" alt="Join on your phone" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(shareUrl())}"/>` : ""}
-      <p class="meta">${humans} human${humans === 1 ? "" : "s"} · ${seats.length - humans} bot${seats.length - humans === 1 ? "" : "s"} · phones replace bots as they join</p>
-    ` : `<p class="meta">Local show — you plus celebrity bots. Flip On Screen to open a room for pads.</p>`}
+      <p class="meta">${humans} human${humans === 1 ? "" : "s"} · ${seats.length - humans} bot${seats.length - humans === 1 ? "" : "s"} · pads replace bots</p>
+    ` : `<p class="meta">Local show — buzzer on this page, celebrity bots in empty seats. On Screen splits picture (TV) from buzzers (phones).</p>`}
   `;
 }
 
