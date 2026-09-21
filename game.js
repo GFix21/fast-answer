@@ -594,7 +594,7 @@ function markEntered() {
   state.entered = true;
   state.profileUnlocked = true;
   try { sessionStorage.setItem("fa-entered", "1"); } catch { /* private mode */ }
-  if (role === "pad" || joinCode) {
+  if (role === "pad") {
     state.mpMode = "join";
     state.lobbyOpen = "room";
     try { localStorage.setItem("fa-mp", "join"); } catch { /* ignore */ }
@@ -2481,7 +2481,6 @@ function entryHTML() {
   const name = draft.name != null ? draft.name : (hasPhoneProfile() ? (p.displayName || "") : (state.name && state.name !== "Player" ? state.name : ""));
   const email = draft.email != null ? draft.email : (p.email || "");
   const pw = draft.password || "";
-  const ready = entryReady(name, email, pw);
   return `
     <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
     <div class="veil"></div>
@@ -2502,7 +2501,7 @@ function entryHTML() {
         <input id="entryEmail" type="email" value="${escapeHtml(email)}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
         <label class="field" for="entryPw">${tt("password")}</label>
         <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${hasPhoneProfile() ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
-        <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${tt("enterProfile")}</button>
+        <button class="primary" id="enterProfile" type="submit">${tt("enterProfile")}</button>
         <p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>
       </form>
     </div>
@@ -2518,13 +2517,7 @@ function bindEntry() {
   const nameEl = $("#entryName");
   const emailEl = $("#entryEmail");
   const pwEl = $("#entryPw");
-  const btn = $("#enterProfile");
-  const sync = () => {
-    syncEntryDraft();
-    if (!btn) return;
-    const ready = entryReady(nameEl && nameEl.value, emailEl && emailEl.value, pwEl && pwEl.value);
-    btn.classList.toggle("hidden", !ready);
-  };
+  const sync = () => { syncEntryDraft(); };
   if (nameEl) nameEl.oninput = sync;
   if (emailEl) emailEl.oninput = sync;
   if (pwEl) {
@@ -2533,6 +2526,7 @@ function bindEntry() {
   }
   const form = $("#entryForm");
   if (form) form.onsubmit = (e) => { e.preventDefault(); void submitEntry(); };
+  const btn = $("#enterProfile");
   if (btn) btn.onclick = () => { void submitEntry(); };
 }
 
@@ -2549,7 +2543,21 @@ async function submitEntry() {
   const name = String(state.entryDraft?.name || "").trim().slice(0, 18);
   const email = String(state.entryDraft?.email || "").trim();
   const pw = String(state.entryDraft?.password || "");
-  if (!entryReady(name, email, pw)) return;
+  if (!String(name || "").trim()) {
+    state.statusMsg = tt("gateProfile");
+    paint(true);
+    return;
+  }
+  if (!validEmail(email)) {
+    state.statusMsg = tt("emailInvalid");
+    paint(true);
+    return;
+  }
+  if (String(pw || "").length < 4) {
+    state.statusMsg = tt("passwordHint");
+    paint(true);
+    return;
+  }
   if (hasPhoneProfile() && state.profile?.passwordHash) {
     const ok = await verifyProfilePassword(pw);
     if (!ok) {
@@ -3261,24 +3269,21 @@ async function onLobbyGo() {
   }
 
   if (mode === "cast") {
-    if (!isTvDisplay()) {
-      const gate = lobbyGateReason();
-      // Host phone generating a link for Silk still needs profile/placement for their seat.
-      if (gate) {
-        state.statusMsg = gate;
-        openDojoPage(dojoModeForGate());
-        return;
-      }
+    if (!isTvDisplay() && !hasPhoneProfile()) {
+      state.statusMsg = tt("gateProfile");
+      openDojoPage("create");
+      return;
     }
     saveProfile({ displayName: state.name });
-    state.onScreen = true;
-    localStorage.setItem("fa-onscreen", "1");
     await openRoom();
     const url = tvSilkUrl(state.room);
     const ok = await copyText(url);
     state.statusMsg = ok
       ? ("TV room " + state.room + " ready — Silk link copied.")
       : ("TV room " + state.room + " — copy: " + url);
+    state.onScreen = false;
+    state.mpMode = "cast";
+    try { localStorage.setItem("fa-mp", "cast"); } catch { /* ignore */ }
     state.lobbyOpen = "room";
     paint(true);
     return;
@@ -3671,9 +3676,11 @@ if (isDirections) {
   try { sessionEntered = sessionStorage.getItem("fa-entered") === "1"; } catch { /* ignore */ }
   state.entered = Boolean(forcedDisplay || (sessionEntered && hasPhoneProfile()));
   if (state.entered && !forcedDisplay) state.profileUnlocked = true;
-  if (role === "pad" || joinCode) state.mpMode = "join";
-  else if (forcedDisplay) state.mpMode = "host";
-  else if (localStorage.getItem("fa-mp") === "cast") state.mpMode = "cast";
+  if (role === "pad") state.mpMode = "join";
+  else if (forcedDisplay) {
+    state.mpMode = "host";
+    state.onScreen = true;
+  } else if (localStorage.getItem("fa-mp") === "cast") state.mpMode = "cast";
   else state.mpMode = "host";
   // Keep the room card open so Create / Unlock sit on the same card after a refresh.
   state.lobbyOpen = "room";
@@ -3692,7 +3699,6 @@ if (isDirections) {
     if (!needsEntryGate()) void refreshActiveRooms().then(() => paint(true));
   } else if (state.onScreen) {
     if (forcedDisplay) {
-      localStorage.setItem("fa-onscreen", "1");
       state.lobbyOpen = "room";
       state.mpMode = "host";
     }
