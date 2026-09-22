@@ -10,6 +10,7 @@ import {
   languageSwitcherHtml,
 } from "./i18n.js";
 import { dropoutEndsGame, nextQuestionAllowsJoin } from "./lib/seat-rules.js";
+import { hashProfilePassword } from "./lib/password.js";
 
 const STUDIOS = [
   "./studio/studio-01-contestant-pov.jpg",
@@ -293,20 +294,47 @@ function canPlayScored() {
   return isProfileUnlocked() && isPlaced();
 }
 async function hashPassword(pw) {
-  const raw = String(pw || "");
-  const enc = new TextEncoder().encode("fa-dojo-v1:" + raw);
+  return hashProfilePassword(pw);
+}
+const PROFILE_RESET_KEY = "fa-profile-reset-2";
+function clearStoredProfile() {
+  try { localStorage.removeItem(PROFILE_KEY); } catch { /* ignore */ }
+  try { localStorage.removeItem("fa-name"); } catch { /* ignore */ }
+  try { sessionStorage.removeItem("fa-entered"); } catch { /* ignore */ }
+  try { sessionStorage.removeItem("fa-dojo-mode"); } catch { /* ignore */ }
+}
+function applyProfileReset() {
+  clearStoredProfile();
+  state.name = "";
+  state.profile = seedProfile();
+  state.profile.displayName = "";
+  state.profile.email = "";
+  state.profile.passwordHash = "";
+  state.entered = false;
+  state.profileUnlocked = false;
+  state.dojoMode = "create";
+  state.entryDraft = null;
+  state.roomDojoPanel = "";
+  state.statusMsg = tt("profileReset");
+}
+function maybeResetProfile() {
+  let fromQuery = false;
   try {
-    if (crypto.subtle) {
-      const buf = await crypto.subtle.digest("SHA-256", enc);
-      return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+    const u = new URL(location.href);
+    if (u.searchParams.get("reset") === "1") {
+      fromQuery = true;
+      u.searchParams.delete("reset");
+      history.replaceState(null, "", u.pathname + u.search + u.hash);
     }
-  } catch { /* fall through */ }
-  let h = 2166136261;
-  for (let i = 0; i < enc.length; i++) {
-    h ^= enc[i];
-    h = Math.imul(h, 16777619);
-  }
-  return "fb-" + (h >>> 0).toString(16);
+  } catch { /* ignore */ }
+  let once = false;
+  try {
+    if (localStorage.getItem(PROFILE_RESET_KEY) !== "1") {
+      once = true;
+      localStorage.setItem(PROFILE_RESET_KEY, "1");
+    }
+  } catch { /* ignore */ }
+  if (fromQuery || once) applyProfileReset();
 }
 async function verifyProfilePassword(pw) {
   const want = state.profile?.passwordHash;
@@ -2121,6 +2149,7 @@ function dojoBody() {
       <label class="field" for="pwUnlock">${tt("password")}</label>
       <input id="pwUnlock" type="password" maxlength="64" autocomplete="current-password"/>
       <button class="primary" id="unlockProfile" type="button">${tt("unlockProfile")}</button>
+      <button class="ghost" id="resetProfile" type="button">${tt("resetProfile")}</button>
       <button class="ghost" id="dojoCreateAlt" type="button">${tt("createProfile")}</button>
     `);
   }
@@ -2500,6 +2529,7 @@ function entryHTML() {
         <label class="field" for="entryPw">${tt("password")}</label>
         <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${hasPhoneProfile() ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
         <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${tt("enterProfile")}</button>
+        <button class="ghost" id="resetProfile" type="button">${tt("resetProfile")}</button>
         <p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>
       </form>
     </div>
@@ -2531,6 +2561,8 @@ function bindEntry() {
   const form = $("#entryForm");
   if (form) form.onsubmit = (e) => { e.preventDefault(); void submitEntry(); };
   if (btn) btn.onclick = () => { void submitEntry(); };
+  const resetProfile = $("#resetProfile");
+  if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
 }
 
 function syncEntryDraft() {
@@ -2888,6 +2920,8 @@ function bindDojoSurface() {
     state.statusMsg = tt("profileLocked");
     paint(true);
   };
+  const resetProfile = $("#resetProfile");
+  if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
   const dojoCreateAlt = $("#dojoCreateAlt");
   if (dojoCreateAlt) dojoCreateAlt.onclick = () => openDojoPage("create");
   const dojoCancelMode = $("#dojoCancelMode");
@@ -3625,6 +3659,7 @@ window.addEventListener("keydown", (e) => {
   if (n >= 0) pick(n);
 });
 
+maybeResetProfile();
 if (isDirections) {
   document.documentElement.lang = state.locale;
   paint(true);
