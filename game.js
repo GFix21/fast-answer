@@ -156,6 +156,7 @@ const state = {
   youId: "you",
   maps: {},
   mapLive: false,
+  mapAt: [],
   lockdownAt: [],
   lockdown: null,
   rules: false,
@@ -466,6 +467,10 @@ function deal(all) {
     ...sampleByTier(all, "extreme", DEAL.extreme, recent),
   ];
 }
+function pickMapSlots() {
+  // MAP appears exactly three times, only in the 20 Easy / 10 Hard main round.
+  return shuffle(Array.from({ length: DEAL.easy + DEAL.hard }, (_, index) => index)).slice(0, 3).sort((a, b) => a - b);
+}
 function pickLockdownSlots() {
   const lo = 8;
   const hi = ROUND - 5;
@@ -474,18 +479,14 @@ function pickLockdownSlots() {
   while (Math.abs(b - a) < 6) b = lo + Math.floor(Math.random() * (hi - lo));
   return [a, b].sort((x, y) => x - y);
 }
-function leftoverQs(preferHard = false) {
-  const recent = new Set(loadRecentQuestionIds());
-  const pool = state.questions.filter((q) => !state.spent.has(q.id));
-  const rankFresh = (list) => {
-    const fresh = shuffle(list.filter((q) => !recent.has(q.id)));
-    const used = shuffle(list.filter((q) => recent.has(q.id)));
-    return [...fresh, ...used].map(shuffleQuestionChoices);
-  };
-  if (!preferHard) return rankFresh(pool);
-  const hard = rankFresh(pool.filter((q) => q.tier === "difficult" || q.tier === "extreme"));
-  const rest = rankFresh(pool.filter((q) => q.tier !== "difficult" && q.tier !== "extreme"));
-  return [...hard, ...rest];
+function separateLockdownQuestions() {
+  // Lockdown never reuses a main-round question and only draws Difficult / Extreme.
+  return shuffle(selectedQuestions().filter((q) =>
+    !state.spent.has(q.id) && (q.tier === "difficult" || q.tier === "extreme"),
+  )).slice(0, LOCKDOWN_N).map(shuffleQuestionChoices);
+}
+function mapIsActive() {
+  return state.mapAt.includes(state.i) && !state.lockdown;
 }
 function lockdownPointsNow(ld = state.lockdown) {
   if (!ld) return 0;
@@ -813,6 +814,7 @@ function snapshot() {
     players: state.players,
     maps: state.maps,
     mapLive: state.mapLive,
+    mapAt: state.mapAt,
     lockdownAt: state.lockdownAt,
     lockdown: state.lockdown,
     playerCount: state.playerCount,
@@ -1053,7 +1055,7 @@ function buzz() {
 function armMap(targetId) {
   const answerPhase = state.phase === "answer";
   const readPhase = state.phase === "read";
-  if (!readPhase && !answerPhase) return;
+  if ((!readPhase && !answerPhase) || !mapIsActive()) return;
   const owner = answerPhase ? (state.buzzId || state.youId) : state.youId;
   if (answerPhase && role === "pad" && owner !== state.youId) return;
   if (targetId === owner) return;
@@ -1368,7 +1370,7 @@ function startLockdown(playerId) {
     continueRound();
     return;
   }
-  const qs = leftoverQs(true).slice(0, LOCKDOWN_N);
+  const qs = separateLockdownQuestions();
   if (qs.length < LOCKDOWN_N) {
     continueRound();
     return;
@@ -1690,7 +1692,7 @@ function rivalsHTML() {
   const stake = stakeOf(q);
   const armed = state.maps[state.youId];
   const show = state.phase === "read" || (state.phase === "buzz" && !state.buzzed);
-  if (!show || state.lockdown) return "";
+  if (!show || !mapIsActive()) return "";
   return `<div class="rivals">
     <span class="rivals-lab">${tt("mapLab", stake)}</span>
     ${others().map((p) =>
@@ -1739,7 +1741,7 @@ function wagerHTML() {
 function mapStealHTML() {
   const q = currentQ();
   if (!q || state.lockdown) return "";
-  if (state.phase !== "answer") return "";
+  if (state.phase !== "answer" || !mapIsActive()) return "";
   const answerer = state.buzzId || state.youId;
   // PWHB pad (or local) — steal prompt below answers
   if (role === "pad" && answerer !== state.youId) return "";
@@ -1769,8 +1771,8 @@ function rulesHTML() {
       <li><b>${tt("ruleDojo")}</b></li>
       <li><b>${tt("ruleRoom")}</b></li>
     </ul>
-    <a class="word dir-full" href="/directions">${tt("fullDirections")}</a>
-    <button class="primary" id="rulesX" type="button">${tt("close")}</button>
+    <button class="primary dir-full" id="openDirections" type="button">${tt("fullDirections")}</button>
+    <button class="ghost" id="rulesX" type="button">${tt("close")}</button>
   </div>`;
 }
 
@@ -1852,14 +1854,14 @@ function directionsHTML() {
               <span>5 Difficult</span><b>$1,000</b>
               <span>2 Extreme</span><b>$5,000</b>
             </div>
-            <p class="dir-copy">A miss on a regular question is <b>$0</b> — you do not lose points. <b>MAP</b> during the read can put stakes at risk. <b>Lockdown</b> hits twice per show (see below).</p>
+            <p class="dir-copy">A miss on a regular question is <b>$0</b> — you do not lose points. <b>MAP</b> appears three times at random during the Easy and Hard sections and can put stakes at risk. <b>Lockdown</b> hits twice per show (see below).</p>
           `)}
           ${dirAcc("map", "MAP (Make-a-Point)", "<small>Read + answer</small>", `
             <p class="dir-copy"><b>Make-a-Point</b> lets the person who hits the buzzer (PWHB) risk stakes against a rival.</p>
-            <p class="dir-copy">During the <b>10-second read</b>, tap a rival to arm MAP. Stake = this question’s point value. After you buzz, your phone also shows a <b>steal prompt below the answer options</b> — opponents’ names as choices, with the displayed amount = question points <b>doubled</b> for you if you hit it (they lose the stake). Miss, and you lose the stake. If someone else buzzes first, your MAP is off.</p>
+            <p class="dir-copy">On each of the <b>three random Easy / Hard MAP questions</b>, tap a rival during the 10-second read to arm MAP. Stake = this question’s point value. After you buzz, your phone also shows a <b>steal prompt below the answer options</b> — opponents’ names as choices, with the displayed amount = question points <b>doubled</b> for you if you hit it (they lose the stake). Miss, and you lose the stake. If someone else buzzes first, your MAP is off.</p>
           `)}
           ${dirAcc("lock", "Lockdown", "<small>Twice a show</small>", `
-            <p class="dir-copy">Twice per show, after a correct buzz. That player faces <b>5 Lockdown questions</b>, drawn from remaining Difficult / Extreme questions when available.</p>
+            <p class="dir-copy">Twice per show, after a correct buzz. That player faces <b>5 separate Difficult / Extreme questions</b> that are not part of the main 37-question round.</p>
             <p class="dir-copy"><b>Wagers:</b> opponents pick WIN or LOSE and $100 / $500 / $1,000, then tap <b>Lock in</b> (60s, or when everyone locks).</p>
             <p class="dir-copy"><b>Rules countdown:</b> about <b>7 seconds</b> before each lockdown question — explains the rules and lets the table settle.</p>
             <p class="dir-copy"><b>Answer window:</b> up to <b>3 minutes</b> per question. Each correct answer banks points from <b>$5,000 down to $0</b> as time runs out. Need <b>4/5</b> for WIN wagers; otherwise LOSE pays. Waiting players see a <b>60-second</b> wait countdown (glimpse only — they do not see the hero’s response).</p>
@@ -3478,6 +3480,8 @@ function bindQrChip() {
 function bindRules() {
   const b = $("#rulesBtn");
   if (b) b.onclick = () => { state.rules = !state.rules; paint(true); };
+  const openDirections = $("#openDirections");
+  if (openDirections) openDirections.onclick = () => { location.assign("/directions"); };
   const x = $("#rulesX");
   if (x) x.onclick = () => { state.rules = false; paint(true); };
 }
@@ -3578,6 +3582,7 @@ function startGame() {
   state.spent = new Set(state.qs.map((q) => q.id));
   rememberDealtIds(state.qs.map((q) => q.id));
   state.i = 0;
+  state.mapAt = pickMapSlots();
   state.lockdownAt = pickLockdownSlots();
   state.lockdown = null;
   state.maps = {};

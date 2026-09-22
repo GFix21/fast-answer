@@ -60,9 +60,9 @@ Space bar buzzes. Keys `1–4` or `A–D` pick an answer.
 
 A round is **37 questions**: 20 Easy ($100), 10 Hard ($500), 5 Difficult ($1,000), 2 Extreme ($5,000). Ten seconds to read, then buzz.
 
-**MAP** happens *during* that read — tap a rival (one tap, stake = this question). If you buzz first and hit it, you bank double and they lose the stake. Miss, and you lose the stake. Nobody else loses points on a normal miss.
+**MAP** happens exactly **three times at random** during the Easy and Hard sections. During that read, tap a rival (one tap, stake = this question). If you buzz first and hit it, you bank double and they lose the stake. Miss, and you lose the stake. Nobody else loses points on a normal miss.
 
-**Lockdown** hits twice per show, after a correct buzz. That player answers 5 remaining Difficult / Extreme questions when available. Opponents tap WIN or LOSE and a stake (60 seconds max; it skips ahead when everyone has locked). 4/5 pays WIN even money; otherwise LOSE pays. Each correct Lockdown answer banks a time-decaying value from $5,000 to $0.
+**Lockdown** hits twice per show, after a correct buzz. That player answers 5 separate Difficult / Extreme questions that are not part of the main round. Opponents tap WIN or LOSE and a stake (60 seconds max; it skips ahead when everyone has locked). 4/5 pays WIN even money; otherwise LOSE pays. Each correct Lockdown answer banks a time-decaying value from $5,000 to $0.
 
 Empty seats are celebrity bots with their own skill and buzz timing. Pads replace them as they join, up to 12.
 
