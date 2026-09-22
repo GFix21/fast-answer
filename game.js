@@ -222,6 +222,7 @@ const state = {
   forgotPassword: false,
   topicCatalog: [],
   topicsOn: loadStoredTopicIds(),
+  dealFresh: false,
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
@@ -232,15 +233,16 @@ function tt(key, ...args) {
   return t(state.locale, key, ...args);
 }
 
-async function loadBanksForLocale(locale = state.locale) {
+async function loadBanksForLocale(locale = state.locale, { bust = false } = {}) {
   const loc = normalizeLocale(locale);
-  const bank = await fetch(questionsUrl(loc)).then((r) => {
+  const q = bust ? `?t=${Date.now()}` : "";
+  const bank = await fetch(questionsUrl(loc) + q).then((r) => {
     if (!r.ok) throw new Error("questions " + loc);
     return r.json();
   });
   state.questions = Array.isArray(bank) ? bank : (bank.questions || []);
   try {
-    const place = await fetch(placementUrl(loc)).then((r) => (r.ok ? r.json() : null));
+    const place = await fetch(placementUrl(loc) + q).then((r) => (r.ok ? r.json() : null));
     state.placementQs = Array.isArray(place?.questions) ? place.questions : [];
   } catch {
     state.placementQs = [];
@@ -267,6 +269,7 @@ async function setLocale(next) {
     } catch (err) {
       state.statusMsg = "Locale pack missing: " + loc;
     }
+    state.dealFresh = false;
     if (state.dojo && state.dojo.q && !state.dojo.done) {
       clearDojoTick();
       state.dojo = null;
@@ -579,6 +582,9 @@ function questionsForDeal(all) {
   const preferred = (all || []).filter(inSelectedTopics);
   return preferred.length ? preferred : (all || []);
 }
+function topicDealKey() {
+  return (state.topicsOn || []).slice().sort().join(",");
+}
 function deal(all) {
   const recent = new Set(loadRecentQuestionIds());
   const preferred = questionsForDeal(all);
@@ -595,6 +601,29 @@ function deal(all) {
     ...take("difficult", DEAL.difficult),
     ...take("extreme", DEAL.extreme),
   ];
+}
+async function refreshQuestionSet() {
+  try {
+    await loadBanksForLocale(state.locale, { bust: true });
+  } catch { /* keep the bank already in memory */ }
+  if (state.qs && state.qs.length) rememberDealtIds(state.qs.map((q) => q.id));
+  state.qs = deal(state.questions);
+  state.dealFresh = true;
+  state.dealTopicKey = topicDealKey();
+  const n = state.qs.length;
+  const bank = state.questions.length;
+  state.statusMsg = tt("questionsRefreshed", n, bank);
+  paint(true);
+}
+function questionRefreshHTML() {
+  if (isPad() || state.mpMode === "join") return "";
+  const n = state.dealFresh && state.qs?.length ? state.qs.length : ROUND;
+  const bank = state.questions.length || 0;
+  return `
+    <div class="q-refresh">
+      <button class="ghost js-refresh-qs" type="button">${tt("refreshQuestions")}</button>
+      <p class="meta">${escapeHtml(tt("questionDealMeta", n, bank))}</p>
+    </div>`;
 }
 function pickLockdownSlots() {
   const lo = 8;
@@ -2171,9 +2200,9 @@ function openDojoPage(mode) {
   }
   paint(true);
 }
-function startDojo() {
+function startDojo(skip) {
   clearDojoTick();
-  const used = new Set(state.profile?.placementQuestionIds || []);
+  const used = skip instanceof Set ? skip : new Set(state.profile?.placementQuestionIds || []);
   const q = pickPlacementQuestion("hard", used);
   state.dojo = { q, answers: [], used, picked: -1, tier: "hard", done: false, showAnswers: false, readLeft: PLACE_READ_S };
   state.dojoMode = "home";
@@ -2183,6 +2212,18 @@ function startDojo() {
     return;
   }
   armDojoRead();
+}
+
+async function refreshPlacementSet() {
+  try {
+    await loadBanksForLocale(state.locale, { bust: true });
+  } catch { /* keep the bank already in memory */ }
+  const pool = state.placementQs || [];
+  const used = new Set(state.profile?.placementQuestionIds || []);
+  const leftover = pool.filter((q) => !used.has(q.id) && q.tier !== "finale");
+  if (leftover.length < PLACE_N) used.clear();
+  state.statusMsg = tt("placementRefreshed");
+  startDojo(used);
 }
 
 function acc(id, title, extra, body, scope = "lobby") {
@@ -2260,6 +2301,7 @@ function dojoBody() {
           return `<button class="${cls}" type="button" data-dojo="${i}" ${reveal ? "disabled" : ""}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
         }).join("")}
       </div>` : `<p class="dir-copy">${tt("dojoHold")}</p>`}
+      <button class="ghost" id="refreshPlacement" type="button">${tt("refreshPlacement")}</button>
     `);
   }
 
@@ -2361,6 +2403,7 @@ function dojoBody() {
       ? `<p class="meta">${escapeHtml(tt("abilityRetake", (ab && ab.label) || tt("placed"), formatDue(p.nextPlacementDueAt)))}</p>`
       : `<p class="meta">${tt("dojoIntro")}</p>`}
     <button class="primary" id="${p.abilityTier ? "retake" : "dojoGo"}" type="button">${p.abilityTier ? tt("retakeMedal") : tt("startDojo")}</button>
+    <button class="ghost" id="refreshPlacement" type="button">${tt("refreshPlacement")}</button>
     <button class="ghost" id="lockProfile" type="button">${tt("lockProfile")}</button>
   `);
 }
@@ -2498,6 +2541,7 @@ function topicsBody() {
   const rows = topicCatalog();
   const on = new Set(state.topicsOn || []);
   return `
+    ${questionRefreshHTML()}
     <p class="dir-copy">${tt("topicsLead")}</p>
     ${rows.map((topic) => `
       <label class="topic-row">
@@ -2509,6 +2553,19 @@ function topicsBody() {
       </label>
     `).join("")}
   `;
+}
+
+function playerCountHTML() {
+  const n = state.playerCount;
+  const buttons = Array.from({ length: 11 }, (_, i) => i + 2).map((count) =>
+    `<button type="button" class="seat-n-btn ${n === count ? "on" : ""}" data-seats="${count}">${count}</button>`
+  ).join("");
+  return `
+    <div class="seat-pick">
+      <label class="field" for="pc">${tt("players")} <b>${n}</b></label>
+      <div class="seat-n" role="group" aria-label="${escapeHtml(tt("players"))}">${buttons}</div>
+      <input id="pc" type="range" min="2" max="12" value="${n}"/>
+    </div>`;
 }
 
 function roomBody() {
@@ -2567,8 +2624,7 @@ function roomBody() {
     return `
       ${roomModeButtons()}
       <p class="dir-copy"><b>${tt("castCopy")}</b></p>
-      <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
-      <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
+      ${playerCountHTML()}
       <label class="toggle">
         <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
         <span>${tt("fillBots")}</span>
@@ -2601,8 +2657,7 @@ function roomBody() {
       </div>
       <p class="dir-copy"><b>${tt("phoneLockLead")}</b></p>
       ${screenModeHTML()}
-      <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
-      <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
+      ${playerCountHTML()}
       <label class="toggle">
         <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
         <span>${tt("fillBots")}</span>
@@ -2617,9 +2672,9 @@ function roomBody() {
 
   return `
     ${roomModeButtons()}
+    ${playerCountHTML()}
+    ${questionRefreshHTML()}
     ${screenModeHTML()}
-    <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
-    <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
     <label class="toggle">
       <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
       <span>${tt("fillBots")}</span>
@@ -2849,6 +2904,7 @@ function lobbyHTML() {
         </div>
         <div class="row">
           <button class="primary ${goGated ? "go-dojo-cta" : ""}" id="go" type="button">${goLabel}</button>
+          ${isPad() || mode === "join" ? "" : `<button class="ghost js-refresh-qs" type="button">${tt("refreshQuestions")}</button>`}
           ${state.onScreen && !forcedDisplay && role !== "pad" ? `<button class="ghost" data-off-screen type="button">${tt("offScreenReturn")}</button>` : ""}
         </div>
         <p class="status" id="stt">${escapeHtml(status)}</p>
@@ -3197,6 +3253,8 @@ function bindDojoSurface() {
   if (dojoGo) dojoGo.onclick = () => startDojo();
   const retake = $("#retake");
   if (retake) retake.onclick = () => startDojo();
+  const refreshPlacement = $("#refreshPlacement");
+  if (refreshPlacement) refreshPlacement.onclick = () => { void refreshPlacementSet(); };
   document.querySelectorAll("[data-dojo]").forEach((b) => {
     b.onclick = () => dojoPick(Number(b.dataset.dojo));
   });
@@ -3248,6 +3306,17 @@ function bindLobby() {
     fillSeats();
     paint(true);
   };
+  document.querySelectorAll("[data-seats]").forEach((b) => {
+    b.onclick = () => {
+      state.playerCount = clamp(Number(b.dataset.seats), 2, 12);
+      localStorage.setItem("fa-seats", String(state.playerCount));
+      fillSeats();
+      paint(true);
+    };
+  });
+  document.querySelectorAll(".js-refresh-qs").forEach((b) => {
+    b.onclick = () => { void refreshQuestionSet(); };
+  });
   const botFill = $("#botFill");
   if (botFill) botFill.onchange = (e) => {
     state.botFill = Boolean(e.target.checked);
@@ -3289,6 +3358,7 @@ function bindLobby() {
       }
       state.topicsOn = [...next];
       try { localStorage.setItem(TOPICS_KEY, JSON.stringify(state.topicsOn)); } catch { /* ignore */ }
+      state.dealFresh = false;
       state.statusMsg = "";
       paint(true);
     };
@@ -3737,7 +3807,10 @@ function ingestGuests(guests) {
 function startGame() {
   seatPlayers();
   state.playOpen = "ask";
-  state.qs = deal(state.questions);
+  const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length >= ROUND)
+    && state.dealTopicKey === topicDealKey();
+  if (!reuse) state.qs = deal(state.questions);
+  state.dealFresh = false;
   state.spent = new Set(state.qs.map((q) => q.id));
   rememberDealtIds(state.qs.map((q) => q.id));
   state.i = 0;
@@ -3848,9 +3921,12 @@ function paint(force = false) {
   app.className = "stage"
     + (role === "pad" ? " pad" : "")
     + (state.onScreen && role !== "pad" ? " tv" : "")
+    + (state.phase === "lobby" && state.onScreen && role !== "pad" ? " tv-scroll" : "")
     + (!state.onScreen && role !== "pad" && state.phase !== "lobby" ? " phone" : "")
     + (state.lockdown ? " lockdown" : "")
     + (state.rules ? " rules-open" : "");
+  document.documentElement.classList.toggle("tv-scroll", app.classList.contains("tv-scroll"));
+  document.body.classList.toggle("tv-scroll", app.classList.contains("tv-scroll"));
   applyHostSize();
   const ld = state.lockdown;
   const frame = state.phase === "lobby" ? "lobby" : "play";
@@ -3868,6 +3944,7 @@ function paint(force = false) {
     state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => r.code).join(","),
     state.viewing ? 1 : 0, state.joinOffer?.code || "", state.joinOffer?.canPlay ? 1 : 0,
     state.playOpen, (state.topicsOn || []).join(","),
+    state.dealFresh ? (state.qs || []).length : 0,
     Object.keys(state.dropoutIds || {}).sort().join(","),
     (state.pendingJoins || []).map((g) => g.id).join(","),
     ld?.wagers?.[state.youId]?.locked, ld?.wagers?.[state.youId]?.side, ld?.wagers?.[state.youId]?.amount,
