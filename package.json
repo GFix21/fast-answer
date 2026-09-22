@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "publish:week": "node scripts/publish-week.mjs",
-    "dev": "vercel dev"
+    "dev": "vercel dev",
+    "dev:local": "node scripts/dev-server.mjs"
   }
 }
