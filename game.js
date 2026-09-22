@@ -49,6 +49,7 @@ const WAGER_S = 60;
 const WAGER_AMTS = [100, 500, 1000];
 const LETTERS = "ABCD";
 const PLACE_N = 10;
+const PLACEMENT_READ_S = 3;
 const PLACE_MS = 90 * 24 * 60 * 60 * 1000;
 const TIER_LADDER = ["easy", "hard", "difficult", "extreme"];
 const BELT_ORDER = ["white", "yellow", "orange", "green", "blue", "purple", "brown", "black"];
@@ -1931,7 +1932,7 @@ function ensureDojo() {
   if (state.dojo && state.dojo.q) return;
   const used = new Set(state.profile?.placementQuestionIds || []);
   const q = pickPlacementQuestion("hard", used);
-  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", showAnswers: false, readLeft: READ_S };
+  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", showAnswers: false, readLeft: PLACEMENT_READ_S };
   armDojoRead();
 }
 
@@ -1961,7 +1962,7 @@ function armDojoRead() {
   const d = state.dojo;
   if (!d || !d.q || d.done) return;
   d.showAnswers = false;
-  d.readLeft = READ_S;
+  d.readLeft = PLACEMENT_READ_S;
   d.picked = -1;
   paint(true);
   dojoTick = setInterval(() => {
@@ -2035,7 +2036,7 @@ function startDojo() {
   clearDojoTick();
   const used = new Set(state.profile?.placementQuestionIds || []);
   const q = pickPlacementQuestion("hard", used);
-  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", done: false, showAnswers: false, readLeft: READ_S };
+  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", done: false, showAnswers: false, readLeft: PLACEMENT_READ_S };
   state.dojoMode = "home";
   try { sessionStorage.setItem("fa-dojo-mode", "home"); } catch { /* ignore */ }
   if (!isDojoPage) {
@@ -2108,7 +2109,7 @@ function dojoBody() {
     return dojoChrome(`
       <p class="meta" id="dojoClock">${showAns
         ? (reveal ? tt("dojoN", n, PLACE_N) : `${tt("dojoN", n, PLACE_N)} · ${tt("dojoTap")}`)
-        : tt("dojoRead", d.readLeft ?? READ_S)}</p>
+        : tt("dojoRead", d.readLeft ?? PLACEMENT_READ_S)}</p>
       <p class="dojo-q">${escapeHtml(d.q.prompt)}</p>
       ${showAns ? `<div class="dojo-ans">
         ${d.q.choices.map((c, i) => {
