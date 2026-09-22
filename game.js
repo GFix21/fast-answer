@@ -81,6 +81,32 @@ function botAvatar(id) {
   return id ? `/bots/${id}.jpg` : "";
 }
 
+const TOPICS_KEY = "fa-topics";
+const TOPIC_BANK_IDS = {
+  "sci-fi": ["sci-fi"],
+  "grand-tour-top-gear": ["grand-tour", "grand-tour-top-gear"],
+  "gmg-brand": ["gmg", "gmg-brand"],
+  "dj-gigi": ["dj-gigi"],
+  geography: ["geography"],
+  "film-tv": ["film-tv"],
+  art: ["art"],
+  "cars-motoring": ["cars", "cars-motoring"],
+  music: ["music"],
+  "current-culture": ["culture", "current-culture"],
+};
+const FALLBACK_TOPICS = [
+  { id: "sci-fi", title: "Sci-Fi", blurb: "Space operas, robots, timelines that refuse to behave.", defaultOn: true },
+  { id: "grand-tour-top-gear", title: "The Grand Tour & Top Gear", blurb: "Clarkson, May, Hammond, Amazon Prime — and the cars that survived them.", defaultOn: true },
+  { id: "gmg-brand", title: "GMG Brand / music culture", blurb: "Montréal label lore, roster vibes, night-owl culture.", defaultOn: true },
+  { id: "dj-gigi", title: "DJ Gigi", blurb: "Flagship artist — Easy tier only.", easyOnly: true, defaultOn: true },
+  { id: "geography", title: "Geography", blurb: "Capitals, coasts, and places worth a detour.", defaultOn: true },
+  { id: "film-tv", title: "Film & TV", blurb: "Screens big and small — general knowledge.", defaultOn: true },
+  { id: "art", title: "Art", blurb: "Canvases, movements, and the odd scandal.", defaultOn: false },
+  { id: "cars-motoring", title: "Cars & motoring", blurb: "Engines, marques, and road-trip folklore.", defaultOn: true },
+  { id: "music", title: "Music", blurb: "Hits, history, and headphones at 2 a.m.", defaultOn: true },
+  { id: "current-culture", title: "Current culture", blurb: "What’s buzzing — inspired by today’s chatter.", defaultOn: true },
+];
+
 const CELEB_BOTS = [
   { id: "oprah", name: "Oprah", skill: 0.62, buzzDelayMs: [900, 2400], blurb: "Composed. Reads the room." },
   { id: "elton", name: "Elton", skill: 0.55, buzzDelayMs: [1200, 3000], blurb: "Showy. Fashionably late." },
@@ -120,6 +146,14 @@ function detectDisplayMode() {
   return false;
 }
 const forcedDisplay = detectDisplayMode();
+
+function loadStoredTopicIds() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(TOPICS_KEY) || "null");
+    if (Array.isArray(raw) && raw.length) return raw.map(String);
+  } catch { /* ignore */ }
+  return FALLBACK_TOPICS.filter((t) => t.defaultOn !== false).map((t) => t.id);
+}
 
 const state = {
   phase: "lobby",
@@ -186,6 +220,8 @@ const state = {
   entryDraft: null,
   /** Confirm the profile email, then set a new on-device password. */
   forgotPassword: false,
+  topicCatalog: [],
+  topicsOn: loadStoredTopicIds(),
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
@@ -208,6 +244,16 @@ async function loadBanksForLocale(locale = state.locale) {
     state.placementQs = Array.isArray(place?.questions) ? place.questions : [];
   } catch {
     state.placementQs = [];
+  }
+  if (!state.topicCatalog.length) {
+    try {
+      const rows = await fetch("/q-and-a/topics.json").then((r) => (r.ok ? r.json() : []));
+      if (Array.isArray(rows) && rows.length) state.topicCatalog = rows;
+    } catch { /* keep fallback */ }
+    if (!state.topicCatalog.length) state.topicCatalog = FALLBACK_TOPICS;
+  }
+  if (!Array.isArray(state.topicsOn) || !state.topicsOn.length) {
+    state.topicsOn = state.topicCatalog.filter((t) => t.defaultOn !== false).map((t) => t.id);
   }
   document.documentElement.lang = loc;
 }
@@ -511,13 +557,43 @@ function sampleByTier(all, tier, need, recentSet) {
   used.sort((a, b) => (rank.get(b.id) ?? 9999) - (rank.get(a.id) ?? 9999));
   return [...fresh, ...used].slice(0, need).map(shuffleQuestionChoices);
 }
+function topicCatalog() {
+  return state.topicCatalog.length ? state.topicCatalog : FALLBACK_TOPICS;
+}
+function bankIdsForTopic(id) {
+  return TOPIC_BANK_IDS[id] || [id];
+}
+function selectedBankTopics() {
+  const allowed = new Set();
+  for (const id of state.topicsOn || []) {
+    for (const bank of bankIdsForTopic(id)) allowed.add(bank);
+  }
+  return allowed;
+}
+function inSelectedTopics(q) {
+  const allowed = selectedBankTopics();
+  if (!allowed.size) return true;
+  return allowed.has(String(q.topic || "").toLowerCase());
+}
+function questionsForDeal(all) {
+  const preferred = (all || []).filter(inSelectedTopics);
+  return preferred.length ? preferred : (all || []);
+}
 function deal(all) {
   const recent = new Set(loadRecentQuestionIds());
+  const preferred = questionsForDeal(all);
+  const take = (tier, need) => {
+    const first = sampleByTier(preferred, tier, need, recent);
+    if (first.length >= need || preferred === all) return first;
+    const have = new Set(first.map((q) => q.id));
+    const rest = sampleByTier((all || []).filter((q) => !have.has(q.id)), tier, need - first.length, recent);
+    return [...first, ...rest];
+  };
   return [
-    ...sampleByTier(all, "easy", DEAL.easy, recent),
-    ...sampleByTier(all, "hard", DEAL.hard, recent),
-    ...sampleByTier(all, "difficult", DEAL.difficult, recent),
-    ...sampleByTier(all, "extreme", DEAL.extreme, recent),
+    ...take("easy", DEAL.easy),
+    ...take("hard", DEAL.hard),
+    ...take("difficult", DEAL.difficult),
+    ...take("extreme", DEAL.extreme),
   ];
 }
 function pickLockdownSlots() {
@@ -530,7 +606,8 @@ function pickLockdownSlots() {
 }
 function leftoverQs(preferHard = false) {
   const recent = new Set(loadRecentQuestionIds());
-  const pool = state.questions.filter((q) => !state.spent.has(q.id));
+  const selected = state.questions.filter((q) => !state.spent.has(q.id) && inSelectedTopics(q));
+  const pool = selected.length ? selected : state.questions.filter((q) => !state.spent.has(q.id));
   const rankFresh = (list) => {
     const fresh = shuffle(list.filter((q) => !recent.has(q.id)));
     const used = shuffle(list.filter((q) => recent.has(q.id)));
@@ -1809,7 +1886,10 @@ function mapStealHTML() {
 function rulesHTML() {
   if (!state.rules) return "";
   return `<div class="sheet" id="sheet">
-    <h2>${tt("rulesTitle")}</h2>
+    <div class="sheet-bar">
+      <h2>${tt("rulesTitle")}</h2>
+      <button class="primary" id="rulesX" type="button">${tt("close")}</button>
+    </div>
     <ul>
       <li><b>${tt("rule37")}</b></li>
       <li><b>${tt("ruleRead")}</b></li>
@@ -1819,7 +1899,6 @@ function rulesHTML() {
       <li><b>${tt("ruleRoom")}</b></li>
     </ul>
     <a class="word dir-full" href="./directions.html">${tt("fullDirections")}</a>
-    <button class="primary" id="rulesX" type="button">${tt("close")}</button>
   </div>`;
 }
 
@@ -2372,7 +2451,7 @@ function lobbySetupBannerHTML() {
 }
 
 function roomModeButtons() {
-  if (isTvDisplay()) return "";
+  if (isTvDisplay() && forcedDisplay) return "";
   const modes = [
     ["host", tt("host")],
     ["join", tt("joinTv")],
@@ -2383,6 +2462,42 @@ function roomModeButtons() {
       `<button type="button" class="mp-mode ${state.mpMode === id ? "on" : ""}" data-mp="${id}">${label}</button>`
     ).join("")}
   </div>`;
+}
+
+function screenModeHTML() {
+  if (role === "pad") return "";
+  const locked = Boolean(forcedDisplay);
+  return `
+    <div class="screen-modes" role="radiogroup" aria-label="Screen mode">
+      <label class="toggle">
+        <input id="osOff" type="radio" name="screenMode" ${!state.onScreen ? "checked" : ""} ${locked ? "disabled" : ""}/>
+        <span>${tt("offScreen")}</span>
+      </label>
+      <label class="toggle">
+        <input id="os" type="radio" name="screenMode" ${state.onScreen ? "checked" : ""} ${locked ? "disabled" : ""}/>
+        <span>${tt("onScreenShort")}</span>
+      </label>
+    </div>
+    ${state.onScreen && !locked ? `<button class="ghost" id="backOffScreen" type="button">${tt("offScreenReturn")}</button>` : ""}
+    <p class="meta">${state.onScreen ? tt("onScreen") : tt("offScreenHint")}</p>
+  `;
+}
+
+function topicsBody() {
+  const rows = topicCatalog();
+  const on = new Set(state.topicsOn || []);
+  return `
+    <p class="dir-copy">${tt("topicsLead")}</p>
+    ${rows.map((topic) => `
+      <label class="topic-row">
+        <input type="checkbox" data-topic="${escapeHtml(topic.id)}" ${on.has(topic.id) ? "checked" : ""}/>
+        <span>
+          <b>${escapeHtml(topic.title)}</b>
+          <span>${escapeHtml(topic.blurb || "")}</span>
+        </span>
+      </label>
+    `).join("")}
+  `;
 }
 
 function roomBody() {
@@ -2474,16 +2589,7 @@ function roomBody() {
         <span>${tt("activeReady")}</span>
       </div>
       <p class="dir-copy"><b>${tt("phoneLockLead")}</b></p>
-      <div class="screen-modes" role="radiogroup" aria-label="Screen mode">
-        <label class="toggle">
-          <input id="osOff" type="radio" name="screenMode" checked/>
-          <span>${tt("offScreen")}</span>
-        </label>
-        <label class="toggle">
-          <input id="os" type="radio" name="screenMode"/>
-          <span>${tt("onScreenShort")}</span>
-        </label>
-      </div>
+      ${screenModeHTML()}
       <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
       <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
       <label class="toggle">
@@ -2509,18 +2615,7 @@ function roomBody() {
     <div class="seats">
       ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
     </div>
-    ${isTvDisplay() ? "" : `
-    <div class="screen-modes" role="radiogroup" aria-label="Screen mode">
-      <label class="toggle">
-        <input id="osOff" type="radio" name="screenMode" ${!state.onScreen ? "checked" : ""} ${forcedDisplay ? "disabled" : ""}/>
-        <span>${tt("offScreen")}</span>
-      </label>
-      <label class="toggle">
-        <input id="os" type="radio" name="screenMode" ${state.onScreen ? "checked" : ""} ${forcedDisplay ? "disabled" : ""}/>
-        <span>${tt("onScreenShort")}</span>
-      </label>
-    </div>
-    <p class="meta">${state.onScreen ? tt("onScreen") : tt("offScreenHint")}</p>`}
+    ${screenModeHTML()}
     ${state.onScreen || isTvDisplay() ? `
       <p class="dir-copy">${tt("onScreenOwns")}</p>
       <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
@@ -2715,7 +2810,8 @@ function lobbyHTML() {
         ${lobbySetupBannerHTML()}
         <div class="accord">
           ${acc("room", joining ? tt("joinTv") : (mode === "cast" ? tt("castTv") : tt("room")), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
-          ${pad || tv ? "" : acc("set", tt("set"), "", setBody())}
+          ${joining ? "" : acc("topics", tt("topicsTitle"), `<small>${tt("topicsOn", (state.topicsOn || []).length)}</small>`, topicsBody())}
+          ${pad || (tv && forcedDisplay) ? "" : acc("set", tt("set"), "", setBody())}
         </div>
         <div class="row">
           <button class="primary ${goGated ? "go-dojo-cta" : ""}" id="go" type="button">${goLabel}</button>
@@ -3125,15 +3221,42 @@ function bindLobby() {
     paint(true);
   };
   const bindScreen = async (on) => {
+    if (forcedDisplay && !on) return;
     state.onScreen = Boolean(on);
     localStorage.setItem("fa-onscreen", state.onScreen ? "1" : "0");
-    if (state.onScreen) await openRoom();
+    if (state.onScreen) {
+      state.mpMode = "host";
+      localStorage.setItem("fa-mp", "host");
+      state.lobbyOpen = "room";
+      await openRoom();
+    }
     paint(true);
   };
   const os = $("#os");
   if (os) os.onchange = () => { if (os.checked) void bindScreen(true); };
   const osOff = $("#osOff");
   if (osOff) osOff.onchange = () => { if (osOff.checked) void bindScreen(false); };
+  const backOff = $("#backOffScreen");
+  if (backOff) backOff.onclick = () => void bindScreen(false);
+  document.querySelectorAll("[data-topic]").forEach((box) => {
+    box.onchange = () => {
+      const id = String(box.dataset.topic || "");
+      if (!id) return;
+      const next = new Set(state.topicsOn || []);
+      if (box.checked) next.add(id);
+      else next.delete(id);
+      if (!next.size) {
+        box.checked = true;
+        state.statusMsg = tt("topicsNeedOne");
+        paint(true);
+        return;
+      }
+      state.topicsOn = [...next];
+      try { localStorage.setItem(TOPICS_KEY, JSON.stringify(state.topicsOn)); } catch { /* ignore */ }
+      state.statusMsg = "";
+      paint(true);
+    };
+  });
   const joinRoomBtn = $("#joinRoom");
   if (joinRoomBtn) joinRoomBtn.onclick = () => {
     const jc = $("#jc");
@@ -3690,7 +3813,8 @@ function paint(force = false) {
     + (role === "pad" ? " pad" : "")
     + (state.onScreen && role !== "pad" ? " tv" : "")
     + (!state.onScreen && role !== "pad" && state.phase !== "lobby" ? " phone" : "")
-    + (state.lockdown ? " lockdown" : "");
+    + (state.lockdown ? " lockdown" : "")
+    + (state.rules ? " rules-open" : "");
   applyHostSize();
   const ld = state.lockdown;
   const frame = state.phase === "lobby" ? "lobby" : "play";
@@ -3707,7 +3831,7 @@ function paint(force = false) {
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
     state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => r.code).join(","),
     state.viewing ? 1 : 0, state.joinOffer?.code || "", state.joinOffer?.canPlay ? 1 : 0,
-    state.playOpen,
+    state.playOpen, (state.topicsOn || []).join(","),
     Object.keys(state.dropoutIds || {}).sort().join(","),
     (state.pendingJoins || []).map((g) => g.id).join(","),
     ld?.wagers?.[state.youId]?.locked, ld?.wagers?.[state.youId]?.side, ld?.wagers?.[state.youId]?.amount,
