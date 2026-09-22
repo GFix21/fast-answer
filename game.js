@@ -299,7 +299,6 @@ function canPlayScored() {
 async function hashPassword(pw) {
   return hashProfilePassword(pw);
 }
-const PROFILE_RESET_KEY = "fa-profile-reset-2";
 function clearStoredProfile() {
   try { localStorage.removeItem(PROFILE_KEY); } catch { /* ignore */ }
   try { localStorage.removeItem("fa-name"); } catch { /* ignore */ }
@@ -393,6 +392,8 @@ function bindForgotPassword() {
   };
 }
 function maybeResetProfile() {
+  // Only an explicit ?reset=1 clears the on-device profile.
+  // A first visit must not wipe belts, scores, placement, or the saved password.
   let fromQuery = false;
   try {
     const u = new URL(location.href);
@@ -402,14 +403,7 @@ function maybeResetProfile() {
       history.replaceState(null, "", u.pathname + u.search + u.hash);
     }
   } catch { /* ignore */ }
-  let once = false;
-  try {
-    if (localStorage.getItem(PROFILE_RESET_KEY) !== "1") {
-      once = true;
-      localStorage.setItem(PROFILE_RESET_KEY, "1");
-    }
-  } catch { /* ignore */ }
-  if (fromQuery || once) applyProfileReset();
+  if (fromQuery) applyProfileReset();
 }
 async function verifyProfilePassword(pw) {
   const want = state.profile?.passwordHash;
