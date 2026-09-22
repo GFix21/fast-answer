@@ -2478,7 +2478,7 @@ function screenModeHTML() {
         <span>${tt("onScreenShort")}</span>
       </label>
     </div>
-    ${state.onScreen && !locked ? `<button class="ghost" id="backOffScreen" type="button">${tt("offScreenReturn")}</button>` : ""}
+    ${state.onScreen && !locked ? `<button class="ghost" data-off-screen type="button">${tt("offScreenReturn")}</button>` : ""}
     <p class="meta">${state.onScreen ? tt("onScreen") : tt("offScreenHint")}</p>
   `;
 }
@@ -2606,6 +2606,7 @@ function roomBody() {
 
   return `
     ${roomModeButtons()}
+    ${screenModeHTML()}
     <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
     <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
     <label class="toggle">
@@ -2615,7 +2616,6 @@ function roomBody() {
     <div class="seats">
       ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
     </div>
-    ${screenModeHTML()}
     ${state.onScreen || isTvDisplay() ? `
       <p class="dir-copy">${tt("onScreenOwns")}</p>
       <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
@@ -2798,8 +2798,8 @@ function lobbyHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
-      ${tv ? "" : `<a class="word" href="${dojoHref()}">${tt("dojo")}</a>`}
-      ${tv ? "" : `<a class="word" href="${FLOW_URL}">Flow</a>`}
+      ${tv && forcedDisplay ? "" : `<a class="word" href="${dojoHref()}">${tt("dojo")}</a>`}
+      ${tv && forcedDisplay ? "" : `<a class="word" href="${FLOW_URL}">Flow</a>`}
       <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
       <a class="word" href="./directions.html">${tt("directions")}</a>
     </div>
@@ -2815,6 +2815,7 @@ function lobbyHTML() {
         </div>
         <div class="row">
           <button class="primary ${goGated ? "go-dojo-cta" : ""}" id="go" type="button">${goLabel}</button>
+          ${state.onScreen && !forcedDisplay && role !== "pad" ? `<button class="ghost" data-off-screen type="button">${tt("offScreenReturn")}</button>` : ""}
         </div>
         <p class="status" id="stt">${escapeHtml(status)}</p>
       </div>
@@ -3236,8 +3237,9 @@ function bindLobby() {
   if (os) os.onchange = () => { if (os.checked) void bindScreen(true); };
   const osOff = $("#osOff");
   if (osOff) osOff.onchange = () => { if (osOff.checked) void bindScreen(false); };
-  const backOff = $("#backOffScreen");
-  if (backOff) backOff.onclick = () => void bindScreen(false);
+  document.querySelectorAll("[data-off-screen]").forEach((b) => {
+    b.onclick = () => void bindScreen(false);
+  });
   document.querySelectorAll("[data-topic]").forEach((box) => {
     box.onchange = () => {
       const id = String(box.dataset.topic || "");
