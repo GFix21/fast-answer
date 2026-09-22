@@ -33,6 +33,7 @@ const PROFILE_KEY = "fa-profile-v1";
 const RECENT_Q_KEY = "fa-recent-qids-v1";
 const RECENT_Q_MAX = 240;
 const READ_S = 10;
+const PLACE_READ_S = 5;
 const POINTS = { easy: 100, hard: 500, difficult: 1000, extreme: 5000 };
 const DEAL = { easy: 20, hard: 10, difficult: 5, extreme: 2 };
 const ROUND = DEAL.easy + DEAL.hard + DEAL.difficult + DEAL.extreme;
@@ -1919,7 +1920,7 @@ function directionsHTML() {
             <p class="dir-copy"><b>Answer window:</b> up to <b>3 minutes</b> per question. Points start at <b>$5,000</b> and <b>decay linearly to $0</b> as time runs out. Need <b>4/5</b> for WIN wagers; otherwise LOSE pays. Waiting players see a <b>60-second</b> wait countdown (glimpse only — they do not see the hero’s response).</p>
           `)}
           ${dirAcc("dojo", "Dojo", "<small>10 placements</small>", `
-            <p class="dir-copy">Ten placement questions in the lobby <b>on the phone</b> (not on the TV). Each prompt shows for <b>10 seconds</b>, then the answers appear — tap one. No player name or points on the Dojo card. Places you Bronze, Silver, or Gold for about three months. Play stays gated until placement is current. Karate belts rise with career points, separate from ability.</p>
+            <p class="dir-copy">Ten placement questions in the lobby <b>on the phone</b> (not on the TV). Each prompt shows for <b>5 seconds</b>, then the answers appear — tap one. No player name or points on the Dojo card. Places you Bronze, Silver, or Gold for about three months. Play stays gated until placement is current. Karate belts rise with career points, separate from ability.</p>
           `)}
         </div>
         <div class="row">
@@ -1986,7 +1987,7 @@ function ensureDojo() {
   if (state.dojo && state.dojo.q) return;
   const used = new Set(state.profile?.placementQuestionIds || []);
   const q = pickPlacementQuestion("hard", used);
-  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", showAnswers: false, readLeft: READ_S };
+  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", showAnswers: false, readLeft: PLACE_READ_S };
   armDojoRead();
 }
 
@@ -2016,7 +2017,7 @@ function armDojoRead() {
   const d = state.dojo;
   if (!d || !d.q || d.done) return;
   d.showAnswers = false;
-  d.readLeft = READ_S;
+  d.readLeft = PLACE_READ_S;
   d.picked = -1;
   paint(true);
   dojoTick = setInterval(() => {
@@ -2090,7 +2091,7 @@ function startDojo() {
   clearDojoTick();
   const used = new Set(state.profile?.placementQuestionIds || []);
   const q = pickPlacementQuestion("hard", used);
-  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", done: false, showAnswers: false, readLeft: READ_S };
+  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", done: false, showAnswers: false, readLeft: PLACE_READ_S };
   state.dojoMode = "home";
   try { sessionStorage.setItem("fa-dojo-mode", "home"); } catch { /* ignore */ }
   if (!isDojoPage) {
@@ -2163,7 +2164,7 @@ function dojoBody() {
     return dojoChrome(`
       <p class="meta" id="dojoClock">${showAns
         ? (reveal ? tt("dojoN", n, PLACE_N) : `${tt("dojoN", n, PLACE_N)} · ${tt("dojoTap")}`)
-        : tt("dojoRead", d.readLeft ?? READ_S)}</p>
+        : tt("dojoRead", d.readLeft ?? PLACE_READ_S)}</p>
       <p class="dojo-q">${escapeHtml(d.q.prompt)}</p>
       ${showAns ? `<div class="dojo-ans">
         ${d.q.choices.map((c, i) => {
