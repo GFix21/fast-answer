@@ -2674,7 +2674,6 @@ function roomBody() {
     ${roomModeButtons()}
     ${playerCountHTML()}
     ${questionRefreshHTML()}
-    ${screenModeHTML()}
     <label class="toggle">
       <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
       <span>${tt("fillBots")}</span>
