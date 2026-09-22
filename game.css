@@ -698,3 +698,5 @@ img.brand{
 .topic-grid { display: grid; gap: .5rem; }
 .topic-toggle { align-items: flex-start; }
 .topic-toggle small { display: block; margin-top: .12rem; opacity: .72; }
+.french-region-picker { display:flex; flex-wrap:wrap; gap:.45rem .9rem; align-items:center; margin:0 0 .7rem; }
+.french-region-picker .rivals-lab { width:100%; margin:0; }

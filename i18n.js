@@ -2,6 +2,11 @@
 export const LOCALES = ["en", "fr", "de"];
 export const LOCALE_LABELS = { en: "EN", fr: "FR", de: "DE" };
 export const LOCALE_KEY = "fa-locale";
+export const FRENCH_REGION_KEY = "fa-french-region";
+export const FRENCH_REGIONS = [
+  { id: "fr-fr", label: "France" },
+  { id: "fr-ca", label: "Québec" },
+];
 
 const SPEECH = { en: "en-US", fr: "fr-FR", de: "de-DE" };
 
@@ -26,14 +31,36 @@ export function storeLocale(locale) {
   return loc;
 }
 
-export function speechLang(locale) {
+export function speechLang(locale, frenchRegion = "fr-fr") {
+  if (normalizeLocale(locale) === "fr" && normalizeFrenchRegion(frenchRegion) === "fr-ca") return "fr-CA";
   return SPEECH[normalizeLocale(locale)] || "en-US";
 }
 
+export function normalizeFrenchRegion(region) {
+  return FRENCH_REGIONS.some((item) => item.id === region) ? region : "fr-fr";
+}
+
+export function loadStoredFrenchRegion() {
+  try {
+    return normalizeFrenchRegion(localStorage.getItem(FRENCH_REGION_KEY) || "fr-fr");
+  } catch {
+    return "fr-fr";
+  }
+}
+
+export function storeFrenchRegion(region) {
+  const next = normalizeFrenchRegion(region);
+  try {
+    localStorage.setItem(FRENCH_REGION_KEY, next);
+  } catch { /* ignore */ }
+  return next;
+}
+
 /** Client bank URLs for the live game. */
-export function questionsUrl(locale) {
+export function questionsUrl(locale, frenchRegion = "fr-fr") {
   const loc = normalizeLocale(locale);
   if (loc === "en") return "/questions.json";
+  if (loc === "fr") return `/questions.${normalizeFrenchRegion(frenchRegion)}.json`;
   return `/questions.${loc}.json`;
 }
 

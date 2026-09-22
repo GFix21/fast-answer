@@ -1,0 +1,100 @@
+{
+  "bots": [
+    {
+      "id": "oprah",
+      "name": "Oprah",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "elton",
+      "name": "Elton",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "serena",
+      "name": "Serena",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "usain",
+      "name": "Usain",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "adele",
+      "name": "Adele",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "idris",
+      "name": "Idris",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "keanu",
+      "name": "Keanu",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "zendaya",
+      "name": "Zendaya",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "rihanna",
+      "name": "Rihanna",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "denzel",
+      "name": "Denzel",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "meryl",
+      "name": "Meryl",
+      "role": "Celebrity gameplay bot",
+      "kind": "gameplay"
+    },
+    {
+      "id": "camille-fr",
+      "name": "Camille",
+      "role": "French translator and cultural reviewer",
+      "kind": "reviewer",
+      "locales": [
+        "fr-FR",
+        "fr-CA"
+      ],
+      "responsibilities": [
+        "Maintain the 96-question France and Quebec French packs",
+        "Use French civic references such as Président de la République for France",
+        "Use Quebec civic references such as premier ministre du Québec and René Lévesque for Quebec",
+        "Preserve IDs, tier, topic, four choices, and correct answer index"
+      ]
+    },
+    {
+      "id": "lena-de",
+      "name": "Lena",
+      "role": "German translator and cultural reviewer",
+      "kind": "reviewer",
+      "locales": [
+        "de-DE"
+      ],
+      "responsibilities": [
+        "Review the German 96-question pack",
+        "Use German civic and cultural equivalents where localization is appropriate",
+        "Preserve IDs, tier, topic, four choices, and correct answer index"
+      ]
+    }
+  ]
+}

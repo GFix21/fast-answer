@@ -1,7 +1,10 @@
 import {
   LOCALES,
+  FRENCH_REGIONS,
   loadStoredLocale,
+  loadStoredFrenchRegion,
   storeLocale,
+  storeFrenchRegion,
   normalizeLocale,
   speechLang,
   questionsUrl,
@@ -176,6 +179,7 @@ const state = {
   placementQs: [],
   botFill: true,
   locale: loadStoredLocale(),
+  frenchRegion: loadStoredFrenchRegion(),
   activeRooms: [],
   leftPad: false,
   wagerDraft: null,
@@ -207,7 +211,7 @@ function tt(key, ...args) {
 
 async function loadBanksForLocale(locale = state.locale) {
   const loc = normalizeLocale(locale);
-  const bank = await fetch(questionsUrl(loc)).then((r) => {
+  const bank = await fetch(questionsUrl(loc, state.frenchRegion)).then((r) => {
     if (!r.ok) throw new Error("questions " + loc);
     return r.json();
   });
@@ -1637,7 +1641,7 @@ function listenVoice() {
     return;
   }
   const r = new Rec();
-  r.lang = speechLang(state.locale);
+  r.lang = speechLang(state.locale, state.frenchRegion);
   r.interimResults = false;
   r.maxAlternatives = 3;
   state.listening = true;
@@ -2311,10 +2315,22 @@ function lobbySetupBannerHTML() {
     </div>`;
 }
 
+function frenchRegionPickerHTML() {
+  if (state.locale !== "fr") return "";
+  return `<div class="french-region-picker" role="group" aria-label="Région française">
+    <p class="rivals-lab">Version française</p>
+    ${FRENCH_REGIONS.map((region) => `<label class="toggle">
+      <input type="radio" name="frenchRegion" data-french-region="${region.id}" ${state.frenchRegion === region.id ? "checked" : ""}/>
+      <span>${region.label}</span>
+    </label>`).join("")}
+  </div>`;
+}
+
 function topicPickerHTML() {
   const selected = new Set(state.selectedTopicIds || []);
   const ready = selectedTopicsArePlayable();
   return `<div class="topic-picker">
+    ${frenchRegionPickerHTML()}
     <p class="rivals-lab">Gameplay topics</p>
     <p class="meta">The room creator chooses the categories before the show starts.</p>
     <div class="topic-grid">
@@ -3066,6 +3082,17 @@ function bindLobby() {
       paint(true);
     });
   };
+  document.querySelectorAll("[data-french-region]").forEach((input) => {
+    input.onchange = () => {
+      if (!input.checked) return;
+      state.frenchRegion = storeFrenchRegion(input.dataset.frenchRegion);
+      state.statusMsg = "";
+      void loadBanksForLocale("fr").then(() => paint(true)).catch(() => {
+        state.statusMsg = "French question pack did not load.";
+        paint(true);
+      });
+    };
+  });
   document.querySelectorAll("[data-topic]").forEach((input) => {
     input.onchange = () => {
       const id = input.dataset.topic;
@@ -3673,7 +3700,7 @@ function paint(force = false) {
     state.profile?.abilityTier, state.profile?.belt, state.profile?.thumb ? 1 : 0,
     state.profile?.dojoBg, (state.profile?.topScores || []).length, state.dojoScroll,
     state.profileUnlocked ? 1 : 0, state.entered ? 1 : 0, state.dojoMode, state.roomDojoPanel, state.profile?.passwordHash ? 1 : 0,
-    state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
+    state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale, state.frenchRegion,
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
     state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => r.code).join(","),
     state.viewing ? 1 : 0, state.joinOffer?.code || "", state.joinOffer?.canPlay ? 1 : 0,
