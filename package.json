@@ -5,5 +5,8 @@
   "scripts": {
     "publish:week": "node scripts/publish-week.mjs",
     "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.39.0"
   }
 }

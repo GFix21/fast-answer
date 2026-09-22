@@ -1,7 +1,7 @@
 import { getRoom, hasRoom, saveRoom, listRooms, deleteRoom } from "../lib/room-store.js";
 import { requireAuth } from "../lib/flow-auth.js";
 
-function touch(cur) {
+async function touch(cur) {
   return saveRoom(cur);
 }
 
@@ -18,10 +18,10 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     const code = String(req.query.code || "").toUpperCase();
     if (!code || req.query.list === "1") {
-      res.status(200).end(JSON.stringify({ rooms: listRooms() }));
+      res.status(200).end(JSON.stringify({ rooms: await listRooms() }));
       return;
     }
-    const room = getRoom(code);
+    const room = await getRoom(code);
     res.status(200).end(JSON.stringify(room || { error: "missing" }));
     return;
   }
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
   const code = String(body.code || "").toUpperCase();
 
   if (body.action === "list") {
-    res.status(200).end(JSON.stringify({ rooms: listRooms() }));
+    res.status(200).end(JSON.stringify({ rooms: await listRooms() }));
     return;
   }
 
@@ -47,28 +47,28 @@ export default async function handler(req, res) {
   // Delete stays on this route so Flow does not add a 13th Hobby function.
   if (body.action === "delete") {
     if (!requireAuth(req, res)) return;
-    if (!deleteRoom(code)) {
+    if (!await deleteRoom(code)) {
       res.status(404).end(JSON.stringify({ error: "missing" }));
       return;
     }
-    res.status(200).end(JSON.stringify({ ok: true, rooms: listRooms() }));
+    res.status(200).end(JSON.stringify({ ok: true, rooms: await listRooms() }));
     return;
   }
 
   if (body.action === "create") {
-    const cur = getRoom(code) || { code, host: "", state: {}, buzzes: [], guests: [] };
-    touch({
+    const cur = await getRoom(code) || { code, host: "", state: {}, buzzes: [], guests: [] };
+    await touch({
       ...cur,
       host: body.host || cur.host,
       createdAt: cur.createdAt || Date.now(),
       guests: cur.guests || [],
     });
-    res.status(200).end(JSON.stringify(getRoom(code)));
+    res.status(200).end(JSON.stringify(await getRoom(code)));
     return;
   }
 
   // All other actions require an existing room (TV / Cast create first).
-  if (!hasRoom(code)) {
+  if (!await hasRoom(code)) {
     res.status(404).end(JSON.stringify({
       error: "missing",
       message: "Room not found. Open the TV or Cast TV link first, then Join as buzzer.",
@@ -76,7 +76,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const cur = getRoom(code);
+  const cur = await getRoom(code);
 
   if (body.action === "join") {
     cur.guests = cur.guests || [];
@@ -94,7 +94,7 @@ export default async function handler(req, res) {
     } else {
       cur.guests.push(guest);
     }
-    touch(cur);
+    await touch(cur);
   } else if (body.action === "leave") {
     const id = body.id || "";
     cur.guests = (cur.guests || []).filter((g) => g.id !== id && g.name !== body.name);
@@ -109,7 +109,7 @@ export default async function handler(req, res) {
       delete next[id];
       cur.state.readyIds = next;
     }
-    touch(cur);
+    await touch(cur);
   } else if (body.action === "kick") {
     const id = body.id || "";
     cur.guests = (cur.guests || []).filter((g) => g.id !== id && g.name !== body.name);
@@ -121,7 +121,7 @@ export default async function handler(req, res) {
     }
     cur.state.kickedId = id;
     cur.state.kickedAt = Date.now();
-    touch(cur);
+    await touch(cur);
   } else if (body.action === "dropout") {
     const id = body.id || "";
     if (!id) {
@@ -129,17 +129,17 @@ export default async function handler(req, res) {
       return;
     }
     cur.dropoutIds = { ...(cur.dropoutIds || {}), [id]: true };
-    touch(cur);
+    await touch(cur);
   } else if (body.action === "state") {
     cur.state = body.state || {};
-    touch(cur);
+    await touch(cur);
   } else if (body.action === "buzz") {
     cur.buzzes = cur.buzzes || [];
     cur.buzzes.push({ name: body.name, at: Date.now() });
     if (!cur.state.buzzed) {
       cur.state = { ...cur.state, buzzed: true, buzzBy: body.name, buzzId: body.id || "", phase: "answer" };
     }
-    touch(cur);
+    await touch(cur);
   } else if (body.action === "answer") {
     // Pad / voice submit — host applies via poll.
     cur.state = cur.state || {};
@@ -150,13 +150,13 @@ export default async function handler(req, res) {
       lockdown: Boolean(body.lockdown),
       name: body.name || "",
     };
-    touch(cur);
+    await touch(cur);
   } else if (body.action === "map") {
     cur.state = cur.state || {};
     cur.state.maps = { ...(cur.state.maps || {}) };
     if (body.target) cur.state.maps[body.id] = body.target;
     else delete cur.state.maps[body.id];
-    touch(cur);
+    await touch(cur);
   } else if (body.action === "wager") {
     cur.state = cur.state || {};
     cur.state.lastWager = {
@@ -166,7 +166,7 @@ export default async function handler(req, res) {
       locked: body.locked !== false,
       at: Date.now(),
     };
-    touch(cur);
+    await touch(cur);
   } else if (body.action === "ready") {
     cur.guests = cur.guests || [];
     const id = body.id || ("p-" + String(body.name || "pad"));
@@ -180,10 +180,10 @@ export default async function handler(req, res) {
     }
     cur.state = cur.state || {};
     cur.state.readyIds = { ...(cur.state.readyIds || {}), [id]: true };
-    touch(cur);
+    await touch(cur);
   } else {
     res.status(400).end(JSON.stringify({ error: "action" }));
     return;
   }
-  res.status(200).end(JSON.stringify(getRoom(code)));
+  res.status(200).end(JSON.stringify(await getRoom(code)));
 }
