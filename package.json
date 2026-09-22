@@ -2,6 +2,9 @@
   "name": "fast-answer",
   "private": true,
   "type": "module",
+  "dependencies": {
+    "@vercel/functions": "^3.9.8"
+  },
   "scripts": {
     "publish:week": "node scripts/publish-week.mjs",
     "dev": "vercel dev"

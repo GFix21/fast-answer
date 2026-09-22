@@ -387,7 +387,7 @@ function renderRooms(panel) {
         <h2>Open rooms</h2>
         <button class="btn" id="refreshRooms">Refresh rooms</button>
       </div>
-      <p class="mut">Shared folder <code>data/rooms</code>. Anyone who can open the game can view and join. Delete removes the room from that folder.</p>
+      <p class="mut">Same list as Join TV. A room appears when its TV link is open. Delete removes it for everyone.</p>
       ${rooms.length ? rooms.map((r) => `
         <div class="room-admin">
           <div>
@@ -521,7 +521,7 @@ function renderQueue(panel) {
         <h2>Open rooms</h2>
         <button class="btn" id="refreshRooms">Refresh rooms</button>
       </div>
-      <p class="mut">Shared folder <code>data/rooms</code>. Anyone who can open the game can view and join. Delete removes the room from that folder.</p>
+      <p class="mut">Same list as Join TV. A room appears when its TV link is open. Delete removes it for everyone.</p>
       ${rooms.length ? rooms.map((r) => `
         <div class="room-admin">
           <div>

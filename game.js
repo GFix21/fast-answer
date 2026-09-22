@@ -255,10 +255,11 @@ function shareUrl() {
   return u.toString();
 }
 function tvSilkUrl(roomCode = state.room) {
-  const path = location.pathname.replace(/\/index\.html$/i, "").replace(/\/$/, "");
-  const base = `${location.origin}${path || ""}`;
   const code = String(roomCode || "").toUpperCase();
-  return `${base}/?tv=1${code ? `&room=${encodeURIComponent(code)}` : ""}`;
+  const u = new URL("/", location.origin);
+  u.searchParams.set("tv", "1");
+  if (code) u.searchParams.set("room", code);
+  return u.toString();
 }
 function isTvDisplay() {
   return Boolean(state.onScreen && role !== "pad");
@@ -2810,7 +2811,10 @@ function playHTML() {
 
 async function openRoom() {
   state.room = state.room || code();
-  await rooms("POST", { action: "create", code: state.room, host: state.name });
+  const saved = await rooms("POST", { action: "create", code: state.room, host: state.name });
+  if (!saved || saved.error) {
+    state.statusMsg = "TV room " + state.room + " is not on the shared list yet. Refresh this TV page.";
+  }
   startPoll();
 }
 
@@ -3673,7 +3677,18 @@ if (isDirections) {
   if (!hasPhoneProfile()) state.dojoMode = "create";
   else if (needsPasswordSetup()) state.dojoMode = "setpw";
   else state.dojoMode = "unlock";
-  if (role === "pad") {
+  if (forcedDisplay) {
+    // ?tv=1 is the Silk link. It owns this room even if the browser last used Join TV.
+    state.onScreen = true;
+    state.mpMode = "host";
+    state.lobbyOpen = "room";
+    if (joinCode) state.room = joinCode;
+    try {
+      localStorage.setItem("fa-onscreen", "1");
+      localStorage.setItem("fa-mp", "host");
+    } catch { /* ignore */ }
+    void openRoom().then(() => refreshActiveRooms()).then(() => paint(true));
+  } else if (role === "pad") {
     state.onScreen = true; // pad follows TV room; UI is pad (Off Screen chrome), not full TV
     state.mpMode = "join";
     state.lobbyOpen = "room";
@@ -3683,11 +3698,6 @@ if (isDirections) {
   } else if (state.mpMode === "join") {
     void refreshActiveRooms().then(() => paint(true));
   } else if (state.onScreen) {
-    if (forcedDisplay) {
-      localStorage.setItem("fa-onscreen", "1");
-      state.lobbyOpen = "room";
-      state.mpMode = "host";
-    }
     void openRoom();
   }
   paint(true);
