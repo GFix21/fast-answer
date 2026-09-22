@@ -1053,15 +1053,12 @@ function buzz() {
 }
 
 function armMap(targetId) {
-  const answerPhase = state.phase === "answer";
-  const readPhase = state.phase === "read";
-  if ((!readPhase && !answerPhase) || !mapIsActive()) return;
-  const owner = answerPhase ? (state.buzzId || state.youId) : state.youId;
-  if (answerPhase && role === "pad" && owner !== state.youId) return;
-  if (targetId === owner) return;
+  // A MAP target is chosen during the read, then activates only if its owner buzzes first.
+  if (state.phase !== "read" || !mapIsActive()) return;
+  const owner = state.youId;
+  if (!owner || targetId === owner) return;
   if (state.maps[owner] === targetId) delete state.maps[owner];
   else state.maps[owner] = targetId;
-  if (answerPhase) state.mapLive = Boolean(state.maps[owner]);
   paint();
   publish();
   if (bc) bc.postMessage({ type: "map", id: owner, target: state.maps[owner], name: state.name });
@@ -1682,7 +1679,8 @@ function scoreboard() {
     const thumb = src
       ? `<img class="av" src="${src}" alt=""/>`
       : `<span class="av empty" aria-hidden="true"></span>`;
-    return `<span class="score-cell ${p.you ? "you" : ""}">${thumb}<span class="score-name">${escapeHtml(p.name)}</span><b>$${p.score}</b></span>`;
+    const mapActive = state.mapLive && p.id === state.buzzId ? " map-active" : "";
+    return `<span class="score-cell ${p.you ? "you" : ""}${mapActive}">${thumb}<span class="score-name">${escapeHtml(p.name)}</span><b>$${p.score}</b></span>`;
   }).join("");
   return `<div class="scores-row">${cells}</div>`;
 }
@@ -1735,27 +1733,6 @@ function wagerHTML() {
       ? `<p class="meta">${tt("lockedSide", mine.side, mine.amount)}</p>`
       : `<button type="button" class="primary" id="lockWager" ${side && amount ? "" : "disabled"}>${tt("lockIn")}</button>
          <p class="meta">${tt("pickThenLock")}</p>`}
-  </div>`;
-}
-
-function mapStealHTML() {
-  const q = currentQ();
-  if (!q || state.lockdown) return "";
-  if (state.phase !== "answer" || !mapIsActive()) return "";
-  const answerer = state.buzzId || state.youId;
-  // PWHB pad (or local) — steal prompt below answers
-  if (role === "pad" && answerer !== state.youId) return "";
-  if (role !== "pad" && state.onScreen) return ""; // TV display skips steal chrome
-  const stake = stakeOf(q);
-  const doubled = stake * 2;
-  const armed = state.maps[answerer] || state.maps[state.youId];
-  const rivals = state.players.filter((p) => p.id !== answerer);
-  if (!rivals.length) return "";
-  return `<div class="map-steal">
-    <span class="rivals-lab">${tt("mapStealLab", doubled)}</span>
-    ${rivals.map((p) =>
-      `<button type="button" class="rival ${armed === p.id ? "on" : ""}" data-map="${p.id}">${escapeHtml(p.name)} <b>−$${stake}</b></button>`
-    ).join("")}
   </div>`;
 }
 
@@ -1858,7 +1835,7 @@ function directionsHTML() {
           `)}
           ${dirAcc("map", "MAP (Make-a-Point)", "<small>Read + answer</small>", `
             <p class="dir-copy"><b>Make-a-Point</b> lets the person who hits the buzzer (PWHB) risk stakes against a rival.</p>
-            <p class="dir-copy">On each of the <b>three random Easy / Hard MAP questions</b>, tap a rival during the 10-second read to arm MAP. Stake = this question’s point value. After you buzz, your phone also shows a <b>steal prompt below the answer options</b> — opponents’ names as choices, with the displayed amount = question points <b>doubled</b> for you if you hit it (they lose the stake). Miss, and you lose the stake. If someone else buzzes first, your MAP is off.</p>
+            <p class="dir-copy">On each of the <b>three random Easy / Hard MAP questions</b>, tap a rival during the 10-second read to arm MAP. Stake = this question’s point value. If the player who chose a rival buzzes first, MAP activates: their avatar glows red for everyone while the answer resolves. A correct answer pays <b>double</b> and the chosen rival loses the stake; a miss costs the MAP player the stake.</p>
           `)}
           ${dirAcc("lock", "Lockdown", "<small>Twice a show</small>", `
             <p class="dir-copy">Twice per show, after a correct buzz. That player faces <b>5 separate Difficult / Extreme questions</b> that are not part of the main 37-question round.</p>
@@ -2880,7 +2857,7 @@ function playHTML() {
       } else if (i === picked && !hidePick) cls += " on";
       const dis = canPick && !reveal ? "" : "disabled";
       return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
-    }).join("")}${mapStealHTML()}</div>` : (waiterPad ? `<div class="wager"><p class="wager-copy">${tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S)}</p><p class="meta">Glimpse only — hero answers privately.</p></div>` : `<div></div>`)))}
+    }).join("")}</div>` : (waiterPad ? `<div class="wager"><p class="wager-copy">${tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S)}</p><p class="meta">Glimpse only — hero answers privately.</p></div>` : `<div></div>`)))}
     <div class="buzzbar">
       ${!state.onScreen && !pad && !ld && !readyPhase && !endPhase ? `<div class="dock set-dock">
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
@@ -3643,11 +3620,12 @@ function startPoll() {
       if (j.guests) ingestGuests(j.guests);
       paint();
     }
-    if (role !== "pad" && j.state?.buzzed && !state.buzzed && state.phase === "buzz") {
-      takeBuzz(j.state.buzzId || "", j.state.buzzBy || "Player");
-    }
+    // Read MAP targets before resolving the buzz so a cross-device MAP activates reliably.
     if (role !== "pad" && j.state?.maps) {
       state.maps = { ...state.maps, ...j.state.maps };
+    }
+    if (role !== "pad" && j.state?.buzzed && !state.buzzed && state.phase === "buzz") {
+      takeBuzz(j.state.buzzId || "", j.state.buzzBy || "Player");
     }
     if (role !== "pad" && j.state?.lastWager && state.lockdown?.phase === "wager") {
       const w = j.state.lastWager;

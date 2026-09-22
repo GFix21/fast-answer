@@ -700,3 +700,6 @@ img.brand{
 .topic-toggle small { display: block; margin-top: .12rem; opacity: .72; }
 .french-region-picker { display:flex; flex-wrap:wrap; gap:.45rem .9rem; align-items:center; margin:0 0 .7rem; }
 .french-region-picker .rivals-lab { width:100%; margin:0; }
+.score-cell.map-active{border-color:#ff3b30;box-shadow:0 0 0 2px rgba(255,59,48,.32),0 0 18px rgba(255,59,48,.88);}
+.score-cell.map-active .av{box-shadow:0 0 0 2px #ff3b30,0 0 16px rgba(255,59,48,.95);animation:map-avatar-pulse .72s ease-in-out infinite alternate;}
+@keyframes map-avatar-pulse{from{filter:brightness(1)}to{filter:brightness(1.35);transform:scale(1.08)}}
