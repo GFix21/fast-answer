@@ -748,6 +748,15 @@ function validEmail(value) {
 function entryReady(name, email, pw) {
   return String(name || "").trim().length > 0 && validEmail(email) && String(pw || "").length >= 4;
 }
+function entryIsExisting(name) {
+  if (!hasPhoneProfile() || !state.profile?.passwordHash) return false;
+  const typed = String(name || "").trim().toLowerCase();
+  const stored = String(state.profile?.displayName || "").trim().toLowerCase();
+  return Boolean(typed && stored && typed === stored);
+}
+function entryActionLabel(name) {
+  return entryIsExisting(name) ? tt("enterProfile") : tt("createProfileBtn");
+}
 function needsEntryGate() {
   if (isDirections || forcedDisplay) return false;
   return !state.entered;
@@ -795,19 +804,21 @@ async function commitNewProfile(name, email, pw) {
     return false;
   }
   const passwordHash = await hashPassword(pw);
-  const base = state.profile || seedProfile();
+  const keepLegacy = Boolean(state.profile && !state.profile.passwordHash);
+  const base = keepLegacy ? state.profile : seedProfile();
   state.profile = {
     ...base,
-    id: base.passwordHash ? base.id : (base.id || uid()),
+    id: base.id || uid(),
     displayName: cleanName,
     email: cleanEmail,
     passwordHash,
-    createdAt: base.passwordHash ? base.createdAt : new Date().toISOString(),
+    createdAt: keepLegacy && base.createdAt ? base.createdAt : new Date().toISOString(),
   };
   saveProfile({ displayName: cleanName, email: cleanEmail, passwordHash });
   state.dojoMode = "home";
   state.roomDojoPanel = "";
-  state.statusMsg = tt("profileEntered");
+  state.statusMsg = tt("profileCreated");
+  state.entryDraft = null;
   markEntered();
   await activateGameProfile(state.profile);
   paint(true);
@@ -2267,7 +2278,7 @@ function dojoBody() {
         ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
         <input id="thDojo" type="file" accept="image/*"/>
       </div>
-      <button class="primary" id="createProfile" type="button">${tt("enterProfile")}</button>
+      <button class="primary" id="createProfile" type="button">${tt("createProfileBtn")}</button>
       ${hasPhoneProfile() ? `<button class="ghost" id="dojoCancelMode" type="button">${tt("cancel")}</button>` : ""}
     `);
   }
@@ -2391,7 +2402,7 @@ function roomDojoEntryHTML() {
         <input id="roomPwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
         <label class="field" for="roomTh">${tt("photoTv")}</label>
         <input id="roomTh" type="file" accept="image/*"/>
-        <button class="primary" id="roomCreateSubmit" type="button">${tt("enterProfile")}</button>
+        <button class="primary" id="roomCreateSubmit" type="button">${tt("createProfileBtn")}</button>
       </div>`;
   } else if (panel === "unlock") {
     if (!hasPhoneProfile()) {
@@ -2677,6 +2688,8 @@ function entryHTML() {
   const email = draft.email != null ? draft.email : (p.email || "");
   const pw = draft.password || "";
   const ready = entryReady(name, email, pw);
+  const existing = entryIsExisting(name);
+  const stored = Boolean(hasPhoneProfile() && p.passwordHash);
   return `
     <img class="bg" alt="" src="${STUDIOS[state.studioI]}"/>
     <div class="veil"></div>
@@ -2691,15 +2704,17 @@ function entryHTML() {
       <img class="entry-title" src="${TITLE_3D}" alt="Fast Answer!"/>
       <form class="entry-card" id="entryForm" autocomplete="on">
         <p class="dir-copy">${tt("entryLead")}</p>
-        ${state.forgotPassword && hasPhoneProfile() ? forgotPasswordHTML() : `
+        ${stored ? `<p class="meta">${tt("entryCreateHint")}</p>` : ""}
+        ${state.forgotPassword && existing ? forgotPasswordHTML() : `
         <label class="field" for="entryName">${tt("name")}</label>
         <input id="entryName" type="text" value="${escapeHtml(name)}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
         <label class="field" for="entryEmail">${tt("email")}</label>
         <input id="entryEmail" type="email" value="${escapeHtml(email)}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
         <label class="field" for="entryPw">${tt("password")}</label>
-        <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${hasPhoneProfile() ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
-        <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${tt("enterProfile")}</button>
-        ${hasPhoneProfile() && state.profile?.passwordHash ? `<button class="word" id="forgotPassword" type="button">${tt("forgotPassword")}</button>` : ""}
+        <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${existing ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
+        <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${entryActionLabel(name)}</button>
+        ${stored ? `<button class="word ${existing ? "" : "hidden"}" id="forgotPassword" type="button">${tt("forgotPassword")}</button>` : ""}
+        ${stored ? `<button class="word" id="entryCreateNew" type="button">${tt("createNewProfile")}</button>` : ""}
         <button class="ghost" id="resetProfile" type="button">${tt("resetProfile")}</button>
         `}
         <p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>
@@ -2718,11 +2733,19 @@ function bindEntry() {
   const emailEl = $("#entryEmail");
   const pwEl = $("#entryPw");
   const btn = $("#enterProfile");
+  const forgot = $("#forgotPassword");
   const sync = () => {
     syncEntryDraft();
-    if (!btn) return;
-    const ready = entryReady(nameEl && nameEl.value, emailEl && emailEl.value, pwEl && pwEl.value);
-    btn.classList.toggle("hidden", !ready);
+    const nm = nameEl && nameEl.value;
+    const em = emailEl && emailEl.value;
+    const pw = pwEl && pwEl.value;
+    const existing = entryIsExisting(nm);
+    if (btn) {
+      btn.classList.toggle("hidden", !entryReady(nm, em, pw));
+      btn.textContent = entryActionLabel(nm);
+    }
+    if (pwEl) pwEl.autocomplete = existing ? "current-password" : "new-password";
+    if (forgot) forgot.classList.toggle("hidden", !existing);
   };
   if (nameEl) nameEl.oninput = sync;
   if (emailEl) emailEl.oninput = sync;
@@ -2733,6 +2756,17 @@ function bindEntry() {
   const form = $("#entryForm");
   if (form) form.onsubmit = (e) => { e.preventDefault(); void submitEntry(); };
   if (btn) btn.onclick = () => { void submitEntry(); };
+  const createNew = $("#entryCreateNew");
+  if (createNew) createNew.onclick = () => {
+    state.entryDraft = { name: "", email: "", password: "" };
+    state.forgotPassword = false;
+    state.statusMsg = "";
+    paint(true);
+    requestAnimationFrame(() => {
+      const el = $("#entryName");
+      if (el) el.focus();
+    });
+  };
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
   bindForgotPassword();
@@ -2752,7 +2786,7 @@ async function submitEntry() {
   const email = String(state.entryDraft?.email || "").trim();
   const pw = String(state.entryDraft?.password || "");
   if (!entryReady(name, email, pw)) return;
-  if (hasPhoneProfile() && state.profile?.passwordHash) {
+  if (entryIsExisting(name)) {
     const ok = await verifyProfilePassword(pw);
     if (!ok) {
       state.statusMsg = tt("wrongPassword");
@@ -2762,7 +2796,7 @@ async function submitEntry() {
     saveProfile({ displayName: name, email });
     state.dojoMode = "home";
     state.roomDojoPanel = "";
-    state.statusMsg = "";
+    state.statusMsg = tt("profileEntered");
     state.entryDraft = null;
     markEntered();
     await activateGameProfile(state.profile);
