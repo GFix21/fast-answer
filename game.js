@@ -1889,7 +1889,7 @@ function dojoPageHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       <a class="word" href="/">${tt("lobby")}</a>
-      <a class="word" href="${FLOW_URL}">Flow</a>
+      <a class="word" href="/directions">${tt("rules")}</a>
     </div>
     <div class="dojo-page">
       <div class="dojo-page-scroll">
@@ -2567,7 +2567,6 @@ function entryHTML() {
       ${languageSwitcherHtml(state.locale)}
       <a class="word" href="${dojoHref()}">${tt("dojo")}</a>
       <a class="word" href="/directions">Rules</a>
-      <a class="word" href="${FLOW_URL}">Flow</a>
     </div>
     <div class="entry-stage">
       <img class="entry-title" src="${TITLE_3D}" alt="Fast Answer!"/>
@@ -2683,7 +2682,6 @@ function lobbyHTML() {
       ${languageSwitcherHtml(state.locale)}
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
       ${tv ? "" : `<a class="word" href="${dojoHref()}">${tt("dojo")}</a>`}
-      ${tv ? "" : `<a class="word" href="${FLOW_URL}">Flow</a>`}
       <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
       <a class="word" href="/directions">${tt("directions")}</a>
     </div>
