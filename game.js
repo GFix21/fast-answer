@@ -104,6 +104,18 @@ const isDojoPage =
   params.get("page") === "dojo" ||
   /(?:^|\/)dojo(?:\.html)?\/?$/i.test(location.pathname);
 const ROOM_API = location.pathname.includes("/fast-answer") ? "/api/fa/rooms" : "/api/rooms";
+const TOPIC_FALLBACK = [
+  { id: "sci-fi", questionTopics: ["sci-fi"], title: "Sci-Fi", blurb: "Space operas, robots, timelines that refuse to behave.", defaultOn: true },
+  { id: "grand-tour-top-gear", questionTopics: ["grand-tour"], title: "The Grand Tour & Top Gear", blurb: "Clarkson, May, Hammond, Amazon Prime — and the cars that survived them.", defaultOn: true },
+  { id: "gmg-brand", questionTopics: ["gmg"], title: "GMG Brand / music culture", blurb: "Montréal label lore, roster vibes, night-owl culture.", defaultOn: true },
+  { id: "dj-gigi", questionTopics: ["dj-gigi"], title: "DJ Gigi", blurb: "Flagship artist — Easy tier only.", defaultOn: true },
+  { id: "geography", questionTopics: ["geography"], title: "Geography", blurb: "Capitals, coasts, and places worth a detour.", defaultOn: true },
+  { id: "film-tv", questionTopics: ["film-tv"], title: "Film & TV", blurb: "Screens big and small — general knowledge.", defaultOn: true },
+  { id: "art", questionTopics: ["art"], title: "Art", blurb: "Canvases, movements, and the odd scandal.", defaultOn: false },
+  { id: "cars-motoring", questionTopics: ["cars"], title: "Cars & motoring", blurb: "Engines, marques, and road-trip folklore.", defaultOn: true },
+  { id: "music", questionTopics: ["music"], title: "Music", blurb: "Hits, history, and headphones at 2 a.m.", defaultOn: true },
+  { id: "current-culture", questionTopics: ["culture"], title: "Current culture", blurb: "What’s buzzing — inspired by today’s chatter.", defaultOn: true },
+];
 
 function detectDisplayMode() {
   if (role === "pad") return false;
@@ -181,6 +193,8 @@ const state = {
   /** Phone entry gate (name, email, password) before the lobby. */
   entered: false,
   entryDraft: null,
+  topics: TOPIC_FALLBACK,
+  selectedTopicIds: TOPIC_FALLBACK.filter((topic) => topic.defaultOn).map((topic) => topic.id),
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
@@ -198,6 +212,20 @@ async function loadBanksForLocale(locale = state.locale) {
     return r.json();
   });
   state.questions = Array.isArray(bank) ? bank : (bank.questions || []);
+  try {
+    const topics = await fetch("/q-and-a/topics.json").then((r) => (r.ok ? r.json() : null));
+    if (Array.isArray(topics) && topics.length) {
+      state.topics = topics.map((topic) => ({
+        ...topic,
+        questionTopics: Array.isArray(topic.questionTopics) && topic.questionTopics.length
+          ? topic.questionTopics
+          : [topic.id],
+      }));
+      if (!state.selectedTopicIds.length) {
+        state.selectedTopicIds = state.topics.filter((topic) => topic.defaultOn).map((topic) => topic.id);
+      }
+    }
+  } catch { /* use bundled fallback */ }
   try {
     const place = await fetch(placementUrl(loc)).then((r) => (r.ok ? r.json() : null));
     state.placementQs = Array.isArray(place?.questions) ? place.questions : [];
@@ -411,6 +439,18 @@ function sampleByTier(all, tier, need, recentSet) {
   const rank = new Map(recentOrder.map((id, i) => [id, i]));
   used.sort((a, b) => (rank.get(b.id) ?? 9999) - (rank.get(a.id) ?? 9999));
   return [...fresh, ...used].slice(0, need).map(shuffleQuestionChoices);
+}
+function selectedQuestions() {
+  const selected = new Set(state.selectedTopicIds || []);
+  if (!selected.size) return [];
+  const questionTopics = new Set(
+    (state.topics || []).filter((topic) => selected.has(topic.id)).flatMap((topic) => topic.questionTopics || [topic.id]),
+  );
+  return state.questions.filter((question) => questionTopics.has(question.topic));
+}
+function selectedTopicsArePlayable() {
+  const pool = selectedQuestions();
+  return Object.entries(DEAL).every(([tier, needed]) => pool.filter((question) => question.tier === tier).length >= needed);
 }
 function deal(all) {
   const recent = new Set(loadRecentQuestionIds());
@@ -764,6 +804,7 @@ function snapshot() {
     room: state.room,
     qs: state.qs,
     q: currentQ(),
+    selectedTopicIds: state.selectedTopicIds,
     players: state.players,
     maps: state.maps,
     mapLive: state.mapLive,
@@ -2270,6 +2311,22 @@ function lobbySetupBannerHTML() {
     </div>`;
 }
 
+function topicPickerHTML() {
+  const selected = new Set(state.selectedTopicIds || []);
+  const ready = selectedTopicsArePlayable();
+  return `<div class="topic-picker">
+    <p class="rivals-lab">Gameplay topics</p>
+    <p class="meta">The room creator chooses the categories before the show starts.</p>
+    <div class="topic-grid">
+      ${(state.topics || []).map((topic) => `<label class="toggle topic-toggle">
+        <input type="checkbox" data-topic="${escapeHtml(topic.id)}" ${selected.has(topic.id) ? "checked" : ""}/>
+        <span><b>${escapeHtml(topic.title)}</b><small>${escapeHtml(topic.blurb || "")}</small></span>
+      </label>`).join("")}
+    </div>
+    ${ready ? "" : `<p class="status">Choose more topics to supply a full 37-question game.</p>`}
+  </div>`;
+}
+
 function roomModeButtons() {
   if (isTvDisplay()) return "";
   const modes = [
@@ -2339,6 +2396,7 @@ function roomBody() {
   if (mode === "cast") {
     return `
       ${roomModeButtons()}
+      ${topicPickerHTML()}
       <p class="dir-copy"><b>${tt("castCopy")}</b></p>
       <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
       <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
@@ -2368,6 +2426,7 @@ function roomBody() {
     const readyName = (state.profile && state.profile.displayName) || state.name || "Player";
     return `
       ${roomModeButtons()}
+      ${topicPickerHTML()}
       <div class="player-ready" role="status">
         <b>${escapeHtml(readyName)}</b>
         <span>${tt("activeReady")}</span>
@@ -2400,6 +2459,7 @@ function roomBody() {
 
   return `
     ${roomModeButtons()}
+    ${topicPickerHTML()}
     <label class="field">${tt("players")} <b>${state.playerCount}</b></label>
     <input id="pc" type="range" min="2" max="12" value="${state.playerCount}"/>
     <label class="toggle">
@@ -2489,16 +2549,17 @@ function entryHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       <a class="word" href="${dojoHref()}">${tt("dojo")}</a>
+      <a class="word" href="/directions">Rules</a>
       <a class="word" href="${FLOW_URL}">Flow</a>
     </div>
     <div class="entry-stage">
       <img class="entry-title" src="${TITLE_3D}" alt="Fast Answer!"/>
       <form class="entry-card" id="entryForm" autocomplete="on">
-        <p class="dir-copy">${tt("entryLead")}</p>
+        <p class="dir-copy">${hasPhoneProfile() ? "Enter your profile password to continue." : tt("entryLead")}</p>
         <label class="field" for="entryName">${tt("name")}</label>
-        <input id="entryName" type="text" value="${escapeHtml(name)}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
+        <input id="entryName" type="text" value="${escapeHtml(name)}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}" ${hasPhoneProfile() ? "readonly" : ""}/>
         <label class="field" for="entryEmail">${tt("email")}</label>
-        <input id="entryEmail" type="email" value="${escapeHtml(email)}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
+        <input id="entryEmail" type="email" value="${escapeHtml(email)}" maxlength="120" autocomplete="email" placeholder="${tt("email")}" ${hasPhoneProfile() ? "readonly" : ""}/>
         <label class="field" for="entryPw">${tt("password")}</label>
         <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${hasPhoneProfile() ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
         <button class="primary" id="enterProfile" type="submit">${tt("enterProfile")}</button>
@@ -3005,6 +3066,17 @@ function bindLobby() {
       paint(true);
     });
   };
+  document.querySelectorAll("[data-topic]").forEach((input) => {
+    input.onchange = () => {
+      const id = input.dataset.topic;
+      const selected = new Set(state.selectedTopicIds || []);
+      if (input.checked) selected.add(id);
+      else selected.delete(id);
+      state.selectedTopicIds = (state.topics || []).map((topic) => topic.id).filter((id) => selected.has(id));
+      state.statusMsg = "";
+      paint(true);
+    };
+  });
   const pc = $("#pc");
   if (pc) pc.oninput = (e) => {
     state.playerCount = clamp(Number(e.target.value), 2, 12);
@@ -3468,9 +3540,15 @@ function ingestGuests(guests) {
 }
 
 function startGame() {
+  if (!selectedTopicsArePlayable()) {
+    state.statusMsg = "Choose more topics to supply a full 37-question game.";
+    state.lobbyOpen = "room";
+    paint(true);
+    return;
+  }
   seatPlayers();
   state.playOpen = "ask";
-  state.qs = deal(state.questions);
+  state.qs = deal(selectedQuestions());
   state.spent = new Set(state.qs.map((q) => q.id));
   rememberDealtIds(state.qs.map((q) => q.id));
   state.i = 0;

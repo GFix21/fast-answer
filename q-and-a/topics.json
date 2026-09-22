@@ -3,61 +3,91 @@
     "id": "sci-fi",
     "title": "Sci-Fi",
     "blurb": "Space operas, robots, timelines that refuse to behave.",
-    "defaultOn": true
+    "defaultOn": true,
+    "questionTopics": [
+      "sci-fi"
+    ]
   },
   {
     "id": "grand-tour-top-gear",
     "title": "The Grand Tour & Top Gear",
-    "blurb": "Clarkson, May, Hammond, Amazon Prime — and the cars that survived them.",
-    "defaultOn": true
+    "blurb": "Clarkson, May, Hammond, Amazon Prime \u2014 and the cars that survived them.",
+    "defaultOn": true,
+    "questionTopics": [
+      "grand-tour"
+    ]
   },
   {
     "id": "gmg-brand",
     "title": "GMG Brand / music culture",
-    "blurb": "Montréal label lore, roster vibes, night-owl culture.",
-    "defaultOn": true
+    "blurb": "Montr\u00e9al label lore, roster vibes, night-owl culture.",
+    "defaultOn": true,
+    "questionTopics": [
+      "gmg"
+    ]
   },
   {
     "id": "dj-gigi",
     "title": "DJ Gigi",
-    "blurb": "Flagship artist — Easy tier only.",
+    "blurb": "Flagship artist \u2014 Easy tier only.",
     "easyOnly": true,
-    "defaultOn": true
+    "defaultOn": true,
+    "questionTopics": [
+      "dj-gigi"
+    ]
   },
   {
     "id": "geography",
     "title": "Geography",
     "blurb": "Capitals, coasts, and places worth a detour.",
-    "defaultOn": true
+    "defaultOn": true,
+    "questionTopics": [
+      "geography"
+    ]
   },
   {
     "id": "film-tv",
     "title": "Film & TV",
-    "blurb": "Screens big and small — general knowledge.",
-    "defaultOn": true
+    "blurb": "Screens big and small \u2014 general knowledge.",
+    "defaultOn": true,
+    "questionTopics": [
+      "film-tv"
+    ]
   },
   {
     "id": "art",
     "title": "Art",
     "blurb": "Canvases, movements, and the odd scandal.",
-    "defaultOn": false
+    "defaultOn": false,
+    "questionTopics": [
+      "art"
+    ]
   },
   {
     "id": "cars-motoring",
     "title": "Cars & motoring",
     "blurb": "Engines, marques, and road-trip folklore.",
-    "defaultOn": true
+    "defaultOn": true,
+    "questionTopics": [
+      "cars"
+    ]
   },
   {
     "id": "music",
     "title": "Music",
     "blurb": "Hits, history, and headphones at 2 a.m.",
-    "defaultOn": true
+    "defaultOn": true,
+    "questionTopics": [
+      "music"
+    ]
   },
   {
     "id": "current-culture",
     "title": "Current culture",
-    "blurb": "What’s buzzing — inspired by today’s chatter.",
-    "defaultOn": true
+    "blurb": "What\u2019s buzzing \u2014 inspired by today\u2019s chatter.",
+    "defaultOn": true,
+    "questionTopics": [
+      "culture"
+    ]
   }
 ]
