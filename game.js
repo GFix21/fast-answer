@@ -1859,13 +1859,13 @@ function directionsHTML() {
             <p class="dir-copy">During the <b>10-second read</b>, tap a rival to arm MAP. Stake = this question’s point value. After you buzz, your phone also shows a <b>steal prompt below the answer options</b> — opponents’ names as choices, with the displayed amount = question points <b>doubled</b> for you if you hit it (they lose the stake). Miss, and you lose the stake. If someone else buzzes first, your MAP is off.</p>
           `)}
           ${dirAcc("lock", "Lockdown", "<small>Twice a show</small>", `
-            <p class="dir-copy">Twice per show, after a correct buzz. That player faces <b>5 hard questions</b>.</p>
+            <p class="dir-copy">Twice per show, after a correct buzz. That player faces <b>5 Lockdown questions</b>, drawn from remaining Difficult / Extreme questions when available.</p>
             <p class="dir-copy"><b>Wagers:</b> opponents pick WIN or LOSE and $100 / $500 / $1,000, then tap <b>Lock in</b> (60s, or when everyone locks).</p>
             <p class="dir-copy"><b>Rules countdown:</b> about <b>7 seconds</b> before each lockdown question — explains the rules and lets the table settle.</p>
-            <p class="dir-copy"><b>Answer window:</b> up to <b>3 minutes</b> per question. Points start at <b>$5,000</b> and <b>decay linearly to $0</b> as time runs out. Need <b>4/5</b> for WIN wagers; otherwise LOSE pays. Waiting players see a <b>60-second</b> wait countdown (glimpse only — they do not see the hero’s response).</p>
+            <p class="dir-copy"><b>Answer window:</b> up to <b>3 minutes</b> per question. Each correct answer banks points from <b>$5,000 down to $0</b> as time runs out. Need <b>4/5</b> for WIN wagers; otherwise LOSE pays. Waiting players see a <b>60-second</b> wait countdown (glimpse only — they do not see the hero’s response).</p>
           `)}
           ${dirAcc("dojo", "Dojo", "<small>10 placements</small>", `
-            <p class="dir-copy">Ten placement questions in the lobby <b>on the phone</b> (not on the TV). Each prompt shows for <b>10 seconds</b>, then the answers appear — tap one. No player name or points on the Dojo card. Places you Bronze, Silver, or Gold for about three months. Play stays gated until placement is current. Karate belts rise with career points, separate from ability.</p>
+            <p class="dir-copy">Ten placement questions in the lobby <b>on the phone</b> (not on the TV). Each prompt shows for <b>3 seconds</b>, then the answers appear — tap one. No player name or points on the Dojo card. Places you Bronze, Silver, or Gold for about three months. Play stays gated until placement is current. Karate belts rise with career points, separate from ability.</p>
           `)}
         </div>
         <div class="row">

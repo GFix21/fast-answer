@@ -40,7 +40,7 @@ One page. Collapsible menus. Jeremy and the studio stay live behind the card.
 - **Dojo (profile)** — below Join TV in the lobby (phone only; hidden on TV / `?tv=1`). Create a profile (name + password + photo) or unlock with the profile password; avatar upload stays here. Create profile starts placement immediately.
 - **Karate belt** — white→black from career points, shown as a belt strip in Dojo.
 - **Medals** — Bronze / Silver / Gold from the 10-question placement (valid ~three months).
-- **Placement** — ten questions. Prompt for 10s, then answers. No name/points on the live Dojo card.
+- **Placement** — ten questions. Prompt for 3s, then answers. No name/points on the live Dojo card.
 - **Room** — 2 to 12 seats. TV owns the room on On Screen / Silk / `?tv=1`. Phones join as pads (corner QR), Buzz to ready, all-buzz starts the show. Empty seats are celebrity bots.
 - **Set** — Jeremy height and studio angle, live on this phone (sliders work on mobile).
 
@@ -62,7 +62,7 @@ A round is **37 questions**: 20 Easy ($100), 10 Hard ($500), 5 Difficult ($1,000
 
 **MAP** happens *during* that read — tap a rival (one tap, stake = this question). If you buzz first and hit it, you bank double and they lose the stake. Miss, and you lose the stake. Nobody else loses points on a normal miss.
 
-**Lockdown** hits twice per show, after a correct buzz. That player plays 5. Opponents tap WIN or LOSE and a stake (60 seconds max; it skips ahead when everyone has locked). 4/5 pays WIN even money; otherwise LOSE pays. Those five bank at $500 each only if they clear the set.
+**Lockdown** hits twice per show, after a correct buzz. That player answers 5 remaining Difficult / Extreme questions when available. Opponents tap WIN or LOSE and a stake (60 seconds max; it skips ahead when everyone has locked). 4/5 pays WIN even money; otherwise LOSE pays. Each correct Lockdown answer banks a time-decaying value from $5,000 to $0.
 
 Empty seats are celebrity bots with their own skill and buzz timing. Pads replace them as they join, up to 12.
 
