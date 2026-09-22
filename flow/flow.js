@@ -28,6 +28,7 @@ const state = {
     placement: null,
     weekRejections: [],
     placementRejections: [],
+    lessons: null,
     rooms: [],
     error: "",
     loading: false,
@@ -92,6 +93,33 @@ function fmtCounts(c) {
     if (!order.includes(k)) parts.push(`${v} ${k}`);
   }
   return parts.join(" · ") || "—";
+}
+
+function archiveQItem(q) {
+  const rejected = q.status === "rejected";
+  const regenId = q.regeneratedQuestionId;
+  return `
+    <div class="q-item ${esc(q.status || "")}">
+      <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation || "")}${q.status ? ` · <b>${esc(q.status)}</b>` : ""} · ${esc(q.id)}</div>
+      <div class="q-prompt">${esc(q.categoryTitle || "")}${q.categoryTitle ? " — " : ""}${esc(q.prompt || "")}</div>
+      <div class="choices">${(q.choices || []).map((c, i) => `<div class="${i === q.correctIndex ? "hit" : ""}">${String.fromCharCode(65 + i)}. ${esc(c)}</div>`).join("")}</div>
+      <div class="row" style="margin-top:10px">
+        ${rejected
+          ? `<button class="btn primary" data-arch-regen="${esc(q.id)}">Regenerate</button>`
+          : `<button class="btn danger" data-arch-reject="${esc(q.id)}">Reject</button>
+             <button class="btn" data-arch-regen="${esc(q.id)}">Reject &amp; regenerate</button>`}
+      </div>
+      ${regenId ? `<p class="mut">Replacement pending in review: <code>${esc(regenId)}</code></p>` : ""}
+    </div>`;
+}
+
+function bindArchiveQuestionActions(panel) {
+  panel.querySelectorAll("[data-arch-reject]").forEach((b) =>
+    b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.archReject, false)),
+  );
+  panel.querySelectorAll("[data-arch-regen]").forEach((b) =>
+    b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.archRegen, true)),
+  );
 }
 
 function render() {
@@ -169,7 +197,7 @@ function render() {
     b.addEventListener("click", () => {
       state.tab = b.dataset.tab;
       state.message = "";
-      if (state.tab === "queue" || state.tab === "console" || state.tab === "rooms" || state.tab === "metrics") {
+      if (state.tab === "queue" || state.tab === "console" || state.tab === "rooms" || state.tab === "metrics" || state.tab === "reject") {
         if (state.tab !== "console" || !state.week) loadQueue(true);
         else render();
         return;
@@ -271,6 +299,9 @@ function render() {
               <div class="row" style="margin-top:10px">
                 <button class="btn ok" data-approve="${esc(q.id)}">Approve</button>
                 <button class="btn danger" data-reject="${esc(q.id)}">Reject</button>
+                ${(q.status === "rejected")
+                  ? `<button class="btn primary" data-regen="${esc(q.id)}">Regenerate</button>`
+                  : `<button class="btn" data-regen="${esc(q.id)}">Reject &amp; regenerate</button>`}
                 <button class="btn" data-pending="${esc(q.id)}">Pending</button>
               </div>
             </div>`).join("") || `<p class="mut">No questions in filter.</p>`}
@@ -284,7 +315,10 @@ function render() {
       b.addEventListener("click", () => setStatus(b.dataset.approve, "approved")),
     );
     panel.querySelectorAll("[data-reject]").forEach((b) =>
-      b.addEventListener("click", () => setStatus(b.dataset.reject, "rejected")),
+      b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.reject, false)),
+    );
+    panel.querySelectorAll("[data-regen]").forEach((b) =>
+      b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.regen, true)),
     );
     panel.querySelectorAll("[data-pending]").forEach((b) =>
       b.addEventListener("click", () => setStatus(b.dataset.pending, "pending")),
@@ -307,10 +341,40 @@ function render() {
       </div>`;
     document.getElementById("addTopic")?.addEventListener("click", doAddTopic);
   } else if (state.tab === "reject") {
+    const lessons = state.queue.lessons;
+    const log = [
+      ...(state.queue.weekRejections || []),
+      ...(state.queue.placementRejections || []),
+    ];
     panel.innerHTML = `
       <div class="card">
+        <h2>Rejected-question log</h2>
+        <p class="mut">Q-and-A is optional. Every reject lands in this log. Regenerates use the log so the next draft avoids those prompts and leans on stronger distractors from the existing bank.</p>
+        ${lessons ? `<p class="mut" style="margin-top:10px">${esc(lessons.brief)}</p>` : `<p class="mut">Loading the log…</p>`}
+        ${lessons?.reasonCounts && Object.keys(lessons.reasonCounts).length ? `
+          <ul class="mut">${Object.entries(lessons.reasonCounts).map(([k, n]) => `<li><code>${esc(k)}</code> — ${n}</li>`).join("")}</ul>
+        ` : ""}
+        <div class="row">
+          <button class="btn" id="refreshRejectLog">Refresh log</button>
+          <button class="btn" id="downloadRejectLog">Download log</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Log</h2>
+        ${log.length ? `<div class="q-list">${log.map((r) => {
+          const snap = r.snapshot || {};
+          const needs = r.regeneratedQuestionId ? `Replacement ${r.regeneratedQuestionId}` : "Needs regeneration";
+          return `
+            <div class="q-item rejected">
+              <div class="q-meta">${esc(r.bank || "")} · ${esc(snap.tier || "")} · ${esc(needs)} · ${esc(r.questionId)} · ${(r.reasonCodes || []).map(esc).join(", ")}</div>
+              <div class="q-prompt">${esc(snap.categoryTitle || "")}${snap.categoryTitle ? " — " : ""}${esc(snap.prompt || r.note || "")}</div>
+              ${r.regeneratedQuestionId ? "" : `<div class="row" style="margin-top:10px"><button class="btn primary" data-log-regen="${esc(r.questionId)}" data-log-bank="${esc(r.bank || "weekly")}">Regenerate</button></div>`}
+            </div>`;
+        }).join("")}</div>` : `<p class="mut">No rejected questions yet.</p>`}
+      </div>
+      <div class="card">
         <h2>Reject → regenerate</h2>
-        <p class="mut">Logs rejection + optional replacement for locale <b>${esc((state.locale||"en").toUpperCase())}</b>. Weekly / Placement banks. Prefer full regen in Q-and-A studio.</p>
+        <p class="mut">Logs the rejection for locale <b>${esc((state.locale || "en").toUpperCase())}</b>. Leave the replacement blank to let Flow draft one from the log.</p>
         <label>bank</label>
         <select id="rbank">
           <option value="week">Weekly bank</option>
@@ -322,9 +386,18 @@ function render() {
         <label>replacement prompt (optional)</label><textarea id="rprompt" rows="2"></textarea>
         <label>replacement choices CSV (optional, 4)</label><input id="rchoices" placeholder="A, B, C, D"/>
         <label>correctIndex</label><input id="ridx" type="number" min="0" max="3" value="0"/>
-        <button class="btn danger" id="doReject">Reject &amp; log</button>
+        <div class="row">
+          <button class="btn danger" id="doReject">Reject &amp; log</button>
+          <button class="btn primary" id="doRegen">Reject &amp; regenerate</button>
+        </div>
       </div>`;
-    document.getElementById("doReject")?.addEventListener("click", doReject);
+    document.getElementById("doReject")?.addEventListener("click", () => doReject(false));
+    document.getElementById("doRegen")?.addEventListener("click", () => doReject(true));
+    document.getElementById("refreshRejectLog")?.addEventListener("click", () => loadQueue(true));
+    document.getElementById("downloadRejectLog")?.addEventListener("click", downloadRejectLog);
+    panel.querySelectorAll("[data-log-regen]").forEach((b) =>
+      b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.logRegen, true, b.dataset.logBank)),
+    );
   }
 }
 
@@ -479,7 +552,7 @@ function renderQueue(panel) {
         <h2>Review queue</h2>
         <button class="btn" id="refreshQueue">Refresh</button>
       </div>
-      <p class="mut">Every question still awaiting review, already rejected, or logged for regeneration — weekly bank and Dojo placement, locale <b>${esc((state.locale || "en").toUpperCase())}</b>.</p>
+      <p class="mut">Every question still awaiting review, already rejected, or logged for regeneration — weekly bank and Dojo placement, locale <b>${esc((state.locale || "en").toUpperCase())}</b>. ${state.queue.lessons ? esc(state.queue.lessons.brief) : "Rejected questions feed a log so the next regenerate is better, even without Q-and-A."}</p>
       <h3 class="queue-sec">Awaiting review <span class="mut">(${pending.length})</span></h3>
       ${state.week || state.queue.placement
         ? list(pending, "No questions are waiting for review.")
@@ -494,6 +567,7 @@ function renderQueue(panel) {
           <div class="q-item rejected">
             <div class="q-meta">${esc(r.bank)} · ${esc(snap.tier || "")} · ${esc(needs)} · ${esc(r.questionId)} · ${(r.reasonCodes || []).map(esc).join(", ")}</div>
             <div class="q-prompt">${esc(snap.categoryTitle || "")}${snap.categoryTitle ? " — " : ""}${esc(snap.prompt || r.note || "")}</div>
+            ${r.regeneratedQuestionId ? `<p class="mut">Replacement: <code>${esc(r.regeneratedQuestionId)}</code></p>` : `<div class="row" style="margin-top:10px"><button class="btn primary" data-q-regen="${esc(r.questionId)}" data-log-bank="${esc(r.bank || "weekly")}">Regenerate</button></div>`}
           </div>`;
       }).join("")}</div>` : `<p class="mut">No questions are logged for regeneration.</p>`}
     </div>
@@ -538,6 +612,14 @@ function renderQueue(panel) {
   panel.querySelectorAll("[data-delete-room]").forEach((b) =>
     b.addEventListener("click", () => deleteFlowRoom(b.dataset.deleteRoom)),
   );
+  panel.querySelectorAll("[data-q-regen]").forEach((b) =>
+    b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.qRegen, true, b.dataset.logBank)),
+  );
+  document.getElementById("refreshRooms")?.addEventListener("click", () => loadQueue(true));
+  document.getElementById("downloadMail")?.addEventListener("click", downloadMailingList);
+  panel.querySelectorAll("[data-delete-room]").forEach((b) =>
+    b.addEventListener("click", () => deleteFlowRoom(b.dataset.deleteRoom)),
+  );
 }
 
 function renderArchivePanel(panel) {
@@ -563,9 +645,9 @@ function renderArchivePanel(panel) {
         <div class="row spread">
           <div>
             <button class="btn" id="archBackPlacement">← Archives</button>
-            <h2 style="margin-top:12px">Placement <span class="mut" style="font-size:14px;font-family:var(--font-body)">(Dojo · reject / regen)</span></h2>
+            <h2 style="margin-top:12px">Placement <span class="mut" style="font-size:14px;font-family:var(--font-body)">(Dojo · reject / regenerate)</span></h2>
             <p class="mut">${esc(a.pack.title || a.pack.id || "")}</p>
-            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · Q-and-A banks/placement</p>
+            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · rejected questions go to the Flow log even without Q-and-A</p>
           </div>
         </div>
         <div class="row" style="margin-top:12px;gap:12px">
@@ -573,18 +655,7 @@ function renderArchivePanel(panel) {
           <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="Filter topic / generation / prompt…" value="${esc(a.filterTopic)}"/>
         </div>
         <div class="q-list" style="margin-top:12px">
-          ${qs.map((q) => `
-            <div class="q-item ${esc(q.status||"pending")}">
-              <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation||"")} · <b>${esc(q.status||"pending")}</b> · ${esc(q.id)}</div>
-              <div class="q-prompt">${esc(q.categoryTitle)} — ${esc(q.prompt)}</div>
-              <div class="choices">${(q.choices||[]).map((c,i)=>`<div class="${i===q.correctIndex?"hit":""}">${String.fromCharCode(65+i)}. ${esc(c)}</div>`).join("")}</div>
-              <div class="row" style="margin-top:10px">
-                <button class="btn ok" data-p-approve="${esc(q.id)}">Approve</button>
-                <button class="btn danger" data-p-reject="${esc(q.id)}">Reject</button>
-                <button class="btn" data-p-pending="${esc(q.id)}">Pending</button>
-                <button class="btn" data-p-regen="${esc(q.id)}">Reject → regen form</button>
-              </div>
-            </div>`).join("") || `<p class="mut">No questions in filter.</p>`}
+          ${qs.map((q) => archiveQItem(q)).join("") || `<p class="mut">No questions in filter.</p>`}
         </div>
       </div>`;
     document.getElementById("archBackPlacement")?.addEventListener("click", () => {
@@ -611,26 +682,11 @@ function renderArchivePanel(panel) {
     panel.querySelectorAll("[data-p-pending]").forEach((b) =>
       b.addEventListener("click", () => setPlacementStatus(b.dataset.pPending, "pending")),
     );
-    panel.querySelectorAll("[data-p-reject]").forEach((b) =>
-      b.addEventListener("click", () => rejectPlacementQuick(b.dataset.pReject)),
-    );
-    panel.querySelectorAll("[data-p-regen]").forEach((b) =>
-      b.addEventListener("click", () => {
-        state.tab = "reject";
-        state.message = "";
-        render();
-        queueMicrotask(() => {
-          const bank = document.getElementById("rbank");
-          const rid = document.getElementById("rid");
-          if (bank) bank.value = "placement";
-          if (rid) rid.value = b.dataset.pRegen;
-        });
-      }),
-    );
+    bindArchiveQuestionActions(panel);
     return;
   }
 
-  // Week detail (read-only browse)
+  // Week detail (reject / regenerate)
   if (a.pack && a.weekKey && a.monthKey) {
     const tiers = ["all", "easy", "hard", "difficult", "finale"];
     const topicQ = (a.filterTopic || "").trim().toLowerCase();
@@ -646,9 +702,9 @@ function renderArchivePanel(panel) {
         <div class="row spread">
           <div>
             <button class="btn" id="archBackWeek">← ${esc(a.monthKey)}</button>
-            <h2 style="margin-top:12px">${esc(a.weekKey)} <span class="mut" style="font-size:14px;font-family:var(--font-body)">(archived · read-only)</span></h2>
+            <h2 style="margin-top:12px">${esc(a.weekKey)} <span class="mut" style="font-size:14px;font-family:var(--font-body)">(archived · reject / regenerate)</span></h2>
             <p class="mut">${esc(a.pack.inspirationSummary || "")}</p>
-            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions</p>
+            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · replacements land in the weekly review queue</p>
           </div>
         </div>
         <div class="row" style="margin-top:12px;gap:12px">
@@ -656,12 +712,7 @@ function renderArchivePanel(panel) {
           <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="Filter topic / prompt…" value="${esc(a.filterTopic)}"/>
         </div>
         <div class="q-list" style="margin-top:12px">
-          ${qs.map((q) => `
-            <div class="q-item ${esc(q.status||"")}">
-              <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation||"")}${q.status?` · <b>${esc(q.status)}</b>`:""} · ${esc(q.id)}</div>
-              <div class="q-prompt">${esc(q.categoryTitle)} — ${esc(q.prompt)}</div>
-              <div class="choices">${(q.choices||[]).map((c,i)=>`<div class="${i===q.correctIndex?"hit":""}">${String.fromCharCode(65+i)}. ${esc(c)}</div>`).join("")}</div>
-            </div>`).join("") || `<p class="mut">No questions in filter.</p>`}
+          ${qs.map((q) => archiveQItem(q)).join("") || `<p class="mut">No questions in filter.</p>`}
         </div>
       </div>`;
     document.getElementById("archBackWeek")?.addEventListener("click", () => {
@@ -688,13 +739,10 @@ function renderArchivePanel(panel) {
       });
       const list = panel.querySelector(".q-list");
       if (!list) return;
-      list.innerHTML = filtered.map((q) => `
-            <div class="q-item ${esc(q.status||"")}">
-              <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation||"")}${q.status?` · <b>${esc(q.status)}</b>`:""} · ${esc(q.id)}</div>
-              <div class="q-prompt">${esc(q.categoryTitle)} — ${esc(q.prompt)}</div>
-              <div class="choices">${(q.choices||[]).map((c,i)=>`<div class="${i===q.correctIndex?"hit":""}">${String.fromCharCode(65+i)}. ${esc(c)}</div>`).join("")}</div>
-            </div>`).join("") || `<p class="mut">No questions in filter.</p>`;
+      list.innerHTML = filtered.map((q) => archiveQItem(q)).join("") || `<p class="mut">No questions in filter.</p>`;
+      bindArchiveQuestionActions(panel);
     });
+    bindArchiveQuestionActions(panel);
     return;
   }
 
@@ -742,7 +790,7 @@ function renderArchivePanel(panel) {
   panel.innerHTML = `
     <div class="card">
       <h2>Placement</h2>
-      <p class="mut">Dojo placement bank from Q-and-A — separate archive page for reject / regenerate.</p>
+      <p class="mut">Dojo placement bank — reject and regenerate here. The log still learns if Q-and-A is not connected.</p>
       <div class="arch-list" style="margin-top:14px">
         ${placementPages.map((p) => `
           <button class="arch-row" data-placement="${esc(p.id)}">
@@ -758,7 +806,7 @@ function renderArchivePanel(panel) {
     </div>
     <div class="card" style="margin-top:16px">
       <h2>Monthly archive</h2>
-      <p class="mut">Published week packs by America/Toronto month. Read-only browse.</p>
+      <p class="mut">Published week packs by America/Toronto month. Reject a question, then regenerate from the log.</p>
       <div class="arch-list" style="margin-top:14px">
         ${months.map((m) => `
           <button class="arch-row" data-month="${esc(m.monthKey)}">
@@ -944,10 +992,11 @@ async function doAddTopic() {
   }
 }
 
-async function doReject() {
+async function doReject(regen = false) {
   const choicesRaw = document.getElementById("rchoices").value.trim();
   const prompt = document.getElementById("rprompt").value.trim();
   const body = {
+    action: regen ? "regenerate" : "reject",
     questionId: document.getElementById("rid").value.trim(),
     reasonCodes: document.getElementById("rreasons").value.split(",").map((s) => s.trim()).filter(Boolean),
     note: document.getElementById("rnote").value.trim(),
@@ -966,16 +1015,78 @@ async function doReject() {
   const bank = document.getElementById("rbank")?.value || "week";
   try {
     const endpoint = bank === "placement" ? "placement" : "reject";
-    if (bank === "placement") body.action = "reject";
+    if (bank === "placement") body.bank = "placement";
     const data = await api(endpoint, { method: "POST", body: JSON.stringify(body) });
-    state.message = `Rejected ${data.rejection?.questionId}. ${data.learningBrief || ""}`;
+    state.message = regen
+      ? `Regenerated ${body.questionId} → ${data.regenerated?.id || "draft"}. ${data.learningBrief || ""}`
+      : `Rejected ${data.rejection?.questionId}. ${data.learningBrief || ""}`;
+    await loadQueue(false);
     if (bank === "placement") {
       state.archive.months = null;
       if (state.archive.kind === "placement") await openPlacementPage(state.archive.pageKey || "placement");
       else render();
+    } else if (state.tab === "archive" && state.archive.weekKey) {
+      await openArchiveWeek(state.archive.monthKey, state.archive.weekKey);
     } else {
       await loadWeek(true);
     }
+  } catch (e) {
+    state.message = e.message;
+    render();
+  }
+}
+
+async function archiveRejectOrRegen(id, regen, bankHint) {
+  const a = state.archive;
+  const fromArchive = state.tab === "archive";
+  const placement = (fromArchive && a.kind === "placement")
+    || bankHint === "placement";
+  const body = {
+    action: regen ? "regenerate" : "reject",
+    questionId: id,
+    locale: state.locale,
+    reasonCodes: regen ? ["archive-regen"] : ["archive-reject"],
+    note: regen ? "Regenerated from Flow" : "Rejected from Flow",
+  };
+  if (placement) body.bank = "placement";
+  if (fromArchive && a.monthKey && a.monthKey !== "placement") {
+    body.monthKey = a.monthKey;
+    body.weekKey = a.weekKey || null;
+  }
+  try {
+    const endpoint = placement ? "placement" : "reject";
+    const data = await api(endpoint, { method: "POST", body: JSON.stringify(body) });
+    state.message = regen
+      ? `Regenerated ${id} → ${data.regenerated?.id || "draft"}. ${data.learningBrief || ""}`
+      : `Rejected ${id}. ${data.learningBrief || ""}`;
+    await loadQueue(false);
+    if (fromArchive && placement) await openPlacementPage(a.pageKey || "placement");
+    else if (fromArchive && a.weekKey) await openArchiveWeek(a.monthKey, a.weekKey);
+    else if (state.tab === "bank") await loadWeek(true);
+    else render();
+  } catch (e) {
+    state.message = e.message;
+    render();
+  }
+}
+
+async function downloadRejectLog() {
+  try {
+    const res = await fetch(`/api/flow/reject?download=1&locale=${encodeURIComponent(state.locale || "en")}`, {
+      credentials: "same-origin",
+    });
+    if (!res.ok) throw new Error("Could not download the rejected-question log");
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "rejected-questions.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    state.message = "Rejected-question log downloaded.";
+    render();
   } catch (e) {
     state.message = e.message;
     render();
@@ -1019,23 +1130,7 @@ async function setPlacementStatus(id, status) {
 }
 
 async function rejectPlacementQuick(id) {
-  try {
-    const data = await api("placement", {
-      method: "POST",
-      body: JSON.stringify({
-        action: "reject",
-        questionId: id,
-        reasonCodes: ["flow-quick-reject"],
-        note: "Rejected from Placement archive page",
-        locale: state.locale,
-      }),
-    });
-    state.message = `Rejected ${data.rejection?.questionId}.`;
-    await openPlacementPage(state.archive.pageKey || "placement");
-  } catch (e) {
-    state.message = e.message;
-    render();
-  }
+  return archiveRejectOrRegen(id, false, "placement");
 }
 
 let idleTimer = null;
@@ -1080,9 +1175,13 @@ async function loadQueue(rerender) {
   else errors.push(week.reason?.message || "Could not load the weekly bank");
   if (placement.status === "fulfilled") state.queue.placement = placement.value;
   else errors.push(placement.reason?.message || "Could not load placement");
-  state.queue.weekRejections = weekRej.status === "fulfilled" ? (weekRej.value.rejections || []) : [];
+  const rejectPayload = weekRej.status === "fulfilled" ? weekRej.value : {};
+  const allLog = Array.isArray(rejectPayload.rejections) ? rejectPayload.rejections : [];
+  state.queue.lessons = rejectPayload.lessons || null;
+  state.queue.weekRejections = allLog.filter((e) => e.bank !== "placement");
   if (weekRej.status === "rejected") errors.push(weekRej.reason?.message || "Could not load rejections");
-  state.queue.placementRejections = placeRej.status === "fulfilled" ? (placeRej.value.rejections || []) : [];
+  const placeLog = placeRej.status === "fulfilled" ? (placeRej.value.rejections || []) : [];
+  state.queue.placementRejections = placeLog.length ? placeLog : allLog.filter((e) => e.bank === "placement");
   if (placeRej.status === "rejected") errors.push(placeRej.reason?.message || "Could not load placement rejections");
   if (profiles.status === "fulfilled") state.profiles = profiles.value.profiles || [];
   else errors.push(profiles.reason?.message || "Could not load profiles");

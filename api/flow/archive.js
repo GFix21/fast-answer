@@ -5,6 +5,8 @@ import {
   loadArchivedWeek,
 } from "../../lib/archive-store.js";
 import { listPlacementPages, loadPlacementPack, normalizeLocale } from "../../lib/placement-store.js";
+import { listRejectLog } from "../../lib/reject-log.js";
+import { overlayPackWithLog } from "../../lib/reject-learn.js";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") return json(res, 405, { error: "method" });
@@ -24,7 +26,9 @@ export default async function handler(req, res) {
   }
 
   if (month === "placement") {
-    const pack = loadPlacementPack(locale);
+    const base = loadPlacementPack(locale);
+    const log = await listRejectLog({ locale, bank: "placement" });
+    const pack = overlayPackWithLog(base, log, { bank: "placement" });
     const page = url.searchParams.get("page") || pack.id || "placement";
     const studioCounts = {};
     for (const q of pack.questions || []) {
@@ -49,8 +53,10 @@ export default async function handler(req, res) {
     if (!/^\d{4}-W\d{2}$/.test(week)) {
       return json(res, 400, { error: "bad week key (YYYY-Www)" });
     }
-    const pack = loadArchivedWeek(month, week);
-    if (!pack) return json(res, 404, { error: "week not in archive" });
+    const base = loadArchivedWeek(month, week);
+    if (!base) return json(res, 404, { error: "week not in archive" });
+    const log = await listRejectLog({ locale });
+    const pack = overlayPackWithLog(base, log, { monthKey: month, weekKey: week });
     const studioCounts = {};
     for (const q of pack.questions || []) {
       studioCounts[q.tier] = (studioCounts[q.tier] || 0) + 1;

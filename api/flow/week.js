@@ -8,6 +8,8 @@ import {
   listLocales,
 } from "../../lib/week-store.js";
 import { countByTier } from "../../q-and-a/map.js";
+import { listRejectLog } from "../../lib/reject-log.js";
+import { overlayPackWithLog } from "../../lib/reject-learn.js";
 
 export default async function handler(req, res) {
   if (!requireAuth(req, res)) return;
@@ -18,7 +20,10 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     const pack = loadCurrentPack(locale);
     if (!pack) return json(res, 404, { error: "no week pack" });
-    const overlaid = applyReviewOverlay(pack, locale);
+    const overlaid = overlayPackWithLog(
+      applyReviewOverlay(pack, locale),
+      await listRejectLog({ locale }),
+    );
     const studioCounts = {};
     for (const q of overlaid.questions) {
       studioCounts[q.tier] = (studioCounts[q.tier] || 0) + 1;

@@ -2,11 +2,12 @@ import { requireAuth, json, readBody } from "../../lib/flow-auth.js";
 import {
   listPlacementPages,
   loadPlacementPack,
-  rejectPlacementQuestion,
   setPlacementStatus,
-  listPlacementRejections,
   normalizeLocale,
 } from "../../lib/placement-store.js";
+import { listRejectLog } from "../../lib/reject-log.js";
+import { overlayPackWithLog } from "../../lib/reject-learn.js";
+import { rejectQuestion, regenerateQuestion } from "../../lib/reject-actions.js";
 
 export default async function handler(req, res) {
   if (!requireAuth(req, res)) return;
@@ -19,9 +20,12 @@ export default async function handler(req, res) {
       return json(res, 200, { locale, pages: listPlacementPages(locale) });
     }
     if (url.searchParams.get("rejections") === "1") {
-      return json(res, 200, { locale, rejections: listPlacementRejections(locale) });
+      const rejections = await listRejectLog({ locale, bank: "placement" });
+      return json(res, 200, { locale, rejections });
     }
-    const pack = loadPlacementPack(locale);
+    const base = loadPlacementPack(locale);
+    const log = await listRejectLog({ locale, bank: "placement" });
+    const pack = overlayPackWithLog(base, log, { bank: "placement" });
     const studioCounts = {};
     for (const q of pack.questions || []) {
       studioCounts[q.tier] = (studioCounts[q.tier] || 0) + 1;
@@ -54,10 +58,16 @@ export default async function handler(req, res) {
     return json(res, 200, { ok: true, locale: loc, pack: loadPlacementPack(loc) });
   }
 
-  if (body.action === "reject" || body.questionId) {
-    const result = rejectPlacementQuestion(body, loc);
+  if (body.action === "regenerate") {
+    const result = await regenerateQuestion({ ...body, locale: loc, bank: "placement" });
     if (result.error) return json(res, result.status || 400, result);
-    return json(res, 200, result);
+    return json(res, 200, { ...result, pack: loadPlacementPack(loc) });
+  }
+
+  if (body.action === "reject" || body.questionId) {
+    const result = await rejectQuestion({ ...body, locale: loc, bank: "placement" });
+    if (result.error) return json(res, result.status || 400, result);
+    return json(res, 200, { ...result, pack: loadPlacementPack(loc) });
   }
 
   return json(res, 400, { error: "unknown action" });
