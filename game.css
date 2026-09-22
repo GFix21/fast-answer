@@ -195,6 +195,7 @@ input[type=text],input[type=email],input[type=password]{
 }
 .entry-card .dir-copy{margin:0 0 4px}
 .entry-card .primary,.entry-card .ghost{width:100%;margin-top:12px}
+.entry-card .word,.dojo-unlock-mini .word{display:block;text-align:left;margin:8px 0 0;padding-left:0}
 img.brand{
   display:block;height:72px;max-height:10vh;width:auto;max-width:min(100%,380px);
   object-fit:contain;object-position:left center;margin:0 0 8px;flex-shrink:0;

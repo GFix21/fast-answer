@@ -183,6 +183,8 @@ const state = {
   /** Phone entry gate (name, email, password) before the lobby. */
   entered: false,
   entryDraft: null,
+  /** Confirm the profile email, then set a new on-device password. */
+  forgotPassword: false,
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
@@ -315,7 +317,79 @@ function applyProfileReset() {
   state.dojoMode = "create";
   state.entryDraft = null;
   state.roomDojoPanel = "";
+  state.forgotPassword = false;
   state.statusMsg = tt("profileReset");
+}
+async function saveForgotPassword(email, pw, pw2) {
+  if (!hasPhoneProfile() || !state.profile?.email) {
+    state.forgotPassword = false;
+    state.statusMsg = tt("forgotNoProfile");
+    paint(true);
+    return;
+  }
+  const stored = String(state.profile.email || "").trim().toLowerCase();
+  const typed = String(email || "").trim().toLowerCase();
+  if (!validEmail(typed) || typed !== stored) {
+    state.statusMsg = tt("forgotEmailMismatch");
+    paint(true);
+    return;
+  }
+  if (String(pw || "").length < 4) {
+    state.statusMsg = tt("passwordHint");
+    paint(true);
+    return;
+  }
+  if (pw !== pw2) {
+    state.statusMsg = tt("passwordMismatch");
+    paint(true);
+    return;
+  }
+  const passwordHash = await hashPassword(pw);
+  saveProfile({ passwordHash });
+  state.forgotPassword = false;
+  state.profileUnlocked = true;
+  state.dojoMode = "home";
+  state.roomDojoPanel = "";
+  state.statusMsg = tt("passwordSaved");
+  markEntered();
+  if (isDojoPage && needsPlacement(state.profile)) startDojo();
+  else paint(true);
+}
+function forgotPasswordHTML() {
+  return `
+    <p class="dir-copy"><b>${tt("forgotPassword")}</b></p>
+    <p class="meta">${tt("forgotLead")}</p>
+    <label class="field" for="forgotEmail">${tt("email")}</label>
+    <input id="forgotEmail" type="email" value="${escapeHtml(state.profile?.email || "")}" maxlength="120" autocomplete="email"/>
+    <label class="field" for="forgotPw">${tt("newPassword")}</label>
+    <input id="forgotPw" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
+    <label class="field" for="forgotPw2">${tt("confirmPassword")}</label>
+    <input id="forgotPw2" type="password" maxlength="64" autocomplete="new-password"/>
+    <button class="primary" id="saveForgot" type="button">${tt("saveNewPassword")}</button>
+    <button class="ghost" id="cancelForgot" type="button">${tt("cancel")}</button>
+  `;
+}
+function bindForgotPassword() {
+  const open = $("#forgotPassword");
+  if (open) open.onclick = () => {
+    state.forgotPassword = true;
+    state.statusMsg = "";
+    paint(true);
+  };
+  const cancel = $("#cancelForgot");
+  if (cancel) cancel.onclick = () => {
+    state.forgotPassword = false;
+    state.statusMsg = "";
+    paint(true);
+  };
+  const save = $("#saveForgot");
+  if (save) save.onclick = () => {
+    void saveForgotPassword(
+      $("#forgotEmail") && $("#forgotEmail").value,
+      $("#forgotPw") && $("#forgotPw").value,
+      $("#forgotPw2") && $("#forgotPw2").value,
+    );
+  };
 }
 function maybeResetProfile() {
   let fromQuery = false;
@@ -2141,6 +2215,9 @@ function dojoBody() {
 
   // Unlock with password
   if (!state.profileUnlocked || mode === "unlock") {
+    if (state.forgotPassword) {
+      return dojoChrome(`${forgotPasswordHTML()}<p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>`);
+    }
     return dojoChrome(`
       <p class="dir-copy">${tt("unlockIntro")}</p>
       <p class="meta">${escapeHtml(p.displayName || "")}</p>
@@ -2149,6 +2226,7 @@ function dojoBody() {
       <label class="field" for="pwUnlock">${tt("password")}</label>
       <input id="pwUnlock" type="password" maxlength="64" autocomplete="current-password"/>
       <button class="primary" id="unlockProfile" type="button">${tt("unlockProfile")}</button>
+      <button class="word" id="forgotPassword" type="button">${tt("forgotPassword")}</button>
       <button class="ghost" id="resetProfile" type="button">${tt("resetProfile")}</button>
       <button class="ghost" id="dojoCreateAlt" type="button">${tt("createProfile")}</button>
     `);
@@ -2255,7 +2333,7 @@ function roomDojoEntryHTML() {
           <button class="primary" id="roomSetPw" type="button">${tt("savePassword")}</button>
         </div>`;
     } else if (!state.profileUnlocked) {
-      extra = `
+      extra = state.forgotPassword ? forgotPasswordHTML() : `
         <div class="dojo-unlock-mini">
           <p class="dir-copy">${tt("unlockIntro")}</p>
           <label class="field" for="pwUnlockRoom">${tt("password")}</label>
@@ -2263,6 +2341,7 @@ function roomDojoEntryHTML() {
             <input id="pwUnlockRoom" type="password" maxlength="64" autocomplete="current-password" placeholder="${tt("password")}"/>
             <button class="primary" type="button" id="roomUnlockProfile">${tt("unlockShort")}</button>
           </div>
+          <button class="word" id="forgotPassword" type="button">${tt("forgotPassword")}</button>
         </div>`;
     } else {
       extra = `<p class="meta">${tt("joinReadyMeta")}</p>`;
@@ -2522,6 +2601,7 @@ function entryHTML() {
       <img class="entry-title" src="${TITLE_3D}" alt="Fast Answer!"/>
       <form class="entry-card" id="entryForm" autocomplete="on">
         <p class="dir-copy">${tt("entryLead")}</p>
+        ${state.forgotPassword && hasPhoneProfile() ? forgotPasswordHTML() : `
         <label class="field" for="entryName">${tt("name")}</label>
         <input id="entryName" type="text" value="${escapeHtml(name)}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
         <label class="field" for="entryEmail">${tt("email")}</label>
@@ -2529,7 +2609,9 @@ function entryHTML() {
         <label class="field" for="entryPw">${tt("password")}</label>
         <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${hasPhoneProfile() ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
         <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${tt("enterProfile")}</button>
+        ${hasPhoneProfile() && state.profile?.passwordHash ? `<button class="word" id="forgotPassword" type="button">${tt("forgotPassword")}</button>` : ""}
         <button class="ghost" id="resetProfile" type="button">${tt("resetProfile")}</button>
+        `}
         <p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>
       </form>
     </div>
@@ -2563,6 +2645,7 @@ function bindEntry() {
   if (btn) btn.onclick = () => { void submitEntry(); };
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
+  bindForgotPassword();
 }
 
 function syncEntryDraft() {
@@ -2922,6 +3005,7 @@ function bindDojoSurface() {
   };
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
+  bindForgotPassword();
   const dojoCreateAlt = $("#dojoCreateAlt");
   if (dojoCreateAlt) dojoCreateAlt.onclick = () => openDojoPage("create");
   const dojoCancelMode = $("#dojoCancelMode");
@@ -3622,7 +3706,7 @@ function paint(force = false) {
     state.lobbyOpen, state.playerCount, (state.guests || []).length,
     state.dojo?.answers?.length, state.dojo?.picked, state.dojo?.showAnswers, state.dojo?.readLeft,
     state.profile?.abilityTier, state.profile?.belt, state.profile?.thumb ? 1 : 0,
-    state.profile?.dojoBg, (state.profile?.topScores || []).length, state.dojoScroll,
+    state.profile?.dojoBg, (state.profile?.topScores || []).length, state.dojoScroll, state.forgotPassword ? 1 : 0,
     state.profileUnlocked ? 1 : 0, state.dojoMode, state.roomDojoPanel, state.profile?.passwordHash ? 1 : 0,
     state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
