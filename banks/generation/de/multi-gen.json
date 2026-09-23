@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "de",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 24,
+  "shortfall": 126,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -398,6 +398,58 @@
       "correctIndex": 2,
       "banterHint": "Zähl die schwarzen und die weißen. Die Summe ist die lange.",
       "slang": "Für alle,"
+    },
+    {
+      "id": "cq-d-multi-everest",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Gipfel",
+      "prompt": "In welchem Jahr erreichten Edmund Hillary und Tenzing Norgay erstmals den Gipfel des Mount Everest?",
+      "choices": [
+        "1924",
+        "1963",
+        "1950",
+        "1953"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Zwei Menschen, ein Grat, ein Jahr, das blieb.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-x-multi-light",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Reisezeit",
+      "prompt": "Ungefähr wie lange braucht das Sonnenlicht bis zur Erde?",
+      "choices": [
+        "Etwa 8 Sekunden",
+        "Etwa 8 Stunden",
+        "Etwa 8 Tage",
+        "Etwa 8 Minuten"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Sonne ist weit, und die Reise passt in eine Kaffeepause.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-h-multi-metric",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Metrisches Gesetz",
+      "prompt": "Wann haben die USA das Gesetz zur metrischen Umstellung verabschiedet?",
+      "choices": [
+        "1959",
+        "1975",
+        "1960",
+        "1988"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Zoll blieb in der Küche. Das Gesetz hat trotzdem ein Jahr.",
+      "slang": "Für alle,",
+      "structure": "when"
     }
   ]
 }

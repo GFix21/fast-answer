@@ -2,8 +2,8 @@
   "generation": "baby-boomer",
   "locale": "fr-CA",
   "target": 150,
-  "held": 24,
-  "shortfall": 126,
+  "held": 26,
+  "shortfall": 124,
   "ageYear": 2026,
   "born": [
     1946,
@@ -446,6 +446,41 @@
       "correctIndex": 0,
       "banterHint": "L'argent est le voisin sur le tableau.",
       "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-d-boomer-salt",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Traité de 1972",
+      "prompt": "Quel accord de maîtrise des armements les États-Unis et l'Union soviétique ont signé en 1972 ?",
+      "choices": [
+        "Accords de Camp David",
+        "Acte final d'Helsinki",
+        "SALT I",
+        "Pacte de Varsovie"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Les initiales sont le nom court. L'année est 1972.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-h-boomer-wall",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fil et béton",
+      "prompt": "Quand la construction du mur de Berlin a commencé ?",
+      "choices": [
+        "1989",
+        "1953",
+        "1961",
+        "1949"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La chute est venue après. Ici, c'est l'année de la construction.",
+      "slang": "Tout à fait,",
+      "structure": "when"
     }
   ]
 }

@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "fr",
   "target": 150,
-  "held": 25,
-  "shortfall": 125,
+  "held": 27,
+  "shortfall": 123,
   "ageYear": 2026,
   "born": [
     1981,
@@ -458,6 +458,41 @@
       "correctIndex": 2,
       "banterHint": "La page que tu lis est écrite avec.",
       "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-d-geny-wiki",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Pages ouvertes",
+      "prompt": "En quelle année Wikipédia a-t-il été lancé ?",
+      "choices": [
+        "1998",
+        "1995",
+        "2004",
+        "2001"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les pages sont nombreuses. Le départ est une année.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-h-geny-youtube",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Premier envoi",
+      "prompt": "Quand YouTube a-t-il été ouvert au public ?",
+      "choices": [
+        "2007",
+        "2010",
+        "2005",
+        "2001"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le premier clip était court. L'année est au milieu de cette décennie.",
+      "slang": "Je dis ça,",
+      "structure": "when"
     }
   ]
 }

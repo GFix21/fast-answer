@@ -65,91 +65,91 @@
   },
   "locales": {
     "en": {
-      "held": 175,
+      "held": 189,
       "targetEach": 150,
       "counts": {
-        "silent-generation": 24,
-        "baby-boomer": 24,
-        "gen-x": 25,
-        "gen-y": 25,
-        "gen-z": 25,
-        "gen-alpha": 31,
-        "multi-gen": 21
+        "silent-generation": 25,
+        "baby-boomer": 26,
+        "gen-x": 27,
+        "gen-y": 27,
+        "gen-z": 27,
+        "gen-alpha": 33,
+        "multi-gen": 24
       },
       "shortfall": {
-        "silent-generation": 126,
-        "baby-boomer": 126,
-        "gen-x": 125,
-        "gen-y": 125,
-        "gen-z": 125,
-        "gen-alpha": 119,
-        "multi-gen": 129
+        "silent-generation": 125,
+        "baby-boomer": 124,
+        "gen-x": 123,
+        "gen-y": 123,
+        "gen-z": 123,
+        "gen-alpha": 117,
+        "multi-gen": 126
       }
     },
     "fr": {
-      "held": 175,
+      "held": 189,
       "targetEach": 150,
       "counts": {
-        "silent-generation": 24,
-        "baby-boomer": 24,
-        "gen-x": 25,
-        "gen-y": 25,
-        "gen-z": 25,
-        "gen-alpha": 31,
-        "multi-gen": 21
+        "silent-generation": 25,
+        "baby-boomer": 26,
+        "gen-x": 27,
+        "gen-y": 27,
+        "gen-z": 27,
+        "gen-alpha": 33,
+        "multi-gen": 24
       },
       "shortfall": {
-        "silent-generation": 126,
-        "baby-boomer": 126,
-        "gen-x": 125,
-        "gen-y": 125,
-        "gen-z": 125,
-        "gen-alpha": 119,
-        "multi-gen": 129
+        "silent-generation": 125,
+        "baby-boomer": 124,
+        "gen-x": 123,
+        "gen-y": 123,
+        "gen-z": 123,
+        "gen-alpha": 117,
+        "multi-gen": 126
       }
     },
     "fr-CA": {
-      "held": 175,
+      "held": 189,
       "targetEach": 150,
       "counts": {
-        "silent-generation": 24,
-        "baby-boomer": 24,
-        "gen-x": 25,
-        "gen-y": 25,
-        "gen-z": 25,
-        "gen-alpha": 31,
-        "multi-gen": 21
+        "silent-generation": 25,
+        "baby-boomer": 26,
+        "gen-x": 27,
+        "gen-y": 27,
+        "gen-z": 27,
+        "gen-alpha": 33,
+        "multi-gen": 24
       },
       "shortfall": {
-        "silent-generation": 126,
-        "baby-boomer": 126,
-        "gen-x": 125,
-        "gen-y": 125,
-        "gen-z": 125,
-        "gen-alpha": 119,
-        "multi-gen": 129
+        "silent-generation": 125,
+        "baby-boomer": 124,
+        "gen-x": 123,
+        "gen-y": 123,
+        "gen-z": 123,
+        "gen-alpha": 117,
+        "multi-gen": 126
       }
     },
     "de": {
-      "held": 175,
+      "held": 189,
       "targetEach": 150,
       "counts": {
-        "silent-generation": 24,
-        "baby-boomer": 24,
-        "gen-x": 25,
-        "gen-y": 25,
-        "gen-z": 25,
-        "gen-alpha": 31,
-        "multi-gen": 21
+        "silent-generation": 25,
+        "baby-boomer": 26,
+        "gen-x": 27,
+        "gen-y": 27,
+        "gen-z": 27,
+        "gen-alpha": 33,
+        "multi-gen": 24
       },
       "shortfall": {
-        "silent-generation": 126,
-        "baby-boomer": 126,
-        "gen-x": 125,
-        "gen-y": 125,
-        "gen-z": 125,
-        "gen-alpha": 119,
-        "multi-gen": 129
+        "silent-generation": 125,
+        "baby-boomer": 124,
+        "gen-x": 123,
+        "gen-y": 123,
+        "gen-z": 123,
+        "gen-alpha": 117,
+        "multi-gen": 126
       }
     }
   }

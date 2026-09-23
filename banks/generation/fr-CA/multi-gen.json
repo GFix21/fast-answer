@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "fr-CA",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 24,
+  "shortfall": 126,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -398,6 +398,58 @@
       "correctIndex": 2,
       "banterHint": "Compte les noires et les blanches. Le total est le long.",
       "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-d-multi-everest",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Sommet",
+      "prompt": "En quelle année Edmund Hillary et Tenzing Norgay ont atteint pour la première fois le sommet de l'Everest ?",
+      "choices": [
+        "1924",
+        "1963",
+        "1950",
+        "1953"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Deux personnes, une arête, une année restée.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-x-multi-light",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Temps de trajet",
+      "prompt": "La lumière du Soleil prend environ combien de temps pour atteindre la Terre ?",
+      "choices": [
+        "Environ 8 secondes",
+        "Environ 8 heures",
+        "Environ 8 jours",
+        "Environ 8 minutes"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le Soleil est loin, et le trajet tient dans une pause-café.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-h-multi-metric",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Loi métrique",
+      "prompt": "Quand les États-Unis ont adopté la loi sur la conversion au système métrique ?",
+      "choices": [
+        "1959",
+        "1975",
+        "1960",
+        "1988"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Le pouce est resté dans la cuisine. La loi a quand même une année.",
+      "slang": "Pour tout le monde,",
+      "structure": "when"
     }
   ]
 }

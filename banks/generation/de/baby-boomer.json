@@ -2,8 +2,8 @@
   "generation": "baby-boomer",
   "locale": "de",
   "target": 150,
-  "held": 24,
-  "shortfall": 126,
+  "held": 26,
+  "shortfall": 124,
   "ageYear": 2026,
   "born": [
     1946,
@@ -446,6 +446,41 @@
       "correctIndex": 0,
       "banterHint": "Silber ist der Nachbar in der Tabelle.",
       "slang": "Na klar,"
+    },
+    {
+      "id": "cq-d-boomer-salt",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Vertrag 1972",
+      "prompt": "Welches Rüstungskontrollabkommen unterzeichneten die USA und die Sowjetunion 1972?",
+      "choices": [
+        "Camp-David-Abkommen",
+        "Schlussakte von Helsinki",
+        "SALT I",
+        "Warschauer Pakt"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Initialen sind der kurze Name. Das Jahr ist 1972.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-h-boomer-wall",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Draht und Beton",
+      "prompt": "Wann begann der Bau der Berliner Mauer?",
+      "choices": [
+        "1989",
+        "1953",
+        "1961",
+        "1949"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Der Fall kam später. Hier geht es um das Jahr des Baus.",
+      "slang": "Na klar,",
+      "structure": "when"
     }
   ]
 }

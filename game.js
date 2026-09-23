@@ -13,10 +13,14 @@ import { dropoutEndsGame, nextQuestionAllowsJoin } from "./lib/seat-rules.js";
 import {
   orderShowSets,
   setBreakDue,
+  tierRunLength,
+  lockdownSlots,
   mapUsesLeft,
   MAP_USES_PER_ROUND,
   SET_BREAK_S,
 } from "./lib/show-pace.js";
+import { dealRamp } from "./lib/generation-deal.js";
+import { slangFor } from "./q-and-a/bots/slang.js";
 import { hashProfilePassword } from "./lib/password.js";
 import { spreadByGeneration } from "./lib/generation-deal.js";
 import {
@@ -34,7 +38,6 @@ import {
   PACK_TARGET,
   LOCKDOWN_REFRESHES,
   packSummary,
-  dealRoundRobin,
   lockdownSet,
   refreshLockdown,
   defaultGeneration,
@@ -313,7 +316,8 @@ async function loadBanksForLocale(locale = state.locale, { bust = false } = {}) 
     if (!r.ok) throw new Error("questions " + loc);
     return r.json();
   });
-  state.questions = Array.isArray(bank) ? bank : (bank.questions || []);
+  const loaded = Array.isArray(bank) ? bank : (bank.questions || []);
+  state.questions = loaded.map((q) => (q?.slang ? q : { ...q, slang: slangFor(q.generation, loc) }));
   try {
     const place = await fetch(placementUrl(loc) + q).then((r) => (r.ok ? r.json() : null));
     state.placementQs = Array.isArray(place?.questions) ? place.questions : [];
@@ -929,24 +933,39 @@ function playersForDeal() {
   return seatedPreview();
 }
 function dealFromPacks() {
-  const cohort = ensureCohort();
-  const packs = cohort?.packs;
-  if (!packs) return deal(state.questions);
   const players = playersForDeal().map((p) => ({
     ...p,
     ageBracket: p.ageBracket || "",
     generation: generationForSeat(p) || defaultGeneration(p.id || p.name),
   }));
-  const cursors = { ...(cohort.packCursors || {}) };
-  let result = dealRoundRobin(players, packs, ROUND, cursors, (q) => inSelectedTopics(q));
-  if (result.questions.length < Math.min(ROUND, 8)) {
-    result = dealRoundRobin(players, packs, ROUND, cursors);
+  const avoid = loadRecentQuestionIds();
+  let result = dealRamp(state.questions, {
+    seats: players,
+    avoid,
+    allow: (q) => inSelectedTopics(q),
+  });
+  if (result.length < Math.min(ROUND, 8)) {
+    result = dealRamp(state.questions, { seats: players, avoid });
   }
-  cohort.packCursors = result.cursors;
-  state.cohort = cohort;
-  writeStoredCohort(cohort);
-  if (result.questions.length) return orderShowSets(result.questions);
-  return orderShowSets(deal(state.questions));
+  if (!result.length) result = deal(state.questions);
+  return orderShowSets(attributeSeats(result, players));
+}
+function attributeSeats(questions, players) {
+  const cursors = {};
+  return (questions || []).map((q) => {
+    const gen = q.generation || "";
+    const matches = (players || []).filter((p) => (generationForSeat(p) || p.generation) === gen);
+    const pool = matches.length ? matches : (players || []);
+    const at = cursors[gen] || 0;
+    cursors[gen] = at + 1;
+    const seat = pool.length ? pool[at % pool.length] : null;
+    return {
+      ...q,
+      choices: Array.isArray(q.choices) ? [...q.choices] : q.choices,
+      fromGeneration: gen,
+      fromPlayer: seat ? String(seat.name || "") : "",
+    };
+  });
 }
 function buildLockdownQuestions(avoidIds) {
   const cohort = ensureCohort();
@@ -1111,20 +1130,8 @@ function questionRefreshHTML() {
     </div>`;
 }
 function pickLockdownSlots() {
-  const n = state.qs?.length || 0;
-  if (n < 12) return [];
-  const lo = Math.min(8, Math.max(2, Math.floor(n * 0.22)));
-  const hi = Math.max(lo + 1, n - 4);
-  const span = Math.max(1, hi - lo);
-  const gap = Math.min(6, Math.floor(span / 2));
-  const a = lo + Math.floor(Math.random() * span);
-  let b = lo + Math.floor(Math.random() * span);
-  let guard = 0;
-  while (Math.abs(b - a) < gap && guard < 12) {
-    b = lo + Math.floor(Math.random() * span);
-    guard += 1;
-  }
-  return a === b ? [a] : [a, b].sort((x, y) => x - y);
+  if ((state.qs?.length || 0) < 12) return [];
+  return lockdownSlots(state.qs);
 }
 function leftoverQs(preferHard = false) {
   const recent = new Set(loadRecentQuestionIds());
@@ -1615,15 +1622,15 @@ function clearAiBuzz() {
 function clockText() {
   const q = currentQ();
   const ld = state.lockdown;
-  if (ld?.phase === "wager") return `Lockdown wagers — ${ld.wagerLeft}s`;
-  if (ld?.phase === "intro") return `Lockdown rules — ${ld.introLeft}s`;
+  if (ld?.phase === "wager") return tt("lockWagerClock", ld.wagerLeft);
+  if (ld?.phase === "intro") return tt("lockRulesClock", ld.introLeft);
   if (ld?.phase === "play") {
     const pts = lockdownPointsNow(ld);
     const isHero = state.youId === ld.playerId;
-    if (!isHero && role === "pad") return `Waiting — ${ld.waitLeft ?? LOCKDOWN_WAIT_S}s · hero plays`;
-    return `Lockdown ${ld.qi + 1}/${LOCKDOWN_N} · ${ld.qLeft}s · $${pts}`;
+    if (!isHero && role === "pad") return tt("lockWaitClock", ld.waitLeft ?? LOCKDOWN_WAIT_S);
+    return tt("lockPlayClock", ld.qi + 1, LOCKDOWN_N, ld.qLeft, pts);
   }
-  if (ld?.phase === "result") return ld.won ? "Lockdown cleared" : "Lockdown broken";
+  if (ld?.phase === "result") return ld.won ? tt("lockCleared") : tt("lockBroken");
   if (state.phase === "setbreak") return tt("setBreakClock", state.setBreakLeft);
   if (state.phase === "read") {
     const t = playerById(state.maps[state.youId]);
@@ -1635,12 +1642,12 @@ function clockText() {
   if (state.phase === "buzz") {
     return state.maps[state.youId] ? tt("buzzMap") : tt("buzzNow");
   }
-  if (state.phase === "answer") return state.buzzBy ? `${state.buzzBy} — answer` : "Your answer";
+  if (state.phase === "answer") return state.buzzBy ? tt("answerBy", state.buzzBy) : tt("yourAnswer");
   if (state.phase === "reveal") {
     if (!q) return "";
-    return state.picked === q.correctIndex ? "Correct" : "Wrong";
+    return state.picked === q.correctIndex ? tt("correct") : tt("wrong");
   }
-  if (state.phase === "end") return "That's the show";
+  if (state.phase === "end") return tt("showOver");
   return "";
 }
 
@@ -1856,7 +1863,8 @@ function addScore(id, delta) {
 function settleMain(ok, q, answererId) {
   const stake = stakeOf(q);
   const targetId = state.mapLive ? state.maps[answererId] : "";
-  const mapped = Boolean(targetId) && mapUsesLeft(state.mapUses?.[answererId]) > 0;
+  const rival = targetId ? playerById(targetId) : null;
+  const mapped = Boolean(rival) && (rival.score || 0) >= stake && mapUsesLeft(state.mapUses?.[answererId]) > 0;
   if (ok) {
     if (mapped) {
       addScore(answererId, stake * 2);
@@ -2066,7 +2074,7 @@ function continueRound() {
   if (state.phase === "end") return;
   const prev = state.qs[state.i - 1];
   const next = state.qs[state.i];
-  if (setBreakDue(prev?.tier, next?.tier)) {
+  if (setBreakDue(prev?.tier, next?.tier, tierRunLength(state.qs, state.i))) {
     startSetBreak(next.tier);
     return;
   }

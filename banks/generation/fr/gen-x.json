@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "fr",
   "target": 150,
-  "held": 25,
-  "shortfall": 125,
+  "held": 27,
+  "shortfall": 123,
   "ageYear": 2026,
   "born": [
     1965,
@@ -458,6 +458,41 @@
       "correctIndex": 2,
       "banterHint": "Le cercle brillant est arrivé avant les listes d'écoute.",
       "slang": "Bref,"
+    },
+    {
+      "id": "cq-d-genx-columbia",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Premier vol",
+      "prompt": "Quelle navette spatiale a effectué la première mission orbitale en 1981 ?",
+      "choices": [
+        "Discovery",
+        "Challenger",
+        "Columbia",
+        "Atlantis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le programme a plusieurs noms. Celle-ci a volé la première.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-h-genx-hubble",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Œil en orbite",
+      "prompt": "Quand le télescope spatial Hubble a-t-il été lancé ?",
+      "choices": [
+        "1990",
+        "1998",
+        "1981",
+        "2003"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le miroir a eu besoin d'une visite plus tard. L'année de lancement est la première.",
+      "slang": "Bref,",
+      "structure": "when"
     }
   ]
 }

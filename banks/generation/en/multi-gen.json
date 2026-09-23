@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "en",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 24,
+  "shortfall": 126,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -398,6 +398,58 @@
       "correctIndex": 2,
       "banterHint": "Count the black and the white. The total is the long one.",
       "slang": "For the room,"
+    },
+    {
+      "id": "cq-d-multi-everest",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Summit",
+      "prompt": "In which year did Edmund Hillary and Tenzing Norgay first reach the summit of Mount Everest?",
+      "choices": [
+        "1924",
+        "1963",
+        "1950",
+        "1953"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Two people, one ridge, one year that stuck.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-x-multi-light",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Travel Time",
+      "prompt": "About how long does sunlight take to reach Earth?",
+      "choices": [
+        "About 8 seconds",
+        "About 8 hours",
+        "About 8 days",
+        "About 8 minutes"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The Sun is far, and the trip is still a coffee break.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-h-multi-metric",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Metric Act",
+      "prompt": "When did the United States adopt the Metric Conversion Act?",
+      "choices": [
+        "1959",
+        "1975",
+        "1960",
+        "1988"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The inch stayed in the kitchen. The act still has a year.",
+      "slang": "For the room,",
+      "structure": "when"
     }
   ]
 }

@@ -6,7 +6,7 @@
     "en": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T19:43:53.082Z",
+      "reviewedAt": "2026-09-23T20:49:29.359Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -2068,6 +2068,383 @@
           "renegade": false
         },
         {
+          "id": "cq-d-silent-suez",
+          "generation": "silent-generation",
+          "prompt": "In which year did the Suez Crisis begin?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-boomer-salt",
+          "generation": "baby-boomer",
+          "prompt": "Which arms-control agreement did the United States and the Soviet Union sign in 1972?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-wall",
+          "generation": "baby-boomer",
+          "prompt": "When did construction of the Berlin Wall begin?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-genx-columbia",
+          "generation": "gen-x",
+          "prompt": "Which space shuttle flew the first orbital shuttle mission in 1981?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-hubble",
+          "generation": "gen-x",
+          "prompt": "When was the Hubble Space Telescope launched?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-geny-wiki",
+          "generation": "gen-y",
+          "prompt": "In which year did Wikipedia launch?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-youtube",
+          "generation": "gen-y",
+          "prompt": "When did YouTube launch to the public?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-genz-webb",
+          "generation": "gen-z",
+          "prompt": "In which year did the James Webb Space Telescope launch?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-curiosity",
+          "generation": "gen-z",
+          "prompt": "When did NASA's Curiosity rover land on Mars?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-alpha-perseverance",
+          "generation": "gen-alpha",
+          "prompt": "In which year did NASA's Perseverance rover land on Mars?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-iss",
+          "generation": "gen-alpha",
+          "prompt": "When did the first crew arrive at the International Space Station?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-x-multi-light",
+          "generation": "multi-gen",
+          "prompt": "About how long does sunlight take to reach Earth?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-metric",
+          "generation": "multi-gen",
+          "prompt": "When did the United States adopt the Metric Conversion Act?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "ga-joke-clock",
           "generation": "gen-alpha",
           "prompt": "What has hands but cannot clap?",
@@ -2295,6 +2672,35 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-multi-everest",
+          "generation": "multi-gen",
+          "prompt": "In which year did Edmund Hillary and Tenzing Norgay first reach the summit of Mount Everest?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -2542,7 +2948,7 @@
     "fr": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T19:43:53.083Z",
+      "reviewedAt": "2026-09-23T20:49:29.360Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -4517,6 +4923,354 @@
           "renegade": false
         },
         {
+          "id": "cq-d-silent-suez",
+          "generation": "silent-generation",
+          "prompt": "En quelle année la crise de Suez a-t-elle commencé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-wall",
+          "generation": "baby-boomer",
+          "prompt": "Quand la construction du mur de Berlin a-t-elle commencé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-genx-columbia",
+          "generation": "gen-x",
+          "prompt": "Quelle navette spatiale a effectué la première mission orbitale en 1981 ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-hubble",
+          "generation": "gen-x",
+          "prompt": "Quand le télescope spatial Hubble a-t-il été lancé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-geny-wiki",
+          "generation": "gen-y",
+          "prompt": "En quelle année Wikipédia a-t-il été lancé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-youtube",
+          "generation": "gen-y",
+          "prompt": "Quand YouTube a-t-il été ouvert au public ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-genz-webb",
+          "generation": "gen-z",
+          "prompt": "En quelle année le télescope spatial James-Webb a-t-il été lancé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-curiosity",
+          "generation": "gen-z",
+          "prompt": "Quand le rover Curiosity de la NASA s'est-il posé sur Mars ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-alpha-perseverance",
+          "generation": "gen-alpha",
+          "prompt": "En quelle année le rover Perseverance de la NASA s'est-il posé sur Mars ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-iss",
+          "generation": "gen-alpha",
+          "prompt": "Quand le premier équipage est-il arrivé à la Station spatiale internationale ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-x-multi-light",
+          "generation": "multi-gen",
+          "prompt": "Environ combien de temps la lumière du Soleil met-elle pour atteindre la Terre ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-metric",
+          "generation": "multi-gen",
+          "prompt": "Quand les États-Unis ont-ils adopté la loi sur la conversion au système métrique ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "ga-joke-clock",
           "generation": "gen-alpha",
           "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
@@ -4834,6 +5588,64 @@
           "fromStructure": "",
           "humorous": false,
           "renegade": false
+        },
+        {
+          "id": "cq-d-boomer-salt",
+          "generation": "baby-boomer",
+          "prompt": "Quel accord de maîtrise des armements les États-Unis et l'Union soviétique ont-ils signé en 1972 ?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-multi-everest",
+          "generation": "multi-gen",
+          "prompt": "En quelle année Edmund Hillary et Tenzing Norgay ont-ils atteint pour la première fois le sommet de l'Everest ?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "highestRated": [
@@ -5078,7 +5890,7 @@
     "fr-CA": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T19:43:53.084Z",
+      "reviewedAt": "2026-09-23T20:49:29.361Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -7024,6 +7836,354 @@
           "renegade": false
         },
         {
+          "id": "cq-d-silent-suez",
+          "generation": "silent-generation",
+          "prompt": "En quelle année la crise de Suez a commencé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-wall",
+          "generation": "baby-boomer",
+          "prompt": "Quand la construction du mur de Berlin a commencé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-genx-columbia",
+          "generation": "gen-x",
+          "prompt": "Quelle navette spatiale a fait la première mission orbitale en 1981 ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-hubble",
+          "generation": "gen-x",
+          "prompt": "Quand le télescope spatial Hubble a été lancé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-geny-wiki",
+          "generation": "gen-y",
+          "prompt": "En quelle année Wikipédia a été lancé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-youtube",
+          "generation": "gen-y",
+          "prompt": "Quand YouTube a été ouvert au public ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-genz-webb",
+          "generation": "gen-z",
+          "prompt": "En quelle année le télescope spatial James-Webb a été lancé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-curiosity",
+          "generation": "gen-z",
+          "prompt": "Quand le rover Curiosity de la NASA s'est posé sur Mars ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-alpha-perseverance",
+          "generation": "gen-alpha",
+          "prompt": "En quelle année le rover Perseverance de la NASA s'est posé sur Mars ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-iss",
+          "generation": "gen-alpha",
+          "prompt": "Quand le premier équipage est arrivé à la Station spatiale internationale ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-x-multi-light",
+          "generation": "multi-gen",
+          "prompt": "La lumière du Soleil prend environ combien de temps pour atteindre la Terre ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-metric",
+          "generation": "multi-gen",
+          "prompt": "Quand les États-Unis ont adopté la loi sur la conversion au système métrique ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "ga-joke-clock",
           "generation": "gen-alpha",
           "prompt": "C'est quoi qui a des aiguilles et qui donne l'heure ?",
@@ -7370,6 +8530,64 @@
           "fromStructure": "",
           "humorous": false,
           "renegade": false
+        },
+        {
+          "id": "cq-d-boomer-salt",
+          "generation": "baby-boomer",
+          "prompt": "Quel accord de maîtrise des armements les États-Unis et l'Union soviétique ont signé en 1972 ?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-multi-everest",
+          "generation": "multi-gen",
+          "prompt": "En quelle année Edmund Hillary et Tenzing Norgay ont atteint pour la première fois le sommet de l'Everest ?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "highestRated": [
@@ -7614,7 +8832,7 @@
     "de": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T19:43:53.085Z",
+      "reviewedAt": "2026-09-23T20:49:29.363Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -9647,6 +10865,383 @@
           "renegade": false
         },
         {
+          "id": "cq-d-silent-suez",
+          "generation": "silent-generation",
+          "prompt": "In welchem Jahr begann die Suezkrise?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-boomer-salt",
+          "generation": "baby-boomer",
+          "prompt": "Welches Rüstungskontrollabkommen unterzeichneten die USA und die Sowjetunion 1972?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-wall",
+          "generation": "baby-boomer",
+          "prompt": "Wann begann der Bau der Berliner Mauer?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-genx-columbia",
+          "generation": "gen-x",
+          "prompt": "Welches Space Shuttle flog 1981 die erste Orbitalmission?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-hubble",
+          "generation": "gen-x",
+          "prompt": "Wann wurde das Hubble-Weltraumteleskop gestartet?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-geny-wiki",
+          "generation": "gen-y",
+          "prompt": "In welchem Jahr startete Wikipedia?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-youtube",
+          "generation": "gen-y",
+          "prompt": "Wann wurde YouTube für die Öffentlichkeit geöffnet?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-genz-webb",
+          "generation": "gen-z",
+          "prompt": "In welchem Jahr startete das James-Webb-Weltraumteleskop?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-curiosity",
+          "generation": "gen-z",
+          "prompt": "Wann landete der NASA-Rover Curiosity auf dem Mars?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-alpha-perseverance",
+          "generation": "gen-alpha",
+          "prompt": "In welchem Jahr landete der NASA-Rover Perseverance auf dem Mars?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-iss",
+          "generation": "gen-alpha",
+          "prompt": "Wann traf die erste Besatzung auf der Internationalen Raumstation ein?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-x-multi-light",
+          "generation": "multi-gen",
+          "prompt": "Ungefähr wie lange braucht das Sonnenlicht bis zur Erde?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-metric",
+          "generation": "multi-gen",
+          "prompt": "Wann haben die USA das Gesetz zur metrischen Umstellung verabschiedet?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "ga-joke-clock",
           "generation": "gen-alpha",
           "prompt": "Was hat Zeiger, kann aber nicht klatschen?",
@@ -9882,6 +11477,35 @@
           "id": "cq-h-silent-chamberlain",
           "generation": "silent-generation",
           "prompt": "Wer war Premierminister des Vereinigten Königreichs, als Großbritannien 1939 Deutschland den Krieg erklärte?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-d-multi-everest",
+          "generation": "multi-gen",
+          "prompt": "In welchem Jahr erreichten Edmund Hillary und Tenzing Norgay erstmals den Gipfel des Mount Everest?",
           "rating": 80,
           "safety": {
             "bot": "Louis Liberty",

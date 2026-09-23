@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "de",
   "target": 150,
-  "held": 25,
-  "shortfall": 125,
+  "held": 27,
+  "shortfall": 123,
   "ageYear": 2026,
   "born": [
     1965,
@@ -458,6 +458,41 @@
       "correctIndex": 2,
       "banterHint": "Der glänzende Kreis kam vor den Playlists.",
       "slang": "Na ja,"
+    },
+    {
+      "id": "cq-d-genx-columbia",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Erster Flug",
+      "prompt": "Welches Space Shuttle flog 1981 die erste Orbitalmission?",
+      "choices": [
+        "Discovery",
+        "Challenger",
+        "Columbia",
+        "Atlantis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Das Programm hatte mehrere Namen. Dieses flog zuerst.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-h-genx-hubble",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Auge im Orbit",
+      "prompt": "Wann wurde das Hubble-Weltraumteleskop gestartet?",
+      "choices": [
+        "1990",
+        "1998",
+        "1981",
+        "2003"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Spiegel brauchte später einen Besuch. Das Startjahr ist das erste.",
+      "slang": "Na ja,",
+      "structure": "when"
     }
   ]
 }

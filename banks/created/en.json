@@ -2448,6 +2448,496 @@
       ],
       "slang": "For the room,",
       "status": "pending"
+    },
+    {
+      "id": "cq-d-silent-suez",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Canal Year",
+      "prompt": "In which year did the Suez Crisis begin?",
+      "choices": [
+        "1956",
+        "1948",
+        "1967",
+        "1950"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The canal closed. The year is the earlier one.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Suez Crisis"
+        },
+        {
+          "label": "UK National Archives — 1956"
+        }
+      ],
+      "slang": "Say,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-d-boomer-salt",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "1972 Treaty",
+      "prompt": "Which arms-control agreement did the United States and the Soviet Union sign in 1972?",
+      "choices": [
+        "SALT I",
+        "Warsaw Pact",
+        "Camp David Accords",
+        "Helsinki Final Act"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The initials are the short name. The year is 1972.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US Department of State — SALT I"
+        },
+        {
+          "label": "Encyclopaedia Britannica — SALT I"
+        }
+      ],
+      "slang": "Right on,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-wall",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Wire and Concrete",
+      "prompt": "When did construction of the Berlin Wall begin?",
+      "choices": [
+        "1961",
+        "1949",
+        "1989",
+        "1953"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The fall came later. This is the year it went up.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Berlin Wall"
+        },
+        {
+          "label": "German Historical Museum — Berlin Wall"
+        }
+      ],
+      "slang": "Right on,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-d-genx-columbia",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "First Flight",
+      "prompt": "Which space shuttle flew the first orbital shuttle mission in 1981?",
+      "choices": [
+        "Columbia",
+        "Challenger",
+        "Discovery",
+        "Atlantis"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The program had several names. This one flew first.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — STS-1"
+        },
+        {
+          "label": "Encyclopaedia Britannica — space shuttle"
+        }
+      ],
+      "slang": "Whatever the case,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-hubble",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Orbiting Eye",
+      "prompt": "When was the Hubble Space Telescope launched?",
+      "choices": [
+        "1990",
+        "1981",
+        "1998",
+        "2003"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The mirror needed a later visit. The launch year is the first one.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Hubble Space Telescope"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Hubble Space Telescope"
+        }
+      ],
+      "slang": "Whatever the case,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-d-geny-wiki",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Open Pages",
+      "prompt": "In which year did Wikipedia launch?",
+      "choices": [
+        "2001",
+        "1998",
+        "2004",
+        "1995"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The pages are many. The start is one year.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Wikimedia Foundation — Wikipedia history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Wikipedia"
+        }
+      ],
+      "slang": "Just saying,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-youtube",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "First Upload",
+      "prompt": "When did YouTube launch to the public?",
+      "choices": [
+        "2005",
+        "2001",
+        "2007",
+        "2010"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The first clip was short. The year is the middle one of that decade.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — YouTube"
+        },
+        {
+          "label": "Google — YouTube about"
+        }
+      ],
+      "slang": "Just saying,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-d-genz-webb",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Deep Eye",
+      "prompt": "In which year did the James Webb Space Telescope launch?",
+      "choices": [
+        "2021",
+        "2018",
+        "2016",
+        "2024"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Christmas Day, from a spaceport in South America.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — James Webb Space Telescope"
+        },
+        {
+          "label": "ESA — Webb launch"
+        }
+      ],
+      "slang": "Low-key,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genz-curiosity",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Gale Crater",
+      "prompt": "When did NASA's Curiosity rover land on Mars?",
+      "choices": [
+        "2012",
+        "2004",
+        "2021",
+        "1997"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The sky crane did the last step. The year is 2012.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Curiosity rover"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Curiosity"
+        }
+      ],
+      "slang": "Low-key,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-d-alpha-perseverance",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Jezero",
+      "prompt": "In which year did NASA's Perseverance rover land on Mars?",
+      "choices": [
+        "2021",
+        "2012",
+        "2020",
+        "2004"
+      ],
+      "correctIndex": 0,
+      "banterHint": "A small helicopter came along for the ride.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Perseverance rover"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Perseverance"
+        }
+      ],
+      "slang": "Real quick,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-alpha-iss",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "First Crew",
+      "prompt": "When did the first crew arrive at the International Space Station?",
+      "choices": [
+        "2000",
+        "1998",
+        "2011",
+        "1986"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The first module was already up. The people came in 2000.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Expedition 1"
+        },
+        {
+          "label": "Encyclopaedia Britannica — International Space Station"
+        }
+      ],
+      "slang": "Real quick,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-d-multi-everest",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Summit",
+      "prompt": "In which year did Edmund Hillary and Tenzing Norgay first reach the summit of Mount Everest?",
+      "choices": [
+        "1953",
+        "1924",
+        "1963",
+        "1950"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Two people, one ridge, one year that stuck.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Mount Everest"
+        },
+        {
+          "label": "Royal Geographical Society — 1953 expedition"
+        }
+      ],
+      "slang": "For the room,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-x-multi-light",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Travel Time",
+      "prompt": "About how long does sunlight take to reach Earth?",
+      "choices": [
+        "About 8 minutes",
+        "About 8 seconds",
+        "About 8 hours",
+        "About 8 days"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The Sun is far, and the trip is still a coffee break.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Sun fact sheet"
+        },
+        {
+          "label": "Encyclopaedia Britannica — sunlight"
+        }
+      ],
+      "slang": "For the room,",
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-metric",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Metric Act",
+      "prompt": "When did the United States adopt the Metric Conversion Act?",
+      "choices": [
+        "1975",
+        "1960",
+        "1988",
+        "1959"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The inch stayed in the kitchen. The act still has a year.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US Congress — Metric Conversion Act of 1975"
+        },
+        {
+          "label": "NIST — metric conversion"
+        }
+      ],
+      "slang": "For the room,",
+      "status": "pending"
     }
   ]
 }

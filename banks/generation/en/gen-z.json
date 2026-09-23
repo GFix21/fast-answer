@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "en",
   "target": 150,
-  "held": 25,
-  "shortfall": 125,
+  "held": 27,
+  "shortfall": 123,
   "ageYear": 2026,
   "born": [
     1997,
@@ -454,6 +454,41 @@
       "correctIndex": 2,
       "banterHint": "The scale stops at ten. This one sits there.",
       "slang": "Low-key,"
+    },
+    {
+      "id": "cq-d-genz-webb",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Deep Eye",
+      "prompt": "In which year did the James Webb Space Telescope launch?",
+      "choices": [
+        "2021",
+        "2024",
+        "2016",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Christmas Day, from a spaceport in South America.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-h-genz-curiosity",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Gale Crater",
+      "prompt": "When did NASA's Curiosity rover land on Mars?",
+      "choices": [
+        "2004",
+        "2012",
+        "1997",
+        "2021"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The sky crane did the last step. The year is 2012.",
+      "slang": "Low-key,",
+      "structure": "when"
     }
   ]
 }

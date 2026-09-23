@@ -6,17 +6,18 @@
       "publishedAt": "2026-09-23T17:15:00.000Z",
       "counts": {
         "easy": 86,
-        "hard": 73,
-        "difficult": 10,
-        "extreme": 6
+        "hard": 79,
+        "difficult": 17,
+        "extreme": 7
       },
       "studioCounts": {
         "easy": 86,
-        "hard": 73,
-        "difficult": 10,
-        "finale": 6
+        "hard": 79,
+        "difficult": 17,
+        "finale": 6,
+        "extreme": 1
       },
-      "questionCount": 175,
+      "questionCount": 189,
       "weekTarget": 1050,
       "weekComplete": false
     }

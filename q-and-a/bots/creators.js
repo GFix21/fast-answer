@@ -4,6 +4,7 @@
  * "What colour is…". Gen Alpha jokes stay on easy or hard.
  */
 import { translateQuestion } from "./translators.js";
+import { thinSet } from "./thin-set.js";
 
 const WEEK = "2026-W39";
 
@@ -1286,6 +1287,10 @@ export function creatorQuestions(locale = "en") {
       const flat = translateQuestion(row, locale);
       if (flat) out.push(flat);
     }
+  }
+  for (const row of thinSet) {
+    const flat = translateQuestion(row, locale);
+    if (flat) out.push(flat);
   }
   return out;
 }

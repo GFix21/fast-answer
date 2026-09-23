@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "de",
   "target": 150,
-  "held": 24,
-  "shortfall": 126,
+  "held": 25,
+  "shortfall": 125,
   "ageYear": 2026,
   "born": [
     1928,
@@ -451,6 +451,23 @@
       ],
       "correctIndex": 1,
       "banterHint": "Der Krieg war vorbei. Der Aufbau hat ein Startdatum.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-d-silent-suez",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Kanaljahr",
+      "prompt": "In welchem Jahr begann die Suezkrise?",
+      "choices": [
+        "1967",
+        "1950",
+        "1956",
+        "1948"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Der Kanal schloss. Das Jahr ist das frühere.",
       "slang": "Sagen Sie,"
     }
   ]

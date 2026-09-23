@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "fr",
   "target": 150,
-  "held": 24,
-  "shortfall": 126,
+  "held": 25,
+  "shortfall": 125,
   "ageYear": 2026,
   "born": [
     1928,
@@ -451,6 +451,23 @@
       ],
       "correctIndex": 1,
       "banterHint": "La guerre était finie. La reconstruction a une date de départ.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-d-silent-suez",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Année du canal",
+      "prompt": "En quelle année la crise de Suez a-t-elle commencé ?",
+      "choices": [
+        "1967",
+        "1950",
+        "1956",
+        "1948"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le canal a fermé. L'année est la plus ancienne.",
       "slang": "Dites,"
     }
   ]

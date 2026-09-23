@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "fr-CA",
   "target": 150,
-  "held": 25,
-  "shortfall": 125,
+  "held": 27,
+  "shortfall": 123,
   "ageYear": 2026,
   "born": [
     1997,
@@ -454,6 +454,41 @@
       "correctIndex": 2,
       "banterHint": "L'échelle arrête à dix. Celui-ci est là.",
       "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-d-genz-webb",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Œil lointain",
+      "prompt": "En quelle année le télescope spatial James-Webb a été lancé ?",
+      "choices": [
+        "2021",
+        "2024",
+        "2016",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le jour de Noël, depuis un port spatial en Amérique du Sud.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-h-genz-curiosity",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Cratère Gale",
+      "prompt": "Quand le rover Curiosity de la NASA s'est posé sur Mars ?",
+      "choices": [
+        "2004",
+        "2012",
+        "1997",
+        "2021"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La grue volante a fait le dernier pas. L'année est 2012.",
+      "slang": "Sans chichi,",
+      "structure": "when"
     }
   ]
 }

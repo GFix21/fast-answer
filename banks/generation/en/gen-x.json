@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "en",
   "target": 150,
-  "held": 25,
-  "shortfall": 125,
+  "held": 27,
+  "shortfall": 123,
   "ageYear": 2026,
   "born": [
     1965,
@@ -458,6 +458,41 @@
       "correctIndex": 2,
       "banterHint": "The shiny circle arrived before the playlist apps.",
       "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-d-genx-columbia",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "First Flight",
+      "prompt": "Which space shuttle flew the first orbital shuttle mission in 1981?",
+      "choices": [
+        "Discovery",
+        "Challenger",
+        "Columbia",
+        "Atlantis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The program had several names. This one flew first.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-h-genx-hubble",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Orbiting Eye",
+      "prompt": "When was the Hubble Space Telescope launched?",
+      "choices": [
+        "1990",
+        "1998",
+        "1981",
+        "2003"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The mirror needed a later visit. The launch year is the first one.",
+      "slang": "Whatever the case,",
+      "structure": "when"
     }
   ]
 }

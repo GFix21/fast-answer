@@ -563,6 +563,174 @@
           "label": "MoMA / Tate primers"
         }
       ]
+    },
+    {
+      "id": "place-mus-e-violin",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Strings",
+      "prompt": "How many strings does a standard violin have?",
+      "choices": [
+        "4",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy instrument fact. A guitar is a different count.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — violin"
+        },
+        {
+          "label": "Grove Music Online — violin"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-saturn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Rings",
+      "prompt": "Which planet is best known for its rings?",
+      "choices": [
+        "Saturn",
+        "Jupiter",
+        "Neptune",
+        "Mars"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Hard solar-system fact. The Great Red Spot is a different planet.",
+      "sources": [
+        {
+          "label": "NASA — Saturn"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Saturn"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-e-water",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Formula",
+      "prompt": "What is the chemical symbol for water?",
+      "choices": [
+        "H2O",
+        "CO2",
+        "NaCl",
+        "O2"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy chemistry fact.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — water"
+        },
+        {
+          "label": "IUPAC — chemical formulae"
+        }
+      ]
+    },
+    {
+      "id": "place-geo-h-indian",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Between Coasts",
+      "prompt": "Which ocean lies between Africa and Australia?",
+      "choices": [
+        "Indian Ocean",
+        "Atlantic Ocean",
+        "Pacific Ocean",
+        "Arctic Ocean"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Hard map fact. The largest ocean is a different question.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Indian Ocean"
+        },
+        {
+          "label": "NOAA — ocean basins"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-e-planets",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Orbits",
+      "prompt": "How many planets are in the Solar System?",
+      "choices": [
+        "8",
+        "9",
+        "7",
+        "12"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy count after the 2006 definition.",
+      "sources": [
+        {
+          "label": "IAU — planet definition"
+        },
+        {
+          "label": "NASA — solar system"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-mercury",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Metal",
+      "prompt": "Which metal is liquid at room temperature?",
+      "choices": [
+        "Mercury",
+        "Iron",
+        "Gold",
+        "Copper"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Hard materials fact. This is the metal, not the planet.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — mercury"
+        },
+        {
+          "label": "Royal Society of Chemistry — mercury"
+        }
+      ]
+    },
+    {
+      "id": "place-geo-e-continents",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Land",
+      "prompt": "How many continents are in the common seven-continent model?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy geography count in the common model.",
+      "sources": [
+        {
+          "label": "National Geographic — continents"
+        },
+        {
+          "label": "Encyclopaedia Britannica — continent"
+        }
+      ]
     }
   ]
 }
