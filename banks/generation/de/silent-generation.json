@@ -276,7 +276,8 @@
         "Das vergoldete Zeitalter"
       ],
       "correctIndex": 0,
-      "banterHint": "Die Bands waren laut. Der Name blieb."
+      "banterHint": "Die Bands waren laut. Der Name blieb.",
+      "slang": "Sagen Sie,"
     },
     {
       "id": "cq-e-silent-vote",
@@ -292,7 +293,8 @@
         "Der 15. Zusatzartikel"
       ],
       "correctIndex": 0,
-      "banterHint": "Die Schlange vor dem Wahllokal wurde absichtlich länger."
+      "banterHint": "Die Schlange vor dem Wahllokal wurde absichtlich länger.",
+      "slang": "Sagen Sie,"
     },
     {
       "id": "cq-h-silent-chamberlain",
@@ -308,7 +310,8 @@
         "Neville Chamberlain"
       ],
       "correctIndex": 3,
-      "banterHint": "Churchill übernahm den Stuhl im Jahr darauf."
+      "banterHint": "Churchill übernahm den Stuhl im Jahr darauf.",
+      "slang": "Sagen Sie,"
     },
     {
       "id": "cq-h-silent-assembly",
@@ -324,7 +327,8 @@
         "London"
       ],
       "correctIndex": 3,
-      "banterHint": "New York wurde ein paar Jahre später der Sitz."
+      "banterHint": "New York wurde ein paar Jahre später der Sitz.",
+      "slang": "Sagen Sie,"
     },
     {
       "id": "cq-e-silent-radio",
@@ -341,6 +345,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Das Lied kam trotzdem durch.",
+      "slang": "Sagen Sie,",
       "funny": true,
       "structure": "joke"
     },
@@ -359,6 +364,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Das Kupfer hat sich nach Jahren Wetter verändert.",
+      "slang": "Sagen Sie,",
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
@@ -384,6 +390,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Die Spitze stand, bevor das Jahrzehnt um war.",
+      "slang": "Sagen Sie,",
       "structure": "when"
     },
     {
@@ -401,6 +408,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Das wilde Raten kann warten. Das Taxi ist das helle.",
+      "slang": "Sagen Sie,",
       "funny": true,
       "humorous": true,
       "injection": "straight-man",
@@ -425,7 +433,8 @@
         "Konrad Adenauer"
       ],
       "correctIndex": 3,
-      "banterHint": "Er übernahm den Stuhl 1949 und behielt ihn lange."
+      "banterHint": "Er übernahm den Stuhl 1949 und behielt ihn lange.",
+      "slang": "Sagen Sie,"
     },
     {
       "id": "cq-h-silent-marshall",
@@ -441,7 +450,8 @@
         "1951"
       ],
       "correctIndex": 1,
-      "banterHint": "Der Krieg war vorbei. Der Aufbau hat ein Startdatum."
+      "banterHint": "Der Krieg war vorbei. Der Aufbau hat ein Startdatum.",
+      "slang": "Sagen Sie,"
     }
   ]
 }

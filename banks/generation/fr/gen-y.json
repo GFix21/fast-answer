@@ -290,7 +290,8 @@
         "MySpace"
       ],
       "correctIndex": 0,
-      "banterHint": "Le bouton modifier est toute l'idée."
+      "banterHint": "Le bouton modifier est toute l'idée.",
+      "slang": "Je dis ça,"
     },
     {
       "id": "cq-e-geny-sms",
@@ -306,7 +307,8 @@
         "Secure Media Stream"
       ],
       "correctIndex": 0,
-      "banterHint": "Cent soixante caractères, et beaucoup de rendez-vous."
+      "banterHint": "Cent soixante caractères, et beaucoup de rendez-vous.",
+      "slang": "Je dis ça,"
     },
     {
       "id": "cq-h-geny-iphone",
@@ -322,7 +324,8 @@
         "Motorola"
       ],
       "correctIndex": 0,
-      "banterHint": "Le clavier est passé sur la vitre."
+      "banterHint": "Le clavier est passé sur la vitre.",
+      "slang": "Je dis ça,"
     },
     {
       "id": "cq-h-geny-facebook",
@@ -338,7 +341,8 @@
         "2004"
       ],
       "correctIndex": 1,
-      "banterHint": "La porte du campus est tombée en septembre."
+      "banterHint": "La porte du campus est tombée en septembre.",
+      "slang": "Je dis ça,"
     },
     {
       "id": "cq-h-geny-inbox",
@@ -355,6 +359,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "La pile non lue est restée polie.",
+      "slang": "Je dis ça,",
       "funny": true,
       "structure": "joke"
     },
@@ -373,6 +378,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Le collier a gardé cette seule teinte.",
+      "slang": "Je dis ça,",
       "structure": "colour"
     },
     {
@@ -390,6 +396,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "La rentrée dans le livre arrive après le livre.",
+      "slang": "Je dis ça,",
       "structure": "when"
     },
     {
@@ -407,6 +414,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "La monnaie a eu un anniversaire avant les billets.",
+      "slang": "Je dis ça,",
       "funny": true,
       "humorous": true,
       "injection": "wordplay",
@@ -431,7 +439,8 @@
         "Brisbane"
       ],
       "correctIndex": 2,
-      "banterHint": "La ville du port est célèbre. La capitale est celle qui a été planifiée."
+      "banterHint": "La ville du port est célèbre. La capitale est celle qui a été planifiée.",
+      "slang": "Je dis ça,"
     },
     {
       "id": "cq-h-geny-html",
@@ -447,7 +456,8 @@
         "Hyperlink Text Main Language"
       ],
       "correctIndex": 2,
-      "banterHint": "La page que tu lis est écrite avec."
+      "banterHint": "La page que tu lis est écrite avec.",
+      "slang": "Je dis ça,"
     }
   ]
 }

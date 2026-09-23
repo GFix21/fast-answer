@@ -4,6 +4,7 @@
  * A humorous question is wrapped by Crack'd Kerr after the straight ask is translated.
  */
 import { injectHumor, injectWrongAnswers } from "../crackd-kerr.js";
+import { slangFor } from "./slang.js";
 
 export const FRANCE_BOT = "French (France)";
 export const QUEBEC_BOT = "French (Quebec)";
@@ -39,6 +40,7 @@ export function translateQuestion(q, locale) {
     straight: q.straight || null,
     addedWeek: q.addedWeek || null,
     sources: q.sources || [],
+    slang: slangFor(q.generation, locale),
     status: "pending",
   };
   if (q.humorous === true) {

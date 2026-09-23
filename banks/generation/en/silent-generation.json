@@ -276,7 +276,8 @@
         "The Gilded Age"
       ],
       "correctIndex": 0,
-      "banterHint": "The bands were loud. The name stuck."
+      "banterHint": "The bands were loud. The name stuck.",
+      "slang": "Say,"
     },
     {
       "id": "cq-e-silent-vote",
@@ -292,7 +293,8 @@
         "The 15th Amendment"
       ],
       "correctIndex": 0,
-      "banterHint": "The line at the poll got longer, on purpose."
+      "banterHint": "The line at the poll got longer, on purpose.",
+      "slang": "Say,"
     },
     {
       "id": "cq-h-silent-chamberlain",
@@ -308,7 +310,8 @@
         "Neville Chamberlain"
       ],
       "correctIndex": 3,
-      "banterHint": "Churchill took the chair the next year."
+      "banterHint": "Churchill took the chair the next year.",
+      "slang": "Say,"
     },
     {
       "id": "cq-h-silent-assembly",
@@ -324,7 +327,8 @@
         "London"
       ],
       "correctIndex": 3,
-      "banterHint": "New York became home a few years later."
+      "banterHint": "New York became home a few years later.",
+      "slang": "Say,"
     },
     {
       "id": "cq-e-silent-radio",
@@ -341,6 +345,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "The song still came through.",
+      "slang": "Say,",
       "funny": true,
       "structure": "joke"
     },
@@ -359,6 +364,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "The copper coat changed after years of weather.",
+      "slang": "Say,",
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
@@ -384,6 +390,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "The spire was up before the decade turned.",
+      "slang": "Say,",
       "structure": "when"
     },
     {
@@ -401,6 +408,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "The wild guess can wait. The cab is the bright one.",
+      "slang": "Say,",
       "funny": true,
       "humorous": true,
       "injection": "straight-man",
@@ -425,7 +433,8 @@
         "Konrad Adenauer"
       ],
       "correctIndex": 3,
-      "banterHint": "He took the chair in 1949 and kept it for a long stretch."
+      "banterHint": "He took the chair in 1949 and kept it for a long stretch.",
+      "slang": "Say,"
     },
     {
       "id": "cq-h-silent-marshall",
@@ -441,7 +450,8 @@
         "1951"
       ],
       "correctIndex": 1,
-      "banterHint": "The war was already over. The rebuild had a start date."
+      "banterHint": "The war was already over. The rebuild had a start date.",
+      "slang": "Say,"
     }
   ]
 }

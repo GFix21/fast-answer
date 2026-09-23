@@ -261,6 +261,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "It still lands on its feet.",
+      "slang": "Real quick,",
       "funny": true,
       "structure": "joke"
     },
@@ -279,6 +280,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Every book got a lift.",
+      "slang": "Real quick,",
       "funny": true,
       "structure": "joke"
     },
@@ -297,6 +299,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "The eraser had its back.",
+      "slang": "Real quick,",
       "funny": true,
       "structure": "joke"
     },
@@ -315,6 +318,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Chapter after chapter, still kind.",
+      "slang": "Real quick,",
       "funny": true,
       "structure": "joke"
     },
@@ -333,6 +337,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "The room stayed ribbiting.",
+      "slang": "Real quick,",
       "funny": true,
       "structure": "colour"
     },
@@ -350,7 +355,8 @@
         "7"
       ],
       "correctIndex": 2,
-      "banterHint": "The lineup got shorter in 2006, and it stayed kind."
+      "banterHint": "The lineup got shorter in 2006, and it stayed kind.",
+      "slang": "Real quick,"
     },
     {
       "id": "cq-e-alpha-banana",
@@ -367,6 +373,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "The story can grow. The peel stays the bright one.",
+      "slang": "Real quick,",
       "funny": true,
       "humorous": true,
       "injection": "escalation",
@@ -391,7 +398,8 @@
         "364"
       ],
       "correctIndex": 1,
-      "banterHint": "February borrows one day, then gives the year back."
+      "banterHint": "February borrows one day, then gives the year back.",
+      "slang": "Real quick,"
     },
     {
       "id": "cq-h-alpha-elephant",
@@ -407,7 +415,8 @@
         "African elephant"
       ],
       "correctIndex": 3,
-      "banterHint": "The whale takes the ocean. This one stays on the ground."
+      "banterHint": "The whale takes the ocean. This one stays on the ground.",
+      "slang": "Real quick,"
     },
     {
       "id": "ga-joke-clock",

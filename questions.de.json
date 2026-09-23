@@ -1549,7 +1549,8 @@
       "Das vergoldete Zeitalter"
     ],
     "correctIndex": 0,
-    "banterHint": "Die Bands waren laut. Der Name blieb."
+    "banterHint": "Die Bands waren laut. Der Name blieb.",
+    "slang": "Sagen Sie,"
   },
   {
     "id": "cq-e-silent-vote",
@@ -1565,7 +1566,8 @@
       "Der 15. Zusatzartikel"
     ],
     "correctIndex": 0,
-    "banterHint": "Die Schlange vor dem Wahllokal wurde absichtlich länger."
+    "banterHint": "Die Schlange vor dem Wahllokal wurde absichtlich länger.",
+    "slang": "Sagen Sie,"
   },
   {
     "id": "cq-h-silent-chamberlain",
@@ -1581,7 +1583,8 @@
       "Neville Chamberlain"
     ],
     "correctIndex": 3,
-    "banterHint": "Churchill übernahm den Stuhl im Jahr darauf."
+    "banterHint": "Churchill übernahm den Stuhl im Jahr darauf.",
+    "slang": "Sagen Sie,"
   },
   {
     "id": "cq-h-silent-assembly",
@@ -1597,7 +1600,8 @@
       "London"
     ],
     "correctIndex": 3,
-    "banterHint": "New York wurde ein paar Jahre später der Sitz."
+    "banterHint": "New York wurde ein paar Jahre später der Sitz.",
+    "slang": "Sagen Sie,"
   },
   {
     "id": "cq-e-silent-radio",
@@ -1614,6 +1618,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Das Lied kam trotzdem durch.",
+    "slang": "Sagen Sie,",
     "funny": true,
     "structure": "joke"
   },
@@ -1632,6 +1637,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Das Kupfer hat sich nach Jahren Wetter verändert.",
+    "slang": "Sagen Sie,",
     "funny": true,
     "humorous": true,
     "injection": "dialogue",
@@ -1657,6 +1663,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Die Spitze stand, bevor das Jahrzehnt um war.",
+    "slang": "Sagen Sie,",
     "structure": "when"
   },
   {
@@ -1674,6 +1681,7 @@
     ],
     "correctIndex": 0,
     "banterHint": "Das wilde Raten kann warten. Das Taxi ist das helle.",
+    "slang": "Sagen Sie,",
     "funny": true,
     "humorous": true,
     "injection": "straight-man",
@@ -1698,7 +1706,8 @@
       "Konrad Adenauer"
     ],
     "correctIndex": 3,
-    "banterHint": "Er übernahm den Stuhl 1949 und behielt ihn lange."
+    "banterHint": "Er übernahm den Stuhl 1949 und behielt ihn lange.",
+    "slang": "Sagen Sie,"
   },
   {
     "id": "cq-h-silent-marshall",
@@ -1714,7 +1723,8 @@
       "1951"
     ],
     "correctIndex": 1,
-    "banterHint": "Der Krieg war vorbei. Der Aufbau hat ein Startdatum."
+    "banterHint": "Der Krieg war vorbei. Der Aufbau hat ein Startdatum.",
+    "slang": "Sagen Sie,"
   },
   {
     "id": "cq-e-boomer-gaye",
@@ -1730,7 +1740,8 @@
       "Otis Redding"
     ],
     "correctIndex": 2,
-    "banterHint": "Die Fragen auf der Platte gelten noch."
+    "banterHint": "Die Fragen auf der Platte gelten noch.",
+    "slang": "Na klar,"
   },
   {
     "id": "cq-e-boomer-skylab",
@@ -1746,7 +1757,8 @@
       "Mir"
     ],
     "correctIndex": 2,
-    "banterHint": "Eine Werkstatt mit sehr langem Arbeitsweg."
+    "banterHint": "Eine Werkstatt mit sehr langem Arbeitsweg.",
+    "slang": "Na klar,"
   },
   {
     "id": "cq-h-boomer-sesame",
@@ -1762,7 +1774,8 @@
       "1979"
     ],
     "correctIndex": 2,
-    "banterHint": "Die Straße öffnete gegen Ende der Sechziger."
+    "banterHint": "Die Straße öffnete gegen Ende der Sechziger.",
+    "slang": "Na klar,"
   },
   {
     "id": "cq-h-boomer-earthday",
@@ -1778,7 +1791,8 @@
       "1984"
     ],
     "correctIndex": 1,
-    "banterHint": "Der Planet bekam ein Datum im Kalender."
+    "banterHint": "Der Planet bekam ein Datum im Kalender.",
+    "slang": "Na klar,"
   },
   {
     "id": "cq-h-boomer-record",
@@ -1795,6 +1809,7 @@
     ],
     "correctIndex": 2,
     "banterHint": "Das nächste Lied kam trotzdem dran.",
+    "slang": "Na klar,",
     "funny": true,
     "structure": "joke"
   },
@@ -1813,6 +1828,7 @@
     ],
     "correctIndex": 2,
     "banterHint": "Der Titel verrät schon die Farbe.",
+    "slang": "Na klar,",
     "structure": "colour"
   },
   {
@@ -1830,6 +1846,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Der Name klingt nach Gold. Die Farbe ist die andere.",
+    "slang": "Na klar,",
     "structure": "colour"
   },
   {
@@ -1847,6 +1864,7 @@
     ],
     "correctIndex": 0,
     "banterHint": "Zwei falsche Daten, dann der Freitag der Eröffnung.",
+    "slang": "Na klar,",
     "funny": true,
     "humorous": true,
     "injection": "rule-of-three",
@@ -1871,7 +1889,8 @@
       "Claudette Colvin"
     ],
     "correctIndex": 0,
-    "banterHint": "Der Platz blieb besetzt. Der Boykott folgte."
+    "banterHint": "Der Platz blieb besetzt. Der Boykott folgte.",
+    "slang": "Na klar,"
   },
   {
     "id": "cq-h-boomer-gold",
@@ -1887,7 +1906,8 @@
       "Cu"
     ],
     "correctIndex": 0,
-    "banterHint": "Silber ist der Nachbar in der Tabelle."
+    "banterHint": "Silber ist der Nachbar in der Tabelle.",
+    "slang": "Na klar,"
   },
   {
     "id": "cq-e-genx-gameboy",
@@ -1903,7 +1923,8 @@
       "Game Boy"
     ],
     "correctIndex": 3,
-    "banterHint": "Tetris reiste in vielen Taschen mit."
+    "banterHint": "Tetris reiste in vielen Taschen mit.",
+    "slang": "Na ja,"
   },
   {
     "id": "cq-e-genx-pdf",
@@ -1919,7 +1940,8 @@
       "Portable Document Format"
     ],
     "correctIndex": 3,
-    "banterHint": "Die Seite hat reisen gelernt."
+    "banterHint": "Die Seite hat reisen gelernt.",
+    "slang": "Na ja,"
   },
   {
     "id": "cq-h-genx-ram",
@@ -1935,7 +1957,8 @@
       "Remote Access Mainframe"
     ],
     "correctIndex": 2,
-    "banterHint": "Schneller Speicher, und er vergisst ohne Strom."
+    "banterHint": "Schneller Speicher, und er vergisst ohne Strom.",
+    "slang": "Na ja,"
   },
   {
     "id": "cq-h-genx-cd",
@@ -1951,7 +1974,8 @@
       "Crystal Drive"
     ],
     "correctIndex": 2,
-    "banterHint": "Ein kleiner Spiegel, der ein Album hielt."
+    "banterHint": "Ein kleiner Spiegel, der ein Album hielt.",
+    "slang": "Na ja,"
   },
   {
     "id": "cq-e-genx-cassette",
@@ -1968,6 +1992,7 @@
     ],
     "correctIndex": 1,
     "banterHint": "Seite B wurde trotzdem gehört.",
+    "slang": "Na ja,",
     "funny": true,
     "structure": "joke"
   },
@@ -1986,6 +2011,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Die anderen drei tragen den Rest.",
+    "slang": "Na ja,",
     "structure": "colour"
   },
   {
@@ -2003,6 +2029,7 @@
     ],
     "correctIndex": 2,
     "banterHint": "Ältere Bälle waren weiß. Die Regel ist jetzt der helle.",
+    "slang": "Na ja,",
     "structure": "colour"
   },
   {
@@ -2020,6 +2047,7 @@
     ],
     "correctIndex": 0,
     "banterHint": "Die Idee ist älter. Die öffentliche Seite hat dieses Datum.",
+    "slang": "Na ja,",
     "funny": true,
     "humorous": true,
     "injection": "misdirection",
@@ -2044,7 +2072,8 @@
       "Mars"
     ],
     "correctIndex": 0,
-    "banterHint": "Der Fleck ist ein Sturm, der viele Wetterberichte überdauert hat."
+    "banterHint": "Der Fleck ist ein Sturm, der viele Wetterberichte überdauert hat.",
+    "slang": "Na ja,"
   },
   {
     "id": "cq-h-genx-cdsale",
@@ -2060,7 +2089,8 @@
       "1991"
     ],
     "correctIndex": 2,
-    "banterHint": "Der glänzende Kreis kam vor den Playlists."
+    "banterHint": "Der glänzende Kreis kam vor den Playlists.",
+    "slang": "Na ja,"
   },
   {
     "id": "cq-e-geny-wiki",
@@ -2076,7 +2106,8 @@
       "MySpace"
     ],
     "correctIndex": 0,
-    "banterHint": "Der Bearbeiten-Knopf ist die ganze Idee."
+    "banterHint": "Der Bearbeiten-Knopf ist die ganze Idee.",
+    "slang": "Nur so,"
   },
   {
     "id": "cq-e-geny-sms",
@@ -2092,7 +2123,8 @@
       "Secure Media Stream"
     ],
     "correctIndex": 0,
-    "banterHint": "Einhundertsechzig Zeichen, und viele Verabredungen."
+    "banterHint": "Einhundertsechzig Zeichen, und viele Verabredungen.",
+    "slang": "Nur so,"
   },
   {
     "id": "cq-h-geny-iphone",
@@ -2108,7 +2140,8 @@
       "Motorola"
     ],
     "correctIndex": 0,
-    "banterHint": "Die Tastatur wanderte aufs Glas."
+    "banterHint": "Die Tastatur wanderte aufs Glas.",
+    "slang": "Nur so,"
   },
   {
     "id": "cq-h-geny-facebook",
@@ -2124,7 +2157,8 @@
       "2004"
     ],
     "correctIndex": 1,
-    "banterHint": "Das Campus-Tor fiel im September."
+    "banterHint": "Das Campus-Tor fiel im September.",
+    "slang": "Nur so,"
   },
   {
     "id": "cq-h-geny-inbox",
@@ -2141,6 +2175,7 @@
     ],
     "correctIndex": 1,
     "banterHint": "Der ungelesene Stapel blieb höflich.",
+    "slang": "Nur so,",
     "funny": true,
     "structure": "joke"
   },
@@ -2159,6 +2194,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Die Kette behielt genau diesen Ton.",
+    "slang": "Nur so,",
     "structure": "colour"
   },
   {
@@ -2176,6 +2212,7 @@
     ],
     "correctIndex": 0,
     "banterHint": "Der Schulanfang im Buch kommt nach dem Buch.",
+    "slang": "Nur so,",
     "structure": "when"
   },
   {
@@ -2193,6 +2230,7 @@
     ],
     "correctIndex": 0,
     "banterHint": "Die Währung hatte einen Geburtstag vor dem Bargeld.",
+    "slang": "Nur so,",
     "funny": true,
     "humorous": true,
     "injection": "wordplay",
@@ -2217,7 +2255,8 @@
       "Brisbane"
     ],
     "correctIndex": 2,
-    "banterHint": "Die Hafenstadt ist berühmt. Die Hauptstadt ist die geplante."
+    "banterHint": "Die Hafenstadt ist berühmt. Die Hauptstadt ist die geplante.",
+    "slang": "Nur so,"
   },
   {
     "id": "cq-h-geny-html",
@@ -2233,7 +2272,8 @@
       "Hyperlink Text Main Language"
     ],
     "correctIndex": 2,
-    "banterHint": "Die Seite, die du liest, ist darin geschrieben."
+    "banterHint": "Die Seite, die du liest, ist darin geschrieben.",
+    "slang": "Nur so,"
   },
   {
     "id": "cq-e-genz-gif",
@@ -2249,7 +2289,8 @@
       "Graphics Interchange Format"
     ],
     "correctIndex": 3,
-    "banterHint": "Ein Bild, das nicht stillsitzen will."
+    "banterHint": "Ein Bild, das nicht stillsitzen will.",
+    "slang": "Ganz ehrlich,"
   },
   {
     "id": "cq-e-genz-vr",
@@ -2265,7 +2306,8 @@
       "Video Relay"
     ],
     "correctIndex": 2,
-    "banterHint": "Der Raum bleibt. Die Sicht nicht."
+    "banterHint": "Der Raum bleibt. Die Sicht nicht.",
+    "slang": "Ganz ehrlich,"
   },
   {
     "id": "cq-h-genz-bytedance",
@@ -2281,7 +2323,8 @@
       "ByteDance"
     ],
     "correctIndex": 3,
-    "banterHint": "Die App ist der berühmte Teil. Die Firma ist leiser."
+    "banterHint": "Die App ist der berühmte Teil. Die Firma ist leiser.",
+    "slang": "Ganz ehrlich,"
   },
   {
     "id": "cq-h-genz-hashtag",
@@ -2297,7 +2340,8 @@
       "Ein Sternchen"
     ],
     "correctIndex": 0,
-    "banterHint": "Ein Zeichen, und die Beiträge finden sich."
+    "banterHint": "Ein Zeichen, und die Beiträge finden sich.",
+    "slang": "Ganz ehrlich,"
   },
   {
     "id": "cq-e-genz-emoji",
@@ -2314,6 +2358,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Die Nachricht kam trotzdem freundlich an.",
+    "slang": "Ganz ehrlich,",
     "funny": true,
     "structure": "joke"
   },
@@ -2332,6 +2377,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Die Schallwellen liegen darauf.",
+    "slang": "Ganz ehrlich,",
     "structure": "colour"
   },
   {
@@ -2349,6 +2395,7 @@
     ],
     "correctIndex": 1,
     "banterHint": "Die quadratischen Fotos kamen in dem Jahr.",
+    "slang": "Ganz ehrlich,",
     "structure": "when"
   },
   {
@@ -2366,6 +2413,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Der Stopparm ist der Hinweis. Kinder sehen diese Farbe vom Bordstein.",
+    "slang": "Ganz ehrlich,",
     "funny": true,
     "humorous": true,
     "injection": "callback",
@@ -2390,7 +2438,8 @@
       "15"
     ],
     "correctIndex": 2,
-    "banterHint": "Die Bank schaut zu. Gezählt werden die auf dem Rasen."
+    "banterHint": "Die Bank schaut zu. Gezählt werden die auf dem Rasen.",
+    "slang": "Ganz ehrlich,"
   },
   {
     "id": "cq-h-genz-mohs",
@@ -2406,7 +2455,8 @@
       "Topas"
     ],
     "correctIndex": 2,
-    "banterHint": "Die Skala endet bei zehn. Dieses sitzt dort."
+    "banterHint": "Die Skala endet bei zehn. Dieses sitzt dort.",
+    "slang": "Ganz ehrlich,"
   },
   {
     "id": "cq-e-alpha-cat",
@@ -2423,6 +2473,7 @@
     ],
     "correctIndex": 1,
     "banterHint": "Sie landet trotzdem auf den Pfoten.",
+    "slang": "Kurz mal,",
     "funny": true,
     "structure": "joke"
   },
@@ -2441,6 +2492,7 @@
     ],
     "correctIndex": 2,
     "banterHint": "Jedes Buch bekam eine Mitfahrgelegenheit.",
+    "slang": "Kurz mal,",
     "funny": true,
     "structure": "joke"
   },
@@ -2459,6 +2511,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Der Radiergummi hielt ihm den Rücken frei.",
+    "slang": "Kurz mal,",
     "funny": true,
     "structure": "joke"
   },
@@ -2477,6 +2530,7 @@
     ],
     "correctIndex": 0,
     "banterHint": "Kapitel für Kapitel, immer freundlich.",
+    "slang": "Kurz mal,",
     "funny": true,
     "structure": "joke"
   },
@@ -2495,6 +2549,7 @@
     ],
     "correctIndex": 1,
     "banterHint": "Der Raum blieb quakend freundlich.",
+    "slang": "Kurz mal,",
     "funny": true,
     "structure": "colour"
   },
@@ -2512,7 +2567,8 @@
       "7"
     ],
     "correctIndex": 2,
-    "banterHint": "Die Reihe wurde 2006 kürzer und blieb freundlich."
+    "banterHint": "Die Reihe wurde 2006 kürzer und blieb freundlich.",
+    "slang": "Kurz mal,"
   },
   {
     "id": "cq-e-alpha-banana",
@@ -2529,6 +2585,7 @@
     ],
     "correctIndex": 0,
     "banterHint": "Die Geschichte darf wachsen. Die Schale bleibt die helle.",
+    "slang": "Kurz mal,",
     "funny": true,
     "humorous": true,
     "injection": "escalation",
@@ -2553,7 +2610,8 @@
       "364"
     ],
     "correctIndex": 1,
-    "banterHint": "Der Februar leiht sich einen Tag und gibt das Jahr zurück."
+    "banterHint": "Der Februar leiht sich einen Tag und gibt das Jahr zurück.",
+    "slang": "Kurz mal,"
   },
   {
     "id": "cq-h-alpha-elephant",
@@ -2569,7 +2627,8 @@
       "Afrikanischer Elefant"
     ],
     "correctIndex": 3,
-    "banterHint": "Der Wal nimmt den Ozean. Dieses bleibt am Boden."
+    "banterHint": "Der Wal nimmt den Ozean. Dieses bleibt am Boden.",
+    "slang": "Kurz mal,"
   },
   {
     "id": "cq-e-multi-guitar",
@@ -2585,7 +2644,8 @@
       "Zwölf"
     ],
     "correctIndex": 1,
-    "banterHint": "Zwölfsaiter sind die lauteren Verwandten."
+    "banterHint": "Zwölfsaiter sind die lauteren Verwandten.",
+    "slang": "Für alle,"
   },
   {
     "id": "cq-e-multi-boil",
@@ -2601,7 +2661,8 @@
       "120"
     ],
     "correctIndex": 0,
-    "banterHint": "Auf dem Berg ist der Kessel etwas früher fertig."
+    "banterHint": "Auf dem Berg ist der Kessel etwas früher fertig.",
+    "slang": "Für alle,"
   },
   {
     "id": "cq-h-multi-photo",
@@ -2617,7 +2678,8 @@
       "Sauerstoff"
     ],
     "correctIndex": 2,
-    "banterHint": "Sauerstoff geben sie dem Raum zurück."
+    "banterHint": "Sauerstoff geben sie dem Raum zurück.",
+    "slang": "Für alle,"
   },
   {
     "id": "cq-h-multi-pitch",
@@ -2633,7 +2695,8 @@
       "13"
     ],
     "correctIndex": 0,
-    "banterHint": "Der Torwart zählt mit."
+    "banterHint": "Der Torwart zählt mit.",
+    "slang": "Für alle,"
   },
   {
     "id": "cq-h-multi-compass",
@@ -2650,6 +2713,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Norden blieb eine freundliche Richtung.",
+    "slang": "Für alle,",
     "funny": true,
     "structure": "joke"
   },
@@ -2668,6 +2732,7 @@
     ],
     "correctIndex": 0,
     "banterHint": "Der Schatten der Erde leiht diesen Ton.",
+    "slang": "Für alle,",
     "structure": "colour"
   },
   {
@@ -2685,6 +2750,7 @@
     ],
     "correctIndex": 0,
     "banterHint": "Die andere Person hat die gestellte Frage beantwortet.",
+    "slang": "Für alle,",
     "funny": true,
     "humorous": true,
     "injection": "dialogue",
@@ -2710,6 +2776,7 @@
     ],
     "correctIndex": 3,
     "banterHint": "Gleicher Weg. Andere Struktur. Der Rumpf war nicht das Datum.",
+    "slang": "Für alle,",
     "funny": true,
     "humorous": true,
     "renegade": true,
@@ -2735,7 +2802,8 @@
       "6"
     ],
     "correctIndex": 0,
-    "banterHint": "Zähl die flachen Kanten, nicht den Pfosten."
+    "banterHint": "Zähl die flachen Kanten, nicht den Pfosten.",
+    "slang": "Für alle,"
   },
   {
     "id": "cq-e-multi-sky",
@@ -2752,6 +2820,7 @@
     ],
     "correctIndex": 2,
     "banterHint": "Zurück in die Szene. Die Antwort ist die gewöhnliche.",
+    "slang": "Für alle,",
     "funny": true,
     "humorous": true,
     "injection": "aside",
@@ -2776,7 +2845,8 @@
       "Pazifischer Ozean"
     ],
     "correctIndex": 3,
-    "banterHint": "Die Karte gibt ihm das breiteste Blau."
+    "banterHint": "Die Karte gibt ihm das breiteste Blau.",
+    "slang": "Für alle,"
   },
   {
     "id": "cq-h-multi-piano",
@@ -2792,7 +2862,8 @@
       "92"
     ],
     "correctIndex": 2,
-    "banterHint": "Zähl die schwarzen und die weißen. Die Summe ist die lange."
+    "banterHint": "Zähl die schwarzen und die weißen. Die Summe ist die lange.",
+    "slang": "Für alle,"
   },
   {
     "id": "ga-joke-clock",

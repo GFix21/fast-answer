@@ -261,6 +261,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "Il retombe quand même sur ses pattes.",
+      "slang": "Vite fait,",
       "funny": true,
       "structure": "joke"
     },
@@ -279,6 +280,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Chaque livre a eu un coup de pouce.",
+      "slang": "Vite fait,",
       "funny": true,
       "structure": "joke"
     },
@@ -297,6 +299,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "L'efface veillait sur lui.",
+      "slang": "Vite fait,",
       "funny": true,
       "structure": "joke"
     },
@@ -315,6 +318,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Chapitre après chapitre, toujours gentil.",
+      "slang": "Vite fait,",
       "funny": true,
       "structure": "joke"
     },
@@ -333,6 +337,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "La salle est restée croassante.",
+      "slang": "Vite fait,",
       "funny": true,
       "structure": "colour"
     },
@@ -350,7 +355,8 @@
         "7"
       ],
       "correctIndex": 2,
-      "banterHint": "La liste a raccourci en 2006, et elle est restée gentille."
+      "banterHint": "La liste a raccourci en 2006, et elle est restée gentille.",
+      "slang": "Vite fait,"
     },
     {
       "id": "cq-e-alpha-banana",
@@ -367,6 +373,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "L'histoire peut grossir. La peau reste la vive.",
+      "slang": "Vite fait,",
       "funny": true,
       "humorous": true,
       "injection": "escalation",
@@ -391,7 +398,8 @@
         "364"
       ],
       "correctIndex": 1,
-      "banterHint": "Février emprunte une journée, puis rend l'année."
+      "banterHint": "Février emprunte une journée, puis rend l'année.",
+      "slang": "Vite fait,"
     },
     {
       "id": "cq-h-alpha-elephant",
@@ -407,7 +415,8 @@
         "L'éléphant d'Afrique"
       ],
       "correctIndex": 3,
-      "banterHint": "La baleine prend l'océan. Celui-ci reste au sol."
+      "banterHint": "La baleine prend l'océan. Celui-ci reste au sol.",
+      "slang": "Vite fait,"
     },
     {
       "id": "ga-joke-clock",

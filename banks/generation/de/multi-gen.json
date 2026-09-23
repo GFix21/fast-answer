@@ -178,7 +178,8 @@
         "Zwölf"
       ],
       "correctIndex": 1,
-      "banterHint": "Zwölfsaiter sind die lauteren Verwandten."
+      "banterHint": "Zwölfsaiter sind die lauteren Verwandten.",
+      "slang": "Für alle,"
     },
     {
       "id": "cq-e-multi-boil",
@@ -194,7 +195,8 @@
         "120"
       ],
       "correctIndex": 0,
-      "banterHint": "Auf dem Berg ist der Kessel etwas früher fertig."
+      "banterHint": "Auf dem Berg ist der Kessel etwas früher fertig.",
+      "slang": "Für alle,"
     },
     {
       "id": "cq-h-multi-photo",
@@ -210,7 +212,8 @@
         "Sauerstoff"
       ],
       "correctIndex": 2,
-      "banterHint": "Sauerstoff geben sie dem Raum zurück."
+      "banterHint": "Sauerstoff geben sie dem Raum zurück.",
+      "slang": "Für alle,"
     },
     {
       "id": "cq-h-multi-pitch",
@@ -226,7 +229,8 @@
         "13"
       ],
       "correctIndex": 0,
-      "banterHint": "Der Torwart zählt mit."
+      "banterHint": "Der Torwart zählt mit.",
+      "slang": "Für alle,"
     },
     {
       "id": "cq-h-multi-compass",
@@ -243,6 +247,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Norden blieb eine freundliche Richtung.",
+      "slang": "Für alle,",
       "funny": true,
       "structure": "joke"
     },
@@ -261,6 +266,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Der Schatten der Erde leiht diesen Ton.",
+      "slang": "Für alle,",
       "structure": "colour"
     },
     {
@@ -278,6 +284,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Die andere Person hat die gestellte Frage beantwortet.",
+      "slang": "Für alle,",
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
@@ -303,6 +310,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Gleicher Weg. Andere Struktur. Der Rumpf war nicht das Datum.",
+      "slang": "Für alle,",
       "funny": true,
       "humorous": true,
       "renegade": true,
@@ -328,7 +336,8 @@
         "6"
       ],
       "correctIndex": 0,
-      "banterHint": "Zähl die flachen Kanten, nicht den Pfosten."
+      "banterHint": "Zähl die flachen Kanten, nicht den Pfosten.",
+      "slang": "Für alle,"
     },
     {
       "id": "cq-e-multi-sky",
@@ -345,6 +354,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Zurück in die Szene. Die Antwort ist die gewöhnliche.",
+      "slang": "Für alle,",
       "funny": true,
       "humorous": true,
       "injection": "aside",
@@ -369,7 +379,8 @@
         "Pazifischer Ozean"
       ],
       "correctIndex": 3,
-      "banterHint": "Die Karte gibt ihm das breiteste Blau."
+      "banterHint": "Die Karte gibt ihm das breiteste Blau.",
+      "slang": "Für alle,"
     },
     {
       "id": "cq-h-multi-piano",
@@ -385,7 +396,8 @@
         "92"
       ],
       "correctIndex": 2,
-      "banterHint": "Zähl die schwarzen und die weißen. Die Summe ist die lange."
+      "banterHint": "Zähl die schwarzen und die weißen. Die Summe ist die lange.",
+      "slang": "Für alle,"
     }
   ]
 }

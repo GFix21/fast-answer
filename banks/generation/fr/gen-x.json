@@ -290,7 +290,8 @@
         "Game Boy"
       ],
       "correctIndex": 3,
-      "banterHint": "Tetris a voyagé dans beaucoup de poches."
+      "banterHint": "Tetris a voyagé dans beaucoup de poches.",
+      "slang": "Bref,"
     },
     {
       "id": "cq-e-genx-pdf",
@@ -306,7 +307,8 @@
         "Portable Document Format"
       ],
       "correctIndex": 3,
-      "banterHint": "La page a appris à voyager."
+      "banterHint": "La page a appris à voyager.",
+      "slang": "Bref,"
     },
     {
       "id": "cq-h-genx-ram",
@@ -322,7 +324,8 @@
         "Remote Access Mainframe"
       ],
       "correctIndex": 2,
-      "banterHint": "Une mémoire rapide, qui oublie quand le courant coupe."
+      "banterHint": "Une mémoire rapide, qui oublie quand le courant coupe.",
+      "slang": "Bref,"
     },
     {
       "id": "cq-h-genx-cd",
@@ -338,7 +341,8 @@
         "Crystal Drive"
       ],
       "correctIndex": 2,
-      "banterHint": "Un petit miroir qui tenait un album."
+      "banterHint": "Un petit miroir qui tenait un album.",
+      "slang": "Bref,"
     },
     {
       "id": "cq-e-genx-cassette",
@@ -355,6 +359,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "La face B a quand même eu son écoute.",
+      "slang": "Bref,",
       "funny": true,
       "structure": "joke"
     },
@@ -373,6 +378,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Les trois autres portent le reste.",
+      "slang": "Bref,",
       "structure": "colour"
     },
     {
@@ -390,6 +396,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Les anciennes balles étaient blanches. La règle est la vive.",
+      "slang": "Bref,",
       "structure": "colour"
     },
     {
@@ -407,6 +414,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "L'idée est plus vieille. La page publique est cette date.",
+      "slang": "Bref,",
       "funny": true,
       "humorous": true,
       "injection": "misdirection",
@@ -431,7 +439,8 @@
         "Mars"
       ],
       "correctIndex": 0,
-      "banterHint": "La tache est une tempête plus vieille que bien des bulletins."
+      "banterHint": "La tache est une tempête plus vieille que bien des bulletins.",
+      "slang": "Bref,"
     },
     {
       "id": "cq-h-genx-cdsale",
@@ -447,7 +456,8 @@
         "1991"
       ],
       "correctIndex": 2,
-      "banterHint": "Le cercle brillant est arrivé avant les listes d'écoute."
+      "banterHint": "Le cercle brillant est arrivé avant les listes d'écoute.",
+      "slang": "Bref,"
     }
   ]
 }

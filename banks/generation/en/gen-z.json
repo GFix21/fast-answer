@@ -286,7 +286,8 @@
         "Graphics Interchange Format"
       ],
       "correctIndex": 3,
-      "banterHint": "A picture that refuses to sit still."
+      "banterHint": "A picture that refuses to sit still.",
+      "slang": "Low-key,"
     },
     {
       "id": "cq-e-genz-vr",
@@ -302,7 +303,8 @@
         "Video Relay"
       ],
       "correctIndex": 2,
-      "banterHint": "The room stays put. The view does not."
+      "banterHint": "The room stays put. The view does not.",
+      "slang": "Low-key,"
     },
     {
       "id": "cq-h-genz-bytedance",
@@ -318,7 +320,8 @@
         "ByteDance"
       ],
       "correctIndex": 3,
-      "banterHint": "The app is the famous part. The company is quieter."
+      "banterHint": "The app is the famous part. The company is quieter.",
+      "slang": "Low-key,"
     },
     {
       "id": "cq-h-genz-hashtag",
@@ -334,7 +337,8 @@
         "An asterisk"
       ],
       "correctIndex": 0,
-      "banterHint": "One mark, and the posts find each other."
+      "banterHint": "One mark, and the posts find each other.",
+      "slang": "Low-key,"
     },
     {
       "id": "cq-e-genz-emoji",
@@ -351,6 +355,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "The message still landed kindly.",
+      "slang": "Low-key,",
       "funny": true,
       "structure": "joke"
     },
@@ -369,6 +374,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "The sound waves sit on top of it.",
+      "slang": "Low-key,",
       "structure": "colour"
     },
     {
@@ -386,6 +392,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "The square photos showed up in that year.",
+      "slang": "Low-key,",
       "structure": "when"
     },
     {
@@ -403,6 +410,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "The stop arm is the clue. Kids spot that paint from the curb.",
+      "slang": "Low-key,",
       "funny": true,
       "humorous": true,
       "injection": "callback",
@@ -427,7 +435,8 @@
         "15"
       ],
       "correctIndex": 2,
-      "banterHint": "The bench watches. The count is the ones on the grass."
+      "banterHint": "The bench watches. The count is the ones on the grass.",
+      "slang": "Low-key,"
     },
     {
       "id": "cq-h-genz-mohs",
@@ -443,7 +452,8 @@
         "Topaz"
       ],
       "correctIndex": 2,
-      "banterHint": "The scale stops at ten. This one sits there."
+      "banterHint": "The scale stops at ten. This one sits there.",
+      "slang": "Low-key,"
     }
   ]
 }

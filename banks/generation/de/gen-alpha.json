@@ -261,6 +261,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "Sie landet trotzdem auf den Pfoten.",
+      "slang": "Kurz mal,",
       "funny": true,
       "structure": "joke"
     },
@@ -279,6 +280,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Jedes Buch bekam eine Mitfahrgelegenheit.",
+      "slang": "Kurz mal,",
       "funny": true,
       "structure": "joke"
     },
@@ -297,6 +299,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Der Radiergummi hielt ihm den Rücken frei.",
+      "slang": "Kurz mal,",
       "funny": true,
       "structure": "joke"
     },
@@ -315,6 +318,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Kapitel für Kapitel, immer freundlich.",
+      "slang": "Kurz mal,",
       "funny": true,
       "structure": "joke"
     },
@@ -333,6 +337,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "Der Raum blieb quakend freundlich.",
+      "slang": "Kurz mal,",
       "funny": true,
       "structure": "colour"
     },
@@ -350,7 +355,8 @@
         "7"
       ],
       "correctIndex": 2,
-      "banterHint": "Die Reihe wurde 2006 kürzer und blieb freundlich."
+      "banterHint": "Die Reihe wurde 2006 kürzer und blieb freundlich.",
+      "slang": "Kurz mal,"
     },
     {
       "id": "cq-e-alpha-banana",
@@ -367,6 +373,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Die Geschichte darf wachsen. Die Schale bleibt die helle.",
+      "slang": "Kurz mal,",
       "funny": true,
       "humorous": true,
       "injection": "escalation",
@@ -391,7 +398,8 @@
         "364"
       ],
       "correctIndex": 1,
-      "banterHint": "Der Februar leiht sich einen Tag und gibt das Jahr zurück."
+      "banterHint": "Der Februar leiht sich einen Tag und gibt das Jahr zurück.",
+      "slang": "Kurz mal,"
     },
     {
       "id": "cq-h-alpha-elephant",
@@ -407,7 +415,8 @@
         "Afrikanischer Elefant"
       ],
       "correctIndex": 3,
-      "banterHint": "Der Wal nimmt den Ozean. Dieses bleibt am Boden."
+      "banterHint": "Der Wal nimmt den Ozean. Dieses bleibt am Boden.",
+      "slang": "Kurz mal,"
     },
     {
       "id": "ga-joke-clock",

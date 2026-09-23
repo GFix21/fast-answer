@@ -236,6 +236,7 @@ const state = {
   genAlphaOpen: false,
   genAlphaAbout: "",
   genAlphaNote: "",
+  reviewGen: "",
   dojo: null,
   seatBots: [],
   guests: [],
@@ -942,7 +943,9 @@ function buildLockdownQuestions(avoidIds) {
   const prepared = cohort?.lockdownPrepared;
   if (Array.isArray(prepared) && prepared.length >= LOCKDOWN_N) return prepared.slice(0, LOCKDOWN_N);
   const players = playersForDeal();
-  const qs = lockdownSet(players, cohort?.packs, avoidIds, LOCKDOWN_N);
+  const qs = lockdownSet(players, cohort?.packs, avoidIds, LOCKDOWN_N, {
+    refreshes: cohort?.lockdownRefreshes || 0,
+  });
   if (qs.length >= LOCKDOWN_N) return qs;
   return leftoverQs(true).slice(0, LOCKDOWN_N);
 }
@@ -2909,8 +2912,19 @@ function dojoChrome(inner) {
   return `<div class="dojo-stage">${inner}${genAlphaReviewHTML()}</div>`;
 }
 
+function reviewGeneration() {
+  const picked = normalizeGeneration(state.reviewGen);
+  if (GENERATIONS.includes(picked)) return picked;
+  return playerGeneration(state.profile) || "gen-alpha";
+}
+
+function questionsForReviewGen() {
+  const gen = reviewGeneration();
+  return (state.questions || []).filter((q) => normalizeGeneration(q.generation) === gen);
+}
+
 function genAlphaQuestions() {
-  return (state.questions || []).filter((q) => normalizeGeneration(q.generation) === "gen-alpha");
+  return questionsForReviewGen();
 }
 
 function genAlphaMailHref() {
@@ -2927,17 +2941,24 @@ function genAlphaMailHref() {
   return `mailto:${LOUIS_MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-/** Read-only Gen Alpha list, then a note that emails gmgbrandlable. */
+/** Read-only list for the generation picked in Dojo, then a note that emails gmgbrandlable. */
 function genAlphaReviewHTML() {
   const open = state.genAlphaOpen === true;
-  const list = genAlphaQuestions();
+  const gen = reviewGeneration();
+  const list = questionsForReviewGen();
   const picked = state.genAlphaAbout || list[0]?.id || "";
+  const lead = gen === "gen-alpha" ? tt("genAlphaReviewLead") : tt("genReviewLead");
   return `<section class="gen-alpha-review ${open ? "open" : ""}">
     <button type="button" class="acc-h" id="genAlphaToggle">${escapeHtml(tt("genAlphaReview"))}</button>
     ${open ? `<div class="gen-alpha-body">
-      <p class="meta">${escapeHtml(tt("genAlphaReviewLead"))}</p>
+      <label class="field" for="dojoGen">${escapeHtml(tt("pickGen"))}</label>
+      <select class="gen-select" id="dojoGen">
+        ${GENERATIONS.map((g) => `<option value="${g}" ${g === gen ? "selected" : ""}>${escapeHtml(genLabel(g))}</option>`).join("")}
+      </select>
+      <p class="meta">${escapeHtml(lead)}</p>
       ${list.length ? `<ol class="gen-alpha-list">
         ${list.map((q) => `<li>
+          ${q.slang ? `<p class="q-slang">${escapeHtml(q.slang)}</p>` : ""}
           <p>${escapeHtml(q.prompt)}</p>
           <ol class="gen-alpha-choices">
             ${(q.choices || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}
@@ -2978,6 +2999,7 @@ function dojoBody() {
       <p class="meta" id="dojoClock">${showAns
         ? (reveal ? tt("dojoN", n, PLACE_N) : `${tt("dojoN", n, PLACE_N)} · ${tt("dojoTap")}`)
         : tt("dojoRead", d.readLeft ?? PLACE_READ_S)}</p>
+      ${d.q.slang ? `<p class="q-slang">${escapeHtml(d.q.slang)}</p>` : ""}
       <p class="dojo-q">${escapeHtml(d.q.prompt)}</p>
       ${showAns ? `<div class="dojo-ans">
         ${d.q.choices.map((c, i) => {
@@ -3689,12 +3711,16 @@ function playHTML() {
   else if (waiterPad) prompt = tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S);
   else if (pad && !lockdownPlay && !lockdownIntro) prompt = state.phase === "read" ? tt("padRead") : tt("padBuzz");
   else prompt = escapeHtml(q.prompt);
+  const slang = q?.slang && prompt === escapeHtml(q.prompt)
+    ? `<p class="q-slang">${escapeHtml(q.slang)}</p>`
+    : "";
+  const backMore = q?.lockdownJump === "back-more" ? ` · ${tt("lockdownBackMore")}` : "";
   const cat = readyPhase
     ? tt("ready")
     : endPhase
       ? "END"
       : (ld
-        ? `Lockdown · ${ld.phase === "play" || ld.phase === "flash" ? `${ld.qi + 1}/${LOCKDOWN_N}` : ld.phase}`
+        ? `Lockdown · ${ld.phase === "play" || ld.phase === "flash" ? `${ld.qi + 1}/${LOCKDOWN_N}${backMore}` : ld.phase}`
         : (q && !pad ? escapeHtml([q.categoryTitle, questionCredit(q)].filter(Boolean).join(" · ")) : (pad ? tt("yourPad") : "")));
   const tier = readyPhase ? "READY" : (endPhase ? "END" : (ld ? "LOCKDOWN" : (q ? q.tier.toUpperCase() : "END")));
   const n = readyPhase || ld || endPhase ? "" : ` · ${state.i + 1}/${state.qs.length || ROUND}`;
@@ -3737,6 +3763,7 @@ function playHTML() {
         <div class="accord">
           ${acc("ask", tt("phoneAsk"), "", `
             <p class="cat">${cat}</p>
+            ${slang}
             <p class="qtext">${prompt}</p>
             <p class="meta" id="clock">${endPhase ? scoreboard() : clockText()}</p>
             ${rivalsHTML()}
@@ -3776,6 +3803,7 @@ function playHTML() {
       </div></div>` : `<div class="qwrap">
         <div class="qcard ${ld ? "lock" : ""} ${state.mapLive ? "map-on" : ""}">
           <p class="cat">${cat}</p>
+          ${slang}
           <p class="qtext">${prompt}</p>
           <p class="meta" id="clock">${clockText()}</p>
           ${rivalsHTML()}
@@ -3989,6 +4017,12 @@ function bindGenAlphaReview() {
   const toggle = $("#genAlphaToggle");
   if (toggle) toggle.onclick = () => {
     state.genAlphaOpen = !state.genAlphaOpen;
+    paint(true);
+  };
+  const genPick = $("#dojoGen");
+  if (genPick) genPick.onchange = () => {
+    state.reviewGen = genPick.value;
+    state.genAlphaAbout = "";
     paint(true);
   };
   const about = $("#genAlphaAbout");

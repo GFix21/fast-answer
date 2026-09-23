@@ -286,7 +286,8 @@
         "Graphics Interchange Format"
       ],
       "correctIndex": 3,
-      "banterHint": "Ein Bild, das nicht stillsitzen will."
+      "banterHint": "Ein Bild, das nicht stillsitzen will.",
+      "slang": "Ganz ehrlich,"
     },
     {
       "id": "cq-e-genz-vr",
@@ -302,7 +303,8 @@
         "Video Relay"
       ],
       "correctIndex": 2,
-      "banterHint": "Der Raum bleibt. Die Sicht nicht."
+      "banterHint": "Der Raum bleibt. Die Sicht nicht.",
+      "slang": "Ganz ehrlich,"
     },
     {
       "id": "cq-h-genz-bytedance",
@@ -318,7 +320,8 @@
         "ByteDance"
       ],
       "correctIndex": 3,
-      "banterHint": "Die App ist der berühmte Teil. Die Firma ist leiser."
+      "banterHint": "Die App ist der berühmte Teil. Die Firma ist leiser.",
+      "slang": "Ganz ehrlich,"
     },
     {
       "id": "cq-h-genz-hashtag",
@@ -334,7 +337,8 @@
         "Ein Sternchen"
       ],
       "correctIndex": 0,
-      "banterHint": "Ein Zeichen, und die Beiträge finden sich."
+      "banterHint": "Ein Zeichen, und die Beiträge finden sich.",
+      "slang": "Ganz ehrlich,"
     },
     {
       "id": "cq-e-genz-emoji",
@@ -351,6 +355,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Die Nachricht kam trotzdem freundlich an.",
+      "slang": "Ganz ehrlich,",
       "funny": true,
       "structure": "joke"
     },
@@ -369,6 +374,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Die Schallwellen liegen darauf.",
+      "slang": "Ganz ehrlich,",
       "structure": "colour"
     },
     {
@@ -386,6 +392,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "Die quadratischen Fotos kamen in dem Jahr.",
+      "slang": "Ganz ehrlich,",
       "structure": "when"
     },
     {
@@ -403,6 +410,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Der Stopparm ist der Hinweis. Kinder sehen diese Farbe vom Bordstein.",
+      "slang": "Ganz ehrlich,",
       "funny": true,
       "humorous": true,
       "injection": "callback",
@@ -427,7 +435,8 @@
         "15"
       ],
       "correctIndex": 2,
-      "banterHint": "Die Bank schaut zu. Gezählt werden die auf dem Rasen."
+      "banterHint": "Die Bank schaut zu. Gezählt werden die auf dem Rasen.",
+      "slang": "Ganz ehrlich,"
     },
     {
       "id": "cq-h-genz-mohs",
@@ -443,7 +452,8 @@
         "Topas"
       ],
       "correctIndex": 2,
-      "banterHint": "Die Skala endet bei zehn. Dieses sitzt dort."
+      "banterHint": "Die Skala endet bei zehn. Dieses sitzt dort.",
+      "slang": "Ganz ehrlich,"
     }
   ]
 }

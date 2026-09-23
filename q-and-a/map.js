@@ -227,6 +227,7 @@ export function toFastAnswerQuestion(q) {
     correctIndex: q.correctIndex,
     banterHint: q.banterHint ?? null,
   };
+  if (q.slang) base.slang = q.slang;
   if (q.funny === true) base.funny = true;
   if (q.humorous === true) base.humorous = true;
   if (q.renegade === true) base.renegade = true;

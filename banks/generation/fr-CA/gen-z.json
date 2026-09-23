@@ -286,7 +286,8 @@
         "Graphics Interchange Format"
       ],
       "correctIndex": 3,
-      "banterHint": "Une image qui refuse de rester tranquille."
+      "banterHint": "Une image qui refuse de rester tranquille.",
+      "slang": "Sans chichi,"
     },
     {
       "id": "cq-e-genz-vr",
@@ -302,7 +303,8 @@
         "Video Relay"
       ],
       "correctIndex": 2,
-      "banterHint": "La pièce reste là. Pas la vue."
+      "banterHint": "La pièce reste là. Pas la vue.",
+      "slang": "Sans chichi,"
     },
     {
       "id": "cq-h-genz-bytedance",
@@ -318,7 +320,8 @@
         "ByteDance"
       ],
       "correctIndex": 3,
-      "banterHint": "L'appli est la partie connue. La compagnie, moins."
+      "banterHint": "L'appli est la partie connue. La compagnie, moins.",
+      "slang": "Sans chichi,"
     },
     {
       "id": "cq-h-genz-hashtag",
@@ -334,7 +337,8 @@
         "Un astérisque"
       ],
       "correctIndex": 0,
-      "banterHint": "Une marque, et les publications se retrouvent."
+      "banterHint": "Une marque, et les publications se retrouvent.",
+      "slang": "Sans chichi,"
     },
     {
       "id": "cq-e-genz-emoji",
@@ -351,6 +355,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Le message est quand même arrivé gentiment.",
+      "slang": "Sans chichi,",
       "funny": true,
       "structure": "joke"
     },
@@ -369,6 +374,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Les ondes sonores sont posées dessus.",
+      "slang": "Sans chichi,",
       "structure": "colour"
     },
     {
@@ -386,6 +392,7 @@
       ],
       "correctIndex": 1,
       "banterHint": "Les photos carrées sont arrivées cette année-là.",
+      "slang": "Sans chichi,",
       "structure": "when"
     },
     {
@@ -403,6 +410,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Le bras d'arrêt est l'indice. Les enfants voient cette peinture du trottoir.",
+      "slang": "Sans chichi,",
       "funny": true,
       "humorous": true,
       "injection": "callback",
@@ -427,7 +435,8 @@
         "15"
       ],
       "correctIndex": 2,
-      "banterHint": "Le banc regarde. Le compte, ce sont ceux sur le gazon."
+      "banterHint": "Le banc regarde. Le compte, ce sont ceux sur le gazon.",
+      "slang": "Sans chichi,"
     },
     {
       "id": "cq-h-genz-mohs",
@@ -443,7 +452,8 @@
         "La topaze"
       ],
       "correctIndex": 2,
-      "banterHint": "L'échelle arrête à dix. Celui-ci est là."
+      "banterHint": "L'échelle arrête à dix. Celui-ci est là.",
+      "slang": "Sans chichi,"
     }
   ]
 }

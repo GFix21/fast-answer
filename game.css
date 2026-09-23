@@ -295,6 +295,9 @@ img.brand{
   width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--line);
 }
 .thumb.empty{display:inline-block;background:color-mix(in oklab, var(--elev) 90%, transparent)}
+.q-slang{
+  margin:0 0 6px;font-size:13px;letter-spacing:.04em;color:#f5d76e;
+}
 .dojo-q{
   margin:0 0 8px;font-family:var(--font-display);font-weight:600;
   font-size:clamp(14px,2.1vw,20px);line-height:1.25;letter-spacing:-.02em;color:var(--fg);

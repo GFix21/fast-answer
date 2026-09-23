@@ -276,7 +276,8 @@
         "L'âge d'or"
       ],
       "correctIndex": 0,
-      "banterHint": "Les orchestres jouaient fort. Le surnom est resté."
+      "banterHint": "Les orchestres jouaient fort. Le surnom est resté.",
+      "slang": "Dites,"
     },
     {
       "id": "cq-e-silent-vote",
@@ -292,7 +293,8 @@
         "Le 15e amendement"
       ],
       "correctIndex": 0,
-      "banterHint": "La file devant le bureau de vote a allongé, pour de bon."
+      "banterHint": "La file devant le bureau de vote a allongé, pour de bon.",
+      "slang": "Dites,"
     },
     {
       "id": "cq-h-silent-chamberlain",
@@ -308,7 +310,8 @@
         "Neville Chamberlain"
       ],
       "correctIndex": 3,
-      "banterHint": "Churchill a pris la place l'année d'après."
+      "banterHint": "Churchill a pris la place l'année d'après.",
+      "slang": "Dites,"
     },
     {
       "id": "cq-h-silent-assembly",
@@ -324,7 +327,8 @@
         "Londres"
       ],
       "correctIndex": 3,
-      "banterHint": "New York est devenu le siège quelques années plus tard."
+      "banterHint": "New York est devenu le siège quelques années plus tard.",
+      "slang": "Dites,"
     },
     {
       "id": "cq-e-silent-radio",
@@ -341,6 +345,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "La chanson passait quand même.",
+      "slang": "Dites,",
       "funny": true,
       "structure": "joke"
     },
@@ -359,6 +364,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Le cuivre a changé après des années de temps.",
+      "slang": "Dites,",
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
@@ -384,6 +390,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "La flèche était en place avant la fin de la décennie.",
+      "slang": "Dites,",
       "structure": "when"
     },
     {
@@ -401,6 +408,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "La devinette folle peut attendre. Le taxi est le vif.",
+      "slang": "Dites,",
       "funny": true,
       "humorous": true,
       "injection": "straight-man",
@@ -425,7 +433,8 @@
         "Konrad Adenauer"
       ],
       "correctIndex": 3,
-      "banterHint": "Il a pris le fauteuil en 1949 et l'a gardé longtemps."
+      "banterHint": "Il a pris le fauteuil en 1949 et l'a gardé longtemps.",
+      "slang": "Dites,"
     },
     {
       "id": "cq-h-silent-marshall",
@@ -441,7 +450,8 @@
         "1951"
       ],
       "correctIndex": 1,
-      "banterHint": "La guerre était finie. La reconstruction a une date de départ."
+      "banterHint": "La guerre était finie. La reconstruction a une date de départ.",
+      "slang": "Dites,"
     }
   ]
 }

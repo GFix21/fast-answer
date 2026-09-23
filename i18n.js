@@ -281,6 +281,9 @@ const STRINGS = {
     dealFromPacks: "Each player, one after another, gives the next question from the pack for their age.",
     packHeld: (label, held, target) => `${label} ${held}/${target}`,
     lockdownRefresh: "Refresh lockdown",
+    lockdownBackMore: "Further back",
+    pickGen: "Pick another Gen",
+    genReviewLead: "Read only. This is the generation you picked.",
     shufflePacks: "Shuffle packs",
     lockdownRefreshed: (n, max) => `Lockdown questions refreshed (${n} of ${max}).`,
     packsShuffled: "Those four refreshes are used. The questions already on this device were shuffled into new sets for every generation pack.",
@@ -570,6 +573,9 @@ const STRINGS = {
     dealFromPacks: "Chacun, à tour de rôle, donne la prochaine question du paquet de son âge.",
     packHeld: (label, held, target) => `${label} ${held}/${target}`,
     lockdownRefresh: "Rafraîchir le lockdown",
+    lockdownBackMore: "Plus loin en arrière",
+    pickGen: "Choisir une autre génération",
+    genReviewLead: "Lecture seule. C'est la génération choisie.",
     shufflePacks: "Mélanger les paquets",
     lockdownRefreshed: (n, max) => `Questions lockdown rafraîchies (${n} sur ${max}).`,
     packsShuffled: "Les 4 rafraîchissements sont utilisés. Les questions déjà sur cet appareil ont été mélangées en nouveaux jeux pour chaque paquet de génération.",
@@ -860,6 +866,9 @@ const STRINGS = {
     dealFromPacks: "Nacheinander gibt jede Person die nächste Frage aus dem Paket ihres Alters.",
     packHeld: (label, held, target) => `${label} ${held}/${target}`,
     lockdownRefresh: "Lockdown aktualisieren",
+    lockdownBackMore: "Weiter zurück",
+    pickGen: "Andere Generation wählen",
+    genReviewLead: "Nur lesen. Das ist die gewählte Generation.",
     shufflePacks: "Pakete mischen",
     lockdownRefreshed: (n, max) => `Lockdown-Fragen aktualisiert (${n} von ${max}).`,
     packsShuffled: "Die 4 Aktualisierungen sind aufgebraucht. Die Fragen auf diesem Gerät wurden für jedes Generationspaket neu gemischt.",
@@ -920,6 +929,9 @@ const STRINGS = {
 
 const QC_UI = {
   dirLangBody: "Choisis EN, France ou Québec dans le lobby. La préférence est enregistrée sur cet appareil. Québec charge la banque en français du Québec. France charge la banque de France. Mêmes ids et bonnes réponses.",
+  pickGen: "Choisis une autre génération",
+  genReviewLead: "Lecture seule. C'est la génération que tu as choisie.",
+  lockdownBackMore: "Plus loin en arrière",
 };
 
 export function t(locale, key, ...args) {

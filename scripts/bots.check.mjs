@@ -10,6 +10,7 @@ import { checkQuestion } from "../q-and-a/bots/checker.js";
 import { isColourPrompt, PLAY_TIERS } from "../q-and-a/bots/structures.js";
 import { COMEDY_STRUCTURES, injectHumor } from "../q-and-a/crackd-kerr.js";
 import { SHOW_JOKES, SHOW_RENEGADE_MAX } from "../lib/generation-deal.js";
+import { slangFor } from "../q-and-a/bots/slang.js";
 
 assert.equal(CREATORS.length, GENERATIONS.length);
 assert.deepEqual(CREATORS.map((c) => c.generation), GENERATIONS);
@@ -46,6 +47,11 @@ for (const style of ["dialogue", "straight-man", "rule-of-three", "misdirection"
 for (const loc of ["en", "fr", "fr-CA", "de"]) {
   const rows = creatorQuestions(loc);
   assert.ok(rows.length >= 28, loc);
+  for (const g of GENERATIONS) {
+    const voice = slangFor(g, loc);
+    assert.ok(voice, `${loc} ${g}`);
+    assert.ok(rows.some((q) => q.generation === g && q.slang === voice), `${loc} ${g}`);
+  }
   const jokes = rows.filter((q) => q.funny === true);
   const colours = rows.filter((q) => q.structure === "colour");
   const humorous = rows.filter((q) => q.humorous === true);

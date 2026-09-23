@@ -278,7 +278,8 @@
         "Otis Redding"
       ],
       "correctIndex": 2,
-      "banterHint": "The questions on that record still stand."
+      "banterHint": "The questions on that record still stand.",
+      "slang": "Right on,"
     },
     {
       "id": "cq-e-boomer-skylab",
@@ -294,7 +295,8 @@
         "Mir"
       ],
       "correctIndex": 2,
-      "banterHint": "A workshop with a very long commute."
+      "banterHint": "A workshop with a very long commute.",
+      "slang": "Right on,"
     },
     {
       "id": "cq-h-boomer-sesame",
@@ -310,7 +312,8 @@
         "1979"
       ],
       "correctIndex": 2,
-      "banterHint": "The street opened near the end of the sixties."
+      "banterHint": "The street opened near the end of the sixties.",
+      "slang": "Right on,"
     },
     {
       "id": "cq-h-boomer-earthday",
@@ -326,7 +329,8 @@
         "1984"
       ],
       "correctIndex": 1,
-      "banterHint": "The planet got a date on the calendar."
+      "banterHint": "The planet got a date on the calendar.",
+      "slang": "Right on,"
     },
     {
       "id": "cq-h-boomer-record",
@@ -343,6 +347,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "The next song still got a turn.",
+      "slang": "Right on,",
       "funny": true,
       "structure": "joke"
     },
@@ -361,6 +366,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "The title gives the paint job away.",
+      "slang": "Right on,",
       "structure": "colour"
     },
     {
@@ -378,6 +384,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "The name sounds like gold. The paint is the other one.",
+      "slang": "Right on,",
       "structure": "colour"
     },
     {
@@ -395,6 +402,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Two wrong dates, then the Friday it opened.",
+      "slang": "Right on,",
       "funny": true,
       "humorous": true,
       "injection": "rule-of-three",
@@ -419,7 +427,8 @@
         "Claudette Colvin"
       ],
       "correctIndex": 0,
-      "banterHint": "The seat stayed taken. The boycott followed."
+      "banterHint": "The seat stayed taken. The boycott followed.",
+      "slang": "Right on,"
     },
     {
       "id": "cq-h-boomer-gold",
@@ -435,7 +444,8 @@
         "Cu"
       ],
       "correctIndex": 0,
-      "banterHint": "Silver is the neighbour on the chart."
+      "banterHint": "Silver is the neighbour on the chart.",
+      "slang": "Right on,"
     }
   ]
 }

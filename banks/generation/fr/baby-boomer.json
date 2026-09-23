@@ -278,7 +278,8 @@
         "Otis Redding"
       ],
       "correctIndex": 2,
-      "banterHint": "Les questions de ce disque tiennent encore."
+      "banterHint": "Les questions de ce disque tiennent encore.",
+      "slang": "Tout à fait,"
     },
     {
       "id": "cq-e-boomer-skylab",
@@ -294,7 +295,8 @@
         "Mir"
       ],
       "correctIndex": 2,
-      "banterHint": "Un atelier avec un très long trajet."
+      "banterHint": "Un atelier avec un très long trajet.",
+      "slang": "Tout à fait,"
     },
     {
       "id": "cq-h-boomer-sesame",
@@ -310,7 +312,8 @@
         "1979"
       ],
       "correctIndex": 2,
-      "banterHint": "La rue a ouvert vers la fin des années soixante."
+      "banterHint": "La rue a ouvert vers la fin des années soixante.",
+      "slang": "Tout à fait,"
     },
     {
       "id": "cq-h-boomer-earthday",
@@ -326,7 +329,8 @@
         "1984"
       ],
       "correctIndex": 1,
-      "banterHint": "La planète a eu une date au calendrier."
+      "banterHint": "La planète a eu une date au calendrier.",
+      "slang": "Tout à fait,"
     },
     {
       "id": "cq-h-boomer-record",
@@ -343,6 +347,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "La chanson suivante a eu son tour.",
+      "slang": "Tout à fait,",
       "funny": true,
       "structure": "joke"
     },
@@ -361,6 +366,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Le titre donne déjà la peinture.",
+      "slang": "Tout à fait,",
       "structure": "colour"
     },
     {
@@ -378,6 +384,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Le nom sonne comme l'or. La peinture est l'autre.",
+      "slang": "Tout à fait,",
       "structure": "colour"
     },
     {
@@ -395,6 +402,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Deux mauvaises dates, puis le vendredi d'ouverture.",
+      "slang": "Tout à fait,",
       "funny": true,
       "humorous": true,
       "injection": "rule-of-three",
@@ -419,7 +427,8 @@
         "Claudette Colvin"
       ],
       "correctIndex": 0,
-      "banterHint": "La place est restée prise. Le boycott a suivi."
+      "banterHint": "La place est restée prise. Le boycott a suivi.",
+      "slang": "Tout à fait,"
     },
     {
       "id": "cq-h-boomer-gold",
@@ -435,7 +444,8 @@
         "Cu"
       ],
       "correctIndex": 0,
-      "banterHint": "L'argent est le voisin sur le tableau."
+      "banterHint": "L'argent est le voisin sur le tableau.",
+      "slang": "Tout à fait,"
     }
   ]
 }

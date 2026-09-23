@@ -178,7 +178,8 @@
         "Twelve"
       ],
       "correctIndex": 1,
-      "banterHint": "Twelve-string guitars are the extra-loud cousins."
+      "banterHint": "Twelve-string guitars are the extra-loud cousins.",
+      "slang": "For the room,"
     },
     {
       "id": "cq-e-multi-boil",
@@ -194,7 +195,8 @@
         "120"
       ],
       "correctIndex": 0,
-      "banterHint": "Up a mountain, the kettle finishes a little sooner."
+      "banterHint": "Up a mountain, the kettle finishes a little sooner.",
+      "slang": "For the room,"
     },
     {
       "id": "cq-h-multi-photo",
@@ -210,7 +212,8 @@
         "Oxygen"
       ],
       "correctIndex": 2,
-      "banterHint": "They hand oxygen back to the room."
+      "banterHint": "They hand oxygen back to the room.",
+      "slang": "For the room,"
     },
     {
       "id": "cq-h-multi-pitch",
@@ -226,7 +229,8 @@
         "13"
       ],
       "correctIndex": 0,
-      "banterHint": "The goalkeeper counts as one of them."
+      "banterHint": "The goalkeeper counts as one of them.",
+      "slang": "For the room,"
     },
     {
       "id": "cq-h-multi-compass",
@@ -243,6 +247,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "North stayed a kind direction.",
+      "slang": "For the room,",
       "funny": true,
       "structure": "joke"
     },
@@ -261,6 +266,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Earth's shadow lends that shade.",
+      "slang": "For the room,",
       "structure": "colour"
     },
     {
@@ -278,6 +284,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "The other person answered the question that was asked.",
+      "slang": "For the room,",
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
@@ -303,6 +310,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Same walk. Different structure. The hull was not the date.",
+      "slang": "For the room,",
       "funny": true,
       "humorous": true,
       "renegade": true,
@@ -328,7 +336,8 @@
         "6"
       ],
       "correctIndex": 0,
-      "banterHint": "Count the flat edges, not the pole."
+      "banterHint": "Count the flat edges, not the pole.",
+      "slang": "For the room,"
     },
     {
       "id": "cq-e-multi-sky",
@@ -345,6 +354,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Step back in. The answer is the ordinary one.",
+      "slang": "For the room,",
       "funny": true,
       "humorous": true,
       "injection": "aside",
@@ -369,7 +379,8 @@
         "Pacific Ocean"
       ],
       "correctIndex": 3,
-      "banterHint": "The map gives it the widest blue."
+      "banterHint": "The map gives it the widest blue.",
+      "slang": "For the room,"
     },
     {
       "id": "cq-h-multi-piano",
@@ -385,7 +396,8 @@
         "92"
       ],
       "correctIndex": 2,
-      "banterHint": "Count the black and the white. The total is the long one."
+      "banterHint": "Count the black and the white. The total is the long one.",
+      "slang": "For the room,"
     }
   ]
 }

@@ -5,6 +5,8 @@ import { GENERATIONS } from "../q-and-a/map.js";
 import {
   PACK_TARGET,
   LOCKDOWN_REFRESHES,
+  lockdownJumpGeneration,
+  lockdownSet,
   buildGenerationPacks,
   packSummary,
   dealRoundRobin,
@@ -146,6 +148,26 @@ assert.ok(weekly.some((q) => q.structure === "colour" && /^What colour is/i.test
 assert.equal(cohort.shows.length, 2);
 assert.equal(cohort.placement.length, placement.questions.length);
 assert.equal(cohort.lockdownRefreshes, 0);
+
+assert.equal(lockdownJumpGeneration("gen-x", "ahead"), "gen-y");
+assert.equal(lockdownJumpGeneration("gen-x", "behind"), "baby-boomer");
+assert.equal(lockdownJumpGeneration("baby-boomer", "behind"), "silent-generation");
+assert.equal(lockdownJumpGeneration("silent-generation", "ahead"), "baby-boomer");
+assert.equal(lockdownJumpGeneration("silent-generation", "behind"), "silent-generation");
+assert.equal(lockdownJumpGeneration("gen-alpha", "ahead"), "gen-alpha");
+const ahead = lockdownSet(players, packs, [], 3, { refreshes: 0 });
+assert.deepEqual(ahead.map((q) => q.fromGeneration), ["gen-y", "gen-alpha", "gen-x"]);
+assert.ok(ahead.every((q) => q.lockdownJump === "ahead" && q.tier !== "easy"));
+const silentBack = lockdownSet(
+  [{ id: "meryl", name: "Meryl", generation: "silent-generation" }],
+  packs,
+  [],
+  3,
+  { refreshes: 1 },
+);
+assert.equal(silentBack.length, 3);
+assert.ok(silentBack.every((q) => q.lockdownJump === "back-more" && q.fromGeneration === "silent-generation"));
+assert.ok(silentBack.every((q) => q.tier === "difficult" || q.tier === "extreme" || q.tier === "hard"));
 
 let refreshes = 0;
 let live = packs;

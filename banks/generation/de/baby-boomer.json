@@ -278,7 +278,8 @@
         "Otis Redding"
       ],
       "correctIndex": 2,
-      "banterHint": "Die Fragen auf der Platte gelten noch."
+      "banterHint": "Die Fragen auf der Platte gelten noch.",
+      "slang": "Na klar,"
     },
     {
       "id": "cq-e-boomer-skylab",
@@ -294,7 +295,8 @@
         "Mir"
       ],
       "correctIndex": 2,
-      "banterHint": "Eine Werkstatt mit sehr langem Arbeitsweg."
+      "banterHint": "Eine Werkstatt mit sehr langem Arbeitsweg.",
+      "slang": "Na klar,"
     },
     {
       "id": "cq-h-boomer-sesame",
@@ -310,7 +312,8 @@
         "1979"
       ],
       "correctIndex": 2,
-      "banterHint": "Die Straße öffnete gegen Ende der Sechziger."
+      "banterHint": "Die Straße öffnete gegen Ende der Sechziger.",
+      "slang": "Na klar,"
     },
     {
       "id": "cq-h-boomer-earthday",
@@ -326,7 +329,8 @@
         "1984"
       ],
       "correctIndex": 1,
-      "banterHint": "Der Planet bekam ein Datum im Kalender."
+      "banterHint": "Der Planet bekam ein Datum im Kalender.",
+      "slang": "Na klar,"
     },
     {
       "id": "cq-h-boomer-record",
@@ -343,6 +347,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Das nächste Lied kam trotzdem dran.",
+      "slang": "Na klar,",
       "funny": true,
       "structure": "joke"
     },
@@ -361,6 +366,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Der Titel verrät schon die Farbe.",
+      "slang": "Na klar,",
       "structure": "colour"
     },
     {
@@ -378,6 +384,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Der Name klingt nach Gold. Die Farbe ist die andere.",
+      "slang": "Na klar,",
       "structure": "colour"
     },
     {
@@ -395,6 +402,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "Zwei falsche Daten, dann der Freitag der Eröffnung.",
+      "slang": "Na klar,",
       "funny": true,
       "humorous": true,
       "injection": "rule-of-three",
@@ -419,7 +427,8 @@
         "Claudette Colvin"
       ],
       "correctIndex": 0,
-      "banterHint": "Der Platz blieb besetzt. Der Boykott folgte."
+      "banterHint": "Der Platz blieb besetzt. Der Boykott folgte.",
+      "slang": "Na klar,"
     },
     {
       "id": "cq-h-boomer-gold",
@@ -435,7 +444,8 @@
         "Cu"
       ],
       "correctIndex": 0,
-      "banterHint": "Silber ist der Nachbar in der Tabelle."
+      "banterHint": "Silber ist der Nachbar in der Tabelle.",
+      "slang": "Na klar,"
     }
   ]
 }

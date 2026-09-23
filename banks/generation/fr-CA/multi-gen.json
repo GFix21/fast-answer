@@ -178,7 +178,8 @@
         "Douze"
       ],
       "correctIndex": 1,
-      "banterHint": "Les guitares à douze cordes sont les cousines plus bruyantes."
+      "banterHint": "Les guitares à douze cordes sont les cousines plus bruyantes.",
+      "slang": "Pour tout le monde,"
     },
     {
       "id": "cq-e-multi-boil",
@@ -194,7 +195,8 @@
         "120"
       ],
       "correctIndex": 0,
-      "banterHint": "En montagne, la bouilloire finit un peu plus tôt."
+      "banterHint": "En montagne, la bouilloire finit un peu plus tôt.",
+      "slang": "Pour tout le monde,"
     },
     {
       "id": "cq-h-multi-photo",
@@ -210,7 +212,8 @@
         "L'oxygène"
       ],
       "correctIndex": 2,
-      "banterHint": "Elles redonnent l'oxygène à la pièce."
+      "banterHint": "Elles redonnent l'oxygène à la pièce.",
+      "slang": "Pour tout le monde,"
     },
     {
       "id": "cq-h-multi-pitch",
@@ -226,7 +229,8 @@
         "13"
       ],
       "correctIndex": 0,
-      "banterHint": "Le gardien compte parmi eux."
+      "banterHint": "Le gardien compte parmi eux.",
+      "slang": "Pour tout le monde,"
     },
     {
       "id": "cq-h-multi-compass",
@@ -243,6 +247,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Le nord est resté une direction gentille.",
+      "slang": "Pour tout le monde,",
       "funny": true,
       "structure": "joke"
     },
@@ -261,6 +266,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "L'ombre de la Terre prête cette teinte.",
+      "slang": "Pour tout le monde,",
       "structure": "colour"
     },
     {
@@ -278,6 +284,7 @@
       ],
       "correctIndex": 0,
       "banterHint": "L'autre a répondu à la question posée.",
+      "slang": "Pour tout le monde,",
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
@@ -303,6 +310,7 @@
       ],
       "correctIndex": 3,
       "banterHint": "Même marche. Autre structure. La coque n'était pas la date.",
+      "slang": "Pour tout le monde,",
       "funny": true,
       "humorous": true,
       "renegade": true,
@@ -328,7 +336,8 @@
         "6"
       ],
       "correctIndex": 0,
-      "banterHint": "Compte les bords plats, pas le poteau."
+      "banterHint": "Compte les bords plats, pas le poteau.",
+      "slang": "Pour tout le monde,"
     },
     {
       "id": "cq-e-multi-sky",
@@ -345,6 +354,7 @@
       ],
       "correctIndex": 2,
       "banterHint": "Reviens dans la scène. La réponse est la simple.",
+      "slang": "Pour tout le monde,",
       "funny": true,
       "humorous": true,
       "injection": "aside",
@@ -369,7 +379,8 @@
         "L'océan Pacifique"
       ],
       "correctIndex": 3,
-      "banterHint": "La carte lui donne le bleu le plus large."
+      "banterHint": "La carte lui donne le bleu le plus large.",
+      "slang": "Pour tout le monde,"
     },
     {
       "id": "cq-h-multi-piano",
@@ -385,7 +396,8 @@
         "92"
       ],
       "correctIndex": 2,
-      "banterHint": "Compte les noires et les blanches. Le total est le long."
+      "banterHint": "Compte les noires et les blanches. Le total est le long.",
+      "slang": "Pour tout le monde,"
     }
   ]
 }
