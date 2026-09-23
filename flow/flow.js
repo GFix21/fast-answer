@@ -33,6 +33,7 @@ const state = {
     error: "",
     loading: false,
   },
+  rejectReady: null,
   archive: {
     months: null,
     placementPages: null,
@@ -95,8 +96,23 @@ function fmtCounts(c) {
   return parts.join(" · ") || "—";
 }
 
+function readyBenchHTML() {
+  const ready = state.rejectReady;
+  const questions = ready?.questions || [];
+  const hand = ready?.onHand;
+  if (!hand) return `<p class="mut">No question is on hand for Regenerate yet.</p>`;
+  return `
+    <div class="ready-bench">
+      <p><b>${questions.length} ready</b> for rejected questions. <b>On hand</b> for Regenerate: ${esc(hand.prompt)}</p>
+      <ol class="ready-list">
+        ${questions.map((q, i) => `<li class="${i === 0 ? "on-hand" : ""}"><span>${i === 0 ? "On hand" : "Ready"}</span> ${esc(q.tier)} · ${esc(q.generation || "")} · ${esc(q.prompt)}</li>`).join("")}
+      </ol>
+    </div>`;
+}
+
 function archiveQItem(q) {
   const rejected = q.status === "rejected";
+  const regen = state.rejectReady?.onHand ? "Regenerate · on hand" : "Regenerate";
   return `
     <div class="q-item ${esc(q.status || "")}">
       <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation || "")}${q.status ? ` · <b>${esc(q.status)}</b>` : ""} · ${esc(q.id)}</div>
@@ -104,7 +120,7 @@ function archiveQItem(q) {
       <div class="choices">${(q.choices || []).map((c, i) => `<div class="${i === q.correctIndex ? "hit" : ""}">${String.fromCharCode(65 + i)}. ${esc(c)}</div>`).join("")}</div>
       <div class="row" style="margin-top:10px">
         ${rejected
-          ? `<button class="btn primary" data-arch-regen="${esc(q.id)}">Regenerate</button>`
+          ? `<button class="btn primary" data-arch-regen="${esc(q.id)}">${regen}</button>`
           : `<button class="btn danger" data-arch-reject="${esc(q.id)}">Reject</button>
              <button class="btn" data-arch-regen="${esc(q.id)}">Reject &amp; regenerate</button>`}
       </div>
@@ -287,6 +303,7 @@ function render() {
       <div class="card">
         <div class="row spread">
           <h2>Weekly bank review</h2>
+          ${readyBenchHTML()}
           <select id="tierFilter">${tiers.map((t)=>`<option value="${t}" ${state.filterTier===t?"selected":""}>${t}</option>`).join("")}</select>
         </div>
         <div class="q-list" style="margin-top:12px">
@@ -299,7 +316,7 @@ function render() {
                 <button class="btn ok" data-approve="${esc(q.id)}">Approve</button>
                 <button class="btn danger" data-reject="${esc(q.id)}">Reject</button>
                 ${(q.status === "rejected")
-                  ? `<button class="btn primary" data-regen="${esc(q.id)}">Regenerate</button>`
+                  ? `<button class="btn primary" data-regen="${esc(q.id)}">${state.rejectReady?.onHand ? "Regenerate · on hand" : "Regenerate"}</button>`
                   : `<button class="btn" data-regen="${esc(q.id)}">Reject &amp; regenerate</button>`}
                 <button class="btn" data-pending="${esc(q.id)}">Pending</button>
               </div>
@@ -348,7 +365,8 @@ function render() {
     panel.innerHTML = `
       <div class="card">
         <h2>Rejected-question log</h2>
-        <p class="mut">Q-and-A is optional. Every reject lands in this log. Regenerates use the log so the next draft avoids those prompts and leans on stronger distractors from the existing bank.</p>
+        <p class="mut">Q-and-A is optional. Every reject lands in this log. Regenerate inserts the question on hand, then the next of the 12 moves up.</p>
+        ${readyBenchHTML()}
         ${lessons ? `<p class="mut" style="margin-top:10px">${esc(lessons.brief)}</p>` : `<p class="mut">Loading the log…</p>`}
         ${lessons?.reasonCounts && Object.keys(lessons.reasonCounts).length ? `
           <ul class="mut">${Object.entries(lessons.reasonCounts).map(([k, n]) => `<li><code>${esc(k)}</code> — ${n}</li>`).join("")}</ul>
@@ -367,13 +385,13 @@ function render() {
             <div class="q-item rejected">
               <div class="q-meta">${esc(r.bank || "")} · ${esc(snap.tier || "")} · ${esc(needs)} · ${esc(r.questionId)} · ${(r.reasonCodes || []).map(esc).join(", ")}</div>
               <div class="q-prompt">${esc(snap.categoryTitle || "")}${snap.categoryTitle ? " — " : ""}${esc(snap.prompt || r.note || "")}</div>
-              ${r.regeneratedQuestionId ? "" : `<div class="row" style="margin-top:10px"><button class="btn primary" data-log-regen="${esc(r.questionId)}" data-log-bank="${esc(r.bank || "weekly")}">Regenerate</button></div>`}
+              ${r.regeneratedQuestionId ? "" : `<div class="row" style="margin-top:10px"><button class="btn primary" data-log-regen="${esc(r.questionId)}" data-log-bank="${esc(r.bank || "weekly")}">${state.rejectReady?.onHand ? "Regenerate · on hand" : "Regenerate"}</button></div>`}
             </div>`;
         }).join("")}</div>` : `<p class="mut">No rejected questions yet.</p>`}
       </div>
       <div class="card">
         <h2>Reject → regenerate</h2>
-        <p class="mut">Logs the rejection for locale <b>${esc((state.locale || "en").toUpperCase())}</b>. Leave the replacement blank to let Flow draft one from the log.</p>
+        <p class="mut">Logs the rejection for locale <b>${esc((state.locale || "en").toUpperCase())}</b>. Leave the replacement blank to insert the question on hand.</p>
         <label>bank</label>
         <select id="rbank">
           <option value="week">Weekly bank</option>
@@ -647,6 +665,7 @@ function renderArchivePanel(panel) {
             <h2 style="margin-top:12px">Placement <span class="mut" style="font-size:14px;font-family:var(--font-body)">(Dojo · reject / regenerate)</span></h2>
             <p class="mut">${esc(a.pack.title || a.pack.id || "")}</p>
             <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · Regenerate replaces that question on this card</p>
+            ${readyBenchHTML()}
           </div>
         </div>
         <div class="row" style="margin-top:12px;gap:12px">
@@ -704,6 +723,7 @@ function renderArchivePanel(panel) {
             <h2 style="margin-top:12px">${esc(a.weekKey)} <span class="mut" style="font-size:14px;font-family:var(--font-body)">(archived · reject / regenerate)</span></h2>
             <p class="mut">${esc(a.pack.inspirationSummary || "")}</p>
             <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · Regenerate replaces that question on this card</p>
+            ${readyBenchHTML()}
           </div>
         </div>
         <div class="row" style="margin-top:12px;gap:12px">
@@ -874,6 +894,7 @@ async function openArchiveWeek(monthKey, weekKey) {
     state.archive.studioCounts = data.studioCounts;
     state.archive.filterTier = "all";
     state.archive.filterTopic = "";
+    if (data.rejectReady) state.rejectReady = data.rejectReady;
   } catch (e) {
     state.message = e.message;
   } finally {
@@ -944,6 +965,7 @@ async function setFlowLocale(next) {
 
 async function loadWeek(rerender) {
   state.week = await api("week"); // locale via withLocale
+  if (state.week?.rejectReady) state.rejectReady = state.week.rejectReady;
   if (rerender) render();
 }
 
@@ -1001,6 +1023,7 @@ async function doReject(regen = false) {
     note: document.getElementById("rnote").value.trim(),
     locale: state.locale,
   };
+  if (regen && !(prompt && choicesRaw) && state.rejectReady?.onHand?.id) body.onHandId = state.rejectReady.onHand.id;
   if (prompt && choicesRaw) {
     const choices = choicesRaw.split(",").map((s) => s.trim());
     if (choices.length === 4) {
@@ -1017,8 +1040,9 @@ async function doReject(regen = false) {
     if (bank === "placement") body.bank = "placement";
     if (regen) markReplacing(body.questionId);
     const data = await api(endpoint, { method: "POST", body: JSON.stringify(body) });
+    if (data.ready) state.rejectReady = data.ready;
     if (regen && data.regenerated && replaceQuestionOnCard(body.questionId, data.regenerated)) {
-      state.message = `Replaced ${body.questionId} on this card.`;
+      state.message = `Replaced ${body.questionId} on this card with the question that was on hand.`;
       render();
       return;
     }
@@ -1077,6 +1101,7 @@ async function archiveRejectOrRegen(id, regen, bankHint) {
     note: regen ? "Regenerated from Flow" : "Rejected from Flow",
   };
   if (placement) body.bank = "placement";
+  if (regen && !body.replacement && state.rejectReady?.onHand?.id) body.onHandId = state.rejectReady.onHand.id;
   if (fromArchive && a.monthKey && a.monthKey !== "placement") {
     body.monthKey = a.monthKey;
     body.weekKey = a.weekKey || null;
@@ -1085,8 +1110,9 @@ async function archiveRejectOrRegen(id, regen, bankHint) {
   try {
     const endpoint = placement ? "placement" : "reject";
     const data = await api(endpoint, { method: "POST", body: JSON.stringify(body) });
+    if (data.ready) state.rejectReady = data.ready;
     if (regen && data.regenerated && replaceQuestionOnCard(id, data.regenerated)) {
-      state.message = `Replaced ${id} on this card.`;
+      state.message = `Replaced ${id} on this card with the question that was on hand.`;
       render();
       return;
     }
@@ -1141,6 +1167,7 @@ async function openPlacementPage(pageId) {
     state.archive.studioCounts = data.studioCounts;
     state.archive.filterTier = "all";
     state.archive.filterTopic = "";
+    if (data.rejectReady) state.rejectReady = data.rejectReady;
     if (data.pages) state.archive.placementPages = data.pages;
   } catch (e) {
     state.message = e.message;
@@ -1205,11 +1232,15 @@ async function loadQueue(rerender) {
   ]);
   const [week, placement, weekRej, placeRej, profiles, rooms] = jobs;
   const errors = [];
-  if (week.status === "fulfilled") state.week = week.value;
+  if (week.status === "fulfilled") {
+    state.week = week.value;
+    if (week.value?.rejectReady) state.rejectReady = week.value.rejectReady;
+  }
   else errors.push(week.reason?.message || "Could not load the weekly bank");
   if (placement.status === "fulfilled") state.queue.placement = placement.value;
   else errors.push(placement.reason?.message || "Could not load placement");
   const rejectPayload = weekRej.status === "fulfilled" ? weekRej.value : {};
+  if (rejectPayload.rejectReady) state.rejectReady = rejectPayload.rejectReady;
   const allLog = Array.isArray(rejectPayload.rejections) ? rejectPayload.rejections : [];
   state.queue.lessons = rejectPayload.lessons || null;
   state.queue.weekRejections = allLog.filter((e) => e.bank !== "placement");

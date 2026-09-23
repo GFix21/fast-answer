@@ -6,7 +6,9 @@ import {
 } from "../../lib/archive-store.js";
 import { listPlacementPages, loadPlacementPack, normalizeLocale } from "../../lib/placement-store.js";
 import { listRejectLog } from "../../lib/reject-log.js";
-import { overlayPackWithLog } from "../../lib/reject-learn.js";
+import { compileLessons, overlayPackWithLog } from "../../lib/reject-learn.js";
+import { collectQuestionPool } from "../../lib/reject-actions.js";
+import { readyBench } from "../../lib/reject-ready.js";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") return json(res, 405, { error: "method" });
@@ -29,6 +31,7 @@ export default async function handler(req, res) {
     const base = loadPlacementPack(locale);
     const log = await listRejectLog({ locale, bank: "placement" });
     const pack = overlayPackWithLog(base, log, { bank: "placement" });
+    const rejectReady = readyBench(locale, collectQuestionPool(locale), compileLessons(log));
     const page = url.searchParams.get("page") || pack.id || "placement";
     const studioCounts = {};
     for (const q of pack.questions || []) {
@@ -42,6 +45,7 @@ export default async function handler(req, res) {
       pack,
       studioCounts,
       pages: listPlacementPages(locale),
+      rejectReady,
     });
   }
 
@@ -57,6 +61,7 @@ export default async function handler(req, res) {
     if (!base) return json(res, 404, { error: "week not in archive" });
     const log = await listRejectLog({ locale });
     const pack = overlayPackWithLog(base, log, { monthKey: month, weekKey: week });
+    const rejectReady = readyBench(locale, collectQuestionPool(locale), compileLessons(log));
     const studioCounts = {};
     for (const q of pack.questions || []) {
       studioCounts[q.tier] = (studioCounts[q.tier] || 0) + 1;
@@ -66,6 +71,7 @@ export default async function handler(req, res) {
       weekKey: week,
       pack,
       studioCounts,
+      rejectReady,
     });
   }
 

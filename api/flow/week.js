@@ -9,7 +9,9 @@ import {
 } from "../../lib/week-store.js";
 import { countByTier } from "../../q-and-a/map.js";
 import { listRejectLog } from "../../lib/reject-log.js";
-import { overlayPackWithLog } from "../../lib/reject-learn.js";
+import { compileLessons, overlayPackWithLog } from "../../lib/reject-learn.js";
+import { collectQuestionPool } from "../../lib/reject-actions.js";
+import { readyBench } from "../../lib/reject-ready.js";
 
 export default async function handler(req, res) {
   if (!requireAuth(req, res)) return;
@@ -20,10 +22,12 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     const pack = loadCurrentPack(locale);
     if (!pack) return json(res, 404, { error: "no week pack" });
+    const log = await listRejectLog({ locale });
     const overlaid = overlayPackWithLog(
       applyReviewOverlay(pack, locale),
-      await listRejectLog({ locale }),
+      log,
     );
+    const rejectReady = readyBench(locale, collectQuestionPool(locale), compileLessons(log));
     const studioCounts = {};
     for (const q of overlaid.questions) {
       studioCounts[q.tier] = (studioCounts[q.tier] || 0) + 1;
@@ -40,6 +44,7 @@ export default async function handler(req, res) {
       studioCounts,
       statusCounts,
       publish: getPublishMeta(locale),
+      rejectReady,
       mappedPreviewCounts: countByTier(
         overlaid.questions
           .filter((q) => q.status !== "rejected")

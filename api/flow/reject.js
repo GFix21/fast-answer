@@ -1,7 +1,8 @@
 import { requireAuth, json, readBody } from "../../lib/flow-auth.js";
 import { normalizeLocale } from "../../lib/week-store.js";
 import { rejectLogSnapshot } from "../../lib/reject-log.js";
-import { rejectQuestion, regenerateQuestion } from "../../lib/reject-actions.js";
+import { collectQuestionPool, rejectQuestion, regenerateQuestion } from "../../lib/reject-actions.js";
+import { readyBench } from "../../lib/reject-ready.js";
 
 export default async function handler(req, res) {
   if (!requireAuth(req, res)) return;
@@ -22,6 +23,7 @@ export default async function handler(req, res) {
       lessons: snap.lessons,
       updatedAt: snap.updatedAt,
       qaConnected: false,
+      rejectReady: readyBench(locale, collectQuestionPool(locale), snap.lessons),
     });
   }
 
