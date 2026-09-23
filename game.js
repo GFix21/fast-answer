@@ -3817,10 +3817,10 @@ function playHTML() {
   if (readyPhase) prompt = "";
   else if (endPhase) prompt = tt("showEnd");
   else if (ld?.phase === "wager") prompt = `LOCKDOWN — ${ld.name} · ${tt("lockdownWagers")}`;
-  else if (ld?.phase === "intro") prompt = `Lockdown rules · ${ld.introLeft}s`;
-  else if (ld?.phase === "result") prompt = ld.won
-    ? `${ld.name} cleared Lockdown ${ld.hits}/5 · $${ld.earned || 0}`
-    : `${ld.name} broke Lockdown ${ld.hits}/5 · $${ld.earned || 0}`;
+  else if (ld?.phase === "intro") prompt = escapeHtml(tt("lockRulesClock", ld.introLeft));
+  else if (ld?.phase === "result") prompt = escapeHtml(ld.won
+    ? tt("lockResultClear", ld.name, ld.hits, ld.earned || 0)
+    : tt("lockResultBroke", ld.name, ld.hits, ld.earned || 0));
   else if (breaking) prompt = escapeHtml(tierName(state.setBreakTier));
   else if (!q) prompt = tt("showEnd");
   else if (state.viewing) prompt = tt("viewingNow");
@@ -3951,7 +3951,7 @@ function playHTML() {
         <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
       </div>` : ""}
       ${(pad || !tv) && !ld && !endPhase && !breaking && !state.viewing && seated ? `<button class="buzzer ${canBuzz ? "lit" : ""} ${readyPhase && state.readyIds[state.youId] ? "ready-on" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
-      ${ld ? `<div class="lock-flag">${ld.phase === "wager" ? tt("lockdownWagers") : ld.phase === "intro" ? `Rules · ${ld.introLeft}s` : `${escapeHtml(ld.name)} · ${ld.hits} hit · $${ld.earned || 0}`}</div>` : ""}
+      ${ld ? `<div class="lock-flag">${ld.phase === "wager" ? tt("lockdownWagers") : ld.phase === "intro" ? escapeHtml(tt("lockRulesClock", ld.introLeft)) : escapeHtml(tt("lockFlag", ld.name, ld.hits, ld.earned || 0))}</div>` : ""}
       ${(pad && (state.phase === "answer" || (ld?.phase === "play" && isHero))) ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
       ${dropoutBtn}
       ${dropped && !canLeaveNow() ? `<p class="meta">${tt("dropoutWait")}</p>` : ""}
