@@ -445,15 +445,35 @@ html.tv-scroll, html.tv-scroll body{
   overflow:hidden;
 }
 .stage.tv{
-  top:24px;right:24px;bottom:24px;left:24px;
+  --tv-edge:max(24px,1.25vw);
+  top:var(--tv-edge);right:var(--tv-edge);bottom:var(--tv-edge);left:var(--tv-edge);
   width:auto;height:auto;
 }
 .stage.tv .host img{
   max-height:min(var(--host-h),46vh);
-  max-width:min(32vw,480px);
+  max-width:min(32vw,960px);
 }
 .stage.tv img.brand{height:auto;max-height:12vh}
-.stage.tv .qr-chip{right:32px;bottom:32px}
+.stage.tv .qr-chip{right:calc(var(--tv-edge) + 8px);bottom:calc(var(--tv-edge) + 8px)}
+/* A 4K browser that lays out at 3840px keeps the same edge ratio and couch-readable type.
+   Sets that report 1920 CSS pixels already use the 1080p fit. */
+@media (min-width:2400px){
+  .stage.tv .logo{font-size:36px}
+  .stage.tv .logo small{font-size:16px}
+  .stage.tv .word{font-size:22px}
+  .stage.tv .ghost,
+  .stage.tv .primary{font-size:22px;min-height:64px;padding:14px 22px}
+  .stage.tv .acc-h{font-size:22px;min-height:64px}
+  .stage.tv .foot .copy{font-size:18px}
+  .stage.tv .qtext{font-size:clamp(32px,2vw,56px)}
+  .stage.tv .ans{font-size:clamp(20px,1.2vw,28px);min-height:72px}
+  .stage.tv .meta,
+  .stage.tv .dir-copy,
+  .stage.tv .seat{font-size:20px}
+  .stage.tv .cat{font-size:16px}
+  .stage.tv .room-code{font-size:22px}
+  .stage.tv img.brand{max-height:14vh}
+}
 .stage.tv-scroll{
   position:fixed;
   overflow:hidden;
