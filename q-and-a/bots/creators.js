@@ -5,6 +5,7 @@
  */
 import { translateQuestion } from "./translators.js";
 import { thinSet } from "./thin-set.js";
+import { fillQuestions } from "./fill-facts.js";
 
 const WEEK = "2026-W39";
 
@@ -1289,6 +1290,10 @@ export function creatorQuestions(locale = "en") {
     }
   }
   for (const row of thinSet) {
+    const flat = translateQuestion(row, locale);
+    if (flat) out.push(flat);
+  }
+  for (const row of fillQuestions()) {
     const flat = translateQuestion(row, locale);
     if (flat) out.push(flat);
   }

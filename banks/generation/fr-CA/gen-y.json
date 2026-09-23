@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "fr-CA",
   "target": 150,
-  "held": 27,
-  "shortfall": 123,
+  "held": 150,
+  "shortfall": 0,
   "ageYear": 2026,
   "born": [
     1981,
@@ -493,6 +493,2097 @@
       "banterHint": "Le premier clip était court. L'année est au milieu de cette décennie.",
       "slang": "Je dis ça,",
       "structure": "when"
+    },
+    {
+      "id": "cq-w39-gy-e-uk-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Royaume-Uni?",
+      "choices": [
+        "Édimbourg",
+        "Manchester",
+        "Londres",
+        "Birmingham"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-se-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Suède?",
+      "choices": [
+        "Stockholm",
+        "Göteborg",
+        "Malmö",
+        "Oslo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-kr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Corée du Sud?",
+      "choices": [
+        "Busan",
+        "Incheon",
+        "Pyongyang",
+        "Séoul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Chili?",
+      "choices": [
+        "Lima",
+        "Santiago",
+        "Valparaíso",
+        "Concepción"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-is-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Islande?",
+      "choices": [
+        "Reykjavik",
+        "Akureyri",
+        "Oslo",
+        "Copenhague"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-za-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale administrative de l'Afrique du Sud ?",
+      "choices": [
+        "Johannesburg",
+        "Durban",
+        "Le Cap",
+        "Pretoria"
+      ],
+      "correctIndex": 3,
+      "banterHint": "L'Afrique du Sud a aussi une capitale législative et une capitale judiciaire.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-day-hours",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'heures il y a dans une journée ?",
+      "choices": [
+        "36",
+        "24",
+        "12",
+        "20"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-hexagon-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de côtés il y a sur un hexagone ?",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-deck-suits",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'enseignes il y a dans un jeu de cartes standard ?",
+      "choices": [
+        "5",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-bill-rights",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'amendements il y a dans la Déclaration des droits américaine ?",
+      "choices": [
+        "10",
+        "12",
+        "8",
+        "27"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-insect-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de pattes il y a sur un insecte ?",
+      "choices": [
+        "4",
+        "10",
+        "8",
+        "6"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-baseball-nine",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de joueurs d'une équipe il y a sur le terrain au baseball ?",
+      "choices": [
+        "10",
+        "8",
+        "9",
+        "11"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-golf-holes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de trous il y a dans une ronde de golf standard ?",
+      "choices": [
+        "9",
+        "18",
+        "16",
+        "12"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-both-soccer",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de joueurs commencent un match de soccer sur le terrain, les deux équipes ?",
+      "choices": [
+        "22",
+        "18",
+        "20",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-curling-team",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de joueurs il y a dans une équipe de curling ?",
+      "choices": [
+        "6",
+        "8",
+        "2",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ukulele-strings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de cordes il y a sur un ukulélé soprano standard ?",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-boil-f",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de degrés Fahrenheit marque l'ébullition de l'eau au niveau de la mer ?",
+      "choices": [
+        "212",
+        "100",
+        "180",
+        "32"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-year-days",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de jours il y a dans une année ordinaire, sans jour de plus ?",
+      "choices": [
+        "365",
+        "366",
+        "364",
+        "360"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-colosseum-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le Colisée ?",
+      "choices": [
+        "Spain",
+        "France",
+        "Italy",
+        "Greece"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-opera-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, l'Opéra de Sydney ?",
+      "choices": [
+        "New Zealand",
+        "Australia",
+        "Canada",
+        "the United Kingdom"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-burj-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, la Burj Khalifa ?",
+      "choices": [
+        "India",
+        "the United Arab Emirates",
+        "Saudi Arabia",
+        "Qatar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-reef-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, la Grande Barrière de corail ?",
+      "choices": [
+        "Australia",
+        "Indonesia",
+        "Fiji",
+        "Brazil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-sphinx-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le Grand Sphinx de Gizeh ?",
+      "choices": [
+        "Egypt",
+        "Greece",
+        "Sudan",
+        "Iraq"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-nightwatch-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint The Night Watch ?",
+      "choices": [
+        "Johannes Vermeer",
+        "Peter Paul Rubens",
+        "Frans Hals",
+        "Rembrandt"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-meninas-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint Las Meninas ?",
+      "choices": [
+        "El Greco",
+        "Bartolomé Murillo",
+        "Francisco Goya",
+        "Diego Velázquez"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-vw-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Volkswagen ?",
+      "choices": [
+        "the United States",
+        "Sweden",
+        "Italy",
+        "Germany"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-honda-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Honda ?",
+      "choices": [
+        "China",
+        "the United States",
+        "Japan",
+        "South Korea"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-suv-mean",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "SUV, ça veut dire quoi ?",
+      "choices": [
+        "standard urban van",
+        "speed under vacuum",
+        "super utility volt",
+        "sport utility vehicle"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-germany",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Germany dans cette question ?",
+      "choices": [
+        "English",
+        "French",
+        "Dutch",
+        "German"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-greece",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Greece dans cette question ?",
+      "choices": [
+        "Latin",
+        "Italian",
+        "Greek",
+        "Turkish"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-netherlands",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à the Netherlands dans cette question ?",
+      "choices": [
+        "French",
+        "German",
+        "Dutch",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-0",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'Égypte est sur quel continent ?",
+      "choices": [
+        "Asie",
+        "Europe",
+        "Afrique",
+        "Amérique du Sud"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-7",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Chine est sur quel continent ?",
+      "choices": [
+        "Europe",
+        "Amérique du Nord",
+        "Afrique",
+        "Asie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-14",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'Italie est sur quel continent ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Amérique du Sud",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-21",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Mexique est sur quel continent ?",
+      "choices": [
+        "Amérique du Sud",
+        "Afrique",
+        "Europe",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-28",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Pérou est sur quel continent ?",
+      "choices": [
+        "Amérique du Sud",
+        "Afrique",
+        "Europe",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-35",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'Indonésie est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Asie",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-2",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale des États-Unis ?",
+      "choices": [
+        "le dollar",
+        "l'euro",
+        "le peso",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-9",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de la Norvège ?",
+      "choices": [
+        "le yen",
+        "la couronne",
+        "l'euro",
+        "le dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-16",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de la Thaïlande ?",
+      "choices": [
+        "le yen",
+        "le baht",
+        "l'euro",
+        "le dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-23",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de l'Argentine ?",
+      "choices": [
+        "le yen",
+        "le peso",
+        "l'euro",
+        "le dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-0",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Pizza, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Mexique",
+        "Japon",
+        "Italie",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-7",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le kimchi, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Italie",
+        "Mexique",
+        "Japon",
+        "Corée du Sud"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-14",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le bortsch, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Italie",
+        "Japon",
+        "Mexique",
+        "Ukraine"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-21",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le tiramisu, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Japon",
+        "Mexique",
+        "France",
+        "Italie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-28",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "La feijoada, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Brésil",
+        "Mexique",
+        "Japon",
+        "Italie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-4",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le mammifère qui vole vraiment, c'est quel animal ?",
+      "choices": [
+        "le hibou",
+        "le polatouche",
+        "la chauve-souris",
+        "le manchot"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le chameau à deux bosses, c'est quel animal ?",
+      "choices": [
+        "le dromadaire",
+        "le lama",
+        "l'alpaga",
+        "le chameau de Bactriane"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-16",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le reptile à carapace, c'est quel animal ?",
+      "choices": [
+        "le crocodile",
+        "la tortue",
+        "le serpent",
+        "le lézard"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-22",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le mammifère à bec qui pond des œufs, c'est quel animal ?",
+      "choices": [
+        "l'ornithorynque",
+        "le canard",
+        "l'échidné",
+        "le castor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-human-lungs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un humain typique a combien de poumons ?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-week-weekend",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On appelle d'habitude combien de jours la fin de semaine ?",
+      "choices": [
+        "1",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-little-pigs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le conte classique des maisons compte combien de petits cochons ?",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-strings-violin-family-viola",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un alto standard a combien de cordes ?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-sides-square",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un carré a combien de côtés ?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-players-doubles",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un camp en double au tennis compte combien de joueurs ?",
+      "choices": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-clock-numbers",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un cadran compte d'habitude combien de nombres, de 1 à 12 ?",
+      "choices": [
+        "6",
+        "12",
+        "10",
+        "24"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-score-twenty",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un score, comme dans « four score », compte combien d'années ?",
+      "choices": [
+        "20",
+        "12",
+        "40",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-quartet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un quatuor compte combien de musiciens ?",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-octet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un octet compte combien de bits ?",
+      "choices": [
+        "4",
+        "16",
+        "10",
+        "8"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-pk-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Pakistan?",
+      "choices": [
+        "Lahore",
+        "Karachi",
+        "Islamabad",
+        "Rawalpindi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-bg-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Bulgarie?",
+      "choices": [
+        "Sofia",
+        "Varna",
+        "Bucarest",
+        "Plovdiv"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-jo-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Jordanie?",
+      "choices": [
+        "Amman",
+        "Jérusalem",
+        "Aqaba",
+        "Pétra"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-romeo-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the play Romeo and Juliet ?",
+      "choices": [
+        "Ben Jonson",
+        "Christopher Marlowe",
+        "William Shakespeare",
+        "John Milton"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-hobbit-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Hobbit ?",
+      "choices": [
+        "J. K. Rowling",
+        "George R. R. Martin",
+        "J. R. R. Tolkien",
+        "C. S. Lewis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-iliad-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the epic poem the Iliad ?",
+      "choices": [
+        "Virgil",
+        "Hesiod",
+        "Aeschylus",
+        "Homer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-wild-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the book Where the Wild Things Are ?",
+      "choices": [
+        "Maurice Sendak",
+        "Eric Carle",
+        "Crockett Johnson",
+        "Dr. Seuss"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-stranger-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Stranger ?",
+      "choices": [
+        "Simone de Beauvoir",
+        "Jean-Paul Sartre",
+        "Albert Camus",
+        "André Gide"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-orient-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Murder on the Orient Express ?",
+      "choices": [
+        "Arthur Conan Doyle",
+        "Ruth Rendell",
+        "P. D. James",
+        "Agatha Christie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-tale-cities",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel A Tale of Two Cities ?",
+      "choices": [
+        "Charles Dickens",
+        "Thomas Hardy",
+        "William Makepeace Thackeray",
+        "George Eliot"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-beloved-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Beloved ?",
+      "choices": [
+        "Maya Angelou",
+        "Zora Neale Hurston",
+        "Toni Morrison",
+        "Alice Walker"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-wind-willows",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the book The Wind in the Willows ?",
+      "choices": [
+        "Kenneth Grahame",
+        "A. A. Milne",
+        "Beatrix Potter",
+        "E. B. White"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-messiah-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the oratorio Messiah ?",
+      "choices": [
+        "Henry Purcell",
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-purple-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Purple Rain ?",
+      "choices": [
+        "David Bowie",
+        "Michael Jackson",
+        "Prince",
+        "Rick James"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-rolling-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Like a Rolling Stone ?",
+      "choices": [
+        "Neil Young",
+        "Bob Dylan",
+        "The Rolling Stones",
+        "Mick Jagger"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-old-town-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Old Town Road ?",
+      "choices": [
+        "Lil Nas X",
+        "Travis Scott",
+        "Drake",
+        "Post Malone"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-radiohead-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the band Radiohead, as lead singer ?",
+      "choices": [
+        "Thom Yorke",
+        "Colin Greenwood",
+        "Ed O'Brien",
+        "Jonny Greenwood"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-et-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film E.T. the Extra-Terrestrial ?",
+      "choices": [
+        "Robert Zemeckis",
+        "Chris Columbus",
+        "Steven Spielberg",
+        "George Lucas"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-psycho-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 1960 film Psycho ?",
+      "choices": [
+        "Orson Welles",
+        "Billy Wilder",
+        "John Ford",
+        "Alfred Hitchcock"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-budapest-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film The Grand Budapest Hotel ?",
+      "choices": [
+        "Noah Baumbach",
+        "Paul Thomas Anderson",
+        "Wes Anderson",
+        "Sofia Coppola"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-nemo-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Finding Nemo ?",
+      "choices": [
+        "Pete Docter",
+        "John Lasseter",
+        "Andrew Stanton",
+        "Brad Bird"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-fury-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 2015 film Mad Max: Fury Road ?",
+      "choices": [
+        "Denis Villeneuve",
+        "Kathryn Bigelow",
+        "Ridley Scott",
+        "George Miller"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-c",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément carbon ?",
+      "choices": [
+        "Co",
+        "C",
+        "Ca",
+        "Cl"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ag",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément silver ?",
+      "choices": [
+        "Si",
+        "Al",
+        "Ag",
+        "Au"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ca",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément calcium ?",
+      "choices": [
+        "Ca",
+        "K",
+        "Cl",
+        "C"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ne",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément neon ?",
+      "choices": [
+        "N",
+        "Na",
+        "Ne",
+        "Ni"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-w",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément tungsten ?",
+      "choices": [
+        "Tu",
+        "W",
+        "Sn",
+        "Tg"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-arctic-ocean",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel océan, le plus petit des cinq océans nommés ?",
+      "choices": [
+        "the Indian Ocean",
+        "the Arctic Ocean",
+        "the Southern Ocean",
+        "the Atlantic Ocean"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-ring-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quelle planète qui est connue pour ses anneaux brillants vus de la Terre ?",
+      "choices": [
+        "Jupiter",
+        "Saturn",
+        "Neptune",
+        "Uranus"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-photosynthesis-out",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel gaz que les plantes libèrent pendant la photosynthèse ?",
+      "choices": [
+        "hydrogen",
+        "oxygen",
+        "carbon dioxide",
+        "nitrogen"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-origin-tea",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays qu'on tient pour l'origine du thé ?",
+      "choices": [
+        "India",
+        "the United Kingdom",
+        "Japan",
+        "China"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-diesel-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a inventé le moteur Diesel ?",
+      "choices": [
+        "Karl Benz",
+        "Henry Ford",
+        "Rudolf Diesel",
+        "Nikolaus Otto"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-morse-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a mis au point le code télégraphique de points et de traits qui porte son nom ?",
+      "choices": [
+        "Alexander Graham Bell",
+        "Samuel Morse",
+        "Guglielmo Marconi",
+        "Thomas Edison"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-peace-nobel-country",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le prix Nobel de la paix est remis dans quel pays ?",
+      "choices": [
+        "Switzerland",
+        "Finland",
+        "Norway",
+        "Sweden"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-garrett-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui, la première femme qualifiée comme médecin et chirurgienne en Grande-Bretagne ?",
+      "choices": [
+        "Elizabeth Garrett Anderson",
+        "Marie Curie",
+        "Florence Nightingale",
+        "Elizabeth Blackwell"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-diamond-carbon",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le diamant est une forme de quel élément ?",
+      "choices": [
+        "carbon",
+        "quartz",
+        "calcium",
+        "silicon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-h-pearl-origin",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Une perle se forme à l'intérieur de quoi ?",
+      "choices": [
+        "a clam only",
+        "a snail",
+        "a crab",
+        "an oyster"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-bd-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Bangladesh?",
+      "choices": [
+        "Chittagong",
+        "Calcutta",
+        "Dhaka",
+        "Khulna"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-tj-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Tadjikistan?",
+      "choices": [
+        "Khujand",
+        "Dushanbe",
+        "Bishkek",
+        "Tashkent"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-zw-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Zimbabwe?",
+      "choices": [
+        "Gaborone",
+        "Lusaka",
+        "Harare",
+        "Bulawayo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-telephone-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the telephone patent of 1876 ?",
+      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi",
+        "Alexander Graham Bell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-smallpox-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first smallpox vaccine ?",
+      "choices": [
+        "Louis Pasteur",
+        "Edward Jenner",
+        "Alexander Fleming",
+        "Jonas Salk"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-turing-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the idea of a universal computing machine in 1936 ?",
+      "choices": [
+        "Ada Lovelace",
+        "John von Neumann",
+        "Alan Turing",
+        "Charles Babbage"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-tereshkova-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first woman in space ?",
+      "choices": [
+        "Mae Jemison",
+        "Valentina Tereshkova",
+        "Sally Ride",
+        "Svetlana Savitskaya"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-bastille",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la Bastille a été prise à Paris ?",
+      "choices": [
+        "1815",
+        "1848",
+        "1789",
+        "1776"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-ww1-end",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'armistice de la Première Guerre mondiale est entré en vigueur ?",
+      "choices": [
+        "1914",
+        "1945",
+        "1918",
+        "1919"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-india",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Inde est devenue indépendante ?",
+      "choices": [
+        "1945",
+        "1948",
+        "1950",
+        "1947"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-mandela",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Nelson Mandela a été libéré de prison ?",
+      "choices": [
+        "1990",
+        "1964",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-nine-eleven",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que les attentats du 11 septembre ont eu lieu aux États-Unis ?",
+      "choices": [
+        "2003",
+        "2000",
+        "2001",
+        "1999"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-brexit-leave",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que le Royaume-Uni a quitté l'Union européenne ?",
+      "choices": [
+        "2020",
+        "2016",
+        "2019",
+        "2021"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-model-t",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Ford a commencé à vendre la Model T ?",
+      "choices": [
+        "1908",
+        "1920",
+        "1914",
+        "1903"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-world-cup-first",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la première Coupe du monde de la FIFA a eu lieu ?",
+      "choices": [
+        "1930",
+        "1924",
+        "1950",
+        "1934"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-ph",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'eau pure à température ambiante a quel pH ?",
+      "choices": [
+        "1",
+        "14",
+        "7",
+        "0"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-genome",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'achèvement du Projet génome humain a été annoncé en quelle année ?",
+      "choices": [
+        "1990",
+        "1998",
+        "2003",
+        "2010"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-ve-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Venezuela?",
+      "choices": [
+        "Caracas",
+        "Maracaibo",
+        "Valencia",
+        "Bogota"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-cr-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Costa Rica?",
+      "choices": [
+        "Limón",
+        "Liberia",
+        "San José",
+        "Panama"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-pg-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Papouasie-Nouvelle-Guinée?",
+      "choices": [
+        "Port Moresby",
+        "Lae",
+        "Mount Hagen",
+        "Suva"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-mt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de Malte?",
+      "choices": [
+        "La Valette",
+        "Sliema",
+        "Mdina",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-am-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Arménie?",
+      "choices": [
+        "Gyumri",
+        "Bakou",
+        "Yerevan",
+        "Tbilissi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-rw-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Rwanda?",
+      "choices": [
+        "Kigali",
+        "Kampala",
+        "Gisenyi",
+        "Butare"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-dz-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Algérie?",
+      "choices": [
+        "Tunis",
+        "Alger",
+        "Oran",
+        "Constantine"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-atomic-pb",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le numéro atomique du plomb ?",
+      "choices": [
+        "82",
+        "26",
+        "50",
+        "80"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-harp-strings",
+      "tier": "extreme",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Une harpe à pédales de concert a d'habitude combien de cordes ?",
+      "choices": [
+        "46",
+        "40",
+        "47",
+        "88"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
     }
   ]
 }

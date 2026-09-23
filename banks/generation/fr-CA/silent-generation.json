@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "fr-CA",
   "target": 150,
-  "held": 25,
-  "shortfall": 125,
+  "held": 150,
+  "shortfall": 0,
   "ageYear": 2026,
   "born": [
     1928,
@@ -468,6 +468,2131 @@
       ],
       "correctIndex": 2,
       "banterHint": "Le canal a fermé. L'année est la plus ancienne.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-it-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Italie?",
+      "choices": [
+        "Madrid",
+        "Berlin",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-nl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale des Pays-Bas?",
+      "choices": [
+        "Rotterdam",
+        "Utrecht",
+        "Amsterdam",
+        "La Haye"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ru-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Russie?",
+      "choices": [
+        "Saint-Pétersbourg",
+        "Sotchi",
+        "Kazan",
+        "Moscou"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-eg-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Égypte?",
+      "choices": [
+        "Le Caire",
+        "Alexandrie",
+        "Gizeh",
+        "Louxor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cz-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Tchéquie?",
+      "choices": [
+        "Brno",
+        "Vienne",
+        "Bratislava",
+        "Prague"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-tr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Turquie?",
+      "choices": [
+        "Ankara",
+        "Izmir",
+        "Antalya",
+        "Istanbul"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-greek-letters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de lettres il y a dans l'alphabet grec ?",
+      "choices": [
+        "20",
+        "24",
+        "22",
+        "26"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-right-angle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de degrés il y a dans un angle droit ?",
+      "choices": [
+        "60",
+        "90",
+        "45",
+        "180"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cube-corners",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de sommets il y a sur un cube ?",
+      "choices": [
+        "12",
+        "8",
+        "6",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-rainbow-colors",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de couleurs il y a dans un arc-en-ciel traditionnel ?",
+      "choices": [
+        "6",
+        "5",
+        "7",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-canada-regions",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de provinces et de territoires il y a au Canada ?",
+      "choices": [
+        "15",
+        "13",
+        "10",
+        "12"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-mars-moons",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de lunes il y a autour de Mars ?",
+      "choices": [
+        "8",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-hockey-skaters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de patineurs d'une équipe il y a sur la glace au hockey, gardien compris ?",
+      "choices": [
+        "6",
+        "7",
+        "5",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-field-goal-points",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de points vaut un botté de précision au football américain ?",
+      "choices": [
+        "1",
+        "3",
+        "6",
+        "2"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-nhl-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'équipes il y a dans la LNH ?",
+      "choices": [
+        "32",
+        "16",
+        "31",
+        "30"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-piano-black",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de touches noires il y a sur un piano standard ?",
+      "choices": [
+        "36",
+        "32",
+        "52",
+        "24"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-haiku-syllables",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de syllabes il y a dans un haïku traditionnel ?",
+      "choices": [
+        "14",
+        "15",
+        "19",
+        "17"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cm-mm",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de millimètres il y a dans un centimètre ?",
+      "choices": [
+        "10",
+        "12",
+        "5",
+        "100"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-bicycle-wheels",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de roues il y a sur un vélo typique ?",
+      "choices": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-stonehenge-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, Stonehenge ?",
+      "choices": [
+        "France",
+        "Denmark",
+        "the United Kingdom",
+        "Ireland"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-forbidden-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, la Cité interdite ?",
+      "choices": [
+        "South Korea",
+        "Mongolia",
+        "Japan",
+        "China"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-andes-continent",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, les Andes ?",
+      "choices": [
+        "Europe",
+        "South America",
+        "North America",
+        "Africa"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-bigben-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, la cloche appelée Big Ben ?",
+      "choices": [
+        "France",
+        "Ireland",
+        "the United States",
+        "the United Kingdom"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-guernica-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint Guernica ?",
+      "choices": [
+        "Francisco Goya",
+        "Diego Velázquez",
+        "Pablo Picasso",
+        "Salvador Dalí"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-son-man-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint The Son of Man ?",
+      "choices": [
+        "Giorgio de Chirico",
+        "René Magritte",
+        "Salvador Dalí",
+        "Max Ernst"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-whistler-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint Arrangement in Grey and Black No. 1, often called Whistler's Mother ?",
+      "choices": [
+        "James McNeill Whistler",
+        "Winslow Homer",
+        "John Singer Sargent",
+        "Thomas Eakins"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-hyundai-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Hyundai ?",
+      "choices": [
+        "South Korea",
+        "China",
+        "Germany",
+        "Japan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-fiat-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Fiat ?",
+      "choices": [
+        "Italy",
+        "Germany",
+        "Spain",
+        "France"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-mexico",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Mexico dans cette question ?",
+      "choices": [
+        "Portuguese",
+        "French",
+        "Spanish",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-austria",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Austria dans cette question ?",
+      "choices": [
+        "Hungarian",
+        "French",
+        "German",
+        "Italian"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-thailand",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Thailand dans cette question ?",
+      "choices": [
+        "Vietnamese",
+        "Thai",
+        "Malay",
+        "Lao"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-israel",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Israel, as the main official language dans cette question ?",
+      "choices": [
+        "Hebrew",
+        "Arabic",
+        "English",
+        "Yiddish"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-4",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Ghana est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Asie",
+        "Amérique du Sud"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-11",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Vietnam est sur quel continent ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Amérique du Nord",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-18",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Suède est sur quel continent ?",
+      "choices": [
+        "Asie",
+        "Amérique du Sud",
+        "Afrique",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-25",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Brésil est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Amérique du Nord",
+        "Amérique du Sud"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-32",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les Fidji est sur quel continent ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Europe",
+        "Océanie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-39",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les Philippines est sur quel continent ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Europe",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-6",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale du Brésil ?",
+      "choices": [
+        "le real",
+        "l'euro",
+        "le dollar",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-13",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de l'Australie ?",
+      "choices": [
+        "l'euro",
+        "le yen",
+        "le dollar",
+        "le peso"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-20",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de l'Égypte ?",
+      "choices": [
+        "la livre",
+        "le dollar",
+        "l'euro",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-27",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de la Tchéquie ?",
+      "choices": [
+        "le yen",
+        "l'euro",
+        "la couronne",
+        "le dollar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-food-4",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "La paella, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Espagne",
+        "Japon",
+        "Italie",
+        "Mexique"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-food-11",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "La poutine, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Canada",
+        "Mexique",
+        "Japon",
+        "Italie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-food-18",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les ramen, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Italie",
+        "France",
+        "Mexique",
+        "Japon"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-food-25",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les pierogi, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Italie",
+        "Japon",
+        "Mexique",
+        "Pologne"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-1",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le plus grand oiseau, c'est quel animal ?",
+      "choices": [
+        "l'aigle",
+        "l'autruche",
+        "le cygne",
+        "le manchot"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-7",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'animal connu pour changer de couleur, c'est quel animal ?",
+      "choices": [
+        "la pieuvre",
+        "la grenouille",
+        "le perroquet",
+        "le caméléon"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-13",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'animal à trompe, c'est quel animal ?",
+      "choices": [
+        "l'éléphant",
+        "le rhinocéros",
+        "l'hippopotame",
+        "le morse"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-19",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'oiseau nocturne du proverbe, c'est quel animal ?",
+      "choices": [
+        "le hibou",
+        "la corneille",
+        "le rouge-gorge",
+        "la chauve-souris"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-seasons-four",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les régions tempérées nomment d'habitude combien de saisons ?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-human-ears",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un humain typique a combien d'oreilles ?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-vowels-en",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "En anglais, on liste d'habitude combien de voyelles : a, e, i, o et u ?",
+      "choices": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-wonders-ancient",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "La liste classique du monde antique compte combien de merveilles ?",
+      "choices": [
+        "7",
+        "10",
+        "8",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-pedals-piano-grand",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un piano à queue typique a combien de pédales ?",
+      "choices": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-easy-angles-triangle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un triangle a combien d'angles ?",
+      "choices": [
+        "4",
+        "6",
+        "2",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-easy-chair-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Une chaise typique a combien de pieds ?",
+      "choices": [
+        "6",
+        "4",
+        "3",
+        "2"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-easy-days-fortnight",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un fortnight compte combien de jours ?",
+      "choices": [
+        "10",
+        "15",
+        "7",
+        "14"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-ch-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Suisse?",
+      "choices": [
+        "Genève",
+        "Bâle",
+        "Berne",
+        "Zurich"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-iq-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Irak?",
+      "choices": [
+        "Erbil",
+        "Bagdad",
+        "Bassora",
+        "Mossoul"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-my-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Malaisie?",
+      "choices": [
+        "Singapour",
+        "Kuala Lumpur",
+        "George Town",
+        "Johor Bahru"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sn-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Sénégal?",
+      "choices": [
+        "Thiès",
+        "Saint-Louis",
+        "Dakar",
+        "Bamako"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-pride-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Pride and Prejudice ?",
+      "choices": [
+        "Jane Austen",
+        "Emily Brontë",
+        "Charlotte Brontë",
+        "Mary Shelley"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-crime-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Crime and Punishment ?",
+      "choices": [
+        "Anton Chekhov",
+        "Leo Tolstoy",
+        "Fyodor Dostoevsky",
+        "Ivan Turgenev"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-matilda-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the book Matilda ?",
+      "choices": [
+        "Roald Dahl",
+        "J. K. Rowling",
+        "Dr. Seuss",
+        "Enid Blyton"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-alchemist-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Alchemist ?",
+      "choices": [
+        "Isabel Allende",
+        "Jorge Luis Borges",
+        "Paulo Coelho",
+        "Gabriel García Márquez"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-eighty-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Around the World in Eighty Days ?",
+      "choices": [
+        "Jules Verne",
+        "Agatha Christie",
+        "Mark Twain",
+        "H. G. Wells"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-gulliver-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit Gulliver's Travels ?",
+      "choices": [
+        "Voltaire",
+        "Laurence Sterne",
+        "Jonathan Swift",
+        "Daniel Defoe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-madame-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Madame Bovary ?",
+      "choices": [
+        "Honoré de Balzac",
+        "Gustave Flaubert",
+        "Émile Zola",
+        "Victor Hugo"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-kindred-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Kindred ?",
+      "choices": [
+        "Toni Morrison",
+        "N. K. Jemisin",
+        "Ursula K. Le Guin",
+        "Octavia E. Butler"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-nutcracker-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the ballet The Nutcracker ?",
+      "choices": [
+        "Sergei Prokofiev",
+        "Maurice Ravel",
+        "Pyotr Ilyich Tchaikovsky",
+        "Igor Stravinsky"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-bolero-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the orchestral piece Boléro ?",
+      "choices": [
+        "Claude Debussy",
+        "Camille Saint-Saëns",
+        "Gabriel Fauré",
+        "Maurice Ravel"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-no-woman-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song No Woman, No Cry ?",
+      "choices": [
+        "Jimmy Cliff",
+        "Toots Hibbert",
+        "Bob Marley",
+        "Peter Tosh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-blinding-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Blinding Lights ?",
+      "choices": [
+        "Drake",
+        "The Weeknd",
+        "Post Malone",
+        "Bruno Mars"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-espresso-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the 2024 song Espresso ?",
+      "choices": [
+        "Sabrina Carpenter",
+        "Dua Lipa",
+        "Chappell Roan",
+        "Olivia Rodrigo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-pepper-year-song",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the album Sgt. Pepper's Lonely Hearts Club Band ?",
+      "choices": [
+        "The Beatles",
+        "The Beach Boys",
+        "The Rolling Stones",
+        "The Kinks"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-avatar-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 2009 film Avatar ?",
+      "choices": [
+        "James Cameron",
+        "George Lucas",
+        "Jon Favreau",
+        "Peter Jackson"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-spirited-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Spirited Away ?",
+      "choices": [
+        "Isao Takahata",
+        "Satoshi Kon",
+        "Makoto Shinkai",
+        "Hayao Miyazaki"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-tiger-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Crouching Tiger, Hidden Dragon ?",
+      "choices": [
+        "Ang Lee",
+        "Wong Kar-wai",
+        "Zhang Yimou",
+        "John Woo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-shrek-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 2001 film Shrek ?",
+      "choices": [
+        "Andrew Adamson and Vicky Jenson",
+        "Chris Miller",
+        "Pete Docter",
+        "John Lasseter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-h",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément hydrogen ?",
+      "choices": [
+        "H",
+        "N",
+        "O",
+        "He"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-k",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément potassium ?",
+      "choices": [
+        "Na",
+        "K",
+        "P",
+        "Ca"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-sn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément tin ?",
+      "choices": [
+        "Ti",
+        "Sn",
+        "Sb",
+        "Si"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-si",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément silicon ?",
+      "choices": [
+        "Ag",
+        "Sn",
+        "Si",
+        "S"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-ni",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément nickel ?",
+      "choices": [
+        "N",
+        "Ne",
+        "Ni",
+        "Na"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-ford-founder",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fondé la Ford Motor Company ?",
+      "choices": [
+        "Ransom Olds",
+        "Henry Ford",
+        "Walter Chrysler",
+        "William Durant"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-largest-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quelle planète, la plus grande du système solaire ?",
+      "choices": [
+        "Saturn",
+        "Neptune",
+        "Earth",
+        "Jupiter"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-farthest-eight",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Des huit planètes, c'est laquelle qui orbite le plus loin du Soleil ?",
+      "choices": [
+        "Saturn",
+        "Pluto",
+        "Uranus",
+        "Neptune"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-invent-gunpowder",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quelle civilisation qui a d'abord mis au point la poudre ?",
+      "choices": [
+        "China",
+        "the Middle East",
+        "India",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-origin-cacao",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le cacao a d'abord été cultivé dans quelle région ?",
+      "choices": [
+        "Europe",
+        "India",
+        "Mesoamerica",
+        "West Africa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-stephenson-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a construit la locomotive Rocket ?",
+      "choices": [
+        "George Stephenson",
+        "Richard Trevithick",
+        "Isambard Kingdom Brunel",
+        "James Watt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-eastman-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fondé l'entreprise qui a vendu les appareils Kodak ?",
+      "choices": [
+        "George Eastman",
+        "Ansel Adams",
+        "Thomas Edison",
+        "Louis Daguerre"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-barton-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fondé la Croix-Rouge américaine ?",
+      "choices": [
+        "Florence Nightingale",
+        "Clara Barton",
+        "Helen Keller",
+        "Dorothea Dix"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-radium-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les Curie ont découvert quel élément avec le polonium ?",
+      "choices": [
+        "uranium",
+        "plutonium",
+        "curium",
+        "radium"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-rust-metal",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "La rouille se forme surtout sur quel métal ?",
+      "choices": [
+        "iron",
+        "copper",
+        "aluminum",
+        "gold"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-maple-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le sirop d'érable vient de la sève de quel arbre ?",
+      "choices": [
+        "the oak",
+        "the birch",
+        "the maple",
+        "the pine"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-pepper-vine",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le poivre noir vient de quel type de plante ?",
+      "choices": [
+        "a grass",
+        "a vine",
+        "a root",
+        "a tree nut"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-hard-zhang-heng",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a inventé un sismographe dans la Chine des Han ?",
+      "choices": [
+        "Cai Lun",
+        "Bi Sheng",
+        "Shen Kuo",
+        "Zhang Heng"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-kh-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Cambodge?",
+      "choices": [
+        "Phnom Penh",
+        "Vientiane",
+        "Bangkok",
+        "Siem Reap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-mn-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Mongolie?",
+      "choices": [
+        "Ulaanbaatar",
+        "Pékin",
+        "Darkhan",
+        "Erdenet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-mz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Mozambique?",
+      "choices": [
+        "Maputo",
+        "Johannesburg",
+        "Nampula",
+        "Beira"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-heliocentric-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the book On the Revolutions of the Heavenly Spheres ?",
+      "choices": [
+        "Nicolaus Copernicus",
+        "Johannes Kepler",
+        "Tycho Brahe",
+        "Galileo Galilei"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-dna-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the 1953 model of the DNA double helix, with the scored pair ?",
+      "choices": [
+        "Linus Pauling",
+        "Rosalind Franklin and Maurice Wilkins",
+        "James Watson and Francis Crick",
+        "Gregor Mendel"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-maxwell-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the equations that united electricity and magnetism ?",
+      "choices": [
+        "Michael Faraday",
+        "James Clerk Maxwell",
+        "Oliver Heaviside",
+        "Heinrich Hertz"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-johnson-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the orbital calculations celebrated in Hidden Figures ?",
+      "choices": [
+        "Mary Jackson",
+        "Margaret Hamilton",
+        "Katherine Johnson",
+        "Dorothy Vaughan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-benz-car",
+      "tier": "difficult",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a construit la Benz Patent-Motorwagen ?",
+      "choices": [
+        "Karl Benz",
+        "Henry Ford",
+        "Nikolaus Otto",
+        "Gottlieb Daimler"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-y-civil-end",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la guerre de Sécession a fini ?",
+      "choices": [
+        "1861",
+        "1863",
+        "1870",
+        "1865"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-y-new-deal",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Franklin D. Roosevelt est devenu président pour la première fois ?",
+      "choices": [
+        "1939",
+        "1945",
+        "1929",
+        "1933"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-y-voting",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que les États-Unis ont adopté le Voting Rights Act ?",
+      "choices": [
+        "1964",
+        "1968",
+        "1963",
+        "1965"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-y-soviet",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Union soviétique s'est dissoute ?",
+      "choices": [
+        "1991",
+        "1990",
+        "1989",
+        "1993"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-y-paris-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que les Jeux olympiques d'été de Paris ont eu lieu ?",
+      "choices": [
+        "2016",
+        "2020",
+        "2024",
+        "2028"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-y-black-hole",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la première image d'un trou noir a été publiée ?",
+      "choices": [
+        "2019",
+        "2012",
+        "2022",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-y-eiffel",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la tour Eiffel a été achevée ?",
+      "choices": [
+        "1886",
+        "1789",
+        "1900",
+        "1889"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-y-womens-cup",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la première Coupe du monde féminine de la FIFA a eu lieu ?",
+      "choices": [
+        "1999",
+        "1995",
+        "1991",
+        "1985"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-diff-channel",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le tunnel sous la Manche a ouvert aux passagers en quelle année ?",
+      "choices": [
+        "1990",
+        "1981",
+        "2004",
+        "1994"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-diff-nitrogen",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "La plus grande part de l'air autour de la Terre est quel gaz ?",
+      "choices": [
+        "nitrogen",
+        "oxygen",
+        "argon",
+        "carbon dioxide"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-uy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Uruguay?",
+      "choices": [
+        "Punta del Este",
+        "Montevideo",
+        "Buenos Aires",
+        "Salto"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-ht-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale d'Haïti?",
+      "choices": [
+        "Santo Domingo",
+        "Kingston",
+        "Cap-Haïtien",
+        "Port-au-Prince"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-sv-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Salvador?",
+      "choices": [
+        "San Salvador",
+        "Santa Ana",
+        "Tegucigalpa",
+        "Guatemala"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-lv-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Lettonie?",
+      "choices": [
+        "Daugavpils",
+        "Vilnius",
+        "Riga",
+        "Tallinn"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-ba-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Bosnie-Herzégovine?",
+      "choices": [
+        "Sarajevo",
+        "Banja Luka",
+        "Mostar",
+        "Zagreb"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-cy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de Chypre?",
+      "choices": [
+        "Limassol",
+        "Larnaca",
+        "Athènes",
+        "Nicosie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-ml-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Mali?",
+      "choices": [
+        "Sikasso",
+        "Tombouctou",
+        "Bamako",
+        "Dakar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-er-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Érythrée?",
+      "choices": [
+        "Asmara",
+        "Addis-Abeba",
+        "Khartoum",
+        "Massawa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-atomic-hg",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le numéro atomique du mercure ?",
+      "choices": [
+        "79",
+        "30",
+        "82",
+        "80"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
       "slang": "Dites,"
     }
   ]

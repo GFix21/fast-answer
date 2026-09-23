@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "en",
   "target": 150,
-  "held": 27,
-  "shortfall": 123,
+  "held": 150,
+  "shortfall": 0,
   "ageYear": 2026,
   "born": [
     1981,
@@ -493,6 +493,2097 @@
       "banterHint": "The first clip was short. The year is the middle one of that decade.",
       "slang": "Just saying,",
       "structure": "when"
+    },
+    {
+      "id": "cq-w39-gy-e-uk-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of the United Kingdom?",
+      "choices": [
+        "Edinburgh",
+        "Manchester",
+        "London",
+        "Birmingham"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-se-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Sweden?",
+      "choices": [
+        "Stockholm",
+        "Gothenburg",
+        "Malmö",
+        "Oslo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-kr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of South Korea?",
+      "choices": [
+        "Busan",
+        "Incheon",
+        "Pyongyang",
+        "Seoul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Chile?",
+      "choices": [
+        "Lima",
+        "Santiago",
+        "Valparaíso",
+        "Concepción"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-is-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Iceland?",
+      "choices": [
+        "Reykjavík",
+        "Akureyri",
+        "Oslo",
+        "Copenhagen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-za-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the administrative capital of South Africa?",
+      "choices": [
+        "Johannesburg",
+        "Durban",
+        "Cape Town",
+        "Pretoria"
+      ],
+      "correctIndex": 3,
+      "banterHint": "South Africa also has a legislative capital and a judicial capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-day-hours",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many hours are in a day?",
+      "choices": [
+        "36",
+        "24",
+        "12",
+        "20"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-hexagon-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many sides does a hexagon have?",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-deck-suits",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many suits are in a standard deck of cards?",
+      "choices": [
+        "5",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-bill-rights",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many amendments are in the U.S. Bill of Rights?",
+      "choices": [
+        "10",
+        "12",
+        "8",
+        "27"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-insect-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many legs does an insect have?",
+      "choices": [
+        "4",
+        "10",
+        "8",
+        "6"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-baseball-nine",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players from one team take the field in baseball?",
+      "choices": [
+        "10",
+        "8",
+        "9",
+        "11"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-golf-holes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many holes are in a standard round of golf?",
+      "choices": [
+        "9",
+        "18",
+        "16",
+        "12"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-both-soccer",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players start a soccer match on the pitch, counting both teams?",
+      "choices": [
+        "22",
+        "18",
+        "20",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-curling-team",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players are on a curling team?",
+      "choices": [
+        "6",
+        "8",
+        "2",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-ukulele-strings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many strings does a standard soprano ukulele have?",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-boil-f",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many degrees Fahrenheit is the boiling point of water at sea level?",
+      "choices": [
+        "212",
+        "100",
+        "180",
+        "32"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-year-days",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many days are in a common year that is not a leap year?",
+      "choices": [
+        "365",
+        "366",
+        "364",
+        "360"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-colosseum-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Colosseum?",
+      "choices": [
+        "Spain",
+        "France",
+        "Italy",
+        "Greece"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-opera-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Sydney Opera House?",
+      "choices": [
+        "New Zealand",
+        "Australia",
+        "Canada",
+        "the United Kingdom"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-burj-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Burj Khalifa?",
+      "choices": [
+        "India",
+        "the United Arab Emirates",
+        "Saudi Arabia",
+        "Qatar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-reef-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Great Barrier Reef?",
+      "choices": [
+        "Australia",
+        "Indonesia",
+        "Fiji",
+        "Brazil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-sphinx-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Great Sphinx of Giza?",
+      "choices": [
+        "Egypt",
+        "Greece",
+        "Sudan",
+        "Iraq"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-nightwatch-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The Night Watch?",
+      "choices": [
+        "Johannes Vermeer",
+        "Peter Paul Rubens",
+        "Frans Hals",
+        "Rembrandt"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-meninas-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted Las Meninas?",
+      "choices": [
+        "El Greco",
+        "Bartolomé Murillo",
+        "Francisco Goya",
+        "Diego Velázquez"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-vw-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Volkswagen?",
+      "choices": [
+        "the United States",
+        "Sweden",
+        "Italy",
+        "Germany"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-honda-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Honda?",
+      "choices": [
+        "China",
+        "the United States",
+        "Japan",
+        "South Korea"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-suv-mean",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What does SUV stand for?",
+      "choices": [
+        "standard urban van",
+        "speed under vacuum",
+        "super utility volt",
+        "sport utility vehicle"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-germany",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Germany in this question?",
+      "choices": [
+        "English",
+        "French",
+        "Dutch",
+        "German"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-greece",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Greece in this question?",
+      "choices": [
+        "Latin",
+        "Italian",
+        "Greek",
+        "Turkish"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-netherlands",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with the Netherlands in this question?",
+      "choices": [
+        "French",
+        "German",
+        "Dutch",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-0",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Egypt?",
+      "choices": [
+        "Asia",
+        "Europe",
+        "Africa",
+        "South America"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-7",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is China?",
+      "choices": [
+        "Europe",
+        "North America",
+        "Africa",
+        "Asia"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-14",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Italy?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "South America",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-21",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Mexico?",
+      "choices": [
+        "South America",
+        "Africa",
+        "Europe",
+        "North America"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-28",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Peru?",
+      "choices": [
+        "South America",
+        "Africa",
+        "Europe",
+        "North America"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-35",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Indonesia?",
+      "choices": [
+        "Africa",
+        "Europe",
+        "Asia",
+        "North America"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-2",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of the United States?",
+      "choices": [
+        "the dollar",
+        "the euro",
+        "the peso",
+        "the yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-9",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Norway?",
+      "choices": [
+        "the yen",
+        "the krone",
+        "the euro",
+        "the dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-16",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Thailand?",
+      "choices": [
+        "the yen",
+        "the baht",
+        "the euro",
+        "the dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-23",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Argentina?",
+      "choices": [
+        "the yen",
+        "the peso",
+        "the euro",
+        "the dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-0",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with pizza?",
+      "choices": [
+        "Mexico",
+        "Japan",
+        "Italy",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-7",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with kimchi?",
+      "choices": [
+        "Italy",
+        "Mexico",
+        "Japan",
+        "South Korea"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-14",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with borscht?",
+      "choices": [
+        "Italy",
+        "Japan",
+        "Mexico",
+        "Ukraine"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-21",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with tiramisu?",
+      "choices": [
+        "Japan",
+        "Mexico",
+        "France",
+        "Italy"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-28",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with feijoada?",
+      "choices": [
+        "Brazil",
+        "Mexico",
+        "Japan",
+        "Italy"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-4",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is mammal that truly flies?",
+      "choices": [
+        "the owl",
+        "the flying squirrel",
+        "the bat",
+        "the penguin"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is two-humped camel?",
+      "choices": [
+        "the dromedary",
+        "the llama",
+        "the alpaca",
+        "the Bactrian camel"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-16",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is reptile with a shell?",
+      "choices": [
+        "the crocodile",
+        "the turtle",
+        "the snake",
+        "the lizard"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-22",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is egg-laying mammal with a bill?",
+      "choices": [
+        "the platypus",
+        "the duck",
+        "the echidna",
+        "the beaver"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-human-lungs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many lungs does a typical human have?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-week-weekend",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many days are usually called the weekend?",
+      "choices": [
+        "1",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-little-pigs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many little pigs are in the classic house-building tale?",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-strings-violin-family-viola",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many strings does a standard viola have?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-sides-square",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many sides does a square have?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-players-doubles",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players are on one side in doubles tennis?",
+      "choices": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-clock-numbers",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many numbers, from 1 to 12, are usually on a clock face?",
+      "choices": [
+        "6",
+        "12",
+        "10",
+        "24"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-score-twenty",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many years are in a score, as in 'four score'?",
+      "choices": [
+        "20",
+        "12",
+        "40",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-quartet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players are in a quartet?",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-octet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many bits are in a byte?",
+      "choices": [
+        "4",
+        "16",
+        "10",
+        "8"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-pk-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Pakistan?",
+      "choices": [
+        "Lahore",
+        "Karachi",
+        "Islamabad",
+        "Rawalpindi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-bg-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Bulgaria?",
+      "choices": [
+        "Sofia",
+        "Varna",
+        "Bucharest",
+        "Plovdiv"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-jo-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Jordan?",
+      "choices": [
+        "Amman",
+        "Jerusalem",
+        "Aqaba",
+        "Petra"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-romeo-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the play Romeo and Juliet?",
+      "choices": [
+        "Ben Jonson",
+        "Christopher Marlowe",
+        "William Shakespeare",
+        "John Milton"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-hobbit-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Hobbit?",
+      "choices": [
+        "J. K. Rowling",
+        "George R. R. Martin",
+        "J. R. R. Tolkien",
+        "C. S. Lewis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-iliad-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the epic poem the Iliad?",
+      "choices": [
+        "Virgil",
+        "Hesiod",
+        "Aeschylus",
+        "Homer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-wild-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book Where the Wild Things Are?",
+      "choices": [
+        "Maurice Sendak",
+        "Eric Carle",
+        "Crockett Johnson",
+        "Dr. Seuss"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-stranger-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Stranger?",
+      "choices": [
+        "Simone de Beauvoir",
+        "Jean-Paul Sartre",
+        "Albert Camus",
+        "André Gide"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-orient-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Murder on the Orient Express?",
+      "choices": [
+        "Arthur Conan Doyle",
+        "Ruth Rendell",
+        "P. D. James",
+        "Agatha Christie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-tale-cities",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel A Tale of Two Cities?",
+      "choices": [
+        "Charles Dickens",
+        "Thomas Hardy",
+        "William Makepeace Thackeray",
+        "George Eliot"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-beloved-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Beloved?",
+      "choices": [
+        "Maya Angelou",
+        "Zora Neale Hurston",
+        "Toni Morrison",
+        "Alice Walker"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-wind-willows",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book The Wind in the Willows?",
+      "choices": [
+        "Kenneth Grahame",
+        "A. A. Milne",
+        "Beatrix Potter",
+        "E. B. White"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-messiah-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the oratorio Messiah?",
+      "choices": [
+        "Henry Purcell",
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-purple-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Purple Rain?",
+      "choices": [
+        "David Bowie",
+        "Michael Jackson",
+        "Prince",
+        "Rick James"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-rolling-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Like a Rolling Stone?",
+      "choices": [
+        "Neil Young",
+        "Bob Dylan",
+        "The Rolling Stones",
+        "Mick Jagger"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-old-town-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Old Town Road?",
+      "choices": [
+        "Lil Nas X",
+        "Travis Scott",
+        "Drake",
+        "Post Malone"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-radiohead-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the band Radiohead, as lead singer?",
+      "choices": [
+        "Thom Yorke",
+        "Colin Greenwood",
+        "Ed O'Brien",
+        "Jonny Greenwood"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-et-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film E.T. the Extra-Terrestrial?",
+      "choices": [
+        "Robert Zemeckis",
+        "Chris Columbus",
+        "Steven Spielberg",
+        "George Lucas"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-psycho-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1960 film Psycho?",
+      "choices": [
+        "Orson Welles",
+        "Billy Wilder",
+        "John Ford",
+        "Alfred Hitchcock"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-budapest-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film The Grand Budapest Hotel?",
+      "choices": [
+        "Noah Baumbach",
+        "Paul Thomas Anderson",
+        "Wes Anderson",
+        "Sofia Coppola"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-nemo-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Finding Nemo?",
+      "choices": [
+        "Pete Docter",
+        "John Lasseter",
+        "Andrew Stanton",
+        "Brad Bird"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-fury-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 2015 film Mad Max: Fury Road?",
+      "choices": [
+        "Denis Villeneuve",
+        "Kathryn Bigelow",
+        "Ridley Scott",
+        "George Miller"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-c",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for carbon?",
+      "choices": [
+        "Co",
+        "C",
+        "Ca",
+        "Cl"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ag",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for silver?",
+      "choices": [
+        "Si",
+        "Al",
+        "Ag",
+        "Au"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ca",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for calcium?",
+      "choices": [
+        "Ca",
+        "K",
+        "Cl",
+        "C"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ne",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for neon?",
+      "choices": [
+        "N",
+        "Na",
+        "Ne",
+        "Ni"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-w",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for tungsten?",
+      "choices": [
+        "Tu",
+        "W",
+        "Sn",
+        "Tg"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-arctic-ocean",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which ocean is the smallest of the five commonly named oceans?",
+      "choices": [
+        "the Indian Ocean",
+        "the Arctic Ocean",
+        "the Southern Ocean",
+        "the Atlantic Ocean"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-ring-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which planet is famous for a bright ring system seen from Earth?",
+      "choices": [
+        "Jupiter",
+        "Saturn",
+        "Neptune",
+        "Uranus"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-photosynthesis-out",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What gas do plants release during photosynthesis?",
+      "choices": [
+        "hydrogen",
+        "oxygen",
+        "carbon dioxide",
+        "nitrogen"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-origin-tea",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is treated as the origin of tea drinking?",
+      "choices": [
+        "India",
+        "the United Kingdom",
+        "Japan",
+        "China"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-diesel-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who invented the diesel engine?",
+      "choices": [
+        "Karl Benz",
+        "Henry Ford",
+        "Rudolf Diesel",
+        "Nikolaus Otto"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-morse-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who developed the telegraph code of dots and dashes that carries his name?",
+      "choices": [
+        "Alexander Graham Bell",
+        "Samuel Morse",
+        "Guglielmo Marconi",
+        "Thomas Edison"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-peace-nobel-country",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Nobel Peace Prize awarded?",
+      "choices": [
+        "Switzerland",
+        "Finland",
+        "Norway",
+        "Sweden"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-garrett-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who was the first woman to qualify as a physician and surgeon in Britain?",
+      "choices": [
+        "Elizabeth Garrett Anderson",
+        "Marie Curie",
+        "Florence Nightingale",
+        "Elizabeth Blackwell"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-diamond-carbon",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Diamond is a form of which element?",
+      "choices": [
+        "carbon",
+        "quartz",
+        "calcium",
+        "silicon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-pearl-origin",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "A pearl forms inside what?",
+      "choices": [
+        "a clam only",
+        "a snail",
+        "a crab",
+        "an oyster"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-bd-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Bangladesh?",
+      "choices": [
+        "Chittagong",
+        "Kolkata",
+        "Dhaka",
+        "Khulna"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-tj-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Tajikistan?",
+      "choices": [
+        "Khujand",
+        "Dushanbe",
+        "Bishkek",
+        "Tashkent"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-zw-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Zimbabwe?",
+      "choices": [
+        "Gaborone",
+        "Lusaka",
+        "Harare",
+        "Bulawayo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-telephone-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the telephone patent of 1876?",
+      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi",
+        "Alexander Graham Bell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-smallpox-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the first smallpox vaccine?",
+      "choices": [
+        "Louis Pasteur",
+        "Edward Jenner",
+        "Alexander Fleming",
+        "Jonas Salk"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-turing-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the idea of a universal computing machine in 1936?",
+      "choices": [
+        "Ada Lovelace",
+        "John von Neumann",
+        "Alan Turing",
+        "Charles Babbage"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-tereshkova-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the first woman in space?",
+      "choices": [
+        "Mae Jemison",
+        "Valentina Tereshkova",
+        "Sally Ride",
+        "Svetlana Savitskaya"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-bastille",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the Bastille was stormed in Paris?",
+      "choices": [
+        "1815",
+        "1848",
+        "1789",
+        "1776"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-ww1-end",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the World War I armistice took effect?",
+      "choices": [
+        "1914",
+        "1945",
+        "1918",
+        "1919"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-india",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year India became independent?",
+      "choices": [
+        "1945",
+        "1948",
+        "1950",
+        "1947"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-mandela",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Nelson Mandela was released from prison?",
+      "choices": [
+        "1990",
+        "1964",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-nine-eleven",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the September 11 attacks took place in the United States?",
+      "choices": [
+        "2003",
+        "2000",
+        "2001",
+        "1999"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-brexit-leave",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the United Kingdom left the European Union?",
+      "choices": [
+        "2020",
+        "2016",
+        "2019",
+        "2021"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-model-t",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Ford began selling the Model T?",
+      "choices": [
+        "1908",
+        "1920",
+        "1914",
+        "1903"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-world-cup-first",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the first FIFA World Cup was held?",
+      "choices": [
+        "1930",
+        "1924",
+        "1950",
+        "1934"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-ph",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Pure water at room temperature has what pH?",
+      "choices": [
+        "1",
+        "14",
+        "7",
+        "0"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-genome",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "The completion of the Human Genome Project was announced in which year?",
+      "choices": [
+        "1990",
+        "1998",
+        "2003",
+        "2010"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-x-ve-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Venezuela?",
+      "choices": [
+        "Caracas",
+        "Maracaibo",
+        "Valencia",
+        "Bogotá"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-x-cr-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Costa Rica?",
+      "choices": [
+        "Limón",
+        "Liberia",
+        "San José",
+        "Panama City"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-x-pg-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Papua New Guinea?",
+      "choices": [
+        "Port Moresby",
+        "Lae",
+        "Mount Hagen",
+        "Suva"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-x-mt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Malta?",
+      "choices": [
+        "Valletta",
+        "Sliema",
+        "Mdina",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-x-am-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Armenia?",
+      "choices": [
+        "Gyumri",
+        "Baku",
+        "Yerevan",
+        "Tbilisi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-x-rw-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Rwanda?",
+      "choices": [
+        "Kigali",
+        "Kampala",
+        "Gisenyi",
+        "Butare"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-x-dz-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Algeria?",
+      "choices": [
+        "Tunis",
+        "Algiers",
+        "Oran",
+        "Constantine"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-x-atomic-pb",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the atomic number of lead?",
+      "choices": [
+        "82",
+        "26",
+        "50",
+        "80"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-x-harp-strings",
+      "tier": "extreme",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many strings does a concert pedal harp usually have?",
+      "choices": [
+        "46",
+        "40",
+        "47",
+        "88"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
     }
   ]
 }

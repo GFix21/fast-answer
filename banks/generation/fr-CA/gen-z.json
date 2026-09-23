@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "fr-CA",
   "target": 150,
-  "held": 27,
-  "shortfall": 123,
+  "held": 150,
+  "shortfall": 0,
   "ageYear": 2026,
   "born": [
     1997,
@@ -489,6 +489,2097 @@
       "banterHint": "La grue volante a fait le dernier pas. L'année est 2012.",
       "slang": "Sans chichi,",
       "structure": "when"
+    },
+    {
+      "id": "cq-w39-gz-e-ie-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Irlande?",
+      "choices": [
+        "Cork",
+        "Galway",
+        "Londres",
+        "Dublin"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-no-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Norvège?",
+      "choices": [
+        "Oslo",
+        "Bergen",
+        "Stockholm",
+        "Tromsø"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-mx-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Mexique?",
+      "choices": [
+        "Mexico",
+        "Monterrey",
+        "Cancún",
+        "Guadalajara"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-pe-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Pérou?",
+      "choices": [
+        "Lima",
+        "Arequipa",
+        "Cusco",
+        "Santiago"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-sg-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de Singapour?",
+      "choices": [
+        "Kuala Lumpur",
+        "Bangkok",
+        "Jakarta",
+        "Singapour"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-us-stars",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'étoiles il y a sur le drapeau des États-Unis ?",
+      "choices": [
+        "50",
+        "13",
+        "52",
+        "48"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-hour-minutes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de minutes il y a dans une heure ?",
+      "choices": [
+        "60",
+        "30",
+        "100",
+        "24"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-octagon-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de côtés il y a sur un octogone ?",
+      "choices": [
+        "8",
+        "10",
+        "6",
+        "4"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-chess-squares",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de cases il y a sur un échiquier ?",
+      "choices": [
+        "32",
+        "100",
+        "64",
+        "81"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-supreme-court",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de juges il y a à la Cour suprême des États-Unis ?",
+      "choices": [
+        "7",
+        "9",
+        "12",
+        "8"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-spider-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de pattes il y a sur une araignée ?",
+      "choices": [
+        "4",
+        "8",
+        "6",
+        "10"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-baseball-bases",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de buts il y a sur un terrain de baseball ?",
+      "choices": [
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-nba-quarters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de quarts il y a dans un match de la NBA ?",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-nfl-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'équipes il y a dans la NFL ?",
+      "choices": [
+        "30",
+        "28",
+        "16",
+        "32"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-water-polo",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de joueurs d'une équipe il y a dans l'eau au water-polo ?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-mandolin-strings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de cordes il y a sur une mandoline standard ?",
+      "choices": [
+        "4",
+        "6",
+        "12",
+        "8"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-km-meters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de mètres il y a dans un kilomètre ?",
+      "choices": [
+        "100",
+        "1609",
+        "1000",
+        "500"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-week-hours",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'heures il y a dans une semaine ?",
+      "choices": [
+        "120",
+        "144",
+        "168",
+        "240"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-machu-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le Machu Picchu ?",
+      "choices": [
+        "Mexico",
+        "Chile",
+        "Bolivia",
+        "Peru"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-kremlin-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le Kremlin de Moscou ?",
+      "choices": [
+        "Finland",
+        "Russia",
+        "Ukraine",
+        "Poland"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-fuji-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le mont Fuji ?",
+      "choices": [
+        "South Korea",
+        "Indonesia",
+        "China",
+        "Japan"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-niagara-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, les chutes du Niagara, du côté partagé avec New York ?",
+      "choices": [
+        "the United Kingdom",
+        "Mexico",
+        "Canada",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-scream-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint The Scream ?",
+      "choices": [
+        "Edvard Munch",
+        "Edvard Grieg",
+        "Claude Monet",
+        "Vincent van Gogh"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-lilies-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint the Water Lilies series ?",
+      "choices": [
+        "Pierre-Auguste Renoir",
+        "Claude Monet",
+        "Paul Cézanne",
+        "Edgar Degas"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-athens-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint The School of Athens ?",
+      "choices": [
+        "Raphael",
+        "Leonardo da Vinci",
+        "Titian",
+        "Michelangelo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ferrari-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Ferrari ?",
+      "choices": [
+        "Italy",
+        "France",
+        "Germany",
+        "the United Kingdom"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-bmw-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de BMW ?",
+      "choices": [
+        "Italy",
+        "Germany",
+        "Austria",
+        "Sweden"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-rpm-mean",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "RPM sur un compte-tours, ça veut dire quoi ?",
+      "choices": [
+        "revolutions per mile",
+        "revolutions per minute",
+        "rounds per mile",
+        "rotations per meter"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-france",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à France dans cette question ?",
+      "choices": [
+        "French",
+        "Italian",
+        "German",
+        "Spanish"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-poland",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Poland dans cette question ?",
+      "choices": [
+        "Russian",
+        "German",
+        "Czech",
+        "Polish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-sweden",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Sweden dans cette question ?",
+      "choices": [
+        "Danish",
+        "Finnish",
+        "Norwegian",
+        "Swedish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-1",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Nigeria est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Asie",
+        "Amérique du Sud"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-8",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'Inde est sur quel continent ?",
+      "choices": [
+        "Amérique du Nord",
+        "Asie",
+        "Europe",
+        "Afrique"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-15",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'Allemagne est sur quel continent ?",
+      "choices": [
+        "Amérique du Sud",
+        "Europe",
+        "Asie",
+        "Afrique"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-22",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Canada est sur quel continent ?",
+      "choices": [
+        "Amérique du Sud",
+        "Afrique",
+        "Europe",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-29",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Colombie est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Amérique du Nord",
+        "Amérique du Sud",
+        "Europe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-36",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Turquie est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Asie",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-3",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de la Chine ?",
+      "choices": [
+        "le dollar",
+        "le yen",
+        "le yuan",
+        "l'euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale du Danemark ?",
+      "choices": [
+        "la couronne",
+        "l'euro",
+        "le dollar",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de l'Indonésie ?",
+      "choices": [
+        "l'euro",
+        "la roupie",
+        "le yen",
+        "le dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-24",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale du Kenya ?",
+      "choices": [
+        "le yen",
+        "l'euro",
+        "le dollar",
+        "le shilling"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-1",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les sushis, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Mexique",
+        "Italie",
+        "Japon",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-8",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le sirop d'érable, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Mexique",
+        "Canada",
+        "Italie",
+        "Japon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-15",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le haggis, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Mexique",
+        "Écosse",
+        "Italie",
+        "Japon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-22",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La moussaka, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Italie",
+        "Mexique",
+        "Japon",
+        "Grèce"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-29",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le baklava, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Japon",
+        "Italie",
+        "Turquie",
+        "Mexique"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le sauteur australien, c'est quel animal ?",
+      "choices": [
+        "le wombat",
+        "l'émeu",
+        "le kangourou",
+        "le koala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-11",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'insecte qui fait le miel, c'est quel animal ?",
+      "choices": [
+        "la guêpe",
+        "la fourmi",
+        "le papillon",
+        "l'abeille"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'animal qui construit des barrages, c'est quel animal ?",
+      "choices": [
+        "l'ornithorynque",
+        "le castor",
+        "la loutre",
+        "le rat musqué"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-23",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le plus grand poisson, c'est quel animal ?",
+      "choices": [
+        "le requin-baleine",
+        "le grand requin blanc",
+        "la baleine bleue",
+        "la raie manta"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-human-kidneys",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un humain typique a combien de reins ?",
+      "choices": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-sense-classic",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La liste scolaire classique compte combien de sens : vue, ouïe, odorat, goût et toucher ?",
+      "choices": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-billy-goats",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Dans le conte classique, combien de boucs traversent le pont ?",
+      "choices": [
+        "2",
+        "7",
+        "3",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-strings-cello",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un violoncelle standard a combien de cordes ?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-sides-rectangle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un rectangle a combien de côtés ?",
+      "choices": [
+        "6",
+        "8",
+        "3",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-players-singles",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un camp en simple au tennis compte combien de joueurs ?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-months-named",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Avril est le combien du mois, si janvier est 1 ?",
+      "choices": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sa-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Arabie saoudite?",
+      "choices": [
+        "Riyad",
+        "La Mecque",
+        "Médine",
+        "Djedda"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hr-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Croatie?",
+      "choices": [
+        "Zagreb",
+        "Split",
+        "Dubrovnik",
+        "Rijeka"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-lb-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Liban?",
+      "choices": [
+        "Beyrouth",
+        "Tripoli",
+        "Sidon",
+        "Damas"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hamlet-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the play Hamlet ?",
+      "choices": [
+        "Molière",
+        "Henrik Ibsen",
+        "William Shakespeare",
+        "Christopher Marlowe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-potter-author",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the Harry Potter novels ?",
+      "choices": [
+        "Roald Dahl",
+        "J. K. Rowling",
+        "Rick Riordan",
+        "Philip Pullman"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-gatsby-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Great Gatsby ?",
+      "choices": [
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald",
+        "William Faulkner",
+        "John Steinbeck"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-gables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the book Anne of Green Gables ?",
+      "choices": [
+        "Louisa May Alcott",
+        "Laura Ingalls Wilder",
+        "Frances Hodgson Burnett",
+        "L. M. Montgomery"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-miserables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Les Misérables ?",
+      "choices": [
+        "Victor Hugo",
+        "Alexandre Dumas",
+        "Émile Zola",
+        "Gustave Flaubert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-little-women",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Little Women ?",
+      "choices": [
+        "Louisa May Alcott",
+        "Jane Austen",
+        "L. M. Montgomery",
+        "Emily Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-oliver-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Oliver Twist ?",
+      "choices": [
+        "Charles Dickens",
+        "Jane Austen",
+        "Thomas Hardy",
+        "Charlotte Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-color-purple",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Color Purple ?",
+      "choices": [
+        "Toni Morrison",
+        "Alice Walker",
+        "Octavia Butler",
+        "Maya Angelou"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-seasons-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait The Four Seasons ?",
+      "choices": [
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Arcangelo Corelli",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-brandenburg-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the Brandenburg Concertos ?",
+      "choices": [
+        "George Frideric Handel",
+        "Johann Sebastian Bach",
+        "Georg Philipp Telemann",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-bohemian-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Bohemian Rhapsody ?",
+      "choices": [
+        "Led Zeppelin",
+        "The Beatles",
+        "Queen",
+        "The Who"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hey-ya-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Hey Ya! ?",
+      "choices": [
+        "Beyoncé",
+        "Usher",
+        "OutKast",
+        "Kanye West"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-license-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song drivers license ?",
+      "choices": [
+        "Olivia Rodrigo",
+        "Billie Eilish",
+        "Taylor Swift",
+        "Sabrina Carpenter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-nirvana-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the band Nirvana, as lead singer ?",
+      "choices": [
+        "Eddie Vedder",
+        "Kurt Cobain",
+        "Dave Grohl",
+        "Krist Novoselic"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-jurassic-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 1993 film Jurassic Park ?",
+      "choices": [
+        "Steven Spielberg",
+        "Roland Emmerich",
+        "Peter Jackson",
+        "James Cameron"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-vertigo-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Vertigo ?",
+      "choices": [
+        "Alfred Hitchcock",
+        "Howard Hawks",
+        "Fritz Lang",
+        "Orson Welles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-amelie-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Amélie ?",
+      "choices": [
+        "Michel Gondry",
+        "Jean-Pierre Jeunet",
+        "Luc Besson",
+        "François Ozon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-toy-story-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 1995 film Toy Story ?",
+      "choices": [
+        "John Lasseter",
+        "Pete Docter",
+        "Andrew Stanton",
+        "Brad Bird"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-arrival-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 2016 film Arrival ?",
+      "choices": [
+        "Christopher Nolan",
+        "Neill Blomkamp",
+        "Alex Garland",
+        "Denis Villeneuve"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-n",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément nitrogen ?",
+      "choices": [
+        "Ne",
+        "Ni",
+        "Na",
+        "N"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-pb",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément lead ?",
+      "choices": [
+        "Pd",
+        "Pb",
+        "Li",
+        "Pt"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-mg",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément magnesium ?",
+      "choices": [
+        "Mn",
+        "Hg",
+        "Mo",
+        "Mg"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-ar",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément argon ?",
+      "choices": [
+        "Ar",
+        "Al",
+        "Au",
+        "Ag"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-co",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément cobalt ?",
+      "choices": [
+        "Ca",
+        "Co",
+        "Cu",
+        "C"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sahara-hot",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel désert, le plus grand désert chaud de la Terre ?",
+      "choices": [
+        "the Gobi",
+        "the Sahara",
+        "the Arabian Desert",
+        "the Kalahari"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quelle planète qu'on appelle la planète rouge ?",
+      "choices": [
+        "Jupiter",
+        "Mars",
+        "Venus",
+        "Mercury"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hardest-after",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Sur l'échelle de Mohs, c'est quel minéral juste sous le diamant ?",
+      "choices": [
+        "topaz",
+        "talc",
+        "quartz",
+        "corundum"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-origin-potato",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La pomme de terre a d'abord été cultivée dans quelle région ?",
+      "choices": [
+        "Europe",
+        "the Andes",
+        "West Africa",
+        "China"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-otto-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a construit le moteur à quatre temps qui porte son nom ?",
+      "choices": [
+        "Nikolaus Otto",
+        "Karl Benz",
+        "Rudolf Diesel",
+        "James Watt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-braille-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a inventé le système de lecture à points en relief appelé braille ?",
+      "choices": [
+        "Samuel Morse",
+        "Alexander Graham Bell",
+        "Helen Keller",
+        "Louis Braille"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-cross-founder",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fondé le mouvement de la Croix-Rouge après la bataille de Solférino ?",
+      "choices": [
+        "Florence Nightingale",
+        "Jean-Henri Fabre",
+        "Clara Barton",
+        "Henry Dunant"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-curie-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel élément qui porte le nom de Marie et Pierre Curie ?",
+      "choices": [
+        "curium",
+        "radium",
+        "polonium",
+        "uranium"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-table-salt",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le sel de table est surtout quel composé ?",
+      "choices": [
+        "sodium chloride",
+        "calcium carbonate",
+        "sodium bicarbonate",
+        "potassium iodide"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-cork-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le liège vient de l'écorce de quel arbre ?",
+      "choices": [
+        "the pine",
+        "the maple",
+        "the birch",
+        "the cork oak"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-vanilla-orchid",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La vanille vient de quel type de plante ?",
+      "choices": [
+        "an orchid",
+        "a cactus",
+        "a vine of grapes",
+        "a bean tree"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-bi-sheng",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a mis au point les caractères mobiles d'argile dans la Chine des Song ?",
+      "choices": [
+        "Bi Sheng",
+        "Cai Lun",
+        "Johannes Gutenberg",
+        "Shen Kuo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-figaro",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a composé l'opéra Les Noces de Figaro ?",
+      "choices": [
+        "Ludwig van Beethoven",
+        "Wolfgang Amadeus Mozart",
+        "Giuseppe Verdi",
+        "Gioachino Rossini"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-af-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Afghanistan?",
+      "choices": [
+        "Kandahar",
+        "Mazar-i-Sharif",
+        "Herat",
+        "Kabul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-mg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de Madagascar?",
+      "choices": [
+        "Antananarivo",
+        "Nairobi",
+        "Antsirabe",
+        "Toamasina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-zm-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Zambie?",
+      "choices": [
+        "Harare",
+        "Lusaka",
+        "Ndola",
+        "Kitwe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-bulb-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui a practical incandescent light bulb sold widely in the United States ?",
+      "choices": [
+        "Nikola Tesla",
+        "George Westinghouse",
+        "Alexander Graham Bell",
+        "Thomas Edison"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-pasteur-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the process called pasteurization ?",
+      "choices": [
+        "Louis Pasteur",
+        "Robert Koch",
+        "Joseph Lister",
+        "Edward Jenner"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-lovelace-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the notes often called the first computer program, on Babbage's engine ?",
+      "choices": [
+        "Charles Babbage",
+        "Grace Hopper",
+        "Alan Turing",
+        "Ada Lovelace"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-shepard-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first American in space ?",
+      "choices": [
+        "Gus Grissom",
+        "Alan Shepard",
+        "John Glenn",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-independence",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la Déclaration d'indépendance des États-Unis a été adoptée ?",
+      "choices": [
+        "1812",
+        "1776",
+        "1787",
+        "1789"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-revolution-ru",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la révolution d'Octobre a eu lieu en Russie ?",
+      "choices": [
+        "1917",
+        "1905",
+        "1914",
+        "1922"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-china-prc",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la République populaire de Chine a été proclamée ?",
+      "choices": [
+        "1949",
+        "1950",
+        "1912",
+        "1945"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-election-sa",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Afrique du Sud a tenu sa première élection au suffrage universel adulte ?",
+      "choices": [
+        "1990",
+        "2000",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-beijing-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que les Jeux olympiques d'été de Pékin ont eu lieu ?",
+      "choices": [
+        "2008",
+        "2012",
+        "2004",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-pluto",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Union astronomique internationale a reclassé Pluton comme planète naine ?",
+      "choices": [
+        "2003",
+        "1999",
+        "2015",
+        "2006"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-panama",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que le canal de Panama a été ouvert à la circulation ?",
+      "choices": [
+        "1904",
+        "1898",
+        "1869",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-superbowl",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que le premier Super Bowl a été joué ?",
+      "choices": [
+        "1970",
+        "1960",
+        "1967",
+        "1958"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-diff-protons-o",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un atome d'oxygène a combien de protons ?",
+      "choices": [
+        "8",
+        "6",
+        "16",
+        "2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-diff-airlift",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le pont aérien de Berlin a commencé en quelle année ?",
+      "choices": [
+        "1953",
+        "1945",
+        "1948",
+        "1961"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-x-bo-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale constitutionnelle de la Bolivie ?",
+      "choices": [
+        "La Paz",
+        "Santa Cruz",
+        "Cochabamba",
+        "Sucre"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le siège du gouvernement est une autre ville.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-x-pa-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Panama?",
+      "choices": [
+        "Colón",
+        "David",
+        "San José",
+        "Panama"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-x-ws-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale des Samoa?",
+      "choices": [
+        "Apia",
+        "Suva",
+        "Nuku'alofa",
+        "Pago Pago"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-x-al-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Albanie?",
+      "choices": [
+        "Podgorica",
+        "Tirana",
+        "Durrës",
+        "Vlorë"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-x-ge-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Géorgie?",
+      "choices": [
+        "Tbilissi",
+        "Yerevan",
+        "Bakou",
+        "Batumi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-x-ug-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Ouganda?",
+      "choices": [
+        "Kampala",
+        "Gulu",
+        "Nairobi",
+        "Entebbe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-x-ly-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Libye?",
+      "choices": [
+        "Benghazi",
+        "Misrata",
+        "Tunis",
+        "Tripoli"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-x-atomic-ag",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le numéro atomique de l'argent ?",
+      "choices": [
+        "79",
+        "29",
+        "50",
+        "47"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-x-bones-adult",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un squelette humain adulte compte environ combien d'os ?",
+      "choices": [
+        "186",
+        "206",
+        "180",
+        "256"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
     }
   ]
 }

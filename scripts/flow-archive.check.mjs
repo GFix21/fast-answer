@@ -55,7 +55,7 @@ for (const loc of ["en", "fr", "fr-CA", "de"]) {
   assert.equal(week.questions.length, live.length, loc);
   assert.equal(week.locale, loc);
   assert.equal(week.weekTarget, 1050, loc);
-  assert.equal(week.weekComplete, false, loc);
+  assert.equal(week.weekComplete, true, loc);
   assert.ok(week.questions.every((q) => q.status === "active"), loc);
 }
 

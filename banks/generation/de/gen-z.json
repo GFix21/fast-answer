@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "de",
   "target": 150,
-  "held": 27,
-  "shortfall": 123,
+  "held": 150,
+  "shortfall": 0,
   "ageYear": 2026,
   "born": [
     1997,
@@ -489,6 +489,2097 @@
       "banterHint": "Der Flugkran machte den letzten Schritt. Das Jahr ist 2012.",
       "slang": "Ganz ehrlich,",
       "structure": "when"
+    },
+    {
+      "id": "cq-w39-gz-e-ie-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Irland?",
+      "choices": [
+        "Cork",
+        "Galway",
+        "London",
+        "Dublin"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-no-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Norwegen?",
+      "choices": [
+        "Oslo",
+        "Bergen",
+        "Stockholm",
+        "Tromsö"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-mx-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Mexiko?",
+      "choices": [
+        "Mexiko-Stadt",
+        "Monterrey",
+        "Cancún",
+        "Guadalajara"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-pe-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Peru?",
+      "choices": [
+        "Lima",
+        "Arequipa",
+        "Cusco",
+        "Santiago"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-sg-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Singapur?",
+      "choices": [
+        "Kuala Lumpur",
+        "Bangkok",
+        "Jakarta",
+        "Singapur"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-us-stars",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Sterne hat die Flagge der Vereinigten Staaten?",
+      "choices": [
+        "50",
+        "13",
+        "52",
+        "48"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-hour-minutes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Minuten hat eine Stunde?",
+      "choices": [
+        "60",
+        "30",
+        "100",
+        "24"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-octagon-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Seiten hat ein Achteck?",
+      "choices": [
+        "8",
+        "10",
+        "6",
+        "4"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-chess-squares",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Felder hat ein Schachbrett?",
+      "choices": [
+        "32",
+        "100",
+        "64",
+        "81"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-supreme-court",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Richter sitzen am Obersten Gerichtshof der USA?",
+      "choices": [
+        "7",
+        "9",
+        "12",
+        "8"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-spider-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Beine hat eine Spinne?",
+      "choices": [
+        "4",
+        "8",
+        "6",
+        "10"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-baseball-bases",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Bases hat ein Baseballfeld?",
+      "choices": [
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-nba-quarters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Viertel hat ein NBA-Spiel?",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-nfl-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Teams hat die NFL?",
+      "choices": [
+        "30",
+        "28",
+        "16",
+        "32"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-water-polo",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Spieler einer Mannschaft sind beim Wasserball im Wasser?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-mandolin-strings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Saiten hat eine normale Mandoline?",
+      "choices": [
+        "4",
+        "6",
+        "12",
+        "8"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-km-meters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Meter hat ein Kilometer?",
+      "choices": [
+        "100",
+        "1609",
+        "1000",
+        "500"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-week-hours",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Stunden hat eine Woche?",
+      "choices": [
+        "120",
+        "144",
+        "168",
+        "240"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-machu-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht Machu Picchu?",
+      "choices": [
+        "Mexico",
+        "Chile",
+        "Bolivia",
+        "Peru"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-kremlin-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht der Moskauer Kreml?",
+      "choices": [
+        "Finland",
+        "Russia",
+        "Ukraine",
+        "Poland"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-fuji-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht der Berg Fuji?",
+      "choices": [
+        "South Korea",
+        "Indonesia",
+        "China",
+        "Japan"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-niagara-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht die Niagarafälle, auf der Seite mit New York?",
+      "choices": [
+        "the United Kingdom",
+        "Mexico",
+        "Canada",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-scream-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemalt The Scream?",
+      "choices": [
+        "Edvard Munch",
+        "Edvard Grieg",
+        "Claude Monet",
+        "Vincent van Gogh"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-lilies-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemalt the Water Lilies series?",
+      "choices": [
+        "Pierre-Auguste Renoir",
+        "Claude Monet",
+        "Paul Cézanne",
+        "Edgar Degas"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-athens-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemalt The School of Athens?",
+      "choices": [
+        "Raphael",
+        "Leonardo da Vinci",
+        "Titian",
+        "Michelangelo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-ferrari-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land ist die Heimat von Ferrari?",
+      "choices": [
+        "Italy",
+        "France",
+        "Germany",
+        "the United Kingdom"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-bmw-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land ist die Heimat von BMW?",
+      "choices": [
+        "Italy",
+        "Germany",
+        "Austria",
+        "Sweden"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-rpm-mean",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wofür steht RPM auf einem Drehzahlmesser?",
+      "choices": [
+        "revolutions per mile",
+        "revolutions per minute",
+        "rounds per mile",
+        "rotations per meter"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-france",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit France verbunden?",
+      "choices": [
+        "French",
+        "Italian",
+        "German",
+        "Spanish"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-poland",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit Poland verbunden?",
+      "choices": [
+        "Russian",
+        "German",
+        "Czech",
+        "Polish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-sweden",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit Sweden verbunden?",
+      "choices": [
+        "Danish",
+        "Finnish",
+        "Norwegian",
+        "Swedish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-1",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Nigeria?",
+      "choices": [
+        "Afrika",
+        "Europa",
+        "Asien",
+        "Südamerika"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-8",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Indien?",
+      "choices": [
+        "Nordamerika",
+        "Asien",
+        "Europa",
+        "Afrika"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-15",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Deutschland?",
+      "choices": [
+        "Südamerika",
+        "Europa",
+        "Asien",
+        "Afrika"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-22",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Kanada?",
+      "choices": [
+        "Südamerika",
+        "Afrika",
+        "Europa",
+        "Nordamerika"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-29",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Kolumbien?",
+      "choices": [
+        "Afrika",
+        "Nordamerika",
+        "Südamerika",
+        "Europa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-36",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt die Türkei?",
+      "choices": [
+        "Afrika",
+        "Europa",
+        "Asien",
+        "Nordamerika"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-3",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von China?",
+      "choices": [
+        "der Dollar",
+        "der Yen",
+        "der Yuan",
+        "der Euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Dänemark?",
+      "choices": [
+        "die Krone",
+        "der Euro",
+        "der Dollar",
+        "der Yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Indonesien?",
+      "choices": [
+        "der Euro",
+        "die Rupiah",
+        "der Yen",
+        "der Dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-24",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Kenia?",
+      "choices": [
+        "der Yen",
+        "der Euro",
+        "der Dollar",
+        "der Schilling"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-1",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Sushi?",
+      "choices": [
+        "Mexiko",
+        "Italien",
+        "Japan",
+        "Frankreich"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-8",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Ahornsirup?",
+      "choices": [
+        "Mexiko",
+        "Kanada",
+        "Italien",
+        "Japan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-15",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Haggis?",
+      "choices": [
+        "Mexiko",
+        "Schottland",
+        "Italien",
+        "Japan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-22",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Moussaka?",
+      "choices": [
+        "Italien",
+        "Mexiko",
+        "Japan",
+        "Griechenland"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-29",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Baklava?",
+      "choices": [
+        "Japan",
+        "Italien",
+        "Türkei",
+        "Mexiko"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Tier ist der australische Hüpfer?",
+      "choices": [
+        "der Wombat",
+        "der Emu",
+        "das Känguru",
+        "der Koala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-11",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Tier ist das Insekt, das Honig macht?",
+      "choices": [
+        "die Wespe",
+        "die Ameise",
+        "der Schmetterling",
+        "die Honigbiene"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Tier ist das Tier, das Dämme baut?",
+      "choices": [
+        "das Schnabeltier",
+        "der Biber",
+        "der Otter",
+        "die Bisamratte"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-23",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Tier ist der größte Fisch?",
+      "choices": [
+        "der Walhai",
+        "der Weiße Hai",
+        "der Blauwal",
+        "der Mantarochen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-human-kidneys",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Nieren hat ein typischer Mensch?",
+      "choices": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-sense-classic",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Sinne hat die klassische Schulliste: Sehen, Hören, Riechen, Schmecken und Tasten?",
+      "choices": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-billy-goats",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Ziegenböcke überqueren im klassischen Märchen die Brücke?",
+      "choices": [
+        "2",
+        "7",
+        "3",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-strings-cello",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Saiten hat ein normales Cello?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-sides-rectangle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Seiten hat ein Rechteck?",
+      "choices": [
+        "6",
+        "8",
+        "3",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-players-singles",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Spieler hat eine Seite im Tennis-Einzel?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-months-named",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Der wievielte Monat ist April, wenn Januar der erste ist?",
+      "choices": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sa-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Saudi-Arabien?",
+      "choices": [
+        "Riad",
+        "Mekka",
+        "Medina",
+        "Dschidda"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hr-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Kroatien?",
+      "choices": [
+        "Zagreb",
+        "Split",
+        "Dubrovnik",
+        "Rijeka"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-lb-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Libanon?",
+      "choices": [
+        "Beirut",
+        "Tripoli",
+        "Sidon",
+        "Damaskus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hamlet-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the play Hamlet?",
+      "choices": [
+        "Molière",
+        "Henrik Ibsen",
+        "William Shakespeare",
+        "Christopher Marlowe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-potter-author",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the Harry Potter novels?",
+      "choices": [
+        "Roald Dahl",
+        "J. K. Rowling",
+        "Rick Riordan",
+        "Philip Pullman"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-gatsby-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel The Great Gatsby?",
+      "choices": [
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald",
+        "William Faulkner",
+        "John Steinbeck"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-gables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the book Anne of Green Gables?",
+      "choices": [
+        "Louisa May Alcott",
+        "Laura Ingalls Wilder",
+        "Frances Hodgson Burnett",
+        "L. M. Montgomery"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-miserables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Les Misérables?",
+      "choices": [
+        "Victor Hugo",
+        "Alexandre Dumas",
+        "Émile Zola",
+        "Gustave Flaubert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-little-women",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Little Women?",
+      "choices": [
+        "Louisa May Alcott",
+        "Jane Austen",
+        "L. M. Montgomery",
+        "Emily Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-oliver-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Oliver Twist?",
+      "choices": [
+        "Charles Dickens",
+        "Jane Austen",
+        "Thomas Hardy",
+        "Charlotte Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-color-purple",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel The Color Purple?",
+      "choices": [
+        "Toni Morrison",
+        "Alice Walker",
+        "Octavia Butler",
+        "Maya Angelou"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-seasons-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht The Four Seasons?",
+      "choices": [
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Arcangelo Corelli",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-brandenburg-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the Brandenburg Concertos?",
+      "choices": [
+        "George Frideric Handel",
+        "Johann Sebastian Bach",
+        "Georg Philipp Telemann",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-bohemian-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Bohemian Rhapsody?",
+      "choices": [
+        "Led Zeppelin",
+        "The Beatles",
+        "Queen",
+        "The Who"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hey-ya-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Hey Ya!?",
+      "choices": [
+        "Beyoncé",
+        "Usher",
+        "OutKast",
+        "Kanye West"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-license-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song drivers license?",
+      "choices": [
+        "Olivia Rodrigo",
+        "Billie Eilish",
+        "Taylor Swift",
+        "Sabrina Carpenter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-nirvana-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the band Nirvana, as lead singer?",
+      "choices": [
+        "Eddie Vedder",
+        "Kurt Cobain",
+        "Dave Grohl",
+        "Krist Novoselic"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-jurassic-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 1993 film Jurassic Park?",
+      "choices": [
+        "Steven Spielberg",
+        "Roland Emmerich",
+        "Peter Jackson",
+        "James Cameron"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-vertigo-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film Vertigo?",
+      "choices": [
+        "Alfred Hitchcock",
+        "Howard Hawks",
+        "Fritz Lang",
+        "Orson Welles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-amelie-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film Amélie?",
+      "choices": [
+        "Michel Gondry",
+        "Jean-Pierre Jeunet",
+        "Luc Besson",
+        "François Ozon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-toy-story-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 1995 film Toy Story?",
+      "choices": [
+        "John Lasseter",
+        "Pete Docter",
+        "Andrew Stanton",
+        "Brad Bird"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-arrival-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 2016 film Arrival?",
+      "choices": [
+        "Christopher Nolan",
+        "Neill Blomkamp",
+        "Alex Garland",
+        "Denis Villeneuve"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-n",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element nitrogen?",
+      "choices": [
+        "Ne",
+        "Ni",
+        "Na",
+        "N"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-pb",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element lead?",
+      "choices": [
+        "Pd",
+        "Pb",
+        "Li",
+        "Pt"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-mg",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element magnesium?",
+      "choices": [
+        "Mn",
+        "Hg",
+        "Mo",
+        "Mg"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-ar",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element argon?",
+      "choices": [
+        "Ar",
+        "Al",
+        "Au",
+        "Ag"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-co",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element cobalt?",
+      "choices": [
+        "Ca",
+        "Co",
+        "Cu",
+        "C"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sahara-hot",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Wüste ist die größte heiße Wüste der Erde?",
+      "choices": [
+        "the Gobi",
+        "the Sahara",
+        "the Arabian Desert",
+        "the Kalahari"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welcher Planet wird der rote Planet genannt?",
+      "choices": [
+        "Jupiter",
+        "Mars",
+        "Venus",
+        "Mercury"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hardest-after",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Mineral liegt auf der Mohs-Skala direkt unter Diamant?",
+      "choices": [
+        "topaz",
+        "talc",
+        "quartz",
+        "corundum"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-origin-potato",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welcher Region wurde die Kartoffel zuerst angebaut?",
+      "choices": [
+        "Europe",
+        "the Andes",
+        "West Africa",
+        "China"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-otto-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer baute den Viertaktmotor, dessen Taktfolge seinen Namen trägt?",
+      "choices": [
+        "Nikolaus Otto",
+        "Karl Benz",
+        "Rudolf Diesel",
+        "James Watt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-braille-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer erfand das erhabene Punktschriftsystem Braille?",
+      "choices": [
+        "Samuel Morse",
+        "Alexander Graham Bell",
+        "Helen Keller",
+        "Louis Braille"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-cross-founder",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer gründete die Rotkreuz-Bewegung nach der Schlacht von Solferino?",
+      "choices": [
+        "Florence Nightingale",
+        "Jean-Henri Fabre",
+        "Clara Barton",
+        "Henry Dunant"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-curie-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Element ist nach Marie und Pierre Curie benannt?",
+      "choices": [
+        "curium",
+        "radium",
+        "polonium",
+        "uranium"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-table-salt",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Tafelsalz ist vor allem welche Verbindung?",
+      "choices": [
+        "sodium chloride",
+        "calcium carbonate",
+        "sodium bicarbonate",
+        "potassium iodide"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-cork-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Kork kommt von der Rinde welches Baumes?",
+      "choices": [
+        "the pine",
+        "the maple",
+        "the birch",
+        "the cork oak"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-vanilla-orchid",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Vanille kommt von welcher Pflanzenart?",
+      "choices": [
+        "an orchid",
+        "a cactus",
+        "a vine of grapes",
+        "a bean tree"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-bi-sheng",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer entwickelte bewegliche Tonlettern im China der Song-Zeit?",
+      "choices": [
+        "Bi Sheng",
+        "Cai Lun",
+        "Johannes Gutenberg",
+        "Shen Kuo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-figaro",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer komponierte die Oper Die Hochzeit des Figaro?",
+      "choices": [
+        "Ludwig van Beethoven",
+        "Wolfgang Amadeus Mozart",
+        "Giuseppe Verdi",
+        "Gioachino Rossini"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-af-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Afghanistan?",
+      "choices": [
+        "Kandahar",
+        "Mazar-i-Sharif",
+        "Herat",
+        "Kabul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-mg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Madagaskar?",
+      "choices": [
+        "Antananarivo",
+        "Nairobi",
+        "Antsirabe",
+        "Toamasina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-zm-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Sambia?",
+      "choices": [
+        "Harare",
+        "Lusaka",
+        "Ndola",
+        "Kitwe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-bulb-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu a practical incandescent light bulb sold widely in the United States?",
+      "choices": [
+        "Nikola Tesla",
+        "George Westinghouse",
+        "Alexander Graham Bell",
+        "Thomas Edison"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-pasteur-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the process called pasteurization?",
+      "choices": [
+        "Louis Pasteur",
+        "Robert Koch",
+        "Joseph Lister",
+        "Edward Jenner"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-lovelace-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the notes often called the first computer program, on Babbage's engine?",
+      "choices": [
+        "Charles Babbage",
+        "Grace Hopper",
+        "Alan Turing",
+        "Ada Lovelace"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-shepard-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the first American in space?",
+      "choices": [
+        "Gus Grissom",
+        "Alan Shepard",
+        "John Glenn",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-independence",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Unabhängigkeitserklärung der USA angenommen wurde?",
+      "choices": [
+        "1812",
+        "1776",
+        "1787",
+        "1789"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-revolution-ru",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Oktoberrevolution in Russland stattfand?",
+      "choices": [
+        "1917",
+        "1905",
+        "1914",
+        "1922"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-china-prc",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Volksrepublik China ausgerufen wurde?",
+      "choices": [
+        "1949",
+        "1950",
+        "1912",
+        "1945"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-election-sa",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Südafrika die erste Wahl mit allgemeinem Erwachsenenwahlrecht abhielt?",
+      "choices": [
+        "1990",
+        "2000",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-beijing-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Olympischen Sommerspiele in Peking stattfanden?",
+      "choices": [
+        "2008",
+        "2012",
+        "2004",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-pluto",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Internationale Astronomische Union Pluto zum Zwergplaneten erklärte?",
+      "choices": [
+        "2003",
+        "1999",
+        "2015",
+        "2006"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-panama",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr der Panamakanal für den Verkehr geöffnet wurde?",
+      "choices": [
+        "1904",
+        "1898",
+        "1869",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-superbowl",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr der erste Super Bowl gespielt wurde?",
+      "choices": [
+        "1970",
+        "1960",
+        "1967",
+        "1958"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-diff-protons-o",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Protonen hat ein Sauerstoffatom?",
+      "choices": [
+        "8",
+        "6",
+        "16",
+        "2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-diff-airlift",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr begann die Berliner Luftbrücke?",
+      "choices": [
+        "1953",
+        "1945",
+        "1948",
+        "1961"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-bo-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die verfassungsmäßige Hauptstadt von Bolivien?",
+      "choices": [
+        "La Paz",
+        "Santa Cruz",
+        "Cochabamba",
+        "Sucre"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Der Regierungssitz ist eine andere Stadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-pa-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Panama?",
+      "choices": [
+        "Colón",
+        "David",
+        "San José",
+        "Panama-Stadt"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-ws-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Samoa?",
+      "choices": [
+        "Apia",
+        "Suva",
+        "Nuku'alofa",
+        "Pago Pago"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-al-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Albanien?",
+      "choices": [
+        "Podgorica",
+        "Tirana",
+        "Durrës",
+        "Vlora"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-ge-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Georgien?",
+      "choices": [
+        "Tiflis",
+        "Yerevan",
+        "Baku",
+        "Batumi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-ug-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Uganda?",
+      "choices": [
+        "Kampala",
+        "Gulu",
+        "Nairobi",
+        "Entebbe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-ly-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Libyen?",
+      "choices": [
+        "Bengasi",
+        "Misrata",
+        "Tunis",
+        "Tripolis"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-atomic-ag",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Ordnungszahl hat Silber?",
+      "choices": [
+        "79",
+        "29",
+        "50",
+        "47"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-bones-adult",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Ungefähr wie viele Knochen hat ein erwachsenes menschliches Skelett?",
+      "choices": [
+        "186",
+        "206",
+        "180",
+        "256"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
     }
   ]
 }

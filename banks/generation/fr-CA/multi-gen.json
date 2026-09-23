@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "fr-CA",
   "target": 150,
-  "held": 24,
-  "shortfall": 126,
+  "held": 150,
+  "shortfall": 0,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -450,6 +450,2148 @@
       "banterHint": "Le pouce est resté dans la cuisine. La loi a quand même une année.",
       "slang": "Pour tout le monde,",
       "structure": "when"
+    },
+    {
+      "id": "cq-w39-mu-e-ca-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de California ?",
+      "choices": [
+        "Sacramento",
+        "San Francisco",
+        "San Diego",
+        "Los Angeles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-ny-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de New York ?",
+      "choices": [
+        "New York City",
+        "Albany",
+        "Rochester",
+        "Buffalo"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-tx-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Texas ?",
+      "choices": [
+        "Austin",
+        "San Antonio",
+        "Dallas",
+        "Houston"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-fl-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Florida ?",
+      "choices": [
+        "Tallahassee",
+        "Miami",
+        "Orlando",
+        "Tampa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-il-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Illinois ?",
+      "choices": [
+        "Naperville",
+        "Springfield",
+        "Chicago",
+        "Aurora"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-pa-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Pennsylvania ?",
+      "choices": [
+        "Philadelphia",
+        "Pittsburgh",
+        "Allentown",
+        "Harrisburg"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-oh-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Ohio ?",
+      "choices": [
+        "Cincinnati",
+        "Toledo",
+        "Cleveland",
+        "Columbus"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-ga-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Georgia ?",
+      "choices": [
+        "Atlanta",
+        "Macon",
+        "Augusta",
+        "Savannah"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-co-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Colorado ?",
+      "choices": [
+        "Denver",
+        "Colorado Springs",
+        "Boulder",
+        "Aurora"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-hi-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Hawaii ?",
+      "choices": [
+        "Hilo",
+        "Kailua",
+        "Lahaina",
+        "Honolulu"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-ma-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Massachusetts ?",
+      "choices": [
+        "Boston",
+        "Cambridge",
+        "Worcester",
+        "Springfield"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-az-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Arizona ?",
+      "choices": [
+        "Flagstaff",
+        "Sedona",
+        "Tucson",
+        "Phoenix"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-wa-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Washington ?",
+      "choices": [
+        "Spokane",
+        "Tacoma",
+        "Olympia",
+        "Seattle"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-mi-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Michigan ?",
+      "choices": [
+        "Lansing",
+        "Detroit",
+        "Ann Arbor",
+        "Grand Rapids"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-nc-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de North Carolina ?",
+      "choices": [
+        "Asheville",
+        "Durham",
+        "Charlotte",
+        "Raleigh"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-gr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Grèce?",
+      "choices": [
+        "Rome",
+        "Athènes",
+        "Sparte",
+        "Thessalonique"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-pl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Pologne?",
+      "choices": [
+        "Gdansk",
+        "Berlin",
+        "Varsovie",
+        "Cracovie"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-ar-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Argentine?",
+      "choices": [
+        "Córdoba",
+        "Rosario",
+        "Mendoza",
+        "Buenos Aires"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-ke-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Kenya?",
+      "choices": [
+        "Nairobi",
+        "Le Caire",
+        "Kisumu",
+        "Mombasa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-ph-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale des Philippines?",
+      "choices": [
+        "Davao",
+        "Quezon City",
+        "Manille",
+        "Cebu"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-alphabet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de lettres il y a dans l'alphabet anglais ?",
+      "choices": [
+        "28",
+        "24",
+        "26",
+        "21"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-circle-degrees",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de degrés il y a dans un cercle complet ?",
+      "choices": [
+        "180",
+        "100",
+        "360",
+        "90"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cube-edges",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'arêtes il y a sur un cube ?",
+      "choices": [
+        "6",
+        "8",
+        "16",
+        "12"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-checkers-pieces",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de pions chaque joueur de dames a au départ ?",
+      "choices": [
+        "8",
+        "16",
+        "10",
+        "12"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-uk-nations",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de pays il y a dans le Royaume-Uni ?",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-earth-moon",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de lunes il y a autour de la Terre ?",
+      "choices": [
+        "0",
+        "4",
+        "2",
+        "1"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-baseball-strikes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de prises font un retrait au baseball ?",
+      "choices": [
+        "2",
+        "4",
+        "5",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-touchdown-points",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de points vaut un touché au football américain, avant le botté ?",
+      "choices": [
+        "7",
+        "1",
+        "6",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-mlb-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'équipes il y a dans la Ligue majeure de baseball ?",
+      "choices": [
+        "32",
+        "16",
+        "30",
+        "28"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-piano-white",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de touches blanches il y a sur un piano standard ?",
+      "choices": [
+        "52",
+        "36",
+        "48",
+        "88"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-haiku-lines",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de vers il y a dans un haïku ?",
+      "choices": [
+        "4",
+        "5",
+        "17",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-meter-cm",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de centimètres il y a dans un mètre ?",
+      "choices": [
+        "10",
+        "12",
+        "100",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-motorcycle-wheels",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de roues il y a sur une moto typique ?",
+      "choices": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-petra-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, la cité antique de Pétra ?",
+      "choices": [
+        "Israel",
+        "Syria",
+        "Jordan",
+        "Egypt"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-angkor-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, Angkor Wat ?",
+      "choices": [
+        "Cambodia",
+        "Thailand",
+        "Vietnam",
+        "Laos"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-alps-continent",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, les Alpes ?",
+      "choices": [
+        "Europe",
+        "South America",
+        "Africa",
+        "Asia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-liberty-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, la statue de la Liberté ?",
+      "choices": [
+        "France",
+        "the United Kingdom",
+        "Canada",
+        "the United States"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-clocks-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint The Persistence of Memory ?",
+      "choices": [
+        "Pablo Picasso",
+        "René Magritte",
+        "Joan Miró",
+        "Salvador Dalí"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-soup-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint the Campbell's Soup Cans ?",
+      "choices": [
+        "Keith Haring",
+        "Jean-Michel Basquiat",
+        "Roy Lichtenstein",
+        "Andy Warhol"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-sunflowers-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint the Sunflowers still lifes ?",
+      "choices": [
+        "Vincent van Gogh",
+        "Paul Gauguin",
+        "Claude Monet",
+        "Paul Cézanne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-volvo-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Volvo Cars ?",
+      "choices": [
+        "Norway",
+        "Germany",
+        "Sweden",
+        "the United States"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-peugeot-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Peugeot ?",
+      "choices": [
+        "Italy",
+        "France",
+        "Germany",
+        "Spain"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-brazil",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Brazil dans cette question ?",
+      "choices": [
+        "French",
+        "Spanish",
+        "Portuguese",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-quebec",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à the province of Quebec dans cette question ?",
+      "choices": [
+        "English",
+        "French",
+        "German",
+        "Spanish"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-vietnam",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Vietnam dans cette question ?",
+      "choices": [
+        "Vietnamese",
+        "Thai",
+        "French",
+        "Chinese"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-kenya",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Kenya, alongside English, as an official language dans cette question ?",
+      "choices": [
+        "Swahili",
+        "Arabic",
+        "Amharic",
+        "Zulu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-3",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Maroc est sur quel continent ?",
+      "choices": [
+        "Europe",
+        "Amérique du Sud",
+        "Afrique",
+        "Asie"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-10",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Thaïlande est sur quel continent ?",
+      "choices": [
+        "Europe",
+        "Amérique du Nord",
+        "Asie",
+        "Afrique"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-17",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Pologne est sur quel continent ?",
+      "choices": [
+        "Europe",
+        "Afrique",
+        "Amérique du Sud",
+        "Asie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-24",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Jamaïque est sur quel continent ?",
+      "choices": [
+        "Europe",
+        "Amérique du Sud",
+        "Amérique du Nord",
+        "Afrique"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-31",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Nouvelle-Zélande est sur quel continent ?",
+      "choices": [
+        "Océanie",
+        "Europe",
+        "Afrique",
+        "Asie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-38",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Finlande est sur quel continent ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Amérique du Sud",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale du Mexique ?",
+      "choices": [
+        "le dollar",
+        "l'euro",
+        "le yen",
+        "le peso"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-12",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale du Canada ?",
+      "choices": [
+        "le yen",
+        "l'euro",
+        "le peso",
+        "le dollar"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-19",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale du Nigeria ?",
+      "choices": [
+        "le dollar",
+        "le yen",
+        "le naira",
+        "l'euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-26",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale du Vietnam ?",
+      "choices": [
+        "le dong",
+        "l'euro",
+        "le dollar",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-3",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les croissants, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Mexique",
+        "France",
+        "Italie",
+        "Japon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le fish and chips, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Italie",
+        "Mexique",
+        "Royaume-Uni",
+        "Japon"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le ceviche, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Pérou",
+        "Japon",
+        "Mexique",
+        "Italie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-24",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "La fondue au fromage, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Suisse",
+        "Japon",
+        "Italie",
+        "Mexique"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-or-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Oregon ?",
+      "choices": [
+        "Salem",
+        "Eugene",
+        "Bend",
+        "Portland"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-nv-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Nevada ?",
+      "choices": [
+        "Las Vegas",
+        "Carson City",
+        "Henderson",
+        "Reno"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-ut-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Utah ?",
+      "choices": [
+        "Park City",
+        "Ogden",
+        "Salt Lake City",
+        "Provo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-nm-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de New Mexico ?",
+      "choices": [
+        "Santa Fe",
+        "Taos",
+        "Las Cruces",
+        "Albuquerque"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-la-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Louisiana ?",
+      "choices": [
+        "Baton Rouge",
+        "Lafayette",
+        "New Orleans",
+        "Shreveport"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-mo-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Missouri ?",
+      "choices": [
+        "Springfield",
+        "Jefferson City",
+        "Kansas City",
+        "St. Louis"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-mn-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Minnesota ?",
+      "choices": [
+        "Saint Paul",
+        "Duluth",
+        "Minneapolis",
+        "Rochester"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-wi-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Wisconsin ?",
+      "choices": [
+        "Milwaukee",
+        "Kenosha",
+        "Madison",
+        "Green Bay"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-tn-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Tennessee ?",
+      "choices": [
+        "Memphis",
+        "Chattanooga",
+        "Knoxville",
+        "Nashville"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-ky-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Kentucky ?",
+      "choices": [
+        "Bowling Green",
+        "Frankfort",
+        "Louisville",
+        "Lexington"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-al-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Alabama ?",
+      "choices": [
+        "Montgomery",
+        "Mobile",
+        "Huntsville",
+        "Birmingham"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-sc-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de South Carolina ?",
+      "choices": [
+        "Charleston",
+        "Myrtle Beach",
+        "Greenville",
+        "Columbia"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-va-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Virginia ?",
+      "choices": [
+        "Richmond",
+        "Norfolk",
+        "Arlington",
+        "Virginia Beach"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-md-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Maryland ?",
+      "choices": [
+        "Annapolis",
+        "Rockville",
+        "Frederick",
+        "Baltimore"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-nj-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de New Jersey ?",
+      "choices": [
+        "Newark",
+        "Atlantic City",
+        "Trenton",
+        "Jersey City"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-ct-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Connecticut ?",
+      "choices": [
+        "Hartford",
+        "New Haven",
+        "Stamford",
+        "Bridgeport"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-ri-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Rhode Island ?",
+      "choices": [
+        "Warwick",
+        "Pawtucket",
+        "Providence",
+        "Newport"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-me-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Maine ?",
+      "choices": [
+        "Bangor",
+        "Bar Harbor",
+        "Portland",
+        "Augusta"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-nh-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de New Hampshire ?",
+      "choices": [
+        "Nashua",
+        "Portsmouth",
+        "Manchester",
+        "Concord"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-vt-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Vermont ?",
+      "choices": [
+        "Burlington",
+        "Stowe",
+        "Rutland",
+        "Montpelier"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-ir-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Iran?",
+      "choices": [
+        "Téhéran",
+        "Ispahan",
+        "Shiraz",
+        "Mashhad"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-sk-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Slovaquie?",
+      "choices": [
+        "Košice",
+        "Vienne",
+        "Prague",
+        "Bratislava"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-gh-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Ghana?",
+      "choices": [
+        "Accra",
+        "Lagos",
+        "Kumasi",
+        "Tamale"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-farm-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Animal Farm ?",
+      "choices": [
+        "Aldous Huxley",
+        "George Eliot",
+        "George Orwell",
+        "John Steinbeck"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-quixote-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Don Quixote ?",
+      "choices": [
+        "Gabriel García Márquez",
+        "Federico García Lorca",
+        "Lope de Vega",
+        "Miguel de Cervantes"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-charlotte-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the book Charlotte's Web ?",
+      "choices": [
+        "E. B. White",
+        "Beatrix Potter",
+        "Roald Dahl",
+        "A. A. Milne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-achebe-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Things Fall Apart ?",
+      "choices": [
+        "Chinua Achebe",
+        "Ben Okri",
+        "Ngũgĩ wa Thiong'o",
+        "Wole Soyinka"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-leagues-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Twenty Thousand Leagues Under the Seas ?",
+      "choices": [
+        "Jules Verne",
+        "Herman Melville",
+        "Robert Louis Stevenson",
+        "H. G. Wells"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-treasure-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Treasure Island ?",
+      "choices": [
+        "Daniel Defoe",
+        "Robert Louis Stevenson",
+        "Jules Verne",
+        "Jonathan Swift"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-anna-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Anna Karenina ?",
+      "choices": [
+        "Leo Tolstoy",
+        "Thomas Mann",
+        "Gustave Flaubert",
+        "Fyodor Dostoevsky"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-left-hand",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Left Hand of Darkness ?",
+      "choices": [
+        "Philip K. Dick",
+        "Ursula K. Le Guin",
+        "Octavia Butler",
+        "Margaret Atwood"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-flute-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the opera The Magic Flute ?",
+      "choices": [
+        "Wolfgang Amadeus Mozart",
+        "Joseph Haydn",
+        "Christoph Willibald Gluck",
+        "Ludwig van Beethoven"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-rite-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the ballet The Rite of Spring ?",
+      "choices": [
+        "Igor Stravinsky",
+        "Béla Bartók",
+        "Claude Debussy",
+        "Sergei Prokofiev"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-respect-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Respect, in the famous 1967 recording ?",
+      "choices": [
+        "Aretha Franklin",
+        "Tina Turner",
+        "Etta James",
+        "Diana Ross"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-bad-guy-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song bad guy ?",
+      "choices": [
+        "Olivia Rodrigo",
+        "Dua Lipa",
+        "Lorde",
+        "Billie Eilish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-anti-hero",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Anti-Hero ?",
+      "choices": [
+        "Adele",
+        "Lana Del Rey",
+        "Billie Eilish",
+        "Taylor Swift"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-wonderful-world",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song What a Wonderful World, in the famous recording ?",
+      "choices": [
+        "Frank Sinatra",
+        "Nat King Cole",
+        "Ella Fitzgerald",
+        "Louis Armstrong"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-titanic-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 1997 film Titanic ?",
+      "choices": [
+        "Steven Spielberg",
+        "Kathryn Bigelow",
+        "Ridley Scott",
+        "James Cameron"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-h-shining-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 1980 film The Shining ?",
+      "choices": [
+        "Brian De Palma",
+        "Stanley Kubrick",
+        "John Carpenter",
+        "David Lynch"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ak-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Alaska ?",
+      "choices": [
+        "Nome",
+        "Juneau",
+        "Anchorage",
+        "Fairbanks"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-de-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Delaware ?",
+      "choices": [
+        "Dover",
+        "Newark",
+        "Wilmington",
+        "Rehoboth Beach"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ia-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Iowa ?",
+      "choices": [
+        "Cedar Rapids",
+        "Iowa City",
+        "Davenport",
+        "Des Moines"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ks-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Kansas ?",
+      "choices": [
+        "Wichita",
+        "Kansas City",
+        "Lawrence",
+        "Topeka"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ne-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Nebraska ?",
+      "choices": [
+        "Bellevue",
+        "Grand Island",
+        "Lincoln",
+        "Omaha"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ok-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Oklahoma ?",
+      "choices": [
+        "Norman",
+        "Lawton",
+        "Tulsa",
+        "Oklahoma City"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ar-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Arkansas ?",
+      "choices": [
+        "Fort Smith",
+        "Fayetteville",
+        "Little Rock",
+        "Hot Springs"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ms-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Mississippi ?",
+      "choices": [
+        "Biloxi",
+        "Jackson",
+        "Oxford",
+        "Gulfport"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-wv-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de West Virginia ?",
+      "choices": [
+        "Charleston",
+        "Wheeling",
+        "Morgantown",
+        "Huntington"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-id-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Idaho ?",
+      "choices": [
+        "Boise",
+        "Coeur d'Alene",
+        "Pocatello",
+        "Idaho Falls"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-kz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Kazakhstan?",
+      "choices": [
+        "Astana",
+        "Shymkent",
+        "Tashkent",
+        "Almaty"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ao-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Angola?",
+      "choices": [
+        "Huambo",
+        "Luanda",
+        "Kinshasa",
+        "Lobito"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-gravity-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the law of universal gravitation in the Principia ?",
+      "choices": [
+        "Galileo Galilei",
+        "Johannes Kepler",
+        "Albert Einstein",
+        "Isaac Newton"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-press-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the movable-type printing press in Europe ?",
+      "choices": [
+        "Johannes Gutenberg",
+        "Martin Luther",
+        "William Caxton",
+        "Aldus Manutius"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-faraday-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui electromagnetic induction, as a key experimenter ?",
+      "choices": [
+        "James Clerk Maxwell",
+        "André-Marie Ampère",
+        "Nikola Tesla",
+        "Michael Faraday"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-hamilton-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the onboard flight software for the Apollo missions ?",
+      "choices": [
+        "Katherine Johnson",
+        "Dorothy Vaughan",
+        "Margaret Hamilton",
+        "Grace Hopper"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-gagarin-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first person to orbit Earth ?",
+      "choices": [
+        "Yuri Gagarin",
+        "Gherman Titov",
+        "Alexei Leonov",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-y-civil-start",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la guerre de Sécession a commencé ?",
+      "choices": [
+        "1850",
+        "1848",
+        "1861",
+        "1865"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-sd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de South Dakota ?",
+      "choices": [
+        "Pierre",
+        "Rapid City",
+        "Sioux Falls",
+        "Aberdeen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-nd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de North Dakota ?",
+      "choices": [
+        "Fargo",
+        "Grand Forks",
+        "Minot",
+        "Bismarck"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-mt-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Montana ?",
+      "choices": [
+        "Helena",
+        "Bozeman",
+        "Missoula",
+        "Billings"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-wy-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Wyoming ?",
+      "choices": [
+        "Laramie",
+        "Cheyenne",
+        "Jackson",
+        "Casper"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-in-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Indiana ?",
+      "choices": [
+        "Indianapolis",
+        "Evansville",
+        "Fort Wayne",
+        "South Bend"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-gy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Guyana?",
+      "choices": [
+        "Paramaribo",
+        "Georgetown",
+        "Linden",
+        "Cayenne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-hn-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Honduras?",
+      "choices": [
+        "San Pedro Sula",
+        "La Ceiba",
+        "San Salvador",
+        "Tegucigalpa"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-ee-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Estonie?",
+      "choices": [
+        "Riga",
+        "Helsinki",
+        "Tartu",
+        "Tallinn"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-me-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Monténégro?",
+      "choices": [
+        "Kotor",
+        "Belgrade",
+        "Budva",
+        "Podgorica"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
     }
   ]
 }

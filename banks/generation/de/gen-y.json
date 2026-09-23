@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "de",
   "target": 150,
-  "held": 27,
-  "shortfall": 123,
+  "held": 150,
+  "shortfall": 0,
   "ageYear": 2026,
   "born": [
     1981,
@@ -493,6 +493,2097 @@
       "banterHint": "Der erste Clip war kurz. Das Jahr liegt in der Mitte dieses Jahrzehnts.",
       "slang": "Nur so,",
       "structure": "when"
+    },
+    {
+      "id": "cq-w39-gy-e-uk-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von dem Vereinigten Königreich?",
+      "choices": [
+        "Edinburgh",
+        "Manchester",
+        "London",
+        "Birmingham"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-se-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Schweden?",
+      "choices": [
+        "Stockholm",
+        "Göteborg",
+        "Malmö",
+        "Oslo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-kr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Südkorea?",
+      "choices": [
+        "Busan",
+        "Incheon",
+        "Pjöngjang",
+        "Seoul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Chile?",
+      "choices": [
+        "Lima",
+        "Santiago",
+        "Valparaíso",
+        "Concepción"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-is-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Island?",
+      "choices": [
+        "Reykjavík",
+        "Akureyri",
+        "Oslo",
+        "Kopenhagen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-za-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Verwaltungshauptstadt von Südafrika?",
+      "choices": [
+        "Johannesburg",
+        "Durban",
+        "Kapstadt",
+        "Pretoria"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Südafrika hat auch eine gesetzgebende und eine richterliche Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-day-hours",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Stunden hat ein Tag?",
+      "choices": [
+        "36",
+        "24",
+        "12",
+        "20"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-hexagon-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Seiten hat ein Sechseck?",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-deck-suits",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Farben hat ein normales Kartenspiel?",
+      "choices": [
+        "5",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-bill-rights",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Zusätze hat die amerikanische Bill of Rights?",
+      "choices": [
+        "10",
+        "12",
+        "8",
+        "27"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-insect-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Beine hat ein Insekt?",
+      "choices": [
+        "4",
+        "10",
+        "8",
+        "6"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-baseball-nine",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Spieler einer Mannschaft stehen beim Baseball auf dem Feld?",
+      "choices": [
+        "10",
+        "8",
+        "9",
+        "11"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-golf-holes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Löcher hat eine normale Golfrunde?",
+      "choices": [
+        "9",
+        "18",
+        "16",
+        "12"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-both-soccer",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Spieler beginnen ein Fußballspiel auf dem Platz, beide Mannschaften?",
+      "choices": [
+        "22",
+        "18",
+        "20",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-curling-team",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Spieler hat ein Curling-Team?",
+      "choices": [
+        "6",
+        "8",
+        "2",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-ukulele-strings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Saiten hat eine normale Sopran-Ukulele?",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-boil-f",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Grad Fahrenheit ist der Siedepunkt von Wasser auf Meereshöhe?",
+      "choices": [
+        "212",
+        "100",
+        "180",
+        "32"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-year-days",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Tage hat ein gewöhnliches Jahr, das kein Schaltjahr ist?",
+      "choices": [
+        "365",
+        "366",
+        "364",
+        "360"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-colosseum-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht das Kolosseum?",
+      "choices": [
+        "Spain",
+        "France",
+        "Italy",
+        "Greece"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-opera-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht das Opernhaus von Sydney?",
+      "choices": [
+        "New Zealand",
+        "Australia",
+        "Canada",
+        "the United Kingdom"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-burj-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht der Burj Khalifa?",
+      "choices": [
+        "India",
+        "the United Arab Emirates",
+        "Saudi Arabia",
+        "Qatar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-reef-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht das Great Barrier Reef?",
+      "choices": [
+        "Australia",
+        "Indonesia",
+        "Fiji",
+        "Brazil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-sphinx-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht die Große Sphinx von Gizeh?",
+      "choices": [
+        "Egypt",
+        "Greece",
+        "Sudan",
+        "Iraq"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-nightwatch-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemalt The Night Watch?",
+      "choices": [
+        "Johannes Vermeer",
+        "Peter Paul Rubens",
+        "Frans Hals",
+        "Rembrandt"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-meninas-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemalt Las Meninas?",
+      "choices": [
+        "El Greco",
+        "Bartolomé Murillo",
+        "Francisco Goya",
+        "Diego Velázquez"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-vw-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land ist die Heimat von Volkswagen?",
+      "choices": [
+        "the United States",
+        "Sweden",
+        "Italy",
+        "Germany"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-honda-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land ist die Heimat von Honda?",
+      "choices": [
+        "China",
+        "the United States",
+        "Japan",
+        "South Korea"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-suv-mean",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wofür steht SUV?",
+      "choices": [
+        "standard urban van",
+        "speed under vacuum",
+        "super utility volt",
+        "sport utility vehicle"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-germany",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit Germany verbunden?",
+      "choices": [
+        "English",
+        "French",
+        "Dutch",
+        "German"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-greece",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit Greece verbunden?",
+      "choices": [
+        "Latin",
+        "Italian",
+        "Greek",
+        "Turkish"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-netherlands",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit the Netherlands verbunden?",
+      "choices": [
+        "French",
+        "German",
+        "Dutch",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-0",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Ägypten?",
+      "choices": [
+        "Asien",
+        "Europa",
+        "Afrika",
+        "Südamerika"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-7",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt China?",
+      "choices": [
+        "Europa",
+        "Nordamerika",
+        "Afrika",
+        "Asien"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-14",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Italien?",
+      "choices": [
+        "Asien",
+        "Afrika",
+        "Südamerika",
+        "Europa"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-21",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Mexiko?",
+      "choices": [
+        "Südamerika",
+        "Afrika",
+        "Europa",
+        "Nordamerika"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-28",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Peru?",
+      "choices": [
+        "Südamerika",
+        "Afrika",
+        "Europa",
+        "Nordamerika"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-35",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Indonesien?",
+      "choices": [
+        "Afrika",
+        "Europa",
+        "Asien",
+        "Nordamerika"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-2",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von den Vereinigten Staaten?",
+      "choices": [
+        "der Dollar",
+        "der Euro",
+        "der Peso",
+        "der Yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-9",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Norwegen?",
+      "choices": [
+        "der Yen",
+        "die Krone",
+        "der Euro",
+        "der Dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-16",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Thailand?",
+      "choices": [
+        "der Yen",
+        "der Baht",
+        "der Euro",
+        "der Dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-23",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Argentinien?",
+      "choices": [
+        "der Yen",
+        "der Peso",
+        "der Euro",
+        "der Dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-0",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Pizza?",
+      "choices": [
+        "Mexiko",
+        "Japan",
+        "Italien",
+        "Frankreich"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-7",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Kimchi?",
+      "choices": [
+        "Italien",
+        "Mexiko",
+        "Japan",
+        "Südkorea"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-14",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Borschtsch?",
+      "choices": [
+        "Italien",
+        "Japan",
+        "Mexiko",
+        "Ukraine"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-21",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Tiramisu?",
+      "choices": [
+        "Japan",
+        "Mexiko",
+        "Frankreich",
+        "Italien"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-28",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Feijoada?",
+      "choices": [
+        "Brasilien",
+        "Mexiko",
+        "Japan",
+        "Italien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-4",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Tier ist das Säugetier, das wirklich fliegt?",
+      "choices": [
+        "die Eule",
+        "das Flughörnchen",
+        "die Fledermaus",
+        "der Pinguin"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Tier ist das zweihöckrige Kamel?",
+      "choices": [
+        "das Dromedar",
+        "das Lama",
+        "das Alpaka",
+        "das Trampeltier"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-16",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Tier ist das Reptil mit einem Panzer?",
+      "choices": [
+        "das Krokodil",
+        "die Schildkröte",
+        "die Schlange",
+        "die Eidechse"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-22",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Tier ist das eierlegende Säugetier mit einem Schnabel?",
+      "choices": [
+        "das Schnabeltier",
+        "die Ente",
+        "der Ameisenigel",
+        "der Biber"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-human-lungs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Lungen hat ein typischer Mensch?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-week-weekend",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Tage nennt man gewöhnlich das Wochenende?",
+      "choices": [
+        "1",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-little-pigs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele kleine Schweinchen gibt es im klassischen Märchen von den Häusern?",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-strings-violin-family-viola",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Saiten hat eine normale Bratsche?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-sides-square",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Seiten hat ein Quadrat?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-players-doubles",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Spieler hat eine Seite im Tennisdoppel?",
+      "choices": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-clock-numbers",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Zahlen, von 1 bis 12, hat ein Zifferblatt gewöhnlich?",
+      "choices": [
+        "6",
+        "12",
+        "10",
+        "24"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-score-twenty",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Jahre hat ein Score, wie in „four score“?",
+      "choices": [
+        "20",
+        "12",
+        "40",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-quartet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Spieler hat ein Quartett?",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-octet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Bit hat ein Byte?",
+      "choices": [
+        "4",
+        "16",
+        "10",
+        "8"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-pk-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Pakistan?",
+      "choices": [
+        "Lahore",
+        "Karachi",
+        "Islamabad",
+        "Rawalpindi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-bg-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Bulgarien?",
+      "choices": [
+        "Sofia",
+        "Varna",
+        "Bukarest",
+        "Plovdiv"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-jo-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Jordanien?",
+      "choices": [
+        "Amman",
+        "Jerusalem",
+        "Aqaba",
+        "Petra"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-romeo-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the play Romeo and Juliet?",
+      "choices": [
+        "Ben Jonson",
+        "Christopher Marlowe",
+        "William Shakespeare",
+        "John Milton"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-hobbit-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel The Hobbit?",
+      "choices": [
+        "J. K. Rowling",
+        "George R. R. Martin",
+        "J. R. R. Tolkien",
+        "C. S. Lewis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-iliad-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the epic poem the Iliad?",
+      "choices": [
+        "Virgil",
+        "Hesiod",
+        "Aeschylus",
+        "Homer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-wild-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the book Where the Wild Things Are?",
+      "choices": [
+        "Maurice Sendak",
+        "Eric Carle",
+        "Crockett Johnson",
+        "Dr. Seuss"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-stranger-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel The Stranger?",
+      "choices": [
+        "Simone de Beauvoir",
+        "Jean-Paul Sartre",
+        "Albert Camus",
+        "André Gide"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-orient-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Murder on the Orient Express?",
+      "choices": [
+        "Arthur Conan Doyle",
+        "Ruth Rendell",
+        "P. D. James",
+        "Agatha Christie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-tale-cities",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel A Tale of Two Cities?",
+      "choices": [
+        "Charles Dickens",
+        "Thomas Hardy",
+        "William Makepeace Thackeray",
+        "George Eliot"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-beloved-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Beloved?",
+      "choices": [
+        "Maya Angelou",
+        "Zora Neale Hurston",
+        "Toni Morrison",
+        "Alice Walker"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-wind-willows",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the book The Wind in the Willows?",
+      "choices": [
+        "Kenneth Grahame",
+        "A. A. Milne",
+        "Beatrix Potter",
+        "E. B. White"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-messiah-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the oratorio Messiah?",
+      "choices": [
+        "Henry Purcell",
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-purple-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Purple Rain?",
+      "choices": [
+        "David Bowie",
+        "Michael Jackson",
+        "Prince",
+        "Rick James"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-rolling-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Like a Rolling Stone?",
+      "choices": [
+        "Neil Young",
+        "Bob Dylan",
+        "The Rolling Stones",
+        "Mick Jagger"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-old-town-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Old Town Road?",
+      "choices": [
+        "Lil Nas X",
+        "Travis Scott",
+        "Drake",
+        "Post Malone"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-radiohead-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the band Radiohead, as lead singer?",
+      "choices": [
+        "Thom Yorke",
+        "Colin Greenwood",
+        "Ed O'Brien",
+        "Jonny Greenwood"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-et-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film E.T. the Extra-Terrestrial?",
+      "choices": [
+        "Robert Zemeckis",
+        "Chris Columbus",
+        "Steven Spielberg",
+        "George Lucas"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-psycho-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 1960 film Psycho?",
+      "choices": [
+        "Orson Welles",
+        "Billy Wilder",
+        "John Ford",
+        "Alfred Hitchcock"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-budapest-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film The Grand Budapest Hotel?",
+      "choices": [
+        "Noah Baumbach",
+        "Paul Thomas Anderson",
+        "Wes Anderson",
+        "Sofia Coppola"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-nemo-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film Finding Nemo?",
+      "choices": [
+        "Pete Docter",
+        "John Lasseter",
+        "Andrew Stanton",
+        "Brad Bird"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-fury-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 2015 film Mad Max: Fury Road?",
+      "choices": [
+        "Denis Villeneuve",
+        "Kathryn Bigelow",
+        "Ridley Scott",
+        "George Miller"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-c",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element carbon?",
+      "choices": [
+        "Co",
+        "C",
+        "Ca",
+        "Cl"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ag",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element silver?",
+      "choices": [
+        "Si",
+        "Al",
+        "Ag",
+        "Au"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ca",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element calcium?",
+      "choices": [
+        "Ca",
+        "K",
+        "Cl",
+        "C"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ne",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element neon?",
+      "choices": [
+        "N",
+        "Na",
+        "Ne",
+        "Ni"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-w",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element tungsten?",
+      "choices": [
+        "Tu",
+        "W",
+        "Sn",
+        "Tg"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-arctic-ocean",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welcher Ozean ist der kleinste der fünf gewöhnlich genannten?",
+      "choices": [
+        "the Indian Ocean",
+        "the Arctic Ocean",
+        "the Southern Ocean",
+        "the Atlantic Ocean"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-ring-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welcher Planet ist für ein helles Ringsystem bekannt, das man von der Erde sieht?",
+      "choices": [
+        "Jupiter",
+        "Saturn",
+        "Neptune",
+        "Uranus"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-photosynthesis-out",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Gas geben Pflanzen bei der Photosynthese ab?",
+      "choices": [
+        "hydrogen",
+        "oxygen",
+        "carbon dioxide",
+        "nitrogen"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-origin-tea",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land gilt als Herkunft des Teetrinkens?",
+      "choices": [
+        "India",
+        "the United Kingdom",
+        "Japan",
+        "China"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-diesel-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer erfand den Dieselmotor?",
+      "choices": [
+        "Karl Benz",
+        "Henry Ford",
+        "Rudolf Diesel",
+        "Nikolaus Otto"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-morse-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer entwickelte den Telegraphencode aus Punkten und Strichen, der seinen Namen trägt?",
+      "choices": [
+        "Alexander Graham Bell",
+        "Samuel Morse",
+        "Guglielmo Marconi",
+        "Thomas Edison"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-peace-nobel-country",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land wird der Friedensnobelpreis verliehen?",
+      "choices": [
+        "Switzerland",
+        "Finland",
+        "Norway",
+        "Sweden"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-garrett-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer war die erste Frau, die sich in Großbritannien als Ärztin und Chirurgin qualifizierte?",
+      "choices": [
+        "Elizabeth Garrett Anderson",
+        "Marie Curie",
+        "Florence Nightingale",
+        "Elizabeth Blackwell"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-diamond-carbon",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Diamant ist eine Form welches Elements?",
+      "choices": [
+        "carbon",
+        "quartz",
+        "calcium",
+        "silicon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-h-pearl-origin",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Eine Perle entsteht worin?",
+      "choices": [
+        "a clam only",
+        "a snail",
+        "a crab",
+        "an oyster"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-bd-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Bangladesch?",
+      "choices": [
+        "Chittagong",
+        "Kalkutta",
+        "Dhaka",
+        "Khulna"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-tj-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Tadschikistan?",
+      "choices": [
+        "Khujand",
+        "Dushanbe",
+        "Bishkek",
+        "Tashkent"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-zw-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Simbabwe?",
+      "choices": [
+        "Gaborone",
+        "Lusaka",
+        "Harare",
+        "Bulawayo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-telephone-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the telephone patent of 1876?",
+      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi",
+        "Alexander Graham Bell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-smallpox-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the first smallpox vaccine?",
+      "choices": [
+        "Louis Pasteur",
+        "Edward Jenner",
+        "Alexander Fleming",
+        "Jonas Salk"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-turing-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the idea of a universal computing machine in 1936?",
+      "choices": [
+        "Ada Lovelace",
+        "John von Neumann",
+        "Alan Turing",
+        "Charles Babbage"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-tereshkova-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the first woman in space?",
+      "choices": [
+        "Mae Jemison",
+        "Valentina Tereshkova",
+        "Sally Ride",
+        "Svetlana Savitskaya"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-bastille",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Bastille in Paris gestürmt wurde?",
+      "choices": [
+        "1815",
+        "1848",
+        "1789",
+        "1776"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-ww1-end",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr der Waffenstillstand des Ersten Weltkriegs in Kraft trat?",
+      "choices": [
+        "1914",
+        "1945",
+        "1918",
+        "1919"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-india",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Indien unabhängig wurde?",
+      "choices": [
+        "1945",
+        "1948",
+        "1950",
+        "1947"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-mandela",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Nelson Mandela aus dem Gefängnis entlassen wurde?",
+      "choices": [
+        "1990",
+        "1964",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-nine-eleven",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Anschläge vom 11. September in den USA stattfanden?",
+      "choices": [
+        "2003",
+        "2000",
+        "2001",
+        "1999"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-brexit-leave",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr das Vereinigte Königreich die Europäische Union verließ?",
+      "choices": [
+        "2020",
+        "2016",
+        "2019",
+        "2021"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-model-t",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Ford den Model T zu verkaufen begann?",
+      "choices": [
+        "1908",
+        "1920",
+        "1914",
+        "1903"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-world-cup-first",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die erste FIFA-Weltmeisterschaft stattfand?",
+      "choices": [
+        "1930",
+        "1924",
+        "1950",
+        "1934"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-ph",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welchen pH-Wert hat reines Wasser bei Raumtemperatur?",
+      "choices": [
+        "1",
+        "14",
+        "7",
+        "0"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-genome",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr wurde der Abschluss des Humangenomprojekts verkündet?",
+      "choices": [
+        "1990",
+        "1998",
+        "2003",
+        "2010"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-x-ve-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Venezuela?",
+      "choices": [
+        "Caracas",
+        "Maracaibo",
+        "Valencia",
+        "Bogotá"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-x-cr-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Costa Rica?",
+      "choices": [
+        "Limón",
+        "Liberia",
+        "San José",
+        "Panama-Stadt"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-x-pg-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Papua-Neuguinea?",
+      "choices": [
+        "Port Moresby",
+        "Lae",
+        "Mount Hagen",
+        "Suva"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-x-mt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Malta?",
+      "choices": [
+        "Valletta",
+        "Sliema",
+        "Mdina",
+        "Rom"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-x-am-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Armenien?",
+      "choices": [
+        "Gyumri",
+        "Baku",
+        "Yerevan",
+        "Tiflis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-x-rw-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Ruanda?",
+      "choices": [
+        "Kigali",
+        "Kampala",
+        "Gisenyi",
+        "Butare"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-x-dz-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Algerien?",
+      "choices": [
+        "Tunis",
+        "Algier",
+        "Oran",
+        "Constantine"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-x-atomic-pb",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Ordnungszahl hat Blei?",
+      "choices": [
+        "82",
+        "26",
+        "50",
+        "80"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-x-harp-strings",
+      "tier": "extreme",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Saiten hat eine Konzertpedalharfe gewöhnlich?",
+      "choices": [
+        "46",
+        "40",
+        "47",
+        "88"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
     }
   ]
 }

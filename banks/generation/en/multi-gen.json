@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "en",
   "target": 150,
-  "held": 24,
-  "shortfall": 126,
+  "held": 150,
+  "shortfall": 0,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -450,6 +450,2148 @@
       "banterHint": "The inch stayed in the kitchen. The act still has a year.",
       "slang": "For the room,",
       "structure": "when"
+    },
+    {
+      "id": "cq-w39-mu-e-ca-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of California?",
+      "choices": [
+        "Sacramento",
+        "San Francisco",
+        "San Diego",
+        "Los Angeles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ny-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of New York?",
+      "choices": [
+        "New York City",
+        "Albany",
+        "Rochester",
+        "Buffalo"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-tx-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Texas?",
+      "choices": [
+        "Austin",
+        "San Antonio",
+        "Dallas",
+        "Houston"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-fl-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Florida?",
+      "choices": [
+        "Tallahassee",
+        "Miami",
+        "Orlando",
+        "Tampa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-il-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Illinois?",
+      "choices": [
+        "Naperville",
+        "Springfield",
+        "Chicago",
+        "Aurora"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-pa-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Pennsylvania?",
+      "choices": [
+        "Philadelphia",
+        "Pittsburgh",
+        "Allentown",
+        "Harrisburg"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-oh-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Ohio?",
+      "choices": [
+        "Cincinnati",
+        "Toledo",
+        "Cleveland",
+        "Columbus"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ga-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Georgia?",
+      "choices": [
+        "Atlanta",
+        "Macon",
+        "Augusta",
+        "Savannah"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-co-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Colorado?",
+      "choices": [
+        "Denver",
+        "Colorado Springs",
+        "Boulder",
+        "Aurora"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-hi-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Hawaii?",
+      "choices": [
+        "Hilo",
+        "Kailua",
+        "Lahaina",
+        "Honolulu"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ma-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Massachusetts?",
+      "choices": [
+        "Boston",
+        "Cambridge",
+        "Worcester",
+        "Springfield"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-az-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Arizona?",
+      "choices": [
+        "Flagstaff",
+        "Sedona",
+        "Tucson",
+        "Phoenix"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-wa-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Washington?",
+      "choices": [
+        "Spokane",
+        "Tacoma",
+        "Olympia",
+        "Seattle"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-mi-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Michigan?",
+      "choices": [
+        "Lansing",
+        "Detroit",
+        "Ann Arbor",
+        "Grand Rapids"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-nc-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of North Carolina?",
+      "choices": [
+        "Asheville",
+        "Durham",
+        "Charlotte",
+        "Raleigh"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-gr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Greece?",
+      "choices": [
+        "Rome",
+        "Athens",
+        "Sparta",
+        "Thessaloniki"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-pl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Poland?",
+      "choices": [
+        "Gdansk",
+        "Berlin",
+        "Warsaw",
+        "Krakow"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ar-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Argentina?",
+      "choices": [
+        "Córdoba",
+        "Rosario",
+        "Mendoza",
+        "Buenos Aires"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ke-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Kenya?",
+      "choices": [
+        "Nairobi",
+        "Cairo",
+        "Kisumu",
+        "Mombasa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ph-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of the Philippines?",
+      "choices": [
+        "Davao",
+        "Quezon City",
+        "Manila",
+        "Cebu"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-alphabet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many letters are in the English alphabet?",
+      "choices": [
+        "28",
+        "24",
+        "26",
+        "21"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-circle-degrees",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many degrees are in a full circle?",
+      "choices": [
+        "180",
+        "100",
+        "360",
+        "90"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cube-edges",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many edges does a cube have?",
+      "choices": [
+        "6",
+        "8",
+        "16",
+        "12"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-checkers-pieces",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many pieces does each checkers player start with?",
+      "choices": [
+        "8",
+        "16",
+        "10",
+        "12"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-uk-nations",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many countries make up the United Kingdom?",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-earth-moon",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many moons does Earth have?",
+      "choices": [
+        "0",
+        "4",
+        "2",
+        "1"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-baseball-strikes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many strikes make an out in baseball?",
+      "choices": [
+        "2",
+        "4",
+        "5",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-touchdown-points",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many points is a touchdown worth in American football, before the kick?",
+      "choices": [
+        "7",
+        "1",
+        "6",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-mlb-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many teams are in Major League Baseball?",
+      "choices": [
+        "32",
+        "16",
+        "30",
+        "28"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-piano-white",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many white keys are on a standard piano?",
+      "choices": [
+        "52",
+        "36",
+        "48",
+        "88"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-haiku-lines",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many lines are in a haiku?",
+      "choices": [
+        "4",
+        "5",
+        "17",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-meter-cm",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many centimeters are in a meter?",
+      "choices": [
+        "10",
+        "12",
+        "100",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-motorcycle-wheels",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many wheels does a typical motorcycle have?",
+      "choices": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-petra-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the ancient city of Petra?",
+      "choices": [
+        "Israel",
+        "Syria",
+        "Jordan",
+        "Egypt"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-angkor-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is Angkor Wat?",
+      "choices": [
+        "Cambodia",
+        "Thailand",
+        "Vietnam",
+        "Laos"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-alps-continent",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Alps?",
+      "choices": [
+        "Europe",
+        "South America",
+        "Africa",
+        "Asia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-liberty-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Statue of Liberty?",
+      "choices": [
+        "France",
+        "the United Kingdom",
+        "Canada",
+        "the United States"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-clocks-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The Persistence of Memory?",
+      "choices": [
+        "Pablo Picasso",
+        "René Magritte",
+        "Joan Miró",
+        "Salvador Dalí"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-soup-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted the Campbell's Soup Cans?",
+      "choices": [
+        "Keith Haring",
+        "Jean-Michel Basquiat",
+        "Roy Lichtenstein",
+        "Andy Warhol"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-sunflowers-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted the Sunflowers still lifes?",
+      "choices": [
+        "Vincent van Gogh",
+        "Paul Gauguin",
+        "Claude Monet",
+        "Paul Cézanne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-volvo-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Volvo Cars?",
+      "choices": [
+        "Norway",
+        "Germany",
+        "Sweden",
+        "the United States"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-peugeot-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Peugeot?",
+      "choices": [
+        "Italy",
+        "France",
+        "Germany",
+        "Spain"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-brazil",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Brazil in this question?",
+      "choices": [
+        "French",
+        "Spanish",
+        "Portuguese",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-quebec",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with the province of Quebec in this question?",
+      "choices": [
+        "English",
+        "French",
+        "German",
+        "Spanish"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-vietnam",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Vietnam in this question?",
+      "choices": [
+        "Vietnamese",
+        "Thai",
+        "French",
+        "Chinese"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-kenya",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Kenya, alongside English, as an official language in this question?",
+      "choices": [
+        "Swahili",
+        "Arabic",
+        "Amharic",
+        "Zulu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-3",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Morocco?",
+      "choices": [
+        "Europe",
+        "South America",
+        "Africa",
+        "Asia"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-10",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Thailand?",
+      "choices": [
+        "Europe",
+        "North America",
+        "Asia",
+        "Africa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-17",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Poland?",
+      "choices": [
+        "Europe",
+        "Africa",
+        "South America",
+        "Asia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-24",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Jamaica?",
+      "choices": [
+        "Europe",
+        "South America",
+        "North America",
+        "Africa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-31",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is New Zealand?",
+      "choices": [
+        "Oceania",
+        "Europe",
+        "Africa",
+        "Asia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-38",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Finland?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "South America",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Mexico?",
+      "choices": [
+        "the dollar",
+        "the euro",
+        "the yen",
+        "the peso"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-12",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Canada?",
+      "choices": [
+        "the yen",
+        "the euro",
+        "the peso",
+        "the dollar"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-19",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Nigeria?",
+      "choices": [
+        "the dollar",
+        "the yen",
+        "the naira",
+        "the euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-26",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Vietnam?",
+      "choices": [
+        "the dong",
+        "the euro",
+        "the dollar",
+        "the yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-3",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with croissants?",
+      "choices": [
+        "Mexico",
+        "France",
+        "Italy",
+        "Japan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with fish and chips?",
+      "choices": [
+        "Italy",
+        "Mexico",
+        "the United Kingdom",
+        "Japan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with ceviche?",
+      "choices": [
+        "Peru",
+        "Japan",
+        "Mexico",
+        "Italy"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-24",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with cheese fondue?",
+      "choices": [
+        "Switzerland",
+        "Japan",
+        "Italy",
+        "Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-or-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Oregon?",
+      "choices": [
+        "Salem",
+        "Eugene",
+        "Bend",
+        "Portland"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-nv-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Nevada?",
+      "choices": [
+        "Las Vegas",
+        "Carson City",
+        "Henderson",
+        "Reno"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ut-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Utah?",
+      "choices": [
+        "Park City",
+        "Ogden",
+        "Salt Lake City",
+        "Provo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-nm-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of New Mexico?",
+      "choices": [
+        "Santa Fe",
+        "Taos",
+        "Las Cruces",
+        "Albuquerque"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-la-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Louisiana?",
+      "choices": [
+        "Baton Rouge",
+        "Lafayette",
+        "New Orleans",
+        "Shreveport"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-mo-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Missouri?",
+      "choices": [
+        "Springfield",
+        "Jefferson City",
+        "Kansas City",
+        "St. Louis"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-mn-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Minnesota?",
+      "choices": [
+        "Saint Paul",
+        "Duluth",
+        "Minneapolis",
+        "Rochester"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-wi-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Wisconsin?",
+      "choices": [
+        "Milwaukee",
+        "Kenosha",
+        "Madison",
+        "Green Bay"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-tn-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Tennessee?",
+      "choices": [
+        "Memphis",
+        "Chattanooga",
+        "Knoxville",
+        "Nashville"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ky-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Kentucky?",
+      "choices": [
+        "Bowling Green",
+        "Frankfort",
+        "Louisville",
+        "Lexington"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-al-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Alabama?",
+      "choices": [
+        "Montgomery",
+        "Mobile",
+        "Huntsville",
+        "Birmingham"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-sc-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of South Carolina?",
+      "choices": [
+        "Charleston",
+        "Myrtle Beach",
+        "Greenville",
+        "Columbia"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-va-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Virginia?",
+      "choices": [
+        "Richmond",
+        "Norfolk",
+        "Arlington",
+        "Virginia Beach"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-md-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Maryland?",
+      "choices": [
+        "Annapolis",
+        "Rockville",
+        "Frederick",
+        "Baltimore"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-nj-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of New Jersey?",
+      "choices": [
+        "Newark",
+        "Atlantic City",
+        "Trenton",
+        "Jersey City"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ct-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Connecticut?",
+      "choices": [
+        "Hartford",
+        "New Haven",
+        "Stamford",
+        "Bridgeport"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ri-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Rhode Island?",
+      "choices": [
+        "Warwick",
+        "Pawtucket",
+        "Providence",
+        "Newport"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-me-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Maine?",
+      "choices": [
+        "Bangor",
+        "Bar Harbor",
+        "Portland",
+        "Augusta"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-nh-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of New Hampshire?",
+      "choices": [
+        "Nashua",
+        "Portsmouth",
+        "Manchester",
+        "Concord"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-vt-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Vermont?",
+      "choices": [
+        "Burlington",
+        "Stowe",
+        "Rutland",
+        "Montpelier"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ir-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Iran?",
+      "choices": [
+        "Tehran",
+        "Isfahan",
+        "Shiraz",
+        "Mashhad"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-sk-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Slovakia?",
+      "choices": [
+        "Kosice",
+        "Vienna",
+        "Prague",
+        "Bratislava"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-gh-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Ghana?",
+      "choices": [
+        "Accra",
+        "Lagos",
+        "Kumasi",
+        "Tamale"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-farm-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Animal Farm?",
+      "choices": [
+        "Aldous Huxley",
+        "George Eliot",
+        "George Orwell",
+        "John Steinbeck"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-quixote-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Don Quixote?",
+      "choices": [
+        "Gabriel García Márquez",
+        "Federico García Lorca",
+        "Lope de Vega",
+        "Miguel de Cervantes"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-charlotte-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book Charlotte's Web?",
+      "choices": [
+        "E. B. White",
+        "Beatrix Potter",
+        "Roald Dahl",
+        "A. A. Milne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-achebe-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Things Fall Apart?",
+      "choices": [
+        "Chinua Achebe",
+        "Ben Okri",
+        "Ngũgĩ wa Thiong'o",
+        "Wole Soyinka"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-leagues-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Twenty Thousand Leagues Under the Seas?",
+      "choices": [
+        "Jules Verne",
+        "Herman Melville",
+        "Robert Louis Stevenson",
+        "H. G. Wells"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-treasure-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Treasure Island?",
+      "choices": [
+        "Daniel Defoe",
+        "Robert Louis Stevenson",
+        "Jules Verne",
+        "Jonathan Swift"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-anna-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Anna Karenina?",
+      "choices": [
+        "Leo Tolstoy",
+        "Thomas Mann",
+        "Gustave Flaubert",
+        "Fyodor Dostoevsky"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-left-hand",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Left Hand of Darkness?",
+      "choices": [
+        "Philip K. Dick",
+        "Ursula K. Le Guin",
+        "Octavia Butler",
+        "Margaret Atwood"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-flute-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the opera The Magic Flute?",
+      "choices": [
+        "Wolfgang Amadeus Mozart",
+        "Joseph Haydn",
+        "Christoph Willibald Gluck",
+        "Ludwig van Beethoven"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-rite-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the ballet The Rite of Spring?",
+      "choices": [
+        "Igor Stravinsky",
+        "Béla Bartók",
+        "Claude Debussy",
+        "Sergei Prokofiev"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-respect-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Respect, in the famous 1967 recording?",
+      "choices": [
+        "Aretha Franklin",
+        "Tina Turner",
+        "Etta James",
+        "Diana Ross"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-bad-guy-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song bad guy?",
+      "choices": [
+        "Olivia Rodrigo",
+        "Dua Lipa",
+        "Lorde",
+        "Billie Eilish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-anti-hero",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Anti-Hero?",
+      "choices": [
+        "Adele",
+        "Lana Del Rey",
+        "Billie Eilish",
+        "Taylor Swift"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-wonderful-world",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song What a Wonderful World, in the famous recording?",
+      "choices": [
+        "Frank Sinatra",
+        "Nat King Cole",
+        "Ella Fitzgerald",
+        "Louis Armstrong"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-titanic-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1997 film Titanic?",
+      "choices": [
+        "Steven Spielberg",
+        "Kathryn Bigelow",
+        "Ridley Scott",
+        "James Cameron"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-shining-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1980 film The Shining?",
+      "choices": [
+        "Brian De Palma",
+        "Stanley Kubrick",
+        "John Carpenter",
+        "David Lynch"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ak-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Alaska?",
+      "choices": [
+        "Nome",
+        "Juneau",
+        "Anchorage",
+        "Fairbanks"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-de-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Delaware?",
+      "choices": [
+        "Dover",
+        "Newark",
+        "Wilmington",
+        "Rehoboth Beach"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ia-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Iowa?",
+      "choices": [
+        "Cedar Rapids",
+        "Iowa City",
+        "Davenport",
+        "Des Moines"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ks-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Kansas?",
+      "choices": [
+        "Wichita",
+        "Kansas City",
+        "Lawrence",
+        "Topeka"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ne-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Nebraska?",
+      "choices": [
+        "Bellevue",
+        "Grand Island",
+        "Lincoln",
+        "Omaha"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ok-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Oklahoma?",
+      "choices": [
+        "Norman",
+        "Lawton",
+        "Tulsa",
+        "Oklahoma City"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ar-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Arkansas?",
+      "choices": [
+        "Fort Smith",
+        "Fayetteville",
+        "Little Rock",
+        "Hot Springs"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ms-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Mississippi?",
+      "choices": [
+        "Biloxi",
+        "Jackson",
+        "Oxford",
+        "Gulfport"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-wv-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of West Virginia?",
+      "choices": [
+        "Charleston",
+        "Wheeling",
+        "Morgantown",
+        "Huntington"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-id-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Idaho?",
+      "choices": [
+        "Boise",
+        "Coeur d'Alene",
+        "Pocatello",
+        "Idaho Falls"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-kz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Kazakhstan?",
+      "choices": [
+        "Astana",
+        "Shymkent",
+        "Tashkent",
+        "Almaty"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ao-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Angola?",
+      "choices": [
+        "Huambo",
+        "Luanda",
+        "Kinshasa",
+        "Lobito"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-gravity-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the law of universal gravitation in the Principia?",
+      "choices": [
+        "Galileo Galilei",
+        "Johannes Kepler",
+        "Albert Einstein",
+        "Isaac Newton"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-press-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the movable-type printing press in Europe?",
+      "choices": [
+        "Johannes Gutenberg",
+        "Martin Luther",
+        "William Caxton",
+        "Aldus Manutius"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-faraday-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with electromagnetic induction, as a key experimenter?",
+      "choices": [
+        "James Clerk Maxwell",
+        "André-Marie Ampère",
+        "Nikola Tesla",
+        "Michael Faraday"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-hamilton-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the onboard flight software for the Apollo missions?",
+      "choices": [
+        "Katherine Johnson",
+        "Dorothy Vaughan",
+        "Margaret Hamilton",
+        "Grace Hopper"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-gagarin-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the first person to orbit Earth?",
+      "choices": [
+        "Yuri Gagarin",
+        "Gherman Titov",
+        "Alexei Leonov",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-y-civil-start",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the American Civil War began?",
+      "choices": [
+        "1850",
+        "1848",
+        "1861",
+        "1865"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-sd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of South Dakota?",
+      "choices": [
+        "Pierre",
+        "Rapid City",
+        "Sioux Falls",
+        "Aberdeen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-nd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of North Dakota?",
+      "choices": [
+        "Fargo",
+        "Grand Forks",
+        "Minot",
+        "Bismarck"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-mt-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Montana?",
+      "choices": [
+        "Helena",
+        "Bozeman",
+        "Missoula",
+        "Billings"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-wy-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Wyoming?",
+      "choices": [
+        "Laramie",
+        "Cheyenne",
+        "Jackson",
+        "Casper"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-in-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Indiana?",
+      "choices": [
+        "Indianapolis",
+        "Evansville",
+        "Fort Wayne",
+        "South Bend"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-gy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Guyana?",
+      "choices": [
+        "Paramaribo",
+        "Georgetown",
+        "Linden",
+        "Cayenne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-hn-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Honduras?",
+      "choices": [
+        "San Pedro Sula",
+        "La Ceiba",
+        "San Salvador",
+        "Tegucigalpa"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-ee-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Estonia?",
+      "choices": [
+        "Riga",
+        "Helsinki",
+        "Tartu",
+        "Tallinn"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-me-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Montenegro?",
+      "choices": [
+        "Kotor",
+        "Belgrade",
+        "Budva",
+        "Podgorica"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
     }
   ]
 }

@@ -5,21 +5,21 @@
       "weekKey": "2026-W39",
       "publishedAt": "2026-09-23T17:15:00.000Z",
       "counts": {
-        "easy": 86,
-        "hard": 79,
-        "difficult": 17,
-        "extreme": 7
+        "easy": 490,
+        "hard": 350,
+        "difficult": 140,
+        "extreme": 70
       },
       "studioCounts": {
-        "easy": 86,
-        "hard": 79,
-        "difficult": 17,
+        "easy": 490,
+        "hard": 350,
+        "difficult": 140,
         "finale": 6,
-        "extreme": 1
+        "extreme": 64
       },
-      "questionCount": 189,
+      "questionCount": 1050,
       "weekTarget": 1050,
-      "weekComplete": false
+      "weekComplete": true
     }
   ],
   "updatedAt": "2026-09-23T17:15:00.000Z"
