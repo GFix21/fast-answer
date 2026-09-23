@@ -85,6 +85,17 @@ api/rooms.js
 
 Import the repo in Vercel. The in-memory room map keeps a TV and nearby phones in sync on a single instance. Two tabs on the same origin also sync over `BroadcastChannel`.
 
+## Maintenance
+
+The Maintain workflow covers Fast Answer and the Q&A module in this app.
+
+- **Function** runs on every pull request: age gate, generation packs, and the Q&A module.
+- **Security** scans the app source and Dependabot opens update pull requests. It does not use the studio password.
+- **Stability** stays quiet until the production domain is set. In the GitHub repo, add a variable named `APP_ORIGIN` with that domain (no trailing slash). Q&A is checked on the same domain. Set `QA_ORIGIN` only if Q&A is served somewhere else.
+- **Repair** opens one issue when a daily run or a main-branch run fails. It does not edit the code.
+
+`npm run maintain` runs the same function and security checks locally.
+
 ## Assets
 
 | Folder | Use |

@@ -1,0 +1,100 @@
+# Maintains Fast Answer and the Q&A module that ships with it.
+# Function and security run on every pull request.
+# Stability calls the production domain only after APP_ORIGIN is set
+# (repository variable). QA_ORIGIN is optional and defaults to that domain.
+# Repair opens one issue when a scheduled or main-branch run fails.
+# It does not edit the code and it does not receive the studio password.
+
+name: Maintain
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  function:
+    name: Function
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fast Answer age and packs
+        run: |
+          node scripts/age-safe.check.mjs
+          node scripts/generation-packs.check.mjs
+      - name: Q&A module
+        run: node scripts/q-and-a.check.mjs
+
+  security:
+    name: Security
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/security.check.mjs
+
+  stability:
+    name: Stability
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Production domain
+        env:
+          APP_ORIGIN: ${{ vars.APP_ORIGIN }}
+          QA_ORIGIN: ${{ vars.QA_ORIGIN }}
+        run: node scripts/stability.mjs
+
+  repair:
+    name: Repair
+    needs: [function, security, stability]
+    if: failure() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "Maintenance: Fast Answer or Q&A check failed";
+            const body = [
+              "A maintenance check failed.",
+              "",
+              `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              "",
+              "Function covers the game and the Q&A module. Stability runs after APP_ORIGIN is the production domain. This note does not change the code. Fix the failure in a pull request.",
+            ].join("\n");
+            const open = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 50,
+            });
+            const found = open.data.find((issue) => issue.title === title);
+            if (found) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: found.number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+              });
+            }
