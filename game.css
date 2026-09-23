@@ -329,7 +329,9 @@ img.brand{
 .dir-full{align-self:flex-start;margin:0 0 10px;padding:0}
 .sheet .dir-full{color:var(--accent)}
 
-.rivals{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px}
+.rivals{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;margin-top:10px}
+.qcard.setbreak .qtext,.qtext.setbreak{font-size:clamp(32px,6vw,56px);letter-spacing:.08em;text-transform:uppercase}
+.qcard.setbreak{border-color:color-mix(in oklab, var(--accent) 50%, var(--line))}
 .rivals-lab{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
 .rival{
   border:1px solid var(--line);background:color-mix(in oklab, var(--elev) 80%, transparent);

@@ -11,6 +11,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const steps = [
   ["fast-answer", "scripts/age-safe.check.mjs"],
   ["fast-answer", "scripts/generation-packs.check.mjs"],
+  ["fast-answer", "scripts/show-pace.check.mjs"],
   ["q-and-a", "scripts/q-and-a.check.mjs"],
   ["q-and-a", "scripts/bots.check.mjs"],
   ["flow", "scripts/flow-archive.check.mjs"],
