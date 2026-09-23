@@ -439,23 +439,34 @@ img.brand{
 .qr-code{margin:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);text-align:right}
 .qr-code b{color:var(--fg)}
 .stage.tv .foot .flow{display:none}
+/* TV stays inside a 24px safe edge. Header and footer stay put; only the lobby scrolls. */
 html.tv-scroll, html.tv-scroll body{
-  height:auto;min-height:100%;
-  overflow-x:hidden;overflow-y:scroll;
-  touch-action:pan-y;overscroll-behavior:auto;
+  height:100%;
+  overflow:hidden;
 }
+.stage.tv{
+  top:24px;right:24px;bottom:24px;left:24px;
+  width:auto;height:auto;
+}
+.stage.tv .host img{
+  max-height:min(var(--host-h),46vh);
+  max-width:min(32vw,480px);
+}
+.stage.tv img.brand{height:auto;max-height:12vh}
+.stage.tv .qr-chip{right:32px;bottom:32px}
 .stage.tv-scroll{
-  position:relative;inset:auto;
-  height:auto;min-height:100dvh;min-height:100vh;
-  overflow:visible;
-  display:flex;flex-direction:column;
+  position:fixed;
+  overflow:hidden;
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr) auto auto;
 }
 .stage.tv-scroll .lobby{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,.55fr);
   align-items:start;
-  height:auto;overflow:visible;
-  padding-bottom:24px;
+  min-height:0;height:100%;
+  overflow:auto;
+  padding-bottom:12px;
 }
 .stage.tv-scroll .lobby-copy,
 .stage.tv-scroll .accord,
