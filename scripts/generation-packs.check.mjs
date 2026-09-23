@@ -10,6 +10,11 @@ import {
   dealRoundRobin,
   refreshLockdown,
   shufflePacks,
+  generationForAge,
+  generationForSeat,
+  ageBracketsForGeneration,
+  bracketsSendingTo,
+  AGE_BRACKETS,
 } from "../lib/generation-packs.js";
 import { buildDeviceCohort, placementIsDue, placementMandatoryAt, addYearsIso } from "../lib/device-cohort.js";
 
@@ -62,6 +67,42 @@ assert.deepEqual(dealt.questions.map((q) => q.fromGeneration), [
 ]);
 assert.deepEqual(dealt.questions.map((q) => q.fromPlayer), ["Ada", "Bea", "Cy", "Ada", "Bea", "Cy"]);
 assert.equal(new Set(dealt.questions.map((q) => q.id)).size, 6);
+
+const byAge = [
+  { id: "teen", name: "Teen", ageBracket: "10s", generation: "baby-boomer" },
+  { id: "mid", name: "Mid", ageBracket: "40s", generation: "gen-z" },
+  { id: "elder", name: "Elder", ageBracket: "90s", generation: "gen-alpha" },
+];
+const aged = dealRoundRobin(byAge, packs, 3);
+assert.deepEqual(aged.questions.map((q) => q.fromGeneration), ["gen-z", "gen-y", "silent-generation"]);
+assert.equal(generationForSeat({ ageBracket: "50s", generation: "gen-z" }), "gen-x");
+assert.equal(generationForSeat({ generation: "gen-alpha" }), "gen-alpha");
+assert.deepEqual(AGE_BRACKETS.map((b) => generationForAge(b)), [
+  "gen-z",
+  "gen-z",
+  "gen-y",
+  "gen-y",
+  "gen-x",
+  "baby-boomer",
+  "baby-boomer",
+  "silent-generation",
+  "silent-generation",
+]);
+const sent = new Map();
+for (const b of AGE_BRACKETS) {
+  const g = generationForAge(b);
+  assert.ok(ageBracketsForGeneration(g).includes(b), `${b} covered by ${g}`);
+  assert.equal(sent.has(b), false);
+  sent.set(b, g);
+}
+assert.equal(sent.size, AGE_BRACKETS.length);
+assert.deepEqual(bracketsSendingTo("gen-alpha"), []);
+assert.deepEqual(bracketsSendingTo("multi-gen"), []);
+assert.deepEqual(ageBracketsForGeneration("gen-alpha"), ["10s"]);
+assert.deepEqual(ageBracketsForGeneration("gen-x"), ["40s", "50s", "60s"]);
+assert.deepEqual(ageBracketsForGeneration("multi-gen").length, AGE_BRACKETS.length);
+assert.deepEqual(summary.sendsFor["gen-y"], ["30s", "40s"]);
+assert.equal(summary.year, 2026);
 
 const same = [
   { id: "a", name: "Ada", generation: "gen-x" },

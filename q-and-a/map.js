@@ -25,6 +25,69 @@ export const GENERATIONS = [
   "multi-gen",
 ];
 
+/** Decade the player says they are in. */
+export const AGE_BRACKETS = ["10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s"];
+
+/**
+ * Birth-year spans Q&A uses. Ages are figured in AGE_REFERENCE_YEAR so a pack
+ * can name the brackets it covers, and a bracket can send one pack.
+ */
+export const AGE_REFERENCE_YEAR = 2026;
+export const GENERATION_BORN = {
+  "silent-generation": [1928, 1945],
+  "baby-boomer": [1946, 1964],
+  "gen-x": [1965, 1980],
+  "gen-y": [1981, 1996],
+  "gen-z": [1997, 2012],
+  "gen-alpha": [2013, 2025],
+};
+
+function decadeBounds(bracket) {
+  const n = Number(String(bracket || "").replace(/\D/g, ""));
+  if (!Number.isFinite(n) || n < 10 || n > 90 || n % 10 !== 0) return null;
+  return [n, n + 9];
+}
+
+/** Brackets whose ages overlap this generation in the reference year. Multi-gen spans every bracket. */
+export function ageBracketsForGeneration(generation, year = AGE_REFERENCE_YEAR) {
+  const g = normalizeGeneration(generation);
+  if (g === "multi-gen") return [...AGE_BRACKETS];
+  const span = GENERATION_BORN[g];
+  if (!span) return [];
+  const youngest = year - span[1];
+  const oldest = year - span[0];
+  return AGE_BRACKETS.filter((b) => {
+    const bounds = decadeBounds(b);
+    if (!bounds) return false;
+    return bounds[1] >= youngest && bounds[0] <= oldest;
+  });
+}
+
+/**
+ * The one pack this age sends. Uses the middle year of the decade
+ * (15, 25, 35, …) so a split decade follows the generation that holds that year.
+ */
+export function generationForAge(bracket, year = AGE_REFERENCE_YEAR) {
+  const bounds = decadeBounds(bracket);
+  if (!bounds) return "";
+  const age = Math.round((bounds[0] + bounds[1]) / 2);
+  const born = year - age;
+  for (const g of Object.keys(GENERATION_BORN)) {
+    const [start, end] = GENERATION_BORN[g];
+    if (born >= start && born <= end) return g;
+  }
+  if (born < GENERATION_BORN["silent-generation"][0]) return "silent-generation";
+  if (born > GENERATION_BORN["gen-alpha"][1]) return "gen-alpha";
+  return "";
+}
+
+/** Brackets that actually send this pack. A covered bracket can still send elsewhere. */
+export function bracketsSendingTo(generation, year = AGE_REFERENCE_YEAR) {
+  const g = normalizeGeneration(generation);
+  if (!GENERATIONS.includes(g) || g === "multi-gen") return [];
+  return AGE_BRACKETS.filter((b) => generationForAge(b, year) === g);
+}
+
 const GENERATION_ALIASES = {
   silent: "silent-generation",
   "silent-gen": "silent-generation",

@@ -1,5 +1,67 @@
 {
   "target": 150,
+  "ageYear": 2026,
+  "ages": {
+    "silent-generation": [
+      "80s",
+      "90s"
+    ],
+    "baby-boomer": [
+      "60s",
+      "70s",
+      "80s"
+    ],
+    "gen-x": [
+      "40s",
+      "50s",
+      "60s"
+    ],
+    "gen-y": [
+      "30s",
+      "40s"
+    ],
+    "gen-z": [
+      "10s",
+      "20s"
+    ],
+    "gen-alpha": [
+      "10s"
+    ],
+    "multi-gen": [
+      "10s",
+      "20s",
+      "30s",
+      "40s",
+      "50s",
+      "60s",
+      "70s",
+      "80s",
+      "90s"
+    ]
+  },
+  "sendsFor": {
+    "silent-generation": [
+      "80s",
+      "90s"
+    ],
+    "baby-boomer": [
+      "60s",
+      "70s"
+    ],
+    "gen-x": [
+      "50s"
+    ],
+    "gen-y": [
+      "30s",
+      "40s"
+    ],
+    "gen-z": [
+      "10s",
+      "20s"
+    ],
+    "gen-alpha": [],
+    "multi-gen": []
+  },
   "locales": {
     "en": {
       "held": 96,

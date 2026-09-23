@@ -4,6 +4,19 @@
   "target": 150,
   "held": 15,
   "shortfall": 135,
+  "ageYear": 2026,
+  "born": [
+    1981,
+    1996
+  ],
+  "ageBrackets": [
+    "30s",
+    "40s"
+  ],
+  "sendsFor": [
+    "30s",
+    "40s"
+  ],
   "questions": [
     {
       "id": "w39-e-geny-matrix",

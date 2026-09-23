@@ -31,6 +31,9 @@ import {
   lockdownSet,
   refreshLockdown,
   defaultGeneration,
+  generationForAge,
+  generationForSeat,
+  AGE_BRACKETS,
 } from "./lib/generation-packs.js";
 import { GENERATIONS, normalizeGeneration } from "./q-and-a/map.js";
 
@@ -142,7 +145,6 @@ const CELEB_BOTS = [
   { id: "denzel", name: "Denzel", generation: "baby-boomer", skill: 0.64, buzzDelayMs: [1000, 2400], blurb: "Precision over panic." },
   { id: "meryl", name: "Meryl", generation: "silent-generation", skill: 0.66, buzzDelayMs: [1300, 2800], blurb: "Never first. Rarely wrong." },
 ];
-const AGE_BRACKETS = ["10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s"];
 const GEN_KEYS = {
   "silent-generation": "genSilent",
   "baby-boomer": "genBoomer",
@@ -764,9 +766,7 @@ function questionCredit(q) {
   return gen || "";
 }
 function playerGeneration(profile) {
-  const g = normalizeGeneration(profile?.generation);
-  if (GENERATIONS.includes(g)) return g;
-  return defaultGeneration(profile?.id || "you");
+  return generationForSeat(profile) || defaultGeneration(profile?.id || "you");
 }
 function readGeneration(el) {
   const g = normalizeGeneration(el && el.value);
@@ -776,6 +776,24 @@ function readAge(el) {
   const v = String((el && el.value) || "");
   return AGE_BRACKETS.includes(v) ? v : "";
 }
+function bindAgeToPack(ageSel, genSel, opts = {}) {
+  const age = document.querySelector(ageSel);
+  if (!age) return;
+  age.onchange = () => {
+    const bracket = readAge(age);
+    const gen = generationForAge(bracket);
+    if (genSel) {
+      const sel = document.querySelector(genSel);
+      if (sel && gen) sel.value = gen;
+    }
+    const note = document.querySelector(`[data-pack-for="${age.id}"]`);
+    if (note && gen) note.textContent = tt("packFromAge", genLabel(gen));
+    if (opts.save !== false && bracket && state.profileUnlocked && hasPhoneProfile()) {
+      saveProfile({ ageBracket: bracket });
+    }
+    if (opts.after) opts.after();
+  };
+}
 function ageBracketHTML(id, selected) {
   const current = AGE_BRACKETS.includes(selected) ? selected : "30s";
   return `
@@ -783,15 +801,18 @@ function ageBracketHTML(id, selected) {
     <p class="meta">${escapeHtml(tt("ageLead"))}</p>
     <select class="gen-select" id="${id}">
       ${AGE_BRACKETS.map((b) => `<option value="${b}" ${b === current ? "selected" : ""}>${escapeHtml(tt("age" + b))}</option>`).join("")}
-    </select>`;
+    </select>
+    <p class="meta" data-pack-for="${id}">${escapeHtml(tt("packFromAge", genLabel(generationForAge(current))))}</p>`;
 }
-function generationSelectHTML(id, selected) {
-  const current = GENERATIONS.includes(normalizeGeneration(selected))
+function generationSelectHTML(id, selected, ageBracket) {
+  const bracket = AGE_BRACKETS.includes(ageBracket) ? ageBracket : "30s";
+  const fromAge = generationForAge(bracket);
+  const current = fromAge || (GENERATIONS.includes(normalizeGeneration(selected))
     ? normalizeGeneration(selected)
-    : playerGeneration(state.profile);
+    : playerGeneration(state.profile));
   return `
     <label class="field" for="${id}">${tt("yourGeneration")}</label>
-    <select class="gen-select" id="${id}">
+    <select class="gen-select" id="${id}" disabled>
       ${GENERATIONS.map((g) => `<option value="${g}" ${g === current ? "selected" : ""}>${escapeHtml(genLabel(g))}</option>`).join("")}
     </select>`;
 }
@@ -808,7 +829,8 @@ function dealFromPacks() {
   if (!packs) return deal(state.questions);
   const players = playersForDeal().map((p) => ({
     ...p,
-    generation: normalizeGeneration(p.generation) || defaultGeneration(p.id || p.name),
+    ageBracket: p.ageBracket || "",
+    generation: generationForSeat(p) || defaultGeneration(p.id || p.name),
   }));
   const cursors = { ...(cohort.packCursors || {}) };
   let result = dealRoundRobin(players, packs, ROUND, cursors, (q) => inSelectedTopics(q));
@@ -1207,14 +1229,13 @@ async function commitNewProfile(name, email, pw) {
     passwordHash,
     createdAt: keepLegacy && base.createdAt ? base.createdAt : new Date().toISOString(),
   };
-  const generation = readGeneration($("#playerGen") || $("#roomPlayerGen") || $("#entryGen"));
   const ageBracket = readAge($("#playerAge") || $("#roomPlayerAge") || $("#entryAge")) || "30s";
   saveProfile({
     displayName: cleanName,
     email: cleanEmail,
     passwordHash,
     ageBracket,
-    ...(generation ? { generation } : {}),
+    generation: generationForAge(ageBracket),
   });
   state.dojoMode = "home";
   state.roomDojoPanel = "";
@@ -1233,8 +1254,9 @@ function saveProfile(patch = {}) {
   next.displayName = String(next.displayName || "Player").trim().slice(0, 40) || "Player";
   next.email = String(next.email || "").trim().slice(0, 120);
   const generation = normalizeGeneration(next.generation);
-  next.generation = GENERATIONS.includes(generation) ? generation : "";
   next.ageBracket = AGE_BRACKETS.includes(String(next.ageBracket || "")) ? String(next.ageBracket) : "";
+  const fromAge = generationForAge(next.ageBracket);
+  next.generation = fromAge || (GENERATIONS.includes(generation) ? generation : "");
   state.profile = next;
   state.name = next.displayName;
   localStorage.setItem("fa-name", state.name);
@@ -1304,6 +1326,7 @@ function seatedPreview() {
     you: true,
     score: 0,
     generation: playerGeneration(state.profile),
+    ageBracket: state.profile?.ageBracket || "",
   };
   const guests = (state.guests || []).filter((g) => g.seat !== "view");
   const remain = Math.max(0, state.playerCount - 1 - guests.length);
@@ -1315,7 +1338,8 @@ function seatedPreview() {
       human: true,
       you: false,
       score: 0,
-      generation: normalizeGeneration(g.generation) || defaultGeneration(g.id || g.name),
+      ageBracket: g.ageBracket || "",
+      generation: generationForSeat(g) || defaultGeneration(g.id || g.name),
     })),
     ...bots.map((b) => ({ ...b, human: false, score: 0 })),
   ].slice(0, 12);
@@ -1512,6 +1536,7 @@ function seatPlayers() {
       you: true,
       thumb: state.profile?.thumb || "",
       generation: playerGeneration(state.profile),
+      ageBracket: state.profile?.ageBracket || "",
     },
     ...guests.map((g) => ({
       id: g.id,
@@ -1520,7 +1545,8 @@ function seatPlayers() {
       human: true,
       you: false,
       thumb: g.thumb || "",
-      generation: normalizeGeneration(g.generation) || defaultGeneration(g.id || g.name),
+      ageBracket: g.ageBracket || "",
+      generation: generationForSeat(g) || defaultGeneration(g.id || g.name),
     })),
     ...bots.map((b) => ({
       id: b.id,
@@ -1838,7 +1864,8 @@ function seatPendingJoins() {
       bot.human = true;
       bot.you = false;
       bot.thumb = g.thumb || "";
-      bot.generation = normalizeGeneration(g.generation) || defaultGeneration(g.id || g.name);
+      bot.ageBracket = g.ageBracket || "";
+      bot.generation = generationForSeat(g) || defaultGeneration(g.id || g.name);
       delete bot.skill;
       delete bot.buzzDelayMs;
     } else if (state.players.length < 12) {
@@ -1849,7 +1876,8 @@ function seatPendingJoins() {
         human: true,
         you: false,
         thumb: g.thumb || "",
-        generation: normalizeGeneration(g.generation) || defaultGeneration(g.id || g.name),
+        ageBracket: g.ageBracket || "",
+        generation: generationForSeat(g) || defaultGeneration(g.id || g.name),
       });
     }
   }
@@ -2797,7 +2825,7 @@ function dojoBody() {
       <p class="dir-copy">${tt("createProfileIntro")}</p>
       <label class="field" for="nm">${tt("name")}</label>
       <input id="nm" type="text" value="${escapeHtml(p.displayName && hasPhoneProfile() ? p.displayName : "")}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
-      ${generationSelectHTML("playerGen", p.generation)}
+      ${generationSelectHTML("playerGen", p.generation, p.ageBracket)}
       ${ageBracketHTML("playerAge", p.ageBracket)}
       <label class="field" for="emNew">${tt("email")}</label>
       <input id="emNew" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
@@ -2875,7 +2903,7 @@ function dojoBody() {
     </div>
     <label class="field" for="nm">${tt("name")}</label>
     <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
-    ${generationSelectHTML("playerGen", p.generation)}
+    ${generationSelectHTML("playerGen", p.generation, p.ageBracket)}
     ${ageBracketHTML("playerAge", p.ageBracket)}
     <label class="field" for="em">${tt("email")}</label>
     <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("optional")}"/>
@@ -2930,7 +2958,7 @@ function roomDojoEntryHTML() {
         <p class="dir-copy">${tt("createProfileIntro")}</p>
         <label class="field" for="roomNm">${tt("name")}</label>
         <input id="roomNm" type="text" value="${escapeHtml(hasPhoneProfile() ? (p.displayName || "") : (state.name || ""))}" maxlength="18" autocomplete="nickname"/>
-        ${generationSelectHTML("roomPlayerGen", p.generation)}
+        ${generationSelectHTML("roomPlayerGen", p.generation, p.ageBracket)}
         ${ageBracketHTML("roomPlayerAge", p.ageBracket)}
         <label class="field" for="roomEm">${tt("email")}</label>
         <input id="roomEm" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email"/>
@@ -3295,6 +3323,7 @@ function bindEntry() {
     if (pwEl) pwEl.autocomplete = existing ? "current-password" : "new-password";
     if (forgot) forgot.classList.toggle("hidden", !existing);
   };
+  bindAgeToPack("#entryAge", null, { save: false, after: sync });
   if (nameEl) nameEl.oninput = sync;
   if (emailEl) emailEl.oninput = sync;
   if (pwEl) {
@@ -3747,11 +3776,7 @@ function bindDojoSurface() {
     state.dojoScroll = state.dojoScroll === "closed" ? "scores" : "closed";
     paint(true);
   };
-  const playerGen = $("#playerGen");
-  if (playerGen) playerGen.onchange = () => {
-    const generation = readGeneration(playerGen);
-    if (generation) saveProfile({ generation });
-  };
+  bindAgeToPack("#playerAge", "#playerGen");
   document.querySelectorAll("[data-dojo-bg]").forEach((b) => {
     b.onclick = () => {
       saveProfile({ dojoBg: b.dataset.dojoBg });
@@ -3829,11 +3854,8 @@ function bindLobby() {
   document.querySelectorAll(".js-refresh-lock").forEach((b) => {
     b.onclick = () => refreshLockdownQuestions();
   });
-  const playerGen = $("#playerGen");
-  if (playerGen) playerGen.onchange = () => {
-    const generation = readGeneration(playerGen);
-    if (generation) saveProfile({ generation });
-  };
+  bindAgeToPack("#playerAge", "#playerGen");
+  bindAgeToPack("#roomPlayerAge", "#roomPlayerGen");
   const botFill = $("#botFill");
   if (botFill) botFill.onchange = (e) => {
     state.botFill = Boolean(e.target.checked);
@@ -4076,6 +4098,7 @@ async function joinAsBuzzer() {
     id: state.youId,
     thumb: state.profile?.thumb || "",
     seat: state.viewing ? "view" : "play",
+    ageBracket: state.profile?.ageBracket || "",
     generation: playerGeneration(state.profile),
   });
   if (!joined || joined.error) {
@@ -4308,6 +4331,7 @@ function ingestGuests(guests) {
       name: g.name || "Player",
       thumb: g.thumb || "",
       seat: g.seat === "view" ? "view" : "play",
+      ageBracket: String(g.ageBracket || "").slice(0, 8),
       generation: String(g.generation || "").slice(0, 40),
     }))
     .slice(0, 11);

@@ -4,6 +4,19 @@
   "target": 150,
   "held": 15,
   "shortfall": 135,
+  "ageYear": 2026,
+  "born": [
+    1997,
+    2012
+  ],
+  "ageBrackets": [
+    "10s",
+    "20s"
+  ],
+  "sendsFor": [
+    "10s",
+    "20s"
+  ],
   "questions": [
     {
       "id": "w39-e-genz-fortnite",

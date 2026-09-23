@@ -4,6 +4,20 @@
   "target": 150,
   "held": 14,
   "shortfall": 136,
+  "ageYear": 2026,
+  "born": [
+    1946,
+    1964
+  ],
+  "ageBrackets": [
+    "60s",
+    "70s",
+    "80s"
+  ],
+  "sendsFor": [
+    "60s",
+    "70s"
+  ],
   "questions": [
     {
       "id": "w39-e-boomer-moon",

@@ -23,6 +23,10 @@ import {
   countByGeneration,
   generationIssues,
   normalizeGeneration,
+  ageBracketsForGeneration,
+  bracketsSendingTo,
+  GENERATION_BORN,
+  AGE_REFERENCE_YEAR,
 } from "../q-and-a/map.js";
 import { buildGenerationPacks, packSummary, PACK_TARGET } from "../lib/generation-packs.js";
 
@@ -150,6 +154,10 @@ function writeGenerationPacks(locale, questions) {
       target: PACK_TARGET,
       held,
       shortfall: PACK_TARGET - held,
+      ageYear: AGE_REFERENCE_YEAR,
+      born: GENERATION_BORN[g] || null,
+      ageBrackets: ageBracketsForGeneration(g),
+      sendsFor: bracketsSendingTo(g),
       questions: packs[g],
     };
     fs.writeFileSync(path.join(dir, `${g}.json`), `${JSON.stringify(body, null, 2)}\n`);
@@ -159,7 +167,13 @@ function writeGenerationPacks(locale, questions) {
 
 console.log("=== fast handoff ===");
 console.log("generations:", GENERATIONS.join(", "));
-const manifest = { target: PACK_TARGET, locales: {} };
+const manifest = {
+  target: PACK_TARGET,
+  ageYear: AGE_REFERENCE_YEAR,
+  ages: Object.fromEntries(GENERATIONS.map((g) => [g, ageBracketsForGeneration(g)])),
+  sendsFor: Object.fromEntries(GENERATIONS.map((g) => [g, bracketsSendingTo(g)])),
+  locales: {},
+};
 for (const loc of LOCALES) {
   const live = writeLive(loc, weekly[loc].pack);
   const packs = writeGenerationPacks(loc, live.exported);

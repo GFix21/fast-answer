@@ -2,6 +2,7 @@ import { getRoom, hasRoom, saveRoom, listRooms, deleteRoom } from "../lib/room-s
 import { requireAuth } from "../lib/flow-auth.js";
 import { loadCurrentPack } from "../lib/week-store.js";
 import { exportPack } from "../q-and-a/map.js";
+import { generationForSeat } from "../lib/generation-packs.js";
 import { dealShow, SHOW_DEAL } from "../lib/generation-deal.js";
 
 const SHOW_N = Object.values(SHOW_DEAL).reduce((sum, n) => sum + n, 0);
@@ -147,13 +148,18 @@ export default async function handler(req, res) {
       id: body.id || ("p-" + String(body.name || "pad")),
       thumb: body.thumb || "",
       seat: body.seat === "view" ? "view" : "play",
-      generation: String(body.generation || "").slice(0, 40),
+      ageBracket: String(body.ageBracket || "").slice(0, 8),
+      generation: generationForSeat({
+        ageBracket: body.ageBracket,
+        generation: body.generation,
+      }).slice(0, 40),
     };
     const existing = cur.guests.find((g) => g.id === guest.id || g.name === guest.name);
     if (existing) {
       existing.name = guest.name;
       existing.seat = guest.seat;
       if (guest.thumb) existing.thumb = guest.thumb;
+      if (guest.ageBracket) existing.ageBracket = guest.ageBracket;
       if (guest.generation) existing.generation = guest.generation;
     } else {
       cur.guests.push(guest);

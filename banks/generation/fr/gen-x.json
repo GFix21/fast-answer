@@ -4,6 +4,19 @@
   "target": 150,
   "held": 15,
   "shortfall": 135,
+  "ageYear": 2026,
+  "born": [
+    1965,
+    1980
+  ],
+  "ageBrackets": [
+    "40s",
+    "50s",
+    "60s"
+  ],
+  "sendsFor": [
+    "50s"
+  ],
   "questions": [
     {
       "id": "w39-e-genx-mtv",

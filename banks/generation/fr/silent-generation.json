@@ -4,6 +4,19 @@
   "target": 150,
   "held": 14,
   "shortfall": 136,
+  "ageYear": 2026,
+  "born": [
+    1928,
+    1945
+  ],
+  "ageBrackets": [
+    "80s",
+    "90s"
+  ],
+  "sendsFor": [
+    "80s",
+    "90s"
+  ],
   "questions": [
     {
       "id": "w39-e-silent-ike",
