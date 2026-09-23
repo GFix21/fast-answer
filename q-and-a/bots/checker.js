@@ -28,6 +28,19 @@ export function checkQuestion(q) {
   if (q?.structure === "colour" && !isColourPrompt(q?.prompt)) reasons.push("colour-prompt");
   if (q?.structure === "when" && !isWhenPrompt(q?.prompt)) reasons.push("when-prompt");
   if (q?.humorous === true && !INJECTION_FRAMES[q?.injection]) reasons.push("injection");
+  if (Array.isArray(q?.jokeWrongIndexes)) {
+    const correct = String(q.choices?.[q.correctIndex] || "").trim().toLowerCase();
+    const indexes = q.jokeWrongIndexes;
+    const wrongs = (q.choices || []).map((_, i) => i).filter((i) => i !== q.correctIndex);
+    const plain = wrongs.filter((i) => !indexes.includes(i));
+    if (indexes.length !== 2 || plain.length !== 1 || indexes.includes(q.correctIndex)) {
+      reasons.push("joke-wrongs");
+    }
+    for (const i of indexes) {
+      const line = String(q.choices?.[i] || "").trim().toLowerCase();
+      if (!line || line === correct || (correct && line.includes(correct))) reasons.push("gives-away");
+    }
+  }
   if (isRenegadeJoke(q)) {
     const from = q?.fromStructure;
     const played = q?.structure;

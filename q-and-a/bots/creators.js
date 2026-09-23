@@ -100,6 +100,20 @@ export const CREATORS = [
         injection: "dialogue",
         technique: "dialogue",
         correctIndex: 0,
+        jokeWrongs: {
+          2: {
+            en: "Gold, if the torch is telling the story",
+            fr: "Or, si le flambeau raconte l'histoire",
+            "fr-CA": "Or, si le flambeau raconte l'histoire",
+            de: "Gold, wenn die Fackel die Geschichte erzählt",
+          },
+          3: {
+            en: "White, still shy from the crossing",
+            fr: "Blanc, encore timide après la traversée",
+            "fr-CA": "Blanc, encore timide après la traversée",
+            de: "Weiß, noch schüchtern von der Überfahrt",
+          },
+        },
         sources: [{ label: "National Park Service — Statue of Liberty" }, { label: "Encyclopaedia Britannica — Statue of Liberty" }],
         text: {
           en: { categoryTitle: "Copper Coat", prompt: "What colour is the Statue of Liberty today?", choices: ["Green", "Grey", "Gold", "White"], banterHint: "The copper coat changed after years of weather." },
@@ -135,6 +149,20 @@ export const CREATORS = [
         injection: "straight-man",
         technique: "straight-man",
         correctIndex: 0,
+        jokeWrongs: {
+          2: {
+            en: "Black, dressed for a very serious errand",
+            fr: "Noir, habillé pour une course très sérieuse",
+            "fr-CA": "Noir, habillé pour une course très sérieuse",
+            de: "Schwarz, angezogen für einen sehr ernsten Auftrag",
+          },
+          3: {
+            en: "White, trying out for the ice cream truck",
+            fr: "Blanc, en audition pour le camion de crème glacée",
+            "fr-CA": "Blanc, à l'audition du camion de crème glacée",
+            de: "Weiß, beim Vorsprechen für den Eiswagen",
+          },
+        },
         sources: [{ label: "NYC Taxi and Limousine Commission" }, { label: "Encyclopaedia Britannica — taxicab" }],
         text: {
           en: { categoryTitle: "Medallion", prompt: "What colour is a classic New York City taxi?", choices: ["Yellow", "Green", "Black", "White"], banterHint: "The wild guess can wait. The cab is the bright one." },
@@ -263,6 +291,20 @@ export const CREATORS = [
         injection: "rule-of-three",
         technique: "rule-of-three",
         correctIndex: 0,
+        jokeWrongs: {
+          2: {
+            en: "July 4, when the fireworks thought they were the band",
+            fr: "4 juillet, quand les feux d'artifice se prenaient pour le groupe",
+            "fr-CA": "4 juillet, quand les feux d'artifice se prenaient pour le groupe",
+            de: "4. Juli, als das Feuerwerk dachte, es sei die Band",
+          },
+          3: {
+            en: "June 1, a month early and already muddy",
+            fr: "1 juin, un mois trop tôt et déjà boueux",
+            "fr-CA": "1er juin, un mois trop tôt et déjà boueux",
+            de: "1. Juni, einen Monat zu früh und schon matschig",
+          },
+        },
         sources: [{ label: "Bethel Woods Center for the Arts — Woodstock" }, { label: "Encyclopaedia Britannica — Woodstock" }],
         text: {
           en: { categoryTitle: "The Field", prompt: "When did the Woodstock festival begin?", choices: ["August 15, 1969", "August 15, 1967", "July 4, 1970", "June 1, 1968"], banterHint: "Two wrong dates, then the Friday it opened." },
@@ -391,6 +433,20 @@ export const CREATORS = [
         injection: "misdirection",
         technique: "misdirection",
         correctIndex: 0,
+        jokeWrongs: {
+          2: {
+            en: "January 1, when the calendar looked official",
+            fr: "1 janvier, quand le calendrier avait l'air officiel",
+            "fr-CA": "1er janvier, quand le calendrier avait l'air officiel",
+            de: "1. Januar, als der Kalender offiziell aussah",
+          },
+          3: {
+            en: "March 12, the day the idea cleared its throat",
+            fr: "12 mars, le jour où l'idée s'est raclé la gorge",
+            "fr-CA": "12 mars, le jour où l'idée s'est raclé la gorge",
+            de: "12. März, der Tag, an dem die Idee sich räusperte",
+          },
+        },
         sources: [{ label: "CERN — World Wide Web" }, { label: "Encyclopaedia Britannica — World Wide Web" }],
         text: {
           en: { categoryTitle: "First Page", prompt: "When was the World Wide Web made available to the public?", choices: ["August 6, 1991", "August 6, 1989", "January 1, 1995", "March 12, 1989"], banterHint: "The idea is older. The public page is this date." },
@@ -519,6 +575,20 @@ export const CREATORS = [
         injection: "wordplay",
         technique: "wordplay",
         correctIndex: 0,
+        jokeWrongs: {
+          2: {
+            en: "2004, when the coins learned to juggle",
+            fr: "2004, quand les pièces ont appris à jongler",
+            "fr-CA": "2004, quand les pièces ont appris à jongler",
+            de: "2004, als die Münzen jonglieren lernten",
+          },
+          3: {
+            en: "July, halfway through a very long receipt",
+            fr: "Juillet, à mi-chemin d'un très long reçu",
+            "fr-CA": "Juillet, à mi-chemin d'un très long reçu",
+            de: "Juli, auf halbem Weg durch eine sehr lange Quittung",
+          },
+        },
         sources: [{ label: "European Central Bank — euro cash" }, { label: "Encyclopaedia Britannica — euro" }],
         text: {
           en: { categoryTitle: "Notes and Coins", prompt: "When did euro banknotes and coins enter circulation?", choices: ["January 1, 2002", "January 1, 1999", "January 1, 2004", "July 1, 2002"], banterHint: "The currency had a birthday before the cash did." },
@@ -647,12 +717,26 @@ export const CREATORS = [
         injection: "callback",
         technique: "callback",
         correctIndex: 0,
+        jokeWrongs: {
+          2: {
+            en: "Blue, if the ocean is driving the route",
+            fr: "Bleu, si l'océan conduit la ligne",
+            "fr-CA": "Bleu, si l'océan conduit la ligne",
+            de: "Blau, wenn der Ozean die Strecke fährt",
+          },
+          3: {
+            en: "White, after a very thorough wash",
+            fr: "Blanc, après un lavage très soigné",
+            "fr-CA": "Blanc, après un lavage très soigné",
+            de: "Weiß, nach einer sehr gründlichen Wäsche",
+          },
+        },
         sources: [{ label: "National Highway Traffic Safety Administration — school bus" }, { label: "Encyclopaedia Britannica — school bus" }],
         text: {
-          en: { categoryTitle: "The Stop Arm", prompt: "What colour is a standard school bus in the United States?", choices: ["Yellow", "Orange", "Blue", "White"], banterHint: "Same bright answer the cab question already used." },
-          fr: { categoryTitle: "Le bras d'arrêt", prompt: "De quelle couleur est un autobus scolaire standard aux États-Unis ?", choices: ["Jaune", "Orange", "Bleu", "Blanc"], banterHint: "La même réponse vive que pour le taxi." },
-          "fr-CA": { categoryTitle: "Le bras d'arrêt", prompt: "C'est quoi la couleur d'un autobus scolaire standard aux États-Unis ?", choices: ["Jaune", "Orange", "Bleu", "Blanc"], banterHint: "La même réponse vive que pour le taxi." },
-          de: { categoryTitle: "Der Stopparm", prompt: "Welche Farbe hat ein üblicher Schulbus in den USA?", choices: ["Gelb", "Orange", "Blau", "Weiß"], banterHint: "Dieselbe helle Antwort wie beim Taxi." },
+          en: { categoryTitle: "The Stop Arm", prompt: "What colour is a standard school bus in the United States?", choices: ["Yellow", "Orange", "Blue", "White"], banterHint: "The stop arm is the clue. Kids spot that paint from the curb." },
+          fr: { categoryTitle: "Le bras d'arrêt", prompt: "De quelle couleur est un autobus scolaire standard aux États-Unis ?", choices: ["Jaune", "Orange", "Bleu", "Blanc"], banterHint: "Le bras d'arrêt est l'indice. Les enfants voient cette peinture du trottoir." },
+          "fr-CA": { categoryTitle: "Le bras d'arrêt", prompt: "C'est quoi la couleur d'un autobus scolaire standard aux États-Unis ?", choices: ["Jaune", "Orange", "Bleu", "Blanc"], banterHint: "Le bras d'arrêt est l'indice. Les enfants voient cette peinture du trottoir." },
+          de: { categoryTitle: "Der Stopparm", prompt: "Welche Farbe hat ein üblicher Schulbus in den USA?", choices: ["Gelb", "Orange", "Blau", "Weiß"], banterHint: "Der Stopparm ist der Hinweis. Kinder sehen diese Farbe vom Bordstein." },
         },
       }),
     ],
@@ -763,6 +847,20 @@ export const CREATORS = [
         injection: "escalation",
         technique: "escalation",
         correctIndex: 0,
+        jokeWrongs: {
+          2: {
+            en: "Brown, a day past the lunchbox",
+            fr: "Brun, un jour après la boîte à lunch",
+            "fr-CA": "Brun, un jour après la boîte à lunch",
+            de: "Braun, einen Tag nach der Lunchbox",
+          },
+          3: {
+            en: "Red, if it tried out for the apple bowl",
+            fr: "Rouge, s'il a passé l'audition du bol de pommes",
+            "fr-CA": "Rouge, s'il a passé l'audition du bol de pommes",
+            de: "Rot, falls es für die Apfelschale vorgesprochen hat",
+          },
+        },
         sources: [{ label: "Encyclopaedia Britannica — banana" }, { label: "Royal Botanic Gardens, Kew — banana" }],
         text: {
           en: { categoryTitle: "Snack", prompt: "What colour is the peel of a ripe banana?", choices: ["Yellow", "Green", "Brown", "Red"], banterHint: "The story can grow. The peel stays the bright one." },
@@ -876,6 +974,20 @@ export const CREATORS = [
         injection: "dialogue",
         technique: "dialogue",
         correctIndex: 0,
+        jokeWrongs: {
+          2: {
+            en: "May 7, whenever the sequel docks",
+            fr: "7 mai, quand la suite accoste",
+            "fr-CA": "7 mai, quand la suite accoste",
+            de: "7. Mai, wenn die Fortsetzung anlegt",
+          },
+          3: {
+            en: "April 1 (April Fool's Day)",
+            fr: "1 avril (poisson d'avril)",
+            "fr-CA": "1er avril (poisson d'avril)",
+            de: "1. April (Aprilscherz)",
+          },
+        },
         sources: [{ label: "Encyclopaedia Britannica — Titanic" }, { label: "National Maritime Museum — Titanic" }],
         text: {
           en: { categoryTitle: "On the Walk", prompt: "When did the Titanic sink?", choices: ["April 15, 1912", "April 15, 1911", "May 7, 1915", "December 16, 1912"], banterHint: "The other person answered the question that was asked." },
@@ -897,6 +1009,20 @@ export const CREATORS = [
         injection: "dialogue",
         technique: "dialogue",
         correctIndex: 0,
+        jokeWrongs: {
+          2: {
+            en: "Red, if the funnel is telling the story",
+            fr: "Rouge, si la cheminée raconte l'histoire",
+            "fr-CA": "Rouge, si la cheminée raconte l'histoire",
+            de: "Rot, wenn der Schornstein die Geschichte erzählt",
+          },
+          3: {
+            en: "Green, after a long stay in the harbour",
+            fr: "Vert, après un long séjour au port",
+            "fr-CA": "Vert, après un long séjour au port",
+            de: "Grün, nach einem langen Aufenthalt im Hafen",
+          },
+        },
         sources: [{ label: "Encyclopaedia Britannica — Titanic" }, { label: "National Maritime Museum — Titanic" }],
         text: {
           en: { categoryTitle: "Same Walk", prompt: "What colour was the hull of the Titanic?", choices: ["Black", "White", "Red", "Green"], banterHint: "Same walk. Different structure. The hull was not the date." },
@@ -931,6 +1057,20 @@ export const CREATORS = [
         injection: "aside",
         technique: "aside",
         correctIndex: 0,
+        jokeWrongs: {
+          1: {
+            en: "Green, if the lawn got promoted",
+            fr: "Vert, si la pelouse a eu une promotion",
+            "fr-CA": "Vert, si la pelouse a eu une promotion",
+            de: "Grün, falls der Rasen befördert wurde",
+          },
+          2: {
+            en: "Red, saved for the sunset shift",
+            fr: "Rouge, gardé pour l'équipe du coucher",
+            "fr-CA": "Rouge, gardé pour l'équipe du coucher",
+            de: "Rot, aufgehoben für die Abendschicht",
+          },
+        },
         sources: [{ label: "NASA — Earth's atmosphere" }, { label: "Encyclopaedia Britannica — sky" }],
         text: {
           en: { categoryTitle: "Overhead", prompt: "What colour is a clear daytime sky?", choices: ["Blue", "Green", "Red", "Black"], banterHint: "Step back in. The answer is the ordinary one." },

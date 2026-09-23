@@ -3,7 +3,7 @@
  * They keep the same id, the same choice order, and the same correctIndex as English.
  * A humorous question is wrapped by Crack'd Kerr after the straight ask is translated.
  */
-import { injectHumor } from "../crackd-kerr.js";
+import { injectHumor, injectWrongAnswers } from "../crackd-kerr.js";
 
 export const FRANCE_BOT = "French (France)";
 export const QUEBEC_BOT = "French (Quebec)";
@@ -55,6 +55,11 @@ export function translateQuestion(q, locale) {
     flat.fromStructure = q.fromStructure || q.structure;
     flat.structure = injected.structure;
     flat.renegade = injected.renegade;
+  }
+  if (q.jokeWrongs) {
+    const joked = injectWrongAnswers({ ...q, choices: flat.choices }, locale);
+    flat.choices = joked.choices;
+    flat.jokeWrongIndexes = joked.jokeWrongIndexes;
   }
   return flat;
 }

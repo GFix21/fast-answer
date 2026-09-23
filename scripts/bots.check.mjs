@@ -61,6 +61,18 @@ for (const loc of ["en", "fr", "fr-CA", "de"]) {
   assert.equal(titanic.structure, "when");
   assert.equal(titanic.renegade, false);
   assert.match(titanic.choices[titanic.correctIndex], /1912/);
+  assert.deepEqual(titanic.jokeWrongIndexes, [2, 3]);
+  const plainTitanic = titanic.choices.filter((_, i) => i !== titanic.correctIndex && !titanic.jokeWrongIndexes.includes(i));
+  assert.equal(plainTitanic.length, 1);
+  assert.match(plainTitanic[0], /1911/);
+  assert.ok(titanic.jokeWrongIndexes.some((i) => /april fool|poisson d'avril|aprilscherz/i.test(titanic.choices[i])));
+  for (const q of humorous) {
+    assert.equal(q.jokeWrongIndexes?.length, 2, `${loc} ${q.id}`);
+    const wrongs = q.choices.map((_, i) => i).filter((i) => i !== q.correctIndex);
+    const plain = wrongs.filter((i) => !q.jokeWrongIndexes.includes(i));
+    assert.equal(plain.length, 1, `${loc} ${q.id}`);
+    assert.equal(q.jokeWrongIndexes.includes(q.correctIndex), false, `${loc} ${q.id}`);
+  }
   assert.ok(jokes.some((q) => q.tier === "easy"), loc);
   assert.ok(jokes.some((q) => q.tier === "hard"), loc);
   for (const q of rows) {

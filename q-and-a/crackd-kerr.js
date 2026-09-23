@@ -119,6 +119,28 @@ export const INJECTION_FRAMES = Object.fromEntries(
 );
 
 /**
+ * Two wrong answers become punchlines. The correct choice is untouched.
+ * One creator wrong answer stays plain, so the joke cannot travel far
+ * and the punchlines do not replace the fact.
+ */
+export function injectWrongAnswers(q, locale = "en") {
+  const choices = Array.isArray(q?.choices) ? [...q.choices] : [];
+  const correctIndex = q?.correctIndex;
+  const map = q?.jokeWrongs || {};
+  const jokeWrongIndexes = [];
+  for (const [key, pack] of Object.entries(map)) {
+    const index = Number(key);
+    if (!Number.isInteger(index) || index === correctIndex || index < 0 || index >= choices.length) continue;
+    const line = pack?.[locale] || pack?.en;
+    if (!line) continue;
+    choices[index] = line;
+    jokeWrongIndexes.push(index);
+  }
+  jokeWrongIndexes.sort((a, b) => a - b);
+  return { choices, jokeWrongIndexes };
+}
+
+/**
  * Joke injection. The choices and correctIndex stay the creator's.
  * `playedStructure` is the structure that produced this outcome.
  * It is renegade when that structure is not the one the creator sent.

@@ -204,7 +204,11 @@ export function shuffleChoicesDeterministic(q) {
   }
   const nextChoices = idxs.map((i) => q.choices[i]);
   const nextCorrect = idxs.indexOf(Number(q.correctIndex) || 0);
-  return { ...q, choices: nextChoices, correctIndex: nextCorrect < 0 ? 0 : nextCorrect };
+  const next = { ...q, choices: nextChoices, correctIndex: nextCorrect < 0 ? 0 : nextCorrect };
+  if (Array.isArray(q.jokeWrongIndexes)) {
+    next.jokeWrongIndexes = q.jokeWrongIndexes.map((i) => idxs.indexOf(i)).filter((i) => i >= 0);
+  }
+  return next;
 }
 
 export function toFastAnswerQuestion(q) {
@@ -227,6 +231,7 @@ export function toFastAnswerQuestion(q) {
   if (q.structure) base.structure = q.structure;
   if (q.fromStructure) base.fromStructure = q.fromStructure;
   if (q.straight) base.straight = q.straight;
+  if (Array.isArray(q.jokeWrongIndexes)) base.jokeWrongIndexes = [...q.jokeWrongIndexes];
   return shuffleChoicesDeterministic(base);
 }
 
