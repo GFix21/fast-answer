@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "en",
   "target": 150,
-  "held": 9,
-  "shortfall": 141,
+  "held": 15,
+  "shortfall": 135,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -163,6 +163,105 @@
       ],
       "correctIndex": 1,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-multi-guitar",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Six Strings",
+      "prompt": "How many strings does a standard guitar have?",
+      "choices": [
+        "Four",
+        "Six",
+        "Eight",
+        "Twelve"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Twelve-string guitars are the extra-loud cousins."
+    },
+    {
+      "id": "cq-e-multi-boil",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Kettle",
+      "prompt": "What is the boiling point of water at sea level, in Celsius?",
+      "choices": [
+        "100",
+        "90",
+        "80",
+        "120"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Up a mountain, the kettle finishes a little sooner."
+    },
+    {
+      "id": "cq-h-multi-photo",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Green Work",
+      "prompt": "Which gas do plants take in during photosynthesis?",
+      "choices": [
+        "Nitrogen",
+        "Helium",
+        "Carbon dioxide",
+        "Oxygen"
+      ],
+      "correctIndex": 2,
+      "banterHint": "They hand oxygen back to the room."
+    },
+    {
+      "id": "cq-h-multi-pitch",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "On the Field",
+      "prompt": "How many players from one soccer team are on the field at a time?",
+      "choices": [
+        "11",
+        "15",
+        "9",
+        "13"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The goalkeeper counts as one of them."
+    },
+    {
+      "id": "cq-h-multi-compass",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "True North",
+      "prompt": "Why did the compass join the quiz?",
+      "choices": [
+        "It hid the map",
+        "It skipped the trail",
+        "It lost the needle",
+        "It wanted to get its bearings"
+      ],
+      "correctIndex": 3,
+      "banterHint": "North stayed a kind direction.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-multi-eclipse",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Night Shade",
+      "prompt": "What colour is the Moon during a total lunar eclipse?",
+      "choices": [
+        "Red",
+        "Blue",
+        "Green",
+        "White"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Earth's shadow lends that shade.",
+      "structure": "colour"
     }
   ]
 }

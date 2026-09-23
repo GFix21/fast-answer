@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "fr",
   "target": 150,
-  "held": 9,
-  "shortfall": 141,
+  "held": 15,
+  "shortfall": 135,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -163,6 +163,105 @@
       ],
       "correctIndex": 1,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-multi-guitar",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Six cordes",
+      "prompt": "Combien de cordes a une guitare standard ?",
+      "choices": [
+        "Quatre",
+        "Six",
+        "Huit",
+        "Douze"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Les guitares à douze cordes sont les cousines plus bruyantes."
+    },
+    {
+      "id": "cq-e-multi-boil",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Bouilloire",
+      "prompt": "Quel est le point d'ébullition de l'eau au niveau de la mer, en Celsius ?",
+      "choices": [
+        "100",
+        "90",
+        "80",
+        "120"
+      ],
+      "correctIndex": 0,
+      "banterHint": "En montagne, la bouilloire finit un peu plus tôt."
+    },
+    {
+      "id": "cq-h-multi-photo",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Travail vert",
+      "prompt": "Quel gaz les plantes absorbent-elles pendant la photosynthèse ?",
+      "choices": [
+        "L'azote",
+        "L'hélium",
+        "Le dioxyde de carbone",
+        "L'oxygène"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Elles rendent l'oxygène à la pièce."
+    },
+    {
+      "id": "cq-h-multi-pitch",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Sur le terrain",
+      "prompt": "Combien de joueurs d'une équipe de football sont sur le terrain en même temps ?",
+      "choices": [
+        "11",
+        "15",
+        "9",
+        "13"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le gardien compte parmi eux."
+    },
+    {
+      "id": "cq-h-multi-compass",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Plein nord",
+      "prompt": "Pourquoi la boussole a-t-elle rejoint le quiz ?",
+      "choices": [
+        "Elle a caché la carte",
+        "Elle a sauté le sentier",
+        "Elle a perdu l'aiguille",
+        "Elle voulait trouver ses repères"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le nord est resté une direction gentille.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-multi-eclipse",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Teinte de nuit",
+      "prompt": "De quelle couleur est la Lune pendant une éclipse lunaire totale ?",
+      "choices": [
+        "Rouge",
+        "Bleu",
+        "Vert",
+        "Blanc"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'ombre de la Terre prête cette teinte.",
+      "structure": "colour"
     }
   ]
 }

@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "en",
   "target": 150,
-  "held": 15,
-  "shortfall": 135,
+  "held": 21,
+  "shortfall": 129,
   "ageYear": 2026,
   "born": [
     1997,
@@ -271,6 +271,105 @@
       ],
       "correctIndex": 0,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-genz-gif",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Tiny Loop",
+      "prompt": "What does GIF stand for?",
+      "choices": [
+        "Global Image File",
+        "General Icon Folder",
+        "Grouped Internet Frame",
+        "Graphics Interchange Format"
+      ],
+      "correctIndex": 3,
+      "banterHint": "A picture that refuses to sit still."
+    },
+    {
+      "id": "cq-e-genz-vr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Headset",
+      "prompt": "What does VR stand for in a headset?",
+      "choices": [
+        "Visual Radio",
+        "Vector Render",
+        "Virtual Reality",
+        "Video Relay"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The room stays put. The view does not."
+    },
+    {
+      "id": "cq-h-genz-bytedance",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Short Video",
+      "prompt": "Which company owns TikTok?",
+      "choices": [
+        "Snap",
+        "Meta",
+        "Google",
+        "ByteDance"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The app is the famous part. The company is quieter."
+    },
+    {
+      "id": "cq-h-genz-hashtag",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Pound Sign",
+      "prompt": "What is the name of the # symbol when it groups posts on social media?",
+      "choices": [
+        "A hashtag",
+        "A caret",
+        "A tilde",
+        "An asterisk"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One mark, and the posts find each other."
+    },
+    {
+      "id": "cq-e-genz-emoji",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "One Eye",
+      "prompt": "Why did the emoji wink?",
+      "choices": [
+        "It lost the other eye",
+        "It hid the keyboard",
+        "It missed the chat",
+        "It had a point to make"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The message still landed kindly.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-genz-spotify",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Logo Circle",
+      "prompt": "What colour is the circle in the Spotify logo?",
+      "choices": [
+        "Blue",
+        "Red",
+        "Yellow",
+        "Green"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The sound waves sit on top of it.",
+      "structure": "colour"
     }
   ]
 }

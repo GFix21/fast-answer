@@ -220,6 +220,8 @@ export function toFastAnswerQuestion(q) {
     correctIndex: q.correctIndex,
     banterHint: q.banterHint ?? null,
   };
+  if (q.funny === true) base.funny = true;
+  if (q.structure) base.structure = q.structure;
   return shuffleChoicesDeterministic(base);
 }
 

@@ -1536,6 +1536,690 @@
     "banterHint": null
   },
   {
+    "id": "cq-e-silent-roar",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Jazz Decade",
+    "prompt": "What nickname is given to the 1920s in the United States?",
+    "choices": [
+      "The Roaring Twenties",
+      "The Space Age",
+      "The Depression Years",
+      "The Gilded Age"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The bands were loud. The name stuck."
+  },
+  {
+    "id": "cq-e-silent-vote",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Ballot Box",
+    "prompt": "Which U.S. constitutional amendment, ratified in 1920, recognized women's right to vote?",
+    "choices": [
+      "The 19th Amendment",
+      "The 26th Amendment",
+      "The 13th Amendment",
+      "The 15th Amendment"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The line at the poll got longer, on purpose."
+  },
+  {
+    "id": "cq-h-silent-chamberlain",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "September 1939",
+    "prompt": "Who was Prime Minister of the United Kingdom when Britain declared war on Germany in 1939?",
+    "choices": [
+      "Clement Attlee",
+      "Stanley Baldwin",
+      "Winston Churchill",
+      "Neville Chamberlain"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Churchill took the chair the next year."
+  },
+  {
+    "id": "cq-h-silent-assembly",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "First Session",
+    "prompt": "In which city did the United Nations hold its first General Assembly in 1946?",
+    "choices": [
+      "New York",
+      "Geneva",
+      "Paris",
+      "London"
+    ],
+    "correctIndex": 3,
+    "banterHint": "New York became home a few years later."
+  },
+  {
+    "id": "cq-e-silent-radio",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "By the Window",
+    "prompt": "Why did the radio sit near the window?",
+    "choices": [
+      "It hid from the news",
+      "It lost the dial",
+      "It preferred silence",
+      "It wanted to catch a wave"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The song still came through.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-silent-liberty",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Copper Coat",
+    "prompt": "What colour is the Statue of Liberty today?",
+    "choices": [
+      "Grey",
+      "White",
+      "Gold",
+      "Green"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The copper coat changed after years of weather.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-boomer-gaye",
+    "tier": "easy",
+    "topic": "music",
+    "generation": "baby-boomer",
+    "categoryTitle": "Soul Hour",
+    "prompt": "Who released the album What's Going On in 1971?",
+    "choices": [
+      "Sam Cooke",
+      "Stevie Wonder",
+      "Marvin Gaye",
+      "Otis Redding"
+    ],
+    "correctIndex": 2,
+    "banterHint": "The questions on that record still stand."
+  },
+  {
+    "id": "cq-e-boomer-skylab",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "Workshop in Orbit",
+    "prompt": "What was the name of NASA's first space station, launched in 1973?",
+    "choices": [
+      "Salyut",
+      "Freedom",
+      "Skylab",
+      "Mir"
+    ],
+    "correctIndex": 2,
+    "banterHint": "A workshop with a very long commute."
+  },
+  {
+    "id": "cq-h-boomer-sesame",
+    "tier": "hard",
+    "topic": "film-tv",
+    "generation": "baby-boomer",
+    "categoryTitle": "Street Premiere",
+    "prompt": "In which year did Sesame Street first air in the United States?",
+    "choices": [
+      "1974",
+      "1965",
+      "1969",
+      "1979"
+    ],
+    "correctIndex": 2,
+    "banterHint": "The street opened near the end of the sixties."
+  },
+  {
+    "id": "cq-h-boomer-earthday",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "First Green Day",
+    "prompt": "In which year was the first Earth Day held?",
+    "choices": [
+      "1962",
+      "1970",
+      "1977",
+      "1984"
+    ],
+    "correctIndex": 1,
+    "banterHint": "The planet got a date on the calendar."
+  },
+  {
+    "id": "cq-h-boomer-record",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "Spin Again",
+    "prompt": "Why did the record stay friends with the player?",
+    "choices": [
+      "It hid in the sleeve",
+      "It lost the label",
+      "It kept coming back around",
+      "It skipped the chorus"
+    ],
+    "correctIndex": 2,
+    "banterHint": "The next song still got a turn.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-boomer-submarine",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "Under the Sea",
+    "prompt": "What colour is the submarine in the Beatles song?",
+    "choices": [
+      "Blue",
+      "Green",
+      "Yellow",
+      "Red"
+    ],
+    "correctIndex": 2,
+    "banterHint": "The title gives the paint job away.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-genx-gameboy",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Pocket Screen",
+    "prompt": "Which handheld console did Nintendo release in 1989?",
+    "choices": [
+      "Lynx",
+      "PSP",
+      "Game Gear",
+      "Game Boy"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Tetris rode along in a lot of pockets."
+  },
+  {
+    "id": "cq-e-genx-pdf",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Paperless Page",
+    "prompt": "What does PDF stand for?",
+    "choices": [
+      "Personal Disk Folder",
+      "Public Data File",
+      "Printed Document Form",
+      "Portable Document Format"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The page learned to travel."
+  },
+  {
+    "id": "cq-h-genx-ram",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Short Memory",
+    "prompt": "What does RAM stand for in a computer?",
+    "choices": [
+      "Read And Modify",
+      "Rapid Archive Module",
+      "Random Access Memory",
+      "Remote Access Mainframe"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Fast memory, and it forgets when the power goes."
+  },
+  {
+    "id": "cq-h-genx-cd",
+    "tier": "hard",
+    "topic": "music",
+    "generation": "gen-x",
+    "categoryTitle": "Silver Circle",
+    "prompt": "What does CD stand for in the music format introduced in the early 1980s?",
+    "choices": [
+      "Cassette Deck",
+      "Catalog Download",
+      "Compact Disc",
+      "Crystal Drive"
+    ],
+    "correctIndex": 2,
+    "banterHint": "A small mirror that held an album."
+  },
+  {
+    "id": "cq-e-genx-cassette",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Wound Up",
+    "prompt": "Why did the cassette feel shy?",
+    "choices": [
+      "It lost the pencil",
+      "It was a little wound up",
+      "It skipped the chorus",
+      "It hid in the walkman"
+    ],
+    "correctIndex": 1,
+    "banterHint": "Side B still got a listen.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-genx-blinky",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Ghost Duty",
+    "prompt": "What colour is Blinky, the Pac-Man ghost?",
+    "choices": [
+      "Pink",
+      "Orange",
+      "Cyan",
+      "Red"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The other three ghosts wear the rest.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-geny-wiki",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Open Book",
+    "prompt": "Which website, launched in 2001, lets people write encyclopedia articles together?",
+    "choices": [
+      "Wikipedia",
+      "AltaVista",
+      "GeoCities",
+      "MySpace"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The edit button is the whole idea."
+  },
+  {
+    "id": "cq-e-geny-sms",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Short Note",
+    "prompt": "What does SMS stand for?",
+    "choices": [
+      "Short Message Service",
+      "Standard Mobile Signal",
+      "Simple Mail Switch",
+      "Secure Media Stream"
+    ],
+    "correctIndex": 0,
+    "banterHint": "One hundred and sixty characters, and a lot of plans."
+  },
+  {
+    "id": "cq-h-geny-iphone",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Pocket Computer",
+    "prompt": "Which company released the first iPhone in 2007?",
+    "choices": [
+      "Apple",
+      "BlackBerry",
+      "Nokia",
+      "Motorola"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The keyboard moved onto the glass."
+  },
+  {
+    "id": "cq-h-geny-facebook",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Open Registration",
+    "prompt": "In which year did Facebook open registration beyond schools to anyone 13 or older?",
+    "choices": [
+      "2005",
+      "2006",
+      "2008",
+      "2004"
+    ],
+    "correctIndex": 1,
+    "banterHint": "The campus gate came down in September."
+  },
+  {
+    "id": "cq-h-geny-inbox",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Still Calm",
+    "prompt": "Why did the inbox stay calm?",
+    "choices": [
+      "It deleted the morning",
+      "It knew how to keep its letters",
+      "It missed the send button",
+      "It hid the password"
+    ],
+    "correctIndex": 1,
+    "banterHint": "The unread pile stayed polite.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-geny-ocean",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Jewel Case",
+    "prompt": "What colour is the Heart of the Ocean in the film Titanic?",
+    "choices": [
+      "Green",
+      "Yellow",
+      "Red",
+      "Blue"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The necklace kept that one shade.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-genz-gif",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Tiny Loop",
+    "prompt": "What does GIF stand for?",
+    "choices": [
+      "Global Image File",
+      "General Icon Folder",
+      "Grouped Internet Frame",
+      "Graphics Interchange Format"
+    ],
+    "correctIndex": 3,
+    "banterHint": "A picture that refuses to sit still."
+  },
+  {
+    "id": "cq-e-genz-vr",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Headset",
+    "prompt": "What does VR stand for in a headset?",
+    "choices": [
+      "Visual Radio",
+      "Vector Render",
+      "Virtual Reality",
+      "Video Relay"
+    ],
+    "correctIndex": 2,
+    "banterHint": "The room stays put. The view does not."
+  },
+  {
+    "id": "cq-h-genz-bytedance",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Short Video",
+    "prompt": "Which company owns TikTok?",
+    "choices": [
+      "Snap",
+      "Meta",
+      "Google",
+      "ByteDance"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The app is the famous part. The company is quieter."
+  },
+  {
+    "id": "cq-h-genz-hashtag",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Pound Sign",
+    "prompt": "What is the name of the # symbol when it groups posts on social media?",
+    "choices": [
+      "A hashtag",
+      "A caret",
+      "A tilde",
+      "An asterisk"
+    ],
+    "correctIndex": 0,
+    "banterHint": "One mark, and the posts find each other."
+  },
+  {
+    "id": "cq-e-genz-emoji",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "One Eye",
+    "prompt": "Why did the emoji wink?",
+    "choices": [
+      "It lost the other eye",
+      "It hid the keyboard",
+      "It missed the chat",
+      "It had a point to make"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The message still landed kindly.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-genz-spotify",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Logo Circle",
+    "prompt": "What colour is the circle in the Spotify logo?",
+    "choices": [
+      "Blue",
+      "Red",
+      "Yellow",
+      "Green"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The sound waves sit on top of it.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-alpha-cat",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Quiz Host",
+    "prompt": "What do you call a cat who hosts the quiz?",
+    "choices": [
+      "A scaredy cat",
+      "The purr-son in charge",
+      "A catnap",
+      "A copycat"
+    ],
+    "correctIndex": 1,
+    "banterHint": "It still lands on its feet.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-alpha-backpack",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Good Day",
+    "prompt": "Why did the backpack look proud?",
+    "choices": [
+      "It ate the homework",
+      "It hid the map",
+      "It was carrying a good day",
+      "It missed the bus"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Every book got a lift.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-alpha-pencil",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Team Player",
+    "prompt": "Why did the pencil join the team?",
+    "choices": [
+      "It rolled away",
+      "It hid in the case",
+      "It lost its cap",
+      "It could draw a crowd"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The eraser had its back.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-alpha-bookmark",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Still Here",
+    "prompt": "Why did the bookmark stay calm in the story?",
+    "choices": [
+      "It always held its place",
+      "It tore the page",
+      "It skipped the ending",
+      "It hid the title"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Chapter after chapter, still kind.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-alpha-frog",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Open Mic",
+    "prompt": "What colour is a frog on open-mic night?",
+    "choices": [
+      "Purple",
+      "Green",
+      "Silver",
+      "Orange"
+    ],
+    "correctIndex": 1,
+    "banterHint": "The room stayed ribbiting.",
+    "funny": true,
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-multi-guitar",
+    "tier": "easy",
+    "topic": "music",
+    "generation": "multi-gen",
+    "categoryTitle": "Six Strings",
+    "prompt": "How many strings does a standard guitar have?",
+    "choices": [
+      "Four",
+      "Six",
+      "Eight",
+      "Twelve"
+    ],
+    "correctIndex": 1,
+    "banterHint": "Twelve-string guitars are the extra-loud cousins."
+  },
+  {
+    "id": "cq-e-multi-boil",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Kettle",
+    "prompt": "What is the boiling point of water at sea level, in Celsius?",
+    "choices": [
+      "100",
+      "90",
+      "80",
+      "120"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Up a mountain, the kettle finishes a little sooner."
+  },
+  {
+    "id": "cq-h-multi-photo",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Green Work",
+    "prompt": "Which gas do plants take in during photosynthesis?",
+    "choices": [
+      "Nitrogen",
+      "Helium",
+      "Carbon dioxide",
+      "Oxygen"
+    ],
+    "correctIndex": 2,
+    "banterHint": "They hand oxygen back to the room."
+  },
+  {
+    "id": "cq-h-multi-pitch",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "On the Field",
+    "prompt": "How many players from one soccer team are on the field at a time?",
+    "choices": [
+      "11",
+      "15",
+      "9",
+      "13"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The goalkeeper counts as one of them."
+  },
+  {
+    "id": "cq-h-multi-compass",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "True North",
+    "prompt": "Why did the compass join the quiz?",
+    "choices": [
+      "It hid the map",
+      "It skipped the trail",
+      "It lost the needle",
+      "It wanted to get its bearings"
+    ],
+    "correctIndex": 3,
+    "banterHint": "North stayed a kind direction.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-multi-eclipse",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Night Shade",
+    "prompt": "What colour is the Moon during a total lunar eclipse?",
+    "choices": [
+      "Red",
+      "Blue",
+      "Green",
+      "White"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Earth's shadow lends that shade.",
+    "structure": "colour"
+  },
+  {
     "id": "ga-joke-clock",
     "tier": "easy",
     "topic": "culture",
@@ -1549,7 +2233,8 @@
       "A statue"
     ],
     "correctIndex": 0,
-    "banterHint": "It can still wave hello."
+    "banterHint": "It can still wave hello.",
+    "funny": true
   },
   {
     "id": "ga-joke-bear",
@@ -1565,7 +2250,8 @@
       "A koala"
     ],
     "correctIndex": 0,
-    "banterHint": "Still sticky. Much friendlier."
+    "banterHint": "Still sticky. Much friendlier.",
+    "funny": true
   },
   {
     "id": "ga-joke-math",
@@ -1581,7 +2267,8 @@
       "It lost its cover"
     ],
     "correctIndex": 0,
-    "banterHint": "The bookmark offered a hug."
+    "banterHint": "The bookmark offered a hug.",
+    "funny": true
   },
   {
     "id": "ga-joke-ocean",
@@ -1597,7 +2284,8 @@
       "Go fish"
     ],
     "correctIndex": 0,
-    "banterHint": "The beach waved back."
+    "banterHint": "The beach waved back.",
+    "funny": true
   },
   {
     "id": "ga-joke-flamingo",
@@ -1613,7 +2301,8 @@
       "A herd"
     ],
     "correctIndex": 2,
-    "banterHint": "They showed up dressed for it."
+    "banterHint": "They showed up dressed for it.",
+    "funny": true
   },
   {
     "id": "ga-joke-octopus",
@@ -1629,7 +2318,8 @@
       "Three"
     ],
     "correctIndex": 3,
-    "banterHint": "Eight arms, three hearts, zero hurry."
+    "banterHint": "Eight arms, three hearts, zero hurry.",
+    "funny": true
   },
   {
     "id": "ga-joke-scarecrow",
@@ -1645,7 +2335,8 @@
       "He was outstanding in his field"
     ],
     "correctIndex": 3,
-    "banterHint": "The crows started a fan club."
+    "banterHint": "The crows started a fan club.",
+    "funny": true
   },
   {
     "id": "ga-joke-homework",
@@ -1661,6 +2352,7 @@
       "It was a sandwich"
     ],
     "correctIndex": 2,
-    "banterHint": "Dessert was extra credit."
+    "banterHint": "Dessert was extra credit.",
+    "funny": true
   }
 ]

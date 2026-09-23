@@ -2,8 +2,8 @@
   "generation": "gen-alpha",
   "locale": "fr",
   "target": 150,
-  "held": 22,
-  "shortfall": 128,
+  "held": 27,
+  "shortfall": 123,
   "ageYear": 2026,
   "born": [
     2010,
@@ -247,6 +247,96 @@
       "banterHint": null
     },
     {
+      "id": "cq-e-alpha-cat",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hôte du quiz",
+      "prompt": "Comment appelle-t-on un chat qui présente le quiz ?",
+      "choices": [
+        "Un chat peureux",
+        "Le ron-ron en chef",
+        "Une sieste de chat",
+        "Un copieur"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Il retombe quand même sur ses pattes.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-alpha-backpack",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Belle journée",
+      "prompt": "Pourquoi le sac à dos avait-il l'air fier ?",
+      "choices": [
+        "Il a mangé les devoirs",
+        "Il a caché la carte",
+        "Il portait une bonne journée",
+        "Il a raté le bus"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Chaque livre a eu un coup de main.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-pencil",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Esprit d'équipe",
+      "prompt": "Pourquoi le crayon a-t-il rejoint l'équipe ?",
+      "choices": [
+        "Il a roulé plus loin",
+        "Il s'est caché dans la trousse",
+        "Il a perdu son capuchon",
+        "Il savait attirer la foule"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La gomme veillait sur lui.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-bookmark",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Toujours là",
+      "prompt": "Pourquoi le marque-page restait-il calme dans l'histoire ?",
+      "choices": [
+        "Il gardait toujours sa place",
+        "Il a déchiré la page",
+        "Il a sauté la fin",
+        "Il a caché le titre"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Chapitre après chapitre, toujours gentil.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-alpha-frog",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Scène ouverte",
+      "prompt": "De quelle couleur est une grenouille le soir du micro ouvert ?",
+      "choices": [
+        "Violet",
+        "Vert",
+        "Argent",
+        "Orange"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La salle est restée croassante.",
+      "funny": true,
+      "structure": "colour"
+    },
+    {
       "id": "ga-joke-clock",
       "tier": "easy",
       "topic": "culture",
@@ -260,7 +350,8 @@
         "Un cactus"
       ],
       "correctIndex": 0,
-      "banterHint": "Elle peut quand même faire coucou."
+      "banterHint": "Elle peut quand même faire coucou.",
+      "funny": true
     },
     {
       "id": "ga-joke-bear",
@@ -276,7 +367,8 @@
         "Un koala"
       ],
       "correctIndex": 0,
-      "banterHint": "Toujours collant. Bien plus gentil."
+      "banterHint": "Toujours collant. Bien plus gentil.",
+      "funny": true
     },
     {
       "id": "ga-joke-math",
@@ -292,7 +384,8 @@
         "Il a perdu sa couverture"
       ],
       "correctIndex": 0,
-      "banterHint": "Le marque-page lui a fait un câlin."
+      "banterHint": "Le marque-page lui a fait un câlin.",
+      "funny": true
     },
     {
       "id": "ga-joke-ocean",
@@ -308,7 +401,8 @@
         "À la pêche"
       ],
       "correctIndex": 0,
-      "banterHint": "La plage a répondu d'un signe."
+      "banterHint": "La plage a répondu d'un signe.",
+      "funny": true
     },
     {
       "id": "ga-joke-flamingo",
@@ -324,7 +418,8 @@
         "Une meute"
       ],
       "correctIndex": 2,
-      "banterHint": "Ils étaient habillés pour l'occasion."
+      "banterHint": "Ils étaient habillés pour l'occasion.",
+      "funny": true
     },
     {
       "id": "ga-joke-octopus",
@@ -340,7 +435,8 @@
         "Trois"
       ],
       "correctIndex": 3,
-      "banterHint": "Huit bras, trois cœurs, aucune hâte."
+      "banterHint": "Huit bras, trois cœurs, aucune hâte.",
+      "funny": true
     },
     {
       "id": "ga-joke-scarecrow",
@@ -356,7 +452,8 @@
         "Il était le meilleur dans son champ"
       ],
       "correctIndex": 3,
-      "banterHint": "Les corbeaux ont ouvert un fan-club."
+      "banterHint": "Les corbeaux ont ouvert un fan-club.",
+      "funny": true
     },
     {
       "id": "ga-joke-homework",
@@ -372,7 +469,8 @@
         "C'était un sandwich"
       ],
       "correctIndex": 2,
-      "banterHint": "Le dessert comptait en bonus."
+      "banterHint": "Le dessert comptait en bonus.",
+      "funny": true
     }
   ]
 }

@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "de",
   "target": 150,
-  "held": 15,
-  "shortfall": 135,
+  "held": 21,
+  "shortfall": 129,
   "ageYear": 2026,
   "born": [
     1997,
@@ -271,6 +271,105 @@
       ],
       "correctIndex": 0,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-genz-gif",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Kleine Schleife",
+      "prompt": "Wofür steht GIF?",
+      "choices": [
+        "Global Image File",
+        "General Icon Folder",
+        "Grouped Internet Frame",
+        "Graphics Interchange Format"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Ein Bild, das nicht stillsitzen will."
+    },
+    {
+      "id": "cq-e-genz-vr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Kopfhörerbrille",
+      "prompt": "Wofür steht VR bei einem Headset?",
+      "choices": [
+        "Visual Radio",
+        "Vector Render",
+        "Virtual Reality",
+        "Video Relay"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Der Raum bleibt. Die Sicht nicht."
+    },
+    {
+      "id": "cq-h-genz-bytedance",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Kurzvideo",
+      "prompt": "Welche Firma besitzt TikTok?",
+      "choices": [
+        "Snap",
+        "Meta",
+        "Google",
+        "ByteDance"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die App ist der berühmte Teil. Die Firma ist leiser."
+    },
+    {
+      "id": "cq-h-genz-hashtag",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Raute",
+      "prompt": "Wie heißt das Zeichen #, wenn es Beiträge in sozialen Medien bündelt?",
+      "choices": [
+        "Ein Hashtag",
+        "Ein Caret",
+        "Eine Tilde",
+        "Ein Sternchen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Ein Zeichen, und die Beiträge finden sich."
+    },
+    {
+      "id": "cq-e-genz-emoji",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Ein Auge",
+      "prompt": "Warum zwinkerte das Emoji?",
+      "choices": [
+        "Es verlor das andere Auge",
+        "Es versteckte die Tastatur",
+        "Es verpasste den Chat",
+        "Es hatte etwas zu sagen"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Nachricht kam trotzdem freundlich an.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-genz-spotify",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Logo-Kreis",
+      "prompt": "Welche Farbe hat der Kreis im Spotify-Logo?",
+      "choices": [
+        "Blau",
+        "Rot",
+        "Gelb",
+        "Grün"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Schallwellen liegen darauf.",
+      "structure": "colour"
     }
   ]
 }

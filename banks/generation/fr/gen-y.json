@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "fr",
   "target": 150,
-  "held": 15,
-  "shortfall": 135,
+  "held": 21,
+  "shortfall": 129,
   "ageYear": 2026,
   "born": [
     1981,
@@ -275,6 +275,105 @@
       ],
       "correctIndex": 0,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-geny-wiki",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Livre ouvert",
+      "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie à plusieurs ?",
+      "choices": [
+        "Wikipédia",
+        "AltaVista",
+        "GeoCities",
+        "MySpace"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le bouton modifier est toute l'idée."
+    },
+    {
+      "id": "cq-e-geny-sms",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Note courte",
+      "prompt": "Que signifie SMS ?",
+      "choices": [
+        "Short Message Service",
+        "Standard Mobile Signal",
+        "Simple Mail Switch",
+        "Secure Media Stream"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Cent soixante caractères, et beaucoup de rendez-vous."
+    },
+    {
+      "id": "cq-h-geny-iphone",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Ordinateur de poche",
+      "prompt": "Quelle société a sorti le premier iPhone en 2007 ?",
+      "choices": [
+        "Apple",
+        "BlackBerry",
+        "Nokia",
+        "Motorola"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le clavier est passé sur la vitre."
+    },
+    {
+      "id": "cq-h-geny-facebook",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Inscription ouverte",
+      "prompt": "En quelle année Facebook a-t-il ouvert l'inscription au-delà des écoles, à toute personne de 13 ans ou plus ?",
+      "choices": [
+        "2005",
+        "2006",
+        "2008",
+        "2004"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La porte du campus est tombée en septembre."
+    },
+    {
+      "id": "cq-h-geny-inbox",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Toujours calme",
+      "prompt": "Pourquoi la boîte de réception est-elle restée calme ?",
+      "choices": [
+        "Elle a effacé le matin",
+        "Elle savait garder ses lettres",
+        "Elle a raté le bouton envoyer",
+        "Elle a caché le mot de passe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La pile non lue est restée polie.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-geny-ocean",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Écrin",
+      "prompt": "De quelle couleur est le Cœur de l'océan dans le film Titanic ?",
+      "choices": [
+        "Vert",
+        "Jaune",
+        "Rouge",
+        "Bleu"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le collier a gardé cette seule teinte.",
+      "structure": "colour"
     }
   ]
 }

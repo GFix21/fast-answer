@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "de",
   "target": 150,
-  "held": 15,
-  "shortfall": 135,
+  "held": 21,
+  "shortfall": 129,
   "ageYear": 2026,
   "born": [
     1965,
@@ -275,6 +275,105 @@
       ],
       "correctIndex": 3,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-genx-gameboy",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Taschenbildschirm",
+      "prompt": "Welche Handheld-Konsole brachte Nintendo 1989 heraus?",
+      "choices": [
+        "Lynx",
+        "PSP",
+        "Game Gear",
+        "Game Boy"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Tetris reiste in vielen Taschen mit."
+    },
+    {
+      "id": "cq-e-genx-pdf",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Seite ohne Papier",
+      "prompt": "Wofür steht PDF?",
+      "choices": [
+        "Personal Disk Folder",
+        "Public Data File",
+        "Printed Document Form",
+        "Portable Document Format"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Seite hat reisen gelernt."
+    },
+    {
+      "id": "cq-h-genx-ram",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Kurzes Gedächtnis",
+      "prompt": "Wofür steht RAM in einem Computer?",
+      "choices": [
+        "Read And Modify",
+        "Rapid Archive Module",
+        "Random Access Memory",
+        "Remote Access Mainframe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Schneller Speicher, und er vergisst ohne Strom."
+    },
+    {
+      "id": "cq-h-genx-cd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silberner Kreis",
+      "prompt": "Wofür steht CD beim Musikformat der frühen 1980er?",
+      "choices": [
+        "Cassette Deck",
+        "Catalog Download",
+        "Compact Disc",
+        "Crystal Drive"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Ein kleiner Spiegel, der ein Album hielt."
+    },
+    {
+      "id": "cq-e-genx-cassette",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Aufgedreht",
+      "prompt": "Warum war die Kassette schüchtern?",
+      "choices": [
+        "Sie verlor den Bleistift",
+        "Sie war etwas aufgedreht",
+        "Sie übersprang den Refrain",
+        "Sie versteckte sich im Walkman"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Seite B wurde trotzdem gehört.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-genx-blinky",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Geisterdienst",
+      "prompt": "Welche Farbe hat Blinky, der Pac-Man-Geist?",
+      "choices": [
+        "Rosa",
+        "Orange",
+        "Cyan",
+        "Rot"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die anderen drei tragen den Rest.",
+      "structure": "colour"
     }
   ]
 }

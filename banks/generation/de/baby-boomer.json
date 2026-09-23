@@ -2,8 +2,8 @@
   "generation": "baby-boomer",
   "locale": "de",
   "target": 150,
-  "held": 14,
-  "shortfall": 136,
+  "held": 20,
+  "shortfall": 130,
   "ageYear": 2026,
   "born": [
     1946,
@@ -263,6 +263,105 @@
       ],
       "correctIndex": 3,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-boomer-gaye",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Soul-Stunde",
+      "prompt": "Wer veröffentlichte 1971 das Album What's Going On?",
+      "choices": [
+        "Sam Cooke",
+        "Stevie Wonder",
+        "Marvin Gaye",
+        "Otis Redding"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Fragen auf der Platte gelten noch."
+    },
+    {
+      "id": "cq-e-boomer-skylab",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Werkstatt im Orbit",
+      "prompt": "Wie hieß die erste Raumstation der NASA, gestartet 1973?",
+      "choices": [
+        "Saljut",
+        "Freedom",
+        "Skylab",
+        "Mir"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Eine Werkstatt mit sehr langem Arbeitsweg."
+    },
+    {
+      "id": "cq-h-boomer-sesame",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Straßenpremiere",
+      "prompt": "In welchem Jahr lief Sesame Street zum ersten Mal in den USA?",
+      "choices": [
+        "1974",
+        "1965",
+        "1969",
+        "1979"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Straße öffnete gegen Ende der Sechziger."
+    },
+    {
+      "id": "cq-h-boomer-earthday",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Erster grüner Tag",
+      "prompt": "In welchem Jahr fand der erste Earth Day statt?",
+      "choices": [
+        "1962",
+        "1970",
+        "1977",
+        "1984"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Planet bekam ein Datum im Kalender."
+    },
+    {
+      "id": "cq-h-boomer-record",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Noch eine Runde",
+      "prompt": "Warum blieb die Schallplatte mit dem Spieler befreundet?",
+      "choices": [
+        "Sie versteckte sich in der Hülle",
+        "Sie verlor das Etikett",
+        "Sie kam immer wieder herum",
+        "Sie übersprang den Refrain"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Das nächste Lied kam trotzdem dran.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-boomer-submarine",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Unter dem Meer",
+      "prompt": "Welche Farbe hat das U-Boot im Beatles-Lied?",
+      "choices": [
+        "Blau",
+        "Grün",
+        "Gelb",
+        "Rot"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Der Titel verrät schon die Farbe.",
+      "structure": "colour"
     }
   ]
 }

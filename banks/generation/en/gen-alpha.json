@@ -2,8 +2,8 @@
   "generation": "gen-alpha",
   "locale": "en",
   "target": 150,
-  "held": 22,
-  "shortfall": 128,
+  "held": 27,
+  "shortfall": 123,
   "ageYear": 2026,
   "born": [
     2010,
@@ -247,6 +247,96 @@
       "banterHint": null
     },
     {
+      "id": "cq-e-alpha-cat",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Quiz Host",
+      "prompt": "What do you call a cat who hosts the quiz?",
+      "choices": [
+        "A scaredy cat",
+        "The purr-son in charge",
+        "A catnap",
+        "A copycat"
+      ],
+      "correctIndex": 1,
+      "banterHint": "It still lands on its feet.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-alpha-backpack",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Good Day",
+      "prompt": "Why did the backpack look proud?",
+      "choices": [
+        "It ate the homework",
+        "It hid the map",
+        "It was carrying a good day",
+        "It missed the bus"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Every book got a lift.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-pencil",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Team Player",
+      "prompt": "Why did the pencil join the team?",
+      "choices": [
+        "It rolled away",
+        "It hid in the case",
+        "It lost its cap",
+        "It could draw a crowd"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The eraser had its back.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-bookmark",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Still Here",
+      "prompt": "Why did the bookmark stay calm in the story?",
+      "choices": [
+        "It always held its place",
+        "It tore the page",
+        "It skipped the ending",
+        "It hid the title"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Chapter after chapter, still kind.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-alpha-frog",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Open Mic",
+      "prompt": "What colour is a frog on open-mic night?",
+      "choices": [
+        "Purple",
+        "Green",
+        "Silver",
+        "Orange"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The room stayed ribbiting.",
+      "funny": true,
+      "structure": "colour"
+    },
+    {
       "id": "ga-joke-clock",
       "tier": "easy",
       "topic": "culture",
@@ -260,7 +350,8 @@
         "A statue"
       ],
       "correctIndex": 0,
-      "banterHint": "It can still wave hello."
+      "banterHint": "It can still wave hello.",
+      "funny": true
     },
     {
       "id": "ga-joke-bear",
@@ -276,7 +367,8 @@
         "A koala"
       ],
       "correctIndex": 0,
-      "banterHint": "Still sticky. Much friendlier."
+      "banterHint": "Still sticky. Much friendlier.",
+      "funny": true
     },
     {
       "id": "ga-joke-math",
@@ -292,7 +384,8 @@
         "It lost its cover"
       ],
       "correctIndex": 0,
-      "banterHint": "The bookmark offered a hug."
+      "banterHint": "The bookmark offered a hug.",
+      "funny": true
     },
     {
       "id": "ga-joke-ocean",
@@ -308,7 +401,8 @@
         "Go fish"
       ],
       "correctIndex": 0,
-      "banterHint": "The beach waved back."
+      "banterHint": "The beach waved back.",
+      "funny": true
     },
     {
       "id": "ga-joke-flamingo",
@@ -324,7 +418,8 @@
         "A herd"
       ],
       "correctIndex": 2,
-      "banterHint": "They showed up dressed for it."
+      "banterHint": "They showed up dressed for it.",
+      "funny": true
     },
     {
       "id": "ga-joke-octopus",
@@ -340,7 +435,8 @@
         "Three"
       ],
       "correctIndex": 3,
-      "banterHint": "Eight arms, three hearts, zero hurry."
+      "banterHint": "Eight arms, three hearts, zero hurry.",
+      "funny": true
     },
     {
       "id": "ga-joke-scarecrow",
@@ -356,7 +452,8 @@
         "He was outstanding in his field"
       ],
       "correctIndex": 3,
-      "banterHint": "The crows started a fan club."
+      "banterHint": "The crows started a fan club.",
+      "funny": true
     },
     {
       "id": "ga-joke-homework",
@@ -372,7 +469,8 @@
         "It was a sandwich"
       ],
       "correctIndex": 2,
-      "banterHint": "Dessert was extra credit."
+      "banterHint": "Dessert was extra credit.",
+      "funny": true
     }
   ]
 }

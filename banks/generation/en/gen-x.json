@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "en",
   "target": 150,
-  "held": 15,
-  "shortfall": 135,
+  "held": 21,
+  "shortfall": 129,
   "ageYear": 2026,
   "born": [
     1965,
@@ -275,6 +275,105 @@
       ],
       "correctIndex": 3,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-genx-gameboy",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Pocket Screen",
+      "prompt": "Which handheld console did Nintendo release in 1989?",
+      "choices": [
+        "Lynx",
+        "PSP",
+        "Game Gear",
+        "Game Boy"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Tetris rode along in a lot of pockets."
+    },
+    {
+      "id": "cq-e-genx-pdf",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Paperless Page",
+      "prompt": "What does PDF stand for?",
+      "choices": [
+        "Personal Disk Folder",
+        "Public Data File",
+        "Printed Document Form",
+        "Portable Document Format"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The page learned to travel."
+    },
+    {
+      "id": "cq-h-genx-ram",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Short Memory",
+      "prompt": "What does RAM stand for in a computer?",
+      "choices": [
+        "Read And Modify",
+        "Rapid Archive Module",
+        "Random Access Memory",
+        "Remote Access Mainframe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Fast memory, and it forgets when the power goes."
+    },
+    {
+      "id": "cq-h-genx-cd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silver Circle",
+      "prompt": "What does CD stand for in the music format introduced in the early 1980s?",
+      "choices": [
+        "Cassette Deck",
+        "Catalog Download",
+        "Compact Disc",
+        "Crystal Drive"
+      ],
+      "correctIndex": 2,
+      "banterHint": "A small mirror that held an album."
+    },
+    {
+      "id": "cq-e-genx-cassette",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Wound Up",
+      "prompt": "Why did the cassette feel shy?",
+      "choices": [
+        "It lost the pencil",
+        "It was a little wound up",
+        "It skipped the chorus",
+        "It hid in the walkman"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Side B still got a listen.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-genx-blinky",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Ghost Duty",
+      "prompt": "What colour is Blinky, the Pac-Man ghost?",
+      "choices": [
+        "Pink",
+        "Orange",
+        "Cyan",
+        "Red"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The other three ghosts wear the rest.",
+      "structure": "colour"
     }
   ]
 }

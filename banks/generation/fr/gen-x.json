@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "fr",
   "target": 150,
-  "held": 15,
-  "shortfall": 135,
+  "held": 21,
+  "shortfall": 129,
   "ageYear": 2026,
   "born": [
     1965,
@@ -275,6 +275,105 @@
       ],
       "correctIndex": 3,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-genx-gameboy",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Écran de poche",
+      "prompt": "Quelle console portable Nintendo a-t-elle sortie en 1989 ?",
+      "choices": [
+        "Lynx",
+        "PSP",
+        "Game Gear",
+        "Game Boy"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Tetris a voyagé dans beaucoup de poches."
+    },
+    {
+      "id": "cq-e-genx-pdf",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Page sans papier",
+      "prompt": "Que signifie PDF ?",
+      "choices": [
+        "Personal Disk Folder",
+        "Public Data File",
+        "Printed Document Form",
+        "Portable Document Format"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La page a appris à voyager."
+    },
+    {
+      "id": "cq-h-genx-ram",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Mémoire courte",
+      "prompt": "Que signifie RAM dans un ordinateur ?",
+      "choices": [
+        "Read And Modify",
+        "Rapid Archive Module",
+        "Random Access Memory",
+        "Remote Access Mainframe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Une mémoire rapide, qui oublie quand le courant coupe."
+    },
+    {
+      "id": "cq-h-genx-cd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Cercle d'argent",
+      "prompt": "Que signifie CD dans le format musical lancé au début des années 1980 ?",
+      "choices": [
+        "Cassette Deck",
+        "Catalog Download",
+        "Compact Disc",
+        "Crystal Drive"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Un petit miroir qui tenait un album."
+    },
+    {
+      "id": "cq-e-genx-cassette",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Un peu tendue",
+      "prompt": "Pourquoi la cassette se sentait-elle timide ?",
+      "choices": [
+        "Elle a perdu le crayon",
+        "Elle était un peu tendue",
+        "Elle a sauté le refrain",
+        "Elle s'est cachée dans le baladeur"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La face B a quand même eu son écoute.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-genx-blinky",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Service fantôme",
+      "prompt": "De quelle couleur est Blinky, le fantôme de Pac-Man ?",
+      "choices": [
+        "Rose",
+        "Orange",
+        "Cyan",
+        "Rouge"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les trois autres portent le reste.",
+      "structure": "colour"
     }
   ]
 }

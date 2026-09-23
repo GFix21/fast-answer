@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "de",
   "target": 150,
-  "held": 14,
-  "shortfall": 136,
+  "held": 20,
+  "shortfall": 130,
   "ageYear": 2026,
   "born": [
     1928,
@@ -261,6 +261,105 @@
       ],
       "correctIndex": 3,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-silent-roar",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Jazzjahrzehnt",
+      "prompt": "Welchen Spitznamen tragen die 1920er-Jahre in den USA?",
+      "choices": [
+        "Die wilden Zwanziger",
+        "Das Raumfahrtzeitalter",
+        "Die Depressionsjahre",
+        "Das vergoldete Zeitalter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Bands waren laut. Der Name blieb."
+    },
+    {
+      "id": "cq-e-silent-vote",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Wahlurne",
+      "prompt": "Welche Ergänzung der US-Verfassung von 1920 erkennt das Wahlrecht der Frauen an?",
+      "choices": [
+        "Der 19. Zusatzartikel",
+        "Der 26. Zusatzartikel",
+        "Der 13. Zusatzartikel",
+        "Der 15. Zusatzartikel"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Schlange vor dem Wahllokal wurde absichtlich länger."
+    },
+    {
+      "id": "cq-h-silent-chamberlain",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "September 1939",
+      "prompt": "Wer war Premierminister des Vereinigten Königreichs, als Großbritannien 1939 Deutschland den Krieg erklärte?",
+      "choices": [
+        "Clement Attlee",
+        "Stanley Baldwin",
+        "Winston Churchill",
+        "Neville Chamberlain"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Churchill übernahm den Stuhl im Jahr darauf."
+    },
+    {
+      "id": "cq-h-silent-assembly",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Erste Sitzung",
+      "prompt": "In welcher Stadt hielt die UNO 1946 ihre erste Generalversammlung ab?",
+      "choices": [
+        "New York",
+        "Genf",
+        "Paris",
+        "London"
+      ],
+      "correctIndex": 3,
+      "banterHint": "New York wurde ein paar Jahre später der Sitz."
+    },
+    {
+      "id": "cq-e-silent-radio",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Am Fenster",
+      "prompt": "Warum saß das Radio am Fenster?",
+      "choices": [
+        "Es versteckte sich vor den Nachrichten",
+        "Es verlor die Skala",
+        "Es wollte Stille",
+        "Es wollte eine Welle fangen"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Das Lied kam trotzdem durch.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-silent-liberty",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Kupfermantel",
+      "prompt": "Welche Farbe hat die Freiheitsstatue heute?",
+      "choices": [
+        "Grau",
+        "Weiß",
+        "Gold",
+        "Grün"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Das Kupfer hat sich nach Jahren Wetter verändert.",
+      "structure": "colour"
     }
   ]
 }

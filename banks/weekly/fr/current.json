@@ -2315,6 +2315,1118 @@
         }
       ],
       "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-roar",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Décennie jazz",
+      "prompt": "Quel surnom donne-t-on aux années 1920 aux États-Unis ?",
+      "choices": [
+        "Les Années folles",
+        "L'Âge doré",
+        "Les années de crise",
+        "L'ère spatiale"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Les orchestres jouaient fort. Le surnom est resté.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Library of Congress — American history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — 1920s"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-vote",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Urne",
+      "prompt": "Quel amendement de la Constitution américaine, ratifié en 1920, a reconnu le droit de vote des femmes ?",
+      "choices": [
+        "Le 19e amendement",
+        "Le 15e amendement",
+        "Le 13e amendement",
+        "Le 26e amendement"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La file devant l'urne s'est allongée, exprès.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "National Archives — 19th Amendment"
+        },
+        {
+          "label": "Encyclopaedia Britannica — women's suffrage"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-silent-chamberlain",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Septembre 1939",
+      "prompt": "Qui était Premier ministre du Royaume-Uni lorsque la Grande-Bretagne a déclaré la guerre à l'Allemagne en 1939 ?",
+      "choices": [
+        "Neville Chamberlain",
+        "Winston Churchill",
+        "Clement Attlee",
+        "Stanley Baldwin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Churchill a pris le fauteuil l'année suivante.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "UK National Archives — 1939"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Neville Chamberlain"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-silent-assembly",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Première session",
+      "prompt": "Dans quelle ville l'ONU a-t-elle tenu sa première Assemblée générale en 1946 ?",
+      "choices": [
+        "Londres",
+        "New York",
+        "Genève",
+        "Paris"
+      ],
+      "correctIndex": 0,
+      "banterHint": "New York est devenu le siège quelques années plus tard.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "United Nations — General Assembly history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — United Nations"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-radio",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Près de la fenêtre",
+      "prompt": "Pourquoi la radio s'est-elle assise près de la fenêtre ?",
+      "choices": [
+        "Elle voulait capter une onde",
+        "Elle se cachait des nouvelles",
+        "Elle a perdu le cadran",
+        "Elle préférait le silence"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La chanson passait quand même.",
+      "funny": true,
+      "technique": "wordplay",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-liberty",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Manteau de cuivre",
+      "prompt": "De quelle couleur est la Statue de la Liberté aujourd'hui ?",
+      "choices": [
+        "Vert",
+        "Gris",
+        "Or",
+        "Blanc"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le cuivre a changé après des années de temps.",
+      "funny": false,
+      "technique": null,
+      "structure": "colour",
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "National Park Service — Statue of Liberty"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Statue of Liberty"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-boomer-gaye",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Heure soul",
+      "prompt": "Qui a sorti l'album What's Going On en 1971 ?",
+      "choices": [
+        "Stevie Wonder",
+        "Marvin Gaye",
+        "Otis Redding",
+        "Sam Cooke"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Les questions de ce disque tiennent encore.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Motown / album notes — What's Going On"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Marvin Gaye"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-boomer-skylab",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Atelier en orbite",
+      "prompt": "Comment s'appelait la première station spatiale de la NASA, lancée en 1973 ?",
+      "choices": [
+        "Mir",
+        "Saliout",
+        "Skylab",
+        "Freedom"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Un atelier avec un très long trajet.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Skylab"
+        },
+        {
+          "label": "Encyclopaedia Britannica — space stations"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-sesame",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Première dans la rue",
+      "prompt": "En quelle année Sesame Street a-t-il été diffusé pour la première fois aux États-Unis ?",
+      "choices": [
+        "1969",
+        "1965",
+        "1974",
+        "1979"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La rue a ouvert vers la fin des années soixante.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Sesame Workshop — history"
+        },
+        {
+          "label": "Library of Congress — television history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-earthday",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Premier jour vert",
+      "prompt": "En quelle année a eu lieu le premier Jour de la Terre ?",
+      "choices": [
+        "1962",
+        "1970",
+        "1977",
+        "1984"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La planète a eu une date au calendrier.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Earth Day Network — history"
+        },
+        {
+          "label": "U.S. EPA — Earth Day"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-record",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Encore un tour",
+      "prompt": "Pourquoi le disque est-il resté ami avec le tourne-disque ?",
+      "choices": [
+        "Il revenait toujours",
+        "Il se cachait dans la pochette",
+        "Il sautait le refrain",
+        "Il a perdu l'étiquette"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La chanson suivante a eu son tour.",
+      "funny": true,
+      "technique": "callback",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-boomer-submarine",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sous la mer",
+      "prompt": "De quelle couleur est le sous-marin dans la chanson des Beatles ?",
+      "choices": [
+        "Jaune",
+        "Bleu",
+        "Rouge",
+        "Vert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le titre donne déjà la peinture.",
+      "funny": false,
+      "technique": null,
+      "structure": "colour",
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — the Beatles"
+        },
+        {
+          "label": "Library of Congress — Yellow Submarine"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genx-gameboy",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Écran de poche",
+      "prompt": "Quelle console portable Nintendo a-t-elle sortie en 1989 ?",
+      "choices": [
+        "Game Boy",
+        "Game Gear",
+        "Lynx",
+        "PSP"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Tetris a voyagé dans beaucoup de poches.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Nintendo — Game Boy history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — video game consoles"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genx-pdf",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Page sans papier",
+      "prompt": "Que signifie PDF ?",
+      "choices": [
+        "Public Data File",
+        "Printed Document Form",
+        "Portable Document Format",
+        "Personal Disk Folder"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La page a appris à voyager.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Adobe — PDF history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — document formats"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-ram",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Mémoire courte",
+      "prompt": "Que signifie RAM dans un ordinateur ?",
+      "choices": [
+        "Read And Modify",
+        "Random Access Memory",
+        "Rapid Archive Module",
+        "Remote Access Mainframe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Une mémoire rapide, qui oublie quand le courant coupe.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Computer History Museum — memory"
+        },
+        {
+          "label": "Encyclopaedia Britannica — computer memory"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-cd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Cercle d'argent",
+      "prompt": "Que signifie CD dans le format musical lancé au début des années 1980 ?",
+      "choices": [
+        "Compact Disc",
+        "Cassette Deck",
+        "Crystal Drive",
+        "Catalog Download"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Un petit miroir qui tenait un album.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Philips / Sony — Compact Disc"
+        },
+        {
+          "label": "Encyclopaedia Britannica — compact disc"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genx-cassette",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Un peu tendue",
+      "prompt": "Pourquoi la cassette se sentait-elle timide ?",
+      "choices": [
+        "Elle était un peu tendue",
+        "Elle a perdu le crayon",
+        "Elle s'est cachée dans le baladeur",
+        "Elle a sauté le refrain"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La face B a quand même eu son écoute.",
+      "funny": true,
+      "technique": "wordplay",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-blinky",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Service fantôme",
+      "prompt": "De quelle couleur est Blinky, le fantôme de Pac-Man ?",
+      "choices": [
+        "Rouge",
+        "Rose",
+        "Cyan",
+        "Orange"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Les trois autres portent le reste.",
+      "funny": false,
+      "technique": null,
+      "structure": "colour",
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Bandai Namco — Pac-Man"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Pac-Man"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-geny-wiki",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Livre ouvert",
+      "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie à plusieurs ?",
+      "choices": [
+        "Wikipédia",
+        "MySpace",
+        "GeoCities",
+        "AltaVista"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le bouton modifier est toute l'idée.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Wikimedia Foundation — Wikipedia history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Wikipedia"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-geny-sms",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Note courte",
+      "prompt": "Que signifie SMS ?",
+      "choices": [
+        "Simple Mail Switch",
+        "Short Message Service",
+        "Secure Media Stream",
+        "Standard Mobile Signal"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Cent soixante caractères, et beaucoup de rendez-vous.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "GSM Association — SMS"
+        },
+        {
+          "label": "Encyclopaedia Britannica — text messaging"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-iphone",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Ordinateur de poche",
+      "prompt": "Quelle société a sorti le premier iPhone en 2007 ?",
+      "choices": [
+        "Apple",
+        "Nokia",
+        "BlackBerry",
+        "Motorola"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le clavier est passé sur la vitre.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Apple — iPhone announcement, 2007"
+        },
+        {
+          "label": "Encyclopaedia Britannica — smartphone"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-facebook",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Inscription ouverte",
+      "prompt": "En quelle année Facebook a-t-il ouvert l'inscription au-delà des écoles, à toute personne de 13 ans ou plus ?",
+      "choices": [
+        "2004",
+        "2005",
+        "2006",
+        "2008"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La porte du campus est tombée en septembre.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Meta — company history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Facebook"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-inbox",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Toujours calme",
+      "prompt": "Pourquoi la boîte de réception est-elle restée calme ?",
+      "choices": [
+        "Elle savait garder ses lettres",
+        "Elle a effacé le matin",
+        "Elle a caché le mot de passe",
+        "Elle a raté le bouton envoyer"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La pile non lue est restée polie.",
+      "funny": true,
+      "technique": "wordplay",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-ocean",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Écrin",
+      "prompt": "De quelle couleur est le Cœur de l'océan dans le film Titanic ?",
+      "choices": [
+        "Bleu",
+        "Vert",
+        "Rouge",
+        "Jaune"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le collier a gardé cette seule teinte.",
+      "funny": false,
+      "technique": null,
+      "structure": "colour",
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Paramount — Titanic (1997)"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Titanic, film"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-gif",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Petite boucle",
+      "prompt": "Que signifie GIF ?",
+      "choices": [
+        "Graphics Interchange Format",
+        "Global Image File",
+        "Grouped Internet Frame",
+        "General Icon Folder"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une image qui refuse de rester sage.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "CompuServe — GIF specification"
+        },
+        {
+          "label": "Encyclopaedia Britannica — GIF"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-vr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Casque",
+      "prompt": "Que signifie VR sur un casque ?",
+      "choices": [
+        "Video Relay",
+        "Virtual Reality",
+        "Visual Radio",
+        "Vector Render"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La pièce reste là. La vue, non.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IEEE — virtual reality overview"
+        },
+        {
+          "label": "Encyclopaedia Britannica — virtual reality"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genz-bytedance",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Vidéo courte",
+      "prompt": "Quelle société possède TikTok ?",
+      "choices": [
+        "Meta",
+        "Google",
+        "ByteDance",
+        "Snap"
+      ],
+      "correctIndex": 2,
+      "banterHint": "L'appli est la partie célèbre. La société, moins.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "ByteDance — company overview"
+        },
+        {
+          "label": "Encyclopaedia Britannica — TikTok"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genz-hashtag",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dièse",
+      "prompt": "Comment appelle-t-on le symbole # quand il regroupe des posts sur les réseaux sociaux ?",
+      "choices": [
+        "Un hashtag",
+        "Un astérisque",
+        "Un caret",
+        "Un tilde"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une marque, et les posts se retrouvent.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Oxford English Dictionary — hashtag"
+        },
+        {
+          "label": "Encyclopaedia Britannica — social media"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-emoji",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Un œil",
+      "prompt": "Pourquoi l'emoji a-t-il fait un clin d'œil ?",
+      "choices": [
+        "Il avait quelque chose à dire",
+        "Il a perdu l'autre œil",
+        "Il a caché le clavier",
+        "Il a raté la discussion"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le message est quand même arrivé gentiment.",
+      "funny": true,
+      "technique": "misdirection",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-spotify",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Cercle du logo",
+      "prompt": "De quelle couleur est le cercle du logo Spotify ?",
+      "choices": [
+        "Vert",
+        "Bleu",
+        "Rouge",
+        "Jaune"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Les ondes sonores sont posées dessus.",
+      "funny": false,
+      "technique": null,
+      "structure": "colour",
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Spotify — brand"
+        },
+        {
+          "label": "Spotify Newsroom — company"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-alpha-cat",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hôte du quiz",
+      "prompt": "Comment appelle-t-on un chat qui présente le quiz ?",
+      "choices": [
+        "Le ron-ron en chef",
+        "Un chat peureux",
+        "Un copieur",
+        "Une sieste de chat"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Il retombe quand même sur ses pattes.",
+      "funny": true,
+      "technique": "wordplay",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-alpha-backpack",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Belle journée",
+      "prompt": "Pourquoi le sac à dos avait-il l'air fier ?",
+      "choices": [
+        "Il portait une bonne journée",
+        "Il a mangé les devoirs",
+        "Il a raté le bus",
+        "Il a caché la carte"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Chaque livre a eu un coup de main.",
+      "funny": true,
+      "technique": "misdirection",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-alpha-pencil",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Esprit d'équipe",
+      "prompt": "Pourquoi le crayon a-t-il rejoint l'équipe ?",
+      "choices": [
+        "Il savait attirer la foule",
+        "Il a roulé plus loin",
+        "Il s'est caché dans la trousse",
+        "Il a perdu son capuchon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La gomme veillait sur lui.",
+      "funny": true,
+      "technique": "wordplay",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-alpha-bookmark",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Toujours là",
+      "prompt": "Pourquoi le marque-page restait-il calme dans l'histoire ?",
+      "choices": [
+        "Il gardait toujours sa place",
+        "Il a déchiré la page",
+        "Il a sauté la fin",
+        "Il a caché le titre"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Chapitre après chapitre, toujours gentil.",
+      "funny": true,
+      "technique": "callback",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-alpha-frog",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Scène ouverte",
+      "prompt": "De quelle couleur est une grenouille le soir du micro ouvert ?",
+      "choices": [
+        "Vert",
+        "Violet",
+        "Orange",
+        "Argent"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La salle est restée croassante.",
+      "funny": true,
+      "technique": "misdirection",
+      "structure": "colour",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-multi-guitar",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Six cordes",
+      "prompt": "Combien de cordes a une guitare standard ?",
+      "choices": [
+        "Quatre",
+        "Six",
+        "Huit",
+        "Douze"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Les guitares à douze cordes sont les cousines plus bruyantes.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — guitar"
+        },
+        {
+          "label": "Metropolitan Museum — string instruments"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-multi-boil",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Bouilloire",
+      "prompt": "Quel est le point d'ébullition de l'eau au niveau de la mer, en Celsius ?",
+      "choices": [
+        "100",
+        "90",
+        "80",
+        "120"
+      ],
+      "correctIndex": 0,
+      "banterHint": "En montagne, la bouilloire finit un peu plus tôt.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NIST — water properties"
+        },
+        {
+          "label": "Encyclopaedia Britannica — boiling point"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-photo",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Travail vert",
+      "prompt": "Quel gaz les plantes absorbent-elles pendant la photosynthèse ?",
+      "choices": [
+        "L'oxygène",
+        "L'azote",
+        "Le dioxyde de carbone",
+        "L'hélium"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Elles rendent l'oxygène à la pièce.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — photosynthesis"
+        },
+        {
+          "label": "NASA Earth Observatory — carbon cycle"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-pitch",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Sur le terrain",
+      "prompt": "Combien de joueurs d'une équipe de football sont sur le terrain en même temps ?",
+      "choices": [
+        "9",
+        "11",
+        "13",
+        "15"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Le gardien compte parmi eux.",
+      "funny": false,
+      "technique": null,
+      "structure": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "FIFA — laws of the game"
+        },
+        {
+          "label": "Encyclopaedia Britannica — football"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-compass",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Plein nord",
+      "prompt": "Pourquoi la boussole a-t-elle rejoint le quiz ?",
+      "choices": [
+        "Elle voulait trouver ses repères",
+        "Elle a caché la carte",
+        "Elle a perdu l'aiguille",
+        "Elle a sauté le sentier"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le nord est resté une direction gentille.",
+      "funny": true,
+      "technique": "misdirection",
+      "structure": "joke",
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-eclipse",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Teinte de nuit",
+      "prompt": "De quelle couleur est la Lune pendant une éclipse lunaire totale ?",
+      "choices": [
+        "Rouge",
+        "Bleu",
+        "Vert",
+        "Blanc"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'ombre de la Terre prête cette teinte.",
+      "funny": false,
+      "technique": null,
+      "structure": "colour",
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — lunar eclipse"
+        },
+        {
+          "label": "Encyclopaedia Britannica — eclipse"
+        }
+      ],
+      "status": "pending"
     }
   ],
   "locale": "fr",

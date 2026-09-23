@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "de",
   "target": 150,
-  "held": 9,
-  "shortfall": 141,
+  "held": 15,
+  "shortfall": 135,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -163,6 +163,105 @@
       ],
       "correctIndex": 1,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-multi-guitar",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Sechs Saiten",
+      "prompt": "Wie viele Saiten hat eine gewöhnliche Gitarre?",
+      "choices": [
+        "Vier",
+        "Sechs",
+        "Acht",
+        "Zwölf"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Zwölfsaiter sind die lauteren Verwandten."
+    },
+    {
+      "id": "cq-e-multi-boil",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Kessel",
+      "prompt": "Wie hoch ist der Siedepunkt von Wasser auf Meereshöhe, in Celsius?",
+      "choices": [
+        "100",
+        "90",
+        "80",
+        "120"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Auf dem Berg ist der Kessel etwas früher fertig."
+    },
+    {
+      "id": "cq-h-multi-photo",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Grüne Arbeit",
+      "prompt": "Welches Gas nehmen Pflanzen bei der Fotosynthese auf?",
+      "choices": [
+        "Stickstoff",
+        "Helium",
+        "Kohlenstoffdioxid",
+        "Sauerstoff"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Sauerstoff geben sie dem Raum zurück."
+    },
+    {
+      "id": "cq-h-multi-pitch",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Auf dem Platz",
+      "prompt": "Wie viele Spieler einer Fußballmannschaft stehen gleichzeitig auf dem Feld?",
+      "choices": [
+        "11",
+        "15",
+        "9",
+        "13"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Torwart zählt mit."
+    },
+    {
+      "id": "cq-h-multi-compass",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Kurs Nord",
+      "prompt": "Warum trat der Kompass dem Quiz bei?",
+      "choices": [
+        "Er versteckte die Karte",
+        "Er übersprang den Weg",
+        "Er verlor die Nadel",
+        "Er wollte sich orientieren"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Norden blieb eine freundliche Richtung.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-multi-eclipse",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Nachtton",
+      "prompt": "Welche Farbe hat der Mond während einer totalen Mondfinsternis?",
+      "choices": [
+        "Rot",
+        "Blau",
+        "Grün",
+        "Weiß"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Schatten der Erde leiht diesen Ton.",
+      "structure": "colour"
     }
   ]
 }

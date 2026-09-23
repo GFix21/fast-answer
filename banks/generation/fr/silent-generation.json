@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "fr",
   "target": 150,
-  "held": 14,
-  "shortfall": 136,
+  "held": 20,
+  "shortfall": 130,
   "ageYear": 2026,
   "born": [
     1928,
@@ -261,6 +261,105 @@
       ],
       "correctIndex": 3,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-silent-roar",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Décennie jazz",
+      "prompt": "Quel surnom donne-t-on aux années 1920 aux États-Unis ?",
+      "choices": [
+        "Les Années folles",
+        "L'ère spatiale",
+        "Les années de crise",
+        "L'Âge doré"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Les orchestres jouaient fort. Le surnom est resté."
+    },
+    {
+      "id": "cq-e-silent-vote",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Urne",
+      "prompt": "Quel amendement de la Constitution américaine, ratifié en 1920, a reconnu le droit de vote des femmes ?",
+      "choices": [
+        "Le 19e amendement",
+        "Le 26e amendement",
+        "Le 13e amendement",
+        "Le 15e amendement"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La file devant l'urne s'est allongée, exprès."
+    },
+    {
+      "id": "cq-h-silent-chamberlain",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Septembre 1939",
+      "prompt": "Qui était Premier ministre du Royaume-Uni lorsque la Grande-Bretagne a déclaré la guerre à l'Allemagne en 1939 ?",
+      "choices": [
+        "Clement Attlee",
+        "Stanley Baldwin",
+        "Winston Churchill",
+        "Neville Chamberlain"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Churchill a pris le fauteuil l'année suivante."
+    },
+    {
+      "id": "cq-h-silent-assembly",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Première session",
+      "prompt": "Dans quelle ville l'ONU a-t-elle tenu sa première Assemblée générale en 1946 ?",
+      "choices": [
+        "New York",
+        "Genève",
+        "Paris",
+        "Londres"
+      ],
+      "correctIndex": 3,
+      "banterHint": "New York est devenu le siège quelques années plus tard."
+    },
+    {
+      "id": "cq-e-silent-radio",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Près de la fenêtre",
+      "prompt": "Pourquoi la radio s'est-elle assise près de la fenêtre ?",
+      "choices": [
+        "Elle se cachait des nouvelles",
+        "Elle a perdu le cadran",
+        "Elle préférait le silence",
+        "Elle voulait capter une onde"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La chanson passait quand même.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-silent-liberty",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Manteau de cuivre",
+      "prompt": "De quelle couleur est la Statue de la Liberté aujourd'hui ?",
+      "choices": [
+        "Gris",
+        "Blanc",
+        "Or",
+        "Vert"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le cuivre a changé après des années de temps.",
+      "structure": "colour"
     }
   ]
 }

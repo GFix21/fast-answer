@@ -1536,6 +1536,690 @@
     "banterHint": null
   },
   {
+    "id": "cq-e-silent-roar",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Décennie jazz",
+    "prompt": "Quel surnom donne-t-on aux années 1920 aux États-Unis ?",
+    "choices": [
+      "Les Années folles",
+      "L'ère spatiale",
+      "Les années de crise",
+      "L'Âge doré"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Les orchestres jouaient fort. Le surnom est resté."
+  },
+  {
+    "id": "cq-e-silent-vote",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Urne",
+    "prompt": "Quel amendement de la Constitution américaine, ratifié en 1920, a reconnu le droit de vote des femmes ?",
+    "choices": [
+      "Le 19e amendement",
+      "Le 26e amendement",
+      "Le 13e amendement",
+      "Le 15e amendement"
+    ],
+    "correctIndex": 0,
+    "banterHint": "La file devant l'urne s'est allongée, exprès."
+  },
+  {
+    "id": "cq-h-silent-chamberlain",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Septembre 1939",
+    "prompt": "Qui était Premier ministre du Royaume-Uni lorsque la Grande-Bretagne a déclaré la guerre à l'Allemagne en 1939 ?",
+    "choices": [
+      "Clement Attlee",
+      "Stanley Baldwin",
+      "Winston Churchill",
+      "Neville Chamberlain"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Churchill a pris le fauteuil l'année suivante."
+  },
+  {
+    "id": "cq-h-silent-assembly",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Première session",
+    "prompt": "Dans quelle ville l'ONU a-t-elle tenu sa première Assemblée générale en 1946 ?",
+    "choices": [
+      "New York",
+      "Genève",
+      "Paris",
+      "Londres"
+    ],
+    "correctIndex": 3,
+    "banterHint": "New York est devenu le siège quelques années plus tard."
+  },
+  {
+    "id": "cq-e-silent-radio",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Près de la fenêtre",
+    "prompt": "Pourquoi la radio s'est-elle assise près de la fenêtre ?",
+    "choices": [
+      "Elle se cachait des nouvelles",
+      "Elle a perdu le cadran",
+      "Elle préférait le silence",
+      "Elle voulait capter une onde"
+    ],
+    "correctIndex": 3,
+    "banterHint": "La chanson passait quand même.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-silent-liberty",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Manteau de cuivre",
+    "prompt": "De quelle couleur est la Statue de la Liberté aujourd'hui ?",
+    "choices": [
+      "Gris",
+      "Blanc",
+      "Or",
+      "Vert"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Le cuivre a changé après des années de temps.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-boomer-gaye",
+    "tier": "easy",
+    "topic": "music",
+    "generation": "baby-boomer",
+    "categoryTitle": "Heure soul",
+    "prompt": "Qui a sorti l'album What's Going On en 1971 ?",
+    "choices": [
+      "Sam Cooke",
+      "Stevie Wonder",
+      "Marvin Gaye",
+      "Otis Redding"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Les questions de ce disque tiennent encore."
+  },
+  {
+    "id": "cq-e-boomer-skylab",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "Atelier en orbite",
+    "prompt": "Comment s'appelait la première station spatiale de la NASA, lancée en 1973 ?",
+    "choices": [
+      "Saliout",
+      "Freedom",
+      "Skylab",
+      "Mir"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Un atelier avec un très long trajet."
+  },
+  {
+    "id": "cq-h-boomer-sesame",
+    "tier": "hard",
+    "topic": "film-tv",
+    "generation": "baby-boomer",
+    "categoryTitle": "Première dans la rue",
+    "prompt": "En quelle année Sesame Street a-t-il été diffusé pour la première fois aux États-Unis ?",
+    "choices": [
+      "1974",
+      "1965",
+      "1969",
+      "1979"
+    ],
+    "correctIndex": 2,
+    "banterHint": "La rue a ouvert vers la fin des années soixante."
+  },
+  {
+    "id": "cq-h-boomer-earthday",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "Premier jour vert",
+    "prompt": "En quelle année a eu lieu le premier Jour de la Terre ?",
+    "choices": [
+      "1962",
+      "1970",
+      "1977",
+      "1984"
+    ],
+    "correctIndex": 1,
+    "banterHint": "La planète a eu une date au calendrier."
+  },
+  {
+    "id": "cq-h-boomer-record",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "Encore un tour",
+    "prompt": "Pourquoi le disque est-il resté ami avec le tourne-disque ?",
+    "choices": [
+      "Il se cachait dans la pochette",
+      "Il a perdu l'étiquette",
+      "Il revenait toujours",
+      "Il sautait le refrain"
+    ],
+    "correctIndex": 2,
+    "banterHint": "La chanson suivante a eu son tour.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-boomer-submarine",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "Sous la mer",
+    "prompt": "De quelle couleur est le sous-marin dans la chanson des Beatles ?",
+    "choices": [
+      "Bleu",
+      "Vert",
+      "Jaune",
+      "Rouge"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Le titre donne déjà la peinture.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-genx-gameboy",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Écran de poche",
+    "prompt": "Quelle console portable Nintendo a-t-elle sortie en 1989 ?",
+    "choices": [
+      "Lynx",
+      "PSP",
+      "Game Gear",
+      "Game Boy"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Tetris a voyagé dans beaucoup de poches."
+  },
+  {
+    "id": "cq-e-genx-pdf",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Page sans papier",
+    "prompt": "Que signifie PDF ?",
+    "choices": [
+      "Personal Disk Folder",
+      "Public Data File",
+      "Printed Document Form",
+      "Portable Document Format"
+    ],
+    "correctIndex": 3,
+    "banterHint": "La page a appris à voyager."
+  },
+  {
+    "id": "cq-h-genx-ram",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Mémoire courte",
+    "prompt": "Que signifie RAM dans un ordinateur ?",
+    "choices": [
+      "Read And Modify",
+      "Rapid Archive Module",
+      "Random Access Memory",
+      "Remote Access Mainframe"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Une mémoire rapide, qui oublie quand le courant coupe."
+  },
+  {
+    "id": "cq-h-genx-cd",
+    "tier": "hard",
+    "topic": "music",
+    "generation": "gen-x",
+    "categoryTitle": "Cercle d'argent",
+    "prompt": "Que signifie CD dans le format musical lancé au début des années 1980 ?",
+    "choices": [
+      "Cassette Deck",
+      "Catalog Download",
+      "Compact Disc",
+      "Crystal Drive"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Un petit miroir qui tenait un album."
+  },
+  {
+    "id": "cq-e-genx-cassette",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Un peu tendue",
+    "prompt": "Pourquoi la cassette se sentait-elle timide ?",
+    "choices": [
+      "Elle a perdu le crayon",
+      "Elle était un peu tendue",
+      "Elle a sauté le refrain",
+      "Elle s'est cachée dans le baladeur"
+    ],
+    "correctIndex": 1,
+    "banterHint": "La face B a quand même eu son écoute.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-genx-blinky",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Service fantôme",
+    "prompt": "De quelle couleur est Blinky, le fantôme de Pac-Man ?",
+    "choices": [
+      "Rose",
+      "Orange",
+      "Cyan",
+      "Rouge"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Les trois autres portent le reste.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-geny-wiki",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Livre ouvert",
+    "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie à plusieurs ?",
+    "choices": [
+      "Wikipédia",
+      "AltaVista",
+      "GeoCities",
+      "MySpace"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Le bouton modifier est toute l'idée."
+  },
+  {
+    "id": "cq-e-geny-sms",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Note courte",
+    "prompt": "Que signifie SMS ?",
+    "choices": [
+      "Short Message Service",
+      "Standard Mobile Signal",
+      "Simple Mail Switch",
+      "Secure Media Stream"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Cent soixante caractères, et beaucoup de rendez-vous."
+  },
+  {
+    "id": "cq-h-geny-iphone",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Ordinateur de poche",
+    "prompt": "Quelle société a sorti le premier iPhone en 2007 ?",
+    "choices": [
+      "Apple",
+      "BlackBerry",
+      "Nokia",
+      "Motorola"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Le clavier est passé sur la vitre."
+  },
+  {
+    "id": "cq-h-geny-facebook",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Inscription ouverte",
+    "prompt": "En quelle année Facebook a-t-il ouvert l'inscription au-delà des écoles, à toute personne de 13 ans ou plus ?",
+    "choices": [
+      "2005",
+      "2006",
+      "2008",
+      "2004"
+    ],
+    "correctIndex": 1,
+    "banterHint": "La porte du campus est tombée en septembre."
+  },
+  {
+    "id": "cq-h-geny-inbox",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Toujours calme",
+    "prompt": "Pourquoi la boîte de réception est-elle restée calme ?",
+    "choices": [
+      "Elle a effacé le matin",
+      "Elle savait garder ses lettres",
+      "Elle a raté le bouton envoyer",
+      "Elle a caché le mot de passe"
+    ],
+    "correctIndex": 1,
+    "banterHint": "La pile non lue est restée polie.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-geny-ocean",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Écrin",
+    "prompt": "De quelle couleur est le Cœur de l'océan dans le film Titanic ?",
+    "choices": [
+      "Vert",
+      "Jaune",
+      "Rouge",
+      "Bleu"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Le collier a gardé cette seule teinte.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-genz-gif",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Petite boucle",
+    "prompt": "Que signifie GIF ?",
+    "choices": [
+      "Global Image File",
+      "General Icon Folder",
+      "Grouped Internet Frame",
+      "Graphics Interchange Format"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Une image qui refuse de rester sage."
+  },
+  {
+    "id": "cq-e-genz-vr",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Casque",
+    "prompt": "Que signifie VR sur un casque ?",
+    "choices": [
+      "Visual Radio",
+      "Vector Render",
+      "Virtual Reality",
+      "Video Relay"
+    ],
+    "correctIndex": 2,
+    "banterHint": "La pièce reste là. La vue, non."
+  },
+  {
+    "id": "cq-h-genz-bytedance",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Vidéo courte",
+    "prompt": "Quelle société possède TikTok ?",
+    "choices": [
+      "Snap",
+      "Meta",
+      "Google",
+      "ByteDance"
+    ],
+    "correctIndex": 3,
+    "banterHint": "L'appli est la partie célèbre. La société, moins."
+  },
+  {
+    "id": "cq-h-genz-hashtag",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Dièse",
+    "prompt": "Comment appelle-t-on le symbole # quand il regroupe des posts sur les réseaux sociaux ?",
+    "choices": [
+      "Un hashtag",
+      "Un caret",
+      "Un tilde",
+      "Un astérisque"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Une marque, et les posts se retrouvent."
+  },
+  {
+    "id": "cq-e-genz-emoji",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Un œil",
+    "prompt": "Pourquoi l'emoji a-t-il fait un clin d'œil ?",
+    "choices": [
+      "Il a perdu l'autre œil",
+      "Il a caché le clavier",
+      "Il a raté la discussion",
+      "Il avait quelque chose à dire"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Le message est quand même arrivé gentiment.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-genz-spotify",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Cercle du logo",
+    "prompt": "De quelle couleur est le cercle du logo Spotify ?",
+    "choices": [
+      "Bleu",
+      "Rouge",
+      "Jaune",
+      "Vert"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Les ondes sonores sont posées dessus.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-alpha-cat",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Hôte du quiz",
+    "prompt": "Comment appelle-t-on un chat qui présente le quiz ?",
+    "choices": [
+      "Un chat peureux",
+      "Le ron-ron en chef",
+      "Une sieste de chat",
+      "Un copieur"
+    ],
+    "correctIndex": 1,
+    "banterHint": "Il retombe quand même sur ses pattes.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-alpha-backpack",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Belle journée",
+    "prompt": "Pourquoi le sac à dos avait-il l'air fier ?",
+    "choices": [
+      "Il a mangé les devoirs",
+      "Il a caché la carte",
+      "Il portait une bonne journée",
+      "Il a raté le bus"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Chaque livre a eu un coup de main.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-alpha-pencil",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Esprit d'équipe",
+    "prompt": "Pourquoi le crayon a-t-il rejoint l'équipe ?",
+    "choices": [
+      "Il a roulé plus loin",
+      "Il s'est caché dans la trousse",
+      "Il a perdu son capuchon",
+      "Il savait attirer la foule"
+    ],
+    "correctIndex": 3,
+    "banterHint": "La gomme veillait sur lui.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-alpha-bookmark",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Toujours là",
+    "prompt": "Pourquoi le marque-page restait-il calme dans l'histoire ?",
+    "choices": [
+      "Il gardait toujours sa place",
+      "Il a déchiré la page",
+      "Il a sauté la fin",
+      "Il a caché le titre"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Chapitre après chapitre, toujours gentil.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-e-alpha-frog",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Scène ouverte",
+    "prompt": "De quelle couleur est une grenouille le soir du micro ouvert ?",
+    "choices": [
+      "Violet",
+      "Vert",
+      "Argent",
+      "Orange"
+    ],
+    "correctIndex": 1,
+    "banterHint": "La salle est restée croassante.",
+    "funny": true,
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-multi-guitar",
+    "tier": "easy",
+    "topic": "music",
+    "generation": "multi-gen",
+    "categoryTitle": "Six cordes",
+    "prompt": "Combien de cordes a une guitare standard ?",
+    "choices": [
+      "Quatre",
+      "Six",
+      "Huit",
+      "Douze"
+    ],
+    "correctIndex": 1,
+    "banterHint": "Les guitares à douze cordes sont les cousines plus bruyantes."
+  },
+  {
+    "id": "cq-e-multi-boil",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Bouilloire",
+    "prompt": "Quel est le point d'ébullition de l'eau au niveau de la mer, en Celsius ?",
+    "choices": [
+      "100",
+      "90",
+      "80",
+      "120"
+    ],
+    "correctIndex": 0,
+    "banterHint": "En montagne, la bouilloire finit un peu plus tôt."
+  },
+  {
+    "id": "cq-h-multi-photo",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Travail vert",
+    "prompt": "Quel gaz les plantes absorbent-elles pendant la photosynthèse ?",
+    "choices": [
+      "L'azote",
+      "L'hélium",
+      "Le dioxyde de carbone",
+      "L'oxygène"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Elles rendent l'oxygène à la pièce."
+  },
+  {
+    "id": "cq-h-multi-pitch",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Sur le terrain",
+    "prompt": "Combien de joueurs d'une équipe de football sont sur le terrain en même temps ?",
+    "choices": [
+      "11",
+      "15",
+      "9",
+      "13"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Le gardien compte parmi eux."
+  },
+  {
+    "id": "cq-h-multi-compass",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Plein nord",
+    "prompt": "Pourquoi la boussole a-t-elle rejoint le quiz ?",
+    "choices": [
+      "Elle a caché la carte",
+      "Elle a sauté le sentier",
+      "Elle a perdu l'aiguille",
+      "Elle voulait trouver ses repères"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Le nord est resté une direction gentille.",
+    "funny": true,
+    "structure": "joke"
+  },
+  {
+    "id": "cq-h-multi-eclipse",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Teinte de nuit",
+    "prompt": "De quelle couleur est la Lune pendant une éclipse lunaire totale ?",
+    "choices": [
+      "Rouge",
+      "Bleu",
+      "Vert",
+      "Blanc"
+    ],
+    "correctIndex": 0,
+    "banterHint": "L'ombre de la Terre prête cette teinte.",
+    "structure": "colour"
+  },
+  {
     "id": "ga-joke-clock",
     "tier": "easy",
     "topic": "culture",
@@ -1549,7 +2233,8 @@
       "Un cactus"
     ],
     "correctIndex": 0,
-    "banterHint": "Elle peut quand même faire coucou."
+    "banterHint": "Elle peut quand même faire coucou.",
+    "funny": true
   },
   {
     "id": "ga-joke-bear",
@@ -1565,7 +2250,8 @@
       "Un koala"
     ],
     "correctIndex": 0,
-    "banterHint": "Toujours collant. Bien plus gentil."
+    "banterHint": "Toujours collant. Bien plus gentil.",
+    "funny": true
   },
   {
     "id": "ga-joke-math",
@@ -1581,7 +2267,8 @@
       "Il a perdu sa couverture"
     ],
     "correctIndex": 0,
-    "banterHint": "Le marque-page lui a fait un câlin."
+    "banterHint": "Le marque-page lui a fait un câlin.",
+    "funny": true
   },
   {
     "id": "ga-joke-ocean",
@@ -1597,7 +2284,8 @@
       "À la pêche"
     ],
     "correctIndex": 0,
-    "banterHint": "La plage a répondu d'un signe."
+    "banterHint": "La plage a répondu d'un signe.",
+    "funny": true
   },
   {
     "id": "ga-joke-flamingo",
@@ -1613,7 +2301,8 @@
       "Une meute"
     ],
     "correctIndex": 2,
-    "banterHint": "Ils étaient habillés pour l'occasion."
+    "banterHint": "Ils étaient habillés pour l'occasion.",
+    "funny": true
   },
   {
     "id": "ga-joke-octopus",
@@ -1629,7 +2318,8 @@
       "Trois"
     ],
     "correctIndex": 3,
-    "banterHint": "Huit bras, trois cœurs, aucune hâte."
+    "banterHint": "Huit bras, trois cœurs, aucune hâte.",
+    "funny": true
   },
   {
     "id": "ga-joke-scarecrow",
@@ -1645,7 +2335,8 @@
       "Il était le meilleur dans son champ"
     ],
     "correctIndex": 3,
-    "banterHint": "Les corbeaux ont ouvert un fan-club."
+    "banterHint": "Les corbeaux ont ouvert un fan-club.",
+    "funny": true
   },
   {
     "id": "ga-joke-homework",
@@ -1661,6 +2352,7 @@
       "C'était un sandwich"
     ],
     "correctIndex": 2,
-    "banterHint": "Le dessert comptait en bonus."
+    "banterHint": "Le dessert comptait en bonus.",
+    "funny": true
   }
 ]

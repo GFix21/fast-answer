@@ -2,8 +2,8 @@
   "generation": "gen-alpha",
   "locale": "de",
   "target": 150,
-  "held": 22,
-  "shortfall": 128,
+  "held": 27,
+  "shortfall": 123,
   "ageYear": 2026,
   "born": [
     2010,
@@ -247,6 +247,96 @@
       "banterHint": null
     },
     {
+      "id": "cq-e-alpha-cat",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Quiz-Katze",
+      "prompt": "Wie nennt man eine Katze, die das Quiz moderiert?",
+      "choices": [
+        "Eine Angsthase",
+        "Die Schnurr-Chefin",
+        "Ein Nickerchen",
+        "Ein Nachmacher"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Sie landet trotzdem auf den Pfoten.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-alpha-backpack",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Guter Tag",
+      "prompt": "Warum sah der Rucksack stolz aus?",
+      "choices": [
+        "Er aß die Hausaufgaben",
+        "Er versteckte die Karte",
+        "Er trug einen guten Tag",
+        "Er verpasste den Bus"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Jedes Buch bekam eine Mitfahrgelegenheit.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-pencil",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Mannschaft",
+      "prompt": "Warum trat der Bleistift der Mannschaft bei?",
+      "choices": [
+        "Er rollte weg",
+        "Er versteckte sich im Etui",
+        "Er verlor seine Kappe",
+        "Er konnte ein Publikum anziehen"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Der Radiergummi hielt ihm den Rücken frei.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-bookmark",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Immer noch da",
+      "prompt": "Warum blieb das Lesezeichen in der Geschichte ruhig?",
+      "choices": [
+        "Es behielt immer seinen Platz",
+        "Es zerriss die Seite",
+        "Es übersprang das Ende",
+        "Es versteckte den Titel"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Kapitel für Kapitel, immer freundlich.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-alpha-frog",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Offenes Mikro",
+      "prompt": "Welche Farbe hat ein Frosch am Open-Mic-Abend?",
+      "choices": [
+        "Lila",
+        "Grün",
+        "Silber",
+        "Orange"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Raum blieb quakend freundlich.",
+      "funny": true,
+      "structure": "colour"
+    },
+    {
       "id": "ga-joke-clock",
       "tier": "easy",
       "topic": "culture",
@@ -260,7 +350,8 @@
         "Eine Statue"
       ],
       "correctIndex": 0,
-      "banterHint": "Winken kann sie trotzdem."
+      "banterHint": "Winken kann sie trotzdem.",
+      "funny": true
     },
     {
       "id": "ga-joke-bear",
@@ -276,7 +367,8 @@
         "Einen Koala"
       ],
       "correctIndex": 0,
-      "banterHint": "Immer noch klebrig. Viel freundlicher."
+      "banterHint": "Immer noch klebrig. Viel freundlicher.",
+      "funny": true
     },
     {
       "id": "ga-joke-math",
@@ -292,7 +384,8 @@
         "Es hat den Umschlag verloren"
       ],
       "correctIndex": 0,
-      "banterHint": "Das Lesezeichen hat es umarmt."
+      "banterHint": "Das Lesezeichen hat es umarmt.",
+      "funny": true
     },
     {
       "id": "ga-joke-ocean",
@@ -308,7 +401,8 @@
         "Petri Heil"
       ],
       "correctIndex": 0,
-      "banterHint": "Der Strand hat zurückgewinkt."
+      "banterHint": "Der Strand hat zurückgewinkt.",
+      "funny": true
     },
     {
       "id": "ga-joke-flamingo",
@@ -324,7 +418,8 @@
         "Ein Rudel"
       ],
       "correctIndex": 2,
-      "banterHint": "Sie kamen passend angezogen."
+      "banterHint": "Sie kamen passend angezogen.",
+      "funny": true
     },
     {
       "id": "ga-joke-octopus",
@@ -340,7 +435,8 @@
         "Drei"
       ],
       "correctIndex": 3,
-      "banterHint": "Acht Arme, drei Herzen, null Eile."
+      "banterHint": "Acht Arme, drei Herzen, null Eile.",
+      "funny": true
     },
     {
       "id": "ga-joke-scarecrow",
@@ -356,7 +452,8 @@
         "Sie war die Beste auf ihrem Feld"
       ],
       "correctIndex": 3,
-      "banterHint": "Die Krähen gründeten einen Fanclub."
+      "banterHint": "Die Krähen gründeten einen Fanclub.",
+      "funny": true
     },
     {
       "id": "ga-joke-homework",
@@ -372,7 +469,8 @@
         "Es war ein Brot"
       ],
       "correctIndex": 2,
-      "banterHint": "Der Nachtisch gab Extra-Punkte."
+      "banterHint": "Der Nachtisch gab Extra-Punkte.",
+      "funny": true
     }
   ]
 }

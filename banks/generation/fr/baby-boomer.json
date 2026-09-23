@@ -2,8 +2,8 @@
   "generation": "baby-boomer",
   "locale": "fr",
   "target": 150,
-  "held": 14,
-  "shortfall": 136,
+  "held": 20,
+  "shortfall": 130,
   "ageYear": 2026,
   "born": [
     1946,
@@ -263,6 +263,105 @@
       ],
       "correctIndex": 3,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-boomer-gaye",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Heure soul",
+      "prompt": "Qui a sorti l'album What's Going On en 1971 ?",
+      "choices": [
+        "Sam Cooke",
+        "Stevie Wonder",
+        "Marvin Gaye",
+        "Otis Redding"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Les questions de ce disque tiennent encore."
+    },
+    {
+      "id": "cq-e-boomer-skylab",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Atelier en orbite",
+      "prompt": "Comment s'appelait la première station spatiale de la NASA, lancée en 1973 ?",
+      "choices": [
+        "Saliout",
+        "Freedom",
+        "Skylab",
+        "Mir"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Un atelier avec un très long trajet."
+    },
+    {
+      "id": "cq-h-boomer-sesame",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Première dans la rue",
+      "prompt": "En quelle année Sesame Street a-t-il été diffusé pour la première fois aux États-Unis ?",
+      "choices": [
+        "1974",
+        "1965",
+        "1969",
+        "1979"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La rue a ouvert vers la fin des années soixante."
+    },
+    {
+      "id": "cq-h-boomer-earthday",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Premier jour vert",
+      "prompt": "En quelle année a eu lieu le premier Jour de la Terre ?",
+      "choices": [
+        "1962",
+        "1970",
+        "1977",
+        "1984"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La planète a eu une date au calendrier."
+    },
+    {
+      "id": "cq-h-boomer-record",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Encore un tour",
+      "prompt": "Pourquoi le disque est-il resté ami avec le tourne-disque ?",
+      "choices": [
+        "Il se cachait dans la pochette",
+        "Il a perdu l'étiquette",
+        "Il revenait toujours",
+        "Il sautait le refrain"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La chanson suivante a eu son tour.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-boomer-submarine",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sous la mer",
+      "prompt": "De quelle couleur est le sous-marin dans la chanson des Beatles ?",
+      "choices": [
+        "Bleu",
+        "Vert",
+        "Jaune",
+        "Rouge"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le titre donne déjà la peinture.",
+      "structure": "colour"
     }
   ]
 }

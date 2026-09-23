@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "fr",
   "target": 150,
-  "held": 15,
-  "shortfall": 135,
+  "held": 21,
+  "shortfall": 129,
   "ageYear": 2026,
   "born": [
     1997,
@@ -271,6 +271,105 @@
       ],
       "correctIndex": 0,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-genz-gif",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Petite boucle",
+      "prompt": "Que signifie GIF ?",
+      "choices": [
+        "Global Image File",
+        "General Icon Folder",
+        "Grouped Internet Frame",
+        "Graphics Interchange Format"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Une image qui refuse de rester sage."
+    },
+    {
+      "id": "cq-e-genz-vr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Casque",
+      "prompt": "Que signifie VR sur un casque ?",
+      "choices": [
+        "Visual Radio",
+        "Vector Render",
+        "Virtual Reality",
+        "Video Relay"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La pièce reste là. La vue, non."
+    },
+    {
+      "id": "cq-h-genz-bytedance",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Vidéo courte",
+      "prompt": "Quelle société possède TikTok ?",
+      "choices": [
+        "Snap",
+        "Meta",
+        "Google",
+        "ByteDance"
+      ],
+      "correctIndex": 3,
+      "banterHint": "L'appli est la partie célèbre. La société, moins."
+    },
+    {
+      "id": "cq-h-genz-hashtag",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dièse",
+      "prompt": "Comment appelle-t-on le symbole # quand il regroupe des posts sur les réseaux sociaux ?",
+      "choices": [
+        "Un hashtag",
+        "Un caret",
+        "Un tilde",
+        "Un astérisque"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une marque, et les posts se retrouvent."
+    },
+    {
+      "id": "cq-e-genz-emoji",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Un œil",
+      "prompt": "Pourquoi l'emoji a-t-il fait un clin d'œil ?",
+      "choices": [
+        "Il a perdu l'autre œil",
+        "Il a caché le clavier",
+        "Il a raté la discussion",
+        "Il avait quelque chose à dire"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le message est quand même arrivé gentiment.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-genz-spotify",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Cercle du logo",
+      "prompt": "De quelle couleur est le cercle du logo Spotify ?",
+      "choices": [
+        "Bleu",
+        "Rouge",
+        "Jaune",
+        "Vert"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les ondes sonores sont posées dessus.",
+      "structure": "colour"
     }
   ]
 }

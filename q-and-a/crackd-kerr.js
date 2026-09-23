@@ -1,14 +1,22 @@
 import { reviewForChildren } from "./louis-liberty.js";
+import { PLAY_TIERS } from "./bots/structures.js";
 
 /**
  * Crack'd Kerr is the Q&A comedy bot.
- * Each week it reads the new funny questions and the highest-scoring ones,
- * and names a short viral set from the bank. It does not copy jokes from
- * outside Q&A. A question Louis Liberty rejects is not rated and is not viral.
+ * He applies joke-telling technique to Gen Alpha questions. Some jokes also
+ * sit in easy and hard for general play. He does not copy jokes from sites,
+ * wikis, or X. A question Louis Liberty rejects is not rated.
  */
 
 const MEAN = /\b(stupid|ugly|dumb|loser|hate|shut up|idiot)\b/i;
 const VIRAL_MIN = 70;
+
+/** Technique notes Crack'd uses when a creator writes an original joke. */
+export const JOKE_TECHNIQUES = {
+  wordplay: "One word can mean two things. The punchline is the second meaning, and it stays kind.",
+  misdirection: "The setup points one way. The answer steps aside without mocking anyone.",
+  callback: "A later line returns to the first picture, so the joke feels finished.",
+};
 
 export const COMEDY_BOT = "Crack'd Kerr";
 
@@ -24,6 +32,9 @@ export function isoWeek(date = new Date()) {
 export function scoreJoke(q) {
   const safety = reviewForChildren(q);
   if (!safety.ok) return { rating: 0, safety };
+  if (q?.funny === true && q?.tier && !PLAY_TIERS.has(q?.tier)) {
+    return { rating: 0, safety, tierHeld: true };
+  }
   const prompt = String(q?.prompt || "");
   const hint = String(q?.banterHint || "");
   const choices = Array.isArray(q?.choices) ? q.choices.join(" ") : "";
@@ -31,6 +42,7 @@ export function scoreJoke(q) {
   if (prompt.includes("?")) rating += 10;
   if (prompt.length > 0 && prompt.length <= 90) rating += 10;
   if (hint.length >= 8) rating += 10;
+  if (JOKE_TECHNIQUES[q?.technique]) rating += 5;
   if (MEAN.test(`${prompt} ${hint} ${choices}`)) rating -= 50;
   rating = Math.max(0, Math.min(100, rating));
   return { rating, safety };

@@ -33,7 +33,9 @@ jobs:
           node scripts/age-safe.check.mjs
           node scripts/generation-packs.check.mjs
       - name: Q&A module
-        run: node scripts/q-and-a.check.mjs
+        run: |
+          node scripts/q-and-a.check.mjs
+          node scripts/bots.check.mjs
 
   security:
     name: Security

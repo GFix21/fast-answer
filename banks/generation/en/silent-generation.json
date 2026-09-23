@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "en",
   "target": 150,
-  "held": 14,
-  "shortfall": 136,
+  "held": 20,
+  "shortfall": 130,
   "ageYear": 2026,
   "born": [
     1928,
@@ -261,6 +261,105 @@
       ],
       "correctIndex": 3,
       "banterHint": null
+    },
+    {
+      "id": "cq-e-silent-roar",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Jazz Decade",
+      "prompt": "What nickname is given to the 1920s in the United States?",
+      "choices": [
+        "The Roaring Twenties",
+        "The Space Age",
+        "The Depression Years",
+        "The Gilded Age"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The bands were loud. The name stuck."
+    },
+    {
+      "id": "cq-e-silent-vote",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Ballot Box",
+      "prompt": "Which U.S. constitutional amendment, ratified in 1920, recognized women's right to vote?",
+      "choices": [
+        "The 19th Amendment",
+        "The 26th Amendment",
+        "The 13th Amendment",
+        "The 15th Amendment"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The line at the poll got longer, on purpose."
+    },
+    {
+      "id": "cq-h-silent-chamberlain",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "September 1939",
+      "prompt": "Who was Prime Minister of the United Kingdom when Britain declared war on Germany in 1939?",
+      "choices": [
+        "Clement Attlee",
+        "Stanley Baldwin",
+        "Winston Churchill",
+        "Neville Chamberlain"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Churchill took the chair the next year."
+    },
+    {
+      "id": "cq-h-silent-assembly",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "First Session",
+      "prompt": "In which city did the United Nations hold its first General Assembly in 1946?",
+      "choices": [
+        "New York",
+        "Geneva",
+        "Paris",
+        "London"
+      ],
+      "correctIndex": 3,
+      "banterHint": "New York became home a few years later."
+    },
+    {
+      "id": "cq-e-silent-radio",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "By the Window",
+      "prompt": "Why did the radio sit near the window?",
+      "choices": [
+        "It hid from the news",
+        "It lost the dial",
+        "It preferred silence",
+        "It wanted to catch a wave"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The song still came through.",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-silent-liberty",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Copper Coat",
+      "prompt": "What colour is the Statue of Liberty today?",
+      "choices": [
+        "Grey",
+        "White",
+        "Gold",
+        "Green"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The copper coat changed after years of weather.",
+      "structure": "colour"
     }
   ]
 }
