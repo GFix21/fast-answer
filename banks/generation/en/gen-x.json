@@ -401,8 +401,8 @@
       "prompt": "The story seems to head somewhere else. The question is still, \"When was the World Wide Web made available to the public?\"",
       "choices": [
         "August 6, 1991",
-        "March 12, 1989",
-        "January 1, 1995",
+        "March 12, the day the idea cleared its throat",
+        "January 1, when the calendar looked official",
         "August 6, 1989"
       ],
       "correctIndex": 0,
@@ -411,7 +411,11 @@
       "humorous": true,
       "injection": "misdirection",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

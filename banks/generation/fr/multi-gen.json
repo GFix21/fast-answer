@@ -273,8 +273,8 @@
       "choices": [
         "15 avril 1912",
         "15 avril 1911",
-        "7 mai 1915",
-        "16 décembre 1912"
+        "7 mai, quand la suite accoste",
+        "1 avril (poisson d'avril)"
       ],
       "correctIndex": 0,
       "banterHint": "L'autre a répondu à la question posée.",
@@ -282,7 +282,11 @@
       "humorous": true,
       "injection": "dialogue",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-h-multi-titanic-hull",
@@ -293,8 +297,8 @@
       "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur était la coque du Titanic ? » L'autre répond…",
       "choices": [
         "Blanc",
-        "Vert",
-        "Rouge",
+        "Vert, après un long séjour au port",
+        "Rouge, si la cheminée raconte l'histoire",
         "Noir"
       ],
       "correctIndex": 3,
@@ -304,7 +308,11 @@
       "renegade": true,
       "injection": "dialogue",
       "structure": "colour",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     },
     {
       "id": "cq-e-multi-stop",
@@ -330,10 +338,10 @@
       "categoryTitle": "Au-dessus",
       "prompt": "Un petit pas de côté, puis retour à la question : « De quelle couleur est un ciel clair en journée ? »",
       "choices": [
-        "Vert",
+        "Vert, si la pelouse a eu une promotion",
         "Noir",
         "Bleu",
-        "Rouge"
+        "Rouge, gardé pour l'équipe du coucher"
       ],
       "correctIndex": 2,
       "banterHint": "Reviens dans la scène. La réponse est la simple.",
@@ -341,7 +349,11 @@
       "humorous": true,
       "injection": "aside",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        0,
+        3
+      ]
     }
   ]
 }

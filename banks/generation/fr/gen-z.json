@@ -397,17 +397,21 @@
       "prompt": "Les mêmes amis qu'avant. Ils reviennent à ceci : « De quelle couleur est un autobus scolaire standard aux États-Unis ? »",
       "choices": [
         "Orange",
-        "Bleu",
-        "Blanc",
+        "Bleu, si l'océan conduit la ligne",
+        "Blanc, après un lavage très soigné",
         "Jaune"
       ],
       "correctIndex": 3,
-      "banterHint": "La même réponse vive que pour le taxi.",
+      "banterHint": "Le bras d'arrêt est l'indice. Les enfants voient cette peinture du trottoir.",
       "funny": true,
       "humorous": true,
       "injection": "callback",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

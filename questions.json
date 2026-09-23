@@ -1626,8 +1626,8 @@
     "prompt": "Two friends are walking. One asks the other, \"What colour is the Statue of Liberty today?\" The other answers…",
     "choices": [
       "Grey",
-      "White",
-      "Gold",
+      "White, still shy from the crossing",
+      "Gold, if the torch is telling the story",
       "Green"
     ],
     "correctIndex": 3,
@@ -1636,7 +1636,11 @@
     "humorous": true,
     "injection": "dialogue",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-h-silent-empire",
@@ -1664,8 +1668,8 @@
     "prompt": "One friend guesses wildly. The other answers the question that was asked: \"What colour is a classic New York City taxi?\"",
     "choices": [
       "Yellow",
-      "White",
-      "Black",
+      "White, trying out for the ice cream truck",
+      "Black, dressed for a very serious errand",
       "Green"
     ],
     "correctIndex": 0,
@@ -1674,7 +1678,11 @@
     "humorous": true,
     "injection": "straight-man",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-boomer-gaye",
@@ -1801,8 +1809,8 @@
     "prompt": "First guess, wrong. Second guess, wrong. Then the real question: \"When did the Woodstock festival begin?\"",
     "choices": [
       "August 15, 1969",
-      "July 4, 1970",
-      "June 1, 1968",
+      "July 4, when the fireworks thought they were the band",
+      "June 1, a month early and already muddy",
       "August 15, 1967"
     ],
     "correctIndex": 0,
@@ -1811,7 +1819,11 @@
     "humorous": true,
     "injection": "rule-of-three",
     "structure": "when",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-genx-gameboy",
@@ -1938,8 +1950,8 @@
     "prompt": "The story seems to head somewhere else. The question is still, \"When was the World Wide Web made available to the public?\"",
     "choices": [
       "August 6, 1991",
-      "March 12, 1989",
-      "January 1, 1995",
+      "March 12, the day the idea cleared its throat",
+      "January 1, when the calendar looked official",
       "August 6, 1989"
     ],
     "correctIndex": 0,
@@ -1948,7 +1960,11 @@
     "humorous": true,
     "injection": "misdirection",
     "structure": "when",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-geny-wiki",
@@ -2075,9 +2091,9 @@
     "prompt": "One word can mean two things. The scored meaning is the plain one: \"When did euro banknotes and coins enter circulation?\"",
     "choices": [
       "January 1, 2002",
-      "January 1, 2004",
+      "2004, when the coins learned to juggle",
       "January 1, 1999",
-      "July 1, 2002"
+      "July, halfway through a very long receipt"
     ],
     "correctIndex": 0,
     "banterHint": "The currency had a birthday before the cash did.",
@@ -2085,7 +2101,11 @@
     "humorous": true,
     "injection": "wordplay",
     "structure": "when",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      1,
+      3
+    ]
   },
   {
     "id": "cq-e-genz-gif",
@@ -2212,17 +2232,21 @@
     "prompt": "Same friends as before. They come back to this: \"What colour is a standard school bus in the United States?\"",
     "choices": [
       "Orange",
-      "Blue",
-      "White",
+      "Blue, if the ocean is driving the route",
+      "White, after a very thorough wash",
       "Yellow"
     ],
     "correctIndex": 3,
-    "banterHint": "Same bright answer the cab question already used.",
+    "banterHint": "The stop arm is the clue. Kids spot that paint from the curb.",
     "funny": true,
     "humorous": true,
     "injection": "callback",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-alpha-cat",
@@ -2340,8 +2364,8 @@
     "choices": [
       "Yellow",
       "Green",
-      "Brown",
-      "Red"
+      "Brown, a day past the lunchbox",
+      "Red, if it tried out for the apple bowl"
     ],
     "correctIndex": 0,
     "banterHint": "The story can grow. The peel stays the bright one.",
@@ -2349,7 +2373,11 @@
     "humorous": true,
     "injection": "escalation",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      2,
+      3
+    ]
   },
   {
     "id": "cq-e-multi-guitar",
@@ -2460,8 +2488,8 @@
     "choices": [
       "April 15, 1912",
       "April 15, 1911",
-      "May 7, 1915",
-      "December 16, 1912"
+      "May 7, whenever the sequel docks",
+      "April 1 (April Fool's Day)"
     ],
     "correctIndex": 0,
     "banterHint": "The other person answered the question that was asked.",
@@ -2469,7 +2497,11 @@
     "humorous": true,
     "injection": "dialogue",
     "structure": "when",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      2,
+      3
+    ]
   },
   {
     "id": "cq-h-multi-titanic-hull",
@@ -2480,8 +2512,8 @@
     "prompt": "Two friends are walking. One asks the other, \"What colour was the hull of the Titanic?\" The other answers…",
     "choices": [
       "White",
-      "Green",
-      "Red",
+      "Green, after a long stay in the harbour",
+      "Red, if the funnel is telling the story",
       "Black"
     ],
     "correctIndex": 3,
@@ -2491,7 +2523,11 @@
     "renegade": true,
     "injection": "dialogue",
     "structure": "colour",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-multi-stop",
@@ -2517,10 +2553,10 @@
     "categoryTitle": "Overhead",
     "prompt": "A quick step aside, then back to the question: \"What colour is a clear daytime sky?\"",
     "choices": [
-      "Green",
+      "Green, if the lawn got promoted",
       "Black",
       "Blue",
-      "Red"
+      "Red, saved for the sunset shift"
     ],
     "correctIndex": 2,
     "banterHint": "Step back in. The answer is the ordinary one.",
@@ -2528,7 +2564,11 @@
     "humorous": true,
     "injection": "aside",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      0,
+      3
+    ]
   },
   {
     "id": "ga-joke-clock",

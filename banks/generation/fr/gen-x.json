@@ -401,8 +401,8 @@
       "prompt": "L'histoire semble partir ailleurs. La question reste : « Quand le Web a-t-il été ouvert au public ? »",
       "choices": [
         "6 août 1991",
-        "12 mars 1989",
-        "1 janvier 1995",
+        "12 mars, le jour où l'idée s'est raclé la gorge",
+        "1 janvier, quand le calendrier avait l'air officiel",
         "6 août 1989"
       ],
       "correctIndex": 0,
@@ -411,7 +411,11 @@
       "humorous": true,
       "injection": "misdirection",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

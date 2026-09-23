@@ -389,8 +389,8 @@
       "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Quand le festival de Woodstock a-t-il commencé ? »",
       "choices": [
         "15 août 1969",
-        "4 juillet 1970",
-        "1 juin 1968",
+        "4 juillet, quand les feux d'artifice se prenaient pour le groupe",
+        "1 juin, un mois trop tôt et déjà boueux",
         "15 août 1967"
       ],
       "correctIndex": 0,
@@ -399,7 +399,11 @@
       "humorous": true,
       "injection": "rule-of-three",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

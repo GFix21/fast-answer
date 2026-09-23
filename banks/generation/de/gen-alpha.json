@@ -362,8 +362,8 @@
       "choices": [
         "Gelb",
         "Grün",
-        "Braun",
-        "Rot"
+        "Braun, einen Tag nach der Lunchbox",
+        "Rot, falls es für die Apfelschale vorgesprochen hat"
       ],
       "correctIndex": 0,
       "banterHint": "Die Geschichte darf wachsen. Die Schale bleibt die helle.",
@@ -371,7 +371,11 @@
       "humorous": true,
       "injection": "escalation",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "ga-joke-clock",

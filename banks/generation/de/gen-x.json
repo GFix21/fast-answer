@@ -401,8 +401,8 @@
       "prompt": "Die Geschichte scheint woanders hinzugehen. Die Frage bleibt: „Wann wurde das World Wide Web der Öffentlichkeit zugänglich?“",
       "choices": [
         "6. August 1991",
-        "12. März 1989",
-        "1. Januar 1995",
+        "12. März, der Tag, an dem die Idee sich räusperte",
+        "1. Januar, als der Kalender offiziell aussah",
         "6. August 1989"
       ],
       "correctIndex": 0,
@@ -411,7 +411,11 @@
       "humorous": true,
       "injection": "misdirection",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

@@ -362,8 +362,8 @@
       "choices": [
         "Jaune",
         "Vert",
-        "Brun",
-        "Rouge"
+        "Brun, un jour après la boîte à lunch",
+        "Rouge, s'il a passé l'audition du bol de pommes"
       ],
       "correctIndex": 0,
       "banterHint": "L'histoire peut grossir. La peau reste la vive.",
@@ -371,7 +371,11 @@
       "humorous": true,
       "injection": "escalation",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "ga-joke-clock",

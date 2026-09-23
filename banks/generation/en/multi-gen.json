@@ -273,8 +273,8 @@
       "choices": [
         "April 15, 1912",
         "April 15, 1911",
-        "May 7, 1915",
-        "December 16, 1912"
+        "May 7, whenever the sequel docks",
+        "April 1 (April Fool's Day)"
       ],
       "correctIndex": 0,
       "banterHint": "The other person answered the question that was asked.",
@@ -282,7 +282,11 @@
       "humorous": true,
       "injection": "dialogue",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-h-multi-titanic-hull",
@@ -293,8 +297,8 @@
       "prompt": "Two friends are walking. One asks the other, \"What colour was the hull of the Titanic?\" The other answers…",
       "choices": [
         "White",
-        "Green",
-        "Red",
+        "Green, after a long stay in the harbour",
+        "Red, if the funnel is telling the story",
         "Black"
       ],
       "correctIndex": 3,
@@ -304,7 +308,11 @@
       "renegade": true,
       "injection": "dialogue",
       "structure": "colour",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     },
     {
       "id": "cq-e-multi-stop",
@@ -330,10 +338,10 @@
       "categoryTitle": "Overhead",
       "prompt": "A quick step aside, then back to the question: \"What colour is a clear daytime sky?\"",
       "choices": [
-        "Green",
+        "Green, if the lawn got promoted",
         "Black",
         "Blue",
-        "Red"
+        "Red, saved for the sunset shift"
       ],
       "correctIndex": 2,
       "banterHint": "Step back in. The answer is the ordinary one.",
@@ -341,7 +349,11 @@
       "humorous": true,
       "injection": "aside",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        0,
+        3
+      ]
     }
   ]
 }

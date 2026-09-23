@@ -353,8 +353,8 @@
       "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur est la Statue de la Liberté aujourd'hui ? » L'autre répond…",
       "choices": [
         "Gris",
-        "Blanc",
-        "Or",
+        "Blanc, encore timide après la traversée",
+        "Or, si le flambeau raconte l'histoire",
         "Vert"
       ],
       "correctIndex": 3,
@@ -363,7 +363,11 @@
       "humorous": true,
       "injection": "dialogue",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     },
     {
       "id": "cq-h-silent-empire",
@@ -391,8 +395,8 @@
       "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « De quelle couleur est un taxi classique de New York ? »",
       "choices": [
         "Jaune",
-        "Blanc",
-        "Noir",
+        "Blanc, en audition pour le camion de crème glacée",
+        "Noir, habillé pour une course très sérieuse",
         "Vert"
       ],
       "correctIndex": 0,
@@ -401,7 +405,11 @@
       "humorous": true,
       "injection": "straight-man",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

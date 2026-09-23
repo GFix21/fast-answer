@@ -401,9 +401,9 @@
       "prompt": "Ein Wort kann zweierlei heißen. Die gewertete Bedeutung ist die schlichte: „Wann kamen Euro-Banknoten und Münzen in Umlauf?“",
       "choices": [
         "1. Januar 2002",
-        "1. Januar 2004",
+        "2004, als die Münzen jonglieren lernten",
         "1. Januar 1999",
-        "1. Juli 2002"
+        "Juli, auf halbem Weg durch eine sehr lange Quittung"
       ],
       "correctIndex": 0,
       "banterHint": "Die Währung hatte einen Geburtstag vor dem Bargeld.",
@@ -411,7 +411,11 @@
       "humorous": true,
       "injection": "wordplay",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        3
+      ]
     }
   ]
 }

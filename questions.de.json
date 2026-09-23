@@ -1626,8 +1626,8 @@
     "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hat die Freiheitsstatue heute?“ Der andere antwortet…",
     "choices": [
       "Grau",
-      "Weiß",
-      "Gold",
+      "Weiß, noch schüchtern von der Überfahrt",
+      "Gold, wenn die Fackel die Geschichte erzählt",
       "Grün"
     ],
     "correctIndex": 3,
@@ -1636,7 +1636,11 @@
     "humorous": true,
     "injection": "dialogue",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-h-silent-empire",
@@ -1664,8 +1668,8 @@
     "prompt": "Ein Freund rät wild. Der andere beantwortet die gestellte Frage: „Welche Farbe hat ein klassisches New Yorker Taxi?“",
     "choices": [
       "Gelb",
-      "Weiß",
-      "Schwarz",
+      "Weiß, beim Vorsprechen für den Eiswagen",
+      "Schwarz, angezogen für einen sehr ernsten Auftrag",
       "Grün"
     ],
     "correctIndex": 0,
@@ -1674,7 +1678,11 @@
     "humorous": true,
     "injection": "straight-man",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-boomer-gaye",
@@ -1801,8 +1809,8 @@
     "prompt": "Erster Tipp, falsch. Zweiter Tipp, falsch. Dann die echte Frage: „Wann begann das Woodstock-Festival?“",
     "choices": [
       "15. August 1969",
-      "4. Juli 1970",
-      "1. Juni 1968",
+      "4. Juli, als das Feuerwerk dachte, es sei die Band",
+      "1. Juni, einen Monat zu früh und schon matschig",
       "15. August 1967"
     ],
     "correctIndex": 0,
@@ -1811,7 +1819,11 @@
     "humorous": true,
     "injection": "rule-of-three",
     "structure": "when",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-genx-gameboy",
@@ -1938,8 +1950,8 @@
     "prompt": "Die Geschichte scheint woanders hinzugehen. Die Frage bleibt: „Wann wurde das World Wide Web der Öffentlichkeit zugänglich?“",
     "choices": [
       "6. August 1991",
-      "12. März 1989",
-      "1. Januar 1995",
+      "12. März, der Tag, an dem die Idee sich räusperte",
+      "1. Januar, als der Kalender offiziell aussah",
       "6. August 1989"
     ],
     "correctIndex": 0,
@@ -1948,7 +1960,11 @@
     "humorous": true,
     "injection": "misdirection",
     "structure": "when",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-geny-wiki",
@@ -2075,9 +2091,9 @@
     "prompt": "Ein Wort kann zweierlei heißen. Die gewertete Bedeutung ist die schlichte: „Wann kamen Euro-Banknoten und Münzen in Umlauf?“",
     "choices": [
       "1. Januar 2002",
-      "1. Januar 2004",
+      "2004, als die Münzen jonglieren lernten",
       "1. Januar 1999",
-      "1. Juli 2002"
+      "Juli, auf halbem Weg durch eine sehr lange Quittung"
     ],
     "correctIndex": 0,
     "banterHint": "Die Währung hatte einen Geburtstag vor dem Bargeld.",
@@ -2085,7 +2101,11 @@
     "humorous": true,
     "injection": "wordplay",
     "structure": "when",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      1,
+      3
+    ]
   },
   {
     "id": "cq-e-genz-gif",
@@ -2212,17 +2232,21 @@
     "prompt": "Dieselben Freunde wie zuvor. Sie kommen hierauf zurück: „Welche Farbe hat ein üblicher Schulbus in den USA?“",
     "choices": [
       "Orange",
-      "Blau",
-      "Weiß",
+      "Blau, wenn der Ozean die Strecke fährt",
+      "Weiß, nach einer sehr gründlichen Wäsche",
       "Gelb"
     ],
     "correctIndex": 3,
-    "banterHint": "Dieselbe helle Antwort wie beim Taxi.",
+    "banterHint": "Der Stopparm ist der Hinweis. Kinder sehen diese Farbe vom Bordstein.",
     "funny": true,
     "humorous": true,
     "injection": "callback",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-alpha-cat",
@@ -2340,8 +2364,8 @@
     "choices": [
       "Gelb",
       "Grün",
-      "Braun",
-      "Rot"
+      "Braun, einen Tag nach der Lunchbox",
+      "Rot, falls es für die Apfelschale vorgesprochen hat"
     ],
     "correctIndex": 0,
     "banterHint": "Die Geschichte darf wachsen. Die Schale bleibt die helle.",
@@ -2349,7 +2373,11 @@
     "humorous": true,
     "injection": "escalation",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      2,
+      3
+    ]
   },
   {
     "id": "cq-e-multi-guitar",
@@ -2460,8 +2488,8 @@
     "choices": [
       "15. April 1912",
       "15. April 1911",
-      "7. Mai 1915",
-      "16. Dezember 1912"
+      "7. Mai, wenn die Fortsetzung anlegt",
+      "1. April (Aprilscherz)"
     ],
     "correctIndex": 0,
     "banterHint": "Die andere Person hat die gestellte Frage beantwortet.",
@@ -2469,7 +2497,11 @@
     "humorous": true,
     "injection": "dialogue",
     "structure": "when",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      2,
+      3
+    ]
   },
   {
     "id": "cq-h-multi-titanic-hull",
@@ -2480,8 +2512,8 @@
     "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hatte der Rumpf der Titanic?“ Der andere antwortet…",
     "choices": [
       "Weiß",
-      "Grün",
-      "Rot",
+      "Grün, nach einem langen Aufenthalt im Hafen",
+      "Rot, wenn der Schornstein die Geschichte erzählt",
       "Schwarz"
     ],
     "correctIndex": 3,
@@ -2491,7 +2523,11 @@
     "renegade": true,
     "injection": "dialogue",
     "structure": "colour",
-    "fromStructure": "when"
+    "fromStructure": "when",
+    "jokeWrongIndexes": [
+      1,
+      2
+    ]
   },
   {
     "id": "cq-e-multi-stop",
@@ -2517,10 +2553,10 @@
     "categoryTitle": "Über uns",
     "prompt": "Ein kurzer Schritt zur Seite, dann zurück zur Frage: „Welche Farbe hat ein klarer Himmel am Tag?“",
     "choices": [
-      "Grün",
+      "Grün, falls der Rasen befördert wurde",
       "Schwarz",
       "Blau",
-      "Rot"
+      "Rot, aufgehoben für die Abendschicht"
     ],
     "correctIndex": 2,
     "banterHint": "Zurück in die Szene. Die Antwort ist die gewöhnliche.",
@@ -2528,7 +2564,11 @@
     "humorous": true,
     "injection": "aside",
     "structure": "colour",
-    "fromStructure": "colour"
+    "fromStructure": "colour",
+    "jokeWrongIndexes": [
+      0,
+      3
+    ]
   },
   {
     "id": "ga-joke-clock",

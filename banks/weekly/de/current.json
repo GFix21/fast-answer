@@ -2489,8 +2489,8 @@
       "choices": [
         "Grün",
         "Grau",
-        "Gold",
-        "Weiß"
+        "Gold, wenn die Fackel die Geschichte erzählt",
+        "Weiß, noch schüchtern von der Überfahrt"
       ],
       "correctIndex": 0,
       "banterHint": "Das Kupfer hat sich nach Jahren Wetter verändert.",
@@ -2511,7 +2511,11 @@
           "label": "Encyclopaedia Britannica — Statue of Liberty"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-h-silent-empire",
@@ -2557,8 +2561,8 @@
       "choices": [
         "Gelb",
         "Grün",
-        "Schwarz",
-        "Weiß"
+        "Schwarz, angezogen für einen sehr ernsten Auftrag",
+        "Weiß, beim Vorsprechen für den Eiswagen"
       ],
       "correctIndex": 0,
       "banterHint": "Das wilde Raten kann warten. Das Taxi ist das helle.",
@@ -2579,7 +2583,11 @@
           "label": "Encyclopaedia Britannica — taxicab"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-boomer-gaye",
@@ -2822,8 +2830,8 @@
       "choices": [
         "15. August 1969",
         "15. August 1967",
-        "4. Juli 1970",
-        "1. Juni 1968"
+        "4. Juli, als das Feuerwerk dachte, es sei die Band",
+        "1. Juni, einen Monat zu früh und schon matschig"
       ],
       "correctIndex": 0,
       "banterHint": "Zwei falsche Daten, dann der Freitag der Eröffnung.",
@@ -2844,7 +2852,11 @@
           "label": "Encyclopaedia Britannica — Woodstock"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-genx-gameboy",
@@ -3087,8 +3099,8 @@
       "choices": [
         "6. August 1991",
         "6. August 1989",
-        "1. Januar 1995",
-        "12. März 1989"
+        "1. Januar, als der Kalender offiziell aussah",
+        "12. März, der Tag, an dem die Idee sich räusperte"
       ],
       "correctIndex": 0,
       "banterHint": "Die Idee ist älter. Die öffentliche Seite hat dieses Datum.",
@@ -3109,7 +3121,11 @@
           "label": "Encyclopaedia Britannica — World Wide Web"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-geny-wiki",
@@ -3352,8 +3368,8 @@
       "choices": [
         "1. Januar 2002",
         "1. Januar 1999",
-        "1. Januar 2004",
-        "1. Juli 2002"
+        "2004, als die Münzen jonglieren lernten",
+        "Juli, auf halbem Weg durch eine sehr lange Quittung"
       ],
       "correctIndex": 0,
       "banterHint": "Die Währung hatte einen Geburtstag vor dem Bargeld.",
@@ -3374,7 +3390,11 @@
           "label": "Encyclopaedia Britannica — euro"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-genz-gif",
@@ -3617,11 +3637,11 @@
       "choices": [
         "Gelb",
         "Orange",
-        "Blau",
-        "Weiß"
+        "Blau, wenn der Ozean die Strecke fährt",
+        "Weiß, nach einer sehr gründlichen Wäsche"
       ],
       "correctIndex": 0,
-      "banterHint": "Dieselbe helle Antwort wie beim Taxi.",
+      "banterHint": "Der Stopparm ist der Hinweis. Kinder sehen diese Farbe vom Bordstein.",
       "funny": true,
       "humorous": true,
       "renegade": false,
@@ -3639,7 +3659,11 @@
           "label": "Encyclopaedia Britannica — school bus"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-alpha-cat",
@@ -3820,8 +3844,8 @@
       "choices": [
         "Gelb",
         "Grün",
-        "Braun",
-        "Rot"
+        "Braun, einen Tag nach der Lunchbox",
+        "Rot, falls es für die Apfelschale vorgesprochen hat"
       ],
       "correctIndex": 0,
       "banterHint": "Die Geschichte darf wachsen. Die Schale bleibt die helle.",
@@ -3842,7 +3866,11 @@
           "label": "Royal Botanic Gardens, Kew — banana"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-multi-guitar",
@@ -4051,8 +4079,8 @@
       "choices": [
         "15. April 1912",
         "15. April 1911",
-        "7. Mai 1915",
-        "16. Dezember 1912"
+        "7. Mai, wenn die Fortsetzung anlegt",
+        "1. April (Aprilscherz)"
       ],
       "correctIndex": 0,
       "banterHint": "Die andere Person hat die gestellte Frage beantwortet.",
@@ -4073,7 +4101,11 @@
           "label": "National Maritime Museum — Titanic"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-h-multi-titanic-hull",
@@ -4085,8 +4117,8 @@
       "choices": [
         "Schwarz",
         "Weiß",
-        "Rot",
-        "Grün"
+        "Rot, wenn der Schornstein die Geschichte erzählt",
+        "Grün, nach einem langen Aufenthalt im Hafen"
       ],
       "correctIndex": 0,
       "banterHint": "Gleicher Weg. Andere Struktur. Der Rumpf war nicht das Datum.",
@@ -4107,7 +4139,11 @@
           "label": "National Maritime Museum — Titanic"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-multi-stop",
@@ -4152,8 +4188,8 @@
       "prompt": "Ein kurzer Schritt zur Seite, dann zurück zur Frage: „Welche Farbe hat ein klarer Himmel am Tag?“",
       "choices": [
         "Blau",
-        "Grün",
-        "Rot",
+        "Grün, falls der Rasen befördert wurde",
+        "Rot, aufgehoben für die Abendschicht",
         "Schwarz"
       ],
       "correctIndex": 0,
@@ -4175,7 +4211,11 @@
           "label": "Encyclopaedia Britannica — sky"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ],
   "locale": "de",

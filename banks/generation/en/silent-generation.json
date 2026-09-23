@@ -353,8 +353,8 @@
       "prompt": "Two friends are walking. One asks the other, \"What colour is the Statue of Liberty today?\" The other answers…",
       "choices": [
         "Grey",
-        "White",
-        "Gold",
+        "White, still shy from the crossing",
+        "Gold, if the torch is telling the story",
         "Green"
       ],
       "correctIndex": 3,
@@ -363,7 +363,11 @@
       "humorous": true,
       "injection": "dialogue",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     },
     {
       "id": "cq-h-silent-empire",
@@ -391,8 +395,8 @@
       "prompt": "One friend guesses wildly. The other answers the question that was asked: \"What colour is a classic New York City taxi?\"",
       "choices": [
         "Yellow",
-        "White",
-        "Black",
+        "White, trying out for the ice cream truck",
+        "Black, dressed for a very serious errand",
         "Green"
       ],
       "correctIndex": 0,
@@ -401,7 +405,11 @@
       "humorous": true,
       "injection": "straight-man",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

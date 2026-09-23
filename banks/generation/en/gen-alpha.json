@@ -362,8 +362,8 @@
       "choices": [
         "Yellow",
         "Green",
-        "Brown",
-        "Red"
+        "Brown, a day past the lunchbox",
+        "Red, if it tried out for the apple bowl"
       ],
       "correctIndex": 0,
       "banterHint": "The story can grow. The peel stays the bright one.",
@@ -371,7 +371,11 @@
       "humorous": true,
       "injection": "escalation",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "ga-joke-clock",

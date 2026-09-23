@@ -273,8 +273,8 @@
       "choices": [
         "15. April 1912",
         "15. April 1911",
-        "7. Mai 1915",
-        "16. Dezember 1912"
+        "7. Mai, wenn die Fortsetzung anlegt",
+        "1. April (Aprilscherz)"
       ],
       "correctIndex": 0,
       "banterHint": "Die andere Person hat die gestellte Frage beantwortet.",
@@ -282,7 +282,11 @@
       "humorous": true,
       "injection": "dialogue",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-h-multi-titanic-hull",
@@ -293,8 +297,8 @@
       "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hatte der Rumpf der Titanic?“ Der andere antwortet…",
       "choices": [
         "Weiß",
-        "Grün",
-        "Rot",
+        "Grün, nach einem langen Aufenthalt im Hafen",
+        "Rot, wenn der Schornstein die Geschichte erzählt",
         "Schwarz"
       ],
       "correctIndex": 3,
@@ -304,7 +308,11 @@
       "renegade": true,
       "injection": "dialogue",
       "structure": "colour",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     },
     {
       "id": "cq-e-multi-stop",
@@ -330,10 +338,10 @@
       "categoryTitle": "Über uns",
       "prompt": "Ein kurzer Schritt zur Seite, dann zurück zur Frage: „Welche Farbe hat ein klarer Himmel am Tag?“",
       "choices": [
-        "Grün",
+        "Grün, falls der Rasen befördert wurde",
         "Schwarz",
         "Blau",
-        "Rot"
+        "Rot, aufgehoben für die Abendschicht"
       ],
       "correctIndex": 2,
       "banterHint": "Zurück in die Szene. Die Antwort ist die gewöhnliche.",
@@ -341,7 +349,11 @@
       "humorous": true,
       "injection": "aside",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        0,
+        3
+      ]
     }
   ]
 }

@@ -2489,8 +2489,8 @@
       "choices": [
         "Green",
         "Grey",
-        "Gold",
-        "White"
+        "Gold, if the torch is telling the story",
+        "White, still shy from the crossing"
       ],
       "correctIndex": 0,
       "banterHint": "The copper coat changed after years of weather.",
@@ -2511,7 +2511,11 @@
           "label": "Encyclopaedia Britannica — Statue of Liberty"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-h-silent-empire",
@@ -2557,8 +2561,8 @@
       "choices": [
         "Yellow",
         "Green",
-        "Black",
-        "White"
+        "Black, dressed for a very serious errand",
+        "White, trying out for the ice cream truck"
       ],
       "correctIndex": 0,
       "banterHint": "The wild guess can wait. The cab is the bright one.",
@@ -2579,7 +2583,11 @@
           "label": "Encyclopaedia Britannica — taxicab"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-boomer-gaye",
@@ -2822,8 +2830,8 @@
       "choices": [
         "August 15, 1969",
         "August 15, 1967",
-        "July 4, 1970",
-        "June 1, 1968"
+        "July 4, when the fireworks thought they were the band",
+        "June 1, a month early and already muddy"
       ],
       "correctIndex": 0,
       "banterHint": "Two wrong dates, then the Friday it opened.",
@@ -2844,7 +2852,11 @@
           "label": "Encyclopaedia Britannica — Woodstock"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-genx-gameboy",
@@ -3087,8 +3099,8 @@
       "choices": [
         "August 6, 1991",
         "August 6, 1989",
-        "January 1, 1995",
-        "March 12, 1989"
+        "January 1, when the calendar looked official",
+        "March 12, the day the idea cleared its throat"
       ],
       "correctIndex": 0,
       "banterHint": "The idea is older. The public page is this date.",
@@ -3109,7 +3121,11 @@
           "label": "Encyclopaedia Britannica — World Wide Web"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-geny-wiki",
@@ -3352,8 +3368,8 @@
       "choices": [
         "January 1, 2002",
         "January 1, 1999",
-        "January 1, 2004",
-        "July 1, 2002"
+        "2004, when the coins learned to juggle",
+        "July, halfway through a very long receipt"
       ],
       "correctIndex": 0,
       "banterHint": "The currency had a birthday before the cash did.",
@@ -3374,7 +3390,11 @@
           "label": "Encyclopaedia Britannica — euro"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-genz-gif",
@@ -3617,11 +3637,11 @@
       "choices": [
         "Yellow",
         "Orange",
-        "Blue",
-        "White"
+        "Blue, if the ocean is driving the route",
+        "White, after a very thorough wash"
       ],
       "correctIndex": 0,
-      "banterHint": "Same bright answer the cab question already used.",
+      "banterHint": "The stop arm is the clue. Kids spot that paint from the curb.",
       "funny": true,
       "humorous": true,
       "renegade": false,
@@ -3639,7 +3659,11 @@
           "label": "Encyclopaedia Britannica — school bus"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-alpha-cat",
@@ -3820,8 +3844,8 @@
       "choices": [
         "Yellow",
         "Green",
-        "Brown",
-        "Red"
+        "Brown, a day past the lunchbox",
+        "Red, if it tried out for the apple bowl"
       ],
       "correctIndex": 0,
       "banterHint": "The story can grow. The peel stays the bright one.",
@@ -3842,7 +3866,11 @@
           "label": "Royal Botanic Gardens, Kew — banana"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-multi-guitar",
@@ -4051,8 +4079,8 @@
       "choices": [
         "April 15, 1912",
         "April 15, 1911",
-        "May 7, 1915",
-        "December 16, 1912"
+        "May 7, whenever the sequel docks",
+        "April 1 (April Fool's Day)"
       ],
       "correctIndex": 0,
       "banterHint": "The other person answered the question that was asked.",
@@ -4073,7 +4101,11 @@
           "label": "National Maritime Museum — Titanic"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-h-multi-titanic-hull",
@@ -4085,8 +4117,8 @@
       "choices": [
         "Black",
         "White",
-        "Red",
-        "Green"
+        "Red, if the funnel is telling the story",
+        "Green, after a long stay in the harbour"
       ],
       "correctIndex": 0,
       "banterHint": "Same walk. Different structure. The hull was not the date.",
@@ -4107,7 +4139,11 @@
           "label": "National Maritime Museum — Titanic"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-multi-stop",
@@ -4152,8 +4188,8 @@
       "prompt": "A quick step aside, then back to the question: \"What colour is a clear daytime sky?\"",
       "choices": [
         "Blue",
-        "Green",
-        "Red",
+        "Green, if the lawn got promoted",
+        "Red, saved for the sunset shift",
         "Black"
       ],
       "correctIndex": 0,
@@ -4175,7 +4211,11 @@
           "label": "Encyclopaedia Britannica — sky"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

@@ -2489,8 +2489,8 @@
       "choices": [
         "Vert",
         "Gris",
-        "Or",
-        "Blanc"
+        "Or, si le flambeau raconte l'histoire",
+        "Blanc, encore timide après la traversée"
       ],
       "correctIndex": 0,
       "banterHint": "Le cuivre a changé après des années de temps.",
@@ -2511,7 +2511,11 @@
           "label": "Encyclopaedia Britannica — Statue of Liberty"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-h-silent-empire",
@@ -2557,8 +2561,8 @@
       "choices": [
         "Jaune",
         "Vert",
-        "Noir",
-        "Blanc"
+        "Noir, habillé pour une course très sérieuse",
+        "Blanc, en audition pour le camion de crème glacée"
       ],
       "correctIndex": 0,
       "banterHint": "La devinette folle peut attendre. Le taxi est le vif.",
@@ -2579,7 +2583,11 @@
           "label": "Encyclopaedia Britannica — taxicab"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-boomer-gaye",
@@ -2822,8 +2830,8 @@
       "choices": [
         "15 août 1969",
         "15 août 1967",
-        "4 juillet 1970",
-        "1 juin 1968"
+        "4 juillet, quand les feux d'artifice se prenaient pour le groupe",
+        "1 juin, un mois trop tôt et déjà boueux"
       ],
       "correctIndex": 0,
       "banterHint": "Deux mauvaises dates, puis le vendredi d'ouverture.",
@@ -2844,7 +2852,11 @@
           "label": "Encyclopaedia Britannica — Woodstock"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-genx-gameboy",
@@ -3087,8 +3099,8 @@
       "choices": [
         "6 août 1991",
         "6 août 1989",
-        "1 janvier 1995",
-        "12 mars 1989"
+        "1 janvier, quand le calendrier avait l'air officiel",
+        "12 mars, le jour où l'idée s'est raclé la gorge"
       ],
       "correctIndex": 0,
       "banterHint": "L'idée est plus vieille. La page publique est cette date.",
@@ -3109,7 +3121,11 @@
           "label": "Encyclopaedia Britannica — World Wide Web"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-geny-wiki",
@@ -3352,8 +3368,8 @@
       "choices": [
         "1 janvier 2002",
         "1 janvier 1999",
-        "1 janvier 2004",
-        "1 juillet 2002"
+        "2004, quand les pièces ont appris à jongler",
+        "Juillet, à mi-chemin d'un très long reçu"
       ],
       "correctIndex": 0,
       "banterHint": "La monnaie a eu un anniversaire avant les billets.",
@@ -3374,7 +3390,11 @@
           "label": "Encyclopaedia Britannica — euro"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-genz-gif",
@@ -3617,11 +3637,11 @@
       "choices": [
         "Jaune",
         "Orange",
-        "Bleu",
-        "Blanc"
+        "Bleu, si l'océan conduit la ligne",
+        "Blanc, après un lavage très soigné"
       ],
       "correctIndex": 0,
-      "banterHint": "La même réponse vive que pour le taxi.",
+      "banterHint": "Le bras d'arrêt est l'indice. Les enfants voient cette peinture du trottoir.",
       "funny": true,
       "humorous": true,
       "renegade": false,
@@ -3639,7 +3659,11 @@
           "label": "Encyclopaedia Britannica — school bus"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-alpha-cat",
@@ -3820,8 +3844,8 @@
       "choices": [
         "Jaune",
         "Vert",
-        "Brun",
-        "Rouge"
+        "Brun, un jour après la boîte à lunch",
+        "Rouge, s'il a passé l'audition du bol de pommes"
       ],
       "correctIndex": 0,
       "banterHint": "L'histoire peut grossir. La peau reste la vive.",
@@ -3842,7 +3866,11 @@
           "label": "Royal Botanic Gardens, Kew — banana"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-multi-guitar",
@@ -4051,8 +4079,8 @@
       "choices": [
         "15 avril 1912",
         "15 avril 1911",
-        "7 mai 1915",
-        "16 décembre 1912"
+        "7 mai, quand la suite accoste",
+        "1 avril (poisson d'avril)"
       ],
       "correctIndex": 0,
       "banterHint": "L'autre a répondu à la question posée.",
@@ -4073,7 +4101,11 @@
           "label": "National Maritime Museum — Titanic"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-h-multi-titanic-hull",
@@ -4085,8 +4117,8 @@
       "choices": [
         "Noir",
         "Blanc",
-        "Rouge",
-        "Vert"
+        "Rouge, si la cheminée raconte l'histoire",
+        "Vert, après un long séjour au port"
       ],
       "correctIndex": 0,
       "banterHint": "Même marche. Autre structure. La coque n'était pas la date.",
@@ -4107,7 +4139,11 @@
           "label": "National Maritime Museum — Titanic"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
     },
     {
       "id": "cq-e-multi-stop",
@@ -4152,8 +4188,8 @@
       "prompt": "Un petit pas de côté, puis retour à la question : « De quelle couleur est un ciel clair en journée ? »",
       "choices": [
         "Bleu",
-        "Vert",
-        "Rouge",
+        "Vert, si la pelouse a eu une promotion",
+        "Rouge, gardé pour l'équipe du coucher",
         "Noir"
       ],
       "correctIndex": 0,
@@ -4175,7 +4211,11 @@
           "label": "Encyclopaedia Britannica — sky"
         }
       ],
-      "status": "pending"
+      "status": "pending",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ],
   "locale": "fr",

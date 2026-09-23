@@ -389,8 +389,8 @@
       "prompt": "Erster Tipp, falsch. Zweiter Tipp, falsch. Dann die echte Frage: „Wann begann das Woodstock-Festival?“",
       "choices": [
         "15. August 1969",
-        "4. Juli 1970",
-        "1. Juni 1968",
+        "4. Juli, als das Feuerwerk dachte, es sei die Band",
+        "1. Juni, einen Monat zu früh und schon matschig",
         "15. August 1967"
       ],
       "correctIndex": 0,
@@ -399,7 +399,11 @@
       "humorous": true,
       "injection": "rule-of-three",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

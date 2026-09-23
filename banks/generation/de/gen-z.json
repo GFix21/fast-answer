@@ -397,17 +397,21 @@
       "prompt": "Dieselben Freunde wie zuvor. Sie kommen hierauf zurück: „Welche Farbe hat ein üblicher Schulbus in den USA?“",
       "choices": [
         "Orange",
-        "Blau",
-        "Weiß",
+        "Blau, wenn der Ozean die Strecke fährt",
+        "Weiß, nach einer sehr gründlichen Wäsche",
         "Gelb"
       ],
       "correctIndex": 3,
-      "banterHint": "Dieselbe helle Antwort wie beim Taxi.",
+      "banterHint": "Der Stopparm ist der Hinweis. Kinder sehen diese Farbe vom Bordstein.",
       "funny": true,
       "humorous": true,
       "injection": "callback",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

@@ -353,8 +353,8 @@
       "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hat die Freiheitsstatue heute?“ Der andere antwortet…",
       "choices": [
         "Grau",
-        "Weiß",
-        "Gold",
+        "Weiß, noch schüchtern von der Überfahrt",
+        "Gold, wenn die Fackel die Geschichte erzählt",
         "Grün"
       ],
       "correctIndex": 3,
@@ -363,7 +363,11 @@
       "humorous": true,
       "injection": "dialogue",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     },
     {
       "id": "cq-h-silent-empire",
@@ -391,8 +395,8 @@
       "prompt": "Ein Freund rät wild. Der andere beantwortet die gestellte Frage: „Welche Farbe hat ein klassisches New Yorker Taxi?“",
       "choices": [
         "Gelb",
-        "Weiß",
-        "Schwarz",
+        "Weiß, beim Vorsprechen für den Eiswagen",
+        "Schwarz, angezogen für einen sehr ernsten Auftrag",
         "Grün"
       ],
       "correctIndex": 0,
@@ -401,7 +405,11 @@
       "humorous": true,
       "injection": "straight-man",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }

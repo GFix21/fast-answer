@@ -401,9 +401,9 @@
       "prompt": "Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « Quand les billets et les pièces en euros sont-ils entrés en circulation ? »",
       "choices": [
         "1 janvier 2002",
-        "1 janvier 2004",
+        "2004, quand les pièces ont appris à jongler",
         "1 janvier 1999",
-        "1 juillet 2002"
+        "Juillet, à mi-chemin d'un très long reçu"
       ],
       "correctIndex": 0,
       "banterHint": "La monnaie a eu un anniversaire avant les billets.",
@@ -411,7 +411,11 @@
       "humorous": true,
       "injection": "wordplay",
       "structure": "when",
-      "fromStructure": "when"
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        3
+      ]
     }
   ]
 }

@@ -206,7 +206,10 @@ export function shuffleChoicesDeterministic(q) {
   const nextCorrect = idxs.indexOf(Number(q.correctIndex) || 0);
   const next = { ...q, choices: nextChoices, correctIndex: nextCorrect < 0 ? 0 : nextCorrect };
   if (Array.isArray(q.jokeWrongIndexes)) {
-    next.jokeWrongIndexes = q.jokeWrongIndexes.map((i) => idxs.indexOf(i)).filter((i) => i >= 0);
+    next.jokeWrongIndexes = q.jokeWrongIndexes
+      .map((i) => idxs.indexOf(i))
+      .filter((i) => i >= 0)
+      .sort((a, b) => a - b);
   }
   return next;
 }

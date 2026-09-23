@@ -397,17 +397,21 @@
       "prompt": "Same friends as before. They come back to this: \"What colour is a standard school bus in the United States?\"",
       "choices": [
         "Orange",
-        "Blue",
-        "White",
+        "Blue, if the ocean is driving the route",
+        "White, after a very thorough wash",
         "Yellow"
       ],
       "correctIndex": 3,
-      "banterHint": "Same bright answer the cab question already used.",
+      "banterHint": "The stop arm is the clue. Kids spot that paint from the curb.",
       "funny": true,
       "humorous": true,
       "injection": "callback",
       "structure": "colour",
-      "fromStructure": "colour"
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
     }
   ]
 }
