@@ -1,0 +1,853 @@
+{
+  "generation": "silent-generation",
+  "tier": "hard",
+  "locale": "de",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-silent-sputnik",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Orbit-Ursprünge",
+      "prompt": "Welches Land startete 1957 Sputnik 1, den ersten künstlichen Satelliten?",
+      "choices": [
+        "Vereinigte Staaten",
+        "Frankreich",
+        "China",
+        "Sowjetunion"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-hula",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Mode-Akten",
+      "prompt": "Der Spielzeug-Hype der 1950er mit dem drehenden Plastikring um die Taille war…",
+      "choices": [
+        "Der Pogo-Stick",
+        "Das Tamagotchi",
+        "Der Rubik’s Cube",
+        "Der Hula-Hoop"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-polio",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Öffentliche Gesundheit",
+      "prompt": "Welcher amerikanische Wissenschaftler leitete das Team hinter dem ersten weit verbreiteten Polio-Impfstoff der 1950er?",
+      "choices": [
+        "Alexander Fleming",
+        "Jonas Salk",
+        "Edward Jenner",
+        "Louis Pasteur"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-korea",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Kalter-Krieg-Karte",
+      "prompt": "In welchem Jahr wurde der Waffenstillstand des Koreakriegs unterzeichnet?",
+      "choices": [
+        "1953",
+        "1960",
+        "1945",
+        "1975"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-interstate",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Straßenbauer",
+      "prompt": "Welcher US-Präsident unterzeichnete 1956 den Federal-Aid Highway Act, der das Interstate-System anstieß?",
+      "choices": [
+        "Harry Truman",
+        "Dwight D. Eisenhower",
+        "John F. Kennedy",
+        "Lyndon B. Johnson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-disneyland",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Themenpark-Dämmerung",
+      "prompt": "In welchem US-Bundesstaat öffnete Disneyland 1955 erstmals?",
+      "choices": [
+        "New York",
+        "Kalifornien",
+        "Florida",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-silent-chamberlain",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "September 1939",
+      "prompt": "Wer war Premierminister des Vereinigten Königreichs, als Großbritannien 1939 Deutschland den Krieg erklärte?",
+      "choices": [
+        "Clement Attlee",
+        "Stanley Baldwin",
+        "Winston Churchill",
+        "Neville Chamberlain"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Churchill übernahm den Stuhl im Jahr darauf.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-h-silent-assembly",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Erste Sitzung",
+      "prompt": "In welcher Stadt hielt die UNO 1946 ihre erste Generalversammlung ab?",
+      "choices": [
+        "New York",
+        "Genf",
+        "Paris",
+        "London"
+      ],
+      "correctIndex": 3,
+      "banterHint": "New York wurde ein paar Jahre später der Sitz.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-h-silent-empire",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Skyline",
+      "prompt": "Wann wurde das Empire State Building fertig?",
+      "choices": [
+        "1941",
+        "1950",
+        "1925",
+        "1931"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Spitze stand, bevor das Jahrzehnt um war.",
+      "slang": "Sagen Sie,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-h-silent-marshall",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Aufbaugesetz",
+      "prompt": "In welchem Jahr wurde der Marshallplan in den USA Gesetz?",
+      "choices": [
+        "1945",
+        "1948",
+        "1953",
+        "1951"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Krieg war vorbei. Der Aufbau hat ein Startdatum.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-ch-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von der Schweiz?",
+      "choices": [
+        "Genf",
+        "Basel",
+        "Bern",
+        "Zürich"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-iq-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Irak?",
+      "choices": [
+        "Erbil",
+        "Bagdad",
+        "Basra",
+        "Mosul"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-my-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Malaysia?",
+      "choices": [
+        "Singapur",
+        "Kuala Lumpur",
+        "George Town",
+        "Johor Bahru"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-sn-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Senegal?",
+      "choices": [
+        "Thiès",
+        "Saint-Louis",
+        "Dakar",
+        "Bamako"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-pride-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Pride and Prejudice?",
+      "choices": [
+        "Jane Austen",
+        "Emily Brontë",
+        "Charlotte Brontë",
+        "Mary Shelley"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-crime-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Crime and Punishment?",
+      "choices": [
+        "Anton Chekhov",
+        "Leo Tolstoy",
+        "Fyodor Dostoevsky",
+        "Ivan Turgenev"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-matilda-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the book Matilda?",
+      "choices": [
+        "Roald Dahl",
+        "J. K. Rowling",
+        "Dr. Seuss",
+        "Enid Blyton"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-alchemist-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel The Alchemist?",
+      "choices": [
+        "Isabel Allende",
+        "Jorge Luis Borges",
+        "Paulo Coelho",
+        "Gabriel García Márquez"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-eighty-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Around the World in Eighty Days?",
+      "choices": [
+        "Jules Verne",
+        "Agatha Christie",
+        "Mark Twain",
+        "H. G. Wells"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-gulliver-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben Gulliver's Travels?",
+      "choices": [
+        "Voltaire",
+        "Laurence Sterne",
+        "Jonathan Swift",
+        "Daniel Defoe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-madame-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Madame Bovary?",
+      "choices": [
+        "Honoré de Balzac",
+        "Gustave Flaubert",
+        "Émile Zola",
+        "Victor Hugo"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-kindred-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Kindred?",
+      "choices": [
+        "Toni Morrison",
+        "N. K. Jemisin",
+        "Ursula K. Le Guin",
+        "Octavia E. Butler"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-nutcracker-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the ballet The Nutcracker?",
+      "choices": [
+        "Sergei Prokofiev",
+        "Maurice Ravel",
+        "Pyotr Ilyich Tchaikovsky",
+        "Igor Stravinsky"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-bolero-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the orchestral piece Boléro?",
+      "choices": [
+        "Claude Debussy",
+        "Camille Saint-Saëns",
+        "Gabriel Fauré",
+        "Maurice Ravel"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-no-woman-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song No Woman, No Cry?",
+      "choices": [
+        "Jimmy Cliff",
+        "Toots Hibbert",
+        "Bob Marley",
+        "Peter Tosh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-blinding-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Blinding Lights?",
+      "choices": [
+        "Drake",
+        "The Weeknd",
+        "Post Malone",
+        "Bruno Mars"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-espresso-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the 2024 song Espresso?",
+      "choices": [
+        "Sabrina Carpenter",
+        "Dua Lipa",
+        "Chappell Roan",
+        "Olivia Rodrigo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-pepper-year-song",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the album Sgt. Pepper's Lonely Hearts Club Band?",
+      "choices": [
+        "The Beatles",
+        "The Beach Boys",
+        "The Rolling Stones",
+        "The Kinks"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-avatar-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 2009 film Avatar?",
+      "choices": [
+        "James Cameron",
+        "George Lucas",
+        "Jon Favreau",
+        "Peter Jackson"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-spirited-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film Spirited Away?",
+      "choices": [
+        "Isao Takahata",
+        "Satoshi Kon",
+        "Makoto Shinkai",
+        "Hayao Miyazaki"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-tiger-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film Crouching Tiger, Hidden Dragon?",
+      "choices": [
+        "Ang Lee",
+        "Wong Kar-wai",
+        "Zhang Yimou",
+        "John Woo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-shrek-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 2001 film Shrek?",
+      "choices": [
+        "Andrew Adamson and Vicky Jenson",
+        "Chris Miller",
+        "Pete Docter",
+        "John Lasseter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-h",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element hydrogen?",
+      "choices": [
+        "H",
+        "N",
+        "O",
+        "He"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-k",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element potassium?",
+      "choices": [
+        "Na",
+        "K",
+        "P",
+        "Ca"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-sn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element tin?",
+      "choices": [
+        "Ti",
+        "Sn",
+        "Sb",
+        "Si"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-si",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element silicon?",
+      "choices": [
+        "Ag",
+        "Sn",
+        "Si",
+        "S"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-ni",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element nickel?",
+      "choices": [
+        "N",
+        "Ne",
+        "Ni",
+        "Na"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-ford-founder",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer gründete die Ford Motor Company?",
+      "choices": [
+        "Ransom Olds",
+        "Henry Ford",
+        "Walter Chrysler",
+        "William Durant"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-largest-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welcher Planet ist der größte im Sonnensystem?",
+      "choices": [
+        "Saturn",
+        "Neptune",
+        "Earth",
+        "Jupiter"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-farthest-eight",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welcher der acht Planeten kreist am weitesten von der Sonne?",
+      "choices": [
+        "Saturn",
+        "Pluto",
+        "Uranus",
+        "Neptune"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-invent-gunpowder",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Zivilisation entwickelte zuerst das Schießpulver?",
+      "choices": [
+        "China",
+        "the Middle East",
+        "India",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-origin-cacao",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welcher Region wurde Kakao zuerst angebaut?",
+      "choices": [
+        "Europe",
+        "India",
+        "Mesoamerica",
+        "West Africa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-stephenson-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer baute die Lokomotive Rocket?",
+      "choices": [
+        "George Stephenson",
+        "Richard Trevithick",
+        "Isambard Kingdom Brunel",
+        "James Watt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-eastman-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer gründete das Unternehmen, das Kodak-Kameras verkaufte?",
+      "choices": [
+        "George Eastman",
+        "Ansel Adams",
+        "Thomas Edison",
+        "Louis Daguerre"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-barton-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer gründete das Amerikanische Rote Kreuz?",
+      "choices": [
+        "Florence Nightingale",
+        "Clara Barton",
+        "Helen Keller",
+        "Dorothea Dix"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-radium-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Element entdeckten die Curies zusammen mit Polonium?",
+      "choices": [
+        "uranium",
+        "plutonium",
+        "curium",
+        "radium"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-rust-metal",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Rost bildet sich vor allem auf welchem Metall?",
+      "choices": [
+        "iron",
+        "copper",
+        "aluminum",
+        "gold"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-maple-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Ahornsirup kommt vom Saft welches Baumes?",
+      "choices": [
+        "the oak",
+        "the birch",
+        "the maple",
+        "the pine"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-pepper-vine",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Schwarzer Pfeffer kommt von welcher Pflanzenart?",
+      "choices": [
+        "a grass",
+        "a vine",
+        "a root",
+        "a tree nut"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-h-hard-zhang-heng",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer erfand ein Seismoskop im China der Han-Zeit?",
+      "choices": [
+        "Cai Lun",
+        "Bi Sheng",
+        "Shen Kuo",
+        "Zhang Heng"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    }
+  ]
+}

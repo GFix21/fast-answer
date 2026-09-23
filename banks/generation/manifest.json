@@ -76,6 +76,50 @@
         "gen-alpha": 150,
         "multi-gen": 150
       },
+      "tiers": {
+        "silent-generation": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "baby-boomer": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-x": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-y": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-z": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-alpha": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "multi-gen": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        }
+      },
       "shortfall": {
         "silent-generation": 0,
         "baby-boomer": 0,
@@ -97,6 +141,50 @@
         "gen-z": 150,
         "gen-alpha": 150,
         "multi-gen": 150
+      },
+      "tiers": {
+        "silent-generation": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "baby-boomer": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-x": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-y": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-z": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-alpha": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "multi-gen": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        }
       },
       "shortfall": {
         "silent-generation": 0,
@@ -120,6 +208,50 @@
         "gen-alpha": 150,
         "multi-gen": 150
       },
+      "tiers": {
+        "silent-generation": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "baby-boomer": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-x": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-y": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-z": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-alpha": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "multi-gen": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        }
+      },
       "shortfall": {
         "silent-generation": 0,
         "baby-boomer": 0,
@@ -141,6 +273,50 @@
         "gen-z": 150,
         "gen-alpha": 150,
         "multi-gen": 150
+      },
+      "tiers": {
+        "silent-generation": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "baby-boomer": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-x": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-y": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-z": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "gen-alpha": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        },
+        "multi-gen": {
+          "easy": 70,
+          "hard": 50,
+          "difficult": 20,
+          "extreme": 10
+        }
       },
       "shortfall": {
         "silent-generation": 0,

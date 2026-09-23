@@ -1,0 +1,856 @@
+{
+  "generation": "baby-boomer",
+  "tier": "hard",
+  "locale": "fr-CA",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-boomer-jfk",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Horloge Camelot",
+      "prompt": "En quelle année le président américain John F. Kennedy a été assassiné ?",
+      "choices": [
+        "1968",
+        "1972",
+        "1960",
+        "1963"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-mlk",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Mémoire de la marche",
+      "prompt": "Le discours « I Have a Dream » de Martin Luther King Jr. a été prononcé dans quelle ville ?",
+      "choices": [
+        "Selma",
+        "Memphis",
+        "Washington, D.C.",
+        "Atlanta"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-beatles2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Notes d’Abbey",
+      "prompt": "Quel album des Beatles contient les chansons « Come Together » et « Here Comes the Sun » ?",
+      "choices": [
+        "Let It Be",
+        "Help!",
+        "Revolver",
+        "Abbey Road"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-ali",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Rope-a-Dope",
+      "prompt": "Sous quel nom Muhammad Ali est né ?",
+      "choices": [
+        "Cassius Clay",
+        "Sugar Ray Robinson",
+        "Joe Frazier",
+        "George Foreman"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-concorde",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Quête secondaire supersonique",
+      "prompt": "Concorde était un exemple célèbre de quel type d’avion de passagers ?",
+      "choices": [
+        "Dirigeable cargo",
+        "Montgolfière",
+        "Avion de ligne supersonique",
+        "Ferry hélicoptère"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-starwars",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Première galactique",
+      "prompt": "En quelle année le film original Star Wars (plus tard Un nouvel espoir) est sorti ?",
+      "choices": [
+        "1980",
+        "1977",
+        "1983",
+        "1975"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-boomer-sesame",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Première dans la rue",
+      "prompt": "En quelle année Sesame Street a été diffusé pour la première fois aux États-Unis ?",
+      "choices": [
+        "1974",
+        "1965",
+        "1969",
+        "1979"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La rue a ouvert vers la fin des années soixante.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-h-boomer-earthday",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Premier jour vert",
+      "prompt": "En quelle année a eu lieu le premier Jour de la Terre ?",
+      "choices": [
+        "1962",
+        "1970",
+        "1977",
+        "1984"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La planète a eu une date au calendrier.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-h-boomer-record",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Encore un tour",
+      "prompt": "Pourquoi le disque est resté ami avec le tourne-disque ?",
+      "choices": [
+        "Il se cachait dans la pochette",
+        "Il a perdu l'étiquette",
+        "Il revenait toujours",
+        "Il sautait le refrain"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La chanson suivante a eu son tour.",
+      "slang": "Tout à fait,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-boomer-gate",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Travée",
+      "prompt": "C'est quoi la couleur du pont du Golden Gate ?",
+      "choices": [
+        "Rouge",
+        "Bleu",
+        "Or",
+        "Orange international"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le nom sonne comme l'or. La peinture est l'autre.",
+      "slang": "Tout à fait,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-h-boomer-gold",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Élément",
+      "prompt": "C'est quoi le symbole chimique de l'or ?",
+      "choices": [
+        "Au",
+        "Ag",
+        "Fe",
+        "Cu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'argent est le voisin sur le tableau.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-h-boomer-wall",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fil et béton",
+      "prompt": "Quand la construction du mur de Berlin a commencé ?",
+      "choices": [
+        "1989",
+        "1953",
+        "1961",
+        "1949"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La chute est venue après. Ici, c'est l'année de la construction.",
+      "slang": "Tout à fait,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-bo-h-ma-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Maroc?",
+      "choices": [
+        "Rabat",
+        "Marrakech",
+        "Fès",
+        "Casablanca"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-ua-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Ukraine?",
+      "choices": [
+        "Kyiv",
+        "Odessa",
+        "Lviv",
+        "Kharkiv"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-qa-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Qatar?",
+      "choices": [
+        "Doha",
+        "Manama",
+        "Abou Dhabi",
+        "Dubaï"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-tz-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Tanzanie?",
+      "choices": [
+        "Arusha",
+        "Zanzibar",
+        "Dodoma",
+        "Dar es Salaam"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-frank-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Frankenstein ?",
+      "choices": [
+        "Jane Austen",
+        "Mary Shelley",
+        "Bram Stoker",
+        "Edgar Allan Poe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-solitude-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel One Hundred Years of Solitude ?",
+      "choices": [
+        "Gabriel García Márquez",
+        "Pablo Neruda",
+        "Jorge Luis Borges",
+        "Isabel Allende"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-charlie-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the book Charlie and the Chocolate Factory ?",
+      "choices": [
+        "C. S. Lewis",
+        "Lewis Carroll",
+        "Roald Amundsen",
+        "Roald Dahl"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-metamorphosis-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the story The Metamorphosis ?",
+      "choices": [
+        "Hermann Hesse",
+        "Stefan Zweig",
+        "Franz Kafka",
+        "Thomas Mann"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-sherlock-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the Sherlock Holmes stories ?",
+      "choices": [
+        "Arthur Conan Doyle",
+        "Agatha Christie",
+        "G. K. Chesterton",
+        "Edgar Allan Poe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-crusoe-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Robinson Crusoe ?",
+      "choices": [
+        "Daniel Defoe",
+        "Robert Louis Stevenson",
+        "Herman Melville",
+        "Jonathan Swift"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-old-man-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Old Man and the Sea ?",
+      "choices": [
+        "F. Scott Fitzgerald",
+        "Ernest Hemingway",
+        "William Faulkner",
+        "John Steinbeck"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-narnia-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit The Lion, the Witch and the Wardrobe ?",
+      "choices": [
+        "C. S. Lewis",
+        "Roald Dahl",
+        "J. R. R. Tolkien",
+        "Philip Pullman"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-swan-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the ballet Swan Lake ?",
+      "choices": [
+        "Pyotr Ilyich Tchaikovsky",
+        "Léo Delibes",
+        "Adolphe Adam",
+        "Igor Stravinsky"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-peer-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the incidental music Peer Gynt ?",
+      "choices": [
+        "Edvard Munch",
+        "Edvard Grieg",
+        "Jean Sibelius",
+        "Carl Nielsen"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-blowin-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Blowin' in the Wind ?",
+      "choices": [
+        "Joan Baez",
+        "Woody Guthrie",
+        "Bob Dylan",
+        "Pete Seeger"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-shape-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Shape of You ?",
+      "choices": [
+        "Ed Sheeran",
+        "Shawn Mendes",
+        "Justin Bieber",
+        "Sam Smith"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-u2-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the band U2, as lead singer ?",
+      "choices": [
+        "Adam Clayton",
+        "Larry Mullen Jr.",
+        "The Edge",
+        "Bono"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-rumours-album",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the album Rumours ?",
+      "choices": [
+        "Fleetwood Mac",
+        "ABBA",
+        "The Carpenters",
+        "The Eagles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-pulp-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Pulp Fiction ?",
+      "choices": [
+        "Guy Ritchie",
+        "Quentin Tarantino",
+        "Martin Scorsese",
+        "Joel Coen"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-parasite-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Parasite ?",
+      "choices": [
+        "Wong Kar-wai",
+        "Bong Joon-ho",
+        "Park Chan-wook",
+        "Hirokazu Kore-eda"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-slumdog-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Slumdog Millionaire ?",
+      "choices": [
+        "Guy Ritchie",
+        "Danny Boyle",
+        "Ridley Scott",
+        "Christopher Nolan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-frozen-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 2013 film Frozen ?",
+      "choices": [
+        "Chris Buck and Jennifer Lee",
+        "Jennifer Yuh Nelson",
+        "Byron Howard and Rich Moore",
+        "John Musker and Ron Clements"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-sym-he",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément helium ?",
+      "choices": [
+        "He",
+        "Ne",
+        "H",
+        "Li"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-sym-fe",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément iron ?",
+      "choices": [
+        "I",
+        "F",
+        "Fe",
+        "Ir"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-sym-u",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément uranium ?",
+      "choices": [
+        "U",
+        "Pu",
+        "Ur",
+        "Un"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-sym-p",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément phosphorus ?",
+      "choices": [
+        "K",
+        "Pt",
+        "Po",
+        "P"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-sym-zn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément zinc ?",
+      "choices": [
+        "Zr",
+        "Zn",
+        "Ze",
+        "Sn"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-porsche-founder",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fondé l'entreprise automobile Porsche ?",
+      "choices": [
+        "Enzo Ferrari",
+        "Henry Ford",
+        "Karl Benz",
+        "Ferdinand Porsche"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-smallest-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quelle planète, la plus petite du système solaire ?",
+      "choices": [
+        "Venus",
+        "Pluto",
+        "Mars",
+        "Mercury"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-our-galaxy",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le nom de la galaxie qui contient notre système solaire ?",
+      "choices": [
+        "the Milky Way",
+        "Andromeda",
+        "the Triangulum Galaxy",
+        "the Large Magellanic Cloud"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-invent-compass",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quelle civilisation qui a d'abord utilisé la boussole pour naviguer ?",
+      "choices": [
+        "Italy",
+        "Portugal",
+        "China",
+        "Greece"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-origin-silk",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays qui est connu pour avoir d'abord fait de la soie ?",
+      "choices": [
+        "India",
+        "China",
+        "Japan",
+        "Italy"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-trevithick-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a construit une des premières locomotives à vapeur à haute pression ?",
+      "choices": [
+        "George Stephenson",
+        "Robert Fulton",
+        "James Watt",
+        "Richard Trevithick"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-berners-org",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "Tim Berners-Lee travaillait dans quelle organisation quand il a proposé le Web ?",
+      "choices": [
+        "NASA",
+        "IBM",
+        "CERN",
+        "MIT"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-seacole-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui, l'infirmière jamaïcaine célébrée pour ses soins pendant la guerre de Crimée ?",
+      "choices": [
+        "Clara Barton",
+        "Florence Nightingale",
+        "Mary Seacole",
+        "Elizabeth Garrett Anderson"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-first-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel élément, le numéro 1 du tableau périodique ?",
+      "choices": [
+        "hydrogen",
+        "helium",
+        "oxygen",
+        "lithium"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-quartz-mineral",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le sable de beaucoup de plages est surtout quel minéral ?",
+      "choices": [
+        "diamond",
+        "calcite",
+        "mica",
+        "quartz"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-h-olive-region",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'huile d'olive est un produit classique des rives de quelle mer ?",
+      "choices": [
+        "the Baltic",
+        "the Mediterranean",
+        "the North Sea",
+        "the Caribbean"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    }
+  ]
+}

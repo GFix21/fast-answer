@@ -1,0 +1,178 @@
+{
+  "generation": "multi-gen",
+  "tier": "extreme",
+  "locale": "fr-CA",
+  "held": 10,
+  "questions": [
+    {
+      "id": "cq-x-multi-light",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Temps de trajet",
+      "prompt": "La lumière du Soleil prend environ combien de temps pour atteindre la Terre ?",
+      "choices": [
+        "Environ 8 secondes",
+        "Environ 8 heures",
+        "Environ 8 jours",
+        "Environ 8 minutes"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le Soleil est loin, et le trajet tient dans une pause-café.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-sd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de South Dakota ?",
+      "choices": [
+        "Pierre",
+        "Rapid City",
+        "Sioux Falls",
+        "Aberdeen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-nd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de North Dakota ?",
+      "choices": [
+        "Fargo",
+        "Grand Forks",
+        "Minot",
+        "Bismarck"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-mt-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Montana ?",
+      "choices": [
+        "Helena",
+        "Bozeman",
+        "Missoula",
+        "Billings"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-wy-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Wyoming ?",
+      "choices": [
+        "Laramie",
+        "Cheyenne",
+        "Jackson",
+        "Casper"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-in-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "C'est quoi la capitale de l'État américain de Indiana ?",
+      "choices": [
+        "Indianapolis",
+        "Evansville",
+        "Fort Wayne",
+        "South Bend"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville connue à côté peut être une autre place.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-gy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Guyana?",
+      "choices": [
+        "Paramaribo",
+        "Georgetown",
+        "Linden",
+        "Cayenne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-hn-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Honduras?",
+      "choices": [
+        "San Pedro Sula",
+        "La Ceiba",
+        "San Salvador",
+        "Tegucigalpa"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-ee-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Estonie?",
+      "choices": [
+        "Riga",
+        "Helsinki",
+        "Tartu",
+        "Tallinn"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-x-me-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Monténégro?",
+      "choices": [
+        "Kotor",
+        "Belgrade",
+        "Budva",
+        "Podgorica"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    }
+  ]
+}

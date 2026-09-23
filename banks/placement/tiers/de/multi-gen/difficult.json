@@ -1,0 +1,56 @@
+{
+  "generation": "multi-gen",
+  "tier": "difficult",
+  "locale": "de",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-mg-d-stravinsky",
+      "tier": "difficult",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Deep Cut",
+      "prompt": "Wer komponierte Le Sacre du printemps (The Rite of Spring)?",
+      "choices": [
+        "Pjotr Tschaikowski",
+        "Igor Strawinsky",
+        "Ludwig van Beethoven",
+        "John Williams"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Top-Band-Sonde — belohnt allgemeine Kulturkenntnis, nicht Altersslang.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Rite of Spring"
+        },
+        {
+          "label": "Ballet / programme histories"
+        }
+      ]
+    },
+    {
+      "id": "place-art-d-braque",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Kubismus",
+      "prompt": "Mit welchem Künstler gründete Picasso den Kubismus?",
+      "choices": [
+        "Georges Braque",
+        "Andy Warhol",
+        "Jackson Pollock",
+        "Frida Kahlo"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Schwierige Kultursondierung — Gold-Fähigkeitssignal.",
+      "sources": [
+        {
+          "label": "Wikipedia — Cubism"
+        },
+        {
+          "label": "MoMA / Tate primers"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "generation": "silent-generation",
+  "tier": "easy",
+  "locale": "fr-CA",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-silent-e-fdr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Qui était président des États-Unis pendant la plus grande partie de la Seconde Guerre mondiale ?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Dwight D. Eisenhower",
+        "Herbert Hoover"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Silent Gen facile — civisme milieu de siècle de manuel ; juste via la scolarité.",
+      "sources": [
+        {
+          "label": "Wikipedia — Franklin D. Roosevelt"
+        },
+        {
+          "label": "US National Archives / WWII chronology"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-e-ike",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Le slogan de campagne des années 1950 « I Like Ike » promouvait quel futur président américain ?",
+      "choices": [
+        "Richard Nixon",
+        "John F. Kennedy",
+        "Lyndon B. Johnson",
+        "Dwight D. Eisenhower"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Silent Gen facile — slogan de Guerre froide largement enseigné.",
+      "sources": [
+        {
+          "label": "Wikipedia — Dwight D. Eisenhower"
+        },
+        {
+          "label": "Smithsonian / campaign history primers"
+        }
+      ]
+    }
+  ]
+}

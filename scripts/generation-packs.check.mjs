@@ -220,4 +220,46 @@ assert.equal(placementIsDue({ placementCompletedAt: done }, Date.parse("2026-09-
 assert.equal(placementIsDue({}, Date.parse("2026-01-01T00:00:00.000Z")), true);
 assert.equal(placementIsDue({ placementCompletedAt: done, placementMandatoryAt: "2025-01-01T00:00:00.000Z" }, Date.parse("2025-06-01T00:00:00.000Z")), true);
 
+const TIER_TARGET = { easy: 70, hard: 50, difficult: 20, extreme: 10 };
+const PACK_LOCALES = ["en", "fr", "fr-CA", "de"];
+for (const loc of PACK_LOCALES) {
+  for (const g of GENERATIONS) {
+    const full = JSON.parse(fs.readFileSync(new URL(`../banks/generation/${loc}/${g}.json`, import.meta.url), "utf8"));
+    assert.equal(full.locale, loc, `${loc} ${g}`);
+    assert.equal(full.held, PACK_TARGET, `${loc} ${g}`);
+    assert.deepEqual(full.tiers, TIER_TARGET, `${loc} ${g}`);
+    for (const [tier, need] of Object.entries(TIER_TARGET)) {
+      const pack = JSON.parse(fs.readFileSync(new URL(`../banks/generation/${loc}/tiers/${g}/${tier}.json`, import.meta.url), "utf8"));
+      assert.equal(pack.generation, g);
+      assert.equal(pack.tier, tier);
+      assert.equal(pack.locale, loc);
+      assert.equal(pack.held, need, `${loc} ${g} ${tier}`);
+      assert.equal(pack.questions.length, need, `${loc} ${g} ${tier}`);
+      assert.ok(pack.questions.every((q) => q.generation === g && q.tier === tier), `${loc} ${g} ${tier}`);
+      assert.deepEqual(
+        pack.questions.map((q) => q.id),
+        full.questions.filter((q) => q.tier === tier).map((q) => q.id),
+        `${loc} ${g} ${tier}`,
+      );
+    }
+  }
+  const placeFile = loc === "en"
+    ? "../banks/placement/generational-first-pass.json"
+    : `../banks/placement/${loc}/generational-first-pass.json`;
+  const placeRows = JSON.parse(fs.readFileSync(new URL(placeFile, import.meta.url), "utf8")).questions;
+  for (const g of GENERATIONS) {
+    for (const tier of Object.keys(TIER_TARGET)) {
+      const mine = placeRows.filter((q) => q.generation === g && q.tier === tier);
+      const file = new URL(`../banks/placement/tiers/${loc}/${g}/${tier}.json`, import.meta.url);
+      if (!mine.length) {
+        assert.equal(fs.existsSync(file), false, `${loc} ${g} ${tier}`);
+        continue;
+      }
+      const pack = JSON.parse(fs.readFileSync(file, "utf8"));
+      assert.equal(pack.held, mine.length, `${loc} placement ${g} ${tier}`);
+      assert.deepEqual(pack.questions.map((q) => q.id), mine.map((q) => q.id));
+    }
+  }
+}
+
 console.log("generation packs ok", summary.counts);

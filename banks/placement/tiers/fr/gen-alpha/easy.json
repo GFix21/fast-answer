@@ -1,0 +1,56 @@
+{
+  "generation": "gen-alpha",
+  "tier": "easy",
+  "locale": "fr",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-a-e-tablet",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Gen Alpha",
+      "prompt": "Quel appareil est conçu surtout pour les applis et la vidéo sur écran tactile, pas pour un clavier physique ?",
+      "choices": [
+        "Tourne-disque",
+        "Télécopieur",
+        "Tablette",
+        "Uniquement une télécommande de téléviseur CRT"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Item facile équitable selon l’âge — reconnaissance d’objet, pas fluence mème.",
+      "sources": [
+        {
+          "label": "Wikipedia — Tablet computer"
+        },
+        {
+          "label": "Consumer electronics definitions"
+        }
+      ]
+    },
+    {
+      "id": "place-geo-e-continents",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Terres",
+      "prompt": "Combien de continents le modèle courant compte-t-il ?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Compte facile de géographie dans le modèle courant.",
+      "sources": [
+        {
+          "label": "National Geographic — continents"
+        },
+        {
+          "label": "Encyclopaedia Britannica — continent"
+        }
+      ]
+    }
+  ]
+}

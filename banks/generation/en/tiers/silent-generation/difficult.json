@@ -1,0 +1,347 @@
+{
+  "generation": "silent-generation",
+  "tier": "difficult",
+  "locale": "en",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Cold War Sky",
+      "prompt": "Francis Gary Powers was shot down in 1960 while flying which type of U.S. reconnaissance aircraft?",
+      "choices": [
+        "SR-71 only",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-silent-suez",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Canal Year",
+      "prompt": "In which year did the Suez Crisis begin?",
+      "choices": [
+        "1967",
+        "1950",
+        "1956",
+        "1948"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The canal closed. The year is the earlier one.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-kh-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Cambodia?",
+      "choices": [
+        "Phnom Penh",
+        "Vientiane",
+        "Bangkok",
+        "Siem Reap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-mn-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Mongolia?",
+      "choices": [
+        "Ulaanbaatar",
+        "Beijing",
+        "Darkhan",
+        "Erdenet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-mz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Mozambique?",
+      "choices": [
+        "Maputo",
+        "Johannesburg",
+        "Nampula",
+        "Beira"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-heliocentric-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the book On the Revolutions of the Heavenly Spheres?",
+      "choices": [
+        "Nicolaus Copernicus",
+        "Johannes Kepler",
+        "Tycho Brahe",
+        "Galileo Galilei"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-dna-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the 1953 model of the DNA double helix, with the scored pair?",
+      "choices": [
+        "Linus Pauling",
+        "Rosalind Franklin and Maurice Wilkins",
+        "James Watson and Francis Crick",
+        "Gregor Mendel"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-maxwell-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the equations that united electricity and magnetism?",
+      "choices": [
+        "Michael Faraday",
+        "James Clerk Maxwell",
+        "Oliver Heaviside",
+        "Heinrich Hertz"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-johnson-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the orbital calculations celebrated in Hidden Figures?",
+      "choices": [
+        "Mary Jackson",
+        "Margaret Hamilton",
+        "Katherine Johnson",
+        "Dorothy Vaughan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-benz-car",
+      "tier": "difficult",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who built the Benz Patent-Motorwagen?",
+      "choices": [
+        "Karl Benz",
+        "Henry Ford",
+        "Nikolaus Otto",
+        "Gottlieb Daimler"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-y-civil-end",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the American Civil War ended?",
+      "choices": [
+        "1861",
+        "1863",
+        "1870",
+        "1865"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-y-new-deal",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Franklin D. Roosevelt first took office as president?",
+      "choices": [
+        "1939",
+        "1945",
+        "1929",
+        "1933"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-y-voting",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the United States passed the Voting Rights Act?",
+      "choices": [
+        "1964",
+        "1968",
+        "1963",
+        "1965"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-y-soviet",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the Soviet Union dissolved?",
+      "choices": [
+        "1991",
+        "1990",
+        "1989",
+        "1993"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-y-paris-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the Paris Summer Olympics were held?",
+      "choices": [
+        "2016",
+        "2020",
+        "2024",
+        "2028"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-y-black-hole",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the first image of a black hole was published?",
+      "choices": [
+        "2019",
+        "2012",
+        "2022",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-y-eiffel",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the Eiffel Tower was completed?",
+      "choices": [
+        "1886",
+        "1789",
+        "1900",
+        "1889"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-y-womens-cup",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the first FIFA Women's World Cup was held?",
+      "choices": [
+        "1999",
+        "1995",
+        "1991",
+        "1985"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-diff-channel",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "The Channel Tunnel opened to passengers in which year?",
+      "choices": [
+        "1990",
+        "1981",
+        "2004",
+        "1994"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-diff-nitrogen",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Most of the air around Earth is which gas?",
+      "choices": [
+        "nitrogen",
+        "oxygen",
+        "argon",
+        "carbon dioxide"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    }
+  ]
+}

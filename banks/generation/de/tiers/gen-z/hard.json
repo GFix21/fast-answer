@@ -1,0 +1,853 @@
+{
+  "generation": "gen-z",
+  "tier": "hard",
+  "locale": "de",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-genz-fortnite2",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Insel-Code",
+      "prompt": "Welches Unternehmen entwickelt Fortnite?",
+      "choices": [
+        "Valve",
+        "Nintendo",
+        "Epic Games",
+        "Sega"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-spotify2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Stream-HQ",
+      "prompt": "In welchem Land wurde Spotify gegründet?",
+      "choices": [
+        "Schweden",
+        "Brasilien",
+        "Südkorea",
+        "Vereinigte Staaten"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-btsv",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "K-Pop-Kompass",
+      "prompt": "Aus welchem Land kommt die Musikgruppe BTS?",
+      "choices": [
+        "Südkorea",
+        "Thailand",
+        "China",
+        "Japan"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-tesla",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "EV-Autobahn",
+      "prompt": "Wofür ist Tesla, Inc. vor allem bekannt?",
+      "choices": [
+        "Nur Segelboote",
+        "Nur mechanische Schreibmaschinen",
+        "Elektrofahrzeuge",
+        "Nur Vinylpressen"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-blackpanther",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Wakanda-Wochenende",
+      "prompt": "Wer führte Regie beim Marvel-Film Black Panther (2018)?",
+      "choices": [
+        "Ryan Coogler",
+        "Patty Jenkins",
+        "Taika Waititi",
+        "James Gunn"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-paris-acc",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klimakarte",
+      "prompt": "Worum geht es im Pariser Klimaabkommen vor allem?",
+      "choices": [
+        "Währungsschriften",
+        "Briefmarken",
+        "Olympia-Maskottchen",
+        "Klimawandel"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-genz-bytedance",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Kurzvideo",
+      "prompt": "Welche Firma besitzt TikTok?",
+      "choices": [
+        "Snap",
+        "Meta",
+        "Google",
+        "ByteDance"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die App ist der berühmte Teil. Die Firma ist leiser.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-h-genz-hashtag",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Raute",
+      "prompt": "Wie heißt das Zeichen #, wenn es Beiträge in sozialen Medien bündelt?",
+      "choices": [
+        "Ein Hashtag",
+        "Ein Caret",
+        "Eine Tilde",
+        "Ein Sternchen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Ein Zeichen, und die Beiträge finden sich.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-h-genz-mohs",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Härte",
+      "prompt": "Welches natürliche Mineral ist auf der Mohs-Skala das härteste?",
+      "choices": [
+        "Quarz",
+        "Korund",
+        "Diamant",
+        "Topas"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Skala endet bei zehn. Dieses sitzt dort.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-h-genz-curiosity",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Gale-Krater",
+      "prompt": "Wann landete der NASA-Rover Curiosity auf dem Mars?",
+      "choices": [
+        "2004",
+        "2012",
+        "1997",
+        "2021"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Flugkran machte den letzten Schritt. Das Jahr ist 2012.",
+      "slang": "Ganz ehrlich,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-gz-h-sa-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Saudi-Arabien?",
+      "choices": [
+        "Riad",
+        "Mekka",
+        "Medina",
+        "Dschidda"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hr-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Kroatien?",
+      "choices": [
+        "Zagreb",
+        "Split",
+        "Dubrovnik",
+        "Rijeka"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-lb-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Libanon?",
+      "choices": [
+        "Beirut",
+        "Tripoli",
+        "Sidon",
+        "Damaskus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hamlet-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the play Hamlet?",
+      "choices": [
+        "Molière",
+        "Henrik Ibsen",
+        "William Shakespeare",
+        "Christopher Marlowe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-potter-author",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the Harry Potter novels?",
+      "choices": [
+        "Roald Dahl",
+        "J. K. Rowling",
+        "Rick Riordan",
+        "Philip Pullman"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-gatsby-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel The Great Gatsby?",
+      "choices": [
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald",
+        "William Faulkner",
+        "John Steinbeck"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-gables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the book Anne of Green Gables?",
+      "choices": [
+        "Louisa May Alcott",
+        "Laura Ingalls Wilder",
+        "Frances Hodgson Burnett",
+        "L. M. Montgomery"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-miserables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Les Misérables?",
+      "choices": [
+        "Victor Hugo",
+        "Alexandre Dumas",
+        "Émile Zola",
+        "Gustave Flaubert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-little-women",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Little Women?",
+      "choices": [
+        "Louisa May Alcott",
+        "Jane Austen",
+        "L. M. Montgomery",
+        "Emily Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-oliver-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel Oliver Twist?",
+      "choices": [
+        "Charles Dickens",
+        "Jane Austen",
+        "Thomas Hardy",
+        "Charlotte Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-color-purple",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel The Color Purple?",
+      "choices": [
+        "Toni Morrison",
+        "Alice Walker",
+        "Octavia Butler",
+        "Maya Angelou"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-seasons-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht The Four Seasons?",
+      "choices": [
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Arcangelo Corelli",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-brandenburg-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the Brandenburg Concertos?",
+      "choices": [
+        "George Frideric Handel",
+        "Johann Sebastian Bach",
+        "Georg Philipp Telemann",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-bohemian-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Bohemian Rhapsody?",
+      "choices": [
+        "Led Zeppelin",
+        "The Beatles",
+        "Queen",
+        "The Who"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hey-ya-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Hey Ya!?",
+      "choices": [
+        "Beyoncé",
+        "Usher",
+        "OutKast",
+        "Kanye West"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-license-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song drivers license?",
+      "choices": [
+        "Olivia Rodrigo",
+        "Billie Eilish",
+        "Taylor Swift",
+        "Sabrina Carpenter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-nirvana-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the band Nirvana, as lead singer?",
+      "choices": [
+        "Eddie Vedder",
+        "Kurt Cobain",
+        "Dave Grohl",
+        "Krist Novoselic"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-jurassic-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 1993 film Jurassic Park?",
+      "choices": [
+        "Steven Spielberg",
+        "Roland Emmerich",
+        "Peter Jackson",
+        "James Cameron"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-vertigo-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film Vertigo?",
+      "choices": [
+        "Alfred Hitchcock",
+        "Howard Hawks",
+        "Fritz Lang",
+        "Orson Welles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-amelie-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film Amélie?",
+      "choices": [
+        "Michel Gondry",
+        "Jean-Pierre Jeunet",
+        "Luc Besson",
+        "François Ozon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-toy-story-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 1995 film Toy Story?",
+      "choices": [
+        "John Lasseter",
+        "Pete Docter",
+        "Andrew Stanton",
+        "Brad Bird"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-arrival-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 2016 film Arrival?",
+      "choices": [
+        "Christopher Nolan",
+        "Neill Blomkamp",
+        "Alex Garland",
+        "Denis Villeneuve"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-n",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element nitrogen?",
+      "choices": [
+        "Ne",
+        "Ni",
+        "Na",
+        "N"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-pb",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element lead?",
+      "choices": [
+        "Pd",
+        "Pb",
+        "Li",
+        "Pt"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-mg",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element magnesium?",
+      "choices": [
+        "Mn",
+        "Hg",
+        "Mo",
+        "Mg"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-ar",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element argon?",
+      "choices": [
+        "Ar",
+        "Al",
+        "Au",
+        "Ag"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-co",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element cobalt?",
+      "choices": [
+        "Ca",
+        "Co",
+        "Cu",
+        "C"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-sahara-hot",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Wüste ist die größte heiße Wüste der Erde?",
+      "choices": [
+        "the Gobi",
+        "the Sahara",
+        "the Arabian Desert",
+        "the Kalahari"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welcher Planet wird der rote Planet genannt?",
+      "choices": [
+        "Jupiter",
+        "Mars",
+        "Venus",
+        "Mercury"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hardest-after",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Mineral liegt auf der Mohs-Skala direkt unter Diamant?",
+      "choices": [
+        "topaz",
+        "talc",
+        "quartz",
+        "corundum"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-origin-potato",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welcher Region wurde die Kartoffel zuerst angebaut?",
+      "choices": [
+        "Europe",
+        "the Andes",
+        "West Africa",
+        "China"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-otto-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer baute den Viertaktmotor, dessen Taktfolge seinen Namen trägt?",
+      "choices": [
+        "Nikolaus Otto",
+        "Karl Benz",
+        "Rudolf Diesel",
+        "James Watt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-braille-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer erfand das erhabene Punktschriftsystem Braille?",
+      "choices": [
+        "Samuel Morse",
+        "Alexander Graham Bell",
+        "Helen Keller",
+        "Louis Braille"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-cross-founder",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer gründete die Rotkreuz-Bewegung nach der Schlacht von Solferino?",
+      "choices": [
+        "Florence Nightingale",
+        "Jean-Henri Fabre",
+        "Clara Barton",
+        "Henry Dunant"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-curie-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Element ist nach Marie und Pierre Curie benannt?",
+      "choices": [
+        "curium",
+        "radium",
+        "polonium",
+        "uranium"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-table-salt",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Tafelsalz ist vor allem welche Verbindung?",
+      "choices": [
+        "sodium chloride",
+        "calcium carbonate",
+        "sodium bicarbonate",
+        "potassium iodide"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-cork-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Kork kommt von der Rinde welches Baumes?",
+      "choices": [
+        "the pine",
+        "the maple",
+        "the birch",
+        "the cork oak"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-vanilla-orchid",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Vanille kommt von welcher Pflanzenart?",
+      "choices": [
+        "an orchid",
+        "a cactus",
+        "a vine of grapes",
+        "a bean tree"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-bi-sheng",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer entwickelte bewegliche Tonlettern im China der Song-Zeit?",
+      "choices": [
+        "Bi Sheng",
+        "Cai Lun",
+        "Johannes Gutenberg",
+        "Shen Kuo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-figaro",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer komponierte die Oper Die Hochzeit des Figaro?",
+      "choices": [
+        "Ludwig van Beethoven",
+        "Wolfgang Amadeus Mozart",
+        "Giuseppe Verdi",
+        "Gioachino Rossini"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    }
+  ]
+}

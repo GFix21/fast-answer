@@ -1,0 +1,32 @@
+{
+  "generation": "gen-y",
+  "tier": "difficult",
+  "locale": "en",
+  "held": 1,
+  "questions": [
+    {
+      "id": "place-y-d-ipod",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Early iPod",
+      "prompt": "In which year did Apple introduce the original iPod?",
+      "choices": [
+        "1998",
+        "2001",
+        "2004",
+        "2007"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Harder Millennial tech chronology.",
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple press archive — 2001"
+        }
+      ]
+    }
+  ]
+}

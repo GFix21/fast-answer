@@ -1,0 +1,56 @@
+{
+  "generation": "multi-gen",
+  "tier": "difficult",
+  "locale": "fr",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-mg-d-stravinsky",
+      "tier": "difficult",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Deep Cut",
+      "prompt": "Qui a composé Le Sacre du printemps ?",
+      "choices": [
+        "Piotr Tchaïkovski",
+        "Igor Stravinsky",
+        "Ludwig van Beethoven",
+        "John Williams"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Sonde de bande haute — récompense la culture généraliste, pas l’argot générationnel.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Rite of Spring"
+        },
+        {
+          "label": "Ballet / programme histories"
+        }
+      ]
+    },
+    {
+      "id": "place-art-d-braque",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Cubisme",
+      "prompt": "Picasso a cofondé le cubisme avec quel artiste ?",
+      "choices": [
+        "Georges Braque",
+        "Andy Warhol",
+        "Jackson Pollock",
+        "Frida Kahlo"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Sonde culturelle difficile — signal Gold de capacité.",
+      "sources": [
+        {
+          "label": "Wikipedia — Cubism"
+        },
+        {
+          "label": "MoMA / Tate primers"
+        }
+      ]
+    }
+  ]
+}

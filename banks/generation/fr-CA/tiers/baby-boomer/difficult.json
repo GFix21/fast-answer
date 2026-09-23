@@ -1,0 +1,347 @@
+{
+  "generation": "baby-boomer",
+  "tier": "difficult",
+  "locale": "fr-CA",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-boomer-apollo13",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "L’échec n’est pas…",
+      "prompt": "L’explosion du réservoir d’oxygène d’Apollo 13 s’est produite en quelle année ?",
+      "choices": [
+        "1968",
+        "1972",
+        "1970",
+        "1969"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-boomer-salt",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Traité de 1972",
+      "prompt": "Quel accord de maîtrise des armements les États-Unis et l'Union soviétique ont signé en 1972 ?",
+      "choices": [
+        "Accords de Camp David",
+        "Acte final d'Helsinki",
+        "SALT I",
+        "Pacte de Varsovie"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Les initiales sont le nom court. L'année est 1972.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-la-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Laos?",
+      "choices": [
+        "Luang Prabang",
+        "Hanoï",
+        "Vientiane",
+        "Phnom Penh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-bt-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Bhoutan?",
+      "choices": [
+        "Thimphu",
+        "Punakha",
+        "Kathmandu",
+        "Paro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-na-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Namibie?",
+      "choices": [
+        "Walvis Bay",
+        "Gaborone",
+        "Swakopmund",
+        "Windhoek"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-penicillin-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the discovery of penicillin ?",
+      "choices": [
+        "Louis Pasteur",
+        "Marie Curie",
+        "Jonas Salk",
+        "Alexander Fleming"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-evolution-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui On the Origin of Species ?",
+      "choices": [
+        "Jean-Baptiste Lamarck",
+        "Charles Darwin",
+        "Alfred Russel Wallace",
+        "Gregor Mendel"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-hertz-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui radio waves produced in the laboratory ?",
+      "choices": [
+        "Guglielmo Marconi",
+        "Nikola Tesla",
+        "Heinrich Hertz",
+        "James Clerk Maxwell"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-jemison-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first Black woman to travel in space ?",
+      "choices": [
+        "Sally Ride",
+        "Katherine Johnson",
+        "Mae Jemison",
+        "Guion Bluford"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-columbus",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Christophe Colomb a atteint les Amériques ?",
+      "choices": [
+        "1519",
+        "1607",
+        "1498",
+        "1492"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-gettysburg",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Abraham Lincoln a prononcé le discours de Gettysburg ?",
+      "choices": [
+        "1861",
+        "1850",
+        "1865",
+        "1863"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-dday",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que le débarquement de Normandie a commencé ?",
+      "choices": [
+        "1945",
+        "1943",
+        "1941",
+        "1944"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-saigon",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Saigon est tombée, ce qui a mis fin à la guerre du Vietnam ?",
+      "choices": [
+        "1968",
+        "1979",
+        "1975",
+        "1973"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-reunify",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Allemagne s'est réunifiée ?",
+      "choices": [
+        "1989",
+        "1949",
+        "1991",
+        "1990"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-pandemic",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Organisation mondiale de la santé a qualifié la COVID-19 de pandémie ?",
+      "choices": [
+        "2020",
+        "2019",
+        "2021",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-paris-agree",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Accord de Paris a été adopté ?",
+      "choices": [
+        "2016",
+        "2015",
+        "1997",
+        "2009"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-suez-open",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que le canal de Suez a été ouvert ?",
+      "choices": [
+        "1956",
+        "1859",
+        "1869",
+        "1914"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-diff-speed-light",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "La lumière parcourt environ combien de kilomètres en une seconde dans le vide ?",
+      "choices": [
+        "186000",
+        "150000",
+        "3000",
+        "300000"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-diff-heart",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "Christiaan Barnard a mené la première greffe cardiaque humaine en quelle année ?",
+      "choices": [
+        "1963",
+        "1967",
+        "1954",
+        "1978"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-diff-water-pct",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quelle part environ de la surface terrestre est de l'eau, en pourcentage ?",
+      "choices": [
+        "91",
+        "30",
+        "71",
+        "51"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    }
+  ]
+}

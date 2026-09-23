@@ -1,0 +1,857 @@
+{
+  "generation": "gen-alpha",
+  "tier": "hard",
+  "locale": "en",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-alpha-minecraft",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Block Universe",
+      "prompt": "Who originally created Minecraft?",
+      "choices": [
+        "Markus Persson (Notch)",
+        "Shigeru Miyamoto",
+        "Gabe Newell",
+        "Hideo Kojima"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-roblox",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Avatar Plaza",
+      "prompt": "Roblox is best described as what?",
+      "choices": [
+        "A physical board game only",
+        "An online platform for user-created games",
+        "A type of engine oil",
+        "A satellite TV channel"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-pixar",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lamp & Luxo",
+      "prompt": "Which studio made Toy Story, the first fully computer-animated feature film?",
+      "choices": [
+        "Pixar",
+        "Aardman only",
+        "Studio Ghibli",
+        "DreamWorks only"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-among",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sus Patrol",
+      "prompt": "Among Us is a social deduction game set mainly on what kind of setting?",
+      "choices": [
+        "A medieval bakery only",
+        "A silent library only",
+        "A tax office only",
+        "A spaceship / space crew"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ev",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Plug & Play",
+      "prompt": "What does EV commonly stand for in modern cars?",
+      "choices": [
+        "Emergency vinyl",
+        "Engine vacuum",
+        "Electric vehicle",
+        "Extra volume"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ghibli",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Totoro Territory",
+      "prompt": "Studio Ghibli is based in which country?",
+      "choices": [
+        "Brazil",
+        "Canada",
+        "Japan",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-alpha-pencil",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Team Player",
+      "prompt": "Why did the pencil join the team?",
+      "choices": [
+        "It rolled away",
+        "It hid in the case",
+        "It lost its cap",
+        "It could draw a crowd"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The eraser had its back.",
+      "slang": "Real quick,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-bookmark",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Still Here",
+      "prompt": "Why did the bookmark stay calm in the story?",
+      "choices": [
+        "It always held its place",
+        "It tore the page",
+        "It skipped the ending",
+        "It hid the title"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Chapter after chapter, still kind.",
+      "slang": "Real quick,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-planets",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Home System",
+      "prompt": "How many planets are in our solar system?",
+      "choices": [
+        "9",
+        "10",
+        "8",
+        "7"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The lineup got shorter in 2006, and it stayed kind.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-h-alpha-elephant",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "On Land",
+      "prompt": "Which animal is the largest living land animal?",
+      "choices": [
+        "Blue whale",
+        "Giraffe",
+        "Polar bear",
+        "African elephant"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The whale takes the ocean. This one stays on the ground.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-h-alpha-iss",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "First Crew",
+      "prompt": "When did the first crew arrive at the International Space Station?",
+      "choices": [
+        "2011",
+        "1986",
+        "1998",
+        "2000"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The first module was already up. The people came in 2000.",
+      "slang": "Real quick,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-al-h-ae-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of the United Arab Emirates?",
+      "choices": [
+        "Sharjah",
+        "Dubai",
+        "Abu Dhabi",
+        "Doha"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-rs-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Serbia?",
+      "choices": [
+        "Novi Sad",
+        "Niš",
+        "Zagreb",
+        "Belgrade"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-et-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Ethiopia?",
+      "choices": [
+        "Dire Dawa",
+        "Gondar",
+        "Addis Ababa",
+        "Nairobi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-1984-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel 1984?",
+      "choices": [
+        "Ray Bradbury",
+        "H. G. Wells",
+        "Aldous Huxley",
+        "George Orwell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-prince-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book The Little Prince?",
+      "choices": [
+        "Antoine de Saint-Exupéry",
+        "Victor Hugo",
+        "Jules Verne",
+        "Albert Camus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-mockingbird-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel To Kill a Mockingbird?",
+      "choices": [
+        "Harper Lee",
+        "Toni Morrison",
+        "Flannery O'Connor",
+        "Truman Capote"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-diary-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote The Diary of a Young Girl?",
+      "choices": [
+        "Primo Levi",
+        "Elie Wiesel",
+        "Anne Frank",
+        "Corrie ten Boom"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-musketeers-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Three Musketeers?",
+      "choices": [
+        "Victor Hugo",
+        "Jules Verne",
+        "Alexandre Dumas",
+        "Honoré de Balzac"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-wonderland-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote Alice's Adventures in Wonderland?",
+      "choices": [
+        "Roald Dahl",
+        "A. A. Milne",
+        "J. M. Barrie",
+        "Lewis Carroll"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-war-peace",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel War and Peace?",
+      "choices": [
+        "Ivan Turgenev",
+        "Fyodor Dostoevsky",
+        "Leo Tolstoy",
+        "Anton Chekhov"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-handmaid-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Handmaid's Tale?",
+      "choices": [
+        "Doris Lessing",
+        "Alice Munro",
+        "Ursula K. Le Guin",
+        "Margaret Atwood"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-ode-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the symphony that contains the Ode to Joy finale?",
+      "choices": [
+        "Wolfgang Amadeus Mozart",
+        "Franz Schubert",
+        "Johannes Brahms",
+        "Ludwig van Beethoven"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-rhapsody-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made Rhapsody in Blue?",
+      "choices": [
+        "Duke Ellington",
+        "George Gershwin",
+        "Aaron Copland",
+        "Leonard Bernstein"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-imagine-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Imagine?",
+      "choices": [
+        "Paul McCartney",
+        "John Lennon",
+        "Bob Dylan",
+        "George Harrison"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-single-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Single Ladies (Put a Ring on It)?",
+      "choices": [
+        "Alicia Keys",
+        "Jennifer Lopez",
+        "Rihanna",
+        "Beyoncé"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-as-it-was",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song As It Was?",
+      "choices": [
+        "Ed Sheeran",
+        "Harry Styles",
+        "Niall Horan",
+        "Louis Tomlinson"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-kind-blue",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the album Kind of Blue?",
+      "choices": [
+        "Duke Ellington",
+        "John Coltrane",
+        "Miles Davis",
+        "Louis Armstrong"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-schindler-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Schindler's List?",
+      "choices": [
+        "Steven Spielberg",
+        "Roman Polanski",
+        "Martin Scorsese",
+        "Francis Ford Coppola"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-2001-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film 2001: A Space Odyssey?",
+      "choices": [
+        "Ridley Scott",
+        "George Lucas",
+        "Stanley Kubrick",
+        "Andrei Tarkovsky"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-pan-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Pan's Labyrinth?",
+      "choices": [
+        "Alfonso Cuarón",
+        "Pedro Almodóvar",
+        "Guillermo del Toro",
+        "Alejandro G. Iñárritu"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-lion-king-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1994 film The Lion King?",
+      "choices": [
+        "Roger Allers and Rob Minkoff",
+        "Andrew Adamson",
+        "Chris Buck and Jennifer Lee",
+        "John Musker and Ron Clements"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-dune-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 2021 film Dune?",
+      "choices": [
+        "Denis Villeneuve",
+        "Ridley Scott",
+        "David Lynch",
+        "Christopher Nolan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-na",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for sodium?",
+      "choices": [
+        "Na",
+        "N",
+        "S",
+        "K"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-hg",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for mercury?",
+      "choices": [
+        "Hg",
+        "Mg",
+        "H",
+        "Me"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-al",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for aluminum?",
+      "choices": [
+        "Al",
+        "Ag",
+        "Au",
+        "Ar"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-ti",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for titanium?",
+      "choices": [
+        "Ti",
+        "Tl",
+        "Te",
+        "Sn"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-cr",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for chromium?",
+      "choices": [
+        "Cr",
+        "Cl",
+        "Cu",
+        "Co"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-highest-peak",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which mountain has the highest summit above sea level?",
+      "choices": [
+        "K2",
+        "Denali",
+        "Mount Everest",
+        "Kangchenjunga"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-closest-sun",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which planet orbits closest to the Sun?",
+      "choices": [
+        "Venus",
+        "Earth",
+        "Mars",
+        "Mercury"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-invent-paper",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited in China with the early papermaking process of the Han era?",
+      "choices": [
+        "Cai Lun",
+        "Bi Sheng",
+        "Johannes Gutenberg",
+        "Zhang Heng"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-origin-tomato",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which region were tomatoes first cultivated?",
+      "choices": [
+        "India",
+        "China",
+        "the Americas",
+        "Italy"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-watt-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who improved the steam engine into a widely used industrial machine?",
+      "choices": [
+        "James Watt",
+        "Isambard Kingdom Brunel",
+        "George Stephenson",
+        "Thomas Newcomen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-daguerre-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who gave his name to an early photographic process, the daguerreotype?",
+      "choices": [
+        "George Eastman",
+        "Louis Daguerre",
+        "Ansel Adams",
+        "Nicéphore Niépce"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-nightingale-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who became famous for nursing in the Crimean War?",
+      "choices": [
+        "Florence Nightingale",
+        "Elizabeth Blackwell",
+        "Mary Seacole",
+        "Clara Barton"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-polonium-name",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which element did Marie Curie name after her homeland?",
+      "choices": [
+        "polonium",
+        "radium",
+        "curium",
+        "francium"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-dry-ice",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Dry ice is the solid form of which gas?",
+      "choices": [
+        "carbon dioxide",
+        "oxygen",
+        "water vapor",
+        "nitrogen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-rubber-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Natural rubber comes mainly from which tree?",
+      "choices": [
+        "the rubber tree",
+        "the oak",
+        "the palm",
+        "the pine"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-cinnamon-bark",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Cinnamon is the bark of which kind of tree?",
+      "choices": [
+        "a pine",
+        "a birch",
+        "an oak",
+        "a cinnamon tree"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-h-hard-shen-kuo",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who described the magnetic compass in the Dream Pool Essays?",
+      "choices": [
+        "Cai Lun",
+        "Bi Sheng",
+        "Zhang Heng",
+        "Shen Kuo"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    }
+  ]
+}

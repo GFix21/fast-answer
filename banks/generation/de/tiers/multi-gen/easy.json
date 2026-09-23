@@ -1,0 +1,1212 @@
+{
+  "generation": "multi-gen",
+  "tier": "easy",
+  "locale": "de",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-mix-japan",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Kartenchaos",
+      "prompt": "Was ist die Hauptstadt Japans?",
+      "choices": [
+        "Tokio",
+        "Kyoto",
+        "Nagoya",
+        "Osaka"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-mona",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Louvre Lite",
+      "prompt": "Wer malte die Mona Lisa?",
+      "choices": [
+        "Donatello",
+        "Raffael",
+        "Michelangelo",
+        "Leonardo da Vinci"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-gigi3",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Gigis Easy Lane",
+      "prompt": "Wahr oder Vibe-Check: Unter welcher Label-Familie veröffentlicht DJ Gigi?",
+      "choices": [
+        "Nur Motown",
+        "GMG Brand Label",
+        "Nintendo Sound Team",
+        "Nur Deutsche Grammophon"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-stig",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "multi-gen",
+      "categoryTitle": "Weißes-Anzug-Rätsel",
+      "prompt": "Wie heißt der anonyme Rennfahrer mit Helm bei Top Gear?",
+      "choices": [
+        "The Stag",
+        "The Shadow",
+        "The Stig",
+        "The Sprinter"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-multi-guitar",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Sechs Saiten",
+      "prompt": "Wie viele Saiten hat eine gewöhnliche Gitarre?",
+      "choices": [
+        "Vier",
+        "Sechs",
+        "Acht",
+        "Zwölf"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Zwölfsaiter sind die lauteren Verwandten.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-e-multi-boil",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Kessel",
+      "prompt": "Wie hoch ist der Siedepunkt von Wasser auf Meereshöhe, in Celsius?",
+      "choices": [
+        "100",
+        "90",
+        "80",
+        "120"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Auf dem Berg ist der Kessel etwas früher fertig.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-e-multi-titanic",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Unterwegs",
+      "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Wann ist die Titanic gesunken?“ Der andere antwortet…",
+      "choices": [
+        "15. April 1912",
+        "15. April 1911",
+        "7. Mai, wenn die Fortsetzung anlegt",
+        "1. April (Aprilscherz)"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die andere Person hat die gestellte Frage beantwortet.",
+      "slang": "Für alle,",
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "when",
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-multi-stop",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Achteck",
+      "prompt": "Wie viele Seiten hat ein übliches Stoppschild?",
+      "choices": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Zähl die flachen Kanten, nicht den Pfosten.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-e-multi-sky",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Über uns",
+      "prompt": "Ein kurzer Schritt zur Seite, dann zurück zur Frage: „Welche Farbe hat ein klarer Himmel am Tag?“",
+      "choices": [
+        "Grün, falls der Rasen befördert wurde",
+        "Schwarz",
+        "Blau",
+        "Rot, aufgehoben für die Abendschicht"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Zurück in die Szene. Die Antwort ist die gewöhnliche.",
+      "slang": "Für alle,",
+      "funny": true,
+      "humorous": true,
+      "injection": "aside",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-multi-pacific",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Offenes Wasser",
+      "prompt": "Welcher Ozean ist der größte auf der Erde?",
+      "choices": [
+        "Atlantischer Ozean",
+        "Indischer Ozean",
+        "Arktischer Ozean",
+        "Pazifischer Ozean"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Karte gibt ihm das breiteste Blau.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-ca-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats California?",
+      "choices": [
+        "Sacramento",
+        "San Francisco",
+        "San Diego",
+        "Los Angeles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-ny-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats New York?",
+      "choices": [
+        "New York City",
+        "Albany",
+        "Rochester",
+        "Buffalo"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-tx-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Texas?",
+      "choices": [
+        "Austin",
+        "San Antonio",
+        "Dallas",
+        "Houston"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-fl-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Florida?",
+      "choices": [
+        "Tallahassee",
+        "Miami",
+        "Orlando",
+        "Tampa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-il-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Illinois?",
+      "choices": [
+        "Naperville",
+        "Springfield",
+        "Chicago",
+        "Aurora"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-pa-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Pennsylvania?",
+      "choices": [
+        "Philadelphia",
+        "Pittsburgh",
+        "Allentown",
+        "Harrisburg"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-oh-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Ohio?",
+      "choices": [
+        "Cincinnati",
+        "Toledo",
+        "Cleveland",
+        "Columbus"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-ga-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Georgia?",
+      "choices": [
+        "Atlanta",
+        "Macon",
+        "Augusta",
+        "Savannah"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-co-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Colorado?",
+      "choices": [
+        "Denver",
+        "Colorado Springs",
+        "Boulder",
+        "Aurora"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-hi-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Hawaii?",
+      "choices": [
+        "Hilo",
+        "Kailua",
+        "Lahaina",
+        "Honolulu"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-ma-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Massachusetts?",
+      "choices": [
+        "Boston",
+        "Cambridge",
+        "Worcester",
+        "Springfield"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-az-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Arizona?",
+      "choices": [
+        "Flagstaff",
+        "Sedona",
+        "Tucson",
+        "Phoenix"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-wa-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Washington?",
+      "choices": [
+        "Spokane",
+        "Tacoma",
+        "Olympia",
+        "Seattle"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-mi-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Michigan?",
+      "choices": [
+        "Lansing",
+        "Detroit",
+        "Ann Arbor",
+        "Grand Rapids"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-nc-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats North Carolina?",
+      "choices": [
+        "Asheville",
+        "Durham",
+        "Charlotte",
+        "Raleigh"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-gr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Griechenland?",
+      "choices": [
+        "Rom",
+        "Athen",
+        "Sparta",
+        "Thessaloniki"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-pl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Polen?",
+      "choices": [
+        "Danzig",
+        "Berlin",
+        "Warschau",
+        "Krakau"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-ar-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Argentinien?",
+      "choices": [
+        "Córdoba",
+        "Rosario",
+        "Mendoza",
+        "Buenos Aires"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-ke-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Kenia?",
+      "choices": [
+        "Nairobi",
+        "Kairo",
+        "Kisumu",
+        "Mombasa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-ph-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von den Philippinen?",
+      "choices": [
+        "Davao",
+        "Quezon City",
+        "Manila",
+        "Cebu"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-alphabet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Buchstaben hat das englische Alphabet?",
+      "choices": [
+        "28",
+        "24",
+        "26",
+        "21"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-circle-degrees",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Grad hat ein voller Kreis?",
+      "choices": [
+        "180",
+        "100",
+        "360",
+        "90"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cube-edges",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Kanten hat ein Würfel?",
+      "choices": [
+        "6",
+        "8",
+        "16",
+        "12"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-checkers-pieces",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Steine hat jeder Dame-Spieler am Anfang?",
+      "choices": [
+        "8",
+        "16",
+        "10",
+        "12"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-uk-nations",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Länder bilden das Vereinigte Königreich?",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-earth-moon",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Monde hat die Erde?",
+      "choices": [
+        "0",
+        "4",
+        "2",
+        "1"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-baseball-strikes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Strikes ergeben ein Aus beim Baseball?",
+      "choices": [
+        "2",
+        "4",
+        "5",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-touchdown-points",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Punkte bringt ein Touchdown im American Football, vor dem Kick?",
+      "choices": [
+        "7",
+        "1",
+        "6",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-mlb-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Teams hat die Major League Baseball?",
+      "choices": [
+        "32",
+        "16",
+        "30",
+        "28"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-piano-white",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele weiße Tasten hat ein gewöhnliches Klavier?",
+      "choices": [
+        "52",
+        "36",
+        "48",
+        "88"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-haiku-lines",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Zeilen hat ein Haiku?",
+      "choices": [
+        "4",
+        "5",
+        "17",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-meter-cm",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Zentimeter hat ein Meter?",
+      "choices": [
+        "10",
+        "12",
+        "100",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-motorcycle-wheels",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Räder hat ein typisches Motorrad?",
+      "choices": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-petra-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht die antike Stadt Petra?",
+      "choices": [
+        "Israel",
+        "Syria",
+        "Jordan",
+        "Egypt"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-angkor-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht Angkor Wat?",
+      "choices": [
+        "Cambodia",
+        "Thailand",
+        "Vietnam",
+        "Laos"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-alps-continent",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht die Alpen?",
+      "choices": [
+        "Europe",
+        "South America",
+        "Africa",
+        "Asia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-liberty-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Land steht die Freiheitsstatue?",
+      "choices": [
+        "France",
+        "the United Kingdom",
+        "Canada",
+        "the United States"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-clocks-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemalt The Persistence of Memory?",
+      "choices": [
+        "Pablo Picasso",
+        "René Magritte",
+        "Joan Miró",
+        "Salvador Dalí"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-soup-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemalt the Campbell's Soup Cans?",
+      "choices": [
+        "Keith Haring",
+        "Jean-Michel Basquiat",
+        "Roy Lichtenstein",
+        "Andy Warhol"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-sunflowers-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemalt the Sunflowers still lifes?",
+      "choices": [
+        "Vincent van Gogh",
+        "Paul Gauguin",
+        "Claude Monet",
+        "Paul Cézanne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-volvo-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land ist die Heimat von Volvo Cars?",
+      "choices": [
+        "Norway",
+        "Germany",
+        "Sweden",
+        "the United States"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-peugeot-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land ist die Heimat von Peugeot?",
+      "choices": [
+        "Italy",
+        "France",
+        "Germany",
+        "Spain"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-brazil",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit Brazil verbunden?",
+      "choices": [
+        "French",
+        "Spanish",
+        "Portuguese",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-quebec",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit the province of Quebec verbunden?",
+      "choices": [
+        "English",
+        "French",
+        "German",
+        "Spanish"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-vietnam",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit Vietnam verbunden?",
+      "choices": [
+        "Vietnamese",
+        "Thai",
+        "French",
+        "Chinese"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-kenya",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Hauptsprache ist in dieser Frage mit Kenya, alongside English, as an official language verbunden?",
+      "choices": [
+        "Swahili",
+        "Arabic",
+        "Amharic",
+        "Zulu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-3",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Marokko?",
+      "choices": [
+        "Europa",
+        "Südamerika",
+        "Afrika",
+        "Asien"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-10",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Thailand?",
+      "choices": [
+        "Europa",
+        "Nordamerika",
+        "Asien",
+        "Afrika"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-17",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Polen?",
+      "choices": [
+        "Europa",
+        "Afrika",
+        "Südamerika",
+        "Asien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-24",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Jamaika?",
+      "choices": [
+        "Europa",
+        "Südamerika",
+        "Nordamerika",
+        "Afrika"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-31",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Neuseeland?",
+      "choices": [
+        "Ozeanien",
+        "Europa",
+        "Afrika",
+        "Asien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-38",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Auf welchem Kontinent liegt Finnland?",
+      "choices": [
+        "Asien",
+        "Afrika",
+        "Südamerika",
+        "Europa"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Mexiko?",
+      "choices": [
+        "der Dollar",
+        "der Euro",
+        "der Yen",
+        "der Peso"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-12",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Kanada?",
+      "choices": [
+        "der Yen",
+        "der Euro",
+        "der Peso",
+        "der Dollar"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-19",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Nigeria?",
+      "choices": [
+        "der Dollar",
+        "der Yen",
+        "der Naira",
+        "der Euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-26",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Was ist die wichtigste Währung von Vietnam?",
+      "choices": [
+        "der Dong",
+        "der Euro",
+        "der Dollar",
+        "der Yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-3",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Croissants?",
+      "choices": [
+        "Mexiko",
+        "Frankreich",
+        "Italien",
+        "Japan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Fish and Chips?",
+      "choices": [
+        "Italien",
+        "Mexiko",
+        "Vereinigtes Königreich",
+        "Japan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Ceviche?",
+      "choices": [
+        "Peru",
+        "Japan",
+        "Mexiko",
+        "Italien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-24",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Land verbindet man am stärksten mit Käsefondue?",
+      "choices": [
+        "Schweiz",
+        "Japan",
+        "Italien",
+        "Mexiko"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Für alle,"
+    }
+  ]
+}

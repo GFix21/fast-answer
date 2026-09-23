@@ -1,0 +1,346 @@
+{
+  "generation": "gen-z",
+  "tier": "difficult",
+  "locale": "en",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-genz-openai",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Model Manners",
+      "prompt": "OpenAI released ChatGPT to the public in which year?",
+      "choices": [
+        "2018",
+        "2024",
+        "2022",
+        "2020"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-genz-parasite",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Stairs & Subtitles",
+      "prompt": "Which country’s film Parasite won the Academy Award for Best Picture?",
+      "choices": [
+        "South Korea",
+        "Japan",
+        "France",
+        "Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-genz-webb",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Deep Eye",
+      "prompt": "In which year did the James Webb Space Telescope launch?",
+      "choices": [
+        "2021",
+        "2024",
+        "2016",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Christmas Day, from a spaceport in South America.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-af-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Afghanistan?",
+      "choices": [
+        "Kandahar",
+        "Mazar-i-Sharif",
+        "Herat",
+        "Kabul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-mg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Madagascar?",
+      "choices": [
+        "Antananarivo",
+        "Nairobi",
+        "Antsirabe",
+        "Toamasina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-zm-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Zambia?",
+      "choices": [
+        "Harare",
+        "Lusaka",
+        "Ndola",
+        "Kitwe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-bulb-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with a practical incandescent light bulb sold widely in the United States?",
+      "choices": [
+        "Nikola Tesla",
+        "George Westinghouse",
+        "Alexander Graham Bell",
+        "Thomas Edison"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-pasteur-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the process called pasteurization?",
+      "choices": [
+        "Louis Pasteur",
+        "Robert Koch",
+        "Joseph Lister",
+        "Edward Jenner"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-lovelace-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the notes often called the first computer program, on Babbage's engine?",
+      "choices": [
+        "Charles Babbage",
+        "Grace Hopper",
+        "Alan Turing",
+        "Ada Lovelace"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-shepard-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the first American in space?",
+      "choices": [
+        "Gus Grissom",
+        "Alan Shepard",
+        "John Glenn",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-independence",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the U.S. Declaration of Independence was adopted?",
+      "choices": [
+        "1812",
+        "1776",
+        "1787",
+        "1789"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-revolution-ru",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the October Revolution took place in Russia?",
+      "choices": [
+        "1917",
+        "1905",
+        "1914",
+        "1922"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-china-prc",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the People's Republic of China was proclaimed?",
+      "choices": [
+        "1949",
+        "1950",
+        "1912",
+        "1945"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-election-sa",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year South Africa held its first election with universal adult suffrage?",
+      "choices": [
+        "1990",
+        "2000",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-beijing-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the Beijing Summer Olympics were held?",
+      "choices": [
+        "2008",
+        "2012",
+        "2004",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-pluto",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the International Astronomical Union reclassified Pluto as a dwarf planet?",
+      "choices": [
+        "2003",
+        "1999",
+        "2015",
+        "2006"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-panama",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the Panama Canal opened to traffic?",
+      "choices": [
+        "1904",
+        "1898",
+        "1869",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-superbowl",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the first Super Bowl was played?",
+      "choices": [
+        "1970",
+        "1960",
+        "1967",
+        "1958"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-diff-protons-o",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "An oxygen atom has how many protons?",
+      "choices": [
+        "8",
+        "6",
+        "16",
+        "2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-diff-airlift",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "The Berlin Airlift began in which year?",
+      "choices": [
+        "1953",
+        "1945",
+        "1948",
+        "1961"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    }
+  ]
+}

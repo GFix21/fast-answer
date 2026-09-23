@@ -1,0 +1,56 @@
+{
+  "generation": "gen-alpha",
+  "tier": "easy",
+  "locale": "en",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-a-e-tablet",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Gen Alpha",
+      "prompt": "Which device is designed mainly for touch-screen apps and video, not physical keyboards?",
+      "choices": [
+        "Turntable",
+        "Fax machine",
+        "Tablet",
+        "CRT television remote only"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Age-fair easy item — object recognition, not meme fluency.",
+      "sources": [
+        {
+          "label": "Wikipedia — Tablet computer"
+        },
+        {
+          "label": "Consumer electronics definitions"
+        }
+      ]
+    },
+    {
+      "id": "place-geo-e-continents",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Land",
+      "prompt": "How many continents are in the common seven-continent model?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy geography count in the common model.",
+      "sources": [
+        {
+          "label": "National Geographic — continents"
+        },
+        {
+          "label": "Encyclopaedia Britannica — continent"
+        }
+      ]
+    }
+  ]
+}

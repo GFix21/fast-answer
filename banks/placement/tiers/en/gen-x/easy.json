@@ -1,0 +1,56 @@
+{
+  "generation": "gen-x",
+  "tier": "easy",
+  "locale": "en",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-x-e-back-future",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · 80s Screen",
+      "prompt": "In Back to the Future, what kind of vehicle is the time machine?",
+      "choices": [
+        "A helicopter",
+        "A phone booth",
+        "A steam train",
+        "A DeLorean car"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Easy Gen X flavour — still widely known.",
+      "sources": [
+        {
+          "label": "Wikipedia — Back to the Future"
+        },
+        {
+          "label": "Film itself (1985)"
+        }
+      ]
+    },
+    {
+      "id": "place-mus-e-violin",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Strings",
+      "prompt": "How many strings does a standard violin have?",
+      "choices": [
+        "4",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy instrument fact. A guitar is a different count.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — violin"
+        },
+        {
+          "label": "Grove Music Online — violin"
+        }
+      ]
+    }
+  ]
+}

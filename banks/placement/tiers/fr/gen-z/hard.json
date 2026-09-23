@@ -1,0 +1,56 @@
+{
+  "generation": "gen-z",
+  "tier": "hard",
+  "locale": "fr",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-z-h-fortnite",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Gen Z",
+      "prompt": "Fortnite est surtout connu comme quel type de jeu ?",
+      "choices": [
+        "Un battle royale / jeu multijoueur en ligne",
+        "Un outil de préparation fiscale",
+        "Un moteur d’échecs",
+        "Un simulateur de vol des années 1980"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen Z médian — lisible pour les autres ; éviter les pièges d’argot.",
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games product pages"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-mercury",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Métal",
+      "prompt": "Quel métal est liquide à température ambiante ?",
+      "choices": [
+        "Mercure",
+        "Fer",
+        "Or",
+        "Cuivre"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Fait difficile sur les matériaux. Ici, c'est le métal, pas la planète.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — mercury"
+        },
+        {
+          "label": "Royal Society of Chemistry — mercury"
+        }
+      ]
+    }
+  ]
+}

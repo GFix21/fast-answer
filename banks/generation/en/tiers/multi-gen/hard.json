@@ -1,0 +1,868 @@
+{
+  "generation": "multi-gen",
+  "tier": "hard",
+  "locale": "en",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-mix-nile",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "River Rank",
+      "prompt": "Which African river is traditionally named among the world’s longest?",
+      "choices": [
+        "Thames",
+        "Seine",
+        "Hudson",
+        "Nile"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-van-gogh",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Starry Fact",
+      "prompt": "Vincent van Gogh is strongly associated with which painting?",
+      "choices": [
+        "Guernica",
+        "The Scream only as sole work",
+        "The Starry Night",
+        "The Persistence of Memory"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-v8",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Cylinder Count",
+      "prompt": "A V8 engine typically has how many cylinders?",
+      "choices": [
+        "Four",
+        "Two",
+        "Sixteen",
+        "Eight"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-hamilton",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Broadway Beats",
+      "prompt": "Who wrote the music and lyrics for the musical Hamilton?",
+      "choices": [
+        "Andrew Lloyd Webber",
+        "Stephen Sondheim",
+        "Elton John",
+        "Lin-Manuel Miranda"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-multi-photo",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Green Work",
+      "prompt": "Which gas do plants take in during photosynthesis?",
+      "choices": [
+        "Nitrogen",
+        "Helium",
+        "Carbon dioxide",
+        "Oxygen"
+      ],
+      "correctIndex": 2,
+      "banterHint": "They hand oxygen back to the room.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-h-multi-pitch",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "On the Field",
+      "prompt": "How many players from one soccer team are on the field at a time?",
+      "choices": [
+        "11",
+        "15",
+        "9",
+        "13"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The goalkeeper counts as one of them.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-h-multi-compass",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "True North",
+      "prompt": "Why did the compass join the quiz?",
+      "choices": [
+        "It hid the map",
+        "It skipped the trail",
+        "It lost the needle",
+        "It wanted to get its bearings"
+      ],
+      "correctIndex": 3,
+      "banterHint": "North stayed a kind direction.",
+      "slang": "For the room,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-multi-eclipse",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Night Shade",
+      "prompt": "What colour is the Moon during a total lunar eclipse?",
+      "choices": [
+        "Red",
+        "Blue",
+        "Green",
+        "White"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Earth's shadow lends that shade.",
+      "slang": "For the room,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-h-multi-titanic-hull",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Same Walk",
+      "prompt": "Two friends are walking. One asks the other, \"What colour was the hull of the Titanic?\" The other answers…",
+      "choices": [
+        "White",
+        "Green, after a long stay in the harbour",
+        "Red, if the funnel is telling the story",
+        "Black"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Same walk. Different structure. The hull was not the date.",
+      "slang": "For the room,",
+      "funny": true,
+      "humorous": true,
+      "renegade": true,
+      "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-h-multi-piano",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Keyboard",
+      "prompt": "How many keys does a standard piano have?",
+      "choices": [
+        "61",
+        "76",
+        "88",
+        "92"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Count the black and the white. The total is the long one.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-h-multi-metric",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Metric Act",
+      "prompt": "When did the United States adopt the Metric Conversion Act?",
+      "choices": [
+        "1959",
+        "1975",
+        "1960",
+        "1988"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The inch stayed in the kitchen. The act still has a year.",
+      "slang": "For the room,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-mu-h-or-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Oregon?",
+      "choices": [
+        "Salem",
+        "Eugene",
+        "Bend",
+        "Portland"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-nv-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Nevada?",
+      "choices": [
+        "Las Vegas",
+        "Carson City",
+        "Henderson",
+        "Reno"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ut-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Utah?",
+      "choices": [
+        "Park City",
+        "Ogden",
+        "Salt Lake City",
+        "Provo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-nm-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of New Mexico?",
+      "choices": [
+        "Santa Fe",
+        "Taos",
+        "Las Cruces",
+        "Albuquerque"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-la-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Louisiana?",
+      "choices": [
+        "Baton Rouge",
+        "Lafayette",
+        "New Orleans",
+        "Shreveport"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-mo-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Missouri?",
+      "choices": [
+        "Springfield",
+        "Jefferson City",
+        "Kansas City",
+        "St. Louis"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-mn-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Minnesota?",
+      "choices": [
+        "Saint Paul",
+        "Duluth",
+        "Minneapolis",
+        "Rochester"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-wi-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Wisconsin?",
+      "choices": [
+        "Milwaukee",
+        "Kenosha",
+        "Madison",
+        "Green Bay"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-tn-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Tennessee?",
+      "choices": [
+        "Memphis",
+        "Chattanooga",
+        "Knoxville",
+        "Nashville"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ky-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Kentucky?",
+      "choices": [
+        "Bowling Green",
+        "Frankfort",
+        "Louisville",
+        "Lexington"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-al-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Alabama?",
+      "choices": [
+        "Montgomery",
+        "Mobile",
+        "Huntsville",
+        "Birmingham"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-sc-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of South Carolina?",
+      "choices": [
+        "Charleston",
+        "Myrtle Beach",
+        "Greenville",
+        "Columbia"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-va-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Virginia?",
+      "choices": [
+        "Richmond",
+        "Norfolk",
+        "Arlington",
+        "Virginia Beach"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-md-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Maryland?",
+      "choices": [
+        "Annapolis",
+        "Rockville",
+        "Frederick",
+        "Baltimore"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-nj-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of New Jersey?",
+      "choices": [
+        "Newark",
+        "Atlantic City",
+        "Trenton",
+        "Jersey City"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ct-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Connecticut?",
+      "choices": [
+        "Hartford",
+        "New Haven",
+        "Stamford",
+        "Bridgeport"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ri-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Rhode Island?",
+      "choices": [
+        "Warwick",
+        "Pawtucket",
+        "Providence",
+        "Newport"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-me-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Maine?",
+      "choices": [
+        "Bangor",
+        "Bar Harbor",
+        "Portland",
+        "Augusta"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-nh-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of New Hampshire?",
+      "choices": [
+        "Nashua",
+        "Portsmouth",
+        "Manchester",
+        "Concord"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-vt-cap",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Vermont?",
+      "choices": [
+        "Burlington",
+        "Stowe",
+        "Rutland",
+        "Montpelier"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-ir-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Iran?",
+      "choices": [
+        "Tehran",
+        "Isfahan",
+        "Shiraz",
+        "Mashhad"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-sk-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Slovakia?",
+      "choices": [
+        "Kosice",
+        "Vienna",
+        "Prague",
+        "Bratislava"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-gh-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Ghana?",
+      "choices": [
+        "Accra",
+        "Lagos",
+        "Kumasi",
+        "Tamale"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-farm-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Animal Farm?",
+      "choices": [
+        "Aldous Huxley",
+        "George Eliot",
+        "George Orwell",
+        "John Steinbeck"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-quixote-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Don Quixote?",
+      "choices": [
+        "Gabriel García Márquez",
+        "Federico García Lorca",
+        "Lope de Vega",
+        "Miguel de Cervantes"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-charlotte-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book Charlotte's Web?",
+      "choices": [
+        "E. B. White",
+        "Beatrix Potter",
+        "Roald Dahl",
+        "A. A. Milne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-achebe-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Things Fall Apart?",
+      "choices": [
+        "Chinua Achebe",
+        "Ben Okri",
+        "Ngũgĩ wa Thiong'o",
+        "Wole Soyinka"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-leagues-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Twenty Thousand Leagues Under the Seas?",
+      "choices": [
+        "Jules Verne",
+        "Herman Melville",
+        "Robert Louis Stevenson",
+        "H. G. Wells"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-treasure-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Treasure Island?",
+      "choices": [
+        "Daniel Defoe",
+        "Robert Louis Stevenson",
+        "Jules Verne",
+        "Jonathan Swift"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-anna-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Anna Karenina?",
+      "choices": [
+        "Leo Tolstoy",
+        "Thomas Mann",
+        "Gustave Flaubert",
+        "Fyodor Dostoevsky"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-left-hand",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Left Hand of Darkness?",
+      "choices": [
+        "Philip K. Dick",
+        "Ursula K. Le Guin",
+        "Octavia Butler",
+        "Margaret Atwood"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-flute-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the opera The Magic Flute?",
+      "choices": [
+        "Wolfgang Amadeus Mozart",
+        "Joseph Haydn",
+        "Christoph Willibald Gluck",
+        "Ludwig van Beethoven"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-rite-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the ballet The Rite of Spring?",
+      "choices": [
+        "Igor Stravinsky",
+        "Béla Bartók",
+        "Claude Debussy",
+        "Sergei Prokofiev"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-respect-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Respect, in the famous 1967 recording?",
+      "choices": [
+        "Aretha Franklin",
+        "Tina Turner",
+        "Etta James",
+        "Diana Ross"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-bad-guy-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song bad guy?",
+      "choices": [
+        "Olivia Rodrigo",
+        "Dua Lipa",
+        "Lorde",
+        "Billie Eilish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-anti-hero",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Anti-Hero?",
+      "choices": [
+        "Adele",
+        "Lana Del Rey",
+        "Billie Eilish",
+        "Taylor Swift"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-wonderful-world",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song What a Wonderful World, in the famous recording?",
+      "choices": [
+        "Frank Sinatra",
+        "Nat King Cole",
+        "Ella Fitzgerald",
+        "Louis Armstrong"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-titanic-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1997 film Titanic?",
+      "choices": [
+        "Steven Spielberg",
+        "Kathryn Bigelow",
+        "Ridley Scott",
+        "James Cameron"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-h-shining-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1980 film The Shining?",
+      "choices": [
+        "Brian De Palma",
+        "Stanley Kubrick",
+        "John Carpenter",
+        "David Lynch"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "generation": "gen-y",
+  "tier": "hard",
+  "locale": "en",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-y-h-matrix",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Gen Y",
+      "prompt": "In The Matrix (1999), which pill does Neo take to see the truth?",
+      "choices": [
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Millennial mid probe — iconic, unambiguous.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Matrix"
+        },
+        {
+          "label": "The Matrix (1999) film"
+        }
+      ]
+    },
+    {
+      "id": "place-geo-h-indian",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Between Coasts",
+      "prompt": "Which ocean lies between Africa and Australia?",
+      "choices": [
+        "Indian Ocean",
+        "Atlantic Ocean",
+        "Pacific Ocean",
+        "Arctic Ocean"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Hard map fact. The largest ocean is a different question.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Indian Ocean"
+        },
+        {
+          "label": "NOAA — ocean basins"
+        }
+      ]
+    }
+  ]
+}

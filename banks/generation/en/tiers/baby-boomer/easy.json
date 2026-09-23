@@ -1,0 +1,1202 @@
+{
+  "generation": "baby-boomer",
+  "tier": "easy",
+  "locale": "en",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-boomer-moon",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "One Small Step",
+      "prompt": "Who was the first person to walk on the Moon?",
+      "choices": [
+        "John Glenn",
+        "Yuri Gagarin",
+        "Buzz Aldrin",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-apollo",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Apollo Clock",
+      "prompt": "In which year did Apollo 11 land on the Moon?",
+      "choices": [
+        "1965",
+        "1972",
+        "1969",
+        "1961"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Festival Folklore",
+      "prompt": "In which U.S. state was the 1969 Woodstock festival held?",
+      "choices": [
+        "California",
+        "New York",
+        "Florida",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-beatles",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sullivan Sunday",
+      "prompt": "Which British band made a famous U.S. splash on The Ed Sullivan Show in 1964?",
+      "choices": [
+        "The Beatles",
+        "The Who",
+        "The Kinks",
+        "The Rolling Stones"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-kirk",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Bridge Banter",
+      "prompt": "Who captained the starship Enterprise in the original Star Trek TV series?",
+      "choices": [
+        "James T. Kirk",
+        "Han Solo",
+        "Spock",
+        "Jean-Luc Picard"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-abs",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Petrolhead Pop Quiz",
+      "prompt": "What does ABS stand for in car safety systems?",
+      "choices": [
+        "Axle Balance Sensor",
+        "Advanced Battery Switch",
+        "Anti-lock Braking System",
+        "Automatic Boost System"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-boomer-gaye",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Soul Hour",
+      "prompt": "Who released the album What's Going On in 1971?",
+      "choices": [
+        "Sam Cooke",
+        "Stevie Wonder",
+        "Marvin Gaye",
+        "Otis Redding"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The questions on that record still stand.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-e-boomer-skylab",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Workshop in Orbit",
+      "prompt": "What was the name of NASA's first space station, launched in 1973?",
+      "choices": [
+        "Salyut",
+        "Freedom",
+        "Skylab",
+        "Mir"
+      ],
+      "correctIndex": 2,
+      "banterHint": "A workshop with a very long commute.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-e-boomer-submarine",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Under the Sea",
+      "prompt": "What colour is the submarine in the Beatles song?",
+      "choices": [
+        "Blue",
+        "Green",
+        "Yellow",
+        "Red"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The title gives the paint job away.",
+      "slang": "Right on,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "The Field",
+      "prompt": "First guess, wrong. Second guess, wrong. Then the real question: \"When did the Woodstock festival begin?\"",
+      "choices": [
+        "August 15, 1969",
+        "July 4, when the fireworks thought they were the band",
+        "June 1, a month early and already muddy",
+        "August 15, 1967"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Two wrong dates, then the Friday it opened.",
+      "slang": "Right on,",
+      "funny": true,
+      "humorous": true,
+      "injection": "rule-of-three",
+      "structure": "when",
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-e-boomer-parks",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "December 1",
+      "prompt": "Whose arrest in Montgomery on December 1, 1955, started the bus boycott?",
+      "choices": [
+        "Rosa Parks",
+        "Dorothy Height",
+        "Ella Baker",
+        "Claudette Colvin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The seat stayed taken. The boycott followed.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-de-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Germany?",
+      "choices": [
+        "Berlin",
+        "Hamburg",
+        "Frankfurt",
+        "Munich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-be-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Belgium?",
+      "choices": [
+        "Brussels",
+        "Antwerp",
+        "Bruges",
+        "Amsterdam"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cn-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of China?",
+      "choices": [
+        "Beijing",
+        "Hong Kong",
+        "Shanghai",
+        "Guangzhou"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-th-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Thailand?",
+      "choices": [
+        "Phuket",
+        "Pattaya",
+        "Chiang Mai",
+        "Bangkok"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-hu-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Hungary?",
+      "choices": [
+        "Budapest",
+        "Debrecen",
+        "Prague",
+        "Vienna"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-nz-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of New Zealand?",
+      "choices": [
+        "Christchurch",
+        "Queenstown",
+        "Auckland",
+        "Wellington"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-week-days",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many days are in a week?",
+      "choices": [
+        "7",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-triangle-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many sides does a triangle have?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-die-faces",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many faces does a standard die have?",
+      "choices": [
+        "4",
+        "8",
+        "12",
+        "6"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-olympic-rings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many rings are on the Olympic flag?",
+      "choices": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-heart-chambers",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many chambers does the human heart have?",
+      "choices": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-galilean",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many large moons did Galileo see around Jupiter?",
+      "choices": [
+        "12",
+        "4",
+        "2",
+        "8"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-hockey-periods",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many periods are in a standard ice hockey game?",
+      "choices": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-rugby-union",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players are on a rugby union team?",
+      "choices": [
+        "13",
+        "7",
+        "11",
+        "15"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-premier-league",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many clubs are in the English Premier League?",
+      "choices": [
+        "20",
+        "22",
+        "16",
+        "18"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-staff-lines",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many lines are on a standard music staff?",
+      "choices": [
+        "6",
+        "4",
+        "5",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-named-oceans",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many oceans are commonly named on a world map?",
+      "choices": [
+        "4",
+        "5",
+        "7",
+        "6"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-decade-years",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many years are in a decade?",
+      "choices": [
+        "5",
+        "10",
+        "12",
+        "100"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-traffic-light",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many colours does a standard traffic light cycle show?",
+      "choices": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-acropolis-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Acropolis of Athens?",
+      "choices": [
+        "Turkey",
+        "Egypt",
+        "Italy",
+        "Greece"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-neuschwanstein-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is Neuschwanstein Castle?",
+      "choices": [
+        "Germany",
+        "Switzerland",
+        "France",
+        "Austria"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-sahara-continent",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Sahara?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "Europe",
+        "Australia"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-sagrada-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Sagrada Família?",
+      "choices": [
+        "Spain",
+        "Italy",
+        "Portugal",
+        "France"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-venus-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The Birth of Venus?",
+      "choices": [
+        "Sandro Botticelli",
+        "Leonardo da Vinci",
+        "Raphael",
+        "Michelangelo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-nighthawks-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted Nighthawks?",
+      "choices": [
+        "Grant Wood",
+        "Andrew Wyeth",
+        "Norman Rockwell",
+        "Edward Hopper"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-bosch-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The Garden of Earthly Delights?",
+      "choices": [
+        "Hieronymus Bosch",
+        "Jan van Eyck",
+        "Albrecht Dürer",
+        "Pieter Bruegel the Elder"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-beetle-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of the original Volkswagen Beetle?",
+      "choices": [
+        "Germany",
+        "Italy",
+        "the United States",
+        "Japan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-kia-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Kia?",
+      "choices": [
+        "South Korea",
+        "Japan",
+        "China",
+        "Germany"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-lang-egypt",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Egypt in this question?",
+      "choices": [
+        "Arabic",
+        "Hebrew",
+        "English",
+        "French"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-lang-argentina",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Argentina in this question?",
+      "choices": [
+        "Italian",
+        "Portuguese",
+        "Spanish",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-lang-korea",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with South Korea in this question?",
+      "choices": [
+        "Thai",
+        "Korean",
+        "Japanese",
+        "Chinese"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-lang-ethiopia",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Ethiopia, as the federal working language in this question?",
+      "choices": [
+        "Arabic",
+        "Swahili",
+        "Amharic",
+        "Somali"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-5",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Ethiopia?",
+      "choices": [
+        "Africa",
+        "Asia",
+        "South America",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-12",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Saudi Arabia?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "Europe",
+        "North America"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-19",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Greece?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "South America",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-26",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Argentina?",
+      "choices": [
+        "Europe",
+        "South America",
+        "North America",
+        "Africa"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-33",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Iceland?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "South America",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-0",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Japan?",
+      "choices": [
+        "the peso",
+        "the yen",
+        "the dollar",
+        "the euro"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-7",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of South Korea?",
+      "choices": [
+        "the won",
+        "the dollar",
+        "the euro",
+        "the yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-14",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Russia?",
+      "choices": [
+        "the dollar",
+        "the yen",
+        "the ruble",
+        "the euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-21",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Israel?",
+      "choices": [
+        "the shekel",
+        "the yen",
+        "the dollar",
+        "the euro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-28",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Hungary?",
+      "choices": [
+        "the yen",
+        "the euro",
+        "the forint",
+        "the dollar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-food-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with pho?",
+      "choices": [
+        "Vietnam",
+        "Japan",
+        "Mexico",
+        "Italy"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-food-12",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with dim sum?",
+      "choices": [
+        "China",
+        "Italy",
+        "Japan",
+        "Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-food-19",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with gelato?",
+      "choices": [
+        "Japan",
+        "France",
+        "Mexico",
+        "Italy"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-food-26",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with gyoza?",
+      "choices": [
+        "Italy",
+        "France",
+        "Japan",
+        "Mexico"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-ani-2",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is largest animal?",
+      "choices": [
+        "the elephant",
+        "the great white shark",
+        "the giraffe",
+        "the blue whale"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-ani-8",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is largest wild cat?",
+      "choices": [
+        "the lion",
+        "the leopard",
+        "the tiger",
+        "the jaguar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-ani-14",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is striped horse-like animal?",
+      "choices": [
+        "the donkey",
+        "the horse",
+        "the zebra",
+        "the okapi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-ani-20",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is small Australian eucalyptus animal?",
+      "choices": [
+        "the panda",
+        "the koala",
+        "the wombat",
+        "the sloth"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-primary-colors",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many primary colours are in the classic pigment set of red, yellow, and blue?",
+      "choices": [
+        "2",
+        "7",
+        "4",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-fingers-hand",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many fingers, counting the thumb, are on one human hand?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-snow-white-dwarfs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many dwarfs live with Snow White in the classic tale?",
+      "choices": [
+        "3",
+        "9",
+        "7",
+        "5"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-notes-scale",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many different letter names are in a musical scale before the names repeat: A through G?",
+      "choices": [
+        "5",
+        "12",
+        "7",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-frets-ukulele-skip",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many valves does a standard tuba use in the common three-valve design?",
+      "choices": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-easy-wheels-tricycle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many wheels does a typical tricycle have?",
+      "choices": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-easy-table-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many legs does a typical table have?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "6"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-easy-baker-dozen",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many items are in a baker's dozen?",
+      "choices": [
+        "12",
+        "10",
+        "14",
+        "13"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-e-easy-pair",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many items are in a pair?",
+      "choices": [
+        "1",
+        "3",
+        "4",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "generation": "baby-boomer",
+  "tier": "easy",
+  "locale": "fr-CA",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-boomer-e-armstrong",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Qui a été la première personne à marcher sur la Lune ?",
+      "choices": [
+        "Youri Gagarine",
+        "Buzz Aldrin",
+        "Neil Armstrong",
+        "John Glenn"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer facile — universel culturel de l’ère Apollo.",
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 mission pages"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-e-apollo11",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "En quelle année Apollo 11 a fait atterrir les premiers humains sur la Lune ?",
+      "choices": [
+        "1975",
+        "1957",
+        "1969",
+        "1963"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer facile — fait d’année sur l’alunissage, connu des manuels.",
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 11"
+        },
+        {
+          "label": "NASA Apollo program chronology"
+        }
+      ]
+    }
+  ]
+}

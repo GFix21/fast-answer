@@ -1,0 +1,177 @@
+{
+  "generation": "gen-z",
+  "tier": "extreme",
+  "locale": "de",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-genz-fortnite-mode",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Finale · Sturmkreis",
+      "prompt": "Wie heißt der originale Free-to-Play-PvP-Modus von Fortnite, der den Boom prägte, üblicherweise?",
+      "choices": [
+        "Battle Royale",
+        "Nur Save the World",
+        "Nur Creative",
+        "Nur Rocket Racing"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-gz-x-bo-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die verfassungsmäßige Hauptstadt von Bolivien?",
+      "choices": [
+        "La Paz",
+        "Santa Cruz",
+        "Cochabamba",
+        "Sucre"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Der Regierungssitz ist eine andere Stadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-pa-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Panama?",
+      "choices": [
+        "Colón",
+        "David",
+        "San José",
+        "Panama-Stadt"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-ws-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Samoa?",
+      "choices": [
+        "Apia",
+        "Suva",
+        "Nuku'alofa",
+        "Pago Pago"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-al-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Albanien?",
+      "choices": [
+        "Podgorica",
+        "Tirana",
+        "Durrës",
+        "Vlora"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-ge-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Georgien?",
+      "choices": [
+        "Tiflis",
+        "Yerevan",
+        "Baku",
+        "Batumi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-ug-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Uganda?",
+      "choices": [
+        "Kampala",
+        "Gulu",
+        "Nairobi",
+        "Entebbe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-ly-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Libyen?",
+      "choices": [
+        "Bengasi",
+        "Misrata",
+        "Tunis",
+        "Tripolis"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-atomic-ag",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Ordnungszahl hat Silber?",
+      "choices": [
+        "79",
+        "29",
+        "50",
+        "47"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-x-bones-adult",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Ungefähr wie viele Knochen hat ein erwachsenes menschliches Skelett?",
+      "choices": [
+        "186",
+        "206",
+        "180",
+        "256"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    }
+  ]
+}

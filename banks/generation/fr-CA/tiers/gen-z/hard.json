@@ -1,0 +1,853 @@
+{
+  "generation": "gen-z",
+  "tier": "hard",
+  "locale": "fr-CA",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-genz-fortnite2",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Code de l’île",
+      "prompt": "Quelle entreprise développe Fortnite ?",
+      "choices": [
+        "Valve",
+        "Nintendo",
+        "Epic Games",
+        "Sega"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-spotify2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "QG du stream",
+      "prompt": "Dans quel pays Spotify a été fondé ?",
+      "choices": [
+        "Suède",
+        "Brésil",
+        "Corée du Sud",
+        "États-Unis"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-btsv",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Boussole K-pop",
+      "prompt": "BTS est un groupe de musique de quel pays ?",
+      "choices": [
+        "Corée du Sud",
+        "Thaïlande",
+        "Chine",
+        "Japon"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-tesla",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Autoroute VE",
+      "prompt": "Tesla, Inc. est surtout connue pour fabriquer quoi ?",
+      "choices": [
+        "Uniquement des voiliers",
+        "Uniquement des machines à écrire mécaniques",
+        "Des véhicules électriques",
+        "Uniquement des presses à vinyle"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-blackpanther",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fin de semaine à Wakanda",
+      "prompt": "Qui a réalisé le film Marvel Black Panther de 2018 ?",
+      "choices": [
+        "Ryan Coogler",
+        "Patty Jenkins",
+        "Taika Waititi",
+        "James Gunn"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-paris-acc",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Carte climat",
+      "prompt": "L’Accord de Paris est un grand accord international portant sur quoi ?",
+      "choices": [
+        "Les polices de devises",
+        "Les timbres-poste",
+        "Les mascottes olympiques",
+        "Le changement climatique"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-genz-bytedance",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Vidéo courte",
+      "prompt": "Quelle compagnie possède TikTok ?",
+      "choices": [
+        "Snap",
+        "Meta",
+        "Google",
+        "ByteDance"
+      ],
+      "correctIndex": 3,
+      "banterHint": "L'appli est la partie connue. La compagnie, moins.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-h-genz-hashtag",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dièse",
+      "prompt": "Comment on appelle le symbole # quand il regroupe des publications sur les réseaux sociaux ?",
+      "choices": [
+        "Un hashtag",
+        "Un caret",
+        "Un tilde",
+        "Un astérisque"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une marque, et les publications se retrouvent.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-h-genz-mohs",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dureté",
+      "prompt": "C'est quoi le minéral naturel le plus dur sur l'échelle de Mohs ?",
+      "choices": [
+        "Le quartz",
+        "Le corindon",
+        "Le diamant",
+        "La topaze"
+      ],
+      "correctIndex": 2,
+      "banterHint": "L'échelle arrête à dix. Celui-ci est là.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-h-genz-curiosity",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Cratère Gale",
+      "prompt": "Quand le rover Curiosity de la NASA s'est posé sur Mars ?",
+      "choices": [
+        "2004",
+        "2012",
+        "1997",
+        "2021"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La grue volante a fait le dernier pas. L'année est 2012.",
+      "slang": "Sans chichi,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-gz-h-sa-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Arabie saoudite?",
+      "choices": [
+        "Riyad",
+        "La Mecque",
+        "Médine",
+        "Djedda"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hr-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Croatie?",
+      "choices": [
+        "Zagreb",
+        "Split",
+        "Dubrovnik",
+        "Rijeka"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-lb-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Liban?",
+      "choices": [
+        "Beyrouth",
+        "Tripoli",
+        "Sidon",
+        "Damas"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hamlet-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the play Hamlet ?",
+      "choices": [
+        "Molière",
+        "Henrik Ibsen",
+        "William Shakespeare",
+        "Christopher Marlowe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-potter-author",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the Harry Potter novels ?",
+      "choices": [
+        "Roald Dahl",
+        "J. K. Rowling",
+        "Rick Riordan",
+        "Philip Pullman"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-gatsby-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Great Gatsby ?",
+      "choices": [
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald",
+        "William Faulkner",
+        "John Steinbeck"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-gables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the book Anne of Green Gables ?",
+      "choices": [
+        "Louisa May Alcott",
+        "Laura Ingalls Wilder",
+        "Frances Hodgson Burnett",
+        "L. M. Montgomery"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-miserables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Les Misérables ?",
+      "choices": [
+        "Victor Hugo",
+        "Alexandre Dumas",
+        "Émile Zola",
+        "Gustave Flaubert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-little-women",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Little Women ?",
+      "choices": [
+        "Louisa May Alcott",
+        "Jane Austen",
+        "L. M. Montgomery",
+        "Emily Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-oliver-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Oliver Twist ?",
+      "choices": [
+        "Charles Dickens",
+        "Jane Austen",
+        "Thomas Hardy",
+        "Charlotte Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-color-purple",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Color Purple ?",
+      "choices": [
+        "Toni Morrison",
+        "Alice Walker",
+        "Octavia Butler",
+        "Maya Angelou"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-seasons-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait The Four Seasons ?",
+      "choices": [
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Arcangelo Corelli",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-brandenburg-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the Brandenburg Concertos ?",
+      "choices": [
+        "George Frideric Handel",
+        "Johann Sebastian Bach",
+        "Georg Philipp Telemann",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-bohemian-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Bohemian Rhapsody ?",
+      "choices": [
+        "Led Zeppelin",
+        "The Beatles",
+        "Queen",
+        "The Who"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hey-ya-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Hey Ya! ?",
+      "choices": [
+        "Beyoncé",
+        "Usher",
+        "OutKast",
+        "Kanye West"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-license-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song drivers license ?",
+      "choices": [
+        "Olivia Rodrigo",
+        "Billie Eilish",
+        "Taylor Swift",
+        "Sabrina Carpenter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-nirvana-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the band Nirvana, as lead singer ?",
+      "choices": [
+        "Eddie Vedder",
+        "Kurt Cobain",
+        "Dave Grohl",
+        "Krist Novoselic"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-jurassic-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 1993 film Jurassic Park ?",
+      "choices": [
+        "Steven Spielberg",
+        "Roland Emmerich",
+        "Peter Jackson",
+        "James Cameron"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-vertigo-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Vertigo ?",
+      "choices": [
+        "Alfred Hitchcock",
+        "Howard Hawks",
+        "Fritz Lang",
+        "Orson Welles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-amelie-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Amélie ?",
+      "choices": [
+        "Michel Gondry",
+        "Jean-Pierre Jeunet",
+        "Luc Besson",
+        "François Ozon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-toy-story-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 1995 film Toy Story ?",
+      "choices": [
+        "John Lasseter",
+        "Pete Docter",
+        "Andrew Stanton",
+        "Brad Bird"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-arrival-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 2016 film Arrival ?",
+      "choices": [
+        "Christopher Nolan",
+        "Neill Blomkamp",
+        "Alex Garland",
+        "Denis Villeneuve"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-n",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément nitrogen ?",
+      "choices": [
+        "Ne",
+        "Ni",
+        "Na",
+        "N"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-pb",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément lead ?",
+      "choices": [
+        "Pd",
+        "Pb",
+        "Li",
+        "Pt"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-mg",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément magnesium ?",
+      "choices": [
+        "Mn",
+        "Hg",
+        "Mo",
+        "Mg"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-ar",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément argon ?",
+      "choices": [
+        "Ar",
+        "Al",
+        "Au",
+        "Ag"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-co",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément cobalt ?",
+      "choices": [
+        "Ca",
+        "Co",
+        "Cu",
+        "C"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-sahara-hot",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel désert, le plus grand désert chaud de la Terre ?",
+      "choices": [
+        "the Gobi",
+        "the Sahara",
+        "the Arabian Desert",
+        "the Kalahari"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quelle planète qu'on appelle la planète rouge ?",
+      "choices": [
+        "Jupiter",
+        "Mars",
+        "Venus",
+        "Mercury"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hardest-after",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Sur l'échelle de Mohs, c'est quel minéral juste sous le diamant ?",
+      "choices": [
+        "topaz",
+        "talc",
+        "quartz",
+        "corundum"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-origin-potato",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La pomme de terre a d'abord été cultivée dans quelle région ?",
+      "choices": [
+        "Europe",
+        "the Andes",
+        "West Africa",
+        "China"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-otto-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a construit le moteur à quatre temps qui porte son nom ?",
+      "choices": [
+        "Nikolaus Otto",
+        "Karl Benz",
+        "Rudolf Diesel",
+        "James Watt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-braille-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a inventé le système de lecture à points en relief appelé braille ?",
+      "choices": [
+        "Samuel Morse",
+        "Alexander Graham Bell",
+        "Helen Keller",
+        "Louis Braille"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-cross-founder",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fondé le mouvement de la Croix-Rouge après la bataille de Solférino ?",
+      "choices": [
+        "Florence Nightingale",
+        "Jean-Henri Fabre",
+        "Clara Barton",
+        "Henry Dunant"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-curie-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel élément qui porte le nom de Marie et Pierre Curie ?",
+      "choices": [
+        "curium",
+        "radium",
+        "polonium",
+        "uranium"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-table-salt",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le sel de table est surtout quel composé ?",
+      "choices": [
+        "sodium chloride",
+        "calcium carbonate",
+        "sodium bicarbonate",
+        "potassium iodide"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-cork-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le liège vient de l'écorce de quel arbre ?",
+      "choices": [
+        "the pine",
+        "the maple",
+        "the birch",
+        "the cork oak"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-vanilla-orchid",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La vanille vient de quel type de plante ?",
+      "choices": [
+        "an orchid",
+        "a cactus",
+        "a vine of grapes",
+        "a bean tree"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-bi-sheng",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a mis au point les caractères mobiles d'argile dans la Chine des Song ?",
+      "choices": [
+        "Bi Sheng",
+        "Cai Lun",
+        "Johannes Gutenberg",
+        "Shen Kuo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-figaro",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a composé l'opéra Les Noces de Figaro ?",
+      "choices": [
+        "Ludwig van Beethoven",
+        "Wolfgang Amadeus Mozart",
+        "Giuseppe Verdi",
+        "Gioachino Rossini"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    }
+  ]
+}

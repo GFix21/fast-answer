@@ -1,0 +1,1212 @@
+{
+  "generation": "multi-gen",
+  "tier": "easy",
+  "locale": "en",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-mix-japan",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Map Mayhem",
+      "prompt": "What is the capital of Japan?",
+      "choices": [
+        "Tokyo",
+        "Kyoto",
+        "Nagoya",
+        "Osaka"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-mona",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Louvre Lite",
+      "prompt": "Who painted the Mona Lisa?",
+      "choices": [
+        "Donatello",
+        "Raphael",
+        "Michelangelo",
+        "Leonardo da Vinci"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-gigi3",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Gigi’s Easy Lane",
+      "prompt": "True or vibe-check: DJ Gigi releases under which label family?",
+      "choices": [
+        "Motown only",
+        "GMG Brand Label",
+        "Nintendo Sound Team",
+        "Deutsche Grammophon only"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-stig",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "multi-gen",
+      "categoryTitle": "White Suit Mystery",
+      "prompt": "On Top Gear, what is the name of the show’s anonymous racing driver in a helmet?",
+      "choices": [
+        "The Stag",
+        "The Shadow",
+        "The Stig",
+        "The Sprinter"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-multi-guitar",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Six Strings",
+      "prompt": "How many strings does a standard guitar have?",
+      "choices": [
+        "Four",
+        "Six",
+        "Eight",
+        "Twelve"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Twelve-string guitars are the extra-loud cousins.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-e-multi-boil",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Kettle",
+      "prompt": "What is the boiling point of water at sea level, in Celsius?",
+      "choices": [
+        "100",
+        "90",
+        "80",
+        "120"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Up a mountain, the kettle finishes a little sooner.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-e-multi-titanic",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "On the Walk",
+      "prompt": "Two friends are walking. One asks the other, \"When did the Titanic sink?\" The other answers…",
+      "choices": [
+        "April 15, 1912",
+        "April 15, 1911",
+        "May 7, whenever the sequel docks",
+        "April 1 (April Fool's Day)"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The other person answered the question that was asked.",
+      "slang": "For the room,",
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "when",
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-multi-stop",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Octagon",
+      "prompt": "How many sides does a standard stop sign have?",
+      "choices": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Count the flat edges, not the pole.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-e-multi-sky",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Overhead",
+      "prompt": "A quick step aside, then back to the question: \"What colour is a clear daytime sky?\"",
+      "choices": [
+        "Green, if the lawn got promoted",
+        "Black",
+        "Blue",
+        "Red, saved for the sunset shift"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Step back in. The answer is the ordinary one.",
+      "slang": "For the room,",
+      "funny": true,
+      "humorous": true,
+      "injection": "aside",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-multi-pacific",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Open Water",
+      "prompt": "Which ocean is the largest on Earth?",
+      "choices": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The map gives it the widest blue.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ca-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of California?",
+      "choices": [
+        "Sacramento",
+        "San Francisco",
+        "San Diego",
+        "Los Angeles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ny-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of New York?",
+      "choices": [
+        "New York City",
+        "Albany",
+        "Rochester",
+        "Buffalo"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-tx-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Texas?",
+      "choices": [
+        "Austin",
+        "San Antonio",
+        "Dallas",
+        "Houston"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-fl-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Florida?",
+      "choices": [
+        "Tallahassee",
+        "Miami",
+        "Orlando",
+        "Tampa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-il-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Illinois?",
+      "choices": [
+        "Naperville",
+        "Springfield",
+        "Chicago",
+        "Aurora"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-pa-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Pennsylvania?",
+      "choices": [
+        "Philadelphia",
+        "Pittsburgh",
+        "Allentown",
+        "Harrisburg"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-oh-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Ohio?",
+      "choices": [
+        "Cincinnati",
+        "Toledo",
+        "Cleveland",
+        "Columbus"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ga-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Georgia?",
+      "choices": [
+        "Atlanta",
+        "Macon",
+        "Augusta",
+        "Savannah"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-co-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Colorado?",
+      "choices": [
+        "Denver",
+        "Colorado Springs",
+        "Boulder",
+        "Aurora"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-hi-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Hawaii?",
+      "choices": [
+        "Hilo",
+        "Kailua",
+        "Lahaina",
+        "Honolulu"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ma-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Massachusetts?",
+      "choices": [
+        "Boston",
+        "Cambridge",
+        "Worcester",
+        "Springfield"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-az-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Arizona?",
+      "choices": [
+        "Flagstaff",
+        "Sedona",
+        "Tucson",
+        "Phoenix"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-wa-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Washington?",
+      "choices": [
+        "Spokane",
+        "Tacoma",
+        "Olympia",
+        "Seattle"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-mi-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Michigan?",
+      "choices": [
+        "Lansing",
+        "Detroit",
+        "Ann Arbor",
+        "Grand Rapids"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-nc-cap",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of North Carolina?",
+      "choices": [
+        "Asheville",
+        "Durham",
+        "Charlotte",
+        "Raleigh"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-gr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Greece?",
+      "choices": [
+        "Rome",
+        "Athens",
+        "Sparta",
+        "Thessaloniki"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-pl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Poland?",
+      "choices": [
+        "Gdansk",
+        "Berlin",
+        "Warsaw",
+        "Krakow"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ar-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Argentina?",
+      "choices": [
+        "Córdoba",
+        "Rosario",
+        "Mendoza",
+        "Buenos Aires"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ke-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Kenya?",
+      "choices": [
+        "Nairobi",
+        "Cairo",
+        "Kisumu",
+        "Mombasa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-ph-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of the Philippines?",
+      "choices": [
+        "Davao",
+        "Quezon City",
+        "Manila",
+        "Cebu"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-alphabet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many letters are in the English alphabet?",
+      "choices": [
+        "28",
+        "24",
+        "26",
+        "21"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-circle-degrees",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many degrees are in a full circle?",
+      "choices": [
+        "180",
+        "100",
+        "360",
+        "90"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cube-edges",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many edges does a cube have?",
+      "choices": [
+        "6",
+        "8",
+        "16",
+        "12"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-checkers-pieces",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many pieces does each checkers player start with?",
+      "choices": [
+        "8",
+        "16",
+        "10",
+        "12"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-uk-nations",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many countries make up the United Kingdom?",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-earth-moon",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many moons does Earth have?",
+      "choices": [
+        "0",
+        "4",
+        "2",
+        "1"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-baseball-strikes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many strikes make an out in baseball?",
+      "choices": [
+        "2",
+        "4",
+        "5",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-touchdown-points",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many points is a touchdown worth in American football, before the kick?",
+      "choices": [
+        "7",
+        "1",
+        "6",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-mlb-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many teams are in Major League Baseball?",
+      "choices": [
+        "32",
+        "16",
+        "30",
+        "28"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-piano-white",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many white keys are on a standard piano?",
+      "choices": [
+        "52",
+        "36",
+        "48",
+        "88"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-haiku-lines",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many lines are in a haiku?",
+      "choices": [
+        "4",
+        "5",
+        "17",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-meter-cm",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many centimeters are in a meter?",
+      "choices": [
+        "10",
+        "12",
+        "100",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-motorcycle-wheels",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many wheels does a typical motorcycle have?",
+      "choices": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-petra-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the ancient city of Petra?",
+      "choices": [
+        "Israel",
+        "Syria",
+        "Jordan",
+        "Egypt"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-angkor-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is Angkor Wat?",
+      "choices": [
+        "Cambodia",
+        "Thailand",
+        "Vietnam",
+        "Laos"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-alps-continent",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Alps?",
+      "choices": [
+        "Europe",
+        "South America",
+        "Africa",
+        "Asia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-liberty-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Statue of Liberty?",
+      "choices": [
+        "France",
+        "the United Kingdom",
+        "Canada",
+        "the United States"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-clocks-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The Persistence of Memory?",
+      "choices": [
+        "Pablo Picasso",
+        "René Magritte",
+        "Joan Miró",
+        "Salvador Dalí"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-soup-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted the Campbell's Soup Cans?",
+      "choices": [
+        "Keith Haring",
+        "Jean-Michel Basquiat",
+        "Roy Lichtenstein",
+        "Andy Warhol"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-sunflowers-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted the Sunflowers still lifes?",
+      "choices": [
+        "Vincent van Gogh",
+        "Paul Gauguin",
+        "Claude Monet",
+        "Paul Cézanne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-volvo-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Volvo Cars?",
+      "choices": [
+        "Norway",
+        "Germany",
+        "Sweden",
+        "the United States"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-peugeot-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Peugeot?",
+      "choices": [
+        "Italy",
+        "France",
+        "Germany",
+        "Spain"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-brazil",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Brazil in this question?",
+      "choices": [
+        "French",
+        "Spanish",
+        "Portuguese",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-quebec",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with the province of Quebec in this question?",
+      "choices": [
+        "English",
+        "French",
+        "German",
+        "Spanish"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-vietnam",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Vietnam in this question?",
+      "choices": [
+        "Vietnamese",
+        "Thai",
+        "French",
+        "Chinese"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-lang-kenya",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Kenya, alongside English, as an official language in this question?",
+      "choices": [
+        "Swahili",
+        "Arabic",
+        "Amharic",
+        "Zulu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-3",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Morocco?",
+      "choices": [
+        "Europe",
+        "South America",
+        "Africa",
+        "Asia"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-10",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Thailand?",
+      "choices": [
+        "Europe",
+        "North America",
+        "Asia",
+        "Africa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-17",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Poland?",
+      "choices": [
+        "Europe",
+        "Africa",
+        "South America",
+        "Asia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-24",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Jamaica?",
+      "choices": [
+        "Europe",
+        "South America",
+        "North America",
+        "Africa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-31",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is New Zealand?",
+      "choices": [
+        "Oceania",
+        "Europe",
+        "Africa",
+        "Asia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cont-38",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Finland?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "South America",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Mexico?",
+      "choices": [
+        "the dollar",
+        "the euro",
+        "the yen",
+        "the peso"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-12",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Canada?",
+      "choices": [
+        "the yen",
+        "the euro",
+        "the peso",
+        "the dollar"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-19",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Nigeria?",
+      "choices": [
+        "the dollar",
+        "the yen",
+        "the naira",
+        "the euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-cur-26",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Vietnam?",
+      "choices": [
+        "the dong",
+        "the euro",
+        "the dollar",
+        "the yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-3",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with croissants?",
+      "choices": [
+        "Mexico",
+        "France",
+        "Italy",
+        "Japan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with fish and chips?",
+      "choices": [
+        "Italy",
+        "Mexico",
+        "the United Kingdom",
+        "Japan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with ceviche?",
+      "choices": [
+        "Peru",
+        "Japan",
+        "Mexico",
+        "Italy"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-e-food-24",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with cheese fondue?",
+      "choices": [
+        "Switzerland",
+        "Japan",
+        "Italy",
+        "Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "For the room,"
+    }
+  ]
+}

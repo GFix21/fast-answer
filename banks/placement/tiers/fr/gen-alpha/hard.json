@@ -1,0 +1,32 @@
+{
+  "generation": "gen-alpha",
+  "tier": "hard",
+  "locale": "fr",
+  "held": 1,
+  "questions": [
+    {
+      "id": "place-a-h-youtube",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Créateurs",
+      "prompt": "YouTube est avant tout une plateforme pour quoi ?",
+      "choices": [
+        "Vidéo mise en ligne et diffusée par les utilisateurs",
+        "Livraison postale du lendemain uniquement",
+        "Uniquement des ballons météo satellite",
+        "Pressage de vinyle"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Médian pertinent Gen Alpha ; toujours universel.",
+      "sources": [
+        {
+          "label": "Wikipedia — YouTube"
+        },
+        {
+          "label": "Google / YouTube about pages"
+        }
+      ]
+    }
+  ]
+}

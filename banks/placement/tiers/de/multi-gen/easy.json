@@ -1,0 +1,80 @@
+{
+  "generation": "multi-gen",
+  "tier": "easy",
+  "locale": "de",
+  "held": 3,
+  "questions": [
+    {
+      "id": "place-mg-e-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Karte",
+      "prompt": "Was ist die Hauptstadt Kanadas?",
+      "choices": [
+        "Ottawa",
+        "Toronto",
+        "Montreal",
+        "Vancouver"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Multi-Gen-Anker — sollte fast immer sitzen; Fehler signalisieren eine niedrige Bandbreite.",
+      "sources": [
+        {
+          "label": "Wikipedia — Ottawa"
+        },
+        {
+          "label": "Government of Canada"
+        }
+      ]
+    },
+    {
+      "id": "place-cars-e-abs",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Garage",
+      "prompt": "Wofür steht die Abkürzung ABS bei Kfz-Sicherheitssystemen?",
+      "choices": [
+        "Anti-lock Braking System",
+        "Automatic Boost System",
+        "Axle Balance Sensor",
+        "Advanced Battery Switch"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Leichte Auto-Literacy.",
+      "sources": [
+        {
+          "label": "Wikipedia — Anti-lock braking system"
+        },
+        {
+          "label": "NHTSA glossaries"
+        }
+      ]
+    },
+    {
+      "id": "place-gigi-e-flagship",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Gigi",
+      "prompt": "DJ Gigi ist der Flaggschiff-Künstler welches Montréaler Labels?",
+      "choices": [
+        "Island Records",
+        "Motown",
+        "XL Recordings",
+        "GMG Brand Label"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Brand easy-only — Gigi-Tier im Placement nie eskalieren.",
+      "sources": [
+        {
+          "label": "GMG Brand Label roster"
+        },
+        {
+          "label": "DJ Gigi public bio"
+        }
+      ]
+    }
+  ]
+}

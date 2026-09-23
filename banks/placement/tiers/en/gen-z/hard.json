@@ -1,0 +1,56 @@
+{
+  "generation": "gen-z",
+  "tier": "hard",
+  "locale": "en",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-z-h-fortnite",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Gen Z",
+      "prompt": "Fortnite is primarily known as which type of game?",
+      "choices": [
+        "A battle royale / online multiplayer game",
+        "A tax preparation tool",
+        "A chess engine",
+        "A flight simulator from the 1980s"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen Z mid — still readable for others; avoid slang traps.",
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games product pages"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-mercury",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Metal",
+      "prompt": "Which metal is liquid at room temperature?",
+      "choices": [
+        "Mercury",
+        "Iron",
+        "Gold",
+        "Copper"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Hard materials fact. This is the metal, not the planet.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — mercury"
+        },
+        {
+          "label": "Royal Society of Chemistry — mercury"
+        }
+      ]
+    }
+  ]
+}

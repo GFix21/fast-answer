@@ -1,0 +1,56 @@
+{
+  "generation": "gen-x",
+  "tier": "easy",
+  "locale": "fr",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-x-e-back-future",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Écran 80s",
+      "prompt": "Dans Retour vers le futur, quel type de véhicule est la machine à remonter le temps ?",
+      "choices": [
+        "Un hélicoptère",
+        "Une cabine téléphonique",
+        "Un train à vapeur",
+        "Une DeLorean"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Facile avec saveur Gen X — encore très connu.",
+      "sources": [
+        {
+          "label": "Wikipedia — Back to the Future"
+        },
+        {
+          "label": "Film itself (1985)"
+        }
+      ]
+    },
+    {
+      "id": "place-mus-e-violin",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Cordes",
+      "prompt": "Combien de cordes un violon standard a-t-il ?",
+      "choices": [
+        "4",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Fait facile sur un instrument. Une guitare a un autre nombre.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — violin"
+        },
+        {
+          "label": "Grove Music Online — violin"
+        }
+      ]
+    }
+  ]
+}

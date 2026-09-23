@@ -1,0 +1,56 @@
+{
+  "generation": "gen-x",
+  "tier": "hard",
+  "locale": "de",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-x-h-mtv",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Gen X",
+      "prompt": "Welcher US-Kabelsender startete 1981 mit Fokus auf Musikvideos?",
+      "choices": [
+        "Nickelodeon",
+        "CNN",
+        "MTV",
+        "ESPN"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Gen-X-lastiges Mittelitem; für andere über kulturelle Osmose fair.",
+      "sources": [
+        {
+          "label": "Wikipedia — MTV"
+        },
+        {
+          "label": "Contemporary launch coverage — 1981"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-saturn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Ringe",
+      "prompt": "Welcher Planet ist vor allem für seine Ringe bekannt?",
+      "choices": [
+        "Saturn",
+        "Jupiter",
+        "Neptun",
+        "Mars"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Schwere Sonnensystemfrage. Der Große Rote Fleck ist ein anderer Planet.",
+      "sources": [
+        {
+          "label": "NASA — Saturn"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Saturn"
+        }
+      ]
+    }
+  ]
+}

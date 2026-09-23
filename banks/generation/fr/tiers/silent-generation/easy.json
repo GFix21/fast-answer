@@ -1,0 +1,1212 @@
+{
+  "generation": "silent-generation",
+  "tier": "easy",
+  "locale": "fr",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-silent-ike",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Devise du milieu du siècle",
+      "prompt": "Quel slogan de campagne est célèbrement associé à Dwight D. Eisenhower ?",
+      "choices": [
+        "I Like Ike",
+        "Morning in America",
+        "Tippecanoe and Tyler Too",
+        "Yes We Can"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Trois petits mots. De grands chapeaux."
+    },
+    {
+      "id": "w39-e-silent-fdr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Maison-Blanche en temps de guerre",
+      "prompt": "Quel président des États-Unis a dirigé le pays pendant la plus grande partie de la Seconde Guerre mondiale ?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Herbert Hoover",
+        "Woodrow Wilson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-transistor",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "L’ère de la radio de poche",
+      "prompt": "Quel petit type de radio est devenu un hit auprès des adolescents dans les années 1950 ?",
+      "choices": [
+        "Grille-pain à vide",
+        "Radio à transistors",
+        "Boombox huit pistes",
+        "Radio boule de cristal"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Non, pas une boule de cristal."
+    },
+    {
+      "id": "w39-e-silent-elvis",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Coin du King",
+      "prompt": "Quel chanteur est largement surnommé le King of Rock and Roll ?",
+      "choices": [
+        "Elvis Presley",
+        "Little Richard",
+        "Buddy Holly",
+        "Chuck Berry"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Chaos cartographique",
+      "prompt": "Quelle est la capitale du Canada ?",
+      "choices": [
+        "Toronto",
+        "Ottawa",
+        "Vancouver",
+        "Montréal"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-road",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Rayon Beat",
+      "prompt": "Qui a écrit le roman de la Beat Generation On the Road ?",
+      "choices": [
+        "Allen Ginsberg",
+        "Jack Kerouac",
+        "Neal Cassady",
+        "William S. Burroughs"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-silent-roar",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Décennie jazz",
+      "prompt": "Quel surnom donne-t-on aux années 1920 aux États-Unis ?",
+      "choices": [
+        "Les Années folles",
+        "L'ère spatiale",
+        "Les années de crise",
+        "L'Âge doré"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Les orchestres jouaient fort. Le surnom est resté.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-e-silent-vote",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Urne",
+      "prompt": "Quel amendement de la Constitution américaine, ratifié en 1920, a reconnu le droit de vote des femmes ?",
+      "choices": [
+        "Le 19e amendement",
+        "Le 26e amendement",
+        "Le 13e amendement",
+        "Le 15e amendement"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La file devant l'urne s'est allongée, exprès.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-e-silent-radio",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Près de la fenêtre",
+      "prompt": "Pourquoi la radio s'est-elle assise près de la fenêtre ?",
+      "choices": [
+        "Elle se cachait des nouvelles",
+        "Elle a perdu le cadran",
+        "Elle préférait le silence",
+        "Elle voulait capter une onde"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La chanson passait quand même.",
+      "slang": "Dites,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-silent-liberty",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Manteau de cuivre",
+      "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur est la Statue de la Liberté aujourd'hui ? » L'autre répond…",
+      "choices": [
+        "Gris",
+        "Blanc, encore timide après la traversée",
+        "Or, si le flambeau raconte l'histoire",
+        "Vert"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le cuivre a changé après des années de temps.",
+      "slang": "Dites,",
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-e-silent-taxi",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Médaille",
+      "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « De quelle couleur est un taxi classique de New York ? »",
+      "choices": [
+        "Jaune",
+        "Blanc, en audition pour le camion de crème glacée",
+        "Noir, habillé pour une course très sérieuse",
+        "Vert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La devinette folle peut attendre. Le taxi est le vif.",
+      "slang": "Dites,",
+      "funny": true,
+      "humorous": true,
+      "injection": "straight-man",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-e-silent-adenauer",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Premier chancelier",
+      "prompt": "Qui a été le premier chancelier de l'Allemagne de l'Ouest ?",
+      "choices": [
+        "Helmut Kohl",
+        "Helmut Schmidt",
+        "Willy Brandt",
+        "Konrad Adenauer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Il a pris le fauteuil en 1949 et l'a gardé longtemps.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-it-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Italie?",
+      "choices": [
+        "Madrid",
+        "Berlin",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-nl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale des Pays-Bas?",
+      "choices": [
+        "Rotterdam",
+        "Utrecht",
+        "Amsterdam",
+        "La Haye"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ru-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Russie?",
+      "choices": [
+        "Saint-Pétersbourg",
+        "Sotchi",
+        "Kazan",
+        "Moscou"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-eg-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Égypte?",
+      "choices": [
+        "Le Caire",
+        "Alexandrie",
+        "Gizeh",
+        "Louxor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cz-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Tchéquie?",
+      "choices": [
+        "Brno",
+        "Vienne",
+        "Bratislava",
+        "Prague"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-tr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Turquie?",
+      "choices": [
+        "Ankara",
+        "Izmir",
+        "Antalya",
+        "Istanbul"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-greek-letters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de lettres compte l'alphabet grec ?",
+      "choices": [
+        "20",
+        "24",
+        "22",
+        "26"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-right-angle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de degrés compte un angle droit ?",
+      "choices": [
+        "60",
+        "90",
+        "45",
+        "180"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cube-corners",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de sommets a un cube ?",
+      "choices": [
+        "12",
+        "8",
+        "6",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-rainbow-colors",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de couleurs compte un arc-en-ciel traditionnel ?",
+      "choices": [
+        "6",
+        "5",
+        "7",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-canada-regions",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de provinces et territoires le Canada compte-t-il ?",
+      "choices": [
+        "15",
+        "13",
+        "10",
+        "12"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-mars-moons",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de lunes a Mars ?",
+      "choices": [
+        "8",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-hockey-skaters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de patineurs d'une équipe sont sur la glace au hockey, gardien compris ?",
+      "choices": [
+        "6",
+        "7",
+        "5",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-field-goal-points",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de points vaut un field goal au football américain ?",
+      "choices": [
+        "1",
+        "3",
+        "6",
+        "2"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-nhl-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'équipes compte la LNH ?",
+      "choices": [
+        "32",
+        "16",
+        "31",
+        "30"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-piano-black",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de touches noires a un piano standard ?",
+      "choices": [
+        "36",
+        "32",
+        "52",
+        "24"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-haiku-syllables",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de syllabes compte un haïku traditionnel ?",
+      "choices": [
+        "14",
+        "15",
+        "19",
+        "17"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cm-mm",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de millimètres compte un centimètre ?",
+      "choices": [
+        "10",
+        "12",
+        "5",
+        "100"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-bicycle-wheels",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de roues a un vélo typique ?",
+      "choices": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-stonehenge-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve Stonehenge ?",
+      "choices": [
+        "France",
+        "Denmark",
+        "the United Kingdom",
+        "Ireland"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-forbidden-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve la Cité interdite ?",
+      "choices": [
+        "South Korea",
+        "Mongolia",
+        "Japan",
+        "China"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-andes-continent",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve les Andes ?",
+      "choices": [
+        "Europe",
+        "South America",
+        "North America",
+        "Africa"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-bigben-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve la cloche appelée Big Ben ?",
+      "choices": [
+        "France",
+        "Ireland",
+        "the United States",
+        "the United Kingdom"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-guernica-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a peint Guernica ?",
+      "choices": [
+        "Francisco Goya",
+        "Diego Velázquez",
+        "Pablo Picasso",
+        "Salvador Dalí"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-son-man-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a peint The Son of Man ?",
+      "choices": [
+        "Giorgio de Chirico",
+        "René Magritte",
+        "Salvador Dalí",
+        "Max Ernst"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-whistler-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a peint Arrangement in Grey and Black No. 1, often called Whistler's Mother ?",
+      "choices": [
+        "James McNeill Whistler",
+        "Winslow Homer",
+        "John Singer Sargent",
+        "Thomas Eakins"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-hyundai-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le berceau de Hyundai ?",
+      "choices": [
+        "South Korea",
+        "China",
+        "Germany",
+        "Japan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-fiat-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le berceau de Fiat ?",
+      "choices": [
+        "Italy",
+        "Germany",
+        "Spain",
+        "France"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-mexico",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à Mexico dans cette question ?",
+      "choices": [
+        "Portuguese",
+        "French",
+        "Spanish",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-austria",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à Austria dans cette question ?",
+      "choices": [
+        "Hungarian",
+        "French",
+        "German",
+        "Italian"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-thailand",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à Thailand dans cette question ?",
+      "choices": [
+        "Vietnamese",
+        "Thai",
+        "Malay",
+        "Lao"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-israel",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à Israel, as the main official language dans cette question ?",
+      "choices": [
+        "Hebrew",
+        "Arabic",
+        "English",
+        "Yiddish"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-4",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve le Ghana ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Asie",
+        "Amérique du Sud"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-11",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve le Vietnam ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Amérique du Nord",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-18",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve la Suède ?",
+      "choices": [
+        "Asie",
+        "Amérique du Sud",
+        "Afrique",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-25",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve le Brésil ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Amérique du Nord",
+        "Amérique du Sud"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-32",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve les Fidji ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Europe",
+        "Océanie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-39",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve les Philippines ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Europe",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-6",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale du Brésil ?",
+      "choices": [
+        "le real",
+        "l'euro",
+        "le dollar",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-13",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale de l'Australie ?",
+      "choices": [
+        "l'euro",
+        "le yen",
+        "le dollar",
+        "le peso"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-20",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale de l'Égypte ?",
+      "choices": [
+        "la livre",
+        "le dollar",
+        "l'euro",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-27",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale de la Tchéquie ?",
+      "choices": [
+        "le yen",
+        "l'euro",
+        "la couronne",
+        "le dollar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-food-4",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à la paella ?",
+      "choices": [
+        "Espagne",
+        "Japon",
+        "Italie",
+        "Mexique"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-food-11",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à la poutine ?",
+      "choices": [
+        "Canada",
+        "Mexique",
+        "Japon",
+        "Italie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-food-18",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à les ramen ?",
+      "choices": [
+        "Italie",
+        "France",
+        "Mexique",
+        "Japon"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-food-25",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à les pierogi ?",
+      "choices": [
+        "Italie",
+        "Japon",
+        "Mexique",
+        "Pologne"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-1",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est le plus grand oiseau ?",
+      "choices": [
+        "l'aigle",
+        "l'autruche",
+        "le cygne",
+        "le manchot"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-7",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est l'animal connu pour changer de couleur ?",
+      "choices": [
+        "la pieuvre",
+        "la grenouille",
+        "le perroquet",
+        "le caméléon"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-13",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est l'animal à trompe ?",
+      "choices": [
+        "l'éléphant",
+        "le rhinocéros",
+        "l'hippopotame",
+        "le morse"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-19",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est l'oiseau nocturne du proverbe ?",
+      "choices": [
+        "le hibou",
+        "la corneille",
+        "le rouge-gorge",
+        "la chauve-souris"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-seasons-four",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de saisons les régions tempérées nomment-elles d'habitude ?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-human-ears",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'oreilles a un humain typique ?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-vowels-en",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de voyelles liste-t-on d'habitude en anglais : a, e, i, o et u ?",
+      "choices": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-wonders-ancient",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de merveilles compte la liste classique du monde antique ?",
+      "choices": [
+        "7",
+        "10",
+        "8",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-pedals-piano-grand",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de pédales a un piano à queue typique ?",
+      "choices": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-easy-angles-triangle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'angles a un triangle ?",
+      "choices": [
+        "4",
+        "6",
+        "2",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-easy-chair-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de pieds a une chaise typique ?",
+      "choices": [
+        "6",
+        "4",
+        "3",
+        "2"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-e-easy-days-fortnight",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de jours compte une quinzaine anglaise, un fortnight ?",
+      "choices": [
+        "10",
+        "15",
+        "7",
+        "14"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Dites,"
+    }
+  ]
+}

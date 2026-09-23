@@ -1,0 +1,80 @@
+{
+  "generation": "multi-gen",
+  "tier": "easy",
+  "locale": "fr-CA",
+  "held": 3,
+  "questions": [
+    {
+      "id": "place-mg-e-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Carte",
+      "prompt": "Quelle est la capitale du Canada ?",
+      "choices": [
+        "Ottawa",
+        "Toronto",
+        "Montréal",
+        "Vancouver"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Ancre multi-générationnelle — devrait presque toujours réussir ; un échec signale une bande basse.",
+      "sources": [
+        {
+          "label": "Wikipedia — Ottawa"
+        },
+        {
+          "label": "Government of Canada"
+        }
+      ]
+    },
+    {
+      "id": "place-cars-e-abs",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Garage",
+      "prompt": "Que signifie l’abréviation ABS dans les systèmes de sécurité automobile ?",
+      "choices": [
+        "Anti-lock Braking System",
+        "Automatic Boost System",
+        "Axle Balance Sensor",
+        "Advanced Battery Switch"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Littératie automobile facile.",
+      "sources": [
+        {
+          "label": "Wikipedia — Anti-lock braking system"
+        },
+        {
+          "label": "NHTSA glossaries"
+        }
+      ]
+    },
+    {
+      "id": "place-gigi-e-flagship",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Gigi",
+      "prompt": "DJ Gigi est l’artiste phare de quel label montréalais ?",
+      "choices": [
+        "Island Records",
+        "Motown",
+        "XL Recordings",
+        "GMG Brand Label"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Marque easy-only — ne jamais monter le tier Gigi en placement.",
+      "sources": [
+        {
+          "label": "GMG Brand Label roster"
+        },
+        {
+          "label": "DJ Gigi public bio"
+        }
+      ]
+    }
+  ]
+}

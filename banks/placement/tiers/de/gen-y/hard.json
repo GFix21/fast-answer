@@ -1,0 +1,56 @@
+{
+  "generation": "gen-y",
+  "tier": "hard",
+  "locale": "de",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-y-h-matrix",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Gen Y",
+      "prompt": "Welche Pille nimmt Neo in Matrix (1999), um die Wahrheit zu sehen?",
+      "choices": [
+        "Rot",
+        "Blau",
+        "Grün",
+        "Gelb"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Millennial-Mittelsondierung — ikonisch, eindeutig.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Matrix"
+        },
+        {
+          "label": "The Matrix (1999) film"
+        }
+      ]
+    },
+    {
+      "id": "place-geo-h-indian",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Zwischen Küsten",
+      "prompt": "Welcher Ozean liegt zwischen Afrika und Australien?",
+      "choices": [
+        "Indischer Ozean",
+        "Atlantischer Ozean",
+        "Pazifischer Ozean",
+        "Arktischer Ozean"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Schwere Kartenfrage. Der größte Ozean ist eine andere Frage.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Indian Ocean"
+        },
+        {
+          "label": "NOAA — ocean basins"
+        }
+      ]
+    }
+  ]
+}

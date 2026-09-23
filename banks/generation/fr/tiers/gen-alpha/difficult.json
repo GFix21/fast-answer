@@ -1,0 +1,347 @@
+{
+  "generation": "gen-alpha",
+  "tier": "difficult",
+  "locale": "fr",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-alpha-switch",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Portable hybride",
+      "prompt": "En quelle année la Nintendo Switch est-elle sortie dans le monde ?",
+      "choices": [
+        "2017",
+        "2019",
+        "2013",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-alpha-perseverance",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Jezero",
+      "prompt": "En quelle année le rover Perseverance de la NASA s'est-il posé sur Mars ?",
+      "choices": [
+        "2012",
+        "2021",
+        "2004",
+        "2020"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Un petit hélicoptère est venu pour la promenade.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-uz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Ouzbékistan?",
+      "choices": [
+        "Samarcande",
+        "Boukhara",
+        "Astana",
+        "Tashkent"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-ci-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Côte d'Ivoire?",
+      "choices": [
+        "Bouaké",
+        "Accra",
+        "Yamoussoukro",
+        "Abidjan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-relativity-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the theory of relativity, as its main author ?",
+      "choices": [
+        "Isaac Newton",
+        "Stephen Hawking",
+        "Niels Bohr",
+        "Albert Einstein"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-plane-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the first powered airplane flight, in 1903 ?",
+      "choices": [
+        "the Wright brothers",
+        "Amelia Earhart",
+        "Charles Lindbergh",
+        "Alberto Santos-Dumont"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-tesla-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the alternating-current induction motor, as its inventor ?",
+      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Michael Faraday",
+        "George Westinghouse"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-hopper-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the compiler work that helped create COBOL ?",
+      "choices": [
+        "Grace Hopper",
+        "Margaret Hamilton",
+        "Ada Lovelace",
+        "Katherine Johnson"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-glenn-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the first American to orbit Earth ?",
+      "choices": [
+        "John Glenn",
+        "Scott Carpenter",
+        "Neil Armstrong",
+        "Alan Shepard"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-constitution",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année la Constitution des États-Unis a été signée à Philadelphie ?",
+      "choices": [
+        "1787",
+        "1791",
+        "1783",
+        "1776"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-crash",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année le krach de Wall Street a ouvert la Grande Dépression ?",
+      "choices": [
+        "1929",
+        "1933",
+        "1920",
+        "1919"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-missile",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année la crise des missiles de Cuba a eu lieu ?",
+      "choices": [
+        "1959",
+        "1962",
+        "1961",
+        "1963"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-good-friday",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année l'accord du Vendredi saint a été signé ?",
+      "choices": [
+        "1998",
+        "2001",
+        "1994",
+        "1990"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-london-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année les Jeux olympiques d'été de Londres ont eu lieu ?",
+      "choices": [
+        "2016",
+        "2004",
+        "2012",
+        "2008"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-higgs",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année le boson de Higgs a été annoncé au CERN ?",
+      "choices": [
+        "2008",
+        "2015",
+        "2019",
+        "2012"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-liberty-dedicated",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année la statue de la Liberté a été inaugurée ?",
+      "choices": [
+        "1886",
+        "1876",
+        "1889",
+        "1776"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-live-aid",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année le concert Live Aid a eu lieu ?",
+      "choices": [
+        "1985",
+        "1980",
+        "1975",
+        "1990"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-diff-electrons-neutral-c",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "Un atome de carbone neutre a combien d'électrons ?",
+      "choices": [
+        "8",
+        "12",
+        "6",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-diff-euro-book",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "L'euro a commencé comme monnaie scripturale en quelle année, avant les billets ?",
+      "choices": [
+        "1992",
+        "2002",
+        "1999",
+        "2004"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-diff-sound",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "Le son dans l'air à température ambiante voyage à environ combien de mètres par seconde ?",
+      "choices": [
+        "343",
+        "1500",
+        "1000",
+        "123"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    }
+  ]
+}

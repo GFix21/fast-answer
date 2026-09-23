@@ -4,6 +4,12 @@
   "target": 150,
   "held": 150,
   "shortfall": 0,
+  "tiers": {
+    "easy": 70,
+    "hard": 50,
+    "difficult": 20,
+    "extreme": 10
+  },
   "ageYear": 2026,
   "born": [
     1981,

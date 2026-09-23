@@ -1,0 +1,56 @@
+{
+  "generation": "baby-boomer",
+  "tier": "hard",
+  "locale": "de",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-boomer-h-woodstock",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In welchem Jahr fand das originale Woodstock-Musikfestival statt?",
+      "choices": [
+        "1964",
+        "1967",
+        "1972",
+        "1969"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Boomer schwer — ikonischer Jahres-Diskriminator; weiterhin überprüfbar.",
+      "sources": [
+        {
+          "label": "Wikipedia — Woodstock"
+        },
+        {
+          "label": "Contemporary festival / NY history coverage"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-h-sullivan",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In welchem Jahr traten The Beatles erstmals in The Ed Sullivan Show in den USA auf?",
+      "choices": [
+        "1969",
+        "1960",
+        "1964",
+        "1970"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer schwer — Meilensteinjahr der British Invasion.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Ed Sullivan Show"
+        },
+        {
+          "label": "Beatles / CBS broadcast histories — Feb 1964"
+        }
+      ]
+    }
+  ]
+}

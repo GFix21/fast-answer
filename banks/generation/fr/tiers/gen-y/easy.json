@@ -1,0 +1,1193 @@
+{
+  "generation": "gen-y",
+  "tier": "easy",
+  "locale": "fr",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-geny-matrix",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Manche pilule rouge",
+      "prompt": "Dans Matrix, de quelle couleur est la pilule que Neo prend pour voir la vérité ?",
+      "choices": [
+        "Violette",
+        "Bleue",
+        "Verte",
+        "Rouge"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-ipod",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Écouteurs blancs",
+      "prompt": "En quelle année Apple a-t-il lancé le premier iPod ?",
+      "choices": [
+        "1998",
+        "2001",
+        "2007",
+        "2005"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-luke",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Manche sci-fi éclair",
+      "prompt": "Dans Star Wars, de quelle couleur est le premier sabre laser de Luke (Un nouvel espoir) ?",
+      "choices": [
+        "Violet",
+        "Rouge",
+        "Bleu",
+        "Vert"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-gmg",
+      "tier": "easy",
+      "topic": "gmg",
+      "generation": "gen-y",
+      "categoryTitle": "Minuit à Montréal",
+      "prompt": "Où est basée GMG Brand Label ?",
+      "choices": [
+        "Montréal, Canada",
+        "Paris, France",
+        "Berlin, Allemagne",
+        "Toronto, Canada"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-gigi",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "gen-y",
+      "categoryTitle": "Voie facile de Gigi",
+      "prompt": "DJ Gigi est l’artiste phare de quel label montréalais ?",
+      "choices": [
+        "Warp Records",
+        "GMG Brand Label",
+        "Sub Pop",
+        "Def Jam"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-google",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Partie de recherche",
+      "prompt": "Quelle entreprise a lancé un moteur de recherche nommé Google à la fin des années 1990 ?",
+      "choices": [
+        "AltaVista",
+        "Ask Jeeves",
+        "Yahoo",
+        "Google"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Oui, c’était la question facile."
+    },
+    {
+      "id": "cq-e-geny-wiki",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Livre ouvert",
+      "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie à plusieurs ?",
+      "choices": [
+        "Wikipédia",
+        "AltaVista",
+        "GeoCities",
+        "MySpace"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le bouton modifier est toute l'idée.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-e-geny-sms",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Note courte",
+      "prompt": "Que signifie SMS ?",
+      "choices": [
+        "Short Message Service",
+        "Standard Mobile Signal",
+        "Simple Mail Switch",
+        "Secure Media Stream"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Cent soixante caractères, et beaucoup de rendez-vous.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-e-geny-potter",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Premier livre",
+      "prompt": "Quand le premier livre Harry Potter a-t-il été publié au Royaume-Uni ?",
+      "choices": [
+        "1997",
+        "1995",
+        "1999",
+        "2001"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La rentrée dans le livre arrive après le livre.",
+      "slang": "Je dis ça,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-e-geny-canberra",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Australie ?",
+      "choices": [
+        "Melbourne",
+        "Sydney",
+        "Canberra",
+        "Brisbane"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville du port est célèbre. La capitale est celle qui a été planifiée.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-uk-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Royaume-Uni?",
+      "choices": [
+        "Édimbourg",
+        "Manchester",
+        "Londres",
+        "Birmingham"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-se-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Suède?",
+      "choices": [
+        "Stockholm",
+        "Göteborg",
+        "Malmö",
+        "Oslo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-kr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Corée du Sud?",
+      "choices": [
+        "Busan",
+        "Incheon",
+        "Pyongyang",
+        "Séoul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Chili?",
+      "choices": [
+        "Lima",
+        "Santiago",
+        "Valparaíso",
+        "Concepción"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-is-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Islande?",
+      "choices": [
+        "Reykjavik",
+        "Akureyri",
+        "Oslo",
+        "Copenhague"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-za-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale administrative de l'Afrique du Sud ?",
+      "choices": [
+        "Johannesburg",
+        "Durban",
+        "Le Cap",
+        "Pretoria"
+      ],
+      "correctIndex": 3,
+      "banterHint": "L'Afrique du Sud a aussi une capitale législative et une capitale judiciaire.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-day-hours",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'heures compte une journée ?",
+      "choices": [
+        "36",
+        "24",
+        "12",
+        "20"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-hexagon-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de côtés a un hexagone ?",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-deck-suits",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'enseignes compte un jeu de cartes standard ?",
+      "choices": [
+        "5",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-bill-rights",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'amendements compte la Déclaration des droits américaine ?",
+      "choices": [
+        "10",
+        "12",
+        "8",
+        "27"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-insect-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de pattes a un insecte ?",
+      "choices": [
+        "4",
+        "10",
+        "8",
+        "6"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-baseball-nine",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de joueurs d'une équipe entrent sur le terrain au baseball ?",
+      "choices": [
+        "10",
+        "8",
+        "9",
+        "11"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-golf-holes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de trous compte un parcours de golf standard ?",
+      "choices": [
+        "9",
+        "18",
+        "16",
+        "12"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-both-soccer",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de joueurs commencent un match de soccer sur le terrain, les deux équipes ?",
+      "choices": [
+        "22",
+        "18",
+        "20",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-curling-team",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de joueurs compte une équipe de curling ?",
+      "choices": [
+        "6",
+        "8",
+        "2",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ukulele-strings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de cordes a un ukulélé soprano standard ?",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-boil-f",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de degrés Fahrenheit marque l'ébullition de l'eau au niveau de la mer ?",
+      "choices": [
+        "212",
+        "100",
+        "180",
+        "32"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-year-days",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de jours compte une année commune, sans jour intercalaire ?",
+      "choices": [
+        "365",
+        "366",
+        "364",
+        "360"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-colosseum-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve le Colisée ?",
+      "choices": [
+        "Spain",
+        "France",
+        "Italy",
+        "Greece"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-opera-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve l'Opéra de Sydney ?",
+      "choices": [
+        "New Zealand",
+        "Australia",
+        "Canada",
+        "the United Kingdom"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-burj-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve la Burj Khalifa ?",
+      "choices": [
+        "India",
+        "the United Arab Emirates",
+        "Saudi Arabia",
+        "Qatar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-reef-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve la Grande Barrière de corail ?",
+      "choices": [
+        "Australia",
+        "Indonesia",
+        "Fiji",
+        "Brazil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-sphinx-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve le Grand Sphinx de Gizeh ?",
+      "choices": [
+        "Egypt",
+        "Greece",
+        "Sudan",
+        "Iraq"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-nightwatch-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a peint The Night Watch ?",
+      "choices": [
+        "Johannes Vermeer",
+        "Peter Paul Rubens",
+        "Frans Hals",
+        "Rembrandt"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-meninas-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a peint Las Meninas ?",
+      "choices": [
+        "El Greco",
+        "Bartolomé Murillo",
+        "Francisco Goya",
+        "Diego Velázquez"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-vw-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le berceau de Volkswagen ?",
+      "choices": [
+        "the United States",
+        "Sweden",
+        "Italy",
+        "Germany"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-honda-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le berceau de Honda ?",
+      "choices": [
+        "China",
+        "the United States",
+        "Japan",
+        "South Korea"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-suv-mean",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Que signifie SUV ?",
+      "choices": [
+        "standard urban van",
+        "speed under vacuum",
+        "super utility volt",
+        "sport utility vehicle"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-germany",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à Germany dans cette question ?",
+      "choices": [
+        "English",
+        "French",
+        "Dutch",
+        "German"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-greece",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à Greece dans cette question ?",
+      "choices": [
+        "Latin",
+        "Italian",
+        "Greek",
+        "Turkish"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-lang-netherlands",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à the Netherlands dans cette question ?",
+      "choices": [
+        "French",
+        "German",
+        "Dutch",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-0",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve l'Égypte ?",
+      "choices": [
+        "Asie",
+        "Europe",
+        "Afrique",
+        "Amérique du Sud"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-7",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve la Chine ?",
+      "choices": [
+        "Europe",
+        "Amérique du Nord",
+        "Afrique",
+        "Asie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-14",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve l'Italie ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Amérique du Sud",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-21",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve le Mexique ?",
+      "choices": [
+        "Amérique du Sud",
+        "Afrique",
+        "Europe",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-28",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve le Pérou ?",
+      "choices": [
+        "Amérique du Sud",
+        "Afrique",
+        "Europe",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cont-35",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve l'Indonésie ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Asie",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-2",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale des États-Unis ?",
+      "choices": [
+        "le dollar",
+        "l'euro",
+        "le peso",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-9",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale de la Norvège ?",
+      "choices": [
+        "le yen",
+        "la couronne",
+        "l'euro",
+        "le dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-16",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale de la Thaïlande ?",
+      "choices": [
+        "le yen",
+        "le baht",
+        "l'euro",
+        "le dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-cur-23",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale de l'Argentine ?",
+      "choices": [
+        "le yen",
+        "le peso",
+        "l'euro",
+        "le dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-0",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à pizza ?",
+      "choices": [
+        "Mexique",
+        "Japon",
+        "Italie",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-7",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à le kimchi ?",
+      "choices": [
+        "Italie",
+        "Mexique",
+        "Japon",
+        "Corée du Sud"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-14",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à le bortsch ?",
+      "choices": [
+        "Italie",
+        "Japon",
+        "Mexique",
+        "Ukraine"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-21",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à le tiramisu ?",
+      "choices": [
+        "Japon",
+        "Mexique",
+        "France",
+        "Italie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-food-28",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à la feijoada ?",
+      "choices": [
+        "Brésil",
+        "Mexique",
+        "Japon",
+        "Italie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-4",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est le mammifère qui vole vraiment ?",
+      "choices": [
+        "le hibou",
+        "le polatouche",
+        "la chauve-souris",
+        "le manchot"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est le chameau à deux bosses ?",
+      "choices": [
+        "le dromadaire",
+        "le lama",
+        "l'alpaga",
+        "le chameau de Bactriane"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-16",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est le reptile à carapace ?",
+      "choices": [
+        "le crocodile",
+        "la tortue",
+        "le serpent",
+        "le lézard"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-ani-22",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est le mammifère à bec qui pond des œufs ?",
+      "choices": [
+        "l'ornithorynque",
+        "le canard",
+        "l'échidné",
+        "le castor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-human-lungs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de poumons a un humain typique ?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-week-weekend",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de jours appelle-t-on d'habitude la fin de semaine ?",
+      "choices": [
+        "1",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-little-pigs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de petits cochons compte le conte classique des maisons ?",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-strings-violin-family-viola",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de cordes a un alto standard ?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-sides-square",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de côtés a un carré ?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-players-doubles",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de joueurs compte un camp en double au tennis ?",
+      "choices": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-clock-numbers",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de nombres, de 1 à 12, compte d'habitude un cadran ?",
+      "choices": [
+        "6",
+        "12",
+        "10",
+        "24"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-score-twenty",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'années compte un score, comme dans « four score » ?",
+      "choices": [
+        "20",
+        "12",
+        "40",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-quartet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de musiciens compte un quatuor ?",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-e-easy-octet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de bits compte un octet ?",
+      "choices": [
+        "4",
+        "16",
+        "10",
+        "8"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Je dis ça,"
+    }
+  ]
+}

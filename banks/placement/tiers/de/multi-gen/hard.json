@@ -1,0 +1,56 @@
+{
+  "generation": "multi-gen",
+  "tier": "hard",
+  "locale": "de",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-mg-h-enterprise",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Sci-Fi",
+      "prompt": "Wie heißt das Raumschiff unter Captain Kirk in der Originalserie Star Trek?",
+      "choices": [
+        "Falcon",
+        "Enterprise",
+        "Serenity",
+        "Galactica"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Mittlerer Diskriminator über Altersgruppen; bekannte Franchise, nicht meme-abhängig.",
+      "sources": [
+        {
+          "label": "Wikipedia — USS Enterprise (NCC-1701)"
+        },
+        {
+          "label": "Star Trek: The Original Series"
+        }
+      ]
+    },
+    {
+      "id": "place-gt-h-hammond",
+      "tier": "hard",
+      "topic": "grand-tour-top-gear",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Benzin",
+      "prompt": "Welcher Top-Gear- / Grand-Tour-Moderator trägt den Spitznamen Hamster?",
+      "choices": [
+        "Jeremy Clarkson",
+        "James May",
+        "Richard Hammond",
+        "The Stig"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Produktkern-Thema Mittelitem.",
+      "sources": [
+        {
+          "label": "Wikipedia — Richard Hammond"
+        },
+        {
+          "label": "BBC Top Gear materials"
+        }
+      ]
+    }
+  ]
+}

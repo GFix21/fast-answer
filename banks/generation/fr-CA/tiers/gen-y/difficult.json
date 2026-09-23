@@ -1,0 +1,346 @@
+{
+  "generation": "gen-y",
+  "tier": "difficult",
+  "locale": "fr-CA",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-geny-iphone",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Chronologie keynote",
+      "prompt": "En quelle année Apple a annoncé l’iPhone original ?",
+      "choices": [
+        "2010",
+        "2007",
+        "2005",
+        "2009"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-geny-inception",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Couches de rêve",
+      "prompt": "Qui a réalisé le film Inception de 2010 ?",
+      "choices": [
+        "Christopher Nolan",
+        "James Cameron",
+        "Denis Villeneuve",
+        "Ridley Scott"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-geny-wiki",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Pages ouvertes",
+      "prompt": "En quelle année Wikipédia a été lancé ?",
+      "choices": [
+        "1998",
+        "1995",
+        "2004",
+        "2001"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les pages sont nombreuses. Le départ est une année.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-bd-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Bangladesh?",
+      "choices": [
+        "Chittagong",
+        "Calcutta",
+        "Dhaka",
+        "Khulna"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-tj-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Tadjikistan?",
+      "choices": [
+        "Khujand",
+        "Dushanbe",
+        "Bishkek",
+        "Tashkent"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-zw-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Zimbabwe?",
+      "choices": [
+        "Gaborone",
+        "Lusaka",
+        "Harare",
+        "Bulawayo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-telephone-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the telephone patent of 1876 ?",
+      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi",
+        "Alexander Graham Bell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-smallpox-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first smallpox vaccine ?",
+      "choices": [
+        "Louis Pasteur",
+        "Edward Jenner",
+        "Alexander Fleming",
+        "Jonas Salk"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-turing-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the idea of a universal computing machine in 1936 ?",
+      "choices": [
+        "Ada Lovelace",
+        "John von Neumann",
+        "Alan Turing",
+        "Charles Babbage"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-tereshkova-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first woman in space ?",
+      "choices": [
+        "Mae Jemison",
+        "Valentina Tereshkova",
+        "Sally Ride",
+        "Svetlana Savitskaya"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-bastille",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la Bastille a été prise à Paris ?",
+      "choices": [
+        "1815",
+        "1848",
+        "1789",
+        "1776"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-ww1-end",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'armistice de la Première Guerre mondiale est entré en vigueur ?",
+      "choices": [
+        "1914",
+        "1945",
+        "1918",
+        "1919"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-india",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Inde est devenue indépendante ?",
+      "choices": [
+        "1945",
+        "1948",
+        "1950",
+        "1947"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-mandela",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Nelson Mandela a été libéré de prison ?",
+      "choices": [
+        "1990",
+        "1964",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-nine-eleven",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que les attentats du 11 septembre ont eu lieu aux États-Unis ?",
+      "choices": [
+        "2003",
+        "2000",
+        "2001",
+        "1999"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-brexit-leave",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que le Royaume-Uni a quitté l'Union européenne ?",
+      "choices": [
+        "2020",
+        "2016",
+        "2019",
+        "2021"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-model-t",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Ford a commencé à vendre la Model T ?",
+      "choices": [
+        "1908",
+        "1920",
+        "1914",
+        "1903"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-world-cup-first",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la première Coupe du monde de la FIFA a eu lieu ?",
+      "choices": [
+        "1930",
+        "1924",
+        "1950",
+        "1934"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-ph",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'eau pure à température ambiante a quel pH ?",
+      "choices": [
+        "1",
+        "14",
+        "7",
+        "0"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-genome",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'achèvement du Projet génome humain a été annoncé en quelle année ?",
+      "choices": [
+        "1990",
+        "1998",
+        "2003",
+        "2010"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    }
+  ]
+}

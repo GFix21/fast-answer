@@ -1,0 +1,177 @@
+{
+  "generation": "silent-generation",
+  "tier": "extreme",
+  "locale": "fr-CA",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-silent-cool-wall",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "silent-generation",
+      "categoryTitle": "Finale · Power Lap",
+      "prompt": "Sur le Cool Wall de Top Gear, quelle zone se situe entre Cool et Uncool ?",
+      "choices": [
+        "Subzero",
+        "Slightly Warm",
+        "Meh",
+        "Seriously Uncool"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-si-x-uy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Uruguay?",
+      "choices": [
+        "Punta del Este",
+        "Montevideo",
+        "Buenos Aires",
+        "Salto"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-ht-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale d'Haïti?",
+      "choices": [
+        "Santo Domingo",
+        "Kingston",
+        "Cap-Haïtien",
+        "Port-au-Prince"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-sv-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Salvador?",
+      "choices": [
+        "San Salvador",
+        "Santa Ana",
+        "Tegucigalpa",
+        "Guatemala"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-lv-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Lettonie?",
+      "choices": [
+        "Daugavpils",
+        "Vilnius",
+        "Riga",
+        "Tallinn"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-ba-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Bosnie-Herzégovine?",
+      "choices": [
+        "Sarajevo",
+        "Banja Luka",
+        "Mostar",
+        "Zagreb"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-cy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de Chypre?",
+      "choices": [
+        "Limassol",
+        "Larnaca",
+        "Athènes",
+        "Nicosie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-ml-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Mali?",
+      "choices": [
+        "Sikasso",
+        "Tombouctou",
+        "Bamako",
+        "Dakar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-er-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Érythrée?",
+      "choices": [
+        "Asmara",
+        "Addis-Abeba",
+        "Khartoum",
+        "Massawa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-x-atomic-hg",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le numéro atomique du mercure ?",
+      "choices": [
+        "79",
+        "30",
+        "82",
+        "80"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    }
+  ]
+}

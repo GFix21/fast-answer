@@ -1,0 +1,177 @@
+{
+  "generation": "gen-x",
+  "tier": "extreme",
+  "locale": "en",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-genx-stig-reveal",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Finale · Helmet Off",
+      "prompt": "Which racing driver was revealed in 2009 as the then-current BBC Top Gear Stig?",
+      "choices": [
+        "Damon Hill",
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Ben Collins"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-gx-x-ec-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Ecuador?",
+      "choices": [
+        "Quito",
+        "Guayaquil",
+        "Cuenca",
+        "Lima"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-x-do-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of the Dominican Republic?",
+      "choices": [
+        "Santiago de los Caballeros",
+        "Punta Cana",
+        "Port-au-Prince",
+        "Santo Domingo"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-x-fj-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Fiji?",
+      "choices": [
+        "Suva",
+        "Nadi",
+        "Lautoka",
+        "Wellington"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-x-lu-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Luxembourg?",
+      "choices": [
+        "Metz",
+        "Luxembourg",
+        "Esch-sur-Alzette",
+        "Brussels"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-x-by-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Belarus?",
+      "choices": [
+        "Brest",
+        "Gomel",
+        "Moscow",
+        "Minsk"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-x-bh-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Bahrain?",
+      "choices": [
+        "Manama",
+        "Kuwait City",
+        "Doha",
+        "Riffa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-x-tn-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Tunisia?",
+      "choices": [
+        "Tunis",
+        "Carthage",
+        "Sousse",
+        "Sfax"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-x-atomic-au",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the atomic number of gold?",
+      "choices": [
+        "47",
+        "29",
+        "82",
+        "79"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-x-feet-mile",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many feet are in a mile?",
+      "choices": [
+        "1000",
+        "1609",
+        "1760",
+        "5280"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    }
+  ]
+}

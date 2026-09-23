@@ -1,0 +1,853 @@
+{
+  "generation": "gen-z",
+  "tier": "hard",
+  "locale": "en",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-genz-fortnite2",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Island Code",
+      "prompt": "Which company develops Fortnite?",
+      "choices": [
+        "Valve",
+        "Nintendo",
+        "Epic Games",
+        "Sega"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-spotify2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Stream HQ",
+      "prompt": "In which country was Spotify founded?",
+      "choices": [
+        "Sweden",
+        "Brazil",
+        "South Korea",
+        "United States"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-btsv",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "K-Pop Compass",
+      "prompt": "BTS is a music group from which country?",
+      "choices": [
+        "South Korea",
+        "Thailand",
+        "China",
+        "Japan"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-tesla",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "EV Highway",
+      "prompt": "Tesla, Inc. is best known for manufacturing what?",
+      "choices": [
+        "Only sailboats",
+        "Only mechanical typewriters",
+        "Electric vehicles",
+        "Only vinyl presses"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-blackpanther",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Wakanda Weekend",
+      "prompt": "Who directed the 2018 Marvel film Black Panther?",
+      "choices": [
+        "Ryan Coogler",
+        "Patty Jenkins",
+        "Taika Waititi",
+        "James Gunn"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-paris-acc",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Climate Map",
+      "prompt": "The Paris Agreement is a major international deal focused on what?",
+      "choices": [
+        "Currency fonts",
+        "Postage stamps",
+        "Olympic mascots",
+        "Climate change"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-genz-bytedance",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Short Video",
+      "prompt": "Which company owns TikTok?",
+      "choices": [
+        "Snap",
+        "Meta",
+        "Google",
+        "ByteDance"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The app is the famous part. The company is quieter.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-h-genz-hashtag",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Pound Sign",
+      "prompt": "What is the name of the # symbol when it groups posts on social media?",
+      "choices": [
+        "A hashtag",
+        "A caret",
+        "A tilde",
+        "An asterisk"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One mark, and the posts find each other.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-h-genz-mohs",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Hardness",
+      "prompt": "What is the hardest natural mineral on the Mohs scale?",
+      "choices": [
+        "Quartz",
+        "Corundum",
+        "Diamond",
+        "Topaz"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The scale stops at ten. This one sits there.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-h-genz-curiosity",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Gale Crater",
+      "prompt": "When did NASA's Curiosity rover land on Mars?",
+      "choices": [
+        "2004",
+        "2012",
+        "1997",
+        "2021"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The sky crane did the last step. The year is 2012.",
+      "slang": "Low-key,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-gz-h-sa-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Saudi Arabia?",
+      "choices": [
+        "Riyadh",
+        "Mecca",
+        "Medina",
+        "Jeddah"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-hr-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Croatia?",
+      "choices": [
+        "Zagreb",
+        "Split",
+        "Dubrovnik",
+        "Rijeka"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-lb-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Lebanon?",
+      "choices": [
+        "Beirut",
+        "Tripoli",
+        "Sidon",
+        "Damascus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-hamlet-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the play Hamlet?",
+      "choices": [
+        "Molière",
+        "Henrik Ibsen",
+        "William Shakespeare",
+        "Christopher Marlowe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-potter-author",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the Harry Potter novels?",
+      "choices": [
+        "Roald Dahl",
+        "J. K. Rowling",
+        "Rick Riordan",
+        "Philip Pullman"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-gatsby-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Great Gatsby?",
+      "choices": [
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald",
+        "William Faulkner",
+        "John Steinbeck"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-gables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book Anne of Green Gables?",
+      "choices": [
+        "Louisa May Alcott",
+        "Laura Ingalls Wilder",
+        "Frances Hodgson Burnett",
+        "L. M. Montgomery"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-miserables-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Les Misérables?",
+      "choices": [
+        "Victor Hugo",
+        "Alexandre Dumas",
+        "Émile Zola",
+        "Gustave Flaubert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-little-women",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Little Women?",
+      "choices": [
+        "Louisa May Alcott",
+        "Jane Austen",
+        "L. M. Montgomery",
+        "Emily Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-oliver-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Oliver Twist?",
+      "choices": [
+        "Charles Dickens",
+        "Jane Austen",
+        "Thomas Hardy",
+        "Charlotte Brontë"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-color-purple",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Color Purple?",
+      "choices": [
+        "Toni Morrison",
+        "Alice Walker",
+        "Octavia Butler",
+        "Maya Angelou"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-seasons-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made The Four Seasons?",
+      "choices": [
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Arcangelo Corelli",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-brandenburg-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the Brandenburg Concertos?",
+      "choices": [
+        "George Frideric Handel",
+        "Johann Sebastian Bach",
+        "Georg Philipp Telemann",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-bohemian-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Bohemian Rhapsody?",
+      "choices": [
+        "Led Zeppelin",
+        "The Beatles",
+        "Queen",
+        "The Who"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-hey-ya-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Hey Ya!?",
+      "choices": [
+        "Beyoncé",
+        "Usher",
+        "OutKast",
+        "Kanye West"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-license-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song drivers license?",
+      "choices": [
+        "Olivia Rodrigo",
+        "Billie Eilish",
+        "Taylor Swift",
+        "Sabrina Carpenter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-nirvana-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the band Nirvana, as lead singer?",
+      "choices": [
+        "Eddie Vedder",
+        "Kurt Cobain",
+        "Dave Grohl",
+        "Krist Novoselic"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-jurassic-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1993 film Jurassic Park?",
+      "choices": [
+        "Steven Spielberg",
+        "Roland Emmerich",
+        "Peter Jackson",
+        "James Cameron"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-vertigo-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Vertigo?",
+      "choices": [
+        "Alfred Hitchcock",
+        "Howard Hawks",
+        "Fritz Lang",
+        "Orson Welles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-amelie-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Amélie?",
+      "choices": [
+        "Michel Gondry",
+        "Jean-Pierre Jeunet",
+        "Luc Besson",
+        "François Ozon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-toy-story-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1995 film Toy Story?",
+      "choices": [
+        "John Lasseter",
+        "Pete Docter",
+        "Andrew Stanton",
+        "Brad Bird"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-arrival-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 2016 film Arrival?",
+      "choices": [
+        "Christopher Nolan",
+        "Neill Blomkamp",
+        "Alex Garland",
+        "Denis Villeneuve"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-n",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for nitrogen?",
+      "choices": [
+        "Ne",
+        "Ni",
+        "Na",
+        "N"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-pb",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for lead?",
+      "choices": [
+        "Pd",
+        "Pb",
+        "Li",
+        "Pt"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-mg",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for magnesium?",
+      "choices": [
+        "Mn",
+        "Hg",
+        "Mo",
+        "Mg"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-ar",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for argon?",
+      "choices": [
+        "Ar",
+        "Al",
+        "Au",
+        "Ag"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-sym-co",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for cobalt?",
+      "choices": [
+        "Ca",
+        "Co",
+        "Cu",
+        "C"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-sahara-hot",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which desert is the largest hot desert on Earth?",
+      "choices": [
+        "the Gobi",
+        "the Sahara",
+        "the Arabian Desert",
+        "the Kalahari"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which planet is called the Red Planet?",
+      "choices": [
+        "Jupiter",
+        "Mars",
+        "Venus",
+        "Mercury"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-hardest-after",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "On the Mohs scale, which mineral is just below diamond?",
+      "choices": [
+        "topaz",
+        "talc",
+        "quartz",
+        "corundum"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-origin-potato",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which region were potatoes first cultivated?",
+      "choices": [
+        "Europe",
+        "the Andes",
+        "West Africa",
+        "China"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-otto-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who built the four-stroke engine that carries his cycle's name?",
+      "choices": [
+        "Nikolaus Otto",
+        "Karl Benz",
+        "Rudolf Diesel",
+        "James Watt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-braille-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who invented the raised-dot reading system called Braille?",
+      "choices": [
+        "Samuel Morse",
+        "Alexander Graham Bell",
+        "Helen Keller",
+        "Louis Braille"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-red-cross-founder",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who founded the Red Cross movement after the battle of Solferino?",
+      "choices": [
+        "Florence Nightingale",
+        "Jean-Henri Fabre",
+        "Clara Barton",
+        "Henry Dunant"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-curie-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which element is named after Marie and Pierre Curie?",
+      "choices": [
+        "curium",
+        "radium",
+        "polonium",
+        "uranium"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-table-salt",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Table salt is mostly which compound?",
+      "choices": [
+        "sodium chloride",
+        "calcium carbonate",
+        "sodium bicarbonate",
+        "potassium iodide"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-cork-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Cork comes from the bark of which tree?",
+      "choices": [
+        "the pine",
+        "the maple",
+        "the birch",
+        "the cork oak"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-vanilla-orchid",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Vanilla comes from which kind of plant?",
+      "choices": [
+        "an orchid",
+        "a cactus",
+        "a vine of grapes",
+        "a bean tree"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-bi-sheng",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who developed movable clay type in Song-dynasty China?",
+      "choices": [
+        "Bi Sheng",
+        "Cai Lun",
+        "Johannes Gutenberg",
+        "Shen Kuo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-h-hard-figaro",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who composed the opera The Marriage of Figaro?",
+      "choices": [
+        "Ludwig van Beethoven",
+        "Wolfgang Amadeus Mozart",
+        "Giuseppe Verdi",
+        "Gioachino Rossini"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    }
+  ]
+}

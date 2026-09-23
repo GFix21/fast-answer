@@ -1,0 +1,56 @@
+{
+  "generation": "gen-z",
+  "tier": "easy",
+  "locale": "fr",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-z-e-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Streams",
+      "prompt": "Lequel de ceux-ci est un grand service de streaming musical ?",
+      "choices": [
+        "Blockbuster",
+        "Spotify",
+        "Boutique CD Napster",
+        "Betamax Radio"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Contrôle facile de la culture musicale moderne.",
+      "sources": [
+        {
+          "label": "Wikipedia — Spotify"
+        },
+        {
+          "label": "Company / press materials"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-e-planets",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Orbites",
+      "prompt": "Combien de planètes le système solaire compte-t-il ?",
+      "choices": [
+        "8",
+        "9",
+        "7",
+        "12"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Compte facile après la définition de 2006.",
+      "sources": [
+        {
+          "label": "IAU — planet definition"
+        },
+        {
+          "label": "NASA — solar system"
+        }
+      ]
+    }
+  ]
+}

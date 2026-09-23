@@ -1,0 +1,177 @@
+{
+  "generation": "gen-alpha",
+  "tier": "extreme",
+  "locale": "fr",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-alpha-minecraft-biome",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Finale · Deep Dark",
+      "prompt": "Dans Minecraft, quelle créature hostile est fortement associée au Deep Dark / aux cités antiques ?",
+      "choices": [
+        "Warden",
+        "Golem de fer",
+        "Creeper uniquement",
+        "Ender Dragon uniquement"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-al-x-sr-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Suriname?",
+      "choices": [
+        "Georgetown",
+        "Paramaribo",
+        "Caracas",
+        "Cayenne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-x-gt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Guatemala?",
+      "choices": [
+        "Antigua",
+        "Quetzaltenango",
+        "San Salvador",
+        "Guatemala"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-x-si-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Slovénie?",
+      "choices": [
+        "Ljubljana",
+        "Zagreb",
+        "Trieste",
+        "Maribor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-x-mk-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Macédoine du Nord?",
+      "choices": [
+        "Bitola",
+        "Tirana",
+        "Skopje",
+        "Ohrid"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-x-az-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Azerbaïdjan?",
+      "choices": [
+        "Tbilissi",
+        "Yerevan",
+        "Ganja",
+        "Bakou"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-x-cm-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Cameroun?",
+      "choices": [
+        "Garoua",
+        "Lagos",
+        "Yaoundé",
+        "Douala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-x-sd-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Soudan?",
+      "choices": [
+        "Omdurman",
+        "Port-Soudan",
+        "Le Caire",
+        "Khartoum"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-x-atomic-w",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel est le numéro atomique du tungstène ?",
+      "choices": [
+        "74",
+        "42",
+        "26",
+        "78"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-x-chromosomes",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de chromosomes compte une cellule humaine typique ?",
+      "choices": [
+        "48",
+        "23",
+        "46",
+        "44"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    }
+  ]
+}

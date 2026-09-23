@@ -1,0 +1,56 @@
+{
+  "generation": "gen-x",
+  "tier": "hard",
+  "locale": "fr",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-x-h-mtv",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Gen X",
+      "prompt": "Quelle chaîne câblée américaine a été lancée en 1981 avec un focus sur les clips musicaux ?",
+      "choices": [
+        "Nickelodeon",
+        "CNN",
+        "MTV",
+        "ESPN"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Item médian orienté Gen X ; juste pour les autres via osmose culturelle.",
+      "sources": [
+        {
+          "label": "Wikipedia — MTV"
+        },
+        {
+          "label": "Contemporary launch coverage — 1981"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-saturn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Anneaux",
+      "prompt": "Quelle planète est surtout connue pour ses anneaux ?",
+      "choices": [
+        "Saturne",
+        "Jupiter",
+        "Neptune",
+        "Mars"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Fait difficile sur le système solaire. La Grande Tache rouge est une autre planète.",
+      "sources": [
+        {
+          "label": "NASA — Saturn"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Saturn"
+        }
+      ]
+    }
+  ]
+}

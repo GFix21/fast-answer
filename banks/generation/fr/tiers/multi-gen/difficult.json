@@ -1,0 +1,347 @@
+{
+  "generation": "multi-gen",
+  "tier": "difficult",
+  "locale": "fr",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-mix-louvre",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Problème de pyramide",
+      "prompt": "La pyramide de verre d’I. M. Pei est l’entrée moderne emblématique de quel musée ?",
+      "choices": [
+        "Le Met (NYC)",
+        "Le Louvre",
+        "Le British Museum",
+        "Le Prado"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-multi-everest",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Sommet",
+      "prompt": "En quelle année Edmund Hillary et Tenzing Norgay ont-ils atteint pour la première fois le sommet de l'Everest ?",
+      "choices": [
+        "1924",
+        "1963",
+        "1950",
+        "1953"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Deux personnes, une arête, une année restée.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ak-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de Alaska ?",
+      "choices": [
+        "Nome",
+        "Juneau",
+        "Anchorage",
+        "Fairbanks"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-de-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de Delaware ?",
+      "choices": [
+        "Dover",
+        "Newark",
+        "Wilmington",
+        "Rehoboth Beach"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ia-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de Iowa ?",
+      "choices": [
+        "Cedar Rapids",
+        "Iowa City",
+        "Davenport",
+        "Des Moines"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ks-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de Kansas ?",
+      "choices": [
+        "Wichita",
+        "Kansas City",
+        "Lawrence",
+        "Topeka"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ne-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de Nebraska ?",
+      "choices": [
+        "Bellevue",
+        "Grand Island",
+        "Lincoln",
+        "Omaha"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ok-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de Oklahoma ?",
+      "choices": [
+        "Norman",
+        "Lawton",
+        "Tulsa",
+        "Oklahoma City"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ar-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de Arkansas ?",
+      "choices": [
+        "Fort Smith",
+        "Fayetteville",
+        "Little Rock",
+        "Hot Springs"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ms-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de Mississippi ?",
+      "choices": [
+        "Biloxi",
+        "Jackson",
+        "Oxford",
+        "Gulfport"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-wv-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de West Virginia ?",
+      "choices": [
+        "Charleston",
+        "Wheeling",
+        "Morgantown",
+        "Huntington"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-id-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale d'État",
+      "prompt": "Quelle est la capitale de l'État américain de Idaho ?",
+      "choices": [
+        "Boise",
+        "Coeur d'Alene",
+        "Pocatello",
+        "Idaho Falls"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville célèbre à côté peut être un autre endroit.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-kz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Kazakhstan?",
+      "choices": [
+        "Astana",
+        "Shymkent",
+        "Tashkent",
+        "Almaty"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-ao-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Angola?",
+      "choices": [
+        "Huambo",
+        "Luanda",
+        "Kinshasa",
+        "Lobito"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-gravity-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the law of universal gravitation in the Principia ?",
+      "choices": [
+        "Galileo Galilei",
+        "Johannes Kepler",
+        "Albert Einstein",
+        "Isaac Newton"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-press-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the movable-type printing press in Europe ?",
+      "choices": [
+        "Johannes Gutenberg",
+        "Martin Luther",
+        "William Caxton",
+        "Aldus Manutius"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-faraday-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on electromagnetic induction, as a key experimenter ?",
+      "choices": [
+        "James Clerk Maxwell",
+        "André-Marie Ampère",
+        "Nikola Tesla",
+        "Michael Faraday"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-hamilton-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the onboard flight software for the Apollo missions ?",
+      "choices": [
+        "Katherine Johnson",
+        "Dorothy Vaughan",
+        "Margaret Hamilton",
+        "Grace Hopper"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-gagarin-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the first person to orbit Earth ?",
+      "choices": [
+        "Yuri Gagarin",
+        "Gherman Titov",
+        "Alexei Leonov",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    },
+    {
+      "id": "cq-w39-mu-d-y-civil-start",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année la guerre de Sécession a commencé ?",
+      "choices": [
+        "1850",
+        "1848",
+        "1861",
+        "1865"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Pour tout le monde,"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "generation": "gen-x",
+  "tier": "easy",
+  "locale": "de",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-x-e-back-future",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · 80er-Screen",
+      "prompt": "Was für ein Fahrzeug ist die Zeitmaschine in Zurück in die Zukunft?",
+      "choices": [
+        "Ein Hubschrauber",
+        "Eine Telefonzelle",
+        "Ein Dampfzug",
+        "Ein DeLorean"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Leicht mit Gen-X-Flavour — weiterhin weithin bekannt.",
+      "sources": [
+        {
+          "label": "Wikipedia — Back to the Future"
+        },
+        {
+          "label": "Film itself (1985)"
+        }
+      ]
+    },
+    {
+      "id": "place-mus-e-violin",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Saiten",
+      "prompt": "Wie viele Saiten hat eine gewöhnliche Geige?",
+      "choices": [
+        "4",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Leichte Instrumentenfrage. Eine Gitarre hat eine andere Zahl.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — violin"
+        },
+        {
+          "label": "Grove Music Online — violin"
+        }
+      ]
+    }
+  ]
+}

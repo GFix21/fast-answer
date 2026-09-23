@@ -1,0 +1,56 @@
+{
+  "generation": "multi-gen",
+  "tier": "difficult",
+  "locale": "en",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-mg-d-stravinsky",
+      "tier": "difficult",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Deep Cut",
+      "prompt": "Who composed The Rite of Spring?",
+      "choices": [
+        "Pyotr Tchaikovsky",
+        "Igor Stravinsky",
+        "Ludwig van Beethoven",
+        "John Williams"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Top-band probe — rewards generalist culture, not age slang.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Rite of Spring"
+        },
+        {
+          "label": "Ballet / programme histories"
+        }
+      ]
+    },
+    {
+      "id": "place-art-d-braque",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Cubism",
+      "prompt": "Picasso co-founded Cubism with which artist?",
+      "choices": [
+        "Georges Braque",
+        "Andy Warhol",
+        "Jackson Pollock",
+        "Frida Kahlo"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Difficult culture probe — ability gold signal.",
+      "sources": [
+        {
+          "label": "Wikipedia — Cubism"
+        },
+        {
+          "label": "MoMA / Tate primers"
+        }
+      ]
+    }
+  ]
+}

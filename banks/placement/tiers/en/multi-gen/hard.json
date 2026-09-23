@@ -1,0 +1,56 @@
+{
+  "generation": "multi-gen",
+  "tier": "hard",
+  "locale": "en",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-mg-h-enterprise",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Sci-Fi",
+      "prompt": "What is the name of the starship commanded by Captain Kirk in the original Star Trek series?",
+      "choices": [
+        "Falcon",
+        "Enterprise",
+        "Serenity",
+        "Galactica"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Mid discriminator across ages; famous franchise, not meme-dependent.",
+      "sources": [
+        {
+          "label": "Wikipedia — USS Enterprise (NCC-1701)"
+        },
+        {
+          "label": "Star Trek: The Original Series"
+        }
+      ]
+    },
+    {
+      "id": "place-gt-h-hammond",
+      "tier": "hard",
+      "topic": "grand-tour-top-gear",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Petrol",
+      "prompt": "Which Top Gear / Grand Tour presenter is nicknamed the Hamster?",
+      "choices": [
+        "Jeremy Clarkson",
+        "James May",
+        "Richard Hammond",
+        "The Stig"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Product-core topic mid item.",
+      "sources": [
+        {
+          "label": "Wikipedia — Richard Hammond"
+        },
+        {
+          "label": "BBC Top Gear materials"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "generation": "gen-x",
+  "tier": "hard",
+  "locale": "en",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-x-h-mtv",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Gen X",
+      "prompt": "Which US cable channel launched in 1981 with a focus on music videos?",
+      "choices": [
+        "Nickelodeon",
+        "CNN",
+        "MTV",
+        "ESPN"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Gen X-leaning mid item; still fair to others via cultural osmosis.",
+      "sources": [
+        {
+          "label": "Wikipedia — MTV"
+        },
+        {
+          "label": "Contemporary launch coverage — 1981"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-saturn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Rings",
+      "prompt": "Which planet is best known for its rings?",
+      "choices": [
+        "Saturn",
+        "Jupiter",
+        "Neptune",
+        "Mars"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Hard solar-system fact. The Great Red Spot is a different planet.",
+      "sources": [
+        {
+          "label": "NASA — Saturn"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Saturn"
+        }
+      ]
+    }
+  ]
+}

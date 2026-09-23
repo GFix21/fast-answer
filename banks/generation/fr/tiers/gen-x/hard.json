@@ -1,0 +1,863 @@
+{
+  "generation": "gen-x",
+  "tier": "hard",
+  "locale": "fr",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-genx-amazon-gt",
+      "tier": "hard",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Essence en prime time",
+      "prompt": "Quel service de streaming a produit The Grand Tour ?",
+      "choices": [
+        "Netflix",
+        "Disney+",
+        "Amazon Prime Video",
+        "Hulu"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-chernobyl",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Carte atomique",
+      "prompt": "La catastrophe nucléaire de Tchernobyl en 1986 s’est produite dans quel pays actuel ?",
+      "choices": [
+        "Suède",
+        "Pologne",
+        "Ukraine",
+        "Allemagne"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-nirvana",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Porte grunge",
+      "prompt": "Quel album de Nirvana contient la chanson « Smells Like Teen Spirit » ?",
+      "choices": [
+        "Bleach",
+        "Nevermind",
+        "In Utero",
+        "Unplugged in New York"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-www",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Aube de l’hyperlien",
+      "prompt": "À qui attribue-t-on l’invention du World Wide Web ?",
+      "choices": [
+        "Steve Jobs",
+        "Mark Zuckerberg",
+        "Bill Gates",
+        "Tim Berners-Lee"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-seinfeld",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "À propos de rien",
+      "prompt": "Seinfeld se déroule principalement dans quelle ville américaine ?",
+      "choices": [
+        "Chicago",
+        "Boston",
+        "Los Angeles",
+        "New York"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-gameboy",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Histoire portable",
+      "prompt": "En quelle année le Game Boy original de Nintendo est-il sorti au Japon ?",
+      "choices": [
+        "1994",
+        "1998",
+        "1989",
+        "1985"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-genx-ram",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Mémoire courte",
+      "prompt": "Que signifie RAM dans un ordinateur ?",
+      "choices": [
+        "Read And Modify",
+        "Rapid Archive Module",
+        "Random Access Memory",
+        "Remote Access Mainframe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Une mémoire rapide, qui oublie quand le courant coupe.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-h-genx-cd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Cercle d'argent",
+      "prompt": "Que signifie CD dans le format musical lancé au début des années 1980 ?",
+      "choices": [
+        "Cassette Deck",
+        "Catalog Download",
+        "Compact Disc",
+        "Crystal Drive"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Un petit miroir qui tenait un album.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-h-genx-blinky",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Service fantôme",
+      "prompt": "De quelle couleur est Blinky, le fantôme de Pac-Man ?",
+      "choices": [
+        "Rose",
+        "Orange",
+        "Cyan",
+        "Rouge"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les trois autres portent le reste.",
+      "slang": "Bref,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-h-genx-web",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Première page",
+      "prompt": "L'histoire semble partir ailleurs. La question reste : « Quand le Web a-t-il été ouvert au public ? »",
+      "choices": [
+        "6 août 1991",
+        "12 mars, le jour où l'idée s'est raclé la gorge",
+        "1 janvier, quand le calendrier avait l'air officiel",
+        "6 août 1989"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'idée est plus vieille. La page publique est cette date.",
+      "slang": "Bref,",
+      "funny": true,
+      "humorous": true,
+      "injection": "misdirection",
+      "structure": "when",
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-h-genx-cdsale",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Disque argenté",
+      "prompt": "En quelle année le disque compact a-t-il été mis en vente ?",
+      "choices": [
+        "1988",
+        "1977",
+        "1982",
+        "1991"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le cercle brillant est arrivé avant les listes d'écoute.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-h-genx-hubble",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Œil en orbite",
+      "prompt": "Quand le télescope spatial Hubble a-t-il été lancé ?",
+      "choices": [
+        "1990",
+        "1998",
+        "1981",
+        "2003"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le miroir a eu besoin d'une visite plus tard. L'année de lancement est la première.",
+      "slang": "Bref,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-gx-h-vn-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Vietnam?",
+      "choices": [
+        "Da Nang",
+        "Hô Chi Minh-Ville",
+        "Hanoï",
+        "Huê"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-ro-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Roumanie?",
+      "choices": [
+        "Cluj-Napoca",
+        "Budapest",
+        "Bucarest",
+        "Timișoara"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-kw-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Koweït?",
+      "choices": [
+        "Koweït",
+        "Riyad",
+        "Manama",
+        "Doha"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-mm-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Myanmar?",
+      "choices": [
+        "Naypyidaw",
+        "Mandalay",
+        "Bangkok",
+        "Yangon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-dracula-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a écrit the novel Dracula ?",
+      "choices": [
+        "Edgar Allan Poe",
+        "Robert Louis Stevenson",
+        "Mary Shelley",
+        "Bram Stoker"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-odyssey-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a écrit the epic poem the Odyssey ?",
+      "choices": [
+        "Ovid",
+        "Sophocles",
+        "Virgil",
+        "Homer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-cat-hat-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a écrit the book The Cat in the Hat ?",
+      "choices": [
+        "Maurice Sendak",
+        "Shel Silverstein",
+        "Dr. Seuss",
+        "Eric Carle"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-faust-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a écrit the play Faust ?",
+      "choices": [
+        "Heinrich Heine",
+        "Bertolt Brecht",
+        "Johann Wolfgang von Goethe",
+        "Friedrich Schiller"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-none-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a écrit the novel And Then There Were None ?",
+      "choices": [
+        "Arthur Conan Doyle",
+        "Agatha Christie",
+        "Ngaio Marsh",
+        "Dorothy L. Sayers"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-moby-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a écrit the novel Moby-Dick ?",
+      "choices": [
+        "Jack London",
+        "Joseph Conrad",
+        "Herman Melville",
+        "Nathaniel Hawthorne"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-grapes-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a écrit the novel The Grapes of Wrath ?",
+      "choices": [
+        "William Faulkner",
+        "Harper Lee",
+        "Ernest Hemingway",
+        "John Steinbeck"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-peter-pan",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a écrit the story Peter Pan ?",
+      "choices": [
+        "Kenneth Grahame",
+        "J. M. Barrie",
+        "Lewis Carroll",
+        "A. A. Milne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-carmen-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a fait the opera Carmen ?",
+      "choices": [
+        "Giuseppe Verdi",
+        "Richard Wagner",
+        "Giacomo Puccini",
+        "Georges Bizet"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-thriller-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a fait the song Thriller ?",
+      "choices": [
+        "Prince",
+        "Stevie Wonder",
+        "Lionel Richie",
+        "Michael Jackson"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-born-usa-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a fait the song Born in the U.S.A. ?",
+      "choices": [
+        "Bruce Springsteen",
+        "John Mellencamp",
+        "Tom Petty",
+        "Bob Seger"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-gangnam-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a fait the song Gangnam Style ?",
+      "choices": [
+        "Blackpink",
+        "BTS",
+        "Psy",
+        "Rain"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-coldplay-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a fait the band Coldplay, as lead singer ?",
+      "choices": [
+        "Chris Martin",
+        "Will Champion",
+        "Guy Berryman",
+        "Jonny Buckland"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-jaws-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a réalisé the film Jaws ?",
+      "choices": [
+        "James Cameron",
+        "Steven Spielberg",
+        "George Lucas",
+        "Ridley Scott"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-godfather-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a réalisé the 1972 film The Godfather ?",
+      "choices": [
+        "Brian De Palma",
+        "Martin Scorsese",
+        "Francis Ford Coppola",
+        "Sergio Leone"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-get-out-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a réalisé the film Get Out ?",
+      "choices": [
+        "Ryan Coogler",
+        "Jordan Peele",
+        "Boots Riley",
+        "Barry Jenkins"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-dark-knight-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a réalisé the 2008 film The Dark Knight ?",
+      "choices": [
+        "Christopher Nolan",
+        "Matt Reeves",
+        "Tim Burton",
+        "Zack Snyder"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-moana-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a réalisé the 2016 film Moana ?",
+      "choices": [
+        "Ron Clements and John Musker",
+        "Chris Buck and Jennifer Lee",
+        "Don Hall and Chris Williams",
+        "Lee Unkrich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-o",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel est le symbole chimique de l'élément oxygen ?",
+      "choices": [
+        "C",
+        "N",
+        "O",
+        "H"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-cu",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel est le symbole chimique de l'élément copper ?",
+      "choices": [
+        "Cr",
+        "Cu",
+        "Co",
+        "C"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-cl",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel est le symbole chimique de l'élément chlorine ?",
+      "choices": [
+        "Cl",
+        "Cr",
+        "C",
+        "Ca"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-s",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel est le symbole chimique de l'élément sulfur ?",
+      "choices": [
+        "S",
+        "Si",
+        "Na",
+        "Sr"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-i",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel est le symbole chimique de l'élément iodine ?",
+      "choices": [
+        "I",
+        "Fe",
+        "In",
+        "Ir"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-amazon-volume",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel fleuve transporte le plus grand volume d'eau ?",
+      "choices": [
+        "the Amazon",
+        "the Mississippi",
+        "the Yangtze",
+        "the Nile"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-hottest-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle planète est la plus chaude du système solaire ?",
+      "choices": [
+        "Mercury",
+        "Mars",
+        "Jupiter",
+        "Venus"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-our-star",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle étoile est au centre de notre système solaire ?",
+      "choices": [
+        "Sirius",
+        "Polaris",
+        "the Sun",
+        "Alpha Centauri"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-origin-coffee",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est tenu pour l'origine du caféier ?",
+      "choices": [
+        "Ethiopia",
+        "Italy",
+        "Colombia",
+        "Brazil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-denim-city",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Le mot denim vient d'un tissu de quelle ville française ?",
+      "choices": [
+        "Paris",
+        "Marseille",
+        "Nîmes",
+        "Lyon"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-fulton-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on un bateau à vapeur commercial réussi aux États-Unis ?",
+      "choices": [
+        "Robert Fulton",
+        "James Watt",
+        "George Stephenson",
+        "Samuel Morse"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-nobel-prize-country",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays les prix Nobel sont-ils remis, sauf le prix de la paix ?",
+      "choices": [
+        "Denmark",
+        "Sweden",
+        "Norway",
+        "Switzerland"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-blackwell-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a été la première femme à recevoir un diplôme de médecine aux États-Unis ?",
+      "choices": [
+        "Elizabeth Garrett Anderson",
+        "Florence Nightingale",
+        "Marie Curie",
+        "Elizabeth Blackwell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-balloon-gas",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel gaz sert souvent à faire flotter les ballons de fête ?",
+      "choices": [
+        "helium",
+        "hydrogen",
+        "oxygen",
+        "nitrogen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-amber-origin",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "L'ambre est la forme fossile de quoi ?",
+      "choices": [
+        "coral",
+        "seashell",
+        "lava",
+        "tree resin"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-h-saffron-flower",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "Le safran vient de quelle fleur ?",
+      "choices": [
+        "the crocus",
+        "the tulip",
+        "the rose",
+        "the sunflower"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "generation": "gen-y",
+  "tier": "easy",
+  "locale": "fr",
+  "held": 1,
+  "questions": [
+    {
+      "id": "place-sci-e-water",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Formule",
+      "prompt": "Quel est le symbole chimique de l'eau ?",
+      "choices": [
+        "H2O",
+        "CO2",
+        "NaCl",
+        "O2"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Fait facile de chimie.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — water"
+        },
+        {
+          "label": "IUPAC — chemical formulae"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "generation": "baby-boomer",
+  "tier": "easy",
+  "locale": "de",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-boomer-e-armstrong",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Wer war der erste Mensch auf dem Mond?",
+      "choices": [
+        "Juri Gagarin",
+        "Buzz Aldrin",
+        "Neil Armstrong",
+        "John Glenn"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer leicht — kulturelles Universale der Apollo-Ära.",
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 mission pages"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-e-apollo11",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In welchem Jahr landete Apollo 11 die ersten Menschen auf dem Mond?",
+      "choices": [
+        "1975",
+        "1957",
+        "1969",
+        "1963"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer leicht — Jahresfakt zur Mondlandung, lehrbuchbekannt.",
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 11"
+        },
+        {
+          "label": "NASA Apollo program chronology"
+        }
+      ]
+    }
+  ]
+}

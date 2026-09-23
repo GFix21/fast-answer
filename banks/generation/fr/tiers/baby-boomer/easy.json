@@ -1,0 +1,1202 @@
+{
+  "generation": "baby-boomer",
+  "tier": "easy",
+  "locale": "fr",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-boomer-moon",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Un petit pas",
+      "prompt": "Qui a été la première personne à marcher sur la Lune ?",
+      "choices": [
+        "John Glenn",
+        "Youri Gagarine",
+        "Buzz Aldrin",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-apollo",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Horloge Apollo",
+      "prompt": "En quelle année Apollo 11 s’est-il posé sur la Lune ?",
+      "choices": [
+        "1965",
+        "1972",
+        "1969",
+        "1961"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Folklore festivalier",
+      "prompt": "Dans quel État américain s’est tenu le festival de Woodstock en 1969 ?",
+      "choices": [
+        "Californie",
+        "New York",
+        "Floride",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-beatles",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dimanche Sullivan",
+      "prompt": "Quel groupe britannique a fait sensation aux États-Unis dans The Ed Sullivan Show en 1964 ?",
+      "choices": [
+        "The Beatles",
+        "The Who",
+        "The Kinks",
+        "The Rolling Stones"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-kirk",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Banter sur le pont",
+      "prompt": "Qui commandait le vaisseau Enterprise dans la série originale Star Trek ?",
+      "choices": [
+        "James T. Kirk",
+        "Han Solo",
+        "Spock",
+        "Jean-Luc Picard"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-abs",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Quiz du petrolhead",
+      "prompt": "Que signifie l’abréviation ABS dans les systèmes de sécurité automobile ?",
+      "choices": [
+        "Axle Balance Sensor",
+        "Advanced Battery Switch",
+        "Anti-lock Braking System",
+        "Automatic Boost System"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-boomer-gaye",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Heure soul",
+      "prompt": "Qui a sorti l'album What's Going On en 1971 ?",
+      "choices": [
+        "Sam Cooke",
+        "Stevie Wonder",
+        "Marvin Gaye",
+        "Otis Redding"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Les questions de ce disque tiennent encore.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-e-boomer-skylab",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Atelier en orbite",
+      "prompt": "Comment s'appelait la première station spatiale de la NASA, lancée en 1973 ?",
+      "choices": [
+        "Saliout",
+        "Freedom",
+        "Skylab",
+        "Mir"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Un atelier avec un très long trajet.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-e-boomer-submarine",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sous la mer",
+      "prompt": "De quelle couleur est le sous-marin dans la chanson des Beatles ?",
+      "choices": [
+        "Bleu",
+        "Vert",
+        "Jaune",
+        "Rouge"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le titre donne déjà la peinture.",
+      "slang": "Tout à fait,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Le champ",
+      "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Quand le festival de Woodstock a-t-il commencé ? »",
+      "choices": [
+        "15 août 1969",
+        "4 juillet, quand les feux d'artifice se prenaient pour le groupe",
+        "1 juin, un mois trop tôt et déjà boueux",
+        "15 août 1967"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Deux mauvaises dates, puis le vendredi d'ouverture.",
+      "slang": "Tout à fait,",
+      "funny": true,
+      "humorous": true,
+      "injection": "rule-of-three",
+      "structure": "when",
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-e-boomer-parks",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "1er décembre",
+      "prompt": "L'arrestation de qui, à Montgomery le 1er décembre 1955, a lancé le boycott des bus ?",
+      "choices": [
+        "Rosa Parks",
+        "Dorothy Height",
+        "Ella Baker",
+        "Claudette Colvin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La place est restée prise. Le boycott a suivi.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-de-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Allemagne?",
+      "choices": [
+        "Berlin",
+        "Hambourg",
+        "Francfort",
+        "Munich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-be-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Belgique?",
+      "choices": [
+        "Bruxelles",
+        "Anvers",
+        "Bruges",
+        "Amsterdam"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cn-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Chine?",
+      "choices": [
+        "Pékin",
+        "Hong Kong",
+        "Shanghai",
+        "Canton"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-th-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Thaïlande?",
+      "choices": [
+        "Phuket",
+        "Pattaya",
+        "Chiang Mai",
+        "Bangkok"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-hu-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Hongrie?",
+      "choices": [
+        "Budapest",
+        "Debrecen",
+        "Prague",
+        "Vienne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-nz-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Nouvelle-Zélande?",
+      "choices": [
+        "Christchurch",
+        "Queenstown",
+        "Auckland",
+        "Wellington"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-week-days",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de jours compte une semaine ?",
+      "choices": [
+        "7",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-triangle-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de côtés a un triangle ?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-die-faces",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de faces a un dé standard ?",
+      "choices": [
+        "4",
+        "8",
+        "12",
+        "6"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-olympic-rings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'anneaux compte le drapeau olympique ?",
+      "choices": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-heart-chambers",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de cavités a le cœur humain ?",
+      "choices": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-galilean",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de grandes lunes Galilée a-t-il vues autour de Jupiter ?",
+      "choices": [
+        "12",
+        "4",
+        "2",
+        "8"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-hockey-periods",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de périodes compte un match de hockey standard ?",
+      "choices": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-rugby-union",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de joueurs compte une équipe de rugby à XV ?",
+      "choices": [
+        "13",
+        "7",
+        "11",
+        "15"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-premier-league",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de clubs compte la Premier League anglaise ?",
+      "choices": [
+        "20",
+        "22",
+        "16",
+        "18"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-staff-lines",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de lignes compte une portée musicale standard ?",
+      "choices": [
+        "6",
+        "4",
+        "5",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-named-oceans",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'océans sont couramment nommés sur une carte du monde ?",
+      "choices": [
+        "4",
+        "5",
+        "7",
+        "6"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-decade-years",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'années compte une décennie ?",
+      "choices": [
+        "5",
+        "10",
+        "12",
+        "100"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-traffic-light",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de couleurs montre un feu de circulation standard ?",
+      "choices": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-acropolis-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve l'Acropole d'Athènes ?",
+      "choices": [
+        "Turkey",
+        "Egypt",
+        "Italy",
+        "Greece"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-neuschwanstein-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve le château de Neuschwanstein ?",
+      "choices": [
+        "Germany",
+        "Switzerland",
+        "France",
+        "Austria"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-sahara-continent",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve le Sahara ?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "Europe",
+        "Australia"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-sagrada-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Dans quel pays se trouve la Sagrada Família ?",
+      "choices": [
+        "Spain",
+        "Italy",
+        "Portugal",
+        "France"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-venus-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a peint The Birth of Venus ?",
+      "choices": [
+        "Sandro Botticelli",
+        "Leonardo da Vinci",
+        "Raphael",
+        "Michelangelo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-nighthawks-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a peint Nighthawks ?",
+      "choices": [
+        "Grant Wood",
+        "Andrew Wyeth",
+        "Norman Rockwell",
+        "Edward Hopper"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-bosch-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Qui a peint The Garden of Earthly Delights ?",
+      "choices": [
+        "Hieronymus Bosch",
+        "Jan van Eyck",
+        "Albrecht Dürer",
+        "Pieter Bruegel the Elder"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-beetle-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le berceau de the original Volkswagen Beetle ?",
+      "choices": [
+        "Germany",
+        "Italy",
+        "the United States",
+        "Japan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-kia-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le berceau de Kia ?",
+      "choices": [
+        "South Korea",
+        "Japan",
+        "China",
+        "Germany"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-lang-egypt",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à Egypt dans cette question ?",
+      "choices": [
+        "Arabic",
+        "Hebrew",
+        "English",
+        "French"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-lang-argentina",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à Argentina dans cette question ?",
+      "choices": [
+        "Italian",
+        "Portuguese",
+        "Spanish",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-lang-korea",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à South Korea dans cette question ?",
+      "choices": [
+        "Thai",
+        "Korean",
+        "Japanese",
+        "Chinese"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-lang-ethiopia",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la langue principale associée à Ethiopia, as the federal working language dans cette question ?",
+      "choices": [
+        "Arabic",
+        "Swahili",
+        "Amharic",
+        "Somali"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-5",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve l'Éthiopie ?",
+      "choices": [
+        "Afrique",
+        "Asie",
+        "Amérique du Sud",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-12",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve l'Arabie saoudite ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Europe",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-19",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve la Grèce ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Amérique du Sud",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-26",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve l'Argentine ?",
+      "choices": [
+        "Europe",
+        "Amérique du Sud",
+        "Amérique du Nord",
+        "Afrique"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cont-33",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Sur quel continent se trouve l'Islande ?",
+      "choices": [
+        "Asie",
+        "Afrique",
+        "Amérique du Sud",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-0",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale du Japon ?",
+      "choices": [
+        "le peso",
+        "le yen",
+        "le dollar",
+        "l'euro"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-7",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale de la Corée du Sud ?",
+      "choices": [
+        "le won",
+        "le dollar",
+        "l'euro",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-14",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale de la Russie ?",
+      "choices": [
+        "le dollar",
+        "le yen",
+        "le rouble",
+        "l'euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-21",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale d'Israël ?",
+      "choices": [
+        "le shekel",
+        "le yen",
+        "le dollar",
+        "l'euro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-cur-28",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quelle est la monnaie principale de la Hongrie ?",
+      "choices": [
+        "le yen",
+        "l'euro",
+        "le forint",
+        "le dollar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-food-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à le pho ?",
+      "choices": [
+        "Vietnam",
+        "Japon",
+        "Mexique",
+        "Italie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-food-12",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à les dim sum ?",
+      "choices": [
+        "Chine",
+        "Italie",
+        "Japon",
+        "Mexique"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-food-19",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à le gelato ?",
+      "choices": [
+        "Japon",
+        "France",
+        "Mexique",
+        "Italie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-food-26",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel pays est le plus associé à les gyoza ?",
+      "choices": [
+        "Italie",
+        "France",
+        "Japon",
+        "Mexique"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-ani-2",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est le plus grand animal ?",
+      "choices": [
+        "l'éléphant",
+        "le grand requin blanc",
+        "la girafe",
+        "la baleine bleue"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-ani-8",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est le plus grand félin sauvage ?",
+      "choices": [
+        "le lion",
+        "le léopard",
+        "le tigre",
+        "le jaguar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-ani-14",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est l'animal rayé proche du cheval ?",
+      "choices": [
+        "l'âne",
+        "le cheval",
+        "le zèbre",
+        "l'okapi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-ani-20",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel animal est le petit animal australien de l'eucalyptus ?",
+      "choices": [
+        "le panda",
+        "le koala",
+        "le wombat",
+        "le paresseux"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-primary-colors",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de couleurs primaires compte l'ensemble classique rouge, jaune et bleu ?",
+      "choices": [
+        "2",
+        "7",
+        "4",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-fingers-hand",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de doigts, pouce compris, compte une main humaine ?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-snow-white-dwarfs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de nains vivent avec Blanche-Neige dans le conte classique ?",
+      "choices": [
+        "3",
+        "9",
+        "7",
+        "5"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-notes-scale",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de noms de notes une gamme compte-t-elle avant de recommencer, de la à sol ?",
+      "choices": [
+        "5",
+        "12",
+        "7",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-frets-ukulele-skip",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de pistons un tuba standard à trois pistons utilise-t-il ?",
+      "choices": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-easy-wheels-tricycle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de roues a un tricycle typique ?",
+      "choices": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-easy-table-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien de pieds a une table typique ?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "6"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-easy-baker-dozen",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'articles compte une douzaine du boulanger ?",
+      "choices": [
+        "12",
+        "10",
+        "14",
+        "13"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-e-easy-pair",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Combien d'articles compte une paire ?",
+      "choices": [
+        "1",
+        "3",
+        "4",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    }
+  ]
+}

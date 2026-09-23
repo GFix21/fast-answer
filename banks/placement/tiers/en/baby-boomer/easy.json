@@ -1,0 +1,56 @@
+{
+  "generation": "baby-boomer",
+  "tier": "easy",
+  "locale": "en",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-boomer-e-armstrong",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Who was the first person to walk on the Moon?",
+      "choices": [
+        "Yuri Gagarin",
+        "Buzz Aldrin",
+        "Neil Armstrong",
+        "John Glenn"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer easy — Apollo-era cultural universal.",
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 mission pages"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-e-apollo11",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In which year did Apollo 11 land the first humans on the Moon?",
+      "choices": [
+        "1975",
+        "1957",
+        "1969",
+        "1963"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer easy — year-level Moon-landing fact, textbook-known.",
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 11"
+        },
+        {
+          "label": "NASA Apollo program chronology"
+        }
+      ]
+    }
+  ]
+}

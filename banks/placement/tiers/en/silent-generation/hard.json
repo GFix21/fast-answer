@@ -1,0 +1,56 @@
+{
+  "generation": "silent-generation",
+  "tier": "hard",
+  "locale": "en",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-silent-h-transistor",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "In which year was the first commercial transistor radio (Regency TR-1) introduced?",
+      "choices": [
+        "1971",
+        "1945",
+        "1962",
+        "1954"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Silent Gen hard — verifiable mid-century tech chronology.",
+      "sources": [
+        {
+          "label": "Wikipedia — Regency TR-1"
+        },
+        {
+          "label": "IEEE Spectrum / Computer History Museum notes"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-h-kerouac",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Who wrote the Beat Generation novel On the Road?",
+      "choices": [
+        "Ernest Hemingway",
+        "Jack Kerouac",
+        "F. Scott Fitzgerald",
+        "J. D. Salinger"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Silent Gen hard — canonical mid-century literature, unambiguous.",
+      "sources": [
+        {
+          "label": "Wikipedia — On the Road"
+        },
+        {
+          "label": "Library of Congress / Beat Generation primers"
+        }
+      ]
+    }
+  ]
+}

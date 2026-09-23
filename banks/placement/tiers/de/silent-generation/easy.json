@@ -1,0 +1,56 @@
+{
+  "generation": "silent-generation",
+  "tier": "easy",
+  "locale": "de",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-silent-e-fdr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Wer war während des größten Teils des Zweiten Weltkriegs US-Präsident?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Dwight D. Eisenhower",
+        "Herbert Hoover"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Silent Gen leicht — Lehrbuch-Civics der Jahrhundertmitte; über Schule fair.",
+      "sources": [
+        {
+          "label": "Wikipedia — Franklin D. Roosevelt"
+        },
+        {
+          "label": "US National Archives / WWII chronology"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-e-ike",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Welchen späteren US-Präsidenten bewarb der Wahlkampfslogan der 1950er „I Like Ike“?",
+      "choices": [
+        "Richard Nixon",
+        "John F. Kennedy",
+        "Lyndon B. Johnson",
+        "Dwight D. Eisenhower"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Silent Gen leicht — weithin gelehrter Slogan der Kalter-Krieg-Ära.",
+      "sources": [
+        {
+          "label": "Wikipedia — Dwight D. Eisenhower"
+        },
+        {
+          "label": "Smithsonian / campaign history primers"
+        }
+      ]
+    }
+  ]
+}

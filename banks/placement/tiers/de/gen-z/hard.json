@@ -1,0 +1,56 @@
+{
+  "generation": "gen-z",
+  "tier": "hard",
+  "locale": "de",
+  "held": 2,
+  "questions": [
+    {
+      "id": "place-z-h-fortnite",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Gen Z",
+      "prompt": "Als welche Art von Spiel ist Fortnite vor allem bekannt?",
+      "choices": [
+        "Battle Royale / Online-Multiplayer",
+        "Ein Steuerhilfs-Tool",
+        "Eine Schach-Engine",
+        "Ein Flugsimulator der 1980er"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen-Z-Mittel — auch für andere lesbar; Slangfallen vermeiden.",
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games product pages"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-mercury",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Metall",
+      "prompt": "Welches Metall ist bei Raumtemperatur flüssig?",
+      "choices": [
+        "Quecksilber",
+        "Eisen",
+        "Gold",
+        "Kupfer"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Schwere Materialfrage. Hier ist das Metall gemeint, nicht der Planet.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — mercury"
+        },
+        {
+          "label": "Royal Society of Chemistry — mercury"
+        }
+      ]
+    }
+  ]
+}

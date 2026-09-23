@@ -1,0 +1,177 @@
+{
+  "generation": "baby-boomer",
+  "tier": "extreme",
+  "locale": "fr",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-boomer-armstrong-quote",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Finale · Réplique lunaire",
+      "prompt": "Complétez la phrase de Neil Armstrong sur la Lune : « That’s one small step for [a] man, one giant leap for ___ . »",
+      "choices": [
+        "NASA",
+        "Texas",
+        "rockets",
+        "mankind"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-bo-x-py-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Paraguay?",
+      "choices": [
+        "Ciudad del Este",
+        "Asunción",
+        "Montevideo",
+        "Encarnación"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-x-jm-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Jamaïque?",
+      "choices": [
+        "Montego Bay",
+        "Spanish Town",
+        "Port-au-Prince",
+        "Kingston"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-x-ni-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Nicaragua?",
+      "choices": [
+        "León",
+        "San José",
+        "Granada",
+        "Managua"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-x-lt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Lituanie?",
+      "choices": [
+        "Vilnius",
+        "Riga",
+        "Kaunas",
+        "Varsovie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-x-md-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Moldavie?",
+      "choices": [
+        "Bălți",
+        "Bucarest",
+        "Tiraspol",
+        "Chișinău"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-x-om-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale d'Oman?",
+      "choices": [
+        "Mascate",
+        "Sohar",
+        "Salalah",
+        "Dubaï"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-x-ne-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Niger?",
+      "choices": [
+        "Zinder",
+        "Bamako",
+        "Agadez",
+        "Niamey"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-x-atomic-u",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "Quel est le numéro atomique de l'uranium ?",
+      "choices": [
+        "92",
+        "82",
+        "88",
+        "79"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-x-y-magna-x",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année la Magna Carta a-t-elle été scellée ?",
+      "choices": [
+        "1492",
+        "1776",
+        "1215",
+        "1066"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Tout à fait,"
+    }
+  ]
+}

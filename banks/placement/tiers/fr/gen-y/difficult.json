@@ -1,0 +1,32 @@
+{
+  "generation": "gen-y",
+  "tier": "difficult",
+  "locale": "fr",
+  "held": 1,
+  "questions": [
+    {
+      "id": "place-y-d-ipod",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Early iPod",
+      "prompt": "En quelle année Apple a-t-il présenté l’iPod original ?",
+      "choices": [
+        "1998",
+        "2001",
+        "2004",
+        "2007"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Chronologie tech milléniale plus difficile.",
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple press archive — 2001"
+        }
+      ]
+    }
+  ]
+}

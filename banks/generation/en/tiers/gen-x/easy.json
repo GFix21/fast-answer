@@ -1,0 +1,1195 @@
+{
+  "generation": "gen-x",
+  "tier": "easy",
+  "locale": "en",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-genx-mtv",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Cable Day One",
+      "prompt": "What channel launched in 1981 with “Video Killed the Radio Star”?",
+      "choices": [
+        "MTV",
+        "CNN",
+        "Nickelodeon",
+        "VH1"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genx-bttf",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Flux & Friends",
+      "prompt": "In Back to the Future, what does Doc Brown need 1.21 gigawatts of?",
+      "choices": [
+        "Plutonium dust",
+        "Banana peels",
+        "Electricity",
+        "Coffee"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Great Scott — power, not produce."
+    },
+    {
+      "id": "w39-e-genx-hamster",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Hammond’s Horror Corner",
+      "prompt": "Which presenter is famously the shortest of the Top Gear / Grand Tour trio?",
+      "choices": [
+        "James May",
+        "The Stig",
+        "Richard Hammond",
+        "Jeremy Clarkson"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Hamster. Yes. We know."
+    },
+    {
+      "id": "w39-e-genx-may",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Captain Slow Corner",
+      "prompt": "Which Grand Tour presenter is nicknamed Captain Slow?",
+      "choices": [
+        "Richard Hammond",
+        "James May",
+        "Jeremy Clarkson",
+        "Abie"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genx-tetris",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Block Party",
+      "prompt": "Which puzzle game of falling blocks was created by Alexey Pajitnov?",
+      "choices": [
+        "Pac-Man",
+        "Minesweeper",
+        "Snake",
+        "Tetris"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genx-simpsons",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Yellow Family",
+      "prompt": "What is the hometown of The Simpsons?",
+      "choices": [
+        "South Park",
+        "Quahog",
+        "Shelbyville",
+        "Springfield"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-genx-gameboy",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Pocket Screen",
+      "prompt": "Which handheld console did Nintendo release in 1989?",
+      "choices": [
+        "Lynx",
+        "PSP",
+        "Game Gear",
+        "Game Boy"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Tetris rode along in a lot of pockets.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-e-genx-pdf",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Paperless Page",
+      "prompt": "What does PDF stand for?",
+      "choices": [
+        "Personal Disk Folder",
+        "Public Data File",
+        "Printed Document Form",
+        "Portable Document Format"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The page learned to travel.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-e-genx-cassette",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Wound Up",
+      "prompt": "Why did the cassette feel shy?",
+      "choices": [
+        "It lost the pencil",
+        "It was a little wound up",
+        "It skipped the chorus",
+        "It hid in the walkman"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Side B still got a listen.",
+      "slang": "Whatever the case,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-genx-tennis",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Court",
+      "prompt": "What colour is a regulation tennis ball?",
+      "choices": [
+        "Green",
+        "White",
+        "Yellow",
+        "Orange"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Older balls were white. The rule now is the bright one.",
+      "slang": "Whatever the case,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-e-genx-redspot",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Storm",
+      "prompt": "Which planet is known for the Great Red Spot?",
+      "choices": [
+        "Jupiter",
+        "Venus",
+        "Saturn",
+        "Mars"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The spot is a storm that has outlasted a lot of weather reports.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-es-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Spain?",
+      "choices": [
+        "Seville",
+        "Valencia",
+        "Barcelona",
+        "Madrid"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-at-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Austria?",
+      "choices": [
+        "Vienna",
+        "Innsbruck",
+        "Salzburg",
+        "Berlin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-in-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of India?",
+      "choices": [
+        "New Delhi",
+        "Chennai",
+        "Kolkata",
+        "Mumbai"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cu-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Cuba?",
+      "choices": [
+        "Varadero",
+        "Miami",
+        "Santiago de Cuba",
+        "Havana"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-fi-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Finland?",
+      "choices": [
+        "Helsinki",
+        "Turku",
+        "Tampere",
+        "Stockholm"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-ng-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Nigeria?",
+      "choices": [
+        "Kano",
+        "Ibadan",
+        "Abuja",
+        "Lagos"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-year-months",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many months are in a year?",
+      "choices": [
+        "10",
+        "12",
+        "13",
+        "11"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-pentagon-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many sides does a pentagon have?",
+      "choices": [
+        "4",
+        "8",
+        "6",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-deck-cards",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many cards are in a standard deck, without jokers?",
+      "choices": [
+        "48",
+        "36",
+        "52",
+        "54"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-us-colonies",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many colonies joined to become the original United States?",
+      "choices": [
+        "12",
+        "50",
+        "10",
+        "13"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-adult-teeth",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many teeth does a full adult set have, including wisdom teeth?",
+      "choices": [
+        "28",
+        "36",
+        "32",
+        "30"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-basketball-five",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players from one team are on a basketball court?",
+      "choices": [
+        "5",
+        "7",
+        "11",
+        "6"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-volleyball-six",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players from one team are on an indoor volleyball court?",
+      "choices": [
+        "5",
+        "7",
+        "4",
+        "6"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cricket-eleven",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players are on a cricket team?",
+      "choices": [
+        "9",
+        "15",
+        "11",
+        "13"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-grand-slams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many Grand Slam tennis tournaments are played each year?",
+      "choices": [
+        "3",
+        "5",
+        "2",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-bass-strings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many strings does a standard bass guitar have?",
+      "choices": [
+        "4",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-freeze-f",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many degrees Fahrenheit is the freezing point of water?",
+      "choices": [
+        "32",
+        "0",
+        "100",
+        "212"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-century-years",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many years are in a century?",
+      "choices": [
+        "10",
+        "50",
+        "100",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-eiffel-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Eiffel Tower?",
+      "choices": [
+        "Spain",
+        "Italy",
+        "France",
+        "Belgium"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-christ-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the statue Christ the Redeemer?",
+      "choices": [
+        "Brazil",
+        "Spain",
+        "Argentina",
+        "Portugal"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cn-tower-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the CN Tower?",
+      "choices": [
+        "Canada",
+        "France",
+        "the United Kingdom",
+        "the United States"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-canyon-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Grand Canyon?",
+      "choices": [
+        "Mexico",
+        "Australia",
+        "the United States",
+        "Canada"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-great-wall-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Great Wall?",
+      "choices": [
+        "India",
+        "China",
+        "Mongolia",
+        "Japan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-gothic-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted American Gothic?",
+      "choices": [
+        "Edward Hopper",
+        "Andrew Wyeth",
+        "Grant Wood",
+        "Norman Rockwell"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-wave-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The Great Wave off Kanagawa?",
+      "choices": [
+        "Hokusai",
+        "Hiroshige",
+        "Utamaro",
+        "Yayoi Kusama"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-birth-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The Starry Night is already famous. Who painted Café Terrace at Night??",
+      "choices": [
+        "Henri de Toulouse-Lautrec",
+        "Paul Gauguin",
+        "Vincent van Gogh",
+        "Edgar Degas"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-mini-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of the original Mini, launched in 1959?",
+      "choices": [
+        "the United Kingdom",
+        "Italy",
+        "Germany",
+        "France"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-model-t",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which company sold the Model T?",
+      "choices": [
+        "Ford",
+        "Chrysler",
+        "General Motors",
+        "Volkswagen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-lang-japan",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Japan in this question?",
+      "choices": [
+        "Korean",
+        "Thai",
+        "Chinese",
+        "Japanese"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-lang-iran",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Iran in this question?",
+      "choices": [
+        "Hebrew",
+        "Persian",
+        "Arabic",
+        "Turkish"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-lang-norway",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Norway in this question?",
+      "choices": [
+        "Danish",
+        "Finnish",
+        "Swedish",
+        "Norwegian"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-lang-pakistan",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Pakistan, as the national language in this question?",
+      "choices": [
+        "Urdu",
+        "Arabic",
+        "Hindi",
+        "Persian"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cont-6",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is South Africa?",
+      "choices": [
+        "South America",
+        "Africa",
+        "Europe",
+        "Asia"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cont-13",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Iran?",
+      "choices": [
+        "North America",
+        "Asia",
+        "Europe",
+        "Africa"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cont-20",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Portugal?",
+      "choices": [
+        "Africa",
+        "South America",
+        "Asia",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cont-27",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Chile?",
+      "choices": [
+        "South America",
+        "North America",
+        "Africa",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cont-34",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Madagascar?",
+      "choices": [
+        "Africa",
+        "Asia",
+        "Europe",
+        "South America"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cur-1",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of the United Kingdom?",
+      "choices": [
+        "the dollar",
+        "the yen",
+        "the pound sterling",
+        "the euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cur-8",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Sweden?",
+      "choices": [
+        "the euro",
+        "the krona",
+        "the yen",
+        "the dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cur-15",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Poland?",
+      "choices": [
+        "the euro",
+        "the zloty",
+        "the yen",
+        "the dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cur-22",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Saudi Arabia?",
+      "choices": [
+        "the dollar",
+        "the euro",
+        "the yen",
+        "the riyal"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-cur-29",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Morocco?",
+      "choices": [
+        "the dirham",
+        "the dollar",
+        "the yen",
+        "the euro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-food-6",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with pad thai?",
+      "choices": [
+        "Italy",
+        "Mexico",
+        "Thailand",
+        "Japan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-food-13",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with goulash?",
+      "choices": [
+        "Mexico",
+        "Hungary",
+        "Italy",
+        "Japan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-food-20",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with churros?",
+      "choices": [
+        "Italy",
+        "Mexico",
+        "Japan",
+        "Spain"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-food-27",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with injera?",
+      "choices": [
+        "Japan",
+        "Italy",
+        "Ethiopia",
+        "Mexico"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-ani-3",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is tallest land animal?",
+      "choices": [
+        "the giraffe",
+        "the ostrich",
+        "the camel",
+        "the elephant"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-ani-9",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is one-humped camel?",
+      "choices": [
+        "the dromedary",
+        "the Bactrian camel",
+        "the llama",
+        "the horse"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-ani-15",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is bird that swims and does not fly?",
+      "choices": [
+        "the seagull",
+        "the swan",
+        "the penguin",
+        "the duck"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-ani-21",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is spiny anteater of Australia?",
+      "choices": [
+        "the hedgehog",
+        "the platypus",
+        "the echidna",
+        "the porcupine"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-compass-points",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many main points does a simple compass rose name: north, south, east, and west?",
+      "choices": [
+        "4",
+        "2",
+        "8",
+        "6"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-toes-foot",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many toes are on one human foot?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-goldilocks-bears",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many bears does Goldilocks meet in the classic tale?",
+      "choices": [
+        "1",
+        "2",
+        "7",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-semitones-octave",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many semitones are in an octave on a piano?",
+      "choices": [
+        "12",
+        "6",
+        "8",
+        "7"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-soccer-halves",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many halves are in a standard soccer match?",
+      "choices": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-easy-wheels-unicycle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many wheels does a unicycle have?",
+      "choices": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-easy-dice-pips",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the highest number on a standard die?",
+      "choices": [
+        "5",
+        "12",
+        "6",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-easy-dozen",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many items are in a dozen?",
+      "choices": [
+        "10",
+        "6",
+        "13",
+        "12"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-e-easy-trio",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many items are in a trio?",
+      "choices": [
+        "6",
+        "3",
+        "2",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    }
+  ]
+}

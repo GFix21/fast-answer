@@ -1,0 +1,32 @@
+{
+  "generation": "gen-y",
+  "tier": "easy",
+  "locale": "de",
+  "held": 1,
+  "questions": [
+    {
+      "id": "place-sci-e-water",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Formel",
+      "prompt": "Welches chemische Zeichen steht für Wasser?",
+      "choices": [
+        "H2O",
+        "CO2",
+        "NaCl",
+        "O2"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Leichte Chemiefrage.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — water"
+        },
+        {
+          "label": "IUPAC — chemical formulae"
+        }
+      ]
+    }
+  ]
+}

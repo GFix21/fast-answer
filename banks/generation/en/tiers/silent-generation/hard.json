@@ -1,0 +1,853 @@
+{
+  "generation": "silent-generation",
+  "tier": "hard",
+  "locale": "en",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-silent-sputnik",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Orbit Origins",
+      "prompt": "Which country launched Sputnik 1, the first artificial satellite, in 1957?",
+      "choices": [
+        "United States",
+        "France",
+        "China",
+        "Soviet Union"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-hula",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fad Files",
+      "prompt": "The 1950s toy craze of a spinning plastic ring around the waist was the…",
+      "choices": [
+        "Pogo stick",
+        "Tamagotchi",
+        "Rubik’s Cube",
+        "Hula hoop"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-polio",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Public Health",
+      "prompt": "Which American scientist led the team behind the first widely used polio vaccine in the 1950s?",
+      "choices": [
+        "Alexander Fleming",
+        "Jonas Salk",
+        "Edward Jenner",
+        "Louis Pasteur"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-korea",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Cold War Map",
+      "prompt": "The Korean War armistice was signed in which year?",
+      "choices": [
+        "1953",
+        "1960",
+        "1945",
+        "1975"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-interstate",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Road Builders",
+      "prompt": "Which U.S. president signed the Federal-Aid Highway Act that kicked off the Interstate system in 1956?",
+      "choices": [
+        "Harry Truman",
+        "Dwight D. Eisenhower",
+        "John F. Kennedy",
+        "Lyndon B. Johnson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-disneyland",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Theme Park Dawn",
+      "prompt": "In which U.S. state did Disneyland first open in 1955?",
+      "choices": [
+        "New York",
+        "California",
+        "Florida",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-silent-chamberlain",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "September 1939",
+      "prompt": "Who was Prime Minister of the United Kingdom when Britain declared war on Germany in 1939?",
+      "choices": [
+        "Clement Attlee",
+        "Stanley Baldwin",
+        "Winston Churchill",
+        "Neville Chamberlain"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Churchill took the chair the next year.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-h-silent-assembly",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "First Session",
+      "prompt": "In which city did the United Nations hold its first General Assembly in 1946?",
+      "choices": [
+        "New York",
+        "Geneva",
+        "Paris",
+        "London"
+      ],
+      "correctIndex": 3,
+      "banterHint": "New York became home a few years later.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-h-silent-empire",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Skyline",
+      "prompt": "When was the Empire State Building completed?",
+      "choices": [
+        "1941",
+        "1950",
+        "1925",
+        "1931"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The spire was up before the decade turned.",
+      "slang": "Say,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-h-silent-marshall",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Recovery Act",
+      "prompt": "In which year did the Marshall Plan become law in the United States?",
+      "choices": [
+        "1945",
+        "1948",
+        "1953",
+        "1951"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The war was already over. The rebuild had a start date.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-ch-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Switzerland?",
+      "choices": [
+        "Geneva",
+        "Basel",
+        "Bern",
+        "Zurich"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-iq-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Iraq?",
+      "choices": [
+        "Erbil",
+        "Baghdad",
+        "Basra",
+        "Mosul"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-my-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Malaysia?",
+      "choices": [
+        "Singapore",
+        "Kuala Lumpur",
+        "George Town",
+        "Johor Bahru"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-sn-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Senegal?",
+      "choices": [
+        "Thiès",
+        "Saint-Louis",
+        "Dakar",
+        "Bamako"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-pride-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Pride and Prejudice?",
+      "choices": [
+        "Jane Austen",
+        "Emily Brontë",
+        "Charlotte Brontë",
+        "Mary Shelley"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-crime-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Crime and Punishment?",
+      "choices": [
+        "Anton Chekhov",
+        "Leo Tolstoy",
+        "Fyodor Dostoevsky",
+        "Ivan Turgenev"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-matilda-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book Matilda?",
+      "choices": [
+        "Roald Dahl",
+        "J. K. Rowling",
+        "Dr. Seuss",
+        "Enid Blyton"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-alchemist-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Alchemist?",
+      "choices": [
+        "Isabel Allende",
+        "Jorge Luis Borges",
+        "Paulo Coelho",
+        "Gabriel García Márquez"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-eighty-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Around the World in Eighty Days?",
+      "choices": [
+        "Jules Verne",
+        "Agatha Christie",
+        "Mark Twain",
+        "H. G. Wells"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-gulliver-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote Gulliver's Travels?",
+      "choices": [
+        "Voltaire",
+        "Laurence Sterne",
+        "Jonathan Swift",
+        "Daniel Defoe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-madame-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Madame Bovary?",
+      "choices": [
+        "Honoré de Balzac",
+        "Gustave Flaubert",
+        "Émile Zola",
+        "Victor Hugo"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-kindred-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Kindred?",
+      "choices": [
+        "Toni Morrison",
+        "N. K. Jemisin",
+        "Ursula K. Le Guin",
+        "Octavia E. Butler"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-nutcracker-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the ballet The Nutcracker?",
+      "choices": [
+        "Sergei Prokofiev",
+        "Maurice Ravel",
+        "Pyotr Ilyich Tchaikovsky",
+        "Igor Stravinsky"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-bolero-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the orchestral piece Boléro?",
+      "choices": [
+        "Claude Debussy",
+        "Camille Saint-Saëns",
+        "Gabriel Fauré",
+        "Maurice Ravel"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-no-woman-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song No Woman, No Cry?",
+      "choices": [
+        "Jimmy Cliff",
+        "Toots Hibbert",
+        "Bob Marley",
+        "Peter Tosh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-blinding-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Blinding Lights?",
+      "choices": [
+        "Drake",
+        "The Weeknd",
+        "Post Malone",
+        "Bruno Mars"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-espresso-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the 2024 song Espresso?",
+      "choices": [
+        "Sabrina Carpenter",
+        "Dua Lipa",
+        "Chappell Roan",
+        "Olivia Rodrigo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-pepper-year-song",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the album Sgt. Pepper's Lonely Hearts Club Band?",
+      "choices": [
+        "The Beatles",
+        "The Beach Boys",
+        "The Rolling Stones",
+        "The Kinks"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-avatar-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 2009 film Avatar?",
+      "choices": [
+        "James Cameron",
+        "George Lucas",
+        "Jon Favreau",
+        "Peter Jackson"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-spirited-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Spirited Away?",
+      "choices": [
+        "Isao Takahata",
+        "Satoshi Kon",
+        "Makoto Shinkai",
+        "Hayao Miyazaki"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-tiger-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Crouching Tiger, Hidden Dragon?",
+      "choices": [
+        "Ang Lee",
+        "Wong Kar-wai",
+        "Zhang Yimou",
+        "John Woo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-shrek-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 2001 film Shrek?",
+      "choices": [
+        "Andrew Adamson and Vicky Jenson",
+        "Chris Miller",
+        "Pete Docter",
+        "John Lasseter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-h",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for hydrogen?",
+      "choices": [
+        "H",
+        "N",
+        "O",
+        "He"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-k",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for potassium?",
+      "choices": [
+        "Na",
+        "K",
+        "P",
+        "Ca"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-sn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for tin?",
+      "choices": [
+        "Ti",
+        "Sn",
+        "Sb",
+        "Si"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-si",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for silicon?",
+      "choices": [
+        "Ag",
+        "Sn",
+        "Si",
+        "S"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-ni",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for nickel?",
+      "choices": [
+        "N",
+        "Ne",
+        "Ni",
+        "Na"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-ford-founder",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who founded the Ford Motor Company?",
+      "choices": [
+        "Ransom Olds",
+        "Henry Ford",
+        "Walter Chrysler",
+        "William Durant"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-largest-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which planet is the largest in the solar system?",
+      "choices": [
+        "Saturn",
+        "Neptune",
+        "Earth",
+        "Jupiter"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-farthest-eight",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which of the eight planets orbits farthest from the Sun?",
+      "choices": [
+        "Saturn",
+        "Pluto",
+        "Uranus",
+        "Neptune"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-invent-gunpowder",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which civilization first developed gunpowder?",
+      "choices": [
+        "China",
+        "the Middle East",
+        "India",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-origin-cacao",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which region was cacao first cultivated?",
+      "choices": [
+        "Europe",
+        "India",
+        "Mesoamerica",
+        "West Africa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-stephenson-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who built the locomotive Rocket?",
+      "choices": [
+        "George Stephenson",
+        "Richard Trevithick",
+        "Isambard Kingdom Brunel",
+        "James Watt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-eastman-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who founded the company that sold Kodak cameras?",
+      "choices": [
+        "George Eastman",
+        "Ansel Adams",
+        "Thomas Edison",
+        "Louis Daguerre"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-barton-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who founded the American Red Cross?",
+      "choices": [
+        "Florence Nightingale",
+        "Clara Barton",
+        "Helen Keller",
+        "Dorothea Dix"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-radium-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which element did the Curies discover along with polonium?",
+      "choices": [
+        "uranium",
+        "plutonium",
+        "curium",
+        "radium"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-rust-metal",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Rust forms mainly on which metal?",
+      "choices": [
+        "iron",
+        "copper",
+        "aluminum",
+        "gold"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-maple-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Maple syrup comes from the sap of which tree?",
+      "choices": [
+        "the oak",
+        "the birch",
+        "the maple",
+        "the pine"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-pepper-vine",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Black pepper comes from which kind of plant?",
+      "choices": [
+        "a grass",
+        "a vine",
+        "a root",
+        "a tree nut"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-h-hard-zhang-heng",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who invented a seismoscope in Han-dynasty China?",
+      "choices": [
+        "Cai Lun",
+        "Bi Sheng",
+        "Shen Kuo",
+        "Zhang Heng"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    }
+  ]
+}
