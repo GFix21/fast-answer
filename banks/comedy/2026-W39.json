@@ -6,7 +6,7 @@
     "en": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T15:43:53.783Z",
+      "reviewedAt": "2026-09-23T15:50:53.254Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -31,7 +31,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-record",
@@ -56,7 +58,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-cassette",
@@ -81,7 +85,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-inbox",
@@ -106,7 +112,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-emoji",
@@ -131,7 +139,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-alpha-cat",
@@ -156,7 +166,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-alpha-backpack",
@@ -181,7 +193,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-alpha-pencil",
@@ -206,7 +220,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-alpha-bookmark",
@@ -231,7 +247,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-alpha-frog",
@@ -256,7 +274,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-compass",
@@ -281,7 +301,36 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
+        },
+        {
+          "id": "cq-e-multi-renegade",
+          "generation": "multi-gen",
+          "prompt": "What colour is a joke that will not sit still?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "renegade-joke",
+          "straight": "colour"
         },
         {
           "id": "cq-e-silent-roar",
@@ -306,7 +355,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-silent-vote",
@@ -331,7 +382,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-silent-chamberlain",
@@ -356,7 +409,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-silent-assembly",
@@ -381,7 +436,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-silent-liberty",
@@ -406,7 +463,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-boomer-gaye",
@@ -431,7 +490,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-boomer-skylab",
@@ -456,7 +517,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-sesame",
@@ -481,7 +544,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-earthday",
@@ -506,7 +571,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-boomer-submarine",
@@ -531,7 +598,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-gameboy",
@@ -556,7 +625,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-pdf",
@@ -581,7 +652,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genx-ram",
@@ -606,7 +679,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genx-cd",
@@ -631,7 +706,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genx-blinky",
@@ -656,7 +733,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-geny-wiki",
@@ -681,7 +760,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-geny-sms",
@@ -706,7 +787,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-iphone",
@@ -731,7 +814,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-facebook",
@@ -756,7 +841,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-ocean",
@@ -781,7 +868,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-gif",
@@ -806,7 +895,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-vr",
@@ -831,7 +922,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genz-bytedance",
@@ -856,7 +949,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genz-hashtag",
@@ -881,7 +976,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-spotify",
@@ -906,7 +1003,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-multi-guitar",
@@ -931,7 +1030,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-multi-boil",
@@ -956,7 +1057,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-photo",
@@ -981,7 +1084,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-pitch",
@@ -1006,7 +1111,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-eclipse",
@@ -1031,7 +1138,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "ga-joke-clock",
@@ -1056,7 +1165,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-bear",
@@ -1081,7 +1192,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-math",
@@ -1106,7 +1219,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-ocean",
@@ -1131,7 +1246,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-flamingo",
@@ -1156,7 +1273,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-octopus",
@@ -1181,7 +1300,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-scarecrow",
@@ -1206,7 +1327,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-homework",
@@ -1231,7 +1354,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         }
       ],
       "highestRated": [
@@ -1258,7 +1383,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-record",
@@ -1283,7 +1410,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-cassette",
@@ -1308,7 +1437,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-inbox",
@@ -1333,7 +1464,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-emoji",
@@ -1358,7 +1491,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         }
       ],
       "viral": [
@@ -1385,7 +1520,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-record",
@@ -1410,7 +1547,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-cassette",
@@ -1435,7 +1574,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         }
       ],
       "blocked": [],
@@ -1444,7 +1585,7 @@
     "fr": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T15:43:53.784Z",
+      "reviewedAt": "2026-09-23T15:50:53.256Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -1469,7 +1610,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-record",
@@ -1494,7 +1637,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-cassette",
@@ -1519,7 +1664,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-inbox",
@@ -1544,7 +1691,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-emoji",
@@ -1569,7 +1718,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-alpha-cat",
@@ -1594,7 +1745,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-alpha-backpack",
@@ -1619,7 +1772,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-alpha-pencil",
@@ -1644,7 +1799,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-alpha-bookmark",
@@ -1669,7 +1826,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-alpha-frog",
@@ -1694,7 +1853,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-compass",
@@ -1719,7 +1880,36 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
+        },
+        {
+          "id": "cq-e-multi-renegade",
+          "generation": "multi-gen",
+          "prompt": "De quelle couleur est une blague qui ne tient pas en place ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "renegade-joke",
+          "straight": "colour"
         },
         {
           "id": "cq-e-silent-roar",
@@ -1744,7 +1934,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-silent-assembly",
@@ -1769,7 +1961,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-silent-liberty",
@@ -1794,7 +1988,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-boomer-gaye",
@@ -1819,7 +2015,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-boomer-skylab",
@@ -1844,7 +2042,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-sesame",
@@ -1869,7 +2069,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-earthday",
@@ -1894,7 +2096,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-boomer-submarine",
@@ -1919,7 +2123,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-gameboy",
@@ -1944,7 +2150,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-pdf",
@@ -1969,7 +2177,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genx-ram",
@@ -1994,7 +2204,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genx-cd",
@@ -2019,7 +2231,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genx-blinky",
@@ -2044,7 +2258,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-geny-wiki",
@@ -2069,7 +2285,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-geny-sms",
@@ -2094,7 +2312,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-iphone",
@@ -2119,7 +2339,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-ocean",
@@ -2144,7 +2366,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-gif",
@@ -2169,7 +2393,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-vr",
@@ -2194,7 +2420,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genz-bytedance",
@@ -2219,7 +2447,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genz-hashtag",
@@ -2244,7 +2474,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-spotify",
@@ -2269,7 +2501,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-multi-guitar",
@@ -2294,7 +2528,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-multi-boil",
@@ -2319,7 +2555,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-photo",
@@ -2344,7 +2582,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-pitch",
@@ -2369,7 +2609,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-eclipse",
@@ -2394,7 +2636,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "ga-joke-clock",
@@ -2419,7 +2663,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-bear",
@@ -2444,7 +2690,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-math",
@@ -2469,7 +2717,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-ocean",
@@ -2494,7 +2744,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-flamingo",
@@ -2519,7 +2771,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-octopus",
@@ -2544,7 +2798,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-scarecrow",
@@ -2569,7 +2825,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-homework",
@@ -2594,7 +2852,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-silent-vote",
@@ -2619,7 +2879,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-silent-chamberlain",
@@ -2644,7 +2906,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-facebook",
@@ -2669,7 +2933,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         }
       ],
       "highestRated": [
@@ -2696,7 +2962,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-record",
@@ -2721,7 +2989,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-cassette",
@@ -2746,7 +3016,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-inbox",
@@ -2771,7 +3043,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-emoji",
@@ -2796,7 +3070,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         }
       ],
       "viral": [
@@ -2823,7 +3099,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-record",
@@ -2848,7 +3126,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-cassette",
@@ -2873,7 +3153,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         }
       ],
       "blocked": [],
@@ -2882,7 +3164,7 @@
     "de": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T15:43:53.785Z",
+      "reviewedAt": "2026-09-23T15:50:53.256Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -2907,7 +3189,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-record",
@@ -2932,7 +3216,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-cassette",
@@ -2957,7 +3243,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-inbox",
@@ -2982,7 +3270,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-emoji",
@@ -3007,7 +3297,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-alpha-cat",
@@ -3032,7 +3324,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-alpha-backpack",
@@ -3057,7 +3351,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-alpha-pencil",
@@ -3082,7 +3378,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-alpha-bookmark",
@@ -3107,7 +3405,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-alpha-frog",
@@ -3132,7 +3432,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-compass",
@@ -3157,7 +3459,36 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
+        },
+        {
+          "id": "cq-e-multi-renegade",
+          "generation": "multi-gen",
+          "prompt": "Welche Farbe hat ein Witz, der nicht stillsitzt?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "renegade-joke",
+          "straight": "colour"
         },
         {
           "id": "cq-e-silent-roar",
@@ -3182,7 +3513,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-silent-vote",
@@ -3207,7 +3540,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-silent-assembly",
@@ -3232,7 +3567,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-silent-liberty",
@@ -3257,7 +3594,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-boomer-gaye",
@@ -3282,7 +3621,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-boomer-skylab",
@@ -3307,7 +3648,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-sesame",
@@ -3332,7 +3675,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-earthday",
@@ -3357,7 +3702,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-boomer-submarine",
@@ -3382,7 +3729,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-gameboy",
@@ -3407,7 +3756,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-pdf",
@@ -3432,7 +3783,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genx-ram",
@@ -3457,7 +3810,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genx-cd",
@@ -3482,7 +3837,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genx-blinky",
@@ -3507,7 +3864,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-geny-wiki",
@@ -3532,7 +3891,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-geny-sms",
@@ -3557,7 +3918,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-iphone",
@@ -3582,7 +3945,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-facebook",
@@ -3607,7 +3972,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-ocean",
@@ -3632,7 +3999,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-gif",
@@ -3657,7 +4026,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-vr",
@@ -3682,7 +4053,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genz-bytedance",
@@ -3707,7 +4080,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-genz-hashtag",
@@ -3732,7 +4107,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-spotify",
@@ -3757,7 +4134,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "cq-e-multi-guitar",
@@ -3782,7 +4161,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-e-multi-boil",
@@ -3807,7 +4188,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-photo",
@@ -3832,7 +4215,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-pitch",
@@ -3857,7 +4242,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         },
         {
           "id": "cq-h-multi-eclipse",
@@ -3882,7 +4269,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "colour",
+          "straight": ""
         },
         {
           "id": "ga-joke-clock",
@@ -3907,7 +4296,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-bear",
@@ -3932,7 +4323,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-math",
@@ -3957,7 +4350,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-ocean",
@@ -3982,7 +4377,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-flamingo",
@@ -4007,7 +4404,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-octopus",
@@ -4032,7 +4431,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-scarecrow",
@@ -4057,7 +4458,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "ga-joke-homework",
@@ -4082,7 +4485,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-silent-chamberlain",
@@ -4107,7 +4512,9 @@
             ]
           },
           "fresh": true,
-          "funny": false
+          "funny": false,
+          "structure": "",
+          "straight": ""
         }
       ],
       "highestRated": [
@@ -4134,7 +4541,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-record",
@@ -4159,7 +4568,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-cassette",
@@ -4184,7 +4595,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-geny-inbox",
@@ -4209,7 +4622,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genz-emoji",
@@ -4234,7 +4649,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         }
       ],
       "viral": [
@@ -4261,7 +4678,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-h-boomer-record",
@@ -4286,7 +4705,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         },
         {
           "id": "cq-e-genx-cassette",
@@ -4311,7 +4732,9 @@
             ]
           },
           "fresh": true,
-          "funny": true
+          "funny": true,
+          "structure": "joke",
+          "straight": ""
         }
       ],
       "blocked": [],

@@ -650,6 +650,23 @@ export const CREATORS = [
           de: { categoryTitle: "Nachtton", prompt: "Welche Farbe hat der Mond während einer totalen Mondfinsternis?", choices: ["Rot", "Blau", "Grün", "Weiß"], banterHint: "Der Schatten der Erde leiht diesen Ton." },
         },
       }),
+      q({
+        id: "cq-e-multi-renegade",
+        tier: "easy",
+        topic: "current-culture",
+        generation: "multi-gen",
+        funny: true,
+        technique: "misdirection",
+        structure: "renegade-joke",
+        straight: "colour",
+        correctIndex: 0,
+        text: {
+          en: { categoryTitle: "Off the Setup", prompt: "What colour is a joke that will not sit still?", choices: ["It left the setup", "Blue", "Red", "Green"], banterHint: "The other answers stayed in the paint box." },
+          fr: { categoryTitle: "Hors question", prompt: "De quelle couleur est une blague qui ne tient pas en place ?", choices: ["Elle a quitté la question", "Bleu", "Rouge", "Vert"], banterHint: "Les autres réponses sont restées dans la boîte de peinture." },
+          "fr-CA": { categoryTitle: "Hors question", prompt: "C'est quoi la couleur d'une blague qui ne tient pas en place ?", choices: ["Elle a lâché la question", "Bleu", "Rouge", "Vert"], banterHint: "Les autres réponses sont restées dans la boîte de peinture." },
+          de: { categoryTitle: "Weg vom Aufbau", prompt: "Welche Farbe hat ein Witz, der nicht stillsitzt?", choices: ["Er hat die Frage verlassen", "Blau", "Rot", "Grün"], banterHint: "Die anderen Antworten blieben im Farbkasten." },
+        },
+      }),
     ],
   },
 ];

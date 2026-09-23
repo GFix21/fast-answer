@@ -2220,6 +2220,25 @@
     "structure": "colour"
   },
   {
+    "id": "cq-e-multi-renegade",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Weg vom Aufbau",
+    "prompt": "Welche Farbe hat ein Witz, der nicht stillsitzt?",
+    "choices": [
+      "Rot",
+      "Grün",
+      "Blau",
+      "Er hat die Frage verlassen"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Die anderen Antworten blieben im Farbkasten.",
+    "funny": true,
+    "structure": "renegade-joke",
+    "straight": "colour"
+  },
+  {
     "id": "ga-joke-clock",
     "tier": "easy",
     "topic": "culture",

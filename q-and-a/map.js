@@ -222,6 +222,7 @@ export function toFastAnswerQuestion(q) {
   };
   if (q.funny === true) base.funny = true;
   if (q.structure) base.structure = q.structure;
+  if (q.straight) base.straight = q.straight;
   return shuffleChoicesDeterministic(base);
 }
 

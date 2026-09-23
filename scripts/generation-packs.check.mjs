@@ -40,7 +40,7 @@ assert.deepEqual(summary.counts, {
   "gen-y": 21,
   "gen-z": 21,
   "gen-alpha": 27,
-  "multi-gen": 15,
+  "multi-gen": 16,
 });
 
 const padded = buildGenerationPacks([
@@ -130,11 +130,14 @@ assert.ok(shared.questions.every((q) => q.fromGeneration === "gen-x"));
 const cohort = buildDeviceCohort(weekly, placement.questions, "en", "2026-09-01T00:00:00.000Z");
 assert.equal(cohort.v, 2);
 assert.equal(cohort.target, 150);
-assert.equal(cohort.held, 145);
+assert.equal(cohort.held, 146);
 const easyJokes = cohort.shows[0].filter((q) => q.tier === "easy" && q.funny === true);
 const hardJokes = cohort.shows[0].filter((q) => q.tier === "hard" && q.funny === true);
+const renegade = (list) => list.filter((q) => q.structure === "renegade-joke");
 assert.equal(easyJokes.length, 2);
 assert.equal(hardJokes.length, 1);
+assert.equal(renegade(cohort.shows[0]).length, 1);
+assert.equal(renegade(cohort.shows[1]).length, 0);
 assert.ok(weekly.some((q) => q.structure === "colour" && /^What colour is/i.test(q.prompt)));
 assert.equal(cohort.shows.length, 2);
 assert.equal(cohort.placement.length, placement.questions.length);

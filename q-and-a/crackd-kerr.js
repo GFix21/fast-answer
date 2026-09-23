@@ -1,12 +1,22 @@
 import { reviewForChildren } from "./louis-liberty.js";
-import { PLAY_TIERS } from "./bots/structures.js";
+import { PLAY_TIERS, STRUCTURES, JOKE_STRUCTURE, RENEGADE_JOKE_STRUCTURE, isRenegadeJoke } from "./bots/structures.js";
 
 /**
  * Crack'd Kerr is the Q&A comedy bot.
- * He applies joke-telling technique to Gen Alpha questions. Some jokes also
- * sit in easy and hard for general play. He does not copy jokes from sites,
- * wikis, or X. A question Louis Liberty rejects is not rated.
+ * He has two question structures: a joke, and a renegade joke.
+ * A joke asks for the punchline. A renegade joke starts as a straight
+ * question and the correct choice leaves that shape. A show may include
+ * one renegade joke. He does not copy jokes from sites, wikis, or X.
+ * A question Louis Liberty rejects is not rated.
  */
+
+export { isRenegadeJoke, JOKE_STRUCTURE, RENEGADE_JOKE_STRUCTURE };
+
+/** Crack'd owns these two shapes. */
+export const COMEDY_STRUCTURES = {
+  [JOKE_STRUCTURE]: STRUCTURES[JOKE_STRUCTURE],
+  [RENEGADE_JOKE_STRUCTURE]: STRUCTURES[RENEGADE_JOKE_STRUCTURE],
+};
 
 const MEAN = /\b(stupid|ugly|dumb|loser|hate|shut up|idiot)\b/i;
 const VIRAL_MIN = 70;
@@ -58,6 +68,8 @@ function row(q, week) {
     safety,
     fresh: q.addedWeek === week,
     funny: q.funny === true,
+    structure: q.structure || (q.funny === true ? JOKE_STRUCTURE : ""),
+    straight: q.straight || "",
   };
 }
 

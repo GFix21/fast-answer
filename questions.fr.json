@@ -2220,6 +2220,25 @@
     "structure": "colour"
   },
   {
+    "id": "cq-e-multi-renegade",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Hors question",
+    "prompt": "De quelle couleur est une blague qui ne tient pas en place ?",
+    "choices": [
+      "Rouge",
+      "Vert",
+      "Bleu",
+      "Elle a quitté la question"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Les autres réponses sont restées dans la boîte de peinture.",
+    "funny": true,
+    "structure": "renegade-joke",
+    "straight": "colour"
+  },
+  {
     "id": "ga-joke-clock",
     "tier": "easy",
     "topic": "culture",

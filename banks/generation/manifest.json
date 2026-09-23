@@ -65,7 +65,7 @@
   },
   "locales": {
     "en": {
-      "held": 145,
+      "held": 146,
       "targetEach": 150,
       "counts": {
         "silent-generation": 20,
@@ -74,7 +74,7 @@
         "gen-y": 21,
         "gen-z": 21,
         "gen-alpha": 27,
-        "multi-gen": 15
+        "multi-gen": 16
       },
       "shortfall": {
         "silent-generation": 130,
@@ -83,11 +83,11 @@
         "gen-y": 129,
         "gen-z": 129,
         "gen-alpha": 123,
-        "multi-gen": 135
+        "multi-gen": 134
       }
     },
     "fr": {
-      "held": 145,
+      "held": 146,
       "targetEach": 150,
       "counts": {
         "silent-generation": 20,
@@ -96,7 +96,7 @@
         "gen-y": 21,
         "gen-z": 21,
         "gen-alpha": 27,
-        "multi-gen": 15
+        "multi-gen": 16
       },
       "shortfall": {
         "silent-generation": 130,
@@ -105,11 +105,11 @@
         "gen-y": 129,
         "gen-z": 129,
         "gen-alpha": 123,
-        "multi-gen": 135
+        "multi-gen": 134
       }
     },
     "de": {
-      "held": 145,
+      "held": 146,
       "targetEach": 150,
       "counts": {
         "silent-generation": 20,
@@ -118,7 +118,7 @@
         "gen-y": 21,
         "gen-z": 21,
         "gen-alpha": 27,
-        "multi-gen": 15
+        "multi-gen": 16
       },
       "shortfall": {
         "silent-generation": 130,
@@ -127,7 +127,7 @@
         "gen-y": 129,
         "gen-z": 129,
         "gen-alpha": 123,
-        "multi-gen": 135
+        "multi-gen": 134
       }
     }
   }

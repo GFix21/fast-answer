@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "fr",
   "target": 150,
-  "held": 15,
-  "shortfall": 135,
+  "held": 16,
+  "shortfall": 134,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -262,6 +262,25 @@
       "correctIndex": 0,
       "banterHint": "L'ombre de la Terre prête cette teinte.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-multi-renegade",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Hors question",
+      "prompt": "De quelle couleur est une blague qui ne tient pas en place ?",
+      "choices": [
+        "Rouge",
+        "Vert",
+        "Bleu",
+        "Elle a quitté la question"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les autres réponses sont restées dans la boîte de peinture.",
+      "funny": true,
+      "structure": "renegade-joke",
+      "straight": "colour"
     }
   ]
 }

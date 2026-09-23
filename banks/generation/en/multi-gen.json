@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "en",
   "target": 150,
-  "held": 15,
-  "shortfall": 135,
+  "held": 16,
+  "shortfall": 134,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -262,6 +262,25 @@
       "correctIndex": 0,
       "banterHint": "Earth's shadow lends that shade.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-multi-renegade",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Off the Setup",
+      "prompt": "What colour is a joke that will not sit still?",
+      "choices": [
+        "Red",
+        "Green",
+        "Blue",
+        "It left the setup"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The other answers stayed in the paint box.",
+      "funny": true,
+      "structure": "renegade-joke",
+      "straight": "colour"
     }
   ]
 }
