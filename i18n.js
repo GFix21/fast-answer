@@ -216,8 +216,12 @@ const STRINGS = {
     topicsTitle: "Gameplay topics",
     topicsLead: "The room creator chooses the categories before the show starts.",
     refreshQuestions: "Refresh questions",
-    questionDealMeta: (n, bank) => `${n} of this week's ${bank} ready.`,
-    questionsRefreshed: (n, bank) => `New ${n}-question set from this week's ${bank}.`,
+    questionDealMeta: (n, bank, gens) => (gens
+      ? `${n} of this week's ${bank} ready, across ${gens} generations.`
+      : `${n} of this week's ${bank} ready.`),
+    questionsRefreshed: (n, bank, gens) => (gens
+      ? `New ${n}-question set from this week's ${bank}, across ${gens} generations.`
+      : `New ${n}-question set from this week's ${bank}.`),
     topicsOn: (n) => `${n} on`,
     topicsNeedOne: "Leave at least one topic on.",
     activeRooms: "Active rooms",
@@ -442,8 +446,12 @@ const STRINGS = {
     topicsTitle: "Thèmes de jeu",
     topicsLead: "L'hôte choisit les catégories avant le début du show.",
     refreshQuestions: "Rafraîchir les questions",
-    questionDealMeta: (n, bank) => `${n} sur ${bank} de cette semaine, prêtes.`,
-    questionsRefreshed: (n, bank) => `Nouveau jeu de ${n} questions sur les ${bank} de cette semaine.`,
+    questionDealMeta: (n, bank, gens) => (gens
+      ? `${n} sur ${bank} de cette semaine, prêtes, sur ${gens} générations.`
+      : `${n} sur ${bank} de cette semaine, prêtes.`),
+    questionsRefreshed: (n, bank, gens) => (gens
+      ? `Nouveau jeu de ${n} questions sur les ${bank} de cette semaine, sur ${gens} générations.`
+      : `Nouveau jeu de ${n} questions sur les ${bank} de cette semaine.`),
     topicsOn: (n) => `${n} actifs`,
     topicsNeedOne: "Laissez au moins un thème activé.",
     activeRooms: "Salles actives",
@@ -668,8 +676,12 @@ const STRINGS = {
     topicsTitle: "Spielthemen",
     topicsLead: "Der Host wählt die Kategorien vor dem Start.",
     refreshQuestions: "Fragen aktualisieren",
-    questionDealMeta: (n, bank) => `${n} von ${bank} dieser Woche bereit.`,
-    questionsRefreshed: (n, bank) => `Neues ${n}-Fragen-Set aus den ${bank} dieser Woche.`,
+    questionDealMeta: (n, bank, gens) => (gens
+      ? `${n} von ${bank} dieser Woche bereit, über ${gens} Generationen.`
+      : `${n} von ${bank} dieser Woche bereit.`),
+    questionsRefreshed: (n, bank, gens) => (gens
+      ? `Neues ${n}-Fragen-Set aus den ${bank} dieser Woche, über ${gens} Generationen.`
+      : `Neues ${n}-Fragen-Set aus den ${bank} dieser Woche.`),
     topicsOn: (n) => `${n} an`,
     topicsNeedOne: "Mindestens ein Thema muss an bleiben.",
     activeRooms: "Aktive Räume",

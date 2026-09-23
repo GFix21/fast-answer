@@ -3,6 +3,7 @@
     "id": "w39-e-silent-ike",
     "tier": "easy",
     "topic": "culture",
+    "generation": "silent-generation",
     "categoryTitle": "Motto der Jahrhundertmitte",
     "prompt": "Mit welchem Wahlkampfslogan wird Dwight D. Eisenhower berühmt assoziiert?",
     "choices": [
@@ -18,6 +19,7 @@
     "id": "w39-e-silent-fdr",
     "tier": "easy",
     "topic": "culture",
+    "generation": "silent-generation",
     "categoryTitle": "Weißes Haus im Krieg",
     "prompt": "Welcher US-Präsident führte das Land durch den größten Teil des Zweiten Weltkriegs?",
     "choices": [
@@ -33,6 +35,7 @@
     "id": "w39-e-silent-transistor",
     "tier": "easy",
     "topic": "music",
+    "generation": "silent-generation",
     "categoryTitle": "Ära des Taschenradios",
     "prompt": "Welches kleine Radio wurde in den 1950er-Jahren zum Teenager-Hit?",
     "choices": [
@@ -48,6 +51,7 @@
     "id": "w39-e-silent-elvis",
     "tier": "easy",
     "topic": "music",
+    "generation": "silent-generation",
     "categoryTitle": "King-Ecke",
     "prompt": "Welcher Sänger wird weithin als „King of Rock and Roll“ bezeichnet?",
     "choices": [
@@ -63,6 +67,7 @@
     "id": "w39-e-silent-ottawa",
     "tier": "easy",
     "topic": "geography",
+    "generation": "silent-generation",
     "categoryTitle": "Kartenchaos",
     "prompt": "Was ist die Hauptstadt Kanadas?",
     "choices": [
@@ -78,6 +83,7 @@
     "id": "w39-e-silent-road",
     "tier": "easy",
     "topic": "film-tv",
+    "generation": "silent-generation",
     "categoryTitle": "Beat-Regal",
     "prompt": "Wer schrieb den Beat-Generation-Roman On the Road?",
     "choices": [
@@ -93,6 +99,7 @@
     "id": "w39-e-boomer-moon",
     "tier": "easy",
     "topic": "sci-fi",
+    "generation": "baby-boomer",
     "categoryTitle": "Ein kleiner Schritt",
     "prompt": "Wer war der erste Mensch auf dem Mond?",
     "choices": [
@@ -108,6 +115,7 @@
     "id": "w39-e-boomer-apollo",
     "tier": "easy",
     "topic": "sci-fi",
+    "generation": "baby-boomer",
     "categoryTitle": "Apollo-Uhr",
     "prompt": "In welchem Jahr landete Apollo 11 auf dem Mond?",
     "choices": [
@@ -123,6 +131,7 @@
     "id": "w39-e-boomer-woodstock",
     "tier": "easy",
     "topic": "music",
+    "generation": "baby-boomer",
     "categoryTitle": "Festival-Folklore",
     "prompt": "In welchem US-Bundesstaat fand das Woodstock-Festival 1969 statt?",
     "choices": [
@@ -138,6 +147,7 @@
     "id": "w39-e-boomer-beatles",
     "tier": "easy",
     "topic": "music",
+    "generation": "baby-boomer",
     "categoryTitle": "Sullivan-Sonntag",
     "prompt": "Welche britische Band sorgte 1964 in The Ed Sullivan Show für Furore in den USA?",
     "choices": [
@@ -153,6 +163,7 @@
     "id": "w39-e-boomer-kirk",
     "tier": "easy",
     "topic": "sci-fi",
+    "generation": "baby-boomer",
     "categoryTitle": "Brücken-Banter",
     "prompt": "Wer befehligte das Raumschiff Enterprise in der Originalserie Star Trek?",
     "choices": [
@@ -168,6 +179,7 @@
     "id": "w39-e-boomer-abs",
     "tier": "easy",
     "topic": "cars",
+    "generation": "baby-boomer",
     "categoryTitle": "Petrolhead-Quiz",
     "prompt": "Wofür steht die Abkürzung ABS bei Kfz-Sicherheitssystemen?",
     "choices": [
@@ -183,6 +195,7 @@
     "id": "w39-e-genx-mtv",
     "tier": "easy",
     "topic": "music",
+    "generation": "gen-x",
     "categoryTitle": "Kabel-Tag eins",
     "prompt": "Welcher Sender startete 1981 mit „Video Killed the Radio Star“?",
     "choices": [
@@ -198,6 +211,7 @@
     "id": "w39-e-genx-bttf",
     "tier": "easy",
     "topic": "film-tv",
+    "generation": "gen-x",
     "categoryTitle": "Flux & Freunde",
     "prompt": "Wofür braucht Doc Brown in Zurück in die Zukunft 1,21 Gigawatt?",
     "choices": [
@@ -213,6 +227,7 @@
     "id": "w39-e-genx-hamster",
     "tier": "easy",
     "topic": "grand-tour",
+    "generation": "gen-x",
     "categoryTitle": "Hammonds Horror-Ecke",
     "prompt": "Welcher Moderator gilt als der kleinste des Top-Gear- / Grand-Tour-Trios?",
     "choices": [
@@ -228,6 +243,7 @@
     "id": "w39-e-genx-may",
     "tier": "easy",
     "topic": "grand-tour",
+    "generation": "gen-x",
     "categoryTitle": "Captain-Slow-Ecke",
     "prompt": "Welcher Grand-Tour-Moderator trägt den Spitznamen Captain Slow?",
     "choices": [
@@ -243,6 +259,7 @@
     "id": "w39-e-genx-tetris",
     "tier": "easy",
     "topic": "culture",
+    "generation": "gen-x",
     "categoryTitle": "Blockparty",
     "prompt": "Welches Puzzle-Spiel mit fallenden Blöcken schuf Alexey Pajitnov?",
     "choices": [
@@ -258,6 +275,7 @@
     "id": "w39-e-genx-simpsons",
     "tier": "easy",
     "topic": "film-tv",
+    "generation": "gen-x",
     "categoryTitle": "Gelbe Familie",
     "prompt": "Wie heißt die Heimatstadt der Simpsons?",
     "choices": [
@@ -273,6 +291,7 @@
     "id": "w39-e-geny-matrix",
     "tier": "easy",
     "topic": "film-tv",
+    "generation": "gen-y",
     "categoryTitle": "Rote-Pille-Runde",
     "prompt": "Welche Farbe hat die Pille, die Neo in Matrix nimmt, um die Wahrheit zu sehen?",
     "choices": [
@@ -288,6 +307,7 @@
     "id": "w39-e-geny-ipod",
     "tier": "easy",
     "topic": "music",
+    "generation": "gen-y",
     "categoryTitle": "Weiße Ohrhörer",
     "prompt": "In welchem Jahr brachte Apple den ersten iPod heraus?",
     "choices": [
@@ -303,6 +323,7 @@
     "id": "w39-e-geny-luke",
     "tier": "easy",
     "topic": "sci-fi",
+    "generation": "gen-y",
     "categoryTitle": "Sci-Fi-Blitzrunde",
     "prompt": "Welche Farbe hat Lukes erstes Lichtschwert in Star Wars (Eine neue Hoffnung)?",
     "choices": [
@@ -318,6 +339,7 @@
     "id": "w39-e-geny-gmg",
     "tier": "easy",
     "topic": "gmg",
+    "generation": "gen-y",
     "categoryTitle": "Mitternacht in Montréal",
     "prompt": "Wo hat GMG Brand Label seinen Sitz?",
     "choices": [
@@ -333,6 +355,7 @@
     "id": "w39-e-geny-gigi",
     "tier": "easy",
     "topic": "dj-gigi",
+    "generation": "gen-y",
     "categoryTitle": "Gigis Easy Lane",
     "prompt": "DJ Gigi ist der Flaggschiff-Künstler welches Montréaler Labels?",
     "choices": [
@@ -348,6 +371,7 @@
     "id": "w39-e-geny-google",
     "tier": "easy",
     "topic": "culture",
+    "generation": "gen-y",
     "categoryTitle": "Suchparty",
     "prompt": "Welches Unternehmen startete Ende der 1990er einen Suchdienst namens Google?",
     "choices": [
@@ -363,6 +387,7 @@
     "id": "w39-e-genz-fortnite",
     "tier": "easy",
     "topic": "culture",
+    "generation": "gen-z",
     "categoryTitle": "Battle-Bus-Basics",
     "prompt": "Was für ein Spiel ist Fortnite in erster Linie?",
     "choices": [
@@ -378,6 +403,7 @@
     "id": "w39-e-genz-spotify",
     "tier": "easy",
     "topic": "music",
+    "generation": "gen-z",
     "categoryTitle": "Stream-Maschine",
     "prompt": "Welches schwedische Unternehmen ist vor allem für die Musik-Streaming-App Spotify bekannt?",
     "choices": [
@@ -393,6 +419,7 @@
     "id": "w39-e-genz-tiktok",
     "tier": "easy",
     "topic": "culture",
+    "generation": "gen-z",
     "categoryTitle": "Kurzform",
     "prompt": "Wofür ist TikTok vor allem bekannt?",
     "choices": [
@@ -408,6 +435,7 @@
     "id": "w39-e-genz-france",
     "tier": "easy",
     "topic": "geography",
+    "generation": "gen-z",
     "categoryTitle": "Hauptstadt-Blitz",
     "prompt": "Was ist die Hauptstadt Frankreichs?",
     "choices": [
@@ -423,6 +451,7 @@
     "id": "w39-e-genz-gigi2",
     "tier": "easy",
     "topic": "dj-gigi",
+    "generation": "gen-z",
     "categoryTitle": "Gigis Easy Lane",
     "prompt": "Mit welchem Stadt-Vibe wird DJ Gigis Musik am ehesten verbunden?",
     "choices": [
@@ -438,6 +467,7 @@
     "id": "w39-e-genz-marvel",
     "tier": "easy",
     "topic": "film-tv",
+    "generation": "gen-z",
     "categoryTitle": "MCU 101",
     "prompt": "Welches Studio startete das Marvel Cinematic Universe mit Iron Man (2008)?",
     "choices": [
@@ -453,6 +483,7 @@
     "id": "w39-e-alpha-yt",
     "tier": "easy",
     "topic": "culture",
+    "generation": "gen-alpha",
     "categoryTitle": "Play-Taste",
     "prompt": "YouTube ist in erster Linie eine Plattform für was?",
     "choices": [
@@ -468,6 +499,7 @@
     "id": "w39-e-alpha-tablet",
     "tier": "easy",
     "topic": "culture",
+    "generation": "gen-alpha",
     "categoryTitle": "Touch First",
     "prompt": "Ein iPad lässt sich am besten als welches Gerät beschreiben?",
     "choices": [
@@ -483,6 +515,7 @@
     "id": "w39-e-alpha-dory",
     "tier": "easy",
     "topic": "film-tv",
+    "generation": "gen-alpha",
     "categoryTitle": "Fischfreunde",
     "prompt": "Was für ein Fisch ist Nemo in Findet Nemo?",
     "choices": [
@@ -498,6 +531,7 @@
     "id": "w39-e-alpha-earth",
     "tier": "easy",
     "topic": "geography",
+    "generation": "gen-alpha",
     "categoryTitle": "Blauer Marmor",
     "prompt": "Auf welchem Planeten leben wir?",
     "choices": [
@@ -513,6 +547,7 @@
     "id": "w39-e-alpha-lego",
     "tier": "easy",
     "topic": "art",
+    "generation": "gen-alpha",
     "categoryTitle": "Ziegel-Logik",
     "prompt": "Wofür sind LEGO-Steine am berühmtesten?",
     "choices": [
@@ -528,6 +563,7 @@
     "id": "w39-e-alpha-cars",
     "tier": "easy",
     "topic": "cars",
+    "generation": "gen-alpha",
     "categoryTitle": "Vier Räder",
     "prompt": "Wie viele Räder hat ein typisches Auto?",
     "choices": [
@@ -543,6 +579,7 @@
     "id": "w39-e-mix-japan",
     "tier": "easy",
     "topic": "geography",
+    "generation": "multi-gen",
     "categoryTitle": "Kartenchaos",
     "prompt": "Was ist die Hauptstadt Japans?",
     "choices": [
@@ -558,6 +595,7 @@
     "id": "w39-e-mix-mona",
     "tier": "easy",
     "topic": "art",
+    "generation": "multi-gen",
     "categoryTitle": "Louvre Lite",
     "prompt": "Wer malte die Mona Lisa?",
     "choices": [
@@ -573,6 +611,7 @@
     "id": "w39-e-mix-gigi3",
     "tier": "easy",
     "topic": "dj-gigi",
+    "generation": "multi-gen",
     "categoryTitle": "Gigis Easy Lane",
     "prompt": "Wahr oder Vibe-Check: Unter welcher Label-Familie veröffentlicht DJ Gigi?",
     "choices": [
@@ -588,6 +627,7 @@
     "id": "w39-e-mix-stig",
     "tier": "easy",
     "topic": "grand-tour",
+    "generation": "multi-gen",
     "categoryTitle": "Weißes-Anzug-Rätsel",
     "prompt": "Wie heißt der anonyme Rennfahrer mit Helm bei Top Gear?",
     "choices": [
@@ -603,6 +643,7 @@
     "id": "w39-h-silent-sputnik",
     "tier": "hard",
     "topic": "sci-fi",
+    "generation": "silent-generation",
     "categoryTitle": "Orbit-Ursprünge",
     "prompt": "Welches Land startete 1957 Sputnik 1, den ersten künstlichen Satelliten?",
     "choices": [
@@ -618,6 +659,7 @@
     "id": "w39-h-silent-hula",
     "tier": "hard",
     "topic": "culture",
+    "generation": "silent-generation",
     "categoryTitle": "Mode-Akten",
     "prompt": "Der Spielzeug-Hype der 1950er mit dem drehenden Plastikring um die Taille war…",
     "choices": [
@@ -633,6 +675,7 @@
     "id": "w39-h-silent-polio",
     "tier": "hard",
     "topic": "culture",
+    "generation": "silent-generation",
     "categoryTitle": "Öffentliche Gesundheit",
     "prompt": "Welcher amerikanische Wissenschaftler leitete das Team hinter dem ersten weit verbreiteten Polio-Impfstoff der 1950er?",
     "choices": [
@@ -648,6 +691,7 @@
     "id": "w39-h-silent-korea",
     "tier": "hard",
     "topic": "geography",
+    "generation": "silent-generation",
     "categoryTitle": "Kalter-Krieg-Karte",
     "prompt": "In welchem Jahr wurde der Waffenstillstand des Koreakriegs unterzeichnet?",
     "choices": [
@@ -663,6 +707,7 @@
     "id": "w39-h-silent-interstate",
     "tier": "hard",
     "topic": "cars",
+    "generation": "silent-generation",
     "categoryTitle": "Straßenbauer",
     "prompt": "Welcher US-Präsident unterzeichnete 1956 den Federal-Aid Highway Act, der das Interstate-System anstieß?",
     "choices": [
@@ -678,6 +723,7 @@
     "id": "w39-h-silent-disneyland",
     "tier": "hard",
     "topic": "film-tv",
+    "generation": "silent-generation",
     "categoryTitle": "Themenpark-Dämmerung",
     "prompt": "In welchem US-Bundesstaat öffnete Disneyland 1955 erstmals?",
     "choices": [
@@ -693,6 +739,7 @@
     "id": "w39-h-boomer-jfk",
     "tier": "hard",
     "topic": "culture",
+    "generation": "baby-boomer",
     "categoryTitle": "Camelot-Uhr",
     "prompt": "In welchem Jahr wurde der US-Präsident John F. Kennedy ermordet?",
     "choices": [
@@ -708,6 +755,7 @@
     "id": "w39-h-boomer-mlk",
     "tier": "hard",
     "topic": "culture",
+    "generation": "baby-boomer",
     "categoryTitle": "Marsch-Erinnerung",
     "prompt": "In welcher Stadt hielt Martin Luther King Jr. die Rede „I Have a Dream“?",
     "choices": [
@@ -723,6 +771,7 @@
     "id": "w39-h-boomer-beatles2",
     "tier": "hard",
     "topic": "music",
+    "generation": "baby-boomer",
     "categoryTitle": "Abbey-Noten",
     "prompt": "Welches Beatles-Album enthält die Songs „Come Together“ und „Here Comes the Sun“?",
     "choices": [
@@ -738,6 +787,7 @@
     "id": "w39-h-boomer-ali",
     "tier": "hard",
     "topic": "culture",
+    "generation": "baby-boomer",
     "categoryTitle": "Rope-a-Dope",
     "prompt": "Unter welchem Namen wurde Muhammad Ali geboren?",
     "choices": [
@@ -753,6 +803,7 @@
     "id": "w39-h-boomer-concorde",
     "tier": "hard",
     "topic": "cars",
+    "generation": "baby-boomer",
     "categoryTitle": "Überschall-Nebenquest",
     "prompt": "Die Concorde war ein berühmtes Beispiel für welche Art von Passagierflugzeug?",
     "choices": [
@@ -768,6 +819,7 @@
     "id": "w39-h-boomer-starwars",
     "tier": "hard",
     "topic": "sci-fi",
+    "generation": "baby-boomer",
     "categoryTitle": "Galaxie-Premiere",
     "prompt": "In welchem Jahr kam der originale Star-Wars-Film (später Eine neue Hoffnung) heraus?",
     "choices": [
@@ -783,6 +835,7 @@
     "id": "w39-h-genx-amazon-gt",
     "tier": "hard",
     "topic": "grand-tour",
+    "generation": "gen-x",
     "categoryTitle": "Prime-Time-Benzin",
     "prompt": "Welcher Streamingdienst produzierte The Grand Tour?",
     "choices": [
@@ -798,6 +851,7 @@
     "id": "w39-h-genx-chernobyl",
     "tier": "hard",
     "topic": "geography",
+    "generation": "gen-x",
     "categoryTitle": "Atomkarte",
     "prompt": "Die Tschernobyl-Katastrophe 1986 ereignete sich in welchem heutigen Land?",
     "choices": [
@@ -813,6 +867,7 @@
     "id": "w39-h-genx-nirvana",
     "tier": "hard",
     "topic": "music",
+    "generation": "gen-x",
     "categoryTitle": "Grunge-Tor",
     "prompt": "Welches Nirvana-Album enthält den Song „Smells Like Teen Spirit“?",
     "choices": [
@@ -828,6 +883,7 @@
     "id": "w39-h-genx-www",
     "tier": "hard",
     "topic": "culture",
+    "generation": "gen-x",
     "categoryTitle": "Hyperlink-Dämmerung",
     "prompt": "Wem wird die Erfindung des World Wide Web zugeschrieben?",
     "choices": [
@@ -843,6 +899,7 @@
     "id": "w39-h-genx-seinfeld",
     "tier": "hard",
     "topic": "film-tv",
+    "generation": "gen-x",
     "categoryTitle": "Über nichts",
     "prompt": "In welcher US-Stadt spielt Seinfeld hauptsächlich?",
     "choices": [
@@ -858,6 +915,7 @@
     "id": "w39-h-genx-gameboy",
     "tier": "hard",
     "topic": "culture",
+    "generation": "gen-x",
     "categoryTitle": "Handheld-Geschichte",
     "prompt": "In welchem Jahr erschien Nintendos originaler Game Boy in Japan?",
     "choices": [
@@ -873,6 +931,7 @@
     "id": "w39-h-geny-ipod-hd",
     "tier": "hard",
     "topic": "music",
+    "generation": "gen-y",
     "categoryTitle": "Scrollrad tief",
     "prompt": "Welchen Laufwerkstyp nutzte der Speicher des ersten iPods?",
     "choices": [
@@ -888,6 +947,7 @@
     "id": "w39-h-geny-facebook",
     "tier": "hard",
     "topic": "culture",
+    "generation": "gen-y",
     "categoryTitle": "Campus-Login",
     "prompt": "In welchem Jahr wurde Facebook (heute Meta) gegründet?",
     "choices": [
@@ -903,6 +963,7 @@
     "id": "w39-h-geny-dune",
     "tier": "hard",
     "topic": "sci-fi",
+    "generation": "gen-y",
     "categoryTitle": "Sand & Syntax",
     "prompt": "Wer schrieb den Originalroman Dune?",
     "choices": [
@@ -918,6 +979,7 @@
     "id": "w39-h-geny-gmg2",
     "tier": "hard",
     "topic": "gmg",
+    "generation": "gen-y",
     "categoryTitle": "Label-Lore",
     "prompt": "Womit wird GMG Brand Label vor allem assoziiert?",
     "choices": [
@@ -933,6 +995,7 @@
     "id": "w39-h-geny-friends",
     "tier": "hard",
     "topic": "film-tv",
+    "generation": "gen-y",
     "categoryTitle": "Sofa-Kontinuität",
     "prompt": "Wie heißt in Friends der Central-Perk-Barista, der später zur Stammbesetzung gehört?",
     "choices": [
@@ -948,6 +1011,7 @@
     "id": "w39-h-geny-hybrid",
     "tier": "hard",
     "topic": "cars",
+    "generation": "gen-y",
     "categoryTitle": "Leises Drehmoment",
     "prompt": "Welches Toyota-Modell gilt weithin als Wegbereiter der Massenmarkt-Hybride?",
     "choices": [
@@ -963,6 +1027,7 @@
     "id": "w39-h-genz-fortnite2",
     "tier": "hard",
     "topic": "culture",
+    "generation": "gen-z",
     "categoryTitle": "Insel-Code",
     "prompt": "Welches Unternehmen entwickelt Fortnite?",
     "choices": [
@@ -978,6 +1043,7 @@
     "id": "w39-h-genz-spotify2",
     "tier": "hard",
     "topic": "music",
+    "generation": "gen-z",
     "categoryTitle": "Stream-HQ",
     "prompt": "In welchem Land wurde Spotify gegründet?",
     "choices": [
@@ -993,6 +1059,7 @@
     "id": "w39-h-genz-btsv",
     "tier": "hard",
     "topic": "music",
+    "generation": "gen-z",
     "categoryTitle": "K-Pop-Kompass",
     "prompt": "Aus welchem Land kommt die Musikgruppe BTS?",
     "choices": [
@@ -1008,6 +1075,7 @@
     "id": "w39-h-genz-tesla",
     "tier": "hard",
     "topic": "cars",
+    "generation": "gen-z",
     "categoryTitle": "EV-Autobahn",
     "prompt": "Wofür ist Tesla, Inc. vor allem bekannt?",
     "choices": [
@@ -1023,6 +1091,7 @@
     "id": "w39-h-genz-blackpanther",
     "tier": "hard",
     "topic": "film-tv",
+    "generation": "gen-z",
     "categoryTitle": "Wakanda-Wochenende",
     "prompt": "Wer führte Regie beim Marvel-Film Black Panther (2018)?",
     "choices": [
@@ -1038,6 +1107,7 @@
     "id": "w39-h-genz-paris-acc",
     "tier": "hard",
     "topic": "geography",
+    "generation": "gen-z",
     "categoryTitle": "Klimakarte",
     "prompt": "Worum geht es im Pariser Klimaabkommen vor allem?",
     "choices": [
@@ -1053,6 +1123,7 @@
     "id": "w39-h-alpha-minecraft",
     "tier": "hard",
     "topic": "culture",
+    "generation": "gen-alpha",
     "categoryTitle": "Block-Universum",
     "prompt": "Wer hat Minecraft ursprünglich geschaffen?",
     "choices": [
@@ -1068,6 +1139,7 @@
     "id": "w39-h-alpha-roblox",
     "tier": "hard",
     "topic": "culture",
+    "generation": "gen-alpha",
     "categoryTitle": "Avatar-Plaza",
     "prompt": "Wie lässt sich Roblox am besten beschreiben?",
     "choices": [
@@ -1083,6 +1155,7 @@
     "id": "w39-h-alpha-pixar",
     "tier": "hard",
     "topic": "film-tv",
+    "generation": "gen-alpha",
     "categoryTitle": "Lampe & Luxo",
     "prompt": "Welches Studio machte Toy Story, den ersten vollständig computeranimierten Spielfilm?",
     "choices": [
@@ -1098,6 +1171,7 @@
     "id": "w39-h-alpha-among",
     "tier": "hard",
     "topic": "culture",
+    "generation": "gen-alpha",
     "categoryTitle": "Sus-Patrouille",
     "prompt": "Among Us ist ein Social-Deduction-Spiel, das hauptsächlich in welcher Umgebung spielt?",
     "choices": [
@@ -1113,6 +1187,7 @@
     "id": "w39-h-alpha-ev",
     "tier": "hard",
     "topic": "cars",
+    "generation": "gen-alpha",
     "categoryTitle": "Plug & Play",
     "prompt": "Wofür steht EV bei modernen Autos üblicherweise?",
     "choices": [
@@ -1128,6 +1203,7 @@
     "id": "w39-h-alpha-ghibli",
     "tier": "hard",
     "topic": "film-tv",
+    "generation": "gen-alpha",
     "categoryTitle": "Totoro-Territorium",
     "prompt": "In welchem Land hat Studio Ghibli seinen Sitz?",
     "choices": [
@@ -1143,6 +1219,7 @@
     "id": "w39-h-mix-nile",
     "tier": "hard",
     "topic": "geography",
+    "generation": "multi-gen",
     "categoryTitle": "Fluss-Rang",
     "prompt": "Welcher afrikanische Fluss gilt traditionell als einer der längsten der Welt?",
     "choices": [
@@ -1158,6 +1235,7 @@
     "id": "w39-h-mix-van-gogh",
     "tier": "hard",
     "topic": "art",
+    "generation": "multi-gen",
     "categoryTitle": "Sternen-Fakt",
     "prompt": "Mit welchem Gemälde wird Vincent van Gogh stark verbunden?",
     "choices": [
@@ -1173,6 +1251,7 @@
     "id": "w39-h-mix-v8",
     "tier": "hard",
     "topic": "cars",
+    "generation": "multi-gen",
     "categoryTitle": "Zylinderzahl",
     "prompt": "Wie viele Zylinder hat ein typischer V8-Motor?",
     "choices": [
@@ -1188,6 +1267,7 @@
     "id": "w39-h-mix-hamilton",
     "tier": "hard",
     "topic": "music",
+    "generation": "multi-gen",
     "categoryTitle": "Broadway-Beats",
     "prompt": "Wer schrieb Musik und Text für das Musical Hamilton?",
     "choices": [
@@ -1203,6 +1283,7 @@
     "id": "w39-d-silent-u2",
     "tier": "difficult",
     "topic": "sci-fi",
+    "generation": "silent-generation",
     "categoryTitle": "Kalter-Krieg-Himmel",
     "prompt": "Francis Gary Powers wurde 1960 in welchem Typ US-Aufklärungsflugzeug abgeschossen?",
     "choices": [
@@ -1218,6 +1299,7 @@
     "id": "w39-d-boomer-apollo13",
     "tier": "difficult",
     "topic": "sci-fi",
+    "generation": "baby-boomer",
     "categoryTitle": "Versagen ist keine…",
     "prompt": "In welchem Jahr explodierte der Sauerstofftank von Apollo 13?",
     "choices": [
@@ -1233,6 +1315,7 @@
     "id": "w39-d-genx-gt-year",
     "tier": "difficult",
     "topic": "grand-tour",
+    "generation": "gen-x",
     "categoryTitle": "Studio-Chronologie",
     "prompt": "In welchem Jahr hatte The Grand Tour Premiere auf Amazon Prime Video?",
     "choices": [
@@ -1248,6 +1331,7 @@
     "id": "w39-d-genx-berlin",
     "tier": "difficult",
     "topic": "geography",
+    "generation": "gen-x",
     "categoryTitle": "Mauer-Uhr",
     "prompt": "In welchem Jahr fiel die Berliner Mauer?",
     "choices": [
@@ -1263,6 +1347,7 @@
     "id": "w39-d-geny-iphone",
     "tier": "difficult",
     "topic": "culture",
+    "generation": "gen-y",
     "categoryTitle": "Keynote-Chronologie",
     "prompt": "In welchem Jahr kündigte Apple das originale iPhone an?",
     "choices": [
@@ -1278,6 +1363,7 @@
     "id": "w39-d-geny-inception",
     "tier": "difficult",
     "topic": "film-tv",
+    "generation": "gen-y",
     "categoryTitle": "Traumschichten",
     "prompt": "Wer führte Regie beim Film Inception (2010)?",
     "choices": [
@@ -1293,6 +1379,7 @@
     "id": "w39-d-genz-openai",
     "tier": "difficult",
     "topic": "culture",
+    "generation": "gen-z",
     "categoryTitle": "Modell-Manieren",
     "prompt": "In welchem Jahr veröffentlichte OpenAI ChatGPT für die Öffentlichkeit?",
     "choices": [
@@ -1308,6 +1395,7 @@
     "id": "w39-d-genz-parasite",
     "tier": "difficult",
     "topic": "film-tv",
+    "generation": "gen-z",
     "categoryTitle": "Treppen & Untertitel",
     "prompt": "Aus welchem Land stammt der Film Parasite, der den Oscar als Bester Film gewann?",
     "choices": [
@@ -1323,6 +1411,7 @@
     "id": "w39-d-alpha-switch",
     "tier": "difficult",
     "topic": "culture",
+    "generation": "gen-alpha",
     "categoryTitle": "Hybrid-Handheld",
     "prompt": "In welchem Jahr erschien die Nintendo Switch weltweit?",
     "choices": [
@@ -1338,6 +1427,7 @@
     "id": "w39-d-mix-louvre",
     "tier": "difficult",
     "topic": "art",
+    "generation": "multi-gen",
     "categoryTitle": "Pyramiden-Problem",
     "prompt": "I. M. Peis Glaspyramide ist das moderne Eingangs-Wahrzeichen welches Museums?",
     "choices": [
@@ -1353,6 +1443,7 @@
     "id": "w39-f-silent-cool-wall",
     "tier": "extreme",
     "topic": "grand-tour",
+    "generation": "silent-generation",
     "categoryTitle": "Finale · Power Lap",
     "prompt": "Welche Zone liegt an Top Gears Cool Wall zwischen Cool und Uncool?",
     "choices": [
@@ -1368,6 +1459,7 @@
     "id": "w39-f-boomer-armstrong-quote",
     "tier": "extreme",
     "topic": "sci-fi",
+    "generation": "baby-boomer",
     "categoryTitle": "Finale · Mondzeile",
     "prompt": "Vervollständigen Sie Neil Armstrongs Mondsatz: „That’s one small step for [a] man, one giant leap for ___.“",
     "choices": [
@@ -1383,6 +1475,7 @@
     "id": "w39-f-genx-stig-reveal",
     "tier": "extreme",
     "topic": "grand-tour",
+    "generation": "gen-x",
     "categoryTitle": "Finale · Helm ab",
     "prompt": "Welcher Rennfahrer wurde 2009 als damaliger BBC-Top-Gear-Stig enthüllt?",
     "choices": [
@@ -1398,6 +1491,7 @@
     "id": "w39-f-geny-matrix-arch",
     "tier": "extreme",
     "topic": "film-tv",
+    "generation": "gen-y",
     "categoryTitle": "Finale · Code Grün",
     "prompt": "Welchen Titel trägt in der Lore von Matrix Reloaded / Revolutions das Programm, das die Matrix erschuf?",
     "choices": [
@@ -1413,6 +1507,7 @@
     "id": "w39-f-genz-fortnite-mode",
     "tier": "extreme",
     "topic": "culture",
+    "generation": "gen-z",
     "categoryTitle": "Finale · Sturmkreis",
     "prompt": "Wie heißt der originale Free-to-Play-PvP-Modus von Fortnite, der den Boom prägte, üblicherweise?",
     "choices": [
@@ -1428,6 +1523,7 @@
     "id": "w39-f-alpha-minecraft-biome",
     "tier": "extreme",
     "topic": "culture",
+    "generation": "gen-alpha",
     "categoryTitle": "Finale · Deep Dark",
     "prompt": "Welcher feindliche Mob in Minecraft wird stark mit dem Deep Dark / Ancient Cities verbunden?",
     "choices": [

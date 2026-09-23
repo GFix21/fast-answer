@@ -11,6 +11,7 @@ import {
 } from "./i18n.js";
 import { dropoutEndsGame, nextQuestionAllowsJoin } from "./lib/seat-rules.js";
 import { hashProfilePassword } from "./lib/password.js";
+import { spreadByGeneration } from "./lib/generation-deal.js";
 
 const STUDIOS = [
   "./studio/studio-01-contestant-pov.jpg",
@@ -548,17 +549,20 @@ function rememberDealtIds(ids) {
     localStorage.setItem(RECENT_Q_KEY, JSON.stringify(next));
   } catch { /* ignore quota */ }
 }
-/** Prefer unseen bank ids across back-to-back games; fall back to least-recent. */
+/** Prefer unseen ids, and keep every Q-and-A generation in the tier when stock allows. */
 function sampleByTier(all, tier, need, recentSet) {
   const pool = all.filter((q) => q.tier === tier);
   if (!pool.length || need <= 0) return [];
-  const fresh = shuffle(pool.filter((q) => !recentSet.has(q.id)));
-  const used = pool.filter((q) => recentSet.has(q.id));
-  // recent list is newest-first; prefer higher index (older / less recent)
   const recentOrder = loadRecentQuestionIds();
   const rank = new Map(recentOrder.map((id, i) => [id, i]));
-  used.sort((a, b) => (rank.get(b.id) ?? 9999) - (rank.get(a.id) ?? 9999));
-  return [...fresh, ...used].slice(0, need).map(shuffleQuestionChoices);
+  return spreadByGeneration(pool, need, {
+    isRecent: (q) => recentSet.has(q.id),
+    rank: (q) => rank.get(q.id) ?? 9999,
+    shuffle,
+  }).map(shuffleQuestionChoices);
+}
+function generationCount(list) {
+  return new Set((list || []).map((q) => String(q?.generation || "").trim()).filter(Boolean)).size;
 }
 function topicCatalog() {
   return state.topicCatalog.length ? state.topicCatalog : FALLBACK_TOPICS;
@@ -612,17 +616,18 @@ async function refreshQuestionSet() {
   state.dealTopicKey = topicDealKey();
   const n = state.qs.length;
   const bank = state.questions.length;
-  state.statusMsg = tt("questionsRefreshed", n, bank);
+  state.statusMsg = tt("questionsRefreshed", n, bank, generationCount(state.qs));
   paint(true);
 }
 function questionRefreshHTML() {
   if (isPad() || state.mpMode === "join") return "";
   const n = state.dealFresh && state.qs?.length ? state.qs.length : ROUND;
   const bank = state.questions.length || 0;
+  const gens = generationCount(state.dealFresh && state.qs?.length ? state.qs : state.questions);
   return `
     <div class="q-refresh">
       <button class="ghost js-refresh-qs" type="button">${tt("refreshQuestions")}</button>
-      <p class="meta">${escapeHtml(tt("questionDealMeta", n, bank))}</p>
+      <p class="meta">${escapeHtml(tt("questionDealMeta", n, bank, gens))}</p>
     </div>`;
 }
 function pickLockdownSlots() {
@@ -876,8 +881,9 @@ function nextPlacementTier(current, correct) {
   if (correct) return TIER_LADDER[Math.min(TIER_LADDER.length - 1, i + 1)];
   return TIER_LADDER[Math.max(0, i - 1)];
 }
-function pickPlacementQuestion(tier, exclude) {
+function pickPlacementQuestion(tier, exclude, seenGenerations) {
   const skip = new Set(exclude || []);
+  const seen = seenGenerations instanceof Set ? seenGenerations : new Set();
   const pool = (state.placementQs && state.placementQs.length)
     ? state.placementQs
     : state.questions;
@@ -889,10 +895,15 @@ function pickPlacementQuestion(tier, exclude) {
     extreme: ["extreme", "difficult", "hard", "easy"],
   }[tier] || TIER_LADDER;
   for (const t of order) {
-    const hit = available.find((q) => q.tier === t);
+    const tierQs = available.filter((q) => q.tier === t);
+    const freshGen = tierQs.find((q) => q.generation && !seen.has(q.generation));
+    const hit = freshGen || tierQs[0];
     if (hit) return hit;
   }
   return available[0] || null;
+}
+function seenPlacementGenerations(d) {
+  return new Set((d?.answers || []).map((a) => a.question?.generation).filter(Boolean));
 }
 function abilityFromDojo(answers) {
   const total = answers.length || PLACE_N;
@@ -2159,7 +2170,7 @@ function advanceDojo(ok) {
     return;
   }
   d.tier = nextPlacementTier(d.tier, ok);
-  d.q = pickPlacementQuestion(d.tier, d.used);
+  d.q = pickPlacementQuestion(d.tier, d.used, seenPlacementGenerations(d));
   d.picked = -1;
   armDojoRead();
 }

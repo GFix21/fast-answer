@@ -241,13 +241,14 @@ function render() {
           Last publish: ${pub?.publishedAt ? esc(pub.publishedAt) : "not yet (repo may already ship questions.json)"}
           · ${pub?.questionCount ?? "—"} questions
           ${pub?.counts ? `· ${esc(JSON.stringify(pub.counts))}` : ""}
+          ${pub?.generations ? `· generations ${esc(JSON.stringify(pub.generations))}` : ""}
         </p>
         <div class="row" style="margin-top:16px">
           <button class="btn primary" id="publish">Publish week → questions.json</button>
           <button class="btn" id="refresh">Refresh</button>
         </div>
         ${metricDonut()}
-        <p class="mut" style="margin-top:12px">Durable path: <code>node scripts/publish-week.mjs</code> then git push / redeploy (writes <code>questions.json</code> + <code>questions.fr.json</code> / <code>questions.de.json</code>). EN publish also snapshots into <code>banks/archive/YYYY-MM/</code>. Switch EN/FR/DE above to review locale banks. <a class="glow-link" href="${GLOW_URL}" target="_blank" rel="noopener noreferrer">Glow</a> opens the GMG game room.</p>
+        <p class="mut" style="margin-top:12px">Durable path: <code>npm run handoff</code> (or <code>node scripts/publish-week.mjs</code>) then git push / redeploy. Handoff keeps each generation on <code>questions.json</code> and the FR/DE banks. EN publish also snapshots into <code>banks/archive/YYYY-MM/</code>. <a class="glow-link" href="${GLOW_URL}" target="_blank" rel="noopener noreferrer">Glow</a> opens the GMG game room.</p>
       </div>`;
     document.getElementById("publish")?.addEventListener("click", doPublish);
     document.getElementById("refresh")?.addEventListener("click", () => loadWeek(true));

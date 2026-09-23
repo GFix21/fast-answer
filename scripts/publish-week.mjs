@@ -16,7 +16,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { exportPack, countByTier } from "../q-and-a/map.js";
+import { exportPack, countByTier, generationIssues, countByGeneration } from "../q-and-a/map.js";
 import {
   archivePublishedWeek,
   torontoMonthKey,
@@ -68,6 +68,12 @@ function resolveLocalePack(weekKey, loc) {
 
 const packPath = resolvePack(process.argv[2]);
 const pack = JSON.parse(fs.readFileSync(packPath, "utf8"));
+const genIssues = generationIssues(pack.questions || []);
+if (genIssues.length) {
+  console.error("publish blocked — generation handoff:");
+  for (const line of genIssues) console.error(" -", line);
+  process.exit(1);
+}
 const exported = exportPack(pack);
 const publishedAt = new Date().toISOString();
 
@@ -102,6 +108,7 @@ console.log("=== publish-week ===");
 console.log("source:", packPath);
 console.log("weekKey:", pack.weekKey);
 console.log("EN counts:", meta.counts);
+console.log("EN generations:", countByGeneration(exported));
 console.log(`Wrote ${exported.length} → questions.json + banks/weekly/current.json`);
 console.log(
   `Archived → banks/archive/${archive.monthKey}/${pack.weekKey}.json` +
@@ -115,6 +122,12 @@ for (const loc of LOCALES) {
     continue;
   }
   const locPack = JSON.parse(fs.readFileSync(locPath, "utf8"));
+  const locIssues = generationIssues(locPack.questions || []);
+  if (locIssues.length) {
+    console.error(`publish blocked — ${loc} generation handoff:`);
+    for (const line of locIssues) console.error(" -", line);
+    process.exit(1);
+  }
   // Prefer copying from Q-and-A into banks/weekly/{loc}/ when publishing from studio
   if (locPath.startsWith(QANDA)) {
     fs.mkdirSync(path.join(BANKS, loc), { recursive: true });
