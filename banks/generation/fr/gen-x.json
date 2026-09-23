@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "fr",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 23,
+  "shortfall": 127,
   "ageYear": 2026,
   "born": [
     1965,
@@ -374,6 +374,44 @@
       "correctIndex": 3,
       "banterHint": "Les trois autres portent le reste.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-genx-tennis",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Court",
+      "prompt": "De quelle couleur est une balle de tennis réglementaire ?",
+      "choices": [
+        "Vert",
+        "Blanc",
+        "Jaune",
+        "Orange"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Les anciennes balles étaient blanches. La règle est la vive.",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-h-genx-web",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Première page",
+      "prompt": "L'histoire semble partir ailleurs. La question reste : « Quand le Web a-t-il été ouvert au public ? »",
+      "choices": [
+        "6 août 1991",
+        "12 mars 1989",
+        "1 janvier 1995",
+        "6 août 1989"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'idée est plus vieille. La page publique est cette date.",
+      "funny": true,
+      "humorous": true,
+      "injection": "misdirection",
+      "structure": "when",
+      "fromStructure": "when"
     }
   ]
 }

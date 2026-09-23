@@ -199,6 +199,74 @@
       "status": "pending"
     },
     {
+      "id": "cq-h-silent-empire",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Horizon",
+      "prompt": "Quand l'Empire State Building a-t-il été achevé ?",
+      "choices": [
+        "1931",
+        "1925",
+        "1941",
+        "1950"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La flèche était en place avant la fin de la décennie.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Empire State Building"
+        },
+        {
+          "label": "New York City Landmarks — Empire State Building"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-taxi",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Médaille",
+      "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « De quelle couleur est un taxi classique de New York ? »",
+      "choices": [
+        "Jaune",
+        "Vert",
+        "Noir",
+        "Blanc"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La devinette folle peut attendre. Le taxi est le vif.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "straight-man",
+      "technique": "straight-man",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NYC Taxi and Limousine Commission"
+        },
+        {
+          "label": "Encyclopaedia Britannica — taxicab"
+        }
+      ],
+      "status": "pending"
+    },
+    {
       "id": "cq-e-boomer-gaye",
       "tier": "easy",
       "topic": "music",
@@ -391,6 +459,74 @@
         },
         {
           "label": "Library of Congress — Yellow Submarine"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-gate",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Travée",
+      "prompt": "De quelle couleur est le pont du Golden Gate ?",
+      "choices": [
+        "Orange international",
+        "Or",
+        "Rouge",
+        "Bleu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le nom sonne comme l'or. La peinture est l'autre.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Golden Gate Bridge Highway and Transportation District"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Golden Gate Bridge"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Le champ",
+      "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Quand le festival de Woodstock a-t-il commencé ? »",
+      "choices": [
+        "15 août 1969",
+        "15 août 1967",
+        "4 juillet 1970",
+        "1 juin 1968"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Deux mauvaises dates, puis le vendredi d'ouverture.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "rule-of-three",
+      "technique": "rule-of-three",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Bethel Woods Center for the Arts — Woodstock"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Woodstock"
         }
       ],
       "status": "pending"
@@ -593,6 +729,74 @@
       "status": "pending"
     },
     {
+      "id": "cq-e-genx-tennis",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Court",
+      "prompt": "De quelle couleur est une balle de tennis réglementaire ?",
+      "choices": [
+        "Jaune",
+        "Blanc",
+        "Vert",
+        "Orange"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Les anciennes balles étaient blanches. La règle est la vive.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "International Tennis Federation — rules"
+        },
+        {
+          "label": "Encyclopaedia Britannica — tennis"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-web",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Première page",
+      "prompt": "L'histoire semble partir ailleurs. La question reste : « Quand le Web a-t-il été ouvert au public ? »",
+      "choices": [
+        "6 août 1991",
+        "6 août 1989",
+        "1 janvier 1995",
+        "12 mars 1989"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'idée est plus vieille. La page publique est cette date.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "misdirection",
+      "technique": "misdirection",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "CERN — World Wide Web"
+        },
+        {
+          "label": "Encyclopaedia Britannica — World Wide Web"
+        }
+      ],
+      "status": "pending"
+    },
+    {
       "id": "cq-e-geny-wiki",
       "tier": "easy",
       "topic": "current-culture",
@@ -785,6 +989,74 @@
         },
         {
           "label": "Encyclopaedia Britannica — Titanic, film"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-geny-potter",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Premier livre",
+      "prompt": "Quand le premier livre Harry Potter a-t-il été publié au Royaume-Uni ?",
+      "choices": [
+        "1997",
+        "1995",
+        "1999",
+        "2001"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La rentrée dans le livre arrive après le livre.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — J. K. Rowling"
+        },
+        {
+          "label": "British Library — Harry Potter"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-euro",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Billets et pièces",
+      "prompt": "Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « Quand les billets et les pièces en euros sont-ils entrés en circulation ? »",
+      "choices": [
+        "1 janvier 2002",
+        "1 janvier 1999",
+        "1 janvier 2004",
+        "1 juillet 2002"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La monnaie a eu un anniversaire avant les billets.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "wordplay",
+      "technique": "wordplay",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "European Central Bank — euro cash"
+        },
+        {
+          "label": "Encyclopaedia Britannica — euro"
         }
       ],
       "status": "pending"
@@ -987,6 +1259,74 @@
       "status": "pending"
     },
     {
+      "id": "cq-e-genz-instagram",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Premier post",
+      "prompt": "Quand Instagram a-t-il été lancé ?",
+      "choices": [
+        "2010",
+        "2008",
+        "2012",
+        "2014"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Les photos carrées sont arrivées cette année-là.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Instagram"
+        },
+        {
+          "label": "Meta — Instagram"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-bus",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Le bras d'arrêt",
+      "prompt": "Les mêmes amis qu'avant. Ils reviennent à ceci : « De quelle couleur est un autobus scolaire standard aux États-Unis ? »",
+      "choices": [
+        "Jaune",
+        "Orange",
+        "Bleu",
+        "Blanc"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La même réponse vive que pour le taxi.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "callback",
+      "technique": "callback",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "National Highway Traffic Safety Administration — school bus"
+        },
+        {
+          "label": "Encyclopaedia Britannica — school bus"
+        }
+      ],
+      "status": "pending"
+    },
+    {
       "id": "cq-e-alpha-cat",
       "tier": "easy",
       "topic": "current-culture",
@@ -1119,6 +1459,74 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-alpha-planets",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Système maison",
+      "prompt": "Combien de planètes compte notre système solaire ?",
+      "choices": [
+        "8",
+        "9",
+        "7",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La liste a raccourci en 2006, et elle est restée gentille.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — solar system"
+        },
+        {
+          "label": "International Astronomical Union — planets"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-alpha-banana",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Collation",
+      "prompt": "L'histoire grossit. La question garde la même taille : « De quelle couleur est la peau d'une banane mûre ? »",
+      "choices": [
+        "Jaune",
+        "Vert",
+        "Brun",
+        "Rouge"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'histoire peut grossir. La peau reste la vive.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "escalation",
+      "technique": "escalation",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — banana"
+        },
+        {
+          "label": "Royal Botanic Gardens, Kew — banana"
+        }
+      ],
       "status": "pending"
     },
     {
@@ -1382,6 +1790,74 @@
         },
         {
           "label": "National Maritime Museum — Titanic"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-multi-stop",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Octogone",
+      "prompt": "Combien de côtés a un panneau stop standard ?",
+      "choices": [
+        "8",
+        "6",
+        "4",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Compte les bords plats, pas le poteau.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Federal Highway Administration — stop sign"
+        },
+        {
+          "label": "Encyclopaedia Britannica — traffic sign"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-multi-sky",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Au-dessus",
+      "prompt": "Un petit pas de côté, puis retour à la question : « De quelle couleur est un ciel clair en journée ? »",
+      "choices": [
+        "Bleu",
+        "Vert",
+        "Rouge",
+        "Noir"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Reviens dans la scène. La réponse est la simple.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "aside",
+      "technique": "aside",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Earth's atmosphere"
+        },
+        {
+          "label": "Encyclopaedia Britannica — sky"
         }
       ],
       "status": "pending"

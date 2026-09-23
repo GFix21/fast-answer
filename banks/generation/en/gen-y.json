@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "en",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 23,
+  "shortfall": 127,
   "ageYear": 2026,
   "born": [
     1981,
@@ -374,6 +374,44 @@
       "correctIndex": 3,
       "banterHint": "The necklace kept that one shade.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-geny-potter",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "First Book",
+      "prompt": "When was the first Harry Potter book published in the United Kingdom?",
+      "choices": [
+        "1997",
+        "1995",
+        "1999",
+        "2001"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The school term in the book starts later than the book itself.",
+      "structure": "when"
+    },
+    {
+      "id": "cq-h-geny-euro",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Notes and Coins",
+      "prompt": "One word can mean two things. The scored meaning is the plain one: \"When did euro banknotes and coins enter circulation?\"",
+      "choices": [
+        "January 1, 2002",
+        "January 1, 2004",
+        "January 1, 1999",
+        "July 1, 2002"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The currency had a birthday before the cash did.",
+      "funny": true,
+      "humorous": true,
+      "injection": "wordplay",
+      "structure": "when",
+      "fromStructure": "when"
     }
   ]
 }

@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "fr",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 23,
+  "shortfall": 127,
   "ageYear": 2026,
   "born": [
     1997,
@@ -370,6 +370,44 @@
       "correctIndex": 3,
       "banterHint": "Les ondes sonores sont posées dessus.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-genz-instagram",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Premier post",
+      "prompt": "Quand Instagram a-t-il été lancé ?",
+      "choices": [
+        "2014",
+        "2010",
+        "2008",
+        "2012"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Les photos carrées sont arrivées cette année-là.",
+      "structure": "when"
+    },
+    {
+      "id": "cq-e-genz-bus",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Le bras d'arrêt",
+      "prompt": "Les mêmes amis qu'avant. Ils reviennent à ceci : « De quelle couleur est un autobus scolaire standard aux États-Unis ? »",
+      "choices": [
+        "Orange",
+        "Bleu",
+        "Blanc",
+        "Jaune"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La même réponse vive que pour le taxi.",
+      "funny": true,
+      "humorous": true,
+      "injection": "callback",
+      "structure": "colour",
+      "fromStructure": "colour"
     }
   ]
 }

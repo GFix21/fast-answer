@@ -36,6 +36,12 @@ assert.equal(injected.fromStructure, "when");
 assert.equal(injected.renegade, false);
 assert.match(injected.prompt, /When did the Titanic sink\?/);
 assert.match(injected.prompt, /The other answers/);
+for (const style of ["dialogue", "straight-man", "rule-of-three", "misdirection", "wordplay", "callback", "escalation", "reverse", "aside"]) {
+  const wrapped = injectHumor({ ...straight, injection: style });
+  assert.equal(wrapped.injection, style, style);
+  assert.equal(wrapped.correctIndex, 0, style);
+  assert.match(wrapped.prompt, /When did the Titanic sink\?/, style);
+}
 
 for (const loc of ["en", "fr", "fr-CA", "de"]) {
   const rows = creatorQuestions(loc);

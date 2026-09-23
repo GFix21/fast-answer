@@ -27,7 +27,7 @@ export const STRUCTURES = {
 export const COLOUR_PROMPT = /what colou?r (is|was|were)|de quelle couleur|c'est quoi la couleur|welche farbe/i;
 
 /** English, France, Quebec, and German openings for a when question. */
-export const WHEN_PROMPT = /when did|quand|wann/i;
+export const WHEN_PROMPT = /when (did|was)|quand|wann/i;
 
 export function isColourPrompt(prompt) {
   return COLOUR_PROMPT.test(String(prompt || ""));

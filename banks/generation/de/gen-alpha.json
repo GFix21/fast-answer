@@ -2,8 +2,8 @@
   "generation": "gen-alpha",
   "locale": "de",
   "target": 150,
-  "held": 27,
-  "shortfall": 123,
+  "held": 29,
+  "shortfall": 121,
   "ageYear": 2026,
   "born": [
     2010,
@@ -335,6 +335,43 @@
       "banterHint": "Der Raum blieb quakend freundlich.",
       "funny": true,
       "structure": "colour"
+    },
+    {
+      "id": "cq-h-alpha-planets",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Heimat-System",
+      "prompt": "Wie viele Planeten hat unser Sonnensystem?",
+      "choices": [
+        "9",
+        "10",
+        "8",
+        "7"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Reihe wurde 2006 kürzer und blieb freundlich."
+    },
+    {
+      "id": "cq-e-alpha-banana",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Snack",
+      "prompt": "Die Geschichte wird größer. Die Frage bleibt gleich groß: „Welche Farbe hat die Schale einer reifen Banane?“",
+      "choices": [
+        "Gelb",
+        "Grün",
+        "Braun",
+        "Rot"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Geschichte darf wachsen. Die Schale bleibt die helle.",
+      "funny": true,
+      "humorous": true,
+      "injection": "escalation",
+      "structure": "colour",
+      "fromStructure": "colour"
     },
     {
       "id": "ga-joke-clock",

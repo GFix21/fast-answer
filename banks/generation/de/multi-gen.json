@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "de",
   "target": 150,
-  "held": 17,
-  "shortfall": 133,
+  "held": 19,
+  "shortfall": 131,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -305,6 +305,43 @@
       "injection": "dialogue",
       "structure": "colour",
       "fromStructure": "when"
+    },
+    {
+      "id": "cq-e-multi-stop",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Achteck",
+      "prompt": "Wie viele Seiten hat ein übliches Stoppschild?",
+      "choices": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Zähl die flachen Kanten, nicht den Pfosten."
+    },
+    {
+      "id": "cq-e-multi-sky",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Über uns",
+      "prompt": "Ein kurzer Schritt zur Seite, dann zurück zur Frage: „Welche Farbe hat ein klarer Himmel am Tag?“",
+      "choices": [
+        "Grün",
+        "Schwarz",
+        "Blau",
+        "Rot"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Zurück in die Szene. Die Antwort ist die gewöhnliche.",
+      "funny": true,
+      "humorous": true,
+      "injection": "aside",
+      "structure": "colour",
+      "fromStructure": "colour"
     }
   ]
 }

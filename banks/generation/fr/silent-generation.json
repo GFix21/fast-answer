@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "fr",
   "target": 150,
-  "held": 20,
-  "shortfall": 130,
+  "held": 22,
+  "shortfall": 128,
   "ageYear": 2026,
   "born": [
     1928,
@@ -362,6 +362,44 @@
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour"
+    },
+    {
+      "id": "cq-h-silent-empire",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Horizon",
+      "prompt": "Quand l'Empire State Building a-t-il été achevé ?",
+      "choices": [
+        "1941",
+        "1950",
+        "1925",
+        "1931"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La flèche était en place avant la fin de la décennie.",
+      "structure": "when"
+    },
+    {
+      "id": "cq-e-silent-taxi",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Médaille",
+      "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « De quelle couleur est un taxi classique de New York ? »",
+      "choices": [
+        "Jaune",
+        "Blanc",
+        "Noir",
+        "Vert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La devinette folle peut attendre. Le taxi est le vif.",
+      "funny": true,
+      "humorous": true,
+      "injection": "straight-man",
       "structure": "colour",
       "fromStructure": "colour"
     }

@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "en",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 23,
+  "shortfall": 127,
   "ageYear": 2026,
   "born": [
     1997,
@@ -370,6 +370,44 @@
       "correctIndex": 3,
       "banterHint": "The sound waves sit on top of it.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-genz-instagram",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "First Post",
+      "prompt": "When was Instagram launched?",
+      "choices": [
+        "2014",
+        "2010",
+        "2008",
+        "2012"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The square photos showed up in that year.",
+      "structure": "when"
+    },
+    {
+      "id": "cq-e-genz-bus",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "The Stop Arm",
+      "prompt": "Same friends as before. They come back to this: \"What colour is a standard school bus in the United States?\"",
+      "choices": [
+        "Orange",
+        "Blue",
+        "White",
+        "Yellow"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Same bright answer the cab question already used.",
+      "funny": true,
+      "humorous": true,
+      "injection": "callback",
+      "structure": "colour",
+      "fromStructure": "colour"
     }
   ]
 }

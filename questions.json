@@ -1639,6 +1639,44 @@
     "fromStructure": "colour"
   },
   {
+    "id": "cq-h-silent-empire",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Skyline",
+    "prompt": "When was the Empire State Building completed?",
+    "choices": [
+      "1941",
+      "1950",
+      "1925",
+      "1931"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The spire was up before the decade turned.",
+    "structure": "when"
+  },
+  {
+    "id": "cq-e-silent-taxi",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Medallion",
+    "prompt": "One friend guesses wildly. The other answers the question that was asked: \"What colour is a classic New York City taxi?\"",
+    "choices": [
+      "Yellow",
+      "White",
+      "Black",
+      "Green"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The wild guess can wait. The cab is the bright one.",
+    "funny": true,
+    "humorous": true,
+    "injection": "straight-man",
+    "structure": "colour",
+    "fromStructure": "colour"
+  },
+  {
     "id": "cq-e-boomer-gaye",
     "tier": "easy",
     "topic": "music",
@@ -1736,6 +1774,44 @@
     "correctIndex": 2,
     "banterHint": "The title gives the paint job away.",
     "structure": "colour"
+  },
+  {
+    "id": "cq-h-boomer-gate",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "Span",
+    "prompt": "What colour is the Golden Gate Bridge?",
+    "choices": [
+      "Red",
+      "Blue",
+      "Gold",
+      "International Orange"
+    ],
+    "correctIndex": 3,
+    "banterHint": "The name sounds like gold. The paint is the other one.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-e-boomer-woodstock",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "The Field",
+    "prompt": "First guess, wrong. Second guess, wrong. Then the real question: \"When did the Woodstock festival begin?\"",
+    "choices": [
+      "August 15, 1969",
+      "July 4, 1970",
+      "June 1, 1968",
+      "August 15, 1967"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Two wrong dates, then the Friday it opened.",
+    "funny": true,
+    "humorous": true,
+    "injection": "rule-of-three",
+    "structure": "when",
+    "fromStructure": "when"
   },
   {
     "id": "cq-e-genx-gameboy",
@@ -1837,6 +1913,44 @@
     "structure": "colour"
   },
   {
+    "id": "cq-e-genx-tennis",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Court",
+    "prompt": "What colour is a regulation tennis ball?",
+    "choices": [
+      "Green",
+      "White",
+      "Yellow",
+      "Orange"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Older balls were white. The rule now is the bright one.",
+    "structure": "colour"
+  },
+  {
+    "id": "cq-h-genx-web",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "First Page",
+    "prompt": "The story seems to head somewhere else. The question is still, \"When was the World Wide Web made available to the public?\"",
+    "choices": [
+      "August 6, 1991",
+      "March 12, 1989",
+      "January 1, 1995",
+      "August 6, 1989"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The idea is older. The public page is this date.",
+    "funny": true,
+    "humorous": true,
+    "injection": "misdirection",
+    "structure": "when",
+    "fromStructure": "when"
+  },
+  {
     "id": "cq-e-geny-wiki",
     "tier": "easy",
     "topic": "culture",
@@ -1934,6 +2048,44 @@
     "correctIndex": 3,
     "banterHint": "The necklace kept that one shade.",
     "structure": "colour"
+  },
+  {
+    "id": "cq-e-geny-potter",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "First Book",
+    "prompt": "When was the first Harry Potter book published in the United Kingdom?",
+    "choices": [
+      "1997",
+      "1995",
+      "1999",
+      "2001"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The school term in the book starts later than the book itself.",
+    "structure": "when"
+  },
+  {
+    "id": "cq-h-geny-euro",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Notes and Coins",
+    "prompt": "One word can mean two things. The scored meaning is the plain one: \"When did euro banknotes and coins enter circulation?\"",
+    "choices": [
+      "January 1, 2002",
+      "January 1, 2004",
+      "January 1, 1999",
+      "July 1, 2002"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The currency had a birthday before the cash did.",
+    "funny": true,
+    "humorous": true,
+    "injection": "wordplay",
+    "structure": "when",
+    "fromStructure": "when"
   },
   {
     "id": "cq-e-genz-gif",
@@ -2035,6 +2187,44 @@
     "structure": "colour"
   },
   {
+    "id": "cq-e-genz-instagram",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "First Post",
+    "prompt": "When was Instagram launched?",
+    "choices": [
+      "2014",
+      "2010",
+      "2008",
+      "2012"
+    ],
+    "correctIndex": 1,
+    "banterHint": "The square photos showed up in that year.",
+    "structure": "when"
+  },
+  {
+    "id": "cq-e-genz-bus",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "The Stop Arm",
+    "prompt": "Same friends as before. They come back to this: \"What colour is a standard school bus in the United States?\"",
+    "choices": [
+      "Orange",
+      "Blue",
+      "White",
+      "Yellow"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Same bright answer the cab question already used.",
+    "funny": true,
+    "humorous": true,
+    "injection": "callback",
+    "structure": "colour",
+    "fromStructure": "colour"
+  },
+  {
     "id": "cq-e-alpha-cat",
     "tier": "easy",
     "topic": "culture",
@@ -2123,6 +2313,43 @@
     "banterHint": "The room stayed ribbiting.",
     "funny": true,
     "structure": "colour"
+  },
+  {
+    "id": "cq-h-alpha-planets",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Home System",
+    "prompt": "How many planets are in our solar system?",
+    "choices": [
+      "9",
+      "10",
+      "8",
+      "7"
+    ],
+    "correctIndex": 2,
+    "banterHint": "The lineup got shorter in 2006, and it stayed kind."
+  },
+  {
+    "id": "cq-e-alpha-banana",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Snack",
+    "prompt": "The story gets bigger. The question stays the same size: \"What colour is the peel of a ripe banana?\"",
+    "choices": [
+      "Yellow",
+      "Green",
+      "Brown",
+      "Red"
+    ],
+    "correctIndex": 0,
+    "banterHint": "The story can grow. The peel stays the bright one.",
+    "funny": true,
+    "humorous": true,
+    "injection": "escalation",
+    "structure": "colour",
+    "fromStructure": "colour"
   },
   {
     "id": "cq-e-multi-guitar",
@@ -2265,6 +2492,43 @@
     "injection": "dialogue",
     "structure": "colour",
     "fromStructure": "when"
+  },
+  {
+    "id": "cq-e-multi-stop",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Octagon",
+    "prompt": "How many sides does a standard stop sign have?",
+    "choices": [
+      "8",
+      "10",
+      "4",
+      "6"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Count the flat edges, not the pole."
+  },
+  {
+    "id": "cq-e-multi-sky",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "multi-gen",
+    "categoryTitle": "Overhead",
+    "prompt": "A quick step aside, then back to the question: \"What colour is a clear daytime sky?\"",
+    "choices": [
+      "Green",
+      "Black",
+      "Blue",
+      "Red"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Step back in. The answer is the ordinary one.",
+    "funny": true,
+    "humorous": true,
+    "injection": "aside",
+    "structure": "colour",
+    "fromStructure": "colour"
   },
   {
     "id": "ga-joke-clock",

@@ -12,11 +12,101 @@ import { PLAY_TIERS, JOKE_STRUCTURE, isRenegadeJoke } from "./bots/structures.js
 
 export { isRenegadeJoke, JOKE_STRUCTURE };
 
-/** How Crack'd sends a creator question back. */
+function frames(en, fr, frCA, de) {
+  return { en, fr, "fr-CA": frCA, de };
+}
+
+/** How Crack'd sends a creator question back. Each frame keeps the creator's ask inside it. */
 export const COMEDY_STRUCTURES = {
   dialogue: {
     owner: "Crack'd Kerr",
     note: "Two people. One asks the creator's question. The other gives the real answer.",
+    frame: frames(
+      (ask) => `Two friends are walking. One asks the other, "${ask}" The other answers…`,
+      (ask) => `Deux amis se promènent. L'un demande à l'autre : « ${ask} » L'autre répond…`,
+      (ask) => `Deux amis se promènent. L'un demande à l'autre : « ${ask} » L'autre répond…`,
+      (ask) => `Zwei Freunde gehen spazieren. Einer fragt den anderen: „${ask}“ Der andere antwortet…`,
+    ),
+  },
+  "straight-man": {
+    owner: "Crack'd Kerr",
+    note: "One friend guesses wildly. The other answers the question that was asked.",
+    frame: frames(
+      (ask) => `One friend guesses wildly. The other answers the question that was asked: "${ask}"`,
+      (ask) => `Un ami devine n'importe quoi. L'autre répond à la question posée : « ${ask} »`,
+      (ask) => `Un ami devine n'importe quoi. L'autre répond à la question posée : « ${ask} »`,
+      (ask) => `Ein Freund rät wild. Der andere beantwortet die gestellte Frage: „${ask}“`,
+    ),
+  },
+  "rule-of-three": {
+    owner: "Crack'd Kerr",
+    note: "Two wrong beats, then the creator's question.",
+    frame: frames(
+      (ask) => `First guess, wrong. Second guess, wrong. Then the real question: "${ask}"`,
+      (ask) => `Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « ${ask} »`,
+      (ask) => `Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « ${ask} »`,
+      (ask) => `Erster Tipp, falsch. Zweiter Tipp, falsch. Dann die echte Frage: „${ask}“`,
+    ),
+  },
+  misdirection: {
+    owner: "Crack'd Kerr",
+    note: "The story points elsewhere. The scored question is still the creator's.",
+    frame: frames(
+      (ask) => `The story seems to head somewhere else. The question is still, "${ask}"`,
+      (ask) => `L'histoire semble partir ailleurs. La question reste : « ${ask} »`,
+      (ask) => `L'histoire semble partir ailleurs. La question reste : « ${ask} »`,
+      (ask) => `Die Geschichte scheint woanders hinzugehen. Die Frage bleibt: „${ask}“`,
+    ),
+  },
+  wordplay: {
+    owner: "Crack'd Kerr",
+    note: "A word can mean two things. The scored meaning is the plain fact.",
+    frame: frames(
+      (ask) => `One word can mean two things. The scored meaning is the plain one: "${ask}"`,
+      (ask) => `Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « ${ask} »`,
+      (ask) => `Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « ${ask} »`,
+      (ask) => `Ein Wort kann zweierlei heißen. Die gewertete Bedeutung ist die schlichte: „${ask}“`,
+    ),
+  },
+  callback: {
+    owner: "Crack'd Kerr",
+    note: "The same friends return to a question already in the walk.",
+    frame: frames(
+      (ask) => `Same friends as before. They come back to this: "${ask}"`,
+      (ask) => `Les mêmes amis qu'avant. Ils reviennent à ceci : « ${ask} »`,
+      (ask) => `Les mêmes amis qu'avant. Ils reviennent à ceci : « ${ask} »`,
+      (ask) => `Dieselben Freunde wie zuvor. Sie kommen hierauf zurück: „${ask}“`,
+    ),
+  },
+  escalation: {
+    owner: "Crack'd Kerr",
+    note: "The story gets bigger. The question stays the same size.",
+    frame: frames(
+      (ask) => `The story gets bigger. The question stays the same size: "${ask}"`,
+      (ask) => `L'histoire grossit. La question garde la même taille : « ${ask} »`,
+      (ask) => `L'histoire grossit. La question garde la même taille : « ${ask} »`,
+      (ask) => `Die Geschichte wird größer. Die Frage bleibt gleich groß: „${ask}“`,
+    ),
+  },
+  reverse: {
+    owner: "Crack'd Kerr",
+    note: "The funny line is a wrong choice. The correct choice is the plain fact.",
+    frame: frames(
+      (ask) => `The funny line is a wrong choice. The question to score is, "${ask}"`,
+      (ask) => `La réplique drôle est une mauvaise réponse. La question à jouer est : « ${ask} »`,
+      (ask) => `La réplique drôle est une mauvaise réponse. La question à jouer est : « ${ask} »`,
+      (ask) => `Der lustige Satz ist eine falsche Antwort. Die Frage, die zählt, ist: „${ask}“`,
+    ),
+  },
+  aside: {
+    owner: "Crack'd Kerr",
+    note: "A step out of the scene, then back to the creator's question.",
+    frame: frames(
+      (ask) => `A quick step aside, then back to the question: "${ask}"`,
+      (ask) => `Un petit pas de côté, puis retour à la question : « ${ask} »`,
+      (ask) => `Un petit pas de côté, puis retour à la question : « ${ask} »`,
+      (ask) => `Ein kurzer Schritt zur Seite, dann zurück zur Frage: „${ask}“`,
+    ),
   },
   renegade: {
     owner: "Crack'd Kerr",
@@ -24,12 +114,9 @@ export const COMEDY_STRUCTURES = {
   },
 };
 
-const DIALOGUE = {
-  en: (ask) => `Two friends are walking. One asks the other, "${ask}" The other answers…`,
-  fr: (ask) => `Deux amis se promènent. L'un demande à l'autre : « ${ask} » L'autre répond…`,
-  "fr-CA": (ask) => `Deux amis se promènent. L'un demande à l'autre : « ${ask} » L'autre répond…`,
-  de: (ask) => `Zwei Freunde gehen spazieren. Einer fragt den anderen: „${ask}“ Der andere antwortet…`,
-};
+export const INJECTION_FRAMES = Object.fromEntries(
+  Object.entries(COMEDY_STRUCTURES).filter(([, row]) => row.frame),
+);
 
 /**
  * Joke injection. The choices and correctIndex stay the creator's.
@@ -39,7 +126,9 @@ const DIALOGUE = {
 export function injectHumor(q, { locale = "en", playedStructure, renegade = false } = {}) {
   const fromStructure = q?.fromStructure || q?.structure || null;
   const structure = playedStructure || fromStructure;
-  const frame = DIALOGUE[locale] || DIALOGUE.en;
+  const style = INJECTION_FRAMES[q?.injection] ? q.injection : "dialogue";
+  const set = INJECTION_FRAMES[style].frame;
+  const frame = set[locale] || set.en;
   const ask = String(q?.prompt || "").trim();
   const playedOther = Boolean(structure && fromStructure && structure !== fromStructure);
   return {
@@ -47,8 +136,8 @@ export function injectHumor(q, { locale = "en", playedStructure, renegade = fals
     prompt: frame(ask),
     humorous: true,
     funny: true,
-    injection: "dialogue",
-    technique: q?.technique || "dialogue",
+    injection: style,
+    technique: q?.technique || style,
     fromStructure,
     structure,
     renegade: renegade === true || playedOther,
@@ -64,6 +153,11 @@ export const JOKE_TECHNIQUES = {
   misdirection: "The setup points one way. The answer steps aside without mocking anyone.",
   callback: "A later line returns to the first picture, so the joke feels finished.",
   dialogue: "Two people. One asks the creator's question. The other gives the real answer.",
+  "straight-man": "One friend guesses wildly. The other answers the question that was asked.",
+  "rule-of-three": "Two wrong beats, then the creator's question.",
+  escalation: "The story gets bigger. The question stays the same size.",
+  reverse: "The funny line is a wrong choice. The correct choice is the plain fact.",
+  aside: "A step out of the scene, then back to the creator's question.",
 };
 
 export const COMEDY_BOT = "Crack'd Kerr";

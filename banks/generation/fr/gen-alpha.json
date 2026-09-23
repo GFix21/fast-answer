@@ -2,8 +2,8 @@
   "generation": "gen-alpha",
   "locale": "fr",
   "target": 150,
-  "held": 27,
-  "shortfall": 123,
+  "held": 29,
+  "shortfall": 121,
   "ageYear": 2026,
   "born": [
     2010,
@@ -335,6 +335,43 @@
       "banterHint": "La salle est restée croassante.",
       "funny": true,
       "structure": "colour"
+    },
+    {
+      "id": "cq-h-alpha-planets",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Système maison",
+      "prompt": "Combien de planètes compte notre système solaire ?",
+      "choices": [
+        "9",
+        "10",
+        "8",
+        "7"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La liste a raccourci en 2006, et elle est restée gentille."
+    },
+    {
+      "id": "cq-e-alpha-banana",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Collation",
+      "prompt": "L'histoire grossit. La question garde la même taille : « De quelle couleur est la peau d'une banane mûre ? »",
+      "choices": [
+        "Jaune",
+        "Vert",
+        "Brun",
+        "Rouge"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'histoire peut grossir. La peau reste la vive.",
+      "funny": true,
+      "humorous": true,
+      "injection": "escalation",
+      "structure": "colour",
+      "fromStructure": "colour"
     },
     {
       "id": "ga-joke-clock",

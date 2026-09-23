@@ -2,8 +2,8 @@
   "generation": "baby-boomer",
   "locale": "de",
   "target": 150,
-  "held": 20,
-  "shortfall": 130,
+  "held": 22,
+  "shortfall": 128,
   "ageYear": 2026,
   "born": [
     1946,
@@ -362,6 +362,44 @@
       "correctIndex": 2,
       "banterHint": "Der Titel verrät schon die Farbe.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-h-boomer-gate",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Spannweite",
+      "prompt": "Welche Farbe hat die Golden Gate Bridge?",
+      "choices": [
+        "Rot",
+        "Blau",
+        "Gold",
+        "International Orange"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Der Name klingt nach Gold. Die Farbe ist die andere.",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Das Feld",
+      "prompt": "Erster Tipp, falsch. Zweiter Tipp, falsch. Dann die echte Frage: „Wann begann das Woodstock-Festival?“",
+      "choices": [
+        "15. August 1969",
+        "4. Juli 1970",
+        "1. Juni 1968",
+        "15. August 1967"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Zwei falsche Daten, dann der Freitag der Eröffnung.",
+      "funny": true,
+      "humorous": true,
+      "injection": "rule-of-three",
+      "structure": "when",
+      "fromStructure": "when"
     }
   ]
 }

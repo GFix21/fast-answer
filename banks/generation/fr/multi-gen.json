@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "fr",
   "target": 150,
-  "held": 17,
-  "shortfall": 133,
+  "held": 19,
+  "shortfall": 131,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -305,6 +305,43 @@
       "injection": "dialogue",
       "structure": "colour",
       "fromStructure": "when"
+    },
+    {
+      "id": "cq-e-multi-stop",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Octogone",
+      "prompt": "Combien de côtés a un panneau stop standard ?",
+      "choices": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Compte les bords plats, pas le poteau."
+    },
+    {
+      "id": "cq-e-multi-sky",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Au-dessus",
+      "prompt": "Un petit pas de côté, puis retour à la question : « De quelle couleur est un ciel clair en journée ? »",
+      "choices": [
+        "Vert",
+        "Noir",
+        "Bleu",
+        "Rouge"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Reviens dans la scène. La réponse est la simple.",
+      "funny": true,
+      "humorous": true,
+      "injection": "aside",
+      "structure": "colour",
+      "fromStructure": "colour"
     }
   ]
 }

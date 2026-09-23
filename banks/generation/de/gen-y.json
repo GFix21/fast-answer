@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "de",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 23,
+  "shortfall": 127,
   "ageYear": 2026,
   "born": [
     1981,
@@ -374,6 +374,44 @@
       "correctIndex": 3,
       "banterHint": "Die Kette behielt genau diesen Ton.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-geny-potter",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Erstes Buch",
+      "prompt": "Wann erschien das erste Harry-Potter-Buch im Vereinigten Königreich?",
+      "choices": [
+        "1997",
+        "1995",
+        "1999",
+        "2001"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Schulanfang im Buch kommt nach dem Buch.",
+      "structure": "when"
+    },
+    {
+      "id": "cq-h-geny-euro",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Scheine und Münzen",
+      "prompt": "Ein Wort kann zweierlei heißen. Die gewertete Bedeutung ist die schlichte: „Wann kamen Euro-Banknoten und Münzen in Umlauf?“",
+      "choices": [
+        "1. Januar 2002",
+        "1. Januar 2004",
+        "1. Januar 1999",
+        "1. Juli 2002"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Währung hatte einen Geburtstag vor dem Bargeld.",
+      "funny": true,
+      "humorous": true,
+      "injection": "wordplay",
+      "structure": "when",
+      "fromStructure": "when"
     }
   ]
 }

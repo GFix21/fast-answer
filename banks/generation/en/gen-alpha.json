@@ -2,8 +2,8 @@
   "generation": "gen-alpha",
   "locale": "en",
   "target": 150,
-  "held": 27,
-  "shortfall": 123,
+  "held": 29,
+  "shortfall": 121,
   "ageYear": 2026,
   "born": [
     2010,
@@ -335,6 +335,43 @@
       "banterHint": "The room stayed ribbiting.",
       "funny": true,
       "structure": "colour"
+    },
+    {
+      "id": "cq-h-alpha-planets",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Home System",
+      "prompt": "How many planets are in our solar system?",
+      "choices": [
+        "9",
+        "10",
+        "8",
+        "7"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The lineup got shorter in 2006, and it stayed kind."
+    },
+    {
+      "id": "cq-e-alpha-banana",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Snack",
+      "prompt": "The story gets bigger. The question stays the same size: \"What colour is the peel of a ripe banana?\"",
+      "choices": [
+        "Yellow",
+        "Green",
+        "Brown",
+        "Red"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The story can grow. The peel stays the bright one.",
+      "funny": true,
+      "humorous": true,
+      "injection": "escalation",
+      "structure": "colour",
+      "fromStructure": "colour"
     },
     {
       "id": "ga-joke-clock",

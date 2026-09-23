@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "de",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 23,
+  "shortfall": 127,
   "ageYear": 2026,
   "born": [
     1965,
@@ -374,6 +374,44 @@
       "correctIndex": 3,
       "banterHint": "Die anderen drei tragen den Rest.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-genx-tennis",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Platz",
+      "prompt": "Welche Farbe hat ein Tennisball nach den Regeln?",
+      "choices": [
+        "Grün",
+        "Weiß",
+        "Gelb",
+        "Orange"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Ältere Bälle waren weiß. Die Regel ist jetzt der helle.",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-h-genx-web",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Erste Seite",
+      "prompt": "Die Geschichte scheint woanders hinzugehen. Die Frage bleibt: „Wann wurde das World Wide Web der Öffentlichkeit zugänglich?“",
+      "choices": [
+        "6. August 1991",
+        "12. März 1989",
+        "1. Januar 1995",
+        "6. August 1989"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Idee ist älter. Die öffentliche Seite hat dieses Datum.",
+      "funny": true,
+      "humorous": true,
+      "injection": "misdirection",
+      "structure": "when",
+      "fromStructure": "when"
     }
   ]
 }

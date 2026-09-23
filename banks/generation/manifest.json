@@ -65,69 +65,69 @@
   },
   "locales": {
     "en": {
-      "held": 147,
+      "held": 161,
       "targetEach": 150,
       "counts": {
-        "silent-generation": 20,
-        "baby-boomer": 20,
-        "gen-x": 21,
-        "gen-y": 21,
-        "gen-z": 21,
-        "gen-alpha": 27,
-        "multi-gen": 17
+        "silent-generation": 22,
+        "baby-boomer": 22,
+        "gen-x": 23,
+        "gen-y": 23,
+        "gen-z": 23,
+        "gen-alpha": 29,
+        "multi-gen": 19
       },
       "shortfall": {
-        "silent-generation": 130,
-        "baby-boomer": 130,
-        "gen-x": 129,
-        "gen-y": 129,
-        "gen-z": 129,
-        "gen-alpha": 123,
-        "multi-gen": 133
+        "silent-generation": 128,
+        "baby-boomer": 128,
+        "gen-x": 127,
+        "gen-y": 127,
+        "gen-z": 127,
+        "gen-alpha": 121,
+        "multi-gen": 131
       }
     },
     "fr": {
-      "held": 147,
+      "held": 161,
       "targetEach": 150,
       "counts": {
-        "silent-generation": 20,
-        "baby-boomer": 20,
-        "gen-x": 21,
-        "gen-y": 21,
-        "gen-z": 21,
-        "gen-alpha": 27,
-        "multi-gen": 17
+        "silent-generation": 22,
+        "baby-boomer": 22,
+        "gen-x": 23,
+        "gen-y": 23,
+        "gen-z": 23,
+        "gen-alpha": 29,
+        "multi-gen": 19
       },
       "shortfall": {
-        "silent-generation": 130,
-        "baby-boomer": 130,
-        "gen-x": 129,
-        "gen-y": 129,
-        "gen-z": 129,
-        "gen-alpha": 123,
-        "multi-gen": 133
+        "silent-generation": 128,
+        "baby-boomer": 128,
+        "gen-x": 127,
+        "gen-y": 127,
+        "gen-z": 127,
+        "gen-alpha": 121,
+        "multi-gen": 131
       }
     },
     "de": {
-      "held": 147,
+      "held": 161,
       "targetEach": 150,
       "counts": {
-        "silent-generation": 20,
-        "baby-boomer": 20,
-        "gen-x": 21,
-        "gen-y": 21,
-        "gen-z": 21,
-        "gen-alpha": 27,
-        "multi-gen": 17
+        "silent-generation": 22,
+        "baby-boomer": 22,
+        "gen-x": 23,
+        "gen-y": 23,
+        "gen-z": 23,
+        "gen-alpha": 29,
+        "multi-gen": 19
       },
       "shortfall": {
-        "silent-generation": 130,
-        "baby-boomer": 130,
-        "gen-x": 129,
-        "gen-y": 129,
-        "gen-z": 129,
-        "gen-alpha": 123,
-        "multi-gen": 133
+        "silent-generation": 128,
+        "baby-boomer": 128,
+        "gen-x": 127,
+        "gen-y": 127,
+        "gen-z": 127,
+        "gen-alpha": 121,
+        "multi-gen": 131
       }
     }
   }

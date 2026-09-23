@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "de",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 23,
+  "shortfall": 127,
   "ageYear": 2026,
   "born": [
     1997,
@@ -370,6 +370,44 @@
       "correctIndex": 3,
       "banterHint": "Die Schallwellen liegen darauf.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-genz-instagram",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Erster Beitrag",
+      "prompt": "Wann wurde Instagram gestartet?",
+      "choices": [
+        "2014",
+        "2010",
+        "2008",
+        "2012"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die quadratischen Fotos kamen in dem Jahr.",
+      "structure": "when"
+    },
+    {
+      "id": "cq-e-genz-bus",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Der Stopparm",
+      "prompt": "Dieselben Freunde wie zuvor. Sie kommen hierauf zurück: „Welche Farbe hat ein üblicher Schulbus in den USA?“",
+      "choices": [
+        "Orange",
+        "Blau",
+        "Weiß",
+        "Gelb"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Dieselbe helle Antwort wie beim Taxi.",
+      "funny": true,
+      "humorous": true,
+      "injection": "callback",
+      "structure": "colour",
+      "fromStructure": "colour"
     }
   ]
 }

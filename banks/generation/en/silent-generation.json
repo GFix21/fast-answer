@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "en",
   "target": 150,
-  "held": 20,
-  "shortfall": 130,
+  "held": 22,
+  "shortfall": 128,
   "ageYear": 2026,
   "born": [
     1928,
@@ -362,6 +362,44 @@
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour"
+    },
+    {
+      "id": "cq-h-silent-empire",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Skyline",
+      "prompt": "When was the Empire State Building completed?",
+      "choices": [
+        "1941",
+        "1950",
+        "1925",
+        "1931"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The spire was up before the decade turned.",
+      "structure": "when"
+    },
+    {
+      "id": "cq-e-silent-taxi",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Medallion",
+      "prompt": "One friend guesses wildly. The other answers the question that was asked: \"What colour is a classic New York City taxi?\"",
+      "choices": [
+        "Yellow",
+        "White",
+        "Black",
+        "Green"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The wild guess can wait. The cab is the bright one.",
+      "funny": true,
+      "humorous": true,
+      "injection": "straight-man",
       "structure": "colour",
       "fromStructure": "colour"
     }

@@ -50,8 +50,8 @@ export function translateQuestion(q, locale) {
     flat.prompt = injected.prompt;
     flat.humorous = true;
     flat.funny = true;
-    flat.injection = "dialogue";
-    flat.technique = q.technique || "dialogue";
+    flat.injection = injected.injection;
+    flat.technique = q.technique || injected.technique;
     flat.fromStructure = q.fromStructure || q.structure;
     flat.structure = injected.structure;
     flat.renegade = injected.renegade;

@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "fr",
   "target": 150,
-  "held": 21,
-  "shortfall": 129,
+  "held": 23,
+  "shortfall": 127,
   "ageYear": 2026,
   "born": [
     1981,
@@ -374,6 +374,44 @@
       "correctIndex": 3,
       "banterHint": "Le collier a gardé cette seule teinte.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-e-geny-potter",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Premier livre",
+      "prompt": "Quand le premier livre Harry Potter a-t-il été publié au Royaume-Uni ?",
+      "choices": [
+        "1997",
+        "1995",
+        "1999",
+        "2001"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La rentrée dans le livre arrive après le livre.",
+      "structure": "when"
+    },
+    {
+      "id": "cq-h-geny-euro",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Billets et pièces",
+      "prompt": "Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « Quand les billets et les pièces en euros sont-ils entrés en circulation ? »",
+      "choices": [
+        "1 janvier 2002",
+        "1 janvier 2004",
+        "1 janvier 1999",
+        "1 juillet 2002"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La monnaie a eu un anniversaire avant les billets.",
+      "funny": true,
+      "humorous": true,
+      "injection": "wordplay",
+      "structure": "when",
+      "fromStructure": "when"
     }
   ]
 }

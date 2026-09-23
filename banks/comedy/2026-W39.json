@@ -6,7 +6,7 @@
     "en": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T16:47:35.233Z",
+      "reviewedAt": "2026-09-23T16:59:32.616Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -67,6 +67,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "One friend guesses wildly. The other answers the question that was asked: \"What colour is a classic New York City taxi?\"",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-boomer-record",
           "generation": "baby-boomer",
           "prompt": "Why did the record stay friends with the player?",
@@ -93,6 +122,35 @@
           "structure": "joke",
           "fromStructure": "",
           "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-woodstock",
+          "generation": "baby-boomer",
+          "prompt": "First guess, wrong. Second guess, wrong. Then the real question: \"When did the Woodstock festival begin?\"",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
           "renegade": false
         },
         {
@@ -125,6 +183,35 @@
           "renegade": false
         },
         {
+          "id": "cq-h-genx-web",
+          "generation": "gen-x",
+          "prompt": "The story seems to head somewhere else. The question is still, \"When was the World Wide Web made available to the public?\"",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-geny-inbox",
           "generation": "gen-y",
           "prompt": "Why did the inbox stay calm?",
@@ -154,6 +241,35 @@
           "renegade": false
         },
         {
+          "id": "cq-h-geny-euro",
+          "generation": "gen-y",
+          "prompt": "One word can mean two things. The scored meaning is the plain one: \"When did euro banknotes and coins enter circulation?\"",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-e-genz-emoji",
           "generation": "gen-z",
           "prompt": "Why did the emoji wink?",
@@ -180,6 +296,35 @@
           "structure": "joke",
           "fromStructure": "",
           "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-bus",
+          "generation": "gen-z",
+          "prompt": "Same friends as before. They come back to this: \"What colour is a standard school bus in the United States?\"",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
           "renegade": false
         },
         {
@@ -328,6 +473,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-alpha-banana",
+          "generation": "gen-alpha",
+          "prompt": "The story gets bigger. The question stays the same size: \"What colour is the peel of a ripe banana?\"",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-multi-compass",
           "generation": "multi-gen",
           "prompt": "Why did the compass join the quiz?",
@@ -413,6 +587,35 @@
           "fromStructure": "when",
           "humorous": true,
           "renegade": true
+        },
+        {
+          "id": "cq-e-multi-sky",
+          "generation": "multi-gen",
+          "prompt": "A quick step aside, then back to the question: \"What colour is a clear daytime sky?\"",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-e-silent-roar",
@@ -526,6 +729,35 @@
           "fresh": true,
           "funny": false,
           "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-empire",
+          "generation": "silent-generation",
+          "prompt": "When was the Empire State Building completed?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -650,6 +882,35 @@
           "id": "cq-e-boomer-submarine",
           "generation": "baby-boomer",
           "prompt": "What colour is the submarine in the Beatles song?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-gate",
+          "generation": "baby-boomer",
+          "prompt": "What colour is the Golden Gate Bridge?",
           "rating": 90,
           "safety": {
             "bot": "Louis Liberty",
@@ -821,6 +1082,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genx-tennis",
+          "generation": "gen-x",
+          "prompt": "What colour is a regulation tennis ball?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-geny-wiki",
           "generation": "gen-y",
           "prompt": "Which website, launched in 2001, lets people write encyclopedia articles together?",
@@ -961,6 +1251,35 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-potter",
+          "generation": "gen-y",
+          "prompt": "When was the first Harry Potter book published in the United Kingdom?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -1111,6 +1430,64 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genz-instagram",
+          "generation": "gen-z",
+          "prompt": "When was Instagram launched?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-planets",
+          "generation": "gen-alpha",
+          "prompt": "How many planets are in our solar system?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-multi-guitar",
           "generation": "multi-gen",
           "prompt": "How many strings does a standard guitar have?",
@@ -1251,6 +1628,35 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-stop",
+          "generation": "multi-gen",
+          "prompt": "How many sides does a standard stop sign have?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -1548,6 +1954,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "One friend guesses wildly. The other answers the question that was asked: \"What colour is a classic New York City taxi?\"",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-boomer-record",
           "generation": "baby-boomer",
           "prompt": "Why did the record stay friends with the player?",
@@ -1577,9 +2012,9 @@
           "renegade": false
         },
         {
-          "id": "cq-e-genx-cassette",
-          "generation": "gen-x",
-          "prompt": "Why did the cassette feel shy?",
+          "id": "cq-e-boomer-woodstock",
+          "generation": "baby-boomer",
+          "prompt": "First guess, wrong. Second guess, wrong. Then the real question: \"When did the Woodstock festival begin?\"",
           "rating": 95,
           "safety": {
             "bot": "Louis Liberty",
@@ -1600,38 +2035,9 @@
           },
           "fresh": true,
           "funny": true,
-          "structure": "joke",
-          "fromStructure": "",
-          "humorous": false,
-          "renegade": false
-        },
-        {
-          "id": "cq-h-geny-inbox",
-          "generation": "gen-y",
-          "prompt": "Why did the inbox stay calm?",
-          "rating": 95,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": true,
-          "structure": "joke",
-          "fromStructure": "",
-          "humorous": false,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
           "renegade": false
         }
       ],
@@ -1695,9 +2101,9 @@
           "renegade": false
         },
         {
-          "id": "cq-h-boomer-record",
-          "generation": "baby-boomer",
-          "prompt": "Why did the record stay friends with the player?",
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "One friend guesses wildly. The other answers the question that was asked: \"What colour is a classic New York City taxi?\"",
           "rating": 95,
           "safety": {
             "bot": "Louis Liberty",
@@ -1718,9 +2124,9 @@
           },
           "fresh": true,
           "funny": true,
-          "structure": "joke",
-          "fromStructure": "",
-          "humorous": false,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
           "renegade": false
         }
       ],
@@ -1730,7 +2136,7 @@
     "fr": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T16:47:35.234Z",
+      "reviewedAt": "2026-09-23T16:59:32.617Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -1791,6 +2197,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « De quelle couleur est un taxi classique de New York ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-boomer-record",
           "generation": "baby-boomer",
           "prompt": "Pourquoi le disque est-il resté ami avec le tourne-disque ?",
@@ -1817,6 +2252,35 @@
           "structure": "joke",
           "fromStructure": "",
           "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-woodstock",
+          "generation": "baby-boomer",
+          "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Quand le festival de Woodstock a-t-il commencé ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
           "renegade": false
         },
         {
@@ -1849,6 +2313,35 @@
           "renegade": false
         },
         {
+          "id": "cq-h-genx-web",
+          "generation": "gen-x",
+          "prompt": "L'histoire semble partir ailleurs. La question reste : « Quand le Web a-t-il été ouvert au public ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-geny-inbox",
           "generation": "gen-y",
           "prompt": "Pourquoi la boîte de réception est-elle restée calme ?",
@@ -1878,6 +2371,35 @@
           "renegade": false
         },
         {
+          "id": "cq-h-geny-euro",
+          "generation": "gen-y",
+          "prompt": "Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « Quand les billets et les pièces en euros sont-ils entrés en circulation ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": false,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "Make it one playful question, not a lecture.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-e-genz-emoji",
           "generation": "gen-z",
           "prompt": "Pourquoi l'emoji a-t-il fait un clin d'œil ?",
@@ -1904,6 +2426,35 @@
           "structure": "joke",
           "fromStructure": "",
           "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-bus",
+          "generation": "gen-z",
+          "prompt": "Les mêmes amis qu'avant. Ils reviennent à ceci : « De quelle couleur est un autobus scolaire standard aux États-Unis ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
           "renegade": false
         },
         {
@@ -2052,6 +2603,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-alpha-banana",
+          "generation": "gen-alpha",
+          "prompt": "L'histoire grossit. La question garde la même taille : « De quelle couleur est la peau d'une banane mûre ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-multi-compass",
           "generation": "multi-gen",
           "prompt": "Pourquoi la boussole a-t-elle rejoint le quiz ?",
@@ -2139,6 +2719,35 @@
           "renegade": true
         },
         {
+          "id": "cq-e-multi-sky",
+          "generation": "multi-gen",
+          "prompt": "Un petit pas de côté, puis retour à la question : « De quelle couleur est un ciel clair en journée ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-e-silent-roar",
           "generation": "silent-generation",
           "prompt": "Quel surnom donne-t-on aux années 1920 aux États-Unis ?",
@@ -2192,6 +2801,35 @@
           "fresh": true,
           "funny": false,
           "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-empire",
+          "generation": "silent-generation",
+          "prompt": "Quand l'Empire State Building a-t-il été achevé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -2316,6 +2954,35 @@
           "id": "cq-e-boomer-submarine",
           "generation": "baby-boomer",
           "prompt": "De quelle couleur est le sous-marin dans la chanson des Beatles ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-gate",
+          "generation": "baby-boomer",
+          "prompt": "De quelle couleur est le pont du Golden Gate ?",
           "rating": 90,
           "safety": {
             "bot": "Louis Liberty",
@@ -2487,6 +3154,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genx-tennis",
+          "generation": "gen-x",
+          "prompt": "De quelle couleur est une balle de tennis réglementaire ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-geny-wiki",
           "generation": "gen-y",
           "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie à plusieurs ?",
@@ -2598,6 +3294,35 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-potter",
+          "generation": "gen-y",
+          "prompt": "Quand le premier livre Harry Potter a-t-il été publié au Royaume-Uni ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -2748,6 +3473,64 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genz-instagram",
+          "generation": "gen-z",
+          "prompt": "Quand Instagram a-t-il été lancé ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-planets",
+          "generation": "gen-alpha",
+          "prompt": "Combien de planètes compte notre système solaire ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-multi-guitar",
           "generation": "multi-gen",
           "prompt": "Combien de cordes a une guitare standard ?",
@@ -2888,6 +3671,35 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-stop",
+          "generation": "multi-gen",
+          "prompt": "Combien de côtés a un panneau stop standard ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -3272,6 +4084,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « De quelle couleur est un taxi classique de New York ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-boomer-record",
           "generation": "baby-boomer",
           "prompt": "Pourquoi le disque est-il resté ami avec le tourne-disque ?",
@@ -3301,9 +4142,9 @@
           "renegade": false
         },
         {
-          "id": "cq-e-genx-cassette",
-          "generation": "gen-x",
-          "prompt": "Pourquoi la cassette se sentait-elle timide ?",
+          "id": "cq-e-boomer-woodstock",
+          "generation": "baby-boomer",
+          "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Quand le festival de Woodstock a-t-il commencé ? »",
           "rating": 95,
           "safety": {
             "bot": "Louis Liberty",
@@ -3324,38 +4165,9 @@
           },
           "fresh": true,
           "funny": true,
-          "structure": "joke",
-          "fromStructure": "",
-          "humorous": false,
-          "renegade": false
-        },
-        {
-          "id": "cq-h-geny-inbox",
-          "generation": "gen-y",
-          "prompt": "Pourquoi la boîte de réception est-elle restée calme ?",
-          "rating": 95,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": true,
-          "structure": "joke",
-          "fromStructure": "",
-          "humorous": false,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
           "renegade": false
         }
       ],
@@ -3419,9 +4231,9 @@
           "renegade": false
         },
         {
-          "id": "cq-h-boomer-record",
-          "generation": "baby-boomer",
-          "prompt": "Pourquoi le disque est-il resté ami avec le tourne-disque ?",
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « De quelle couleur est un taxi classique de New York ? »",
           "rating": 95,
           "safety": {
             "bot": "Louis Liberty",
@@ -3431,10 +4243,10 @@
               "fun": true,
               "happy": true,
               "calm": true,
-              "clear": true
+              "clear": false
             },
             "notes": [
-              "One short question with concrete choices.",
+              "Keep one short question and two to four concrete choices.",
               "The ask stays playful, which suits 13–16.",
               "The extra line is kind, so a miss still feels light.",
               "Nothing here threatens, shames, or asks for anything personal."
@@ -3442,9 +4254,9 @@
           },
           "fresh": true,
           "funny": true,
-          "structure": "joke",
-          "fromStructure": "",
-          "humorous": false,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
           "renegade": false
         }
       ],
@@ -3454,7 +4266,7 @@
     "de": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T16:47:35.235Z",
+      "reviewedAt": "2026-09-23T16:59:32.619Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -3515,6 +4327,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "Ein Freund rät wild. Der andere beantwortet die gestellte Frage: „Welche Farbe hat ein klassisches New Yorker Taxi?“",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-boomer-record",
           "generation": "baby-boomer",
           "prompt": "Warum blieb die Schallplatte mit dem Spieler befreundet?",
@@ -3541,6 +4382,35 @@
           "structure": "joke",
           "fromStructure": "",
           "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-woodstock",
+          "generation": "baby-boomer",
+          "prompt": "Erster Tipp, falsch. Zweiter Tipp, falsch. Dann die echte Frage: „Wann begann das Woodstock-Festival?“",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
           "renegade": false
         },
         {
@@ -3573,6 +4443,35 @@
           "renegade": false
         },
         {
+          "id": "cq-h-genx-web",
+          "generation": "gen-x",
+          "prompt": "Die Geschichte scheint woanders hinzugehen. Die Frage bleibt: „Wann wurde das World Wide Web der Öffentlichkeit zugänglich?“",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-geny-inbox",
           "generation": "gen-y",
           "prompt": "Warum blieb der Posteingang ruhig?",
@@ -3602,6 +4501,35 @@
           "renegade": false
         },
         {
+          "id": "cq-h-geny-euro",
+          "generation": "gen-y",
+          "prompt": "Ein Wort kann zweierlei heißen. Die gewertete Bedeutung ist die schlichte: „Wann kamen Euro-Banknoten und Münzen in Umlauf?“",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-e-genz-emoji",
           "generation": "gen-z",
           "prompt": "Warum zwinkerte das Emoji?",
@@ -3628,6 +4556,35 @@
           "structure": "joke",
           "fromStructure": "",
           "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-bus",
+          "generation": "gen-z",
+          "prompt": "Dieselben Freunde wie zuvor. Sie kommen hierauf zurück: „Welche Farbe hat ein üblicher Schulbus in den USA?“",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
           "renegade": false
         },
         {
@@ -3776,6 +4733,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-alpha-banana",
+          "generation": "gen-alpha",
+          "prompt": "Die Geschichte wird größer. Die Frage bleibt gleich groß: „Welche Farbe hat die Schale einer reifen Banane?“",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-multi-compass",
           "generation": "multi-gen",
           "prompt": "Warum trat der Kompass dem Quiz bei?",
@@ -3863,6 +4849,35 @@
           "renegade": true
         },
         {
+          "id": "cq-e-multi-sky",
+          "generation": "multi-gen",
+          "prompt": "Ein kurzer Schritt zur Seite, dann zurück zur Frage: „Welche Farbe hat ein klarer Himmel am Tag?“",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-e-silent-roar",
           "generation": "silent-generation",
           "prompt": "Welchen Spitznamen tragen die 1920er-Jahre in den USA?",
@@ -3945,6 +4960,35 @@
           "fresh": true,
           "funny": false,
           "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-empire",
+          "generation": "silent-generation",
+          "prompt": "Wann wurde das Empire State Building fertig?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -4069,6 +5113,35 @@
           "id": "cq-e-boomer-submarine",
           "generation": "baby-boomer",
           "prompt": "Welche Farbe hat das U-Boot im Beatles-Lied?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-gate",
+          "generation": "baby-boomer",
+          "prompt": "Welche Farbe hat die Golden Gate Bridge?",
           "rating": 90,
           "safety": {
             "bot": "Louis Liberty",
@@ -4240,6 +5313,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genx-tennis",
+          "generation": "gen-x",
+          "prompt": "Welche Farbe hat ein Tennisball nach den Regeln?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-geny-wiki",
           "generation": "gen-y",
           "prompt": "Welche Website, gestartet 2001, lässt Menschen Enzyklopädie-Artikel gemeinsam schreiben?",
@@ -4380,6 +5482,35 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-potter",
+          "generation": "gen-y",
+          "prompt": "Wann erschien das erste Harry-Potter-Buch im Vereinigten Königreich?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -4530,6 +5661,64 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genz-instagram",
+          "generation": "gen-z",
+          "prompt": "Wann wurde Instagram gestartet?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-planets",
+          "generation": "gen-alpha",
+          "prompt": "Wie viele Planeten hat unser Sonnensystem?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-multi-guitar",
           "generation": "multi-gen",
           "prompt": "Wie viele Saiten hat eine gewöhnliche Gitarre?",
@@ -4670,6 +5859,35 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-stop",
+          "generation": "multi-gen",
+          "prompt": "Wie viele Seiten hat ein übliches Stoppschild?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -4996,6 +6214,35 @@
           "renegade": false
         },
         {
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "Ein Freund rät wild. Der andere beantwortet die gestellte Frage: „Welche Farbe hat ein klassisches New Yorker Taxi?“",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
           "id": "cq-h-boomer-record",
           "generation": "baby-boomer",
           "prompt": "Warum blieb die Schallplatte mit dem Spieler befreundet?",
@@ -5025,9 +6272,9 @@
           "renegade": false
         },
         {
-          "id": "cq-e-genx-cassette",
-          "generation": "gen-x",
-          "prompt": "Warum war die Kassette schüchtern?",
+          "id": "cq-e-boomer-woodstock",
+          "generation": "baby-boomer",
+          "prompt": "Erster Tipp, falsch. Zweiter Tipp, falsch. Dann die echte Frage: „Wann begann das Woodstock-Festival?“",
           "rating": 95,
           "safety": {
             "bot": "Louis Liberty",
@@ -5048,38 +6295,9 @@
           },
           "fresh": true,
           "funny": true,
-          "structure": "joke",
-          "fromStructure": "",
-          "humorous": false,
-          "renegade": false
-        },
-        {
-          "id": "cq-h-geny-inbox",
-          "generation": "gen-y",
-          "prompt": "Warum blieb der Posteingang ruhig?",
-          "rating": 95,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": true,
-          "structure": "joke",
-          "fromStructure": "",
-          "humorous": false,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
           "renegade": false
         }
       ],
@@ -5143,9 +6361,9 @@
           "renegade": false
         },
         {
-          "id": "cq-h-boomer-record",
-          "generation": "baby-boomer",
-          "prompt": "Warum blieb die Schallplatte mit dem Spieler befreundet?",
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "Ein Freund rät wild. Der andere beantwortet die gestellte Frage: „Welche Farbe hat ein klassisches New Yorker Taxi?“",
           "rating": 95,
           "safety": {
             "bot": "Louis Liberty",
@@ -5166,9 +6384,9 @@
           },
           "fresh": true,
           "funny": true,
-          "structure": "joke",
-          "fromStructure": "",
-          "humorous": false,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
           "renegade": false
         }
       ],

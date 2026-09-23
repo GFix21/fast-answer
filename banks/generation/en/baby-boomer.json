@@ -2,8 +2,8 @@
   "generation": "baby-boomer",
   "locale": "en",
   "target": 150,
-  "held": 20,
-  "shortfall": 130,
+  "held": 22,
+  "shortfall": 128,
   "ageYear": 2026,
   "born": [
     1946,
@@ -362,6 +362,44 @@
       "correctIndex": 2,
       "banterHint": "The title gives the paint job away.",
       "structure": "colour"
+    },
+    {
+      "id": "cq-h-boomer-gate",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Span",
+      "prompt": "What colour is the Golden Gate Bridge?",
+      "choices": [
+        "Red",
+        "Blue",
+        "Gold",
+        "International Orange"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The name sounds like gold. The paint is the other one.",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "The Field",
+      "prompt": "First guess, wrong. Second guess, wrong. Then the real question: \"When did the Woodstock festival begin?\"",
+      "choices": [
+        "August 15, 1969",
+        "July 4, 1970",
+        "June 1, 1968",
+        "August 15, 1967"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Two wrong dates, then the Friday it opened.",
+      "funny": true,
+      "humorous": true,
+      "injection": "rule-of-three",
+      "structure": "when",
+      "fromStructure": "when"
     }
   ]
 }

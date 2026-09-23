@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "de",
   "target": 150,
-  "held": 20,
-  "shortfall": 130,
+  "held": 22,
+  "shortfall": 128,
   "ageYear": 2026,
   "born": [
     1928,
@@ -362,6 +362,44 @@
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour"
+    },
+    {
+      "id": "cq-h-silent-empire",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Skyline",
+      "prompt": "Wann wurde das Empire State Building fertig?",
+      "choices": [
+        "1941",
+        "1950",
+        "1925",
+        "1931"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Spitze stand, bevor das Jahrzehnt um war.",
+      "structure": "when"
+    },
+    {
+      "id": "cq-e-silent-taxi",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Medaillon",
+      "prompt": "Ein Freund rät wild. Der andere beantwortet die gestellte Frage: „Welche Farbe hat ein klassisches New Yorker Taxi?“",
+      "choices": [
+        "Gelb",
+        "Weiß",
+        "Schwarz",
+        "Grün"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das wilde Raten kann warten. Das Taxi ist das helle.",
+      "funny": true,
+      "humorous": true,
+      "injection": "straight-man",
       "structure": "colour",
       "fromStructure": "colour"
     }

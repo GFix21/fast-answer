@@ -5,6 +5,7 @@
  */
 
 import { isColourPrompt, isRenegadeJoke, isWhenPrompt, PLAY_TIERS, STRUCTURES } from "./structures.js";
+import { INJECTION_FRAMES } from "../crackd-kerr.js";
 
 const TIERS = new Set(["easy", "hard", "difficult", "extreme"]);
 
@@ -26,7 +27,7 @@ export function checkQuestion(q) {
   if (q?.funny === true && !q?.technique) reasons.push("technique");
   if (q?.structure === "colour" && !isColourPrompt(q?.prompt)) reasons.push("colour-prompt");
   if (q?.structure === "when" && !isWhenPrompt(q?.prompt)) reasons.push("when-prompt");
-  if (q?.humorous === true && q?.injection !== "dialogue") reasons.push("injection");
+  if (q?.humorous === true && !INJECTION_FRAMES[q?.injection]) reasons.push("injection");
   if (isRenegadeJoke(q)) {
     const from = q?.fromStructure;
     const played = q?.structure;
