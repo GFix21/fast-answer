@@ -40,6 +40,7 @@ import {
 import {
   COUNTRIES,
   requiredAge,
+  minAgeFor,
   ageIsAllowed,
   detectCountry,
   normalizeCountry,
@@ -266,7 +267,8 @@ const state = {
   entered: false,
   entryDraft: null,
   /** Country the device timezone points at. Raises the profile age with the chosen country. */
-  detectedCountry: detectCountry(),
+  detectedCountry: "",
+  countrySource: "",
   /** Confirm the profile email, then set a new on-device password. */
   forgotPassword: false,
   topicCatalog: [],
@@ -792,10 +794,17 @@ function readAge(el) {
   return AGE_BRACKETS.includes(v) ? v : "";
 }
 function readCountry(el) {
-  return normalizeCountry(el && el.value);
+  if (!el) return "";
+  if (el.type === "radio") {
+    const picked = document.querySelector(`input[name="${el.name}"]:checked`);
+    return normalizeCountry(picked && picked.value);
+  }
+  return normalizeCountry(el.value);
 }
 function readYears(el) {
-  const n = Number(el && el.value);
+  const raw = String((el && el.value) || "").trim();
+  if (!raw) return "";
+  const n = Number(raw);
   return Number.isInteger(n) ? n : "";
 }
 function ageFormPrefix() {
@@ -812,6 +821,12 @@ function readAgeForm(prefix) {
     country: readCountry($(`#${id}Country`)),
   };
 }
+function ageLimitPlace(chosen, detected) {
+  const picked = normalizeCountry(chosen);
+  const seen = normalizeCountry(detected);
+  if (seen && minAgeFor(seen) > minAgeFor(picked || "OTHER")) return countryName(seen);
+  return countryName(picked || seen || "OTHER");
+}
 function countryName(id) {
   const key = `country${normalizeCountry(id) || "Other"}`;
   const label = tt(key);
@@ -819,17 +834,17 @@ function countryName(id) {
 }
 function bindAgeToPack(prefix, genSel, opts = {}) {
   const years = document.querySelector(`#${prefix}Years`);
-  const country = document.querySelector(`#${prefix}Country`);
+  const country = document.querySelector(`[data-country-for="${prefix}"]`);
   if (!years || !country) return;
   const apply = () => {
     const detected = state.detectedCountry || "";
-    const chosen = readCountry(country);
+    const chosen = readCountry(document.querySelector(`#${prefix}Country`));
     const age = readYears(years);
     const min = requiredAge(chosen, detected);
     years.min = String(min);
     const note = document.querySelector(`[data-pack-for="${prefix}"]`);
     const gate = document.querySelector(`[data-age-gate="${prefix}"]`);
-    const place = countryName(detected || chosen);
+    const place = ageLimitPlace(chosen, detected);
     if (gate) {
       gate.textContent = Number.isInteger(age) && age < min
         ? tt("ageTooYoung", min, place)
@@ -858,16 +873,24 @@ function bindAgeToPack(prefix, genSel, opts = {}) {
 function ageBracketHTML(id, profile) {
   const p = profile && typeof profile === "object" ? profile : { ageBracket: profile };
   const detected = normalizeCountry(p.detectedCountry || state.detectedCountry);
-  const country = normalizeCountry(p.country) || detected || "US";
+  const country = normalizeCountry(p.country) || detected || "OTHER";
   const min = requiredAge(country, detected);
   const age = Number.isInteger(Number(p.age)) ? Number(p.age) : "";
   const gen = age !== "" && age >= min ? generationForYears(age) : generationForAge(p.ageBracket);
-  const place = countryName(detected || country);
+  const place = ageLimitPlace(country, detected);
+  const identified = detected
+    ? tt(state.countrySource === "ip" ? "countryIdentified" : "countryFromDevice", countryName(detected))
+    : tt("countryChoose");
   return `
-    <label class="field" for="${id}Country">${tt("country")}</label>
-    <select class="gen-select" id="${id}Country">
-      ${COUNTRIES.map((c) => `<option value="${c}" ${c === country ? "selected" : ""}>${escapeHtml(tt("country" + c))}</option>`).join("")}
-    </select>
+    <fieldset class="country-access" data-country-for="${id}">
+      <legend class="field">${tt("country")}</legend>
+      <p class="meta">${escapeHtml(identified)}</p>
+      ${COUNTRIES.map((c) => `<label class="country-opt">
+        <input type="radio" name="${id}Country" value="${c}" ${c === country ? `id="${id}Country" checked` : ""}/>
+        <span>${escapeHtml(tt("country" + c))}</span>
+        <small>${escapeHtml(tt("countryAge", minAgeFor(c)))}</small>
+      </label>`).join("")}
+    </fieldset>
     <label class="field" for="${id}Years">${tt("ageYears")}</label>
     <input id="${id}Years" type="number" inputmode="numeric" min="${min}" max="120" value="${age === "" ? "" : age}" />
     <p class="meta" data-age-gate="${id}">${escapeHtml(tt("ageNeed", min, place))}</p>
@@ -1307,7 +1330,7 @@ async function commitNewProfile(name, email, pw) {
   const detected = state.detectedCountry || "";
   const min = requiredAge(form.country, detected);
   if (!ageIsAllowed(form.age, form.country, detected)) {
-    state.statusMsg = tt("ageTooYoung", min, countryName(detected || form.country));
+    state.statusMsg = tt("ageTooYoung", min, ageLimitPlace(form.country, detected));
     paint(true);
     return false;
   }
@@ -3891,7 +3914,7 @@ function bindDojoSurface() {
     const form = readAgeForm("playerAge");
     const detected = state.detectedCountry || "";
     if (!ageIsAllowed(form.age, form.country, detected)) {
-      state.statusMsg = tt("ageTooYoung", requiredAge(form.country, detected), countryName(detected || form.country));
+      state.statusMsg = tt("ageTooYoung", requiredAge(form.country, detected), ageLimitPlace(form.country, detected));
       paint(true);
       return;
     }
@@ -4244,7 +4267,7 @@ async function confirmJoin(intent) {
 
 function ageGateMessage() {
   const detected = state.profile?.detectedCountry || state.detectedCountry;
-  return tt("ageTooYoung", requiredAge(state.profile?.country, detected), countryName(detected || state.profile?.country));
+  return tt("ageTooYoung", requiredAge(state.profile?.country, detected), ageLimitPlace(state.profile?.country, detected));
 }
 async function joinAsBuzzer() {
   const code = String(state.room || state.joinInput || joinCode || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
@@ -4728,6 +4751,29 @@ window.addEventListener("keydown", (e) => {
   if (n >= 0) pick(n);
 });
 
+async function identifyCountry() {
+  const tz = detectCountry();
+  let fromIp = "";
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 2500);
+    const res = await fetch("/api/country", {
+      signal: ctrl.signal,
+      headers: { accept: "application/json" },
+    });
+    clearTimeout(timer);
+    if (res.ok) {
+      const data = await res.json();
+      fromIp = normalizeCountry(data && data.country);
+      if (fromIp === "OTHER") fromIp = "";
+    }
+  } catch {
+    /* This host has no IP country header. The device zone is the fallback. */
+  }
+  state.detectedCountry = fromIp || tz || "";
+  state.countrySource = fromIp ? "ip" : (state.detectedCountry ? "timezone" : "");
+}
+
 maybeResetProfile();
 if (isDirections) {
   document.documentElement.lang = state.locale;
@@ -4754,6 +4800,7 @@ if (isDirections) {
     try { stored = sessionStorage.getItem("fa-dojo-mode") || ""; } catch { /* ignore */ }
     const allowed = ["create", "unlock", "setpw", "home"];
     state.dojoMode = allowed.includes(qMode) ? qMode : (allowed.includes(stored) ? stored : dojoModeForGate());
+    await identifyCountry();
     paint(true);
     void syncTopScores();
     window.__fa = state;
@@ -4781,6 +4828,7 @@ if (isDirections) {
   if (!hasPhoneProfile()) state.dojoMode = "create";
   else if (needsPasswordSetup()) state.dojoMode = "setpw";
   else state.dojoMode = "unlock";
+  await identifyCountry();
   if (forcedDisplay) {
     // ?tv=1 is the Silk link. It owns this room even if the browser last used Join TV.
     state.onScreen = true;

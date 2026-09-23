@@ -160,6 +160,18 @@ button:disabled{cursor:not-allowed}
 .lobby p{color:var(--mut);margin:8px 0 12px;font-size:14px;line-height:1.45}
 .points{font-size:12px;color:var(--accent);letter-spacing:.04em;margin:0 0 10px}
 .field{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:10px 0 4px}
+.country-access{border:0;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.country-access .field{margin-bottom:0}
+.country-opt{
+  display:flex;align-items:center;gap:8px;
+  min-height:44px;padding:6px 10px;
+  border:1px solid var(--line);border-radius:var(--radius-md);
+  font-size:14px;color:var(--fg);text-transform:none;letter-spacing:0;
+}
+.country-opt small{margin-left:auto;font-size:11px;letter-spacing:.04em;color:var(--mut)}
+.country-opt:has(input:checked){border-color:var(--accent)}
+.dojo-stage .country-opt{color:#f3e6d0;border-color:rgba(212,175,55,.35)}
+.dojo-stage .country-opt small{color:#f3e6d0}
 input[type=text],input[type=email],input[type=password],input[type=number],select.gen-select{
   width:100%;height:44px;border-radius:var(--radius-md);
   background:color-mix(in oklab, var(--elev) 80%, transparent);

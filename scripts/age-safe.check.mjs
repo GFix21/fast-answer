@@ -4,7 +4,10 @@ import {
   ageIsAllowed,
   requiredAge,
   countryFromTimeZone,
+  countryFromIpHeaders,
   PROFILE_FLOOR,
+  OTHER_MIN_AGE,
+  minAgeFor,
 } from "../lib/age-gate.js";
 import { LOUIS_BOT, LOUIS_MAIL, reviewForChildren } from "../q-and-a/louis-liberty.js";
 import { COMEDY_BOT, scoreJoke, weeklyComedyReview, isoWeek } from "../q-and-a/crackd-kerr.js";
@@ -12,6 +15,9 @@ import { comedyReview, louisReview, questionsForComedy } from "../lib/week-store
 import { generationForYears } from "../lib/generation-packs.js";
 
 assert.equal(PROFILE_FLOOR, 13);
+assert.equal(OTHER_MIN_AGE, 18);
+assert.equal(minAgeFor("OTHER"), 18);
+assert.equal(minAgeFor("US"), 13);
 assert.equal(requiredAge("US"), 13);
 assert.equal(requiredAge("GB"), 13);
 assert.equal(requiredAge("NZ"), 13);
@@ -19,7 +25,8 @@ assert.equal(requiredAge("FR"), 15);
 assert.equal(requiredAge("DE"), 16);
 assert.equal(requiredAge("CA"), 14);
 assert.equal(requiredAge("AU"), 16);
-assert.equal(requiredAge("OTHER"), 13);
+assert.equal(requiredAge("OTHER"), 18);
+assert.equal(requiredAge("", ""), 18);
 assert.equal(requiredAge("US", "AU"), 16);
 assert.equal(requiredAge("US", "DE"), 16);
 assert.equal(requiredAge("GB", "FR"), 15);
@@ -37,6 +44,15 @@ assert.equal(ageIsAllowed(14, "CA"), true);
 assert.equal(ageIsAllowed(15, "AU"), false);
 assert.equal(ageIsAllowed(13, "NZ"), true);
 assert.equal(ageIsAllowed(13, "GB"), true);
+assert.equal(ageIsAllowed(17, "OTHER"), false);
+assert.equal(ageIsAllowed(18, "OTHER"), true);
+assert.equal(ageIsAllowed(17, "US", "OTHER"), false);
+assert.equal(ageIsAllowed(18, "DE", "OTHER"), true);
+assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "FR" }), "FR");
+assert.equal(countryFromIpHeaders({ "cf-ipcountry": "UK" }), "GB");
+assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "DE" }), "DE");
+assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "XX" }), "");
+assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "BR" }), "");
 
 assert.equal(countryFromTimeZone("Europe/Paris"), "FR");
 assert.equal(countryFromTimeZone("Europe/Berlin"), "DE");
