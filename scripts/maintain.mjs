@@ -15,6 +15,7 @@ const steps = [
   ["q-and-a", "scripts/q-and-a.check.mjs"],
   ["q-and-a", "scripts/bots.check.mjs"],
   ["flow", "scripts/flow-archive.check.mjs"],
+  ["room", "scripts/room-wire.check.mjs"],
   ["security", "scripts/security.check.mjs"],
 ];
 if (String(process.env.APP_ORIGIN || "").trim()) {

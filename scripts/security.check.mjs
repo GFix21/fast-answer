@@ -31,7 +31,7 @@ function walk(dir) {
       failures.push(`${rel}: private key`);
     }
     if (rel === "lib/flow-auth.js" && /FLOW_BOOTSTRAP\s*=\s*["']/.test(text)) {
-      warnings.push(`${rel}: studio password is still hardcoded. Keep it only in the FLOW_PASSWORD environment variable.`);
+      failures.push(`${rel}: studio password is still hardcoded. Set FLOW_PASSWORD and remove the fallback.`);
     }
   }
 }

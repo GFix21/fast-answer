@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/**/*.js": {
+      "regions": ["iad1"]
+    }
+  },
   "headers": [
     {
       "source": "/((?!api/).*)",

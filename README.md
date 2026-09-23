@@ -37,10 +37,10 @@ English remains the source of truth for ids and `correctIndex`. Sync locale pack
 
 One page. Collapsible menus. Jeremy and the studio stay live behind the card.
 
-- **Dojo (profile)** — below Join TV in the lobby (phone only; hidden on TV / `?tv=1`). Create a profile (name + password + photo) or unlock with the profile password; avatar upload stays here. Create profile starts placement immediately.
+- **Dojo (profile)** — below Join TV in the lobby (phone only; hidden on TV / `?tv=1`). Create a profile (name, age, email, photo) and a device lock. The lock stays on this phone. It is not an account. Create profile starts placement immediately.
 - **Karate belt** — white→black from career points, shown as a belt strip in Dojo.
-- **Medals** — Bronze / Silver / Gold from the 10-question placement (valid ~three months).
-- **Placement** — ten questions. Prompt for 10s, then answers. No name/points on the live Dojo card.
+- **Medals** — Bronze / Silver / Gold from the 10-question placement. Placement is required again after two years.
+- **Placement** — ten questions. Prompt for 5s, then answers. No name/points on the live Dojo card. The questions stored on the device renew after three months.
 - **Room** — 2 to 12 seats. TV owns the room on On Screen / Silk / `?tv=1`. Phones join as pads (corner QR), Buzz to ready, all-buzz starts the show. Empty seats are celebrity bots.
 - **Set** — Jeremy height and studio angle, live on this phone (sliders work on mobile).
 
@@ -51,8 +51,8 @@ Discreet **Flow** + © GMG Brand Label sit at the bottom on phone/desktop (hidde
 - **Off Screen** — pad / buzzer on this phone without forcing the full TV UI. Local host play keeps Jeremy, answers, and buzzer together.
 - **On Screen** — television owns the room. Phones join as pads. Tap or **speak** an answer on the pad — both submit to the TV room.
 - **Lobby** on the pad (including after the show) leaves the room and returns to the lobby.
-- **MAP** — arm during the read; after you buzz, steal targets appear under the answers (2× points if correct).
-- **Lockdown** — Lock in WIN/LOSE + stake; ~7s rules countdown; up to 3 minutes per hard Q with points $5000→$0; waiters get a 60s wait without seeing the hero’s response.
+- **MAP** — arm during the read, the open buzz, or the answer. Four uses per round. A double pays only when the rival can cover the stake.
+- **Lockdown** — after a correct buzz, near the end of hard and on the last extreme question. Factual questions. Lock in WIN/LOSE + stake; ~7s rules; up to 3 minutes per question with points $5000→$0; waiters get a 60s wait without the hero’s response.
 
 Phone pad URL: `/?role=pad&room=XXXX` (the TV prints a QR).
 
@@ -60,9 +60,9 @@ Space bar buzzes. Keys `1–4` or `A–D` pick an answer.
 
 A round is **37 questions**: 20 Easy ($100), 10 Hard ($500), 5 Difficult ($1,000), 2 Extreme ($5,000). Ten seconds to read, then buzz.
 
-**MAP** happens *during* that read — tap a rival (one tap, stake = this question). If you buzz first and hit it, you bank double and they lose the stake. Miss, and you lose the stake. Nobody else loses points on a normal miss.
+**MAP** stays open through the question. Tap a rival. Stake = this question. If you buzz first and hit it, and the rival can cover the stake, you bank double and they lose the stake. If they cannot cover it, the question scores normally and the use is not spent. Miss, and you lose the stake. A normal miss without MAP is $0. A 15-second break opens the next set when that set has at least two questions.
 
-**Lockdown** hits twice per show, after a correct buzz. That player plays 5. Opponents tap WIN or LOSE and a stake (60 seconds max; it skips ahead when everyone has locked). 4/5 pays WIN even money; otherwise LOSE pays. Those five bank at $500 each only if they clear the set.
+**Lockdown** hits twice per show, after a correct buzz: one near the end of hard, with one hard question still after it, and one on the last extreme question. That player plays 5 factual questions. Opponents tap WIN or LOSE and a stake (60 seconds max; it skips ahead when everyone has locked). Points on those questions start at $5,000 and decay to $0. 4/5 pays the WIN side.
 
 Empty seats are celebrity bots with their own skill and buzz timing. Pads replace them as they join, up to 12.
 
@@ -83,7 +83,7 @@ sounds/
 api/rooms.js
 ```
 
-Import the repo in Vercel. The in-memory room map keeps a TV and nearby phones in sync on a single instance. Two tabs on the same origin also sync over `BroadcastChannel`.
+Import the repo in Vercel. Room routes are pinned to one region (`iad1`) so the runtime cache is the same copy for the TV and the phones. The TV holds a host key; only that key can write the show. Phones receive the current prompt and choices, and the correct choice only at the reveal. Two tabs on the same origin also sync over `BroadcastChannel`. Flow requires `FLOW_PASSWORD`. There is no password in the source.
 
 ## Maintenance
 
@@ -91,7 +91,7 @@ The Maintain workflow covers Fast Answer and the Q&A module in this app.
 
 - **Function** runs on every pull request: age gate, generation packs, and the Q&A module.
 - **Security** scans the app source and Dependabot opens update pull requests. It does not use the studio password.
-- **Stability** stays quiet until the production domain is set. In the GitHub repo, add a variable named `APP_ORIGIN` with that domain (no trailing slash). Q&A is checked on the same domain. Set `QA_ORIGIN` only if Q&A is served somewhere else.
+- **Stability** calls `https://fast-answer-seven.vercel.app` unless the repository variable `APP_ORIGIN` is set (no trailing slash). Q&A is checked on the same domain. Set `QA_ORIGIN` only if Q&A is served somewhere else.
 - **Repair** opens one issue when a daily run or a main-branch run fails. It does not edit the code.
 
 `npm run maintain` runs the same function and security checks locally.

@@ -4,7 +4,9 @@ import { loadCurrentPack } from "../lib/week-store.js";
 import { exportPack } from "../q-and-a/map.js";
 import { generationForSeat } from "../lib/generation-packs.js";
 import { ageIsAllowed, requiredAge } from "../lib/age-gate.js";
-import { dealShow, SHOW_DEAL } from "../lib/generation-deal.js";
+import { dealRamp, SHOW_DEAL } from "../lib/generation-deal.js";
+import { orderShowSets } from "../lib/show-pace.js";
+import { publicRoom, redactState } from "../lib/room-wire.js";
 
 const SHOW_N = Object.values(SHOW_DEAL).reduce((sum, n) => sum + n, 0);
 
@@ -55,25 +57,38 @@ async function askQanda({ locale, avoid, topics }) {
         const raw = Array.isArray(data?.questions) ? data.questions : [];
         const mapped = poolForTopics(exportPack({ questions: raw }), topics);
         if (mapped.length) {
-          const questions = mapped.length === SHOW_N ? mapped : dealShow(mapped, avoid);
+          const questions = mapped.length === SHOW_N ? orderShowSets(mapped) : orderShowSets(dealRamp(mapped, { avoid, seats: [] }));
           if (questions.length) return { questions, source: "q-and-a" };
         }
       }
     } catch { /* weekly pack below */ }
   }
   const mapped = poolForTopics(exportPack(loadCurrentPack(locale)), topics);
-  return { questions: dealShow(mapped, avoid), source: "q-and-a-bank" };
+  return { questions: orderShowSets(dealRamp(mapped, { avoid, seats: [] })), source: "q-and-a-bank" };
 }
 
 function touch(cur) {
   return saveRoom(cur);
 }
 
+function presentedHostKey(req, body) {
+  const header = req.headers?.["x-fa-host"] || req.headers?.["X-Fa-Host"] || "";
+  return String(header || body?.hostKey || "").trim().slice(0, 80);
+}
+
+function hostMatches(room, key) {
+  return Boolean(room?.hostKey && key && room.hostKey === key);
+}
+
+function sendRoom(res, room, { host = false, status = 200 } = {}) {
+  res.status(status).end(JSON.stringify(room ? publicRoom(room, { host }) : { error: "missing" }));
+}
+
 export default async function handler(req, res) {
   res.setHeader("content-type", "application/json");
   res.setHeader("access-control-allow-origin", "*");
   res.setHeader("access-control-allow-methods", "GET,POST,OPTIONS");
-  res.setHeader("access-control-allow-headers", "content-type");
+  res.setHeader("access-control-allow-headers", "content-type, x-fa-host");
   if (req.method === "OPTIONS") {
     res.status(204).end();
     return;
@@ -82,11 +97,12 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     const code = String(req.query.code || "").toUpperCase();
     if (!code || req.query.list === "1") {
+      if (!requireAuth(req, res)) return;
       res.status(200).end(JSON.stringify({ rooms: await listRooms() }));
       return;
     }
     const room = await getRoom(code);
-    res.status(200).end(JSON.stringify(room || { error: "missing" }));
+    sendRoom(res, room, { host: hostMatches(room, presentedHostKey(req, {})) });
     return;
   }
 
@@ -99,6 +115,7 @@ export default async function handler(req, res) {
   const code = String(body.code || "").toUpperCase();
 
   if (body.action === "list") {
+    if (!requireAuth(req, res)) return;
     res.status(200).end(JSON.stringify({ rooms: await listRooms() }));
     return;
   }
@@ -120,14 +137,23 @@ export default async function handler(req, res) {
   }
 
   if (body.action === "create") {
+    const key = presentedHostKey(req, body);
     const cur = (await getRoom(code)) || { code, host: "", state: {}, buzzes: [], guests: [] };
+    if (!cur.hostKey) {
+      if (key.length < 16) {
+        res.status(400).end(JSON.stringify({ error: "host" }));
+        return;
+      }
+      cur.hostKey = key;
+    }
     await touch({
       ...cur,
       host: body.host || cur.host,
       createdAt: cur.createdAt || Date.now(),
       guests: cur.guests || [],
     });
-    res.status(200).end(JSON.stringify(await getRoom(code)));
+    const saved = await getRoom(code);
+    sendRoom(res, saved, { host: hostMatches(saved, key) });
     return;
   }
 
@@ -197,6 +223,10 @@ export default async function handler(req, res) {
     }
     await touch(cur);
   } else if (body.action === "kick") {
+    if (!hostMatches(cur, presentedHostKey(req, body))) {
+      res.status(403).end(JSON.stringify({ error: "host" }));
+      return;
+    }
     const id = body.id || "";
     cur.guests = (cur.guests || []).filter((g) => g.id !== id && g.name !== body.name);
     cur.state = cur.state || {};
@@ -217,7 +247,11 @@ export default async function handler(req, res) {
     cur.dropoutIds = { ...(cur.dropoutIds || {}), [id]: true };
     await touch(cur);
   } else if (body.action === "state") {
-    cur.state = body.state || {};
+    if (!hostMatches(cur, presentedHostKey(req, body))) {
+      res.status(403).end(JSON.stringify({ error: "host" }));
+      return;
+    }
+    cur.state = redactState(body.state || {});
     await touch(cur);
   } else if (body.action === "buzz") {
     cur.buzzes = cur.buzzes || [];
@@ -254,6 +288,10 @@ export default async function handler(req, res) {
     };
     await touch(cur);
   } else if (body.action === "refresh") {
+    if (!hostMatches(cur, presentedHostKey(req, body))) {
+      res.status(403).end(JSON.stringify({ error: "host" }));
+      return;
+    }
     const by = String(body.by || "Player").trim().slice(0, 40) || "Player";
     const locale = String(body.locale || "en");
     const avoid = Array.isArray(body.avoid) ? body.avoid.map(String).slice(0, 120) : [];
@@ -305,5 +343,6 @@ export default async function handler(req, res) {
     res.status(400).end(JSON.stringify({ error: "action" }));
     return;
   }
-  res.status(200).end(JSON.stringify(await getRoom(code)));
+  const saved = await getRoom(code);
+  sendRoom(res, saved, { host: hostMatches(saved, presentedHostKey(req, body)) });
 }

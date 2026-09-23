@@ -37,6 +37,7 @@ jobs:
           node scripts/q-and-a.check.mjs
           node scripts/bots.check.mjs
           node scripts/flow-archive.check.mjs
+          node scripts/room-wire.check.mjs
 
   security:
     name: Security
@@ -58,7 +59,7 @@ jobs:
           node-version: 22
       - name: Production domain
         env:
-          APP_ORIGIN: ${{ vars.APP_ORIGIN }}
+          APP_ORIGIN: ${{ vars.APP_ORIGIN || 'https://fast-answer-seven.vercel.app' }}
           QA_ORIGIN: ${{ vars.QA_ORIGIN }}
         run: node scripts/stability.mjs
 

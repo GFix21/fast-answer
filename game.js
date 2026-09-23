@@ -22,6 +22,7 @@ import {
 import { dealRamp } from "./lib/generation-deal.js";
 import { slangFor } from "./q-and-a/bots/slang.js";
 import { hashProfilePassword } from "./lib/password.js";
+import { redactState } from "./lib/room-wire.js";
 import { spreadByGeneration } from "./lib/generation-deal.js";
 import {
   buildDeviceCohort,
@@ -423,8 +424,14 @@ function isProfileUnlocked() {
 function canPlayScored() {
   return isProfileUnlocked() && isPlaced();
 }
-async function hashPassword(pw) {
-  return hashProfilePassword(pw);
+function newPasswordSalt() {
+  const bytes = new Uint8Array(16);
+  crypto.getRandomValues(bytes);
+  return [...bytes].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+function sealPassword(pw) {
+  const passwordSalt = newPasswordSalt();
+  return { passwordSalt, passwordHash: hashProfilePassword(pw, passwordSalt) };
 }
 function clearStoredProfile() {
   try { localStorage.removeItem(PROFILE_KEY); } catch { /* ignore */ }
@@ -471,8 +478,8 @@ async function saveForgotPassword(email, pw, pw2) {
     paint(true);
     return;
   }
-  const passwordHash = await hashPassword(pw);
-  saveProfile({ passwordHash });
+  const sealed = sealPassword(pw);
+  saveProfile(sealed);
   state.forgotPassword = false;
   state.profileUnlocked = true;
   state.dojoMode = "home";
@@ -535,7 +542,7 @@ function maybeResetProfile() {
 async function verifyProfilePassword(pw) {
   const want = state.profile?.passwordHash;
   if (!want) return false;
-  const got = await hashPassword(pw);
+  const got = hashProfilePassword(pw, state.profile?.passwordSalt || "");
   return got === want;
 }
 async function copyText(value) {
@@ -1251,6 +1258,7 @@ function loadProfile() {
     p.displayName = String(p.displayName || state.name || "Player").slice(0, 40);
     p.email = String(p.email || "").slice(0, 120);
     p.passwordHash = String(p.passwordHash || "");
+    p.passwordSalt = String(p.passwordSalt || "");
     return p;
   } catch {
     return seedProfile();
@@ -1265,6 +1273,7 @@ function seedProfile() {
     belt: "white",
     abilityTier: null,
     passwordHash: "",
+    passwordSalt: "",
     stats: emptyStats(),
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
@@ -1335,7 +1344,7 @@ async function commitNewProfile(name, email, pw) {
     paint(true);
     return false;
   }
-  const passwordHash = await hashPassword(pw);
+  const sealed = sealPassword(pw);
   const keepLegacy = Boolean(state.profile && !state.profile.passwordHash);
   const base = keepLegacy ? state.profile : seedProfile();
   state.profile = {
@@ -1343,7 +1352,8 @@ async function commitNewProfile(name, email, pw) {
     id: base.id || uid(),
     displayName: cleanName,
     email: cleanEmail,
-    passwordHash,
+    passwordHash: sealed.passwordHash,
+    passwordSalt: sealed.passwordSalt,
     createdAt: keepLegacy && base.createdAt ? base.createdAt : new Date().toISOString(),
   };
   const form = readAgeForm();
@@ -1358,7 +1368,8 @@ async function commitNewProfile(name, email, pw) {
   saveProfile({
     displayName: cleanName,
     email: cleanEmail,
-    passwordHash,
+    passwordHash: sealed.passwordHash,
+    passwordSalt: sealed.passwordSalt,
     age: form.age,
     country: form.country,
     detectedCountry: detected,
@@ -1494,18 +1505,35 @@ function seatSpan(s) {
   return `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || label)}">${escapeHtml(label)}</span>`;
 }
 
+function ensureHostKey() {
+  const code = String(state.room || "");
+  if (!code) return "";
+  const storeKey = `fa-host-${code}`;
+  let key = "";
+  try { key = localStorage.getItem(storeKey) || ""; } catch { /* private mode */ }
+  if (key.length < 16) {
+    const bytes = new Uint8Array(16);
+    crypto.getRandomValues(bytes);
+    key = [...bytes].map((b) => b.toString(16).padStart(2, "0")).join("");
+    try { localStorage.setItem(storeKey, key); } catch { /* private mode */ }
+  }
+  state.hostKey = key;
+  return key;
+}
 async function rooms(method, body) {
   try {
     let qs = "";
     if (method === "GET") {
-      if (body && body.list) qs = "?list=1";
+      if (body && body.list) return { error: "list" };
       else if (state.room) qs = `?code=${encodeURIComponent(state.room)}`;
-      else qs = "?list=1";
+      else return { error: "code" };
     }
+    const headers = { "content-type": "application/json" };
+    if (state.hostKey) headers["x-fa-host"] = state.hostKey;
     const res = await fetch(ROOM_API + qs, {
       method: method === "GET" ? "GET" : "POST",
-      headers: { "content-type": "application/json" },
-      body: method === "GET" ? undefined : JSON.stringify(body),
+      headers,
+      body: method === "GET" ? undefined : JSON.stringify({ ...body, hostKey: state.hostKey || body?.hostKey || "" }),
     });
     const data = await res.json().catch(() => null);
     if (!res.ok) return data || { error: "http", status: res.status };
@@ -1515,10 +1543,7 @@ async function rooms(method, body) {
   }
 }
 async function refreshActiveRooms() {
-  const data = await rooms("GET", { list: true });
-  if (data && Array.isArray(data.rooms)) {
-    state.activeRooms = data.rooms.filter((r) => r && r.code);
-  }
+  state.activeRooms = [];
 }
 function submitAnswerToRoom(index, lockdown = false) {
   if (!state.room) return;
@@ -1535,7 +1560,7 @@ function submitAnswerToRoom(index, lockdown = false) {
 }
 
 function snapshot() {
-  return {
+  return redactState({
     phase: state.phase,
     i: state.i,
     pose: state.pose,
@@ -1548,7 +1573,6 @@ function snapshot() {
     hostH: state.hostH,
     room: state.room,
     qs: state.qs,
-    q: currentQ(),
     players: state.players,
     maps: state.maps,
     mapUses: state.mapUses,
@@ -1562,7 +1586,7 @@ function snapshot() {
     guests: state.guests,
     dropoutIds: state.dropoutIds || {},
     pendingJoins: (state.pendingJoins || []).map((g) => g.id),
-  };
+  });
 }
 function publish() {
   const snap = snapshot();
@@ -2125,6 +2149,16 @@ function tierName(tier) {
   }[tier];
   return key ? tt(key) : "";
 }
+function lockdownLogo(ld, backMore = "") {
+  if (!ld) return tt("lockdownWord");
+  if (ld.phase === "play" || ld.phase === "flash") {
+    return `${tt("lockdownWord")} · ${ld.qi + 1}/${LOCKDOWN_N}${backMore}`;
+  }
+  if (ld.phase === "wager") return tt("lockdownWagers");
+  if (ld.phase === "intro") return tt("lockRulesClock", ld.introLeft);
+  if (ld.phase === "result") return ld.won ? tt("lockCleared") : tt("lockBroken");
+  return tt("lockdownWord");
+}
 
 function mapPhaseOpen() {
   if (state.lockdown || state.phase === "setbreak") return false;
@@ -2578,9 +2612,9 @@ function wagerHTML() {
   if (!ld) return "";
   if (ld.phase === "intro") {
     return `<div class="wager intro">
-      <p class="wager-copy"><b>Lockdown</b> — ${escapeHtml(ld.name)} plays ${LOCKDOWN_N}. Need ${LOCKDOWN_WIN_AT}/${LOCKDOWN_N}.</p>
-      <p class="wager-copy">Each question: up to <b>3 minutes</b>. Points start at <b>$${LOCKDOWN_PTS}</b> and decay to <b>$0</b>.</p>
-      <p class="wager-copy">Opponents already locked WIN/LOSE. Starting in <b>${ld.introLeft}s</b>.</p>
+      <p class="wager-copy">${tt("lockIntroPlay", escapeHtml(ld.name), LOCKDOWN_N, LOCKDOWN_WIN_AT)}</p>
+      <p class="wager-copy">${tt("lockIntroPoints")}</p>
+      <p class="wager-copy">${tt("lockIntroStart", ld.introLeft)}</p>
       ${lockdownRefreshButton()}
     </div>`;
   }
@@ -2739,28 +2773,24 @@ function directionsHTML() {
             <p class="dir-copy"><b>All-buzz start.</b> When seats are set, each pad presses Buzz to ready. The show starts when every joined pad has buzzed in. Same-origin tabs also sync over BroadcastChannel; <code>api/rooms.js</code> syncs TV + phones.</p>
             <p class="dir-copy"><b>Lobby modes (phone).</b> <b>Host</b> = local / Off Screen or optional On Screen on this device. <b>Cast TV</b> = make a Silk <code>?tv=1&amp;room=</code> link for the set. <b>Join TV</b> = pad into an existing TV room only.</p>
           `)}
-          ${dirAcc("points", "Points & scoring", "<small>37Q deal</small>", `
-            <p class="dir-copy">One show deals <b>37 questions</b> from the bank: <b>20 / 10 / 5 / 2</b> Easy · Hard · Difficult · Extreme. Ten seconds to read, then buzz. First buzz answers.</p>
+          ${dirAcc("points", tt("dirPointsTitle"), "<small>37Q</small>", `
+            <p class="dir-copy">${tt("dirPointsBody")}</p>
             <div class="points-grid">
-              <span>20 Easy</span><b>$100</b>
-              <span>10 Hard</span><b>$500</b>
-              <span>5 Difficult</span><b>$1,000</b>
-              <span>2 Extreme</span><b>$5,000</b>
+              <span>20 ${tt("tierEasy")}</span><b>$100</b>
+              <span>10 ${tt("tierHard")}</span><b>$500</b>
+              <span>5 ${tt("tierDifficult")}</span><b>$1,000</b>
+              <span>2 ${tt("tierExtreme")}</span><b>$5,000</b>
             </div>
-            <p class="dir-copy">A miss on a regular question is <b>$0</b> — you do not lose points. <b>MAP</b> stays available through the read, the buzz, and the answer, up to <b>4 times</b> a round. Each set steps up after a <b>15-second</b> break, from Easy to Hard, then Difficult, then Extreme. <b>Lockdown</b> hits twice per show (see below).</p>
+            <p class="dir-copy">${tt("dirPointsMore")}</p>
           `)}
-          ${dirAcc("map", "MAP (Make-a-Point)", "<small>4 per round</small>", `
-            <p class="dir-copy"><b>Make-a-Point</b> lets the person who hits the buzzer risk stakes against a rival.</p>
-            <p class="dir-copy">MAP is available <b>throughout the question</b> — during the read, while the buzz is open, and while that player is answering. Each player can use it <b>4 times per round</b>. Tap a rival to arm it. Stake = this question’s point value. The steal line shows the doubled bank. Hit it: you bank double, they lose the stake. Miss, and you lose the stake. If someone else buzzes first, your MAP stays off and does not count. Lockdown and the set break do not take a MAP use.</p>
+          ${dirAcc("map", tt("dirMapTitle"), "<small>4</small>", `
+            <p class="dir-copy">${tt("dirMapBody")}</p>
           `)}
-          ${dirAcc("lock", "Lockdown", "<small>Twice a show</small>", `
-            <p class="dir-copy">Twice per show, after a correct buzz. That player faces <b>5 hard questions</b>.</p>
-            <p class="dir-copy"><b>Wagers:</b> opponents pick WIN or LOSE and $100 / $500 / $1,000, then tap <b>Lock in</b> (60s, or when everyone locks).</p>
-            <p class="dir-copy"><b>Rules countdown:</b> about <b>7 seconds</b> before each lockdown question — explains the rules and lets the table settle.</p>
-            <p class="dir-copy"><b>Answer window:</b> up to <b>3 minutes</b> per question. Points start at <b>$5,000</b> and <b>decay linearly to $0</b> as time runs out. Need <b>4/5</b> for WIN wagers; otherwise LOSE pays. Waiting players see a <b>60-second</b> wait countdown (glimpse only — they do not see the hero’s response).</p>
+          ${dirAcc("lock", tt("dirLockTitle"), "<small>2</small>", `
+            <p class="dir-copy">${tt("dirLockBody")}</p>
           `)}
-          ${dirAcc("dojo", "Dojo", "<small>10 placements</small>", `
-            <p class="dir-copy">Ten placement questions in the lobby <b>on the phone</b> (not on the TV). Each prompt shows for <b>5 seconds</b>, then the answers appear — tap one. No player name or points on the Dojo card. Places you Bronze, Silver, or Gold for about three months. Play stays gated until placement is current. Karate belts rise with career points, separate from ability.</p>
+          ${dirAcc("dojo", tt("dirDojoTitle"), "<small>10</small>", `
+            <p class="dir-copy">${tt("dirDojoBody")}</p>
           `)}
         </div>
         <div class="row">
@@ -3371,6 +3401,11 @@ function screenModeHTML() {
   `;
 }
 
+function topicLine(topic, field, fallback) {
+  const key = `topic_${topic.id}_${field}`;
+  const value = tt(key);
+  return value === key ? fallback : value;
+}
 function topicsBody() {
   const rows = topicCatalog();
   const on = new Set(state.topicsOn || []);
@@ -3381,8 +3416,8 @@ function topicsBody() {
       <label class="topic-row">
         <input type="checkbox" data-topic="${escapeHtml(topic.id)}" ${on.has(topic.id) ? "checked" : ""}/>
         <span>
-          <b>${escapeHtml(topic.title)}</b>
-          <span>${escapeHtml(topic.blurb || "")}</span>
+          <b>${escapeHtml(topicLine(topic, "title", topic.title))}</b>
+          <span>${escapeHtml(topicLine(topic, "blurb", topic.blurb || ""))}</span>
         </span>
       </label>
     `).join("")}
@@ -3409,9 +3444,6 @@ function roomBody() {
   const bots = seats.length - humans;
   const silk = state.room ? tvSilkUrl(state.room) : "";
   const mode = pad ? "join" : (state.mpMode || "host");
-  const roomsList = (state.activeRooms || [])
-    .filter((r) => r.phase !== "end")
-    .slice(0, 12);
 
   if (pad || mode === "join") {
     const readyName = (state.profile && state.profile.displayName) || state.name || "Player";
@@ -3432,17 +3464,7 @@ function roomBody() {
         <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off" autocapitalize="characters"/>
         <button class="primary" id="joinRoom" type="button">${tt("joinRoom")}</button>
       </div>
-      <div class="rooms-list">
-        <p class="rivals-lab">${tt("activeRooms")}</p>
-        ${roomsList.length
-          ? roomsList.map((r) =>
-              `<div class="room-row">
-                <span class="room-meta"><b>${escapeHtml(r.code)}</b> · ${escapeHtml(r.host || "TV")} · ${r.guests || 0} pads · ${escapeHtml(r.phase || "lobby")}</span>
-                <button type="button" class="primary" data-join-now="${escapeHtml(r.code)}">${tt("joinShort")}</button>
-              </div>`
-            ).join("")
-          : `<p class="meta">${tt("noActiveRooms")}</p>`}
-      </div>
+      <p class="meta">${tt("joinByCode")}</p>
       ${offer ? `
         <div class="join-offer">
           <p class="dir-copy"><b>${tt("joinInAction")}</b> ${escapeHtml(String(offer.tier || offer.phase || "").toUpperCase())}</p>
@@ -3602,6 +3624,7 @@ function entryHTML() {
         ${existing ? "" : ageBracketHTML("entryAge", { ...p, ...draft, detectedCountry: state.detectedCountry })}
         <label class="field" for="entryPw">${tt("password")}</label>
         <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${existing ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
+        <p class="meta">${tt("deviceLockNote")}</p>
         <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${entryActionLabel(name)}</button>
         ${stored ? `<button class="word ${existing ? "" : "hidden"}" id="forgotPassword" type="button">${tt("forgotPassword")}</button>` : ""}
         ${stored ? `<button class="word" id="entryCreateNew" type="button">${tt("createNewProfile")}</button>` : ""}
@@ -3835,13 +3858,13 @@ function playHTML() {
   const cat = readyPhase
     ? tt("ready")
     : endPhase
-      ? "END"
+      ? tt("logoEnd")
       : breaking
         ? tt("setBreakCat")
-        : (ld
-          ? `Lockdown · ${ld.phase === "play" || ld.phase === "flash" ? `${ld.qi + 1}/${LOCKDOWN_N}${backMore}` : ld.phase}`
+          : (ld
+          ? lockdownLogo(ld, backMore)
           : (q && !pad ? escapeHtml([q.categoryTitle, questionCredit(q)].filter(Boolean).join(" · ")) : (pad ? tt("yourPad") : "")));
-  const tier = readyPhase ? "READY" : (endPhase ? "END" : (breaking ? tt("setBreakCat") : (ld ? "LOCKDOWN" : (q ? q.tier.toUpperCase() : "END"))));
+  const tier = readyPhase ? tt("logoReady") : (endPhase ? tt("logoEnd") : (breaking ? tt("setBreakCat") : (ld ? tt("lockdownWord") : (q ? tierName(q.tier) : tt("logoEnd")))));
   const n = readyPhase || ld || endPhase || breaking ? "" : ` · ${state.i + 1}/${state.qs.length || ROUND}`;
   const buzzLabel = readyPhase
     ? (state.readyIds[state.youId] ? tt("ready") : tt("buzzReady"))
@@ -3915,7 +3938,7 @@ function playHTML() {
     </div>
     <div class="play">
       ${readyPhase ? readyCardHTML() : (endPhase ? `<div class="qwrap"><div class="qcard">
-        <p class="cat">END</p>
+        <p class="cat">${tt("logoEnd")}</p>
         <p class="qtext">${tt("showEnd")}</p>
         <p class="meta" id="clock">${scoreboard()}</p>
         <div class="row" style="margin-top:12px">
@@ -3944,7 +3967,7 @@ function playHTML() {
       } else if (i === picked && !hidePick) cls += " on";
       const dis = canPick && !reveal ? "" : "disabled";
       return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
-    }).join("")}${mapStealHTML()}</div>` : (waiterPad ? `<div class="wager"><p class="wager-copy">${tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S)}</p><p class="meta">Glimpse only — hero answers privately.</p></div>` : `<div></div>`)))}
+    }).join("")}${mapStealHTML()}</div>` : (waiterPad ? `<div class="wager"><p class="wager-copy">${tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S)}</p><p class="meta">${tt("glimpseOnly")}</p></div>` : `<div></div>`)))}
     <div class="buzzbar">
       ${!state.onScreen && !pad && !ld && !readyPhase && !endPhase ? `<div class="dock set-dock">
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
@@ -3964,7 +3987,8 @@ function playHTML() {
 
 async function openRoom() {
   state.room = state.room || code();
-  const saved = await rooms("POST", { action: "create", code: state.room, host: state.name });
+  ensureHostKey();
+  const saved = await rooms("POST", { action: "create", code: state.room, host: state.name, hostKey: state.hostKey });
   if (!saved || saved.error) {
     state.statusMsg = "TV room " + state.room + " is not on the shared list yet. Refresh this TV page.";
   }
@@ -3997,8 +4021,8 @@ function bindDojoSurface() {
       paint(true);
       return;
     }
-    const passwordHash = await hashPassword(pw);
-    saveProfile({ passwordHash });
+    const sealed = sealPassword(pw);
+    saveProfile(sealed);
     state.profileUnlocked = true;
     state.dojoMode = "home";
     state.roomDojoPanel = "";
@@ -4087,7 +4111,7 @@ function bindDojoSurface() {
         paint(true);
         return;
       }
-      patch.passwordHash = await hashPassword(pw);
+      Object.assign(patch, sealPassword(pw));
     }
     saveProfile(patch);
     state.statusMsg = tt("profileSaved");
