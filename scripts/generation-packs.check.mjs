@@ -11,7 +11,9 @@ import {
   refreshLockdown,
   shufflePacks,
   generationForAge,
+  generationForYears,
   generationForSeat,
+  playableAges,
   ageBracketsForGeneration,
   bracketsSendingTo,
   AGE_BRACKETS,
@@ -37,7 +39,7 @@ assert.deepEqual(summary.counts, {
   "gen-x": 15,
   "gen-y": 15,
   "gen-z": 15,
-  "gen-alpha": 14,
+  "gen-alpha": 22,
   "multi-gen": 9,
 });
 
@@ -76,6 +78,16 @@ const byAge = [
 const aged = dealRoundRobin(byAge, packs, 3);
 assert.deepEqual(aged.questions.map((q) => q.fromGeneration), ["gen-z", "gen-y", "silent-generation"]);
 assert.equal(generationForSeat({ ageBracket: "50s", generation: "gen-z" }), "gen-x");
+assert.equal(generationForYears(13), "gen-alpha");
+assert.equal(generationForYears(14), "gen-z");
+assert.equal(generationForSeat({ age: 13, ageBracket: "10s", generation: "gen-z" }), "gen-alpha");
+assert.deepEqual(playableAges("gen-alpha"), [13]);
+const alphaSeat = dealRoundRobin(
+  [{ id: "kid", name: "Kid", age: 13, ageBracket: "10s", generation: "gen-z" }],
+  packs,
+  1,
+);
+assert.equal(alphaSeat.questions[0].fromGeneration, "gen-alpha");
 assert.equal(generationForSeat({ generation: "gen-alpha" }), "gen-alpha");
 assert.deepEqual(AGE_BRACKETS.map((b) => generationForAge(b)), [
   "gen-z",
@@ -115,7 +127,7 @@ assert.ok(shared.questions.every((q) => q.fromGeneration === "gen-x"));
 const cohort = buildDeviceCohort(weekly, placement.questions, "en", "2026-09-01T00:00:00.000Z");
 assert.equal(cohort.v, 2);
 assert.equal(cohort.target, 150);
-assert.equal(cohort.held, 96);
+assert.equal(cohort.held, 104);
 assert.equal(cohort.shows.length, 2);
 assert.equal(cohort.placement.length, placement.questions.length);
 assert.equal(cohort.lockdownRefreshes, 0);

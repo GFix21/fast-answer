@@ -32,9 +32,18 @@ import {
   refreshLockdown,
   defaultGeneration,
   generationForAge,
+  generationForYears,
   generationForSeat,
+  bracketForAge,
   AGE_BRACKETS,
 } from "./lib/generation-packs.js";
+import {
+  COUNTRIES,
+  requiredAge,
+  ageIsAllowed,
+  detectCountry,
+  normalizeCountry,
+} from "./lib/age-gate.js";
 import { GENERATIONS, normalizeGeneration } from "./q-and-a/map.js";
 
 const STUDIOS = [
@@ -252,6 +261,8 @@ const state = {
   /** Phone entry gate (name, email, password) before the lobby. */
   entered: false,
   entryDraft: null,
+  /** Country the device timezone points at. Raises the profile age with the chosen country. */
+  detectedCountry: detectCountry(),
   /** Confirm the profile email, then set a new on-device password. */
   forgotPassword: false,
   topicCatalog: [],
@@ -776,37 +787,93 @@ function readAge(el) {
   const v = String((el && el.value) || "");
   return AGE_BRACKETS.includes(v) ? v : "";
 }
-function bindAgeToPack(ageSel, genSel, opts = {}) {
-  const age = document.querySelector(ageSel);
-  if (!age) return;
-  age.onchange = () => {
-    const bracket = readAge(age);
-    const gen = generationForAge(bracket);
+function readCountry(el) {
+  return normalizeCountry(el && el.value);
+}
+function readYears(el) {
+  const n = Number(el && el.value);
+  return Number.isInteger(n) ? n : "";
+}
+function ageFormPrefix() {
+  if ($("#entryAgeYears")) return "entryAge";
+  if ($("#playerAgeYears")) return "playerAge";
+  if ($("#roomPlayerAgeYears")) return "roomPlayerAge";
+  return "";
+}
+function readAgeForm(prefix) {
+  const id = prefix || ageFormPrefix();
+  if (!id) return { age: "", country: "" };
+  return {
+    age: readYears($(`#${id}Years`)),
+    country: readCountry($(`#${id}Country`)),
+  };
+}
+function countryName(id) {
+  const key = `country${normalizeCountry(id) || "Other"}`;
+  const label = tt(key);
+  return label === key ? "" : label;
+}
+function bindAgeToPack(prefix, genSel, opts = {}) {
+  const years = document.querySelector(`#${prefix}Years`);
+  const country = document.querySelector(`#${prefix}Country`);
+  if (!years || !country) return;
+  const apply = () => {
+    const detected = state.detectedCountry || "";
+    const chosen = readCountry(country);
+    const age = readYears(years);
+    const min = requiredAge(chosen, detected);
+    years.min = String(min);
+    const note = document.querySelector(`[data-pack-for="${prefix}"]`);
+    const gate = document.querySelector(`[data-age-gate="${prefix}"]`);
+    const place = countryName(detected || chosen);
+    if (gate) {
+      gate.textContent = Number.isInteger(age) && age < min
+        ? tt("ageTooYoung", min, place)
+        : tt("ageNeed", min, place);
+    }
+    const gen = Number.isInteger(age) && age >= min ? generationForYears(age) : "";
     if (genSel) {
       const sel = document.querySelector(genSel);
       if (sel && gen) sel.value = gen;
     }
-    const note = document.querySelector(`[data-pack-for="${age.id}"]`);
-    if (note && gen) note.textContent = tt("packFromAge", genLabel(gen));
-    if (opts.save !== false && bracket && state.profileUnlocked && hasPhoneProfile()) {
-      saveProfile({ ageBracket: bracket });
+    if (note) note.textContent = gen ? tt("packFromAge", genLabel(gen)) : "";
+    if (opts.save !== false && gen && state.profileUnlocked && hasPhoneProfile()) {
+      saveProfile({
+        age,
+        country: chosen,
+        detectedCountry: detected,
+        ageBracket: bracketForAge(age),
+        generation: gen,
+      });
     }
     if (opts.after) opts.after();
   };
+  years.oninput = apply;
+  country.onchange = apply;
 }
-function ageBracketHTML(id, selected) {
-  const current = AGE_BRACKETS.includes(selected) ? selected : "30s";
+function ageBracketHTML(id, profile) {
+  const p = profile && typeof profile === "object" ? profile : { ageBracket: profile };
+  const detected = normalizeCountry(p.detectedCountry || state.detectedCountry);
+  const country = normalizeCountry(p.country) || detected || "US";
+  const min = requiredAge(country, detected);
+  const age = Number.isInteger(Number(p.age)) ? Number(p.age) : "";
+  const gen = age !== "" && age >= min ? generationForYears(age) : generationForAge(p.ageBracket);
+  const place = countryName(detected || country);
   return `
-    <label class="field" for="${id}">${tt("ageBracket")}</label>
-    <p class="meta">${escapeHtml(tt("ageLead"))}</p>
-    <select class="gen-select" id="${id}">
-      ${AGE_BRACKETS.map((b) => `<option value="${b}" ${b === current ? "selected" : ""}>${escapeHtml(tt("age" + b))}</option>`).join("")}
+    <label class="field" for="${id}Country">${tt("country")}</label>
+    <select class="gen-select" id="${id}Country">
+      ${COUNTRIES.map((c) => `<option value="${c}" ${c === country ? "selected" : ""}>${escapeHtml(tt("country" + c))}</option>`).join("")}
     </select>
-    <p class="meta" data-pack-for="${id}">${escapeHtml(tt("packFromAge", genLabel(generationForAge(current))))}</p>`;
+    <label class="field" for="${id}Years">${tt("ageYears")}</label>
+    <input id="${id}Years" type="number" inputmode="numeric" min="${min}" max="120" value="${age === "" ? "" : age}" />
+    <p class="meta" data-age-gate="${id}">${escapeHtml(tt("ageNeed", min, place))}</p>
+    <p class="meta" data-pack-for="${id}">${gen ? escapeHtml(tt("packFromAge", genLabel(gen))) : ""}</p>`;
 }
-function generationSelectHTML(id, selected, ageBracket) {
-  const bracket = AGE_BRACKETS.includes(ageBracket) ? ageBracket : "30s";
-  const fromAge = generationForAge(bracket);
+function generationSelectHTML(id, selected, ageOrBracket) {
+  const years = Number(ageOrBracket);
+  const fromYears = Number.isInteger(years) && years >= 10 && years <= 120 ? generationForYears(years) : "";
+  const bracket = fromYears ? "" : (AGE_BRACKETS.includes(ageOrBracket) ? ageOrBracket : "30s");
+  const fromAge = fromYears || generationForAge(bracket);
   const current = fromAge || (GENERATIONS.includes(normalizeGeneration(selected))
     ? normalizeGeneration(selected)
     : playerGeneration(state.profile));
@@ -1186,6 +1253,9 @@ async function activateGameProfile(profile) {
         id: profile.id,
         displayName: profile.displayName,
         email: profile.email,
+        age: profile.age,
+        country: profile.country,
+        detectedCountry: profile.detectedCountry || state.detectedCountry || "",
       }),
     });
   } catch { /* lobby still opens if the list is unreachable */ }
@@ -1229,13 +1299,24 @@ async function commitNewProfile(name, email, pw) {
     passwordHash,
     createdAt: keepLegacy && base.createdAt ? base.createdAt : new Date().toISOString(),
   };
-  const ageBracket = readAge($("#playerAge") || $("#roomPlayerAge") || $("#entryAge")) || "30s";
+  const form = readAgeForm();
+  const detected = state.detectedCountry || "";
+  const min = requiredAge(form.country, detected);
+  if (!ageIsAllowed(form.age, form.country, detected)) {
+    state.statusMsg = tt("ageTooYoung", min, countryName(detected || form.country));
+    paint(true);
+    return false;
+  }
+  const generation = generationForYears(form.age);
   saveProfile({
     displayName: cleanName,
     email: cleanEmail,
     passwordHash,
-    ageBracket,
-    generation: generationForAge(ageBracket),
+    age: form.age,
+    country: form.country,
+    detectedCountry: detected,
+    ageBracket: bracketForAge(form.age),
+    generation,
   });
   state.dojoMode = "home";
   state.roomDojoPanel = "";
@@ -1254,9 +1335,24 @@ function saveProfile(patch = {}) {
   next.displayName = String(next.displayName || "Player").trim().slice(0, 40) || "Player";
   next.email = String(next.email || "").trim().slice(0, 120);
   const generation = normalizeGeneration(next.generation);
-  next.ageBracket = AGE_BRACKETS.includes(String(next.ageBracket || "")) ? String(next.ageBracket) : "";
-  const fromAge = generationForAge(next.ageBracket);
-  next.generation = fromAge || (GENERATIONS.includes(generation) ? generation : "");
+  next.country = normalizeCountry(next.country);
+  next.detectedCountry = normalizeCountry(next.detectedCountry || state.detectedCountry);
+  const years = Number(next.age);
+  if (Number.isInteger(years) && ageIsAllowed(years, next.country, next.detectedCountry)) {
+    next.age = years;
+    next.ageBracket = bracketForAge(years);
+    next.generation = generationForYears(years);
+  } else if (Number.isInteger(years)) {
+    next.age = Number.isInteger(Number(prev.age)) ? Number(prev.age) : "";
+    next.country = normalizeCountry(prev.country);
+    next.ageBracket = AGE_BRACKETS.includes(String(prev.ageBracket || "")) ? String(prev.ageBracket) : "";
+    next.generation = normalizeGeneration(prev.generation);
+  } else {
+    next.age = Number.isInteger(Number(prev.age)) ? Number(prev.age) : "";
+    next.ageBracket = AGE_BRACKETS.includes(String(next.ageBracket || "")) ? String(next.ageBracket) : "";
+    const fromAge = next.age !== "" ? generationForYears(next.age) : generationForAge(next.ageBracket);
+    next.generation = fromAge || (GENERATIONS.includes(generation) ? generation : "");
+  }
   state.profile = next;
   state.name = next.displayName;
   localStorage.setItem("fa-name", state.name);
@@ -1326,6 +1422,7 @@ function seatedPreview() {
     you: true,
     score: 0,
     generation: playerGeneration(state.profile),
+    age: state.profile?.age ?? "",
     ageBracket: state.profile?.ageBracket || "",
   };
   const guests = (state.guests || []).filter((g) => g.seat !== "view");
@@ -1536,6 +1633,7 @@ function seatPlayers() {
       you: true,
       thumb: state.profile?.thumb || "",
       generation: playerGeneration(state.profile),
+      age: state.profile?.age ?? "",
       ageBracket: state.profile?.ageBracket || "",
     },
     ...guests.map((g) => ({
@@ -2825,8 +2923,8 @@ function dojoBody() {
       <p class="dir-copy">${tt("createProfileIntro")}</p>
       <label class="field" for="nm">${tt("name")}</label>
       <input id="nm" type="text" value="${escapeHtml(p.displayName && hasPhoneProfile() ? p.displayName : "")}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
-      ${generationSelectHTML("playerGen", p.generation, p.ageBracket)}
-      ${ageBracketHTML("playerAge", p.ageBracket)}
+      ${generationSelectHTML("playerGen", p.generation, p.age || p.ageBracket)}
+      ${ageBracketHTML("playerAge", p)}
       <label class="field" for="emNew">${tt("email")}</label>
       <input id="emNew" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
       <label class="field" for="pwNew">${tt("password")}</label>
@@ -2903,8 +3001,8 @@ function dojoBody() {
     </div>
     <label class="field" for="nm">${tt("name")}</label>
     <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
-    ${generationSelectHTML("playerGen", p.generation, p.ageBracket)}
-    ${ageBracketHTML("playerAge", p.ageBracket)}
+    ${generationSelectHTML("playerGen", p.generation, p.age || p.ageBracket)}
+    ${ageBracketHTML("playerAge", p)}
     <label class="field" for="em">${tt("email")}</label>
     <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("optional")}"/>
     <label class="field" for="thDojo">${tt("photoTv")}</label>
@@ -2958,8 +3056,8 @@ function roomDojoEntryHTML() {
         <p class="dir-copy">${tt("createProfileIntro")}</p>
         <label class="field" for="roomNm">${tt("name")}</label>
         <input id="roomNm" type="text" value="${escapeHtml(hasPhoneProfile() ? (p.displayName || "") : (state.name || ""))}" maxlength="18" autocomplete="nickname"/>
-        ${generationSelectHTML("roomPlayerGen", p.generation, p.ageBracket)}
-        ${ageBracketHTML("roomPlayerAge", p.ageBracket)}
+        ${generationSelectHTML("roomPlayerGen", p.generation, p.age || p.ageBracket)}
+        ${ageBracketHTML("roomPlayerAge", p)}
         <label class="field" for="roomEm">${tt("email")}</label>
         <input id="roomEm" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email"/>
         <label class="field" for="roomPwNew">${tt("password")}</label>
@@ -3284,7 +3382,7 @@ function entryHTML() {
         <input id="entryName" type="text" value="${escapeHtml(name)}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
         <label class="field" for="entryEmail">${tt("email")}</label>
         <input id="entryEmail" type="email" value="${escapeHtml(email)}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
-        ${existing ? "" : ageBracketHTML("entryAge", draft.ageBracket || p.ageBracket)}
+        ${existing ? "" : ageBracketHTML("entryAge", { ...p, ...draft, detectedCountry: state.detectedCountry })}
         <label class="field" for="entryPw">${tt("password")}</label>
         <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${existing ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
         <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${entryActionLabel(name)}</button>
@@ -3316,14 +3414,15 @@ function bindEntry() {
     const em = emailEl && emailEl.value;
     const pw = pwEl && pwEl.value;
     const existing = entryIsExisting(nm);
+    const ageOk = existing || ageIsAllowed(readYears($("#entryAgeYears")), readCountry($("#entryAgeCountry")), state.detectedCountry);
     if (btn) {
-      btn.classList.toggle("hidden", !entryReady(nm, em, pw));
+      btn.classList.toggle("hidden", !entryReady(nm, em, pw) || !ageOk);
       btn.textContent = entryActionLabel(nm);
     }
     if (pwEl) pwEl.autocomplete = existing ? "current-password" : "new-password";
     if (forgot) forgot.classList.toggle("hidden", !existing);
   };
-  bindAgeToPack("#entryAge", null, { save: false, after: sync });
+  bindAgeToPack("entryAge", null, { save: false, after: sync });
   if (nameEl) nameEl.oninput = sync;
   if (emailEl) emailEl.oninput = sync;
   if (pwEl) {
@@ -3355,6 +3454,8 @@ function syncEntryDraft() {
     name: String(($("#entryName") && $("#entryName").value) || ""),
     email: String(($("#entryEmail") && $("#entryEmail").value) || ""),
     password: String(($("#entryPw") && $("#entryPw").value) || ""),
+    age: readYears($("#entryAgeYears")),
+    country: readCountry($("#entryAgeCountry")),
     ageBracket: readAge($("#entryAge")) || (state.entryDraft && state.entryDraft.ageBracket) || "",
   };
 }
@@ -3730,12 +3831,21 @@ function bindDojoSurface() {
     const pw = String(($("#pwNew") && $("#pwNew").value) || "");
     const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
     const generation = readGeneration($("#playerGen"));
-    const ageBracket = readAge($("#playerAge"));
+    const form = readAgeForm("playerAge");
+    const detected = state.detectedCountry || "";
+    if (!ageIsAllowed(form.age, form.country, detected)) {
+      state.statusMsg = tt("ageTooYoung", requiredAge(form.country, detected), countryName(detected || form.country));
+      paint(true);
+      return;
+    }
     const patch = {
       displayName: name || state.name,
       email,
-      ...(generation ? { generation } : {}),
-      ...(ageBracket ? { ageBracket } : {}),
+      age: form.age,
+      country: form.country,
+      detectedCountry: detected,
+      ageBracket: bracketForAge(form.age),
+      generation: generationForYears(form.age) || generation,
     };
     if (pw || pw2) {
       if (pw.length < 4) {
@@ -3776,7 +3886,7 @@ function bindDojoSurface() {
     state.dojoScroll = state.dojoScroll === "closed" ? "scores" : "closed";
     paint(true);
   };
-  bindAgeToPack("#playerAge", "#playerGen");
+  bindAgeToPack("playerAge", "#playerGen");
   document.querySelectorAll("[data-dojo-bg]").forEach((b) => {
     b.onclick = () => {
       saveProfile({ dojoBg: b.dataset.dojoBg });
@@ -3854,8 +3964,8 @@ function bindLobby() {
   document.querySelectorAll(".js-refresh-lock").forEach((b) => {
     b.onclick = () => refreshLockdownQuestions();
   });
-  bindAgeToPack("#playerAge", "#playerGen");
-  bindAgeToPack("#roomPlayerAge", "#roomPlayerGen");
+  bindAgeToPack("playerAge", "#playerGen");
+  bindAgeToPack("roomPlayerAge", "#roomPlayerGen");
   const botFill = $("#botFill");
   if (botFill) botFill.onchange = (e) => {
     state.botFill = Boolean(e.target.checked);
@@ -4056,6 +4166,10 @@ async function confirmJoin(intent) {
   return joinAsBuzzer();
 }
 
+function ageGateMessage() {
+  const detected = state.profile?.detectedCountry || state.detectedCountry;
+  return tt("ageTooYoung", requiredAge(state.profile?.country, detected), countryName(detected || state.profile?.country));
+}
 async function joinAsBuzzer() {
   const code = String(state.room || state.joinInput || joinCode || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
   if (!code || code.length < 3) {
@@ -4080,6 +4194,11 @@ async function joinAsBuzzer() {
     openDojoPage("home");
     return false;
   }
+  if (!state.viewing && !ageIsAllowed(state.profile?.age, state.profile?.country, state.profile?.detectedCountry || state.detectedCountry)) {
+    state.statusMsg = ageGateMessage();
+    openDojoPage("home");
+    return false;
+  }
   saveProfile({ displayName: state.name });
   const prevRole = role;
   role = "pad";
@@ -4098,6 +4217,9 @@ async function joinAsBuzzer() {
     id: state.youId,
     thumb: state.profile?.thumb || "",
     seat: state.viewing ? "view" : "play",
+    age: state.profile?.age ?? "",
+    country: state.profile?.country || "",
+    detectedCountry: state.profile?.detectedCountry || state.detectedCountry || "",
     ageBracket: state.profile?.ageBracket || "",
     generation: playerGeneration(state.profile),
   });
@@ -4331,6 +4453,7 @@ function ingestGuests(guests) {
       name: g.name || "Player",
       thumb: g.thumb || "",
       seat: g.seat === "view" ? "view" : "play",
+      age: Number.isInteger(Number(g.age)) ? Number(g.age) : "",
       ageBracket: String(g.ageBracket || "").slice(0, 8),
       generation: String(g.generation || "").slice(0, 40),
     }))

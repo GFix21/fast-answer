@@ -1534,5 +1534,133 @@
     ],
     "correctIndex": 0,
     "banterHint": null
+  },
+  {
+    "id": "ga-joke-clock",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Les aiguilles",
+    "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
+    "choices": [
+      "Une horloge",
+      "Un hérisson",
+      "Une abeille",
+      "Un cactus"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Elle peut quand même faire coucou."
+  },
+  {
+    "id": "ga-joke-bear",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Dent sucrée",
+    "prompt": "Comment appelle-t-on un ours sans dents ?",
+    "choices": [
+      "Un ours en gomme",
+      "Un nounours",
+      "Un ours polaire",
+      "Un koala"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Toujours collant. Bien plus gentil."
+  },
+  {
+    "id": "ga-joke-math",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Trop de problèmes",
+    "prompt": "Pourquoi le livre de maths est-il triste ?",
+    "choices": [
+      "Il a trop de problèmes",
+      "C'est une bande dessinée",
+      "Il déteste les chiffres",
+      "Il a perdu sa couverture"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Le marque-page lui a fait un câlin."
+  },
+  {
+    "id": "ga-joke-ocean",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Bord de mer",
+    "prompt": "Que dit l'océan à la plage ?",
+    "choices": [
+      "Rien, il fait juste la vague",
+      "Je suis salé",
+      "Apporte une serviette",
+      "À la pêche"
+    ],
+    "correctIndex": 0,
+    "banterHint": "La plage a répondu d'un signe."
+  },
+  {
+    "id": "ga-joke-flamingo",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Parade rose",
+    "prompt": "Comment appelle-t-on un groupe de flamants roses ?",
+    "choices": [
+      "Un troupeau",
+      "Un banc",
+      "Une flamboyance",
+      "Une meute"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Ils étaient habillés pour l'occasion."
+  },
+  {
+    "id": "ga-joke-octopus",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Cœur en plus",
+    "prompt": "Combien de cœurs a une pieuvre ?",
+    "choices": [
+      "Huit",
+      "Un",
+      "Deux",
+      "Trois"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Huit bras, trois cœurs, aucune hâte."
+  },
+  {
+    "id": "ga-joke-scarecrow",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Dans son champ",
+    "prompt": "Pourquoi l'épouvantail a-t-il reçu un prix ?",
+    "choices": [
+      "Il a mangé le maïs",
+      "Il a dormi toute la journée",
+      "Il a raconté une histoire de fantôme",
+      "Il était le meilleur dans son champ"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Les corbeaux ont ouvert un fan-club."
+  },
+  {
+    "id": "ga-joke-homework",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Du gâteau",
+    "prompt": "Pourquoi l'élève a-t-il mangé ses devoirs ?",
+    "choices": [
+      "Le chien n'avait plus faim",
+      "C'était l'heure du déjeuner",
+      "Le prof a dit que c'était du gâteau",
+      "C'était un sandwich"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Le dessert comptait en bonus."
   }
 ]

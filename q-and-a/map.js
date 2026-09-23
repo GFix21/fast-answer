@@ -88,6 +88,44 @@ export function bracketsSendingTo(generation, year = AGE_REFERENCE_YEAR) {
   return AGE_BRACKETS.filter((b) => generationForAge(b, year) === g);
 }
 
+/** Exact age in the reference year. 13 (born 2013) is Gen Alpha; 14 (born 2012) is Gen Z. */
+export function generationForYears(age, year = AGE_REFERENCE_YEAR) {
+  const n = Number(age);
+  if (!Number.isFinite(n)) return "";
+  const born = year - Math.round(n);
+  for (const g of Object.keys(GENERATION_BORN)) {
+    const [start, end] = GENERATION_BORN[g];
+    if (born >= start && born <= end) return g;
+  }
+  if (born < GENERATION_BORN["silent-generation"][0]) return "silent-generation";
+  if (born > GENERATION_BORN["gen-alpha"][1]) return "gen-alpha";
+  return "";
+}
+
+/** Decade label for a numeric age. 13 and 19 are both the 10s. */
+export function bracketForAge(age) {
+  const n = Math.round(Number(age));
+  if (!Number.isFinite(n)) return "";
+  const decade = Math.max(10, Math.min(90, Math.floor(n / 10) * 10));
+  return `${decade}s`;
+}
+
+/**
+ * Ages that may hold a profile and still fall in this generation.
+ * Gen Alpha in 2026 is only 13: younger than that cannot create a profile,
+ * and 14 is already Gen Z.
+ */
+export function playableAges(generation, year = AGE_REFERENCE_YEAR, floor = 13) {
+  const g = normalizeGeneration(generation);
+  const span = GENERATION_BORN[g];
+  if (!span) return [];
+  const youngest = Math.max(floor, year - span[1]);
+  const oldest = Math.min(120, year - span[0]);
+  const out = [];
+  for (let a = youngest; a <= oldest; a += 1) out.push(a);
+  return out;
+}
+
 const GENERATION_ALIASES = {
   silent: "silent-generation",
   "silent-gen": "silent-generation",

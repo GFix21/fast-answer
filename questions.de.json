@@ -1534,5 +1534,133 @@
     ],
     "correctIndex": 0,
     "banterHint": null
+  },
+  {
+    "id": "ga-joke-clock",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Zeiger",
+    "prompt": "Was hat Zeiger, kann aber nicht klatschen?",
+    "choices": [
+      "Eine Uhr",
+      "Ein Handschuh",
+      "Ein Oktopus",
+      "Eine Statue"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Winken kann sie trotzdem."
+  },
+  {
+    "id": "ga-joke-bear",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Süße Zähne",
+    "prompt": "Wie nennt man einen Bären ohne Zähne?",
+    "choices": [
+      "Einen Gummibären",
+      "Einen Teddy",
+      "Einen Eisbären",
+      "Einen Koala"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Immer noch klebrig. Viel freundlicher."
+  },
+  {
+    "id": "ga-joke-math",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Zu viele Aufgaben",
+    "prompt": "Warum ist das Mathebuch traurig?",
+    "choices": [
+      "Es hat zu viele Probleme",
+      "Es ist ein Comic",
+      "Es mag keine Zahlen",
+      "Es hat den Umschlag verloren"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Das Lesezeichen hat es umarmt."
+  },
+  {
+    "id": "ga-joke-ocean",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Strandgruß",
+    "prompt": "Was sagt das Meer zum Strand?",
+    "choices": [
+      "Nichts, es winkt nur",
+      "Ich bin salzig",
+      "Bring ein Handtuch",
+      "Petri Heil"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Der Strand hat zurückgewinkt."
+  },
+  {
+    "id": "ga-joke-flamingo",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Rosa Parade",
+    "prompt": "Wie nennt man eine Gruppe Flamingos?",
+    "choices": [
+      "Eine Herde",
+      "Einen Schwarm nur",
+      "Eine Flamboyance",
+      "Ein Rudel"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Sie kamen passend angezogen."
+  },
+  {
+    "id": "ga-joke-octopus",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Extra-Herz",
+    "prompt": "Wie viele Herzen hat ein Oktopus?",
+    "choices": [
+      "Acht",
+      "Eins",
+      "Zwei",
+      "Drei"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Acht Arme, drei Herzen, null Eile."
+  },
+  {
+    "id": "ga-joke-scarecrow",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Auf dem Feld",
+    "prompt": "Warum hat die Vogelscheuche einen Preis bekommen?",
+    "choices": [
+      "Sie aß den Mais",
+      "Sie schlief den ganzen Tag",
+      "Sie erzählte eine Geistergeschichte",
+      "Sie war die Beste auf ihrem Feld"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Die Krähen gründeten einen Fanclub."
+  },
+  {
+    "id": "ga-joke-homework",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Kinderspiel",
+    "prompt": "Warum hat die Schülerin die Hausaufgaben gegessen?",
+    "choices": [
+      "Der Hund war satt",
+      "Es war Mittag",
+      "Die Lehrerin sagte, das sei ein Kinderspiel",
+      "Es war ein Brot"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Der Nachtisch gab Extra-Punkte."
   }
 ]

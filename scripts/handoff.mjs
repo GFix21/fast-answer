@@ -25,10 +25,13 @@ import {
   normalizeGeneration,
   ageBracketsForGeneration,
   bracketsSendingTo,
+  playableAges,
   GENERATION_BORN,
   AGE_REFERENCE_YEAR,
 } from "../q-and-a/map.js";
 import { buildGenerationPacks, packSummary, PACK_TARGET } from "../lib/generation-packs.js";
+import { reviewForChildren } from "../lib/safeguard.js";
+import { isoWeek, weeklyComedyReview } from "../lib/crackd-kerr.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const QANDA = path.resolve(ROOT, "../Q-and-A/banks");
@@ -60,6 +63,13 @@ function placementPath(locale) {
   ]);
 }
 
+function funnyPack(locale) {
+  const file = path.join(ROOT, "banks/gen-alpha", `${locale}.json`);
+  if (!fs.existsSync(file)) return [];
+  const pack = readJson(file);
+  return Array.isArray(pack.questions) ? pack.questions : [];
+}
+
 function localeAlignIssues(enQs, otherQs, label) {
   const issues = [];
   const en = new Map((enQs || []).map((q) => [q.id, normalizeGeneration(q.generation)]));
@@ -88,7 +98,9 @@ for (const loc of LOCALES) {
   const placeFile = placementPath(loc);
   if (!weekFile) issues.push(`${loc}: weekly pack missing`);
   else {
-    weekly[loc] = { file: weekFile, pack: readJson(weekFile) };
+    const pack = readJson(weekFile);
+    pack.questions = [...(pack.questions || []), ...funnyPack(loc)];
+    weekly[loc] = { file: weekFile, pack };
     for (const line of generationIssues(weekly[loc].pack.questions)) {
       issues.push(`${loc} weekly: ${line}`);
     }
@@ -118,11 +130,36 @@ if (placement.en && placement.de) {
   issues.push(...localeAlignIssues(placement.en.pack.questions, placement.de.pack.questions, "de placement"));
 }
 
+const comedyWeek = isoWeek();
+const comedyReport = { week: comedyWeek, bot: "Crack'd Kerr", safeguard: "Safeguard", locales: {} };
+for (const loc of LOCALES) {
+  const questions = weekly[loc]?.pack?.questions || [];
+  for (const q of questions) {
+    if (normalizeGeneration(q.generation) !== "gen-alpha" && q.funny !== true) continue;
+    const safety = reviewForChildren(q);
+    if (!safety.ok) issues.push(`${loc} ${q.id}: Safeguard blocked (${safety.reasons.join(", ")})`);
+  }
+  comedyReport.locales[loc] = weeklyComedyReview(questions, { week: comedyWeek });
+  for (const row of comedyReport.locales[loc].blocked) {
+    issues.push(`${loc} ${row.id}: Crack'd Kerr skipped a blocked joke`);
+  }
+  for (const row of comedyReport.locales[loc].weak) {
+    issues.push(`${loc} ${row.id}: Crack'd Kerr held a weak joke (${row.rating})`);
+  }
+}
+
 if (issues.length) {
   console.error("handoff blocked:");
   for (const line of issues) console.error(" -", line);
   process.exit(1);
 }
+
+fs.mkdirSync(path.join(ROOT, "banks/comedy"), { recursive: true });
+fs.writeFileSync(
+  path.join(ROOT, "banks/comedy", `${comedyWeek}.json`),
+  `${JSON.stringify(comedyReport, null, 2)}\n`,
+);
+console.log(`comedy review banks/comedy/${comedyWeek}.json by Crack'd Kerr`);
 
 function writeLive(locale, pack) {
   const exported = exportPack(pack);
@@ -158,6 +195,7 @@ function writeGenerationPacks(locale, questions) {
       born: GENERATION_BORN[g] || null,
       ageBrackets: ageBracketsForGeneration(g),
       sendsFor: bracketsSendingTo(g),
+      playableAges: playableAges(g),
       questions: packs[g],
     };
     fs.writeFileSync(path.join(dir, `${g}.json`), `${JSON.stringify(body, null, 2)}\n`);

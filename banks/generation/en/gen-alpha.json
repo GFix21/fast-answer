@@ -2,8 +2,8 @@
   "generation": "gen-alpha",
   "locale": "en",
   "target": 150,
-  "held": 14,
-  "shortfall": 136,
+  "held": 22,
+  "shortfall": 128,
   "ageYear": 2026,
   "born": [
     2013,
@@ -13,6 +13,9 @@
     "10s"
   ],
   "sendsFor": [],
+  "playableAges": [
+    13
+  ],
   "questions": [
     {
       "id": "w39-e-alpha-yt",
@@ -237,6 +240,134 @@
       ],
       "correctIndex": 0,
       "banterHint": null
+    },
+    {
+      "id": "ga-joke-clock",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hands Up",
+      "prompt": "What has hands but cannot clap?",
+      "choices": [
+        "A clock",
+        "A glove",
+        "An octopus",
+        "A statue"
+      ],
+      "correctIndex": 0,
+      "banterHint": "It can still wave hello."
+    },
+    {
+      "id": "ga-joke-bear",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sweet Tooth",
+      "prompt": "What do you call a bear with no teeth?",
+      "choices": [
+        "A gummy bear",
+        "A teddy",
+        "A polar bear",
+        "A koala"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Still sticky. Much friendlier."
+    },
+    {
+      "id": "ga-joke-math",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Too Many Problems",
+      "prompt": "Why was the math book sad?",
+      "choices": [
+        "It had too many problems",
+        "It is a comic",
+        "It hates numbers",
+        "It lost its cover"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The bookmark offered a hug."
+    },
+    {
+      "id": "ga-joke-ocean",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Shore Thing",
+      "prompt": "What did the ocean say to the shore?",
+      "choices": [
+        "Nothing, it just waved",
+        "I am salty",
+        "Bring a towel",
+        "Go fish"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The beach waved back."
+    },
+    {
+      "id": "ga-joke-flamingo",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Pink Parade",
+      "prompt": "What is a group of flamingos called?",
+      "choices": [
+        "A flock only",
+        "A pack",
+        "A flamboyance",
+        "A herd"
+      ],
+      "correctIndex": 2,
+      "banterHint": "They showed up dressed for it."
+    },
+    {
+      "id": "ga-joke-octopus",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Extra Heart",
+      "prompt": "How many hearts does an octopus have?",
+      "choices": [
+        "Eight",
+        "One",
+        "Two",
+        "Three"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Eight arms, three hearts, zero hurry."
+    },
+    {
+      "id": "ga-joke-scarecrow",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Field Day",
+      "prompt": "Why did the scarecrow win a prize?",
+      "choices": [
+        "He ate the corn",
+        "He napped all day",
+        "He told a ghost story",
+        "He was outstanding in his field"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The crows started a fan club."
+    },
+    {
+      "id": "ga-joke-homework",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Easy Slice",
+      "prompt": "Why did the student eat the homework?",
+      "choices": [
+        "The dog was full",
+        "It was lunchtime",
+        "The teacher said it was a piece of cake",
+        "It was a sandwich"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Dessert was extra credit."
     }
   ]
 }

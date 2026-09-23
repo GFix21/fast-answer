@@ -1,0 +1,670 @@
+{
+  "week": "2026-W39",
+  "bot": "Crack'd Kerr",
+  "safeguard": "Safeguard",
+  "locales": {
+    "en": {
+      "bot": "Crack'd Kerr",
+      "week": "2026-W39",
+      "reviewedAt": "2026-09-23T13:18:13.687Z",
+      "fresh": [
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "What has hands but cannot clap?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "What do you call a bear with no teeth?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Why was the math book sad?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-ocean",
+          "generation": "gen-alpha",
+          "prompt": "What did the ocean say to the shore?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-flamingo",
+          "generation": "gen-alpha",
+          "prompt": "What is a group of flamingos called?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-octopus",
+          "generation": "gen-alpha",
+          "prompt": "How many hearts does an octopus have?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-scarecrow",
+          "generation": "gen-alpha",
+          "prompt": "Why did the scarecrow win a prize?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-homework",
+          "generation": "gen-alpha",
+          "prompt": "Why did the student eat the homework?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        }
+      ],
+      "highestRated": [
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "What has hands but cannot clap?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "What do you call a bear with no teeth?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Why was the math book sad?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-ocean",
+          "generation": "gen-alpha",
+          "prompt": "What did the ocean say to the shore?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-flamingo",
+          "generation": "gen-alpha",
+          "prompt": "What is a group of flamingos called?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        }
+      ],
+      "viral": [
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "What has hands but cannot clap?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "What do you call a bear with no teeth?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Why was the math book sad?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        }
+      ],
+      "blocked": [],
+      "weak": []
+    },
+    "fr": {
+      "bot": "Crack'd Kerr",
+      "week": "2026-W39",
+      "reviewedAt": "2026-09-23T13:18:13.688Z",
+      "fresh": [
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "Comment appelle-t-on un ours sans dents ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi le livre de maths est-il triste ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-ocean",
+          "generation": "gen-alpha",
+          "prompt": "Que dit l'océan à la plage ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-flamingo",
+          "generation": "gen-alpha",
+          "prompt": "Comment appelle-t-on un groupe de flamants roses ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-octopus",
+          "generation": "gen-alpha",
+          "prompt": "Combien de cœurs a une pieuvre ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-scarecrow",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi l'épouvantail a-t-il reçu un prix ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-homework",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi l'élève a-t-il mangé ses devoirs ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        }
+      ],
+      "highestRated": [
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "Comment appelle-t-on un ours sans dents ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi le livre de maths est-il triste ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-ocean",
+          "generation": "gen-alpha",
+          "prompt": "Que dit l'océan à la plage ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-flamingo",
+          "generation": "gen-alpha",
+          "prompt": "Comment appelle-t-on un groupe de flamants roses ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        }
+      ],
+      "viral": [
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "Comment appelle-t-on un ours sans dents ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi le livre de maths est-il triste ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        }
+      ],
+      "blocked": [],
+      "weak": []
+    },
+    "de": {
+      "bot": "Crack'd Kerr",
+      "week": "2026-W39",
+      "reviewedAt": "2026-09-23T13:18:13.688Z",
+      "fresh": [
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "Was hat Zeiger, kann aber nicht klatschen?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "Wie nennt man einen Bären ohne Zähne?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Warum ist das Mathebuch traurig?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-ocean",
+          "generation": "gen-alpha",
+          "prompt": "Was sagt das Meer zum Strand?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-flamingo",
+          "generation": "gen-alpha",
+          "prompt": "Wie nennt man eine Gruppe Flamingos?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-octopus",
+          "generation": "gen-alpha",
+          "prompt": "Wie viele Herzen hat ein Oktopus?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-scarecrow",
+          "generation": "gen-alpha",
+          "prompt": "Warum hat die Vogelscheuche einen Preis bekommen?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-homework",
+          "generation": "gen-alpha",
+          "prompt": "Warum hat die Schülerin die Hausaufgaben gegessen?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        }
+      ],
+      "highestRated": [
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "Was hat Zeiger, kann aber nicht klatschen?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "Wie nennt man einen Bären ohne Zähne?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Warum ist das Mathebuch traurig?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-ocean",
+          "generation": "gen-alpha",
+          "prompt": "Was sagt das Meer zum Strand?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-flamingo",
+          "generation": "gen-alpha",
+          "prompt": "Wie nennt man eine Gruppe Flamingos?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        }
+      ],
+      "viral": [
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "Was hat Zeiger, kann aber nicht klatschen?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "Wie nennt man einen Bären ohne Zähne?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Warum ist das Mathebuch traurig?",
+          "rating": 90,
+          "safety": {
+            "bot": "Safeguard",
+            "ok": true,
+            "reasons": []
+          },
+          "fresh": true,
+          "funny": true
+        }
+      ],
+      "blocked": [],
+      "weak": []
+    }
+  }
+}

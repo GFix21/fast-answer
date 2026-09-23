@@ -1,4 +1,5 @@
 import { activateProfile, isEmail } from "../lib/profile-store.js";
+import { ageIsAllowed, requiredAge } from "../lib/age-gate.js";
 import { readScores, recordScore } from "../lib/score-vault.js";
 
 function json(res, status, body) {
@@ -52,6 +53,10 @@ export default async function handler(req, res) {
     }
   }
   if (!isEmail(body.email)) return json(res, 400, { error: "email" });
+  if (body.age != null && body.age !== "" && !ageIsAllowed(body.age, body.country, body.detectedCountry)) {
+    const minimum = requiredAge(body.country, body.detectedCountry);
+    return json(res, 403, { error: "age", minimum });
+  }
   try {
     const profile = activateProfile({
       id: body.id,

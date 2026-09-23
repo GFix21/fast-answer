@@ -3,6 +3,7 @@ import { requireAuth } from "../lib/flow-auth.js";
 import { loadCurrentPack } from "../lib/week-store.js";
 import { exportPack } from "../q-and-a/map.js";
 import { generationForSeat } from "../lib/generation-packs.js";
+import { ageIsAllowed, requiredAge } from "../lib/age-gate.js";
 import { dealShow, SHOW_DEAL } from "../lib/generation-deal.js";
 
 const SHOW_N = Object.values(SHOW_DEAL).reduce((sum, n) => sum + n, 0);
@@ -142,14 +143,27 @@ export default async function handler(req, res) {
   const cur = await getRoom(code);
 
   if (body.action === "join") {
+    const seat = body.seat === "view" ? "view" : "play";
+    if (seat === "play" && !ageIsAllowed(body.age, body.country, body.detectedCountry)) {
+      const minimum = requiredAge(body.country, body.detectedCountry);
+      res.status(403).end(JSON.stringify({
+        error: "age",
+        minimum,
+        message: `A profile starts at ${minimum}.`,
+      }));
+      return;
+    }
     cur.guests = cur.guests || [];
     const guest = {
       name: body.name || "Player",
       id: body.id || ("p-" + String(body.name || "pad")),
       thumb: body.thumb || "",
-      seat: body.seat === "view" ? "view" : "play",
+      seat,
+      age: Number.isInteger(Number(body.age)) ? Number(body.age) : "",
+      country: String(body.country || "").slice(0, 8),
       ageBracket: String(body.ageBracket || "").slice(0, 8),
       generation: generationForSeat({
+        age: body.age,
         ageBracket: body.ageBracket,
         generation: body.generation,
       }).slice(0, 40),
@@ -159,6 +173,8 @@ export default async function handler(req, res) {
       existing.name = guest.name;
       existing.seat = guest.seat;
       if (guest.thumb) existing.thumb = guest.thumb;
+      if (guest.age !== "") existing.age = guest.age;
+      if (guest.country) existing.country = guest.country;
       if (guest.ageBracket) existing.ageBracket = guest.ageBracket;
       if (guest.generation) existing.generation = guest.generation;
     } else {
