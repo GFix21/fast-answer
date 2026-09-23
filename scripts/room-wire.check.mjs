@@ -86,7 +86,28 @@ const created = await call("POST", {
 });
 assert.equal(created.status, 200);
 assert.equal(created.json.code, "ROOM1");
+assert.equal(created.json.screen, "off");
 assert.equal(Object.hasOwn(created.json, "hostKey"), false);
+
+const lobby = await call("POST", { body: { action: "lobby" } });
+assert.equal(lobby.status, 200);
+assert.equal(lobby.json.rooms.length, 1);
+assert.equal(lobby.json.rooms[0].code, "ROOM1");
+assert.equal(lobby.json.rooms[0].screen, "off");
+assert.equal(Object.hasOwn(lobby.json.rooms[0], "hostKey"), false);
+assert.equal(lobby.json.rooms[0].state, undefined);
+assert.equal(lobby.json.rooms[0].questions, undefined);
+
+const castDenied = await call("POST", { body: { action: "cast", code: "ROOM1" } });
+assert.equal(castDenied.status, 403);
+const cast = await call("POST", {
+  body: { action: "cast", code: "ROOM1", hostKey: key },
+  headers: { "x-fa-host": key },
+});
+assert.equal(cast.status, 200);
+assert.equal(cast.json.screen, "tv");
+const lobbyTv = await call("POST", { body: { action: "lobby" } });
+assert.equal(lobbyTv.json.rooms[0].screen, "tv");
 
 const denied = await call("POST", {
   body: {

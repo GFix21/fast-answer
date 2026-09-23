@@ -213,7 +213,9 @@ function loadStoredTopicIds() {
 
 const state = {
   phase: "lobby",
-  onScreen: forcedDisplay || localStorage.getItem("fa-onscreen") === "1",
+  onScreen: forcedDisplay,
+  /** Topics and question refresh stay up only while this phone is creating a room. */
+  roomSetup: false,
   hostH: Number(localStorage.getItem("fa-hosth") || 38),
   studioI: Number(localStorage.getItem("fa-studio") || 0),
   name: localStorage.getItem("fa-name") || "Player",
@@ -259,7 +261,7 @@ const state = {
   dirOpen: "tv",
   qrOpen: false,
   readyIds: {},
-  mpMode: localStorage.getItem("fa-mp") || ((role === "pad" || !forcedDisplay) ? "join" : "host"),
+  mpMode: (role === "pad" || joinCode) ? "join" : (forcedDisplay ? "host" : "off"),
   statusMsg: "",
   placementQs: [],
   botFill: true,
@@ -547,26 +549,31 @@ async function verifyProfilePassword(pw) {
 }
 async function copyText(value) {
   const text = String(value || "");
-  try {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      await navigator.clipboard.writeText(text);
-      return true;
+  const attempt = (async () => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch { /* fall through */ }
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      ta.remove();
+      return ok;
+    } catch {
+      return false;
     }
-  } catch { /* fall through */ }
-  try {
-    const ta = document.createElement("textarea");
-    ta.value = text;
-    ta.setAttribute("readonly", "");
-    ta.style.position = "fixed";
-    ta.style.left = "-9999px";
-    document.body.appendChild(ta);
-    ta.select();
-    const ok = document.execCommand("copy");
-    ta.remove();
-    return ok;
-  } catch {
-    return false;
-  }
+  })();
+  // A clipboard permission prompt must not freeze the room list.
+  const timed = new Promise((resolve) => setTimeout(() => resolve(false), 500));
+  return Promise.race([attempt, timed]);
 }
 function humanPads() {
   return (state.guests || []).filter((g) => g && g.id && g.seat !== "view");
@@ -985,8 +992,11 @@ function buildLockdownQuestions(avoidIds) {
   if (qs.length >= LOCKDOWN_N) return qs;
   return leftoverQs(true).slice(0, LOCKDOWN_N);
 }
+function hostCanSetup() {
+  return Boolean(state.roomSetup) && role !== "pad" && state.mpMode !== "join";
+}
 function refreshLockdownQuestions() {
-  if (isPad() || state.mpMode === "join") return;
+  if (!hostCanSetup()) return;
   const cohort = ensureCohort();
   if (!cohort?.packs) return;
   const players = playersForDeal();
@@ -1032,7 +1042,7 @@ function refreshLockdownQuestions() {
   publish();
 }
 function lockdownRefreshButton() {
-  if (isPad() || state.mpMode === "join") return "";
+  if (!hostCanSetup()) return "";
   const used = Number(state.cohort?.lockdownRefreshes) || 0;
   const label = used >= LOCKDOWN_REFRESHES ? tt("shufflePacks") : tt("lockdownRefresh");
   return `<button class="ghost js-refresh-lock" type="button">${escapeHtml(label)}</button>`;
@@ -1122,7 +1132,7 @@ function refreshNoticeHTML() {
   return `<p class="refresh-note" role="status">${escapeHtml(text)}</p>`;
 }
 function questionRefreshHTML() {
-  if (isPad() || state.mpMode === "join") return "";
+  if (!hostCanSetup()) return "";
   const cohort = state.questions?.length ? ensureCohort() : state.cohort;
   const counts = cohort?.counts || packSummary(cohort?.packs || {}).counts;
   const chips = GENERATIONS.map((g) =>
@@ -1543,7 +1553,8 @@ async function rooms(method, body) {
   }
 }
 async function refreshActiveRooms() {
-  state.activeRooms = [];
+  const data = await rooms("POST", { action: "lobby" });
+  state.activeRooms = Array.isArray(data?.rooms) ? data.rooms : [];
 }
 function submitAnswerToRoom(index, lockdown = false) {
   if (!state.room) return;
@@ -3371,15 +3382,31 @@ function lobbySetupBannerHTML() {
 function roomModeButtons() {
   if (isTvDisplay() && forcedDisplay) return "";
   const modes = [
-    ["host", tt("host")],
-    ["join", tt("joinTv")],
+    ["off", tt("offScreenTab")],
     ["cast", tt("castTv")],
+    ["join", tt("joinRoom")],
   ];
   return `<div class="mp-modes" role="tablist">
     ${modes.map(([id, label]) =>
       `<button type="button" class="mp-mode ${state.mpMode === id ? "on" : ""}" data-mp="${id}">${label}</button>`
     ).join("")}
   </div>`;
+}
+
+function roomListHTML(screen) {
+  const want = screen === "tv" ? "tv" : "off";
+  const rooms = (state.activeRooms || []).filter((r) => (r.screen === "tv" ? "tv" : "off") === want);
+  const title = want === "tv" ? tt("tvRooms") : tt("offScreenRooms");
+  const rows = rooms.map((r) => `
+    <div class="room-row">
+      <span class="room-meta"><b>${escapeHtml(r.code)}</b>${r.host ? ` · ${escapeHtml(r.host)}` : ""}${r.guests ? ` · ${r.guests}` : ""}</span>
+      <button type="button" class="primary" data-join-room="${escapeHtml(r.code)}">${tt("joinShort")}</button>
+    </div>`).join("");
+  return `
+    <div class="rooms-list">
+      <p class="field">${title}</p>
+      ${rows || `<p class="meta">${tt("noRooms")}</p>`}
+    </div>`;
 }
 
 function screenModeHTML() {
@@ -3465,6 +3492,8 @@ function roomBody() {
         <button class="primary" id="joinRoom" type="button">${tt("joinRoom")}</button>
       </div>
       <p class="meta">${tt("joinByCode")}</p>
+      ${roomListHTML("off")}
+      ${roomListHTML("tv")}
       ${offer ? `
         <div class="join-offer">
           <p class="dir-copy"><b>${tt("joinInAction")}</b> ${escapeHtml(String(offer.tier || offer.phase || "").toUpperCase())}</p>
@@ -3500,6 +3529,8 @@ function roomBody() {
         <p class="meta">${escapeHtml(tt("padJoinMeta", state.room, humans, bots))}</p>
       ` : `<p class="meta">${tt("makeTvLinkMeta")}</p>`}
       <button class="primary" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
+      ${roomListHTML("off")}
+      ${roomListHTML("tv")}
       ${roomDojoEntryHTML()}
     `;
   }
@@ -3512,18 +3543,17 @@ function roomBody() {
         <b>${escapeHtml(readyName)}</b>
         <span>${tt("activeReady")}</span>
       </div>
-      <p class="dir-copy"><b>${tt("phoneLockLead")}</b></p>
-      ${screenModeHTML()}
-      ${playerCountHTML()}
-      <label class="toggle">
-        <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
-        <span>${tt("fillBots")}</span>
-      </label>
-      <div class="seats">
-        ${seats.map((s) => seatSpan(s)).join("")}
-      </div>
-      <button class="primary" id="startPhone" type="button">${tt("startPhone")}</button>
-      <p class="meta">${tt("phoneLockHint")}</p>
+      ${state.roomSetup ? `
+        <p class="dir-copy">${tt("hostSetup")}</p>
+        <p class="room-code">${tt("roomLabel", `<b>${escapeHtml(state.room || "····")}</b>`)}</p>
+        ${topicsBody()}
+        <button class="primary" id="castRoom" type="button">${tt("castThisRoom")}</button>
+      ` : `
+        <p class="dir-copy">${tt("offScreenHint")}</p>
+        <button class="primary" id="createRoom" type="button">${tt("createRoom")}</button>
+      `}
+      ${roomListHTML("off")}
+      ${roomListHTML("tv")}
       ${genAlphaReviewHTML()}
     `;
   }
@@ -3531,7 +3561,6 @@ function roomBody() {
   return `
     ${roomModeButtons()}
     ${playerCountHTML()}
-    ${questionRefreshHTML()}
     <label class="toggle">
       <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
       <span>${tt("fillBots")}</span>
@@ -3577,11 +3606,12 @@ function setBody() {
 
 function lobbyGoLabel() {
   const pad = isPad();
-  const mode = pad ? "join" : (state.mpMode || "host");
+  const mode = pad ? "join" : (state.mpMode || "off");
   if (pad || mode === "join") return tt("goJoin");
   if (mode === "cast") return state.room ? tt("goCastCopy") : tt("goCastMake");
   if (isTvDisplay() || state.onScreen) return tt("goOpenTv");
-  return tt("startPhone");
+  if (state.roomSetup) return tt("castThisRoom");
+  return tt("createRoom");
 }
 
 function lobbyGateReason() {
@@ -3762,14 +3792,11 @@ function lobbyHTML() {
         <img class="brand" src="${TITLE_3D}" alt="Fast Answer!"/>
         ${lobbySetupBannerHTML()}
         <div class="accord">
-          ${acc("room", joining ? tt("joinTv") : (mode === "cast" ? tt("castTv") : tt("room")), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
-          ${joining ? "" : acc("topics", tt("topicsTitle"), `<small>${tt("topicsOn", (state.topicsOn || []).length)}</small>`, topicsBody())}
+          ${acc("room", joining ? tt("joinRoom") : (mode === "cast" ? tt("castTv") : (!tv || !state.onScreen ? tt("offScreenRooms") : tt("room"))), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
           ${pad || (tv && forcedDisplay) ? "" : acc("set", tt("set"), "", setBody())}
         </div>
         <div class="row">
           <button class="primary ${goGated ? "go-dojo-cta" : ""}" id="go" type="button">${goLabel}</button>
-          ${isPad() || mode === "join" ? "" : `<button class="ghost js-refresh-qs" type="button" ${state.refreshNotice?.phase === "loading" ? "disabled" : ""}>${tt("refreshQuestions")}</button>`}
-          ${lockdownRefreshButton()}
           ${state.onScreen && !forcedDisplay && role !== "pad" ? `<button class="ghost" data-off-screen type="button">${tt("offScreenReturn")}</button>` : ""}
         </div>
         <p class="status" id="stt">${escapeHtml(status)}</p>
@@ -3985,14 +4012,74 @@ function playHTML() {
   `;
 }
 
-async function openRoom() {
+async function openRoom(screen) {
+  const next = screen === "tv" || (screen !== "off" && isTvDisplay()) ? "tv" : "off";
   state.room = state.room || code();
   ensureHostKey();
-  const saved = await rooms("POST", { action: "create", code: state.room, host: state.name, hostKey: state.hostKey });
+  const saved = await rooms("POST", {
+    action: "create",
+    code: state.room,
+    host: state.name,
+    hostKey: state.hostKey,
+    screen: next,
+  });
   if (!saved || saved.error) {
-    state.statusMsg = "TV room " + state.room + " is not on the shared list yet. Refresh this TV page.";
+    state.statusMsg = tt("roomNotListed", state.room);
   }
   startPoll();
+  return saved;
+}
+
+async function createOffScreenRoom() {
+  if (!isTvDisplay()) {
+    const gate = lobbyGateReason();
+    if (gate) {
+      state.statusMsg = gate;
+      openDojoPage(dojoModeForGate());
+      return;
+    }
+  }
+  state.onScreen = false;
+  state.room = Math.random().toString(36).slice(2, 6).toUpperCase();
+  state.joinInput = state.room;
+  state.mpMode = "off";
+  state.roomSetup = true;
+  state.lobbyOpen = "room";
+  try {
+    localStorage.setItem("fa-mp", "off");
+    localStorage.setItem("fa-onscreen", "0");
+  } catch { /* ignore */ }
+  saveProfile({ displayName: state.name });
+  const saved = await openRoom("off");
+  state.roomSetup = true;
+  await refreshActiveRooms();
+  if (saved && !saved.error) state.statusMsg = "";
+  paint(true);
+}
+
+async function castThisRoom() {
+  if (!state.room) return;
+  ensureHostKey();
+  const saved = await rooms("POST", { action: "cast", code: state.room, hostKey: state.hostKey });
+  state.roomSetup = false;
+  state.onScreen = isTvDisplay();
+  state.mpMode = "cast";
+  state.lobbyOpen = "room";
+  try {
+    localStorage.setItem("fa-mp", "cast");
+    localStorage.setItem("fa-onscreen", state.onScreen ? "1" : "0");
+  } catch { /* ignore */ }
+  if (!saved || saved.error) state.statusMsg = tt("roomNotListed", state.room);
+  else state.statusMsg = tt("castListed", state.room);
+  await refreshActiveRooms();
+  paint(true);
+  if (saved && !saved.error) {
+    const ok = await copyText(tvSilkUrl(state.room));
+    if (!ok) {
+      state.statusMsg = tt("copyFail", tvSilkUrl(state.room));
+      paint(true);
+    }
+  }
 }
 
 function bindDojoSurface() {
@@ -4192,12 +4279,11 @@ function bindLobby() {
       state.mpMode = b.dataset.mp;
       localStorage.setItem("fa-mp", state.mpMode);
       state.statusMsg = "";
-      if (state.mpMode === "join") {
-        void refreshActiveRooms().then(() => paint(true));
-      } else if (state.mpMode === "cast" && !state.room) {
-        // room created on go
-      }
       state.lobbyOpen = "room";
+      if (state.mpMode === "off" || state.mpMode === "join" || state.mpMode === "cast") {
+        void refreshActiveRooms().then(() => paint(true));
+        return;
+      }
       paint(true);
     };
   });
@@ -4259,7 +4345,7 @@ function bindLobby() {
       state.mpMode = "host";
       localStorage.setItem("fa-mp", "host");
       state.lobbyOpen = "room";
-      await openRoom();
+      await openRoom("tv");
     }
     paint(true);
   };
@@ -4296,6 +4382,19 @@ function bindLobby() {
     const code = jc ? String(jc.value || "") : (state.joinInput || "");
     void beginJoin(code);
   };
+  document.querySelectorAll("[data-join-room]").forEach((b) => {
+    b.onclick = () => {
+      const code = String(b.dataset.joinRoom || "");
+      if (!code) return;
+      const jc = $("#jc");
+      if (jc) jc.value = code.toUpperCase();
+      void beginJoin(code);
+    };
+  });
+  const createRoomBtn = $("#createRoom");
+  if (createRoomBtn) createRoomBtn.onclick = () => { void createOffScreenRoom(); };
+  const castRoomBtn = $("#castRoom");
+  if (castRoomBtn) castRoomBtn.onclick = () => { void castThisRoom(); };
   document.querySelectorAll("[data-join-now]").forEach((b) => {
     b.onclick = () => {
       const code = String(b.dataset.joinNow || "");
@@ -4546,7 +4645,6 @@ async function onLobbyGo() {
   if (mode === "cast") {
     if (!isTvDisplay()) {
       const gate = lobbyGateReason();
-      // Host phone generating a link for Silk still needs profile/placement for their seat.
       if (gate) {
         state.statusMsg = gate;
         openDojoPage(dojoModeForGate());
@@ -4554,20 +4652,30 @@ async function onLobbyGo() {
       }
     }
     saveProfile({ displayName: state.name });
-    state.onScreen = true;
-    localStorage.setItem("fa-onscreen", "1");
-    await openRoom();
-    const url = tvSilkUrl(state.room);
-    const ok = await copyText(url);
-    state.statusMsg = ok
-      ? ("TV room " + state.room + " ready — Silk link copied.")
-      : ("TV room " + state.room + " — copy: " + url);
+    if (!state.room) state.room = Math.random().toString(36).slice(2, 6).toUpperCase();
+    state.onScreen = isTvDisplay();
+    state.roomSetup = false;
+    try { localStorage.setItem("fa-onscreen", state.onScreen ? "1" : "0"); } catch { /* ignore */ }
+    await openRoom("tv");
+    await refreshActiveRooms();
+    state.statusMsg = tt("castListed", state.room);
     state.lobbyOpen = "room";
     paint(true);
+    const url = tvSilkUrl(state.room);
+    const ok = await copyText(url);
+    if (!ok) {
+      state.statusMsg = tt("copyFail", url);
+      paint(true);
+    }
     return;
   }
 
-  // Host play / Open TV room
+  if (!isTvDisplay() && !state.onScreen) {
+    if (state.roomSetup && state.room) await castThisRoom();
+    else await createOffScreenRoom();
+    return;
+  }
+
   if (!isTvDisplay()) {
     const gate = lobbyGateReason();
     if (gate) {
@@ -4578,7 +4686,7 @@ async function onLobbyGo() {
   }
   saveProfile({ displayName: state.name });
   if (state.onScreen || isTvDisplay()) {
-    await openRoom();
+    await openRoom("tv");
     enterReady();
     return;
   }
@@ -4900,7 +5008,8 @@ function paint(force = false) {
     state.profileUnlocked ? 1 : 0, state.dojoMode, state.roomDojoPanel, state.profile?.passwordHash ? 1 : 0,
     state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
-    state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => r.code).join(","),
+    state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => `${r.code}:${r.screen || ""}`).join(","),
+    state.roomSetup ? 1 : 0,
     state.viewing ? 1 : 0, state.joinOffer?.code || "", state.joinOffer?.canPlay ? 1 : 0,
     state.playOpen, (state.topicsOn || []).join(","),
     state.dealFresh ? (state.qs || []).length : 0,
@@ -5029,18 +5138,25 @@ if (isDirections) {
       localStorage.setItem("fa-onscreen", "1");
       localStorage.setItem("fa-mp", "host");
     } catch { /* ignore */ }
-    void openRoom().then(() => refreshActiveRooms()).then(() => paint(true));
+    void openRoom("tv").then(() => refreshActiveRooms()).then(() => paint(true));
   } else if (role === "pad") {
-    state.onScreen = true; // pad follows TV room; UI is pad (Off Screen chrome), not full TV
+    state.onScreen = true; // pad follows the room; the chrome stays a phone pad
     state.mpMode = "join";
     state.lobbyOpen = "room";
     if (joinCode) state.room = joinCode;
     void refreshActiveRooms().then(() => paint(true));
     startPoll();
-  } else if (state.mpMode === "join") {
+  } else {
+    state.onScreen = false;
+    state.roomSetup = false;
+    if (joinCode) {
+      state.mpMode = "join";
+      state.room = joinCode;
+    } else {
+      state.mpMode = "off";
+    }
+    try { localStorage.setItem("fa-onscreen", "0"); } catch { /* ignore */ }
     void refreshActiveRooms().then(() => paint(true));
-  } else if (state.onScreen) {
-    void openRoom();
   }
   paint(true);
   window.__fa = state;

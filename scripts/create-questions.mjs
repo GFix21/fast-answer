@@ -15,6 +15,7 @@ import { findDupes } from "../q-and-a/bots/dupe.js";
 import { reviewForChildren } from "../q-and-a/louis-liberty.js";
 import { scoreJoke } from "../q-and-a/crackd-kerr.js";
 import { WEEK_TARGET, nextIsoWeek, monthKeyForWeek } from "../lib/week-roll.js";
+import { factRepeatIssues, pipelineStatus } from "../lib/set-rotation.js";
 import { archivePublishedWeek } from "../lib/archive-store.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -40,6 +41,14 @@ function funnyQuestions(locale) {
 
 function kept(questions) {
   return (questions || []).filter((q) => !String(q?.id || "").startsWith("cq-"));
+}
+
+try {
+  const marker = JSON.parse(fs.readFileSync(path.join(ROOT, "banks/sets/current.json"), "utf8"));
+  const hasReady = fs.existsSync(path.join(ROOT, "banks/sets/ready/questions.json"));
+  console.log(pipelineStatus(marker, Date.now(), { hasReady }));
+} catch {
+  console.log("creator pipeline has no live set");
 }
 
 let failed = 0;
@@ -79,6 +88,9 @@ for (const loc of LOCALES) {
   const dupes = findDupes(created, existing);
   if (!dupes.ok) {
     for (const row of dupes.dupes) issues.push(`${row.id}: Dupe Check same as ${row.sameAs}`);
+  }
+  for (const row of factRepeatIssues(created, existing)) {
+    issues.push(`${row.id}: repeat ${row.factKey} ${row.reworded ? "over 5 in 2 years" : "not reworded"}`);
   }
   if (issues.length) {
     failed += 1;

@@ -630,13 +630,43 @@ html.tv-scroll, html.tv-scroll body{
 .rooms-list{display:flex;flex-direction:column;gap:6px;margin:8px 0;width:100%}
 .join-code-row .primary{flex-shrink:0;white-space:nowrap}
 .player-ready{
-  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;
   margin:8px 0;padding:10px 12px;border-radius:12px;
   border:1px solid color-mix(in oklab, #86efac 55%, transparent);
   background:color-mix(in oklab, #166534 28%, transparent);
 }
 .player-ready b{font-size:15px}
-.player-ready span{font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.player-ready span{font-size:11px;letter-spacing:.04em;text-transform:uppercase;white-space:normal}
+/* A phone is one column. The TV layout is the only two-column lobby. */
+.stage:not(.tv) .lobby{
+  grid-template-columns:1fr;
+  align-items:start;
+  height:100%;
+  overflow:auto;
+}
+.stage:not(.tv) .lobby .host{display:none}
+.stage:not(.tv) .lobby-copy{
+  max-width:none;
+  width:100%;
+  height:auto;
+  padding-right:0;
+  overflow:visible;
+}
+.stage:not(.tv) .accord,
+.stage:not(.tv) .acc.open{
+  overflow:visible;
+  height:auto;
+  max-height:none;
+  flex:none;
+  min-height:0;
+}
+.stage:not(.tv) .lobby .acc.open .acc-body,
+.stage:not(.tv) .acc-body{
+  overflow:visible;
+  max-height:none;
+  min-height:0;
+  flex:none;
+}
 .join-offer{margin-top:8px}
 .join-offer .row{margin-top:6px}
 .room-row{display:flex;align-items:center;gap:8px;justify-content:space-between}

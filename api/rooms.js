@@ -120,6 +120,20 @@ export default async function handler(req, res) {
     return;
   }
 
+  if (body.action === "lobby") {
+    const rooms = await listRooms();
+    res.status(200).end(JSON.stringify({
+      rooms: rooms.map((room) => ({
+        code: room.code,
+        host: room.host || "",
+        guests: room.guests || 0,
+        phase: room.phase || "lobby",
+        screen: room.screen === "tv" ? "tv" : "off",
+      })),
+    }));
+    return;
+  }
+
   if (!code) {
     res.status(400).end(JSON.stringify({ error: "code" }));
     return;
@@ -149,11 +163,28 @@ export default async function handler(req, res) {
     await touch({
       ...cur,
       host: body.host || cur.host,
+      screen: cur.screen === "tv" || body.screen === "tv" ? "tv" : "off",
       createdAt: cur.createdAt || Date.now(),
       guests: cur.guests || [],
     });
     const saved = await getRoom(code);
     sendRoom(res, saved, { host: hostMatches(saved, key) });
+    return;
+  }
+
+  if (body.action === "cast") {
+    const cur = await getRoom(code);
+    if (!cur) {
+      res.status(404).end(JSON.stringify({ error: "missing" }));
+      return;
+    }
+    if (!hostMatches(cur, presentedHostKey(req, body))) {
+      res.status(403).end(JSON.stringify({ error: "host" }));
+      return;
+    }
+    await touch({ ...cur, screen: "tv" });
+    const saved = await getRoom(code);
+    sendRoom(res, saved, { host: true });
     return;
   }
 
