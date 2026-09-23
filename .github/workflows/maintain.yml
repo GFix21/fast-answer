@@ -2,6 +2,9 @@
 # Function and security run on every pull request.
 # Stability calls the production domain only after APP_ORIGIN is set
 # (repository variable). QA_ORIGIN is optional and defaults to that domain.
+# On a pull request, /api/country may 404 until this branch is deployed.
+# That 404 still fails unless the handler in the commit returns a country object.
+# On main and the daily run, production itself must serve the route.
 # Repair opens one issue when a scheduled or main-branch run fails.
 # It does not edit the code and it does not receive the studio password.
 

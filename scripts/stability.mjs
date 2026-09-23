@@ -15,10 +15,29 @@ if (!app) {
 const probes = [
   { app: "fast-answer", url: `${app}/`, text: "Fast Answer" },
   { app: "fast-answer", url: `${app}/dojo.html`, text: "Dojo" },
-  { app: "fast-answer", url: `${app}/api/country`, json: "object" },
+  { app: "fast-answer", url: `${app}/api/country`, json: "object", handler: "country" },
   { app: "q-and-a", url: `${qa}/q-and-a/topics.json`, json: "array" },
   { app: "q-and-a", url: `${qa}/questions.json`, json: "array" },
 ];
+
+/** The route is in this branch. Production 404s until that deploy is live. */
+async function countryHandlerOk() {
+  const { default: handler } = await import("../api/country.js");
+  const res = {
+    statusCode: 0,
+    headers: {},
+    body: "",
+    setHeader(name, value) { this.headers[String(name).toLowerCase()] = value; },
+    end(payload) { this.body = payload == null ? "" : String(payload); },
+  };
+  handler({ headers: { "x-vercel-ip-country": "US" } }, res);
+  if (res.statusCode !== 200) return `status ${res.statusCode}`;
+  let data;
+  try { data = JSON.parse(res.body); } catch { return "not json"; }
+  if (!data || typeof data !== "object" || Array.isArray(data)) return "not an object";
+  if (data.country !== "US" || data.source !== "ip") return "unexpected body";
+  return "";
+}
 
 const failures = [];
 for (const probe of probes) {
@@ -26,6 +45,15 @@ for (const probe of probes) {
     const res = await fetch(probe.url, { redirect: "follow", signal: AbortSignal.timeout(15000) });
     const body = await res.text();
     if (!res.ok) {
+      const undeployedOnPullRequest = probe.handler === "country"
+        && res.status === 404
+        && process.env.GITHUB_EVENT_NAME === "pull_request";
+      if (undeployedOnPullRequest) {
+        const problem = await countryHandlerOk();
+        if (problem) failures.push(`${probe.app} ${probe.url}: handler ${problem}`);
+        else console.log("ok", probe.app, `${probe.url} (handler; production has not deployed this route yet)`);
+        continue;
+      }
       failures.push(`${probe.app} ${probe.url}: ${res.status}`);
       continue;
     }
