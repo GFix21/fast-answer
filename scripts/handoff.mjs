@@ -30,7 +30,7 @@ import {
   AGE_REFERENCE_YEAR,
 } from "../q-and-a/map.js";
 import { buildGenerationPacks, packSummary, PACK_TARGET } from "../lib/generation-packs.js";
-import { reviewForChildren } from "../lib/safeguard.js";
+import { LOUIS_BOT, reviewForChildren } from "../q-and-a/louis-liberty.js";
 import { isoWeek, weeklyComedyReview } from "../q-and-a/crackd-kerr.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -131,13 +131,13 @@ if (placement.en && placement.de) {
 }
 
 const comedyWeek = isoWeek();
-const comedyReport = { week: comedyWeek, bot: "Crack'd Kerr", safeguard: "Safeguard", locales: {} };
+const comedyReport = { week: comedyWeek, bot: "Crack'd Kerr", safeguard: LOUIS_BOT, locales: {} };
 for (const loc of LOCALES) {
   const questions = weekly[loc]?.pack?.questions || [];
   for (const q of questions) {
     if (normalizeGeneration(q.generation) !== "gen-alpha" && q.funny !== true) continue;
     const safety = reviewForChildren(q);
-    if (!safety.ok) issues.push(`${loc} ${q.id}: Safeguard blocked (${safety.reasons.join(", ")})`);
+    if (!safety.ok) issues.push(`${loc} ${q.id}: ${LOUIS_BOT} blocked (${safety.reasons.join(", ")})`);
   }
   comedyReport.locales[loc] = weeklyComedyReview(questions, { week: comedyWeek });
   for (const row of comedyReport.locales[loc].blocked) {

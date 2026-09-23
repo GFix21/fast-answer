@@ -6,9 +6,9 @@ import {
   countryFromTimeZone,
   PROFILE_FLOOR,
 } from "../lib/age-gate.js";
-import { reviewForChildren } from "../lib/safeguard.js";
+import { LOUIS_BOT, LOUIS_MAIL, reviewForChildren } from "../q-and-a/louis-liberty.js";
 import { COMEDY_BOT, scoreJoke, weeklyComedyReview, isoWeek } from "../q-and-a/crackd-kerr.js";
-import { comedyReview, questionsForComedy } from "../lib/week-store.js";
+import { comedyReview, louisReview, questionsForComedy } from "../lib/week-store.js";
 import { generationForYears } from "../lib/generation-packs.js";
 
 assert.equal(PROFILE_FLOOR, 13);
@@ -47,7 +47,11 @@ assert.equal(countryFromTimeZone("America/Toronto"), "CA");
 assert.equal(countryFromTimeZone("America/New_York"), "US");
 
 assert.equal(generationForYears(13), "gen-alpha");
-assert.equal(generationForYears(14), "gen-z");
+assert.equal(generationForYears(14), "gen-alpha");
+assert.equal(generationForYears(16), "gen-alpha");
+assert.equal(generationForYears(17), "gen-z");
+assert.equal(LOUIS_BOT, "Louis Liberty");
+assert.equal(LOUIS_MAIL, "gmgbrandlable");
 
 const clock = {
   id: "ga-joke-clock",
@@ -58,11 +62,23 @@ const clock = {
   addedWeek: "2026-W39",
   generation: "gen-alpha",
 };
-assert.equal(reviewForChildren(clock).ok, true);
+const clockReview = reviewForChildren(clock);
+assert.equal(clockReview.ok, true);
+assert.equal(clockReview.bot, LOUIS_BOT);
+assert.equal(clockReview.shape.fun, true);
+assert.equal(clockReview.shape.happy, true);
+assert.equal(clockReview.shape.calm, true);
+assert.equal(clockReview.shape.clear, true);
+assert.ok(clockReview.notes.length);
 assert.ok(scoreJoke(clock).rating >= 70);
 assert.equal(reviewForChildren({
   prompt: "Where do you live?",
   choices: ["Home address", "School"],
+}).ok, false);
+assert.equal(reviewForChildren({
+  prompt: "Are you scared of failing in front of everyone?",
+  choices: ["Yes", "No"],
+  banterHint: "You will fail if you miss.",
 }).ok, false);
 
 const bank = JSON.parse(fs.readFileSync(new URL("../banks/gen-alpha/en.json", import.meta.url), "utf8"));
@@ -81,6 +97,12 @@ const qanda = comedyReview("en", { questions: [] }, "2026-09-23T12:00:00.000Z");
 assert.equal(qanda.bot, COMEDY_BOT);
 assert.ok(questionsForComedy("en", { questions: [] }).some((q) => q.id === "ga-joke-clock"));
 assert.ok(qanda.viral.some((q) => q.id === "ga-joke-clock"));
+const louis = louisReview("en", { questions: [] });
+assert.equal(louis.bot, LOUIS_BOT);
+assert.equal(louis.mail, LOUIS_MAIL);
+assert.deepEqual(louis.ages, [13, 14, 15, 16]);
+assert.equal(louis.held.length, 0);
+assert.ok(louis.shaped.some((q) => q.id === "ga-joke-clock"));
 assert.equal(review.blocked.length, 0);
 assert.equal(review.weak.length, 0);
 assert.ok(review.fresh.length >= 3);

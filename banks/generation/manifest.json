@@ -56,10 +56,11 @@
       "40s"
     ],
     "gen-z": [
-      "10s",
       "20s"
     ],
-    "gen-alpha": [],
+    "gen-alpha": [
+      "10s"
+    ],
     "multi-gen": []
   },
   "locales": {

@@ -45,6 +45,7 @@ import {
   normalizeCountry,
 } from "./lib/age-gate.js";
 import { GENERATIONS, normalizeGeneration } from "./q-and-a/map.js";
+import { LOUIS_MAIL } from "./q-and-a/louis-liberty.js";
 
 const STUDIOS = [
   "./studio/studio-01-contestant-pov.jpg",
@@ -231,6 +232,9 @@ const state = {
   profileUnlocked: false,
   dojoMode: "home", // home | create | unlock | setpw
   dojoScroll: "scores",
+  genAlphaOpen: false,
+  genAlphaAbout: "",
+  genAlphaNote: "",
   dojo: null,
   seatBots: [],
   guests: [],
@@ -2879,7 +2883,57 @@ function medalHTML(tier) {
 }
 
 function dojoChrome(inner) {
-  return `<div class="dojo-stage">${inner}</div>`;
+  return `<div class="dojo-stage">${inner}${genAlphaReviewHTML()}</div>`;
+}
+
+function genAlphaQuestions() {
+  return (state.questions || []).filter((q) => normalizeGeneration(q.generation) === "gen-alpha");
+}
+
+function genAlphaMailHref() {
+  const list = genAlphaQuestions();
+  const id = state.genAlphaAbout || list[0]?.id || "";
+  const q = list.find((item) => item.id === id);
+  const note = String(state.genAlphaNote || "").trim();
+  const subject = q ? `Question on ${q.id}` : "Gen Alpha questions";
+  const body = [
+    "To: gmgbrandlable",
+    q ? `Question: ${q.prompt}` : "Gen Alpha questions",
+    note ? `Question on this question: ${note}` : "",
+  ].filter(Boolean).join("\n");
+  return `mailto:${LOUIS_MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+/** Read-only Gen Alpha list, then a note that emails gmgbrandlable. */
+function genAlphaReviewHTML() {
+  const open = state.genAlphaOpen === true;
+  const list = genAlphaQuestions();
+  const picked = state.genAlphaAbout || list[0]?.id || "";
+  return `<section class="gen-alpha-review ${open ? "open" : ""}">
+    <button type="button" class="acc-h" id="genAlphaToggle">${escapeHtml(tt("genAlphaReview"))}</button>
+    ${open ? `<div class="gen-alpha-body">
+      <p class="meta">${escapeHtml(tt("genAlphaReviewLead"))}</p>
+      ${list.length ? `<ol class="gen-alpha-list">
+        ${list.map((q) => `<li>
+          <p>${escapeHtml(q.prompt)}</p>
+          <ol class="gen-alpha-choices">
+            ${(q.choices || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}
+          </ol>
+        </li>`).join("")}
+      </ol>` : `<p class="meta">${escapeHtml(tt("genAlphaReviewEmpty"))}</p>`}
+      <div class="gen-alpha-ask">
+        <p class="field-lab">${escapeHtml(tt("questionsOnQuestions"))}</p>
+        <p class="meta">${escapeHtml(tt("questionsOnQuestionsLead"))}</p>
+        <label class="field" for="genAlphaAbout">${escapeHtml(tt("questionsOnQuestionsPick"))}</label>
+        <select id="genAlphaAbout" ${list.length ? "" : "disabled"}>
+          ${list.map((q) => `<option value="${escapeHtml(q.id)}" ${q.id === picked ? "selected" : ""}>${escapeHtml(q.prompt)}</option>`).join("")}
+        </select>
+        <label class="field" for="genAlphaNote">${escapeHtml(tt("questionsOnQuestionsNote"))}</label>
+        <textarea id="genAlphaNote" maxlength="500" rows="3">${escapeHtml(state.genAlphaNote || "")}</textarea>
+        <a class="ghost" id="genAlphaMail" href="${escapeHtml(genAlphaMailHref())}">${escapeHtml(tt("questionsOnQuestionsSend"))}</a>
+      </div>
+    </div>` : ""}
+  </section>`;
 }
 
 function profileBody() {
@@ -3105,6 +3159,7 @@ function roomDojoEntryHTML() {
       </div>
       ${hasPhoneProfile() ? `<p class="meta">${escapeHtml(p.displayName || "")}${p.email ? ` · ${escapeHtml(p.email)}` : ""}</p>` : ""}
       ${extra}
+      ${genAlphaReviewHTML()}
     </div>`;
 }
 
@@ -3206,6 +3261,7 @@ function roomBody() {
       <div class="dojo-gate-actions">
         <a class="ghost" id="goToDojo" href="${dojoHref()}">${tt("goToDojo")}</a>
       </div>
+      ${genAlphaReviewHTML()}
       <div class="player-ready" role="status">
         <b>${escapeHtml(readyName)}</b>
         <span>${tt("activeReady")}</span>
@@ -3286,6 +3342,7 @@ function roomBody() {
       </div>
       <button class="primary" id="startPhone" type="button">${tt("startPhone")}</button>
       <p class="meta">${tt("phoneLockHint")}</p>
+      ${genAlphaReviewHTML()}
     `;
   }
 
@@ -3902,6 +3959,25 @@ function bindDojoSurface() {
   document.querySelectorAll("[data-dojo]").forEach((b) => {
     b.onclick = () => dojoPick(Number(b.dataset.dojo));
   });
+  bindGenAlphaReview();
+}
+
+function bindGenAlphaReview() {
+  const toggle = $("#genAlphaToggle");
+  if (toggle) toggle.onclick = () => {
+    state.genAlphaOpen = !state.genAlphaOpen;
+    paint(true);
+  };
+  const about = $("#genAlphaAbout");
+  const note = $("#genAlphaNote");
+  const mail = $("#genAlphaMail");
+  const sync = () => {
+    if (about) state.genAlphaAbout = about.value;
+    if (note) state.genAlphaNote = note.value;
+    if (mail) mail.setAttribute("href", genAlphaMailHref());
+  };
+  if (about) about.onchange = sync;
+  if (note) note.oninput = sync;
 }
 
 function bindLobby() {

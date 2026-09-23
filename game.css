@@ -682,6 +682,36 @@ html.tv-scroll, html.tv-scroll body{
   border-color:rgba(212,175,55,.35);
   color:#f8f0e4;
 }
+.gen-alpha-review{
+  margin-top:14px;
+  border-top:1px solid rgba(212,175,55,.35);
+  padding-top:10px;
+}
+.gen-alpha-review .acc-h{width:100%}
+.gen-alpha-list,.gen-alpha-choices{margin:6px 0 0;padding-left:1.15rem}
+.gen-alpha-choices{list-style:lower-alpha}
+.gen-alpha-ask{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.gen-alpha-ask select,
+.gen-alpha-ask textarea{
+  width:100%;
+  font:inherit;
+  border-radius:8px;
+  padding:8px;
+  border:1px solid rgba(212,175,55,.35);
+  background:rgba(255,255,255,.72);
+  color:inherit;
+}
+.gen-alpha-ask .ghost{align-self:flex-start;text-decoration:none}
+.dojo-stage .gen-alpha-review,
+.dojo-stage .gen-alpha-review .meta,
+.dojo-stage .gen-alpha-review p,
+.dojo-stage .gen-alpha-review li,
+.dojo-stage .gen-alpha-review .field{color:#f3e6d0}
+.dojo-stage .gen-alpha-ask select,
+.dojo-stage .gen-alpha-ask textarea{
+  background:rgba(18,12,8,.72);
+  color:#f8f0e4;
+}
 .acc.open:has(.dojo-stage){
   border-color:rgba(212,175,55,.4);
   background:

@@ -6,15 +6,20 @@
   "shortfall": 128,
   "ageYear": 2026,
   "born": [
-    2013,
+    2010,
     2025
   ],
   "ageBrackets": [
     "10s"
   ],
-  "sendsFor": [],
+  "sendsFor": [
+    "10s"
+  ],
   "playableAges": [
-    13
+    13,
+    14,
+    15,
+    16
   ],
   "questions": [
     {

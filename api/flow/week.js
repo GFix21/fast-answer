@@ -7,6 +7,7 @@ import {
   normalizeLocale,
   listLocales,
   comedyReview,
+  louisReview,
 } from "../../lib/week-store.js";
 import { countByTier } from "../../q-and-a/map.js";
 import { listRejectLog } from "../../lib/reject-log.js";
@@ -46,6 +47,7 @@ export default async function handler(req, res) {
       statusCounts,
       publish: getPublishMeta(locale),
       comedy: comedyReview(locale, overlaid),
+      louis: louisReview(locale, overlaid),
       rejectReady,
       mappedPreviewCounts: countByTier(
         overlaid.questions

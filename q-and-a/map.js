@@ -38,8 +38,8 @@ export const GENERATION_BORN = {
   "baby-boomer": [1946, 1964],
   "gen-x": [1965, 1980],
   "gen-y": [1981, 1996],
-  "gen-z": [1997, 2012],
-  "gen-alpha": [2013, 2025],
+  "gen-z": [1997, 2009],
+  "gen-alpha": [2010, 2025],
 };
 
 function decadeBounds(bracket) {
@@ -88,7 +88,7 @@ export function bracketsSendingTo(generation, year = AGE_REFERENCE_YEAR) {
   return AGE_BRACKETS.filter((b) => generationForAge(b, year) === g);
 }
 
-/** Exact age in the reference year. 13 (born 2013) is Gen Alpha; 14 (born 2012) is Gen Z. */
+/** Exact age in the reference year. 13–16 are Gen Alpha; 17 is Gen Z. */
 export function generationForYears(age, year = AGE_REFERENCE_YEAR) {
   const n = Number(age);
   if (!Number.isFinite(n)) return "";
@@ -112,8 +112,7 @@ export function bracketForAge(age) {
 
 /**
  * Ages that may hold a profile and still fall in this generation.
- * Gen Alpha in 2026 is only 13: younger than that cannot create a profile,
- * and 14 is already Gen Z.
+ * Gen Alpha play starts at 13 and, in 2026, runs through 16.
  */
 export function playableAges(generation, year = AGE_REFERENCE_YEAR, floor = 13) {
   const g = normalizeGeneration(generation);

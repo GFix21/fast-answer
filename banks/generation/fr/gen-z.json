@@ -7,20 +7,16 @@
   "ageYear": 2026,
   "born": [
     1997,
-    2012
+    2009
   ],
   "ageBrackets": [
     "10s",
     "20s"
   ],
   "sendsFor": [
-    "10s",
     "20s"
   ],
   "playableAges": [
-    14,
-    15,
-    16,
     17,
     18,
     19,

@@ -1,12 +1,12 @@
 {
   "week": "2026-W39",
   "bot": "Crack'd Kerr",
-  "safeguard": "Safeguard",
+  "safeguard": "Louis Liberty",
   "locales": {
     "en": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T13:18:13.687Z",
+      "reviewedAt": "2026-09-23T13:36:38.453Z",
       "fresh": [
         {
           "id": "ga-joke-clock",
@@ -14,9 +14,21 @@
           "prompt": "What has hands but cannot clap?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -27,9 +39,21 @@
           "prompt": "What do you call a bear with no teeth?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -40,9 +64,21 @@
           "prompt": "Why was the math book sad?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -53,9 +89,21 @@
           "prompt": "What did the ocean say to the shore?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -66,9 +114,21 @@
           "prompt": "What is a group of flamingos called?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -79,9 +139,21 @@
           "prompt": "How many hearts does an octopus have?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -92,9 +164,21 @@
           "prompt": "Why did the scarecrow win a prize?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -105,9 +189,21 @@
           "prompt": "Why did the student eat the homework?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -120,9 +216,21 @@
           "prompt": "What has hands but cannot clap?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -133,9 +241,21 @@
           "prompt": "What do you call a bear with no teeth?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -146,9 +266,21 @@
           "prompt": "Why was the math book sad?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -159,9 +291,21 @@
           "prompt": "What did the ocean say to the shore?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -172,9 +316,21 @@
           "prompt": "What is a group of flamingos called?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -187,9 +343,21 @@
           "prompt": "What has hands but cannot clap?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -200,9 +368,21 @@
           "prompt": "What do you call a bear with no teeth?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -213,9 +393,21 @@
           "prompt": "Why was the math book sad?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -227,7 +419,7 @@
     "fr": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T13:18:13.688Z",
+      "reviewedAt": "2026-09-23T13:36:38.454Z",
       "fresh": [
         {
           "id": "ga-joke-clock",
@@ -235,9 +427,21 @@
           "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -248,9 +452,21 @@
           "prompt": "Comment appelle-t-on un ours sans dents ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -261,9 +477,21 @@
           "prompt": "Pourquoi le livre de maths est-il triste ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -274,9 +502,21 @@
           "prompt": "Que dit l'océan à la plage ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -287,9 +527,21 @@
           "prompt": "Comment appelle-t-on un groupe de flamants roses ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -300,9 +552,21 @@
           "prompt": "Combien de cœurs a une pieuvre ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -313,9 +577,21 @@
           "prompt": "Pourquoi l'épouvantail a-t-il reçu un prix ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -326,9 +602,21 @@
           "prompt": "Pourquoi l'élève a-t-il mangé ses devoirs ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -341,9 +629,21 @@
           "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -354,9 +654,21 @@
           "prompt": "Comment appelle-t-on un ours sans dents ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -367,9 +679,21 @@
           "prompt": "Pourquoi le livre de maths est-il triste ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -380,9 +704,21 @@
           "prompt": "Que dit l'océan à la plage ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -393,9 +729,21 @@
           "prompt": "Comment appelle-t-on un groupe de flamants roses ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -408,9 +756,21 @@
           "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -421,9 +781,21 @@
           "prompt": "Comment appelle-t-on un ours sans dents ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -434,9 +806,21 @@
           "prompt": "Pourquoi le livre de maths est-il triste ?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -448,7 +832,7 @@
     "de": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T13:18:13.688Z",
+      "reviewedAt": "2026-09-23T13:36:38.454Z",
       "fresh": [
         {
           "id": "ga-joke-clock",
@@ -456,9 +840,21 @@
           "prompt": "Was hat Zeiger, kann aber nicht klatschen?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -469,9 +865,21 @@
           "prompt": "Wie nennt man einen Bären ohne Zähne?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -482,9 +890,21 @@
           "prompt": "Warum ist das Mathebuch traurig?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -495,9 +915,21 @@
           "prompt": "Was sagt das Meer zum Strand?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -508,9 +940,21 @@
           "prompt": "Wie nennt man eine Gruppe Flamingos?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -521,9 +965,21 @@
           "prompt": "Wie viele Herzen hat ein Oktopus?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -534,9 +990,21 @@
           "prompt": "Warum hat die Vogelscheuche einen Preis bekommen?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -547,9 +1015,21 @@
           "prompt": "Warum hat die Schülerin die Hausaufgaben gegessen?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -562,9 +1042,21 @@
           "prompt": "Was hat Zeiger, kann aber nicht klatschen?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -575,9 +1067,21 @@
           "prompt": "Wie nennt man einen Bären ohne Zähne?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -588,9 +1092,21 @@
           "prompt": "Warum ist das Mathebuch traurig?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -601,9 +1117,21 @@
           "prompt": "Was sagt das Meer zum Strand?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -614,9 +1142,21 @@
           "prompt": "Wie nennt man eine Gruppe Flamingos?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -629,9 +1169,21 @@
           "prompt": "Was hat Zeiger, kann aber nicht klatschen?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -642,9 +1194,21 @@
           "prompt": "Wie nennt man einen Bären ohne Zähne?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true
@@ -655,9 +1219,21 @@
           "prompt": "Warum ist das Mathebuch traurig?",
           "rating": 90,
           "safety": {
-            "bot": "Safeguard",
+            "bot": "Louis Liberty",
             "ok": true,
-            "reasons": []
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
           },
           "fresh": true,
           "funny": true

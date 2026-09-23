@@ -76,12 +76,15 @@ const byAge = [
   { id: "elder", name: "Elder", ageBracket: "90s", generation: "gen-alpha" },
 ];
 const aged = dealRoundRobin(byAge, packs, 3);
-assert.deepEqual(aged.questions.map((q) => q.fromGeneration), ["gen-z", "gen-y", "silent-generation"]);
+assert.deepEqual(aged.questions.map((q) => q.fromGeneration), ["gen-alpha", "gen-y", "silent-generation"]);
 assert.equal(generationForSeat({ ageBracket: "50s", generation: "gen-z" }), "gen-x");
 assert.equal(generationForYears(13), "gen-alpha");
-assert.equal(generationForYears(14), "gen-z");
+assert.equal(generationForYears(14), "gen-alpha");
+assert.equal(generationForYears(16), "gen-alpha");
+assert.equal(generationForYears(17), "gen-z");
 assert.equal(generationForSeat({ age: 13, ageBracket: "10s", generation: "gen-z" }), "gen-alpha");
-assert.deepEqual(playableAges("gen-alpha"), [13]);
+assert.equal(generationForSeat({ age: 16, ageBracket: "10s", generation: "gen-z" }), "gen-alpha");
+assert.deepEqual(playableAges("gen-alpha"), [13, 14, 15, 16]);
 const alphaSeat = dealRoundRobin(
   [{ id: "kid", name: "Kid", age: 13, ageBracket: "10s", generation: "gen-z" }],
   packs,
@@ -90,7 +93,7 @@ const alphaSeat = dealRoundRobin(
 assert.equal(alphaSeat.questions[0].fromGeneration, "gen-alpha");
 assert.equal(generationForSeat({ generation: "gen-alpha" }), "gen-alpha");
 assert.deepEqual(AGE_BRACKETS.map((b) => generationForAge(b)), [
-  "gen-z",
+  "gen-alpha",
   "gen-z",
   "gen-y",
   "gen-y",
@@ -108,7 +111,7 @@ for (const b of AGE_BRACKETS) {
   sent.set(b, g);
 }
 assert.equal(sent.size, AGE_BRACKETS.length);
-assert.deepEqual(bracketsSendingTo("gen-alpha"), []);
+assert.deepEqual(bracketsSendingTo("gen-alpha"), ["10s"]);
 assert.deepEqual(bracketsSendingTo("multi-gen"), []);
 assert.deepEqual(ageBracketsForGeneration("gen-alpha"), ["10s"]);
 assert.deepEqual(ageBracketsForGeneration("gen-x"), ["40s", "50s", "60s"]);

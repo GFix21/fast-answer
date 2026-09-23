@@ -1,10 +1,10 @@
-import { reviewForChildren } from "../lib/safeguard.js";
+import { reviewForChildren } from "./louis-liberty.js";
 
 /**
  * Crack'd Kerr is the Q&A comedy bot.
  * Each week it reads the new funny questions and the highest-scoring ones,
  * and names a short viral set from the bank. It does not copy jokes from
- * outside Q&A. A question Safeguard rejects is not rated and is not viral.
+ * outside Q&A. A question Louis Liberty rejects is not rated and is not viral.
  */
 
 const MEAN = /\b(stupid|ugly|dumb|loser|hate|shut up|idiot)\b/i;

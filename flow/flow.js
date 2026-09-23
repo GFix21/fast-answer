@@ -300,14 +300,25 @@ function render() {
       (q) => state.filterTier === "all" || q.tier === state.filterTier,
     );
     const comedy = state.week?.comedy;
+    const louis = state.week?.louis;
     const comedyLines = (rows) => (rows || []).length
       ? rows.map((r) => `<li><b>${esc(r.rating)}</b> · ${esc(r.prompt)}</li>`).join("")
       : `<li class="mut">None this week.</li>`;
+    const louisNotes = (louis?.shaped || [])
+      .map((r) => (r.notes || []).find((n) => /kind line/i.test(n)))
+      .filter(Boolean);
     panel.innerHTML = `
+      ${louis ? `<div class="card" id="louis-liberty">
+        <h2>${esc(louis.bot)}</h2>
+        <p class="mut">Q&A safeguard · ages 13–16. Child psychology and human behaviour: fun, happiness, and a non-threatening shape.</p>
+        <p class="mut">${(louis.shaped || []).length} structured · ${(louis.held || []).length} held. Notes can go to ${esc(louis.mail)}.</p>
+        ${(louis.held || []).length ? `<ul>${louis.held.map((r) => `<li>${esc(r.prompt)} · ${esc((r.reasons || []).join(", "))}</li>`).join("")}</ul>` : ""}
+        ${louisNotes.length ? `<p class="mut">${louisNotes.length} still want a kind line so a miss stays light.</p>` : ""}
+      </div>` : ""}
       ${comedy ? `<div class="card" id="comedy-bot">
         <h2>${esc(comedy.bot)}</h2>
         <p class="mut">Q&A comedy bot · week ${esc(comedy.week)}. New funny questions, then the highest rated.</p>
-        ${(comedy.blocked || []).length ? `<p class="mut">Safeguard held ${comedy.blocked.length}.</p>` : ""}
+        ${(comedy.blocked || []).length ? `<p class="mut">${esc(louis?.bot || "Louis Liberty")} held ${comedy.blocked.length}.</p>` : ""}
         <h3 class="tier-h">Viral this week</h3>
         <ul>${comedyLines(comedy.viral)}</ul>
         <h3 class="tier-h">Highest rated</h3>
