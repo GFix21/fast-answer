@@ -350,7 +350,7 @@
       "topic": "culture",
       "generation": "silent-generation",
       "categoryTitle": "Copper Coat",
-      "prompt": "What colour is the Statue of Liberty today?",
+      "prompt": "Two friends are walking. One asks the other, \"What colour is the Statue of Liberty today?\" The other answers…",
       "choices": [
         "Grey",
         "White",
@@ -359,7 +359,11 @@
       ],
       "correctIndex": 3,
       "banterHint": "The copper coat changed after years of weather.",
-      "structure": "colour"
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour"
     }
   ]
 }

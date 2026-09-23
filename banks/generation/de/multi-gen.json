@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "de",
   "target": 150,
-  "held": 16,
-  "shortfall": 134,
+  "held": 17,
+  "shortfall": 133,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -264,23 +264,47 @@
       "structure": "colour"
     },
     {
-      "id": "cq-e-multi-renegade",
+      "id": "cq-e-multi-titanic",
       "tier": "easy",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Weg vom Aufbau",
-      "prompt": "Welche Farbe hat ein Witz, der nicht stillsitzt?",
+      "categoryTitle": "Unterwegs",
+      "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Wann ist die Titanic gesunken?“ Der andere antwortet…",
       "choices": [
-        "Rot",
+        "15. April 1912",
+        "15. April 1911",
+        "7. Mai 1915",
+        "16. Dezember 1912"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die andere Person hat die gestellte Frage beantwortet.",
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "when",
+      "fromStructure": "when"
+    },
+    {
+      "id": "cq-h-multi-titanic-hull",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Gleicher Weg",
+      "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hatte der Rumpf der Titanic?“ Der andere antwortet…",
+      "choices": [
+        "Weiß",
         "Grün",
-        "Blau",
-        "Er hat die Frage verlassen"
+        "Rot",
+        "Schwarz"
       ],
       "correctIndex": 3,
-      "banterHint": "Die anderen Antworten blieben im Farbkasten.",
+      "banterHint": "Gleicher Weg. Andere Struktur. Der Rumpf war nicht das Datum.",
       "funny": true,
-      "structure": "renegade-joke",
-      "straight": "colour"
+      "humorous": true,
+      "renegade": true,
+      "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "when"
     }
   ]
 }

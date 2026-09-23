@@ -1,22 +1,59 @@
 import { reviewForChildren } from "./louis-liberty.js";
-import { PLAY_TIERS, STRUCTURES, JOKE_STRUCTURE, RENEGADE_JOKE_STRUCTURE, isRenegadeJoke } from "./bots/structures.js";
+import { PLAY_TIERS, JOKE_STRUCTURE, isRenegadeJoke } from "./bots/structures.js";
 
 /**
  * Crack'd Kerr is the Q&A comedy bot.
- * He has two question structures: a joke, and a renegade joke.
- * A joke asks for the punchline. A renegade joke starts as a straight
- * question and the correct choice leaves that shape. A show may include
- * one renegade joke. He does not copy jokes from sites, wikis, or X.
+ * Creators send a structured question. He injects a dialogue around it.
+ * The correct choice stays the outcome of that structure.
+ * A renegade injection plays a different structure, so the outcome changes
+ * with the structure he played. He does not copy jokes from sites, wikis, or X.
  * A question Louis Liberty rejects is not rated.
  */
 
-export { isRenegadeJoke, JOKE_STRUCTURE, RENEGADE_JOKE_STRUCTURE };
+export { isRenegadeJoke, JOKE_STRUCTURE };
 
-/** Crack'd owns these two shapes. */
+/** How Crack'd sends a creator question back. */
 export const COMEDY_STRUCTURES = {
-  [JOKE_STRUCTURE]: STRUCTURES[JOKE_STRUCTURE],
-  [RENEGADE_JOKE_STRUCTURE]: STRUCTURES[RENEGADE_JOKE_STRUCTURE],
+  dialogue: {
+    owner: "Crack'd Kerr",
+    note: "Two people. One asks the creator's question. The other gives the real answer.",
+  },
+  renegade: {
+    owner: "Crack'd Kerr",
+    note: "He plays a different structure from the one the creator sent. The correct choice is that structure's fact.",
+  },
 };
+
+const DIALOGUE = {
+  en: (ask) => `Two friends are walking. One asks the other, "${ask}" The other answers…`,
+  fr: (ask) => `Deux amis se promènent. L'un demande à l'autre : « ${ask} » L'autre répond…`,
+  "fr-CA": (ask) => `Deux amis se promènent. L'un demande à l'autre : « ${ask} » L'autre répond…`,
+  de: (ask) => `Zwei Freunde gehen spazieren. Einer fragt den anderen: „${ask}“ Der andere antwortet…`,
+};
+
+/**
+ * Joke injection. The choices and correctIndex stay the creator's.
+ * `playedStructure` is the structure that produced this outcome.
+ * It is renegade when that structure is not the one the creator sent.
+ */
+export function injectHumor(q, { locale = "en", playedStructure, renegade = false } = {}) {
+  const fromStructure = q?.fromStructure || q?.structure || null;
+  const structure = playedStructure || fromStructure;
+  const frame = DIALOGUE[locale] || DIALOGUE.en;
+  const ask = String(q?.prompt || "").trim();
+  const playedOther = Boolean(structure && fromStructure && structure !== fromStructure);
+  return {
+    ...q,
+    prompt: frame(ask),
+    humorous: true,
+    funny: true,
+    injection: "dialogue",
+    technique: q?.technique || "dialogue",
+    fromStructure,
+    structure,
+    renegade: renegade === true || playedOther,
+  };
+}
 
 const MEAN = /\b(stupid|ugly|dumb|loser|hate|shut up|idiot)\b/i;
 const VIRAL_MIN = 70;
@@ -26,6 +63,7 @@ export const JOKE_TECHNIQUES = {
   wordplay: "One word can mean two things. The punchline is the second meaning, and it stays kind.",
   misdirection: "The setup points one way. The answer steps aside without mocking anyone.",
   callback: "A later line returns to the first picture, so the joke feels finished.",
+  dialogue: "Two people. One asks the creator's question. The other gives the real answer.",
 };
 
 export const COMEDY_BOT = "Crack'd Kerr";
@@ -50,7 +88,8 @@ export function scoreJoke(q) {
   const choices = Array.isArray(q?.choices) ? q.choices.join(" ") : "";
   let rating = 60;
   if (prompt.includes("?")) rating += 10;
-  if (prompt.length > 0 && prompt.length <= 90) rating += 10;
+  const lengthCap = q?.humorous === true ? 180 : 90;
+  if (prompt.length > 0 && prompt.length <= lengthCap) rating += 10;
   if (hint.length >= 8) rating += 10;
   if (JOKE_TECHNIQUES[q?.technique]) rating += 5;
   if (MEAN.test(`${prompt} ${hint} ${choices}`)) rating -= 50;
@@ -69,7 +108,9 @@ function row(q, week) {
     fresh: q.addedWeek === week,
     funny: q.funny === true,
     structure: q.structure || (q.funny === true ? JOKE_STRUCTURE : ""),
-    straight: q.straight || "",
+    fromStructure: q.fromStructure || "",
+    humorous: q.humorous === true,
+    renegade: q.renegade === true,
   };
 }
 

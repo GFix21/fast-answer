@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "en",
   "target": 150,
-  "held": 16,
-  "shortfall": 134,
+  "held": 17,
+  "shortfall": 133,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -264,23 +264,47 @@
       "structure": "colour"
     },
     {
-      "id": "cq-e-multi-renegade",
+      "id": "cq-e-multi-titanic",
       "tier": "easy",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Off the Setup",
-      "prompt": "What colour is a joke that will not sit still?",
+      "categoryTitle": "On the Walk",
+      "prompt": "Two friends are walking. One asks the other, \"When did the Titanic sink?\" The other answers…",
       "choices": [
-        "Red",
+        "April 15, 1912",
+        "April 15, 1911",
+        "May 7, 1915",
+        "December 16, 1912"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The other person answered the question that was asked.",
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "when",
+      "fromStructure": "when"
+    },
+    {
+      "id": "cq-h-multi-titanic-hull",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Same Walk",
+      "prompt": "Two friends are walking. One asks the other, \"What colour was the hull of the Titanic?\" The other answers…",
+      "choices": [
+        "White",
         "Green",
-        "Blue",
-        "It left the setup"
+        "Red",
+        "Black"
       ],
       "correctIndex": 3,
-      "banterHint": "The other answers stayed in the paint box.",
+      "banterHint": "Same walk. Different structure. The hull was not the date.",
       "funny": true,
-      "structure": "renegade-joke",
-      "straight": "colour"
+      "humorous": true,
+      "renegade": true,
+      "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "when"
     }
   ]
 }

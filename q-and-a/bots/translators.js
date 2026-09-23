@@ -1,7 +1,9 @@
 /**
  * One French set for France, one French set for Quebec, and one German set.
  * They keep the same id, the same choice order, and the same correctIndex as English.
+ * A humorous question is wrapped by Crack'd Kerr after the straight ask is translated.
  */
+import { injectHumor } from "../crackd-kerr.js";
 
 export const FRANCE_BOT = "French (France)";
 export const QUEBEC_BOT = "French (Quebec)";
@@ -17,7 +19,7 @@ export function translateQuestion(q, locale) {
   const text = q.text || {};
   const pack = text[locale];
   if (!pack) return null;
-  return {
+  const flat = {
     id: q.id,
     tier: q.tier,
     topic: q.topic,
@@ -28,11 +30,31 @@ export function translateQuestion(q, locale) {
     correctIndex: q.correctIndex,
     banterHint: pack.banterHint || null,
     funny: q.funny === true,
+    humorous: q.humorous === true,
+    renegade: q.renegade === true,
+    injection: q.injection || null,
     technique: q.technique || null,
     structure: q.structure || (q.funny === true ? "joke" : null),
+    fromStructure: q.fromStructure || null,
     straight: q.straight || null,
     addedWeek: q.addedWeek || null,
     sources: q.sources || [],
     status: "pending",
   };
+  if (q.humorous === true) {
+    const injected = injectHumor(flat, {
+      locale,
+      playedStructure: q.structure,
+      renegade: q.renegade === true,
+    });
+    flat.prompt = injected.prompt;
+    flat.humorous = true;
+    flat.funny = true;
+    flat.injection = "dialogue";
+    flat.technique = q.technique || "dialogue";
+    flat.fromStructure = q.fromStructure || q.structure;
+    flat.structure = injected.structure;
+    flat.renegade = injected.renegade;
+  }
+  return flat;
 }

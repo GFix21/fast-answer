@@ -6,7 +6,7 @@
     "en": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T15:50:53.254Z",
+      "reviewedAt": "2026-09-23T16:47:35.233Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -33,7 +33,38 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Two friends are walking. One asks the other, \"What colour is the Statue of Liberty today?\" The other answers…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-record",
@@ -60,7 +91,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-cassette",
@@ -87,7 +120,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-inbox",
@@ -114,7 +149,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-emoji",
@@ -141,7 +178,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-alpha-cat",
@@ -168,7 +207,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-alpha-backpack",
@@ -195,7 +236,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-alpha-pencil",
@@ -222,7 +265,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-alpha-bookmark",
@@ -249,7 +294,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-alpha-frog",
@@ -276,7 +323,9 @@
           "fresh": true,
           "funny": true,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-compass",
@@ -303,12 +352,14 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
-          "id": "cq-e-multi-renegade",
+          "id": "cq-e-multi-titanic",
           "generation": "multi-gen",
-          "prompt": "What colour is a joke that will not sit still?",
+          "prompt": "Two friends are walking. One asks the other, \"When did the Titanic sink?\" The other answers…",
           "rating": 95,
           "safety": {
             "bot": "Louis Liberty",
@@ -329,8 +380,39 @@
           },
           "fresh": true,
           "funny": true,
-          "structure": "renegade-joke",
-          "straight": "colour"
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-titanic-hull",
+          "generation": "multi-gen",
+          "prompt": "Two friends are walking. One asks the other, \"What colour was the hull of the Titanic?\" The other answers…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": true
         },
         {
           "id": "cq-e-silent-roar",
@@ -357,7 +439,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-silent-vote",
@@ -384,7 +468,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-silent-chamberlain",
@@ -411,7 +497,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-silent-assembly",
@@ -438,34 +526,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
-        },
-        {
-          "id": "cq-e-silent-liberty",
-          "generation": "silent-generation",
-          "prompt": "What colour is the Statue of Liberty today?",
-          "rating": 90,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": false,
-          "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-boomer-gaye",
@@ -492,7 +555,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-boomer-skylab",
@@ -519,7 +584,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-sesame",
@@ -546,7 +613,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-earthday",
@@ -573,7 +642,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-boomer-submarine",
@@ -600,7 +671,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-gameboy",
@@ -627,7 +700,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-pdf",
@@ -654,7 +729,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genx-ram",
@@ -681,7 +758,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genx-cd",
@@ -708,7 +787,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genx-blinky",
@@ -735,7 +816,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-geny-wiki",
@@ -762,7 +845,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-geny-sms",
@@ -789,7 +874,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-iphone",
@@ -816,7 +903,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-facebook",
@@ -843,7 +932,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-ocean",
@@ -870,7 +961,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-gif",
@@ -897,7 +990,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-vr",
@@ -924,7 +1019,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genz-bytedance",
@@ -951,7 +1048,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genz-hashtag",
@@ -978,7 +1077,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-spotify",
@@ -1005,7 +1106,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-multi-guitar",
@@ -1032,7 +1135,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-multi-boil",
@@ -1059,7 +1164,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-photo",
@@ -1086,7 +1193,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-pitch",
@@ -1113,7 +1222,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-eclipse",
@@ -1140,7 +1251,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-clock",
@@ -1167,7 +1280,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-bear",
@@ -1194,7 +1309,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-math",
@@ -1221,7 +1338,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-ocean",
@@ -1248,7 +1367,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-flamingo",
@@ -1275,7 +1396,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-octopus",
@@ -1302,7 +1425,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-scarecrow",
@@ -1329,7 +1454,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-homework",
@@ -1356,7 +1483,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "highestRated": [
@@ -1385,7 +1514,38 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Two friends are walking. One asks the other, \"What colour is the Statue of Liberty today?\" The other answers…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-record",
@@ -1412,7 +1572,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-cassette",
@@ -1439,7 +1601,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-inbox",
@@ -1466,34 +1630,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
-        },
-        {
-          "id": "cq-e-genz-emoji",
-          "generation": "gen-z",
-          "prompt": "Why did the emoji wink?",
-          "rating": 95,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": true,
-          "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "viral": [
@@ -1522,7 +1661,38 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Two friends are walking. One asks the other, \"What colour is the Statue of Liberty today?\" The other answers…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-record",
@@ -1549,34 +1719,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
-        },
-        {
-          "id": "cq-e-genx-cassette",
-          "generation": "gen-x",
-          "prompt": "Why did the cassette feel shy?",
-          "rating": 95,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": true,
-          "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "blocked": [],
@@ -1585,7 +1730,7 @@
     "fr": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T15:50:53.256Z",
+      "reviewedAt": "2026-09-23T16:47:35.234Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -1612,7 +1757,38 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur est la Statue de la Liberté aujourd'hui ? » L'autre répond…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-record",
@@ -1639,7 +1815,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-cassette",
@@ -1666,7 +1844,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-inbox",
@@ -1693,7 +1873,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-emoji",
@@ -1720,7 +1902,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-alpha-cat",
@@ -1747,7 +1931,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-alpha-backpack",
@@ -1774,7 +1960,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-alpha-pencil",
@@ -1801,7 +1989,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-alpha-bookmark",
@@ -1828,7 +2018,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-alpha-frog",
@@ -1855,7 +2047,9 @@
           "fresh": true,
           "funny": true,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-compass",
@@ -1882,12 +2076,14 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
-          "id": "cq-e-multi-renegade",
+          "id": "cq-e-multi-titanic",
           "generation": "multi-gen",
-          "prompt": "De quelle couleur est une blague qui ne tient pas en place ?",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « Quand le Titanic a-t-il coulé ? » L'autre répond…",
           "rating": 95,
           "safety": {
             "bot": "Louis Liberty",
@@ -1908,8 +2104,39 @@
           },
           "fresh": true,
           "funny": true,
-          "structure": "renegade-joke",
-          "straight": "colour"
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-titanic-hull",
+          "generation": "multi-gen",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur était la coque du Titanic ? » L'autre répond…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": true
         },
         {
           "id": "cq-e-silent-roar",
@@ -1936,7 +2163,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-silent-assembly",
@@ -1963,34 +2192,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
-        },
-        {
-          "id": "cq-e-silent-liberty",
-          "generation": "silent-generation",
-          "prompt": "De quelle couleur est la Statue de la Liberté aujourd'hui ?",
-          "rating": 90,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": false,
-          "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-boomer-gaye",
@@ -2017,7 +2221,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-boomer-skylab",
@@ -2044,7 +2250,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-sesame",
@@ -2071,7 +2279,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-earthday",
@@ -2098,7 +2308,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-boomer-submarine",
@@ -2125,7 +2337,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-gameboy",
@@ -2152,7 +2366,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-pdf",
@@ -2179,7 +2395,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genx-ram",
@@ -2206,7 +2424,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genx-cd",
@@ -2233,7 +2453,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genx-blinky",
@@ -2260,7 +2482,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-geny-wiki",
@@ -2287,7 +2511,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-geny-sms",
@@ -2314,7 +2540,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-iphone",
@@ -2341,7 +2569,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-ocean",
@@ -2368,7 +2598,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-gif",
@@ -2395,7 +2627,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-vr",
@@ -2422,7 +2656,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genz-bytedance",
@@ -2449,7 +2685,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genz-hashtag",
@@ -2476,7 +2714,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-spotify",
@@ -2503,7 +2743,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-multi-guitar",
@@ -2530,7 +2772,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-multi-boil",
@@ -2557,7 +2801,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-photo",
@@ -2584,7 +2830,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-pitch",
@@ -2611,7 +2859,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-eclipse",
@@ -2638,7 +2888,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-clock",
@@ -2665,7 +2917,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-bear",
@@ -2692,7 +2946,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-math",
@@ -2719,7 +2975,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-ocean",
@@ -2746,7 +3004,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-flamingo",
@@ -2773,7 +3033,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-octopus",
@@ -2800,7 +3062,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-scarecrow",
@@ -2827,7 +3091,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-homework",
@@ -2854,7 +3120,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-silent-vote",
@@ -2881,7 +3149,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-silent-chamberlain",
@@ -2908,7 +3178,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-facebook",
@@ -2935,7 +3207,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "highestRated": [
@@ -2964,7 +3238,38 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur est la Statue de la Liberté aujourd'hui ? » L'autre répond…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-record",
@@ -2991,7 +3296,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-cassette",
@@ -3018,7 +3325,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-inbox",
@@ -3045,34 +3354,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
-        },
-        {
-          "id": "cq-e-genz-emoji",
-          "generation": "gen-z",
-          "prompt": "Pourquoi l'emoji a-t-il fait un clin d'œil ?",
-          "rating": 95,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": true,
-          "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "viral": [
@@ -3101,7 +3385,38 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur est la Statue de la Liberté aujourd'hui ? » L'autre répond…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-record",
@@ -3128,34 +3443,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
-        },
-        {
-          "id": "cq-e-genx-cassette",
-          "generation": "gen-x",
-          "prompt": "Pourquoi la cassette se sentait-elle timide ?",
-          "rating": 95,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": true,
-          "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "blocked": [],
@@ -3164,7 +3454,7 @@
     "de": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T15:50:53.256Z",
+      "reviewedAt": "2026-09-23T16:47:35.235Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -3191,7 +3481,38 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hat die Freiheitsstatue heute?“ Der andere antwortet…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-record",
@@ -3218,7 +3539,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-cassette",
@@ -3245,7 +3568,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-inbox",
@@ -3272,7 +3597,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-emoji",
@@ -3299,7 +3626,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-alpha-cat",
@@ -3326,7 +3655,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-alpha-backpack",
@@ -3353,7 +3684,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-alpha-pencil",
@@ -3380,7 +3713,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-alpha-bookmark",
@@ -3407,7 +3742,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-alpha-frog",
@@ -3434,7 +3771,9 @@
           "fresh": true,
           "funny": true,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-compass",
@@ -3461,12 +3800,14 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
-          "id": "cq-e-multi-renegade",
+          "id": "cq-e-multi-titanic",
           "generation": "multi-gen",
-          "prompt": "Welche Farbe hat ein Witz, der nicht stillsitzt?",
+          "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Wann ist die Titanic gesunken?“ Der andere antwortet…",
           "rating": 95,
           "safety": {
             "bot": "Louis Liberty",
@@ -3487,8 +3828,39 @@
           },
           "fresh": true,
           "funny": true,
-          "structure": "renegade-joke",
-          "straight": "colour"
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-titanic-hull",
+          "generation": "multi-gen",
+          "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hatte der Rumpf der Titanic?“ Der andere antwortet…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": true
         },
         {
           "id": "cq-e-silent-roar",
@@ -3515,7 +3887,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-silent-vote",
@@ -3542,7 +3916,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-silent-assembly",
@@ -3569,34 +3945,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
-        },
-        {
-          "id": "cq-e-silent-liberty",
-          "generation": "silent-generation",
-          "prompt": "Welche Farbe hat die Freiheitsstatue heute?",
-          "rating": 90,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": false,
-          "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-boomer-gaye",
@@ -3623,7 +3974,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-boomer-skylab",
@@ -3650,7 +4003,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-sesame",
@@ -3677,7 +4032,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-earthday",
@@ -3704,7 +4061,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-boomer-submarine",
@@ -3731,7 +4090,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-gameboy",
@@ -3758,7 +4119,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-pdf",
@@ -3785,7 +4148,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genx-ram",
@@ -3812,7 +4177,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genx-cd",
@@ -3839,7 +4206,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genx-blinky",
@@ -3866,7 +4235,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-geny-wiki",
@@ -3893,7 +4264,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-geny-sms",
@@ -3920,7 +4293,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-iphone",
@@ -3947,7 +4322,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-facebook",
@@ -3974,7 +4351,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-ocean",
@@ -4001,7 +4380,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-gif",
@@ -4028,7 +4409,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-vr",
@@ -4055,7 +4438,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genz-bytedance",
@@ -4082,7 +4467,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-genz-hashtag",
@@ -4109,7 +4496,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genz-spotify",
@@ -4136,7 +4525,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-multi-guitar",
@@ -4163,7 +4554,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-multi-boil",
@@ -4190,7 +4583,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-photo",
@@ -4217,7 +4612,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-pitch",
@@ -4244,7 +4641,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-multi-eclipse",
@@ -4271,7 +4670,9 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-clock",
@@ -4298,7 +4699,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-bear",
@@ -4325,7 +4728,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-math",
@@ -4352,7 +4757,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-ocean",
@@ -4379,7 +4786,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-flamingo",
@@ -4406,7 +4815,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-octopus",
@@ -4433,7 +4844,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-scarecrow",
@@ -4460,7 +4873,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "ga-joke-homework",
@@ -4487,7 +4902,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-silent-chamberlain",
@@ -4514,7 +4931,9 @@
           "fresh": true,
           "funny": false,
           "structure": "",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "highestRated": [
@@ -4543,7 +4962,38 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hat die Freiheitsstatue heute?“ Der andere antwortet…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-record",
@@ -4570,7 +5020,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-e-genx-cassette",
@@ -4597,7 +5049,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         },
         {
           "id": "cq-h-geny-inbox",
@@ -4624,34 +5078,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
-        },
-        {
-          "id": "cq-e-genz-emoji",
-          "generation": "gen-z",
-          "prompt": "Warum zwinkerte das Emoji?",
-          "rating": 95,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": true,
-          "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "viral": [
@@ -4680,7 +5109,38 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hat die Freiheitsstatue heute?“ Der andere antwortet…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
         },
         {
           "id": "cq-h-boomer-record",
@@ -4707,34 +5167,9 @@
           "fresh": true,
           "funny": true,
           "structure": "joke",
-          "straight": ""
-        },
-        {
-          "id": "cq-e-genx-cassette",
-          "generation": "gen-x",
-          "prompt": "Warum war die Kassette schüchtern?",
-          "rating": 95,
-          "safety": {
-            "bot": "Louis Liberty",
-            "ok": true,
-            "reasons": [],
-            "shape": {
-              "fun": true,
-              "happy": true,
-              "calm": true,
-              "clear": true
-            },
-            "notes": [
-              "One short question with concrete choices.",
-              "The ask stays playful, which suits 13–16.",
-              "The extra line is kind, so a miss still feels light.",
-              "Nothing here threatens, shames, or asks for anything personal."
-            ]
-          },
-          "fresh": true,
-          "funny": true,
-          "structure": "joke",
-          "straight": ""
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
         }
       ],
       "blocked": [],

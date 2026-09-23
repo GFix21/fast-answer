@@ -221,7 +221,11 @@ export function toFastAnswerQuestion(q) {
     banterHint: q.banterHint ?? null,
   };
   if (q.funny === true) base.funny = true;
+  if (q.humorous === true) base.humorous = true;
+  if (q.renegade === true) base.renegade = true;
+  if (q.injection) base.injection = q.injection;
   if (q.structure) base.structure = q.structure;
+  if (q.fromStructure) base.fromStructure = q.fromStructure;
   if (q.straight) base.straight = q.straight;
   return shuffleChoicesDeterministic(base);
 }

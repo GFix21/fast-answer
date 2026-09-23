@@ -350,7 +350,7 @@
       "topic": "culture",
       "generation": "silent-generation",
       "categoryTitle": "Kupfermantel",
-      "prompt": "Welche Farbe hat die Freiheitsstatue heute?",
+      "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hat die Freiheitsstatue heute?“ Der andere antwortet…",
       "choices": [
         "Grau",
         "Weiß",
@@ -359,7 +359,11 @@
       ],
       "correctIndex": 3,
       "banterHint": "Das Kupfer hat sich nach Jahren Wetter verändert.",
-      "structure": "colour"
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour"
     }
   ]
 }

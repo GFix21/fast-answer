@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "fr",
   "target": 150,
-  "held": 16,
-  "shortfall": 134,
+  "held": 17,
+  "shortfall": 133,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -264,23 +264,47 @@
       "structure": "colour"
     },
     {
-      "id": "cq-e-multi-renegade",
+      "id": "cq-e-multi-titanic",
       "tier": "easy",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Hors question",
-      "prompt": "De quelle couleur est une blague qui ne tient pas en place ?",
+      "categoryTitle": "En marchant",
+      "prompt": "Deux amis se promènent. L'un demande à l'autre : « Quand le Titanic a-t-il coulé ? » L'autre répond…",
       "choices": [
-        "Rouge",
+        "15 avril 1912",
+        "15 avril 1911",
+        "7 mai 1915",
+        "16 décembre 1912"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'autre a répondu à la question posée.",
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "when",
+      "fromStructure": "when"
+    },
+    {
+      "id": "cq-h-multi-titanic-hull",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Même marche",
+      "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur était la coque du Titanic ? » L'autre répond…",
+      "choices": [
+        "Blanc",
         "Vert",
-        "Bleu",
-        "Elle a quitté la question"
+        "Rouge",
+        "Noir"
       ],
       "correctIndex": 3,
-      "banterHint": "Les autres réponses sont restées dans la boîte de peinture.",
+      "banterHint": "Même marche. Autre structure. La coque n'était pas la date.",
       "funny": true,
-      "structure": "renegade-joke",
-      "straight": "colour"
+      "humorous": true,
+      "renegade": true,
+      "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "when"
     }
   ]
 }

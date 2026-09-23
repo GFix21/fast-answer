@@ -350,7 +350,7 @@
       "topic": "culture",
       "generation": "silent-generation",
       "categoryTitle": "Manteau de cuivre",
-      "prompt": "De quelle couleur est la Statue de la Liberté aujourd'hui ?",
+      "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur est la Statue de la Liberté aujourd'hui ? » L'autre répond…",
       "choices": [
         "Gris",
         "Blanc",
@@ -359,7 +359,11 @@
       ],
       "correctIndex": 3,
       "banterHint": "Le cuivre a changé après des années de temps.",
-      "structure": "colour"
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour"
     }
   ]
 }

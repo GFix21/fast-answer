@@ -4,7 +4,7 @@
  * asks what colour something is.
  */
 
-import { isColourPrompt, isRenegadeJoke, PLAY_TIERS, STRUCTURES } from "./structures.js";
+import { isColourPrompt, isRenegadeJoke, isWhenPrompt, PLAY_TIERS, STRUCTURES } from "./structures.js";
 
 const TIERS = new Set(["easy", "hard", "difficult", "extreme"]);
 
@@ -22,16 +22,18 @@ export function checkQuestion(q) {
   if (!TIERS.has(q?.tier)) reasons.push("tier");
   if (!q?.generation) reasons.push("generation");
   if (q?.funny === true && !PLAY_TIERS.has(q?.tier)) reasons.push("play-tier");
-  if ((q?.structure === "joke" || isRenegadeJoke(q)) && q?.funny !== true) reasons.push("joke-flag");
+  if (q?.structure === "joke" && q?.funny !== true) reasons.push("joke-flag");
   if (q?.funny === true && !q?.technique) reasons.push("technique");
   if (q?.structure === "colour" && !isColourPrompt(q?.prompt)) reasons.push("colour-prompt");
+  if (q?.structure === "when" && !isWhenPrompt(q?.prompt)) reasons.push("when-prompt");
+  if (q?.humorous === true && q?.injection !== "dialogue") reasons.push("injection");
   if (isRenegadeJoke(q)) {
-    const straight = q?.straight;
-    if (!straight || !STRUCTURES[straight] || straight === "joke" || straight === "renegade-joke") {
-      reasons.push("renegade-straight");
-    } else if (straight === "colour" && !isColourPrompt(q?.prompt)) {
-      reasons.push("colour-prompt");
+    const from = q?.fromStructure;
+    const played = q?.structure;
+    if (!from || !played || !STRUCTURES[from] || !STRUCTURES[played] || from === played) {
+      reasons.push("renegade-structure");
     }
+    if (from === "joke" || played === "joke") reasons.push("renegade-structure");
   }
   return { bot: CHECKER_BOT, ok: reasons.length === 0, reasons };
 }
