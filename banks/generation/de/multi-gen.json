@@ -1,0 +1,153 @@
+{
+  "generation": "multi-gen",
+  "locale": "de",
+  "target": 150,
+  "held": 9,
+  "shortfall": 141,
+  "questions": [
+    {
+      "id": "w39-e-mix-japan",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Kartenchaos",
+      "prompt": "Was ist die Hauptstadt Japans?",
+      "choices": [
+        "Tokio",
+        "Kyoto",
+        "Nagoya",
+        "Osaka"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-mona",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Louvre Lite",
+      "prompt": "Wer malte die Mona Lisa?",
+      "choices": [
+        "Donatello",
+        "Raffael",
+        "Michelangelo",
+        "Leonardo da Vinci"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-gigi3",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Gigis Easy Lane",
+      "prompt": "Wahr oder Vibe-Check: Unter welcher Label-Familie veröffentlicht DJ Gigi?",
+      "choices": [
+        "Nur Motown",
+        "GMG Brand Label",
+        "Nintendo Sound Team",
+        "Nur Deutsche Grammophon"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-stig",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "multi-gen",
+      "categoryTitle": "Weißes-Anzug-Rätsel",
+      "prompt": "Wie heißt der anonyme Rennfahrer mit Helm bei Top Gear?",
+      "choices": [
+        "The Stag",
+        "The Shadow",
+        "The Stig",
+        "The Sprinter"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-nile",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fluss-Rang",
+      "prompt": "Welcher afrikanische Fluss gilt traditionell als einer der längsten der Welt?",
+      "choices": [
+        "Themse",
+        "Seine",
+        "Hudson",
+        "Nil"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-van-gogh",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Sternen-Fakt",
+      "prompt": "Mit welchem Gemälde wird Vincent van Gogh stark verbunden?",
+      "choices": [
+        "Guernica",
+        "Der Schrei als einziges Werk",
+        "Die Sternennacht",
+        "Die Beständigkeit der Erinnerung"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-v8",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Zylinderzahl",
+      "prompt": "Wie viele Zylinder hat ein typischer V8-Motor?",
+      "choices": [
+        "Vier",
+        "Zwei",
+        "Sechzehn",
+        "Acht"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-hamilton",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Broadway-Beats",
+      "prompt": "Wer schrieb Musik und Text für das Musical Hamilton?",
+      "choices": [
+        "Andrew Lloyd Webber",
+        "Stephen Sondheim",
+        "Elton John",
+        "Lin-Manuel Miranda"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-mix-louvre",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Pyramiden-Problem",
+      "prompt": "I. M. Peis Glaspyramide ist das moderne Eingangs-Wahrzeichen welches Museums?",
+      "choices": [
+        "Met (NYC)",
+        "Louvre",
+        "British Museum",
+        "Prado"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    }
+  ]
+}

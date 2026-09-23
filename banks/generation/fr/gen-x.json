@@ -1,0 +1,249 @@
+{
+  "generation": "gen-x",
+  "locale": "fr",
+  "target": 150,
+  "held": 15,
+  "shortfall": 135,
+  "questions": [
+    {
+      "id": "w39-e-genx-mtv",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Jour un du câble",
+      "prompt": "Quelle chaîne a été lancée en 1981 avec « Video Killed the Radio Star » ?",
+      "choices": [
+        "MTV",
+        "CNN",
+        "Nickelodeon",
+        "VH1"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genx-bttf",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Flux et compagnie",
+      "prompt": "Dans Retour vers le futur, de quoi Doc Brown a-t-il besoin de 1,21 gigawatt ?",
+      "choices": [
+        "De poussière de plutonium",
+        "De peaux de banane",
+        "D’électricité",
+        "De café"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Nom d’un tonnerre — de l’énergie, pas des fruits."
+    },
+    {
+      "id": "w39-e-genx-hamster",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Coin d’horreur de Hammond",
+      "prompt": "Quel présentateur est célèbrement le plus petit du trio Top Gear / The Grand Tour ?",
+      "choices": [
+        "James May",
+        "The Stig",
+        "Richard Hammond",
+        "Jeremy Clarkson"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Hamster. Oui. On sait."
+    },
+    {
+      "id": "w39-e-genx-may",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Coin du Captain Slow",
+      "prompt": "Quel présentateur de The Grand Tour est surnommé Captain Slow ?",
+      "choices": [
+        "Richard Hammond",
+        "James May",
+        "Jeremy Clarkson",
+        "Abie"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genx-tetris",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fête des blocs",
+      "prompt": "Quel jeu de puzzle aux blocs tombants a été créé par Alexey Pajitnov ?",
+      "choices": [
+        "Pac-Man",
+        "Démineur",
+        "Snake",
+        "Tetris"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genx-simpsons",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Famille jaune",
+      "prompt": "Quelle est la ville natale des Simpson ?",
+      "choices": [
+        "South Park",
+        "Quahog",
+        "Shelbyville",
+        "Springfield"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-amazon-gt",
+      "tier": "hard",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Essence en prime time",
+      "prompt": "Quel service de streaming a produit The Grand Tour ?",
+      "choices": [
+        "Netflix",
+        "Disney+",
+        "Amazon Prime Video",
+        "Hulu"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-chernobyl",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Carte atomique",
+      "prompt": "La catastrophe nucléaire de Tchernobyl en 1986 s’est produite dans quel pays actuel ?",
+      "choices": [
+        "Suède",
+        "Pologne",
+        "Ukraine",
+        "Allemagne"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-nirvana",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Porte grunge",
+      "prompt": "Quel album de Nirvana contient la chanson « Smells Like Teen Spirit » ?",
+      "choices": [
+        "Bleach",
+        "Nevermind",
+        "In Utero",
+        "Unplugged in New York"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-www",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Aube de l’hyperlien",
+      "prompt": "À qui attribue-t-on l’invention du World Wide Web ?",
+      "choices": [
+        "Steve Jobs",
+        "Mark Zuckerberg",
+        "Bill Gates",
+        "Tim Berners-Lee"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-seinfeld",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "À propos de rien",
+      "prompt": "Seinfeld se déroule principalement dans quelle ville américaine ?",
+      "choices": [
+        "Chicago",
+        "Boston",
+        "Los Angeles",
+        "New York"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-gameboy",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Histoire portable",
+      "prompt": "En quelle année le Game Boy original de Nintendo est-il sorti au Japon ?",
+      "choices": [
+        "1994",
+        "1998",
+        "1989",
+        "1985"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-genx-gt-year",
+      "tier": "difficult",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Chronologie studio",
+      "prompt": "En quelle année The Grand Tour a-t-il été diffusé pour la première fois sur Amazon Prime Video ?",
+      "choices": [
+        "2015",
+        "2018",
+        "2014",
+        "2016"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Après la BBC, avant que tout le monde se dispute sur le camping."
+    },
+    {
+      "id": "w39-d-genx-berlin",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Horloge du Mur",
+      "prompt": "En quelle année le mur de Berlin est-il tombé ?",
+      "choices": [
+        "1989",
+        "1979",
+        "1985",
+        "1991"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-genx-stig-reveal",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Finale · Casque ôté",
+      "prompt": "Quel pilote de course a été révélé en 2009 comme le Stig alors en poste de la BBC Top Gear ?",
+      "choices": [
+        "Damon Hill",
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Ben Collins"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "generation": "gen-alpha",
+  "locale": "de",
+  "target": 150,
+  "held": 14,
+  "shortfall": 136,
+  "questions": [
+    {
+      "id": "w39-e-alpha-yt",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Play-Taste",
+      "prompt": "YouTube ist in erster Linie eine Plattform für was?",
+      "choices": [
+        "Online-Video",
+        "Nur Vinylpressung",
+        "Nur AM-Radioskalen",
+        "Nur gedruckte Bücher"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-tablet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Touch First",
+      "prompt": "Ein iPad lässt sich am besten als welches Gerät beschreiben?",
+      "choices": [
+        "Festnetztelefon",
+        "Toaster",
+        "Filmprojektor",
+        "Tablet-Computer"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-dory",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fischfreunde",
+      "prompt": "Was für ein Fisch ist Nemo in Findet Nemo?",
+      "choices": [
+        "Thunfisch",
+        "Goldfisch",
+        "Hai",
+        "Clownfisch"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-earth",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Blauer Marmor",
+      "prompt": "Auf welchem Planeten leben wir?",
+      "choices": [
+        "Erde",
+        "Jupiter",
+        "Mars",
+        "Venus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Wenn das daneben geht, braucht Jeremy einen Kaffee."
+    },
+    {
+      "id": "w39-e-alpha-lego",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Ziegel-Logik",
+      "prompt": "Wofür sind LEGO-Steine am berühmtesten?",
+      "choices": [
+        "Essbare Süßigkeiten",
+        "Automotoren",
+        "Farbmarken",
+        "Ineinandergreifende Kunststoff-Bausteine"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-cars",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Vier Räder",
+      "prompt": "Wie viele Räder hat ein typisches Auto?",
+      "choices": [
+        "Vier",
+        "Eins",
+        "Zwei",
+        "Acht"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-minecraft",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Block-Universum",
+      "prompt": "Wer hat Minecraft ursprünglich geschaffen?",
+      "choices": [
+        "Markus Persson (Notch)",
+        "Shigeru Miyamoto",
+        "Gabe Newell",
+        "Hideo Kojima"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-roblox",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Avatar-Plaza",
+      "prompt": "Wie lässt sich Roblox am besten beschreiben?",
+      "choices": [
+        "Nur ein physisches Brettspiel",
+        "Eine Online-Plattform für nutzererstellte Spiele",
+        "Eine Art Motoröl",
+        "Ein Satelliten-TV-Sender"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-pixar",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lampe & Luxo",
+      "prompt": "Welches Studio machte Toy Story, den ersten vollständig computeranimierten Spielfilm?",
+      "choices": [
+        "Pixar",
+        "Nur Aardman",
+        "Studio Ghibli",
+        "Nur DreamWorks"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-among",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sus-Patrouille",
+      "prompt": "Among Us ist ein Social-Deduction-Spiel, das hauptsächlich in welcher Umgebung spielt?",
+      "choices": [
+        "Nur eine mittelalterliche Bäckerei",
+        "Nur eine stille Bibliothek",
+        "Nur ein Finanzamt",
+        "Raumschiff / Raumcrew"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ev",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Plug & Play",
+      "prompt": "Wofür steht EV bei modernen Autos üblicherweise?",
+      "choices": [
+        "Emergency Vinyl",
+        "Engine Vacuum",
+        "Electric vehicle (Elektrofahrzeug)",
+        "Extra Volume"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ghibli",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Totoro-Territorium",
+      "prompt": "In welchem Land hat Studio Ghibli seinen Sitz?",
+      "choices": [
+        "Brasilien",
+        "Kanada",
+        "Japan",
+        "Frankreich"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-alpha-switch",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hybrid-Handheld",
+      "prompt": "In welchem Jahr erschien die Nintendo Switch weltweit?",
+      "choices": [
+        "2017",
+        "2019",
+        "2013",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-alpha-minecraft-biome",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Finale · Deep Dark",
+      "prompt": "Welcher feindliche Mob in Minecraft wird stark mit dem Deep Dark / Ancient Cities verbunden?",
+      "choices": [
+        "Warden",
+        "Eisengolem",
+        "Nur Creeper",
+        "Nur Ender Dragon"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    }
+  ]
+}

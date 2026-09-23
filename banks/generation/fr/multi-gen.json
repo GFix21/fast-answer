@@ -1,0 +1,153 @@
+{
+  "generation": "multi-gen",
+  "locale": "fr",
+  "target": 150,
+  "held": 9,
+  "shortfall": 141,
+  "questions": [
+    {
+      "id": "w39-e-mix-japan",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Chaos cartographique",
+      "prompt": "Quelle est la capitale du Japon ?",
+      "choices": [
+        "Tokyo",
+        "Kyoto",
+        "Nagoya",
+        "Osaka"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-mona",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Louvre lite",
+      "prompt": "Qui a peint la Joconde ?",
+      "choices": [
+        "Donatello",
+        "Raphaël",
+        "Michel-Ange",
+        "Léonard de Vinci"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-gigi3",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Voie facile de Gigi",
+      "prompt": "Vrai ou vibe-check : DJ Gigi sort sous quelle famille de labels ?",
+      "choices": [
+        "Motown uniquement",
+        "GMG Brand Label",
+        "Nintendo Sound Team",
+        "Deutsche Grammophon uniquement"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-stig",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "multi-gen",
+      "categoryTitle": "Mystère de la combinaison blanche",
+      "prompt": "Dans Top Gear, comment s’appelle le pilote anonyme du show, casqué ?",
+      "choices": [
+        "The Stag",
+        "The Shadow",
+        "The Stig",
+        "The Sprinter"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-nile",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Classement des fleuves",
+      "prompt": "Quel fleuve africain est traditionnellement cité parmi les plus longs du monde ?",
+      "choices": [
+        "La Tamise",
+        "La Seine",
+        "L’Hudson",
+        "Le Nil"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-van-gogh",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Fait étoilé",
+      "prompt": "Vincent van Gogh est fortement associé à quel tableau ?",
+      "choices": [
+        "Guernica",
+        "Le Cri comme seule œuvre",
+        "La Nuit étoilée",
+        "La Persistance de la mémoire"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-v8",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Compte des cylindres",
+      "prompt": "Un moteur V8 a typiquement combien de cylindres ?",
+      "choices": [
+        "Quatre",
+        "Deux",
+        "Seize",
+        "Huit"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-hamilton",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Rythmes Broadway",
+      "prompt": "Qui a écrit la musique et les paroles de la comédie musicale Hamilton ?",
+      "choices": [
+        "Andrew Lloyd Webber",
+        "Stephen Sondheim",
+        "Elton John",
+        "Lin-Manuel Miranda"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-mix-louvre",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Problème de pyramide",
+      "prompt": "La pyramide de verre d’I. M. Pei est l’entrée moderne emblématique de quel musée ?",
+      "choices": [
+        "Le Met (NYC)",
+        "Le Louvre",
+        "Le British Museum",
+        "Le Prado"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    }
+  ]
+}

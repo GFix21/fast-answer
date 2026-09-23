@@ -25,6 +25,8 @@ function questionsFromDevice(raw) {
       tier: String(q.tier || "easy").slice(0, 20),
       topic: String(q.topic || "").slice(0, 40),
       generation: String(q.generation || "").slice(0, 40),
+      fromPlayer: String(q.fromPlayer || "").slice(0, 40),
+      fromGeneration: String(q.fromGeneration || q.generation || "").slice(0, 40),
       categoryTitle: String(q.categoryTitle || "").slice(0, 80),
       prompt: String(q.prompt).slice(0, 400),
       choices: q.choices.slice(0, 4).map((c) => String(c).slice(0, 200)),
@@ -145,12 +147,14 @@ export default async function handler(req, res) {
       id: body.id || ("p-" + String(body.name || "pad")),
       thumb: body.thumb || "",
       seat: body.seat === "view" ? "view" : "play",
+      generation: String(body.generation || "").slice(0, 40),
     };
     const existing = cur.guests.find((g) => g.id === guest.id || g.name === guest.name);
     if (existing) {
       existing.name = guest.name;
       existing.seat = guest.seat;
       if (guest.thumb) existing.thumb = guest.thumb;
+      if (guest.generation) existing.generation = guest.generation;
     } else {
       cur.guests.push(guest);
     }

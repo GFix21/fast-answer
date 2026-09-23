@@ -1,0 +1,233 @@
+{
+  "generation": "silent-generation",
+  "locale": "fr",
+  "target": 150,
+  "held": 14,
+  "shortfall": 136,
+  "questions": [
+    {
+      "id": "w39-e-silent-ike",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Devise du milieu du siècle",
+      "prompt": "Quel slogan de campagne est célèbrement associé à Dwight D. Eisenhower ?",
+      "choices": [
+        "I Like Ike",
+        "Morning in America",
+        "Tippecanoe and Tyler Too",
+        "Yes We Can"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Trois petits mots. De grands chapeaux."
+    },
+    {
+      "id": "w39-e-silent-fdr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Maison-Blanche en temps de guerre",
+      "prompt": "Quel président des États-Unis a dirigé le pays pendant la plus grande partie de la Seconde Guerre mondiale ?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Herbert Hoover",
+        "Woodrow Wilson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-transistor",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "L’ère de la radio de poche",
+      "prompt": "Quel petit type de radio est devenu un hit auprès des adolescents dans les années 1950 ?",
+      "choices": [
+        "Grille-pain à vide",
+        "Radio à transistors",
+        "Boombox huit pistes",
+        "Radio boule de cristal"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Non, pas une boule de cristal."
+    },
+    {
+      "id": "w39-e-silent-elvis",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Coin du King",
+      "prompt": "Quel chanteur est largement surnommé le King of Rock and Roll ?",
+      "choices": [
+        "Elvis Presley",
+        "Little Richard",
+        "Buddy Holly",
+        "Chuck Berry"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Chaos cartographique",
+      "prompt": "Quelle est la capitale du Canada ?",
+      "choices": [
+        "Toronto",
+        "Ottawa",
+        "Vancouver",
+        "Montréal"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-road",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Rayon Beat",
+      "prompt": "Qui a écrit le roman de la Beat Generation On the Road ?",
+      "choices": [
+        "Allen Ginsberg",
+        "Jack Kerouac",
+        "Neal Cassady",
+        "William S. Burroughs"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-sputnik",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Origines orbitales",
+      "prompt": "Quel pays a lancé Spoutnik 1, le premier satellite artificiel, en 1957 ?",
+      "choices": [
+        "États-Unis",
+        "France",
+        "Chine",
+        "Union soviétique"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-hula",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dossiers de modes",
+      "prompt": "La folie des années 1950 du cercle de plastique qui tourne autour de la taille, c’était…",
+      "choices": [
+        "Le bâton sauteur (pogo)",
+        "Le Tamagotchi",
+        "Le Rubik’s Cube",
+        "Le hula hoop"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-polio",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Santé publique",
+      "prompt": "Quel scientifique américain a dirigé l’équipe derrière le premier vaccin antipoliomyélitique largement utiliséé dans les années 1950 ?",
+      "choices": [
+        "Alexander Fleming",
+        "Jonas Salk",
+        "Edward Jenner",
+        "Louis Pasteur"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-korea",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Carte de la Guerre froide",
+      "prompt": "En quelle année l’armistice de la guerre de Corée a-t-il été signé ?",
+      "choices": [
+        "1953",
+        "1960",
+        "1945",
+        "1975"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-interstate",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Bâtisseurs de routes",
+      "prompt": "Quel président américain a signé le Federal-Aid Highway Act qui a lancé le réseau Interstate en 1956 ?",
+      "choices": [
+        "Harry Truman",
+        "Dwight D. Eisenhower",
+        "John F. Kennedy",
+        "Lyndon B. Johnson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-disneyland",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Aube des parcs à thème",
+      "prompt": "Dans quel État américain Disneyland a-t-il ouvert pour la première fois en 1955 ?",
+      "choices": [
+        "New York",
+        "Californie",
+        "Floride",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Ciel de Guerre froide",
+      "prompt": "Francis Gary Powers a été abattu en 1960 à bord de quel type d’avion de reconnaissance américain ?",
+      "choices": [
+        "SR-71 uniquement",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-silent-cool-wall",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "silent-generation",
+      "categoryTitle": "Finale · Power Lap",
+      "prompt": "Sur le Cool Wall de Top Gear, quelle zone se situe entre Cool et Uncool ?",
+      "choices": [
+        "Subzero",
+        "Slightly Warm",
+        "Meh",
+        "Seriously Uncool"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    }
+  ]
+}

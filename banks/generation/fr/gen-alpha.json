@@ -1,0 +1,233 @@
+{
+  "generation": "gen-alpha",
+  "locale": "fr",
+  "target": 150,
+  "held": 14,
+  "shortfall": 136,
+  "questions": [
+    {
+      "id": "w39-e-alpha-yt",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Bouton Play",
+      "prompt": "YouTube est avant tout une plateforme pour quoi ?",
+      "choices": [
+        "La vidéo en ligne",
+        "Uniquement le pressage de vinyle",
+        "Uniquement des cadrans radio AM",
+        "Uniquement des livres imprimés"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-tablet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Le tactile d’abord",
+      "prompt": "Un iPad se décrit le mieux comme quel type d’appareil ?",
+      "choices": [
+        "Téléphone fixe",
+        "Grille-pain",
+        "Projecteur de cinéma",
+        "Tablette tactile"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-dory",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Amis des poissons",
+      "prompt": "Dans Le Monde de Nemo, quel type de poisson est Nemo ?",
+      "choices": [
+        "Thon",
+        "Poisson rouge",
+        "Requin",
+        "Poisson-clown"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-earth",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Bille bleue",
+      "prompt": "Sur quelle planète vivons-nous ?",
+      "choices": [
+        "La Terre",
+        "Jupiter",
+        "Mars",
+        "Vénus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Si vous ratez celle-là, Jeremy aura besoin d’un café."
+    },
+    {
+      "id": "w39-e-alpha-lego",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Logique de brique",
+      "prompt": "Les briques LEGO sont surtout célèbres comme quoi ?",
+      "choices": [
+        "Bonbons comestibles",
+        "Moteurs de voiture",
+        "Marques de peinture",
+        "Jouets de construction en plastique emboîtables"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-cars",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Quatre roues",
+      "prompt": "Combien de roues a une voiture typique ?",
+      "choices": [
+        "Quatre",
+        "Une",
+        "Deux",
+        "Huit"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-minecraft",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Univers de blocs",
+      "prompt": "Qui a créé Minecraft à l’origine ?",
+      "choices": [
+        "Markus Persson (Notch)",
+        "Shigeru Miyamoto",
+        "Gabe Newell",
+        "Hideo Kojima"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-roblox",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Place des avatars",
+      "prompt": "Roblox se décrit le mieux comme quoi ?",
+      "choices": [
+        "Uniquement un jeu de société physique",
+        "Une plateforme en ligne de jeux créés par les utilisateurs",
+        "Un type d’huile moteur",
+        "Une chaîne TV satellite"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-pixar",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lampe et Luxo",
+      "prompt": "Quel studio a réalisé Toy Story, le premier long métrage entièrement en images de synthèse ?",
+      "choices": [
+        "Pixar",
+        "Aardman uniquement",
+        "Studio Ghibli",
+        "DreamWorks uniquement"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-among",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Patrouille sus",
+      "prompt": "Among Us est un jeu de déduction sociale se déroulant surtout dans quel cadre ?",
+      "choices": [
+        "Uniquement une boulangerie médiévale",
+        "Uniquement une bibliothèque silencieuse",
+        "Uniquement un bureau des impôts",
+        "Un vaisseau spatial / équipage spatial"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ev",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Brancher et rouler",
+      "prompt": "Que signifie couramment VE (EV) pour les voitures modernes ?",
+      "choices": [
+        "Vinyle d’urgence",
+        "Vide moteur",
+        "Véhicule électrique",
+        "Volume extra"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ghibli",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Territoire Totoro",
+      "prompt": "Studio Ghibli est basé dans quel pays ?",
+      "choices": [
+        "Brésil",
+        "Canada",
+        "Japon",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-alpha-switch",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Portable hybride",
+      "prompt": "En quelle année la Nintendo Switch est-elle sortie dans le monde ?",
+      "choices": [
+        "2017",
+        "2019",
+        "2013",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-alpha-minecraft-biome",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Finale · Deep Dark",
+      "prompt": "Dans Minecraft, quelle créature hostile est fortement associée au Deep Dark / aux cités antiques ?",
+      "choices": [
+        "Warden",
+        "Golem de fer",
+        "Creeper uniquement",
+        "Ender Dragon uniquement"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    }
+  ]
+}

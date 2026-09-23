@@ -1,0 +1,249 @@
+{
+  "generation": "gen-z",
+  "locale": "en",
+  "target": 150,
+  "held": 15,
+  "shortfall": 135,
+  "questions": [
+    {
+      "id": "w39-e-genz-fortnite",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Battle Bus Basics",
+      "prompt": "Fortnite is primarily what type of game?",
+      "choices": [
+        "Text adventure",
+        "Chess simulator",
+        "Tax software",
+        "Battle royale"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Stream Machine",
+      "prompt": "Which Swedish company is best known for a music streaming app called Spotify?",
+      "choices": [
+        "Netflix",
+        "Skype",
+        "Spotify",
+        "IKEA"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-tiktok",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Short Form",
+      "prompt": "TikTok is best known for what kind of videos?",
+      "choices": [
+        "Feature films only",
+        "Short-form video",
+        "Live opera only",
+        "Printed newspapers"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-france",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital Quick Hit",
+      "prompt": "What is the capital of France?",
+      "choices": [
+        "Marseille",
+        "Nice",
+        "Paris",
+        "Lyon"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-gigi2",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "gen-z",
+      "categoryTitle": "Gigi’s Easy Lane",
+      "prompt": "DJ Gigi’s music is most often associated with which city vibe?",
+      "choices": [
+        "Nashville country barns",
+        "Vienna waltzes only",
+        "Montréal nights",
+        "Desert silent retreats"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-marvel",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "MCU 101",
+      "prompt": "Which studio’s Marvel Cinematic Universe began with Iron Man (2008)?",
+      "choices": [
+        "Pixar only",
+        "A24",
+        "Marvel Studios / Disney",
+        "Studio Ghibli"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-fortnite2",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Island Code",
+      "prompt": "Which company develops Fortnite?",
+      "choices": [
+        "Valve",
+        "Nintendo",
+        "Epic Games",
+        "Sega"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-spotify2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Stream HQ",
+      "prompt": "In which country was Spotify founded?",
+      "choices": [
+        "Sweden",
+        "Brazil",
+        "South Korea",
+        "United States"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-btsv",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "K-Pop Compass",
+      "prompt": "BTS is a music group from which country?",
+      "choices": [
+        "South Korea",
+        "Thailand",
+        "China",
+        "Japan"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-tesla",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "EV Highway",
+      "prompt": "Tesla, Inc. is best known for manufacturing what?",
+      "choices": [
+        "Only sailboats",
+        "Only mechanical typewriters",
+        "Electric vehicles",
+        "Only vinyl presses"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-blackpanther",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Wakanda Weekend",
+      "prompt": "Who directed the 2018 Marvel film Black Panther?",
+      "choices": [
+        "Ryan Coogler",
+        "Patty Jenkins",
+        "Taika Waititi",
+        "James Gunn"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genz-paris-acc",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Climate Map",
+      "prompt": "The Paris Agreement is a major international deal focused on what?",
+      "choices": [
+        "Currency fonts",
+        "Postage stamps",
+        "Olympic mascots",
+        "Climate change"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-genz-openai",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Model Manners",
+      "prompt": "OpenAI released ChatGPT to the public in which year?",
+      "choices": [
+        "2018",
+        "2024",
+        "2022",
+        "2020"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-genz-parasite",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Stairs & Subtitles",
+      "prompt": "Which country’s film Parasite won the Academy Award for Best Picture?",
+      "choices": [
+        "South Korea",
+        "Japan",
+        "France",
+        "Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-genz-fortnite-mode",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Finale · Storm Circle",
+      "prompt": "Fortnite’s original free-to-play PvP mode that defined its boom is commonly called what?",
+      "choices": [
+        "Battle Royale",
+        "Save the World only",
+        "Creative only",
+        "Rocket Racing only"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    }
+  ]
+}

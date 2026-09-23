@@ -1,0 +1,233 @@
+{
+  "generation": "gen-alpha",
+  "locale": "en",
+  "target": 150,
+  "held": 14,
+  "shortfall": 136,
+  "questions": [
+    {
+      "id": "w39-e-alpha-yt",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Play Button",
+      "prompt": "YouTube is primarily a platform for what?",
+      "choices": [
+        "Online video",
+        "Only vinyl pressing",
+        "Only radio AM dials",
+        "Only printed books"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-tablet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Touch First",
+      "prompt": "An iPad is best described as what kind of device?",
+      "choices": [
+        "Landline phone",
+        "Toaster",
+        "Film projector",
+        "Tablet computer"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-dory",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fish Friends",
+      "prompt": "In Finding Nemo, what kind of fish is Nemo?",
+      "choices": [
+        "Tuna",
+        "Goldfish",
+        "Shark",
+        "Clownfish"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-earth",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Blue Marble",
+      "prompt": "Which planet do we live on?",
+      "choices": [
+        "Earth",
+        "Jupiter",
+        "Mars",
+        "Venus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "If you miss this, Jeremy will need a coffee."
+    },
+    {
+      "id": "w39-e-alpha-lego",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Brick Logic",
+      "prompt": "LEGO bricks are most famous as what?",
+      "choices": [
+        "Edible candy",
+        "Car engines",
+        "Paint brands",
+        "Interlocking plastic building toys"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-cars",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Four Wheels",
+      "prompt": "How many wheels does a typical car have?",
+      "choices": [
+        "Four",
+        "One",
+        "Two",
+        "Eight"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-minecraft",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Block Universe",
+      "prompt": "Who originally created Minecraft?",
+      "choices": [
+        "Markus Persson (Notch)",
+        "Shigeru Miyamoto",
+        "Gabe Newell",
+        "Hideo Kojima"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-roblox",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Avatar Plaza",
+      "prompt": "Roblox is best described as what?",
+      "choices": [
+        "A physical board game only",
+        "An online platform for user-created games",
+        "A type of engine oil",
+        "A satellite TV channel"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-pixar",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lamp & Luxo",
+      "prompt": "Which studio made Toy Story, the first fully computer-animated feature film?",
+      "choices": [
+        "Pixar",
+        "Aardman only",
+        "Studio Ghibli",
+        "DreamWorks only"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-among",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sus Patrol",
+      "prompt": "Among Us is a social deduction game set mainly on what kind of setting?",
+      "choices": [
+        "A medieval bakery only",
+        "A silent library only",
+        "A tax office only",
+        "A spaceship / space crew"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ev",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Plug & Play",
+      "prompt": "What does EV commonly stand for in modern cars?",
+      "choices": [
+        "Emergency vinyl",
+        "Engine vacuum",
+        "Electric vehicle",
+        "Extra volume"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ghibli",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Totoro Territory",
+      "prompt": "Studio Ghibli is based in which country?",
+      "choices": [
+        "Brazil",
+        "Canada",
+        "Japan",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-alpha-switch",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hybrid Handheld",
+      "prompt": "Nintendo Switch launched worldwide in which year?",
+      "choices": [
+        "2017",
+        "2019",
+        "2013",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-alpha-minecraft-biome",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Finale · Deep Dark",
+      "prompt": "In Minecraft, which hostile mob is strongly associated with the Deep Dark / ancient cities?",
+      "choices": [
+        "Warden",
+        "Iron Golem",
+        "Creeper only",
+        "Ender Dragon only"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    }
+  ]
+}

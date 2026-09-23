@@ -19,6 +19,16 @@ import {
   sittingsRemaining,
   PLACEMENT_SITTINGS,
 } from "./lib/device-cohort.js";
+import {
+  PACK_TARGET,
+  LOCKDOWN_REFRESHES,
+  packSummary,
+  dealRoundRobin,
+  lockdownSet,
+  refreshLockdown,
+  defaultGeneration,
+} from "./lib/generation-packs.js";
+import { GENERATIONS, normalizeGeneration } from "./q-and-a/map.js";
 
 const STUDIOS = [
   "./studio/studio-01-contestant-pov.jpg",
@@ -116,18 +126,27 @@ const FALLBACK_TOPICS = [
 ];
 
 const CELEB_BOTS = [
-  { id: "oprah", name: "Oprah", skill: 0.62, buzzDelayMs: [900, 2400], blurb: "Composed. Reads the room." },
-  { id: "elton", name: "Elton", skill: 0.55, buzzDelayMs: [1200, 3000], blurb: "Showy. Fashionably late." },
-  { id: "serena", name: "Serena", skill: 0.6, buzzDelayMs: [700, 1800], blurb: "Competitive. First strike." },
-  { id: "usain", name: "Usain", skill: 0.48, buzzDelayMs: [500, 1400], blurb: "Fastest buzz. Coin-flip answers." },
-  { id: "adele", name: "Adele", skill: 0.58, buzzDelayMs: [1100, 2600], blurb: "Holds the note." },
-  { id: "idris", name: "Idris", skill: 0.61, buzzDelayMs: [1000, 2200], blurb: "Cool under lights." },
-  { id: "keanu", name: "Keanu", skill: 0.5, buzzDelayMs: [1400, 3200], blurb: "Chill. Occasionally lethal." },
-  { id: "zendaya", name: "Zendaya", skill: 0.56, buzzDelayMs: [800, 2100], blurb: "Poised, then pounces." },
-  { id: "rihanna", name: "Rihanna", skill: 0.52, buzzDelayMs: [750, 2000], blurb: "Works. Works. Works." },
-  { id: "denzel", name: "Denzel", skill: 0.64, buzzDelayMs: [1000, 2400], blurb: "Precision over panic." },
-  { id: "meryl", name: "Meryl", skill: 0.66, buzzDelayMs: [1300, 2800], blurb: "Never first. Rarely wrong." },
+  { id: "oprah", name: "Oprah", generation: "baby-boomer", skill: 0.62, buzzDelayMs: [900, 2400], blurb: "Composed. Reads the room." },
+  { id: "elton", name: "Elton", generation: "baby-boomer", skill: 0.55, buzzDelayMs: [1200, 3000], blurb: "Showy. Fashionably late." },
+  { id: "serena", name: "Serena", generation: "gen-x", skill: 0.6, buzzDelayMs: [700, 1800], blurb: "Competitive. First strike." },
+  { id: "usain", name: "Usain", generation: "gen-x", skill: 0.48, buzzDelayMs: [500, 1400], blurb: "Fastest buzz. Coin-flip answers." },
+  { id: "adele", name: "Adele", generation: "gen-y", skill: 0.58, buzzDelayMs: [1100, 2600], blurb: "Holds the note." },
+  { id: "idris", name: "Idris", generation: "gen-x", skill: 0.61, buzzDelayMs: [1000, 2200], blurb: "Cool under lights." },
+  { id: "keanu", name: "Keanu", generation: "gen-alpha", skill: 0.5, buzzDelayMs: [1400, 3200], blurb: "Chill. Occasionally lethal." },
+  { id: "zendaya", name: "Zendaya", generation: "gen-z", skill: 0.56, buzzDelayMs: [800, 2100], blurb: "Poised, then pounces." },
+  { id: "rihanna", name: "Rihanna", generation: "multi-gen", skill: 0.52, buzzDelayMs: [750, 2000], blurb: "Works. Works. Works." },
+  { id: "denzel", name: "Denzel", generation: "baby-boomer", skill: 0.64, buzzDelayMs: [1000, 2400], blurb: "Precision over panic." },
+  { id: "meryl", name: "Meryl", generation: "silent-generation", skill: 0.66, buzzDelayMs: [1300, 2800], blurb: "Never first. Rarely wrong." },
 ];
+const GEN_KEYS = {
+  "silent-generation": "genSilent",
+  "baby-boomer": "genBoomer",
+  "gen-x": "genX",
+  "gen-y": "genY",
+  "gen-z": "genZ",
+  "gen-alpha": "genAlpha",
+  "multi-gen": "genMulti",
+};
 
 const $ = (s, r = document) => r.querySelector(s);
 const params = new URLSearchParams(location.search);
@@ -676,14 +695,17 @@ function applyRefreshFromRoom(room) {
   return true;
 }
 const COHORT_KEY = "fa-cohort-v1";
-function readStoredCohort(locale) {
+function readCohortBag() {
   try {
     const all = JSON.parse(localStorage.getItem(COHORT_KEY) || "{}");
-    const row = all?.[locale];
-    return row && row.v === 1 ? row : null;
+    return all && typeof all === "object" ? all : {};
   } catch {
-    return null;
+    return {};
   }
+}
+function readStoredCohort(locale) {
+  const row = readCohortBag()[locale];
+  return row && row.v === 2 ? row : null;
 }
 function writeStoredCohort(cohort) {
   if (!cohort?.locale) return;
@@ -693,13 +715,11 @@ function writeStoredCohort(cohort) {
   try { localStorage.setItem(COHORT_KEY, JSON.stringify(all)); } catch { /* quota */ }
 }
 function cohortUsable(cohort, signature) {
-  if (!cohort || cohort.locale !== state.locale) return false;
+  if (!cohort || cohort.v !== 2 || cohort.locale !== state.locale) return false;
   if (cohort.signature !== signature) return false;
   if (!(Date.parse(cohort.renewsAt) > Date.now())) return false;
-  return Array.isArray(cohort.shows)
-    && cohort.shows.length >= 2
-    && cohort.shows[0]?.length >= ROUND
-    && cohort.shows[1]?.length >= ROUND;
+  if (!cohort.packs) return false;
+  return GENERATIONS.every((g) => Array.isArray(cohort.packs[g]));
 }
 function ensureCohort() {
   if (!state.questions?.length) return state.cohort;
@@ -709,13 +729,140 @@ function ensureCohort() {
     state.cohort = saved;
     return saved;
   }
+  const prior = readCohortBag()[state.locale] || null;
   const built = buildDeviceCohort(state.questions, state.placementQs, state.locale);
+  if (prior && prior.signature === signature && prior.builtAt) {
+    built.builtAt = prior.builtAt;
+    built.renewsAt = prior.renewsAt || built.renewsAt;
+  }
   built.shows = built.shows.map((deck) => deck.map(shuffleQuestionChoices));
   built.placement = (built.placement || []).map(shuffleQuestionChoices);
+  built.packs = Object.fromEntries(
+    GENERATIONS.map((g) => [g, (built.packs[g] || []).map(shuffleQuestionChoices)]),
+  );
+  const summary = packSummary(built.packs);
+  built.counts = summary.counts;
+  built.held = summary.held;
   state.cohort = built;
   state.cohortShow = 0;
   writeStoredCohort(built);
   return built;
+}
+function genLabel(g) {
+  const key = GEN_KEYS[normalizeGeneration(g)];
+  return key ? tt(key) : "";
+}
+function questionCredit(q) {
+  if (!q) return "";
+  const gen = genLabel(q.fromGeneration || q.generation);
+  if (q.fromPlayer && gen) return `${gen} · ${q.fromPlayer}`;
+  return gen || "";
+}
+function playerGeneration(profile) {
+  const g = normalizeGeneration(profile?.generation);
+  if (GENERATIONS.includes(g)) return g;
+  return defaultGeneration(profile?.id || "you");
+}
+function readGeneration(el) {
+  const g = normalizeGeneration(el && el.value);
+  return GENERATIONS.includes(g) ? g : "";
+}
+function generationSelectHTML(id, selected) {
+  const current = GENERATIONS.includes(normalizeGeneration(selected))
+    ? normalizeGeneration(selected)
+    : playerGeneration(state.profile);
+  return `
+    <label class="field" for="${id}">${tt("yourGeneration")}</label>
+    <select class="gen-select" id="${id}">
+      ${GENERATIONS.map((g) => `<option value="${g}" ${g === current ? "selected" : ""}>${escapeHtml(genLabel(g))}</option>`).join("")}
+    </select>`;
+}
+function playersForDeal() {
+  if (Array.isArray(state.players) && state.players.length && state.phase !== "lobby" && state.phase !== "ready") {
+    return state.players;
+  }
+  fillSeats();
+  return seatedPreview();
+}
+function dealFromPacks() {
+  const cohort = ensureCohort();
+  const packs = cohort?.packs;
+  if (!packs) return deal(state.questions);
+  const players = playersForDeal().map((p) => ({
+    ...p,
+    generation: normalizeGeneration(p.generation) || defaultGeneration(p.id || p.name),
+  }));
+  const cursors = { ...(cohort.packCursors || {}) };
+  let result = dealRoundRobin(players, packs, ROUND, cursors, (q) => inSelectedTopics(q));
+  if (result.questions.length < Math.min(ROUND, 8)) {
+    result = dealRoundRobin(players, packs, ROUND, cursors);
+  }
+  cohort.packCursors = result.cursors;
+  state.cohort = cohort;
+  writeStoredCohort(cohort);
+  if (result.questions.length) return result.questions;
+  return deal(state.questions);
+}
+function buildLockdownQuestions(avoidIds) {
+  const cohort = ensureCohort();
+  const prepared = cohort?.lockdownPrepared;
+  if (Array.isArray(prepared) && prepared.length >= LOCKDOWN_N) return prepared.slice(0, LOCKDOWN_N);
+  const players = playersForDeal();
+  const qs = lockdownSet(players, cohort?.packs, avoidIds, LOCKDOWN_N);
+  if (qs.length >= LOCKDOWN_N) return qs;
+  return leftoverQs(true).slice(0, LOCKDOWN_N);
+}
+function refreshLockdownQuestions() {
+  if (isPad() || state.mpMode === "join") return;
+  const cohort = ensureCohort();
+  if (!cohort?.packs) return;
+  const players = playersForDeal();
+  const avoid = [
+    ...((state.lockdown?.qs) || []).map((q) => q.id),
+    ...((state.qs) || []).map((q) => q.id),
+  ];
+  const result = refreshLockdown({
+    refreshes: cohort.lockdownRefreshes || 0,
+    packs: cohort.packs,
+    players,
+    avoidIds: avoid,
+    n: LOCKDOWN_N,
+  });
+  cohort.packs = result.packs;
+  const summary = packSummary(result.packs);
+  cohort.counts = summary.counts;
+  cohort.held = summary.held;
+  cohort.lockdownRefreshes = result.refreshes;
+  if (result.questions.length) cohort.lockdownPrepared = result.questions;
+  if (result.shuffled) cohort.packCursors = {};
+  state.cohort = cohort;
+  writeStoredCohort(cohort);
+  const ld = state.lockdown;
+  if (ld && (ld.phase === "wager" || ld.phase === "intro") && result.questions.length) {
+    if (ld.phase === "wager" || ld.qi === 0) {
+      ld.qs = result.questions.slice(0, LOCKDOWN_N);
+      ld.qi = 0;
+      ld.picked = -1;
+      state.picked = -1;
+    } else {
+      const done = (ld.qs || []).slice(0, ld.qi);
+      const rest = result.questions.filter((q) => !done.some((d) => d.id === q.id));
+      ld.qs = [...done, ...rest].slice(0, LOCKDOWN_N);
+      ld.picked = -1;
+      state.picked = -1;
+    }
+  }
+  state.statusMsg = result.shuffled
+    ? tt("packsShuffled")
+    : tt("lockdownRefreshed", result.refreshes, LOCKDOWN_REFRESHES);
+  paint(true);
+  publish();
+}
+function lockdownRefreshButton() {
+  if (isPad() || state.mpMode === "join") return "";
+  const used = Number(state.cohort?.lockdownRefreshes) || 0;
+  const label = used >= LOCKDOWN_REFRESHES ? tt("shufflePacks") : tt("lockdownRefresh");
+  return `<button class="ghost js-refresh-lock" type="button">${escapeHtml(label)}</button>`;
 }
 function currentShowDeck() {
   const cohort = ensureCohort();
@@ -759,9 +906,8 @@ async function refreshQuestionSet() {
   if (refreshInFlight) return;
   refreshInFlight = true;
   const by = refreshPlayerName();
-  const deck = flipShowDeck();
   if (state.qs?.length) rememberDealtIds(state.qs.map((q) => q.id));
-  state.qs = deck;
+  state.qs = dealFromPacks();
   state.dealFresh = true;
   state.dealTopicKey = topicDealKey();
   const at = Date.now();
@@ -802,26 +948,34 @@ function refreshNoticeHTML() {
 }
 function questionRefreshHTML() {
   if (isPad() || state.mpMode === "join") return "";
-  const cohort = state.cohort;
-  const showN = (cohort?.shows || []).reduce((n, deck) => n + (deck?.length || 0), 0);
-  const placeN = cohort?.placement?.length || 0;
-  const active = state.dealFresh && state.qs?.length ? state.qs : (cohort?.shows?.[state.cohortShow === 1 ? 1 : 0] || []);
-  const n = active.length || ROUND;
-  const gens = generationCount(active.length ? active : state.questions);
+  const cohort = state.questions?.length ? ensureCohort() : state.cohort;
+  const counts = cohort?.counts || packSummary(cohort?.packs || {}).counts;
+  const chips = GENERATIONS.map((g) =>
+    `<span>${escapeHtml(tt("packHeld", genLabel(g), counts[g] || 0, cohort?.target || PACK_TARGET))}</span>`
+  ).join("");
   return `
     <div class="q-refresh">
       <button class="ghost js-refresh-qs" type="button">${tt("refreshQuestions")}</button>
-      <p class="meta">${escapeHtml(tt("showSetOf", state.cohortShow === 1 ? 2 : 1))} ${escapeHtml(tt("questionDealMeta", n, showN || state.questions.length, gens))}</p>
-      <p class="meta">${escapeHtml(tt("cohortOnDevice", showN, placeN))}</p>
+      ${lockdownRefreshButton()}
+      <p class="meta">${escapeHtml(tt("dealFromPacks"))}</p>
+      <p class="meta pack-counts">${chips}</p>
     </div>`;
 }
 function pickLockdownSlots() {
-  const lo = 8;
-  const hi = ROUND - 5;
-  const a = lo + Math.floor(Math.random() * (hi - lo));
-  let b = lo + Math.floor(Math.random() * (hi - lo));
-  while (Math.abs(b - a) < 6) b = lo + Math.floor(Math.random() * (hi - lo));
-  return [a, b].sort((x, y) => x - y);
+  const n = state.qs?.length || 0;
+  if (n < 12) return [];
+  const lo = Math.min(8, Math.max(2, Math.floor(n * 0.22)));
+  const hi = Math.max(lo + 1, n - 4);
+  const span = Math.max(1, hi - lo);
+  const gap = Math.min(6, Math.floor(span / 2));
+  const a = lo + Math.floor(Math.random() * span);
+  let b = lo + Math.floor(Math.random() * span);
+  let guard = 0;
+  while (Math.abs(b - a) < gap && guard < 12) {
+    b = lo + Math.floor(Math.random() * span);
+    guard += 1;
+  }
+  return a === b ? [a] : [a, b].sort((x, y) => x - y);
 }
 function leftoverQs(preferHard = false) {
   const recent = new Set(loadRecentQuestionIds());
@@ -1035,7 +1189,13 @@ async function commitNewProfile(name, email, pw) {
     passwordHash,
     createdAt: keepLegacy && base.createdAt ? base.createdAt : new Date().toISOString(),
   };
-  saveProfile({ displayName: cleanName, email: cleanEmail, passwordHash });
+  const generation = readGeneration($("#playerGen") || $("#roomPlayerGen") || $("#entryGen"));
+  saveProfile({
+    displayName: cleanName,
+    email: cleanEmail,
+    passwordHash,
+    ...(generation ? { generation } : {}),
+  });
   state.dojoMode = "home";
   state.roomDojoPanel = "";
   state.statusMsg = tt("profileCreated");
@@ -1052,6 +1212,8 @@ function saveProfile(patch = {}) {
   next.belt = beltFromPoints(next.stats.totalPoints);
   next.displayName = String(next.displayName || "Player").trim().slice(0, 40) || "Player";
   next.email = String(next.email || "").trim().slice(0, 120);
+  const generation = normalizeGeneration(next.generation);
+  next.generation = GENERATIONS.includes(generation) ? generation : "";
   state.profile = next;
   state.name = next.displayName;
   localStorage.setItem("fa-name", state.name);
@@ -1114,11 +1276,33 @@ function fillSeats() {
   state.seatBots = have.slice(0, need);
 }
 function seatedPreview() {
-  const you = { id: "you", name: state.name || "Player", human: true, you: true, score: 0 };
-  const guests = state.guests || [];
+  const you = {
+    id: "you",
+    name: state.name || "Player",
+    human: true,
+    you: true,
+    score: 0,
+    generation: playerGeneration(state.profile),
+  };
+  const guests = (state.guests || []).filter((g) => g.seat !== "view");
   const remain = Math.max(0, state.playerCount - 1 - guests.length);
   const bots = (state.seatBots || []).slice(0, remain);
-  return [you, ...guests.map((g) => ({ ...g, human: true, you: false, score: 0 })), ...bots.map((b) => ({ ...b, human: false, score: 0 }))].slice(0, 12);
+  return [
+    you,
+    ...guests.map((g) => ({
+      ...g,
+      human: true,
+      you: false,
+      score: 0,
+      generation: normalizeGeneration(g.generation) || defaultGeneration(g.id || g.name),
+    })),
+    ...bots.map((b) => ({ ...b, human: false, score: 0 })),
+  ].slice(0, 12);
+}
+function seatSpan(s) {
+  const gen = genLabel(s.generation);
+  const label = gen ? `${s.name} · ${gen}` : s.name;
+  return `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || label)}">${escapeHtml(label)}</span>`;
 }
 
 async function rooms(method, body) {
@@ -1299,8 +1483,24 @@ function seatPlayers() {
   const remain = Math.max(0, state.playerCount - 1 - guests.length);
   const bots = (state.seatBots || []).slice(0, remain);
   state.players = [
-    { id: "you", name: state.name || "Player", score: 0, human: true, you: true, thumb: state.profile?.thumb || "" },
-    ...guests.map((g) => ({ id: g.id, name: g.name, score: 0, human: true, you: false, thumb: g.thumb || "" })),
+    {
+      id: "you",
+      name: state.name || "Player",
+      score: 0,
+      human: true,
+      you: true,
+      thumb: state.profile?.thumb || "",
+      generation: playerGeneration(state.profile),
+    },
+    ...guests.map((g) => ({
+      id: g.id,
+      name: g.name,
+      score: 0,
+      human: true,
+      you: false,
+      thumb: g.thumb || "",
+      generation: normalizeGeneration(g.generation) || defaultGeneration(g.id || g.name),
+    })),
     ...bots.map((b) => ({
       id: b.id,
       name: b.name,
@@ -1310,6 +1510,7 @@ function seatPlayers() {
       skill: b.skill,
       buzzDelayMs: b.buzzDelayMs,
       thumb: botAvatar(b.id),
+      generation: b.generation || defaultGeneration(b.id),
     })),
   ].slice(0, 12);
 }
@@ -1616,10 +1817,19 @@ function seatPendingJoins() {
       bot.human = true;
       bot.you = false;
       bot.thumb = g.thumb || "";
+      bot.generation = normalizeGeneration(g.generation) || defaultGeneration(g.id || g.name);
       delete bot.skill;
       delete bot.buzzDelayMs;
     } else if (state.players.length < 12) {
-      state.players.push({ id: g.id, name: g.name, score: 0, human: true, you: false, thumb: g.thumb || "" });
+      state.players.push({
+        id: g.id,
+        name: g.name,
+        score: 0,
+        human: true,
+        you: false,
+        thumb: g.thumb || "",
+        generation: normalizeGeneration(g.generation) || defaultGeneration(g.id || g.name),
+      });
     }
   }
   state.pendingJoins = pending.filter((g) => !state.players.some((p) => p.id === g.id));
@@ -1738,10 +1948,17 @@ function startLockdown(playerId) {
     continueRound();
     return;
   }
-  const qs = leftoverQs(true).slice(0, LOCKDOWN_N);
+  const qs = buildLockdownQuestions([
+    ...((state.qs) || []).map((q) => q.id),
+    ...(state.spent ? [...state.spent] : []),
+  ]);
   if (qs.length < LOCKDOWN_N) {
     continueRound();
     return;
+  }
+  if (state.cohort?.lockdownPrepared) {
+    delete state.cohort.lockdownPrepared;
+    writeStoredCohort(state.cohort);
   }
   qs.forEach((q) => state.spent.add(q.id));
   rememberDealtIds(qs.map((q) => q.id));
@@ -2077,13 +2294,14 @@ function wagerHTML() {
       <p class="wager-copy"><b>Lockdown</b> — ${escapeHtml(ld.name)} plays ${LOCKDOWN_N}. Need ${LOCKDOWN_WIN_AT}/${LOCKDOWN_N}.</p>
       <p class="wager-copy">Each question: up to <b>3 minutes</b>. Points start at <b>$${LOCKDOWN_PTS}</b> and decay to <b>$0</b>.</p>
       <p class="wager-copy">Opponents already locked WIN/LOSE. Starting in <b>${ld.introLeft}s</b>.</p>
+      ${lockdownRefreshButton()}
     </div>`;
   }
   if (ld.phase !== "wager") return "";
   const mine = ld.wagers[state.youId] || state.wagerDraft;
   const isHero = state.youId === ld.playerId;
   if (isHero) {
-    return `<div class="wager"><p class="wager-copy">${tt("lockdownWagerHero", ld.wagerLeft)}</p></div>`;
+    return `<div class="wager"><p class="wager-copy">${tt("lockdownWagerHero", ld.wagerLeft)}</p>${lockdownRefreshButton()}</div>`;
   }
   const locked = Boolean(mine?.locked);
   const side = mine?.side || state.wagerDraft?.side || "";
@@ -2103,6 +2321,7 @@ function wagerHTML() {
       ? `<p class="meta">${tt("lockedSide", mine.side, mine.amount)}</p>`
       : `<button type="button" class="primary" id="lockWager" ${side && amount ? "" : "disabled"}>${tt("lockIn")}</button>
          <p class="meta">${tt("pickThenLock")}</p>`}
+    ${lockdownRefreshButton()}
   </div>`;
 }
 
@@ -2551,6 +2770,7 @@ function dojoBody() {
       <p class="dir-copy">${tt("createProfileIntro")}</p>
       <label class="field" for="nm">${tt("name")}</label>
       <input id="nm" type="text" value="${escapeHtml(p.displayName && hasPhoneProfile() ? p.displayName : "")}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
+      ${generationSelectHTML("playerGen", p.generation)}
       <label class="field" for="emNew">${tt("email")}</label>
       <input id="emNew" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
       <label class="field" for="pwNew">${tt("password")}</label>
@@ -2627,6 +2847,7 @@ function dojoBody() {
     </div>
     <label class="field" for="nm">${tt("name")}</label>
     <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
+    ${generationSelectHTML("playerGen", p.generation)}
     <label class="field" for="em">${tt("email")}</label>
     <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("optional")}"/>
     <label class="field" for="thDojo">${tt("photoTv")}</label>
@@ -2680,6 +2901,7 @@ function roomDojoEntryHTML() {
         <p class="dir-copy">${tt("createProfileIntro")}</p>
         <label class="field" for="roomNm">${tt("name")}</label>
         <input id="roomNm" type="text" value="${escapeHtml(hasPhoneProfile() ? (p.displayName || "") : (state.name || ""))}" maxlength="18" autocomplete="nickname"/>
+        ${generationSelectHTML("roomPlayerGen", p.generation)}
         <label class="field" for="roomEm">${tt("email")}</label>
         <input id="roomEm" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email"/>
         <label class="field" for="roomPwNew">${tt("password")}</label>
@@ -2871,7 +3093,7 @@ function roomBody() {
         <span>${tt("fillBots")}</span>
       </label>
       <div class="seats">
-        ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
+        ${seats.map((s) => seatSpan(s)).join("")}
       </div>
       <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
       ${state.room ? `
@@ -2904,7 +3126,7 @@ function roomBody() {
         <span>${tt("fillBots")}</span>
       </label>
       <div class="seats">
-        ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
+        ${seats.map((s) => seatSpan(s)).join("")}
       </div>
       <button class="primary" id="startPhone" type="button">${tt("startPhone")}</button>
       <p class="meta">${tt("phoneLockHint")}</p>
@@ -2920,7 +3142,7 @@ function roomBody() {
       <span>${tt("fillBots")}</span>
     </label>
     <div class="seats">
-      ${seats.map((s) => `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || s.name)}">${escapeHtml(s.name)}</span>`).join("")}
+      ${seats.map((s) => seatSpan(s)).join("")}
     </div>
     ${state.onScreen || isTvDisplay() ? `
       <p class="dir-copy">${tt("onScreenOwns")}</p>
@@ -3144,6 +3366,7 @@ function lobbyHTML() {
         <div class="row">
           <button class="primary ${goGated ? "go-dojo-cta" : ""}" id="go" type="button">${goLabel}</button>
           ${isPad() || mode === "join" ? "" : `<button class="ghost js-refresh-qs" type="button" ${state.refreshNotice?.phase === "loading" ? "disabled" : ""}>${tt("refreshQuestions")}</button>`}
+          ${lockdownRefreshButton()}
           ${state.onScreen && !forcedDisplay && role !== "pad" ? `<button class="ghost" data-off-screen type="button">${tt("offScreenReturn")}</button>` : ""}
         </div>
         <p class="status" id="stt">${escapeHtml(status)}</p>
@@ -3229,7 +3452,7 @@ function playHTML() {
       ? "END"
       : (ld
         ? `Lockdown · ${ld.phase === "play" || ld.phase === "flash" ? `${ld.qi + 1}/${LOCKDOWN_N}` : ld.phase}`
-        : (q && !pad ? escapeHtml(q.categoryTitle) : (pad ? tt("yourPad") : "")));
+        : (q && !pad ? escapeHtml([q.categoryTitle, questionCredit(q)].filter(Boolean).join(" · ")) : (pad ? tt("yourPad") : "")));
   const tier = readyPhase ? "READY" : (endPhase ? "END" : (ld ? "LOCKDOWN" : (q ? q.tier.toUpperCase() : "END")));
   const n = readyPhase || ld || endPhase ? "" : ` · ${state.i + 1}/${state.qs.length || ROUND}`;
   const buzzLabel = readyPhase
@@ -3444,7 +3667,8 @@ function bindDojoSurface() {
     const email = String(($("#em") && $("#em").value) || "").trim().slice(0, 120);
     const pw = String(($("#pwNew") && $("#pwNew").value) || "");
     const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
-    const patch = { displayName: name || state.name, email };
+    const generation = readGeneration($("#playerGen"));
+    const patch = { displayName: name || state.name, email, ...(generation ? { generation } : {}) };
     if (pw || pw2) {
       if (pw.length < 4) {
         state.statusMsg = tt("passwordHint");
@@ -3483,6 +3707,11 @@ function bindDojoSurface() {
   if (scoreScroll) scoreScroll.onclick = () => {
     state.dojoScroll = state.dojoScroll === "closed" ? "scores" : "closed";
     paint(true);
+  };
+  const playerGen = $("#playerGen");
+  if (playerGen) playerGen.onchange = () => {
+    const generation = readGeneration(playerGen);
+    if (generation) saveProfile({ generation });
   };
   document.querySelectorAll("[data-dojo-bg]").forEach((b) => {
     b.onclick = () => {
@@ -3558,6 +3787,14 @@ function bindLobby() {
   document.querySelectorAll(".js-refresh-qs").forEach((b) => {
     b.onclick = () => { void refreshQuestionSet(); };
   });
+  document.querySelectorAll(".js-refresh-lock").forEach((b) => {
+    b.onclick = () => refreshLockdownQuestions();
+  });
+  const playerGen = $("#playerGen");
+  if (playerGen) playerGen.onchange = () => {
+    const generation = readGeneration(playerGen);
+    if (generation) saveProfile({ generation });
+  };
   const botFill = $("#botFill");
   if (botFill) botFill.onchange = (e) => {
     state.botFill = Boolean(e.target.checked);
@@ -3800,6 +4037,7 @@ async function joinAsBuzzer() {
     id: state.youId,
     thumb: state.profile?.thumb || "",
     seat: state.viewing ? "view" : "play",
+    generation: playerGeneration(state.profile),
   });
   if (!joined || joined.error) {
     state.statusMsg = (joined && joined.message)
@@ -3989,6 +4227,9 @@ function bindPlay() {
   });
   const lockWager = $("#lockWager");
   if (lockWager) lockWager.onclick = () => lockInWager();
+  document.querySelectorAll(".js-refresh-lock").forEach((b) => {
+    b.onclick = () => refreshLockdownQuestions();
+  });
   const bz = $("#buzz");
   if (bz) bz.onclick = () => buzz();
   const mic = $("#mic");
@@ -4028,6 +4269,7 @@ function ingestGuests(guests) {
       name: g.name || "Player",
       thumb: g.thumb || "",
       seat: g.seat === "view" ? "view" : "play",
+      generation: String(g.generation || "").slice(0, 40),
     }))
     .slice(0, 11);
   if (state.phase === "lobby" || state.phase === "ready") return;
@@ -4048,9 +4290,9 @@ function ingestGuests(guests) {
 function startGame() {
   seatPlayers();
   state.playOpen = "ask";
-  const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length >= ROUND)
+  const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length)
     && state.dealTopicKey === topicDealKey();
-  if (!reuse) state.qs = currentShowDeck();
+  if (!reuse) state.qs = dealFromPacks();
   state.dealFresh = false;
   state.spent = new Set(state.qs.map((q) => q.id));
   rememberDealtIds(state.qs.map((q) => q.id));
@@ -4191,6 +4433,8 @@ function paint(force = false) {
     state.refreshNotice?.by || "",
     state.refreshNoticeAt || 0,
     state.cohortShow || 0,
+    state.cohort?.lockdownRefreshes || 0,
+    state.profile?.generation || "",
     state.profile?.placementSittingsUsed || 0,
     Object.keys(state.dropoutIds || {}).sort().join(","),
     (state.pendingJoins || []).map((g) => g.id).join(","),

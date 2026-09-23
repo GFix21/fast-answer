@@ -1,0 +1,249 @@
+{
+  "generation": "gen-x",
+  "locale": "en",
+  "target": 150,
+  "held": 15,
+  "shortfall": 135,
+  "questions": [
+    {
+      "id": "w39-e-genx-mtv",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Cable Day One",
+      "prompt": "What channel launched in 1981 with “Video Killed the Radio Star”?",
+      "choices": [
+        "MTV",
+        "CNN",
+        "Nickelodeon",
+        "VH1"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genx-bttf",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Flux & Friends",
+      "prompt": "In Back to the Future, what does Doc Brown need 1.21 gigawatts of?",
+      "choices": [
+        "Plutonium dust",
+        "Banana peels",
+        "Electricity",
+        "Coffee"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Great Scott — power, not produce."
+    },
+    {
+      "id": "w39-e-genx-hamster",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Hammond’s Horror Corner",
+      "prompt": "Which presenter is famously the shortest of the Top Gear / Grand Tour trio?",
+      "choices": [
+        "James May",
+        "The Stig",
+        "Richard Hammond",
+        "Jeremy Clarkson"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Hamster. Yes. We know."
+    },
+    {
+      "id": "w39-e-genx-may",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Captain Slow Corner",
+      "prompt": "Which Grand Tour presenter is nicknamed Captain Slow?",
+      "choices": [
+        "Richard Hammond",
+        "James May",
+        "Jeremy Clarkson",
+        "Abie"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genx-tetris",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Block Party",
+      "prompt": "Which puzzle game of falling blocks was created by Alexey Pajitnov?",
+      "choices": [
+        "Pac-Man",
+        "Minesweeper",
+        "Snake",
+        "Tetris"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genx-simpsons",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Yellow Family",
+      "prompt": "What is the hometown of The Simpsons?",
+      "choices": [
+        "South Park",
+        "Quahog",
+        "Shelbyville",
+        "Springfield"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-amazon-gt",
+      "tier": "hard",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Prime Time Petrol",
+      "prompt": "Which streaming service produced The Grand Tour?",
+      "choices": [
+        "Netflix",
+        "Disney+",
+        "Amazon Prime Video",
+        "Hulu"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-chernobyl",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Atomic Map",
+      "prompt": "The 1986 Chernobyl nuclear disaster occurred in which present-day country?",
+      "choices": [
+        "Sweden",
+        "Poland",
+        "Ukraine",
+        "Germany"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-nirvana",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Grunge Gate",
+      "prompt": "Which Nirvana album includes the song “Smells Like Teen Spirit”?",
+      "choices": [
+        "Bleach",
+        "Nevermind",
+        "In Utero",
+        "Unplugged in New York"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-www",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Hyperlink Dawn",
+      "prompt": "Who is credited with inventing the World Wide Web?",
+      "choices": [
+        "Steve Jobs",
+        "Mark Zuckerberg",
+        "Bill Gates",
+        "Tim Berners-Lee"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-seinfeld",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "About Nothing",
+      "prompt": "Seinfeld is set primarily in which U.S. city?",
+      "choices": [
+        "Chicago",
+        "Boston",
+        "Los Angeles",
+        "New York City"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-gameboy",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Handheld History",
+      "prompt": "Nintendo’s original Game Boy launched in Japan in which year?",
+      "choices": [
+        "1994",
+        "1998",
+        "1989",
+        "1985"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-genx-gt-year",
+      "tier": "difficult",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Studio Chronology",
+      "prompt": "In which year did The Grand Tour first premiere on Amazon Prime Video?",
+      "choices": [
+        "2015",
+        "2018",
+        "2014",
+        "2016"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Post-BBC, pre-everyone-arguing-about-camping."
+    },
+    {
+      "id": "w39-d-genx-berlin",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Wall Clock",
+      "prompt": "In which year did the Berlin Wall fall?",
+      "choices": [
+        "1989",
+        "1979",
+        "1985",
+        "1991"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-genx-stig-reveal",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Finale · Helmet Off",
+      "prompt": "Which racing driver was revealed in 2009 as the then-current BBC Top Gear Stig?",
+      "choices": [
+        "Damon Hill",
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Ben Collins"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    }
+  ]
+}

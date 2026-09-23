@@ -1,0 +1,233 @@
+{
+  "generation": "silent-generation",
+  "locale": "de",
+  "target": 150,
+  "held": 14,
+  "shortfall": 136,
+  "questions": [
+    {
+      "id": "w39-e-silent-ike",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Motto der Jahrhundertmitte",
+      "prompt": "Mit welchem Wahlkampfslogan wird Dwight D. Eisenhower berühmt assoziiert?",
+      "choices": [
+        "I Like Ike",
+        "Morning in America",
+        "Tippecanoe and Tyler Too",
+        "Yes We Can"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Drei kleine Wörter. Große Hüte."
+    },
+    {
+      "id": "w39-e-silent-fdr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Weißes Haus im Krieg",
+      "prompt": "Welcher US-Präsident führte das Land durch den größten Teil des Zweiten Weltkriegs?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Herbert Hoover",
+        "Woodrow Wilson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-transistor",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Ära des Taschenradios",
+      "prompt": "Welches kleine Radio wurde in den 1950er-Jahren zum Teenager-Hit?",
+      "choices": [
+        "Vakuum-Toaster",
+        "Transistorradio",
+        "Achtspur-Boombox",
+        "Kristallkugel-Radio"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Nein, keine Kristallkugel."
+    },
+    {
+      "id": "w39-e-silent-elvis",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "King-Ecke",
+      "prompt": "Welcher Sänger wird weithin als „King of Rock and Roll“ bezeichnet?",
+      "choices": [
+        "Elvis Presley",
+        "Little Richard",
+        "Buddy Holly",
+        "Chuck Berry"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Kartenchaos",
+      "prompt": "Was ist die Hauptstadt Kanadas?",
+      "choices": [
+        "Toronto",
+        "Ottawa",
+        "Vancouver",
+        "Montreal"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-road",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Beat-Regal",
+      "prompt": "Wer schrieb den Beat-Generation-Roman On the Road?",
+      "choices": [
+        "Allen Ginsberg",
+        "Jack Kerouac",
+        "Neal Cassady",
+        "William S. Burroughs"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-sputnik",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Orbit-Ursprünge",
+      "prompt": "Welches Land startete 1957 Sputnik 1, den ersten künstlichen Satelliten?",
+      "choices": [
+        "Vereinigte Staaten",
+        "Frankreich",
+        "China",
+        "Sowjetunion"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-hula",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Mode-Akten",
+      "prompt": "Der Spielzeug-Hype der 1950er mit dem drehenden Plastikring um die Taille war…",
+      "choices": [
+        "Der Pogo-Stick",
+        "Das Tamagotchi",
+        "Der Rubik’s Cube",
+        "Der Hula-Hoop"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-polio",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Öffentliche Gesundheit",
+      "prompt": "Welcher amerikanische Wissenschaftler leitete das Team hinter dem ersten weit verbreiteten Polio-Impfstoff der 1950er?",
+      "choices": [
+        "Alexander Fleming",
+        "Jonas Salk",
+        "Edward Jenner",
+        "Louis Pasteur"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-korea",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Kalter-Krieg-Karte",
+      "prompt": "In welchem Jahr wurde der Waffenstillstand des Koreakriegs unterzeichnet?",
+      "choices": [
+        "1953",
+        "1960",
+        "1945",
+        "1975"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-interstate",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Straßenbauer",
+      "prompt": "Welcher US-Präsident unterzeichnete 1956 den Federal-Aid Highway Act, der das Interstate-System anstieß?",
+      "choices": [
+        "Harry Truman",
+        "Dwight D. Eisenhower",
+        "John F. Kennedy",
+        "Lyndon B. Johnson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-disneyland",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Themenpark-Dämmerung",
+      "prompt": "In welchem US-Bundesstaat öffnete Disneyland 1955 erstmals?",
+      "choices": [
+        "New York",
+        "Kalifornien",
+        "Florida",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Kalter-Krieg-Himmel",
+      "prompt": "Francis Gary Powers wurde 1960 in welchem Typ US-Aufklärungsflugzeug abgeschossen?",
+      "choices": [
+        "Nur SR-71",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-silent-cool-wall",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "silent-generation",
+      "categoryTitle": "Finale · Power Lap",
+      "prompt": "Welche Zone liegt an Top Gears Cool Wall zwischen Cool und Uncool?",
+      "choices": [
+        "Subzero",
+        "Slightly Warm",
+        "Meh",
+        "Seriously Uncool"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    }
+  ]
+}

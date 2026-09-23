@@ -1,0 +1,233 @@
+{
+  "generation": "baby-boomer",
+  "locale": "en",
+  "target": 150,
+  "held": 14,
+  "shortfall": 136,
+  "questions": [
+    {
+      "id": "w39-e-boomer-moon",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "One Small Step",
+      "prompt": "Who was the first person to walk on the Moon?",
+      "choices": [
+        "John Glenn",
+        "Yuri Gagarin",
+        "Buzz Aldrin",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-apollo",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Apollo Clock",
+      "prompt": "In which year did Apollo 11 land on the Moon?",
+      "choices": [
+        "1965",
+        "1972",
+        "1969",
+        "1961"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Festival Folklore",
+      "prompt": "In which U.S. state was the 1969 Woodstock festival held?",
+      "choices": [
+        "California",
+        "New York",
+        "Florida",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-beatles",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sullivan Sunday",
+      "prompt": "Which British band made a famous U.S. splash on The Ed Sullivan Show in 1964?",
+      "choices": [
+        "The Beatles",
+        "The Who",
+        "The Kinks",
+        "The Rolling Stones"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-kirk",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Bridge Banter",
+      "prompt": "Who captained the starship Enterprise in the original Star Trek TV series?",
+      "choices": [
+        "James T. Kirk",
+        "Han Solo",
+        "Spock",
+        "Jean-Luc Picard"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-abs",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Petrolhead Pop Quiz",
+      "prompt": "What does ABS stand for in car safety systems?",
+      "choices": [
+        "Axle Balance Sensor",
+        "Advanced Battery Switch",
+        "Anti-lock Braking System",
+        "Automatic Boost System"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-jfk",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Camelot Clock",
+      "prompt": "In which year was U.S. President John F. Kennedy assassinated?",
+      "choices": [
+        "1968",
+        "1972",
+        "1960",
+        "1963"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-mlk",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "March Memory",
+      "prompt": "Martin Luther King Jr.’s “I Have a Dream” speech was delivered in which city?",
+      "choices": [
+        "Selma",
+        "Memphis",
+        "Washington, D.C.",
+        "Atlanta"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-beatles2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Abbey Notes",
+      "prompt": "Which Beatles album features the songs “Come Together” and “Here Comes the Sun”?",
+      "choices": [
+        "Let It Be",
+        "Help!",
+        "Revolver",
+        "Abbey Road"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-ali",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Rope-a-Dope",
+      "prompt": "Muhammad Ali was born with which name?",
+      "choices": [
+        "Cassius Clay",
+        "Sugar Ray Robinson",
+        "Joe Frazier",
+        "George Foreman"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-concorde",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Supersonic Side Quest",
+      "prompt": "Concorde was a famous example of what kind of passenger aircraft?",
+      "choices": [
+        "Cargo blimp",
+        "Hot-air balloon",
+        "Supersonic airliner",
+        "Helicopter ferry"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-starwars",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Galaxy Premiere",
+      "prompt": "In which year was the original Star Wars film (later A New Hope) released?",
+      "choices": [
+        "1980",
+        "1977",
+        "1983",
+        "1975"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-boomer-apollo13",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Failure Is Not…",
+      "prompt": "Apollo 13’s oxygen-tank explosion happened in which year?",
+      "choices": [
+        "1968",
+        "1972",
+        "1970",
+        "1969"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-boomer-armstrong-quote",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Finale · Lunar Line",
+      "prompt": "Complete Neil Armstrong’s Moon line: “That’s one small step for [a] man, one giant leap for ___.”",
+      "choices": [
+        "NASA",
+        "Texas",
+        "rockets",
+        "mankind"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    }
+  ]
+}

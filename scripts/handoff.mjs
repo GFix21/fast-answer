@@ -4,7 +4,8 @@
  *
  * Checks every generation is present on the weekly and placement packs
  * (EN / FR / DE), then writes questions.json + questions.{fr,de}.json
- * with the generation tag kept.
+ * with the generation tag kept. Also writes one generation pack file per
+ * generation (target 150). A shortfall is recorded; it does not block handoff.
  *
  *   npm run handoff
  *   node scripts/handoff.mjs
@@ -23,6 +24,7 @@ import {
   generationIssues,
   normalizeGeneration,
 } from "../q-and-a/map.js";
+import { buildGenerationPacks, packSummary, PACK_TARGET } from "../lib/generation-packs.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const QANDA = path.resolve(ROOT, "../Q-and-A/banks");
@@ -133,13 +135,50 @@ function writeLive(locale, pack) {
   return { file, exported, tiers: countByTier(exported), generations: countByGeneration(exported) };
 }
 
+function writeGenerationPacks(locale, questions) {
+  const packs = buildGenerationPacks(questions);
+  const summary = packSummary(packs);
+  const dir = path.join(ROOT, "banks/generation", locale);
+  fs.mkdirSync(dir, { recursive: true });
+  const shortfall = {};
+  for (const g of GENERATIONS) {
+    const held = packs[g].length;
+    shortfall[g] = PACK_TARGET - held;
+    const body = {
+      generation: g,
+      locale,
+      target: PACK_TARGET,
+      held,
+      shortfall: PACK_TARGET - held,
+      questions: packs[g],
+    };
+    fs.writeFileSync(path.join(dir, `${g}.json`), `${JSON.stringify(body, null, 2)}\n`);
+  }
+  return { ...summary, shortfall };
+}
+
 console.log("=== fast handoff ===");
 console.log("generations:", GENERATIONS.join(", "));
+const manifest = { target: PACK_TARGET, locales: {} };
 for (const loc of LOCALES) {
   const live = writeLive(loc, weekly[loc].pack);
+  const packs = writeGenerationPacks(loc, live.exported);
+  manifest.locales[loc] = {
+    held: packs.held,
+    targetEach: PACK_TARGET,
+    counts: packs.counts,
+    shortfall: packs.shortfall,
+  };
   const placeN = placement[loc].pack.questions.length;
   console.log(`${loc}: weekly ${path.relative(ROOT, weekly[loc].file)}`);
   console.log(`    → ${path.relative(ROOT, live.file)} ${live.exported.length} ${JSON.stringify(live.tiers)}`);
   console.log(`    generations ${JSON.stringify(live.generations)}`);
+  console.log(`    generation packs banks/generation/${loc}/ target ${PACK_TARGET} held ${packs.held} shortfall ${JSON.stringify(packs.shortfall)}`);
   console.log(`    placement ${path.relative(ROOT, placement[loc].file)} ${placeN} (already tagged, served as-is)`);
 }
+fs.mkdirSync(path.join(ROOT, "banks/generation"), { recursive: true });
+fs.writeFileSync(
+  path.join(ROOT, "banks/generation/manifest.json"),
+  `${JSON.stringify(manifest, null, 2)}\n`,
+);
+console.log(`manifest banks/generation/manifest.json target ${PACK_TARGET} per generation (shortfall is expected until Q&A fills the packs)`);

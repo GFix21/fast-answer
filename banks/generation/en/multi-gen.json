@@ -1,0 +1,153 @@
+{
+  "generation": "multi-gen",
+  "locale": "en",
+  "target": 150,
+  "held": 9,
+  "shortfall": 141,
+  "questions": [
+    {
+      "id": "w39-e-mix-japan",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Map Mayhem",
+      "prompt": "What is the capital of Japan?",
+      "choices": [
+        "Tokyo",
+        "Kyoto",
+        "Nagoya",
+        "Osaka"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-mona",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Louvre Lite",
+      "prompt": "Who painted the Mona Lisa?",
+      "choices": [
+        "Donatello",
+        "Raphael",
+        "Michelangelo",
+        "Leonardo da Vinci"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-gigi3",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Gigi’s Easy Lane",
+      "prompt": "True or vibe-check: DJ Gigi releases under which label family?",
+      "choices": [
+        "Motown only",
+        "GMG Brand Label",
+        "Nintendo Sound Team",
+        "Deutsche Grammophon only"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-mix-stig",
+      "tier": "easy",
+      "topic": "grand-tour",
+      "generation": "multi-gen",
+      "categoryTitle": "White Suit Mystery",
+      "prompt": "On Top Gear, what is the name of the show’s anonymous racing driver in a helmet?",
+      "choices": [
+        "The Stag",
+        "The Shadow",
+        "The Stig",
+        "The Sprinter"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-nile",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "River Rank",
+      "prompt": "Which African river is traditionally named among the world’s longest?",
+      "choices": [
+        "Thames",
+        "Seine",
+        "Hudson",
+        "Nile"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-van-gogh",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Starry Fact",
+      "prompt": "Vincent van Gogh is strongly associated with which painting?",
+      "choices": [
+        "Guernica",
+        "The Scream only as sole work",
+        "The Starry Night",
+        "The Persistence of Memory"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-v8",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Cylinder Count",
+      "prompt": "A V8 engine typically has how many cylinders?",
+      "choices": [
+        "Four",
+        "Two",
+        "Sixteen",
+        "Eight"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-mix-hamilton",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Broadway Beats",
+      "prompt": "Who wrote the music and lyrics for the musical Hamilton?",
+      "choices": [
+        "Andrew Lloyd Webber",
+        "Stephen Sondheim",
+        "Elton John",
+        "Lin-Manuel Miranda"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-mix-louvre",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Pyramid Problem",
+      "prompt": "I. M. Pei’s glass pyramid is the modern entrance landmark of which museum?",
+      "choices": [
+        "Met (NYC)",
+        "Louvre",
+        "British Museum",
+        "Prado"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    }
+  ]
+}

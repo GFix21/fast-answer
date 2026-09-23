@@ -1,0 +1,233 @@
+{
+  "generation": "baby-boomer",
+  "locale": "de",
+  "target": 150,
+  "held": 14,
+  "shortfall": 136,
+  "questions": [
+    {
+      "id": "w39-e-boomer-moon",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ein kleiner Schritt",
+      "prompt": "Wer war der erste Mensch auf dem Mond?",
+      "choices": [
+        "John Glenn",
+        "Juri Gagarin",
+        "Buzz Aldrin",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-apollo",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Apollo-Uhr",
+      "prompt": "In welchem Jahr landete Apollo 11 auf dem Mond?",
+      "choices": [
+        "1965",
+        "1972",
+        "1969",
+        "1961"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Festival-Folklore",
+      "prompt": "In welchem US-Bundesstaat fand das Woodstock-Festival 1969 statt?",
+      "choices": [
+        "Kalifornien",
+        "New York",
+        "Florida",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-beatles",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sullivan-Sonntag",
+      "prompt": "Welche britische Band sorgte 1964 in The Ed Sullivan Show für Furore in den USA?",
+      "choices": [
+        "The Beatles",
+        "The Who",
+        "The Kinks",
+        "The Rolling Stones"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-kirk",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Brücken-Banter",
+      "prompt": "Wer befehligte das Raumschiff Enterprise in der Originalserie Star Trek?",
+      "choices": [
+        "James T. Kirk",
+        "Han Solo",
+        "Spock",
+        "Jean-Luc Picard"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-boomer-abs",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Petrolhead-Quiz",
+      "prompt": "Wofür steht die Abkürzung ABS bei Kfz-Sicherheitssystemen?",
+      "choices": [
+        "Axle Balance Sensor",
+        "Advanced Battery Switch",
+        "Anti-lock Braking System",
+        "Automatic Boost System"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-jfk",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Camelot-Uhr",
+      "prompt": "In welchem Jahr wurde der US-Präsident John F. Kennedy ermordet?",
+      "choices": [
+        "1968",
+        "1972",
+        "1960",
+        "1963"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-mlk",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Marsch-Erinnerung",
+      "prompt": "In welcher Stadt hielt Martin Luther King Jr. die Rede „I Have a Dream“?",
+      "choices": [
+        "Selma",
+        "Memphis",
+        "Washington, D.C.",
+        "Atlanta"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-beatles2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Abbey-Noten",
+      "prompt": "Welches Beatles-Album enthält die Songs „Come Together“ und „Here Comes the Sun“?",
+      "choices": [
+        "Let It Be",
+        "Help!",
+        "Revolver",
+        "Abbey Road"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-ali",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Rope-a-Dope",
+      "prompt": "Unter welchem Namen wurde Muhammad Ali geboren?",
+      "choices": [
+        "Cassius Clay",
+        "Sugar Ray Robinson",
+        "Joe Frazier",
+        "George Foreman"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-concorde",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Überschall-Nebenquest",
+      "prompt": "Die Concorde war ein berühmtes Beispiel für welche Art von Passagierflugzeug?",
+      "choices": [
+        "Cargo-Luftschiff",
+        "Heißluftballon",
+        "Überschall-Verkehrsflugzeug",
+        "Helikopterfähre"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-boomer-starwars",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Galaxie-Premiere",
+      "prompt": "In welchem Jahr kam der originale Star-Wars-Film (später Eine neue Hoffnung) heraus?",
+      "choices": [
+        "1980",
+        "1977",
+        "1983",
+        "1975"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-boomer-apollo13",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Versagen ist keine…",
+      "prompt": "In welchem Jahr explodierte der Sauerstofftank von Apollo 13?",
+      "choices": [
+        "1968",
+        "1972",
+        "1970",
+        "1969"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-boomer-armstrong-quote",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Finale · Mondzeile",
+      "prompt": "Vervollständigen Sie Neil Armstrongs Mondsatz: „That’s one small step for [a] man, one giant leap for ___.“",
+      "choices": [
+        "NASA",
+        "Texas",
+        "rockets",
+        "mankind"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    }
+  ]
+}

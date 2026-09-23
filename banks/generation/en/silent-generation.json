@@ -1,0 +1,233 @@
+{
+  "generation": "silent-generation",
+  "locale": "en",
+  "target": 150,
+  "held": 14,
+  "shortfall": 136,
+  "questions": [
+    {
+      "id": "w39-e-silent-ike",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Mid-Century Motto",
+      "prompt": "What campaign slogan is Dwight D. Eisenhower famously linked with?",
+      "choices": [
+        "I Like Ike",
+        "Morning in America",
+        "Tippecanoe and Tyler Too",
+        "Yes We Can"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Three little words. Huge hats."
+    },
+    {
+      "id": "w39-e-silent-fdr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Wartime White House",
+      "prompt": "Which U.S. president led the country through most of World War II?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Herbert Hoover",
+        "Woodrow Wilson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-transistor",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Pocket Radio Era",
+      "prompt": "What small radio type became a teenage hit in the 1950s?",
+      "choices": [
+        "Vacuum toaster",
+        "Transistor radio",
+        "Eight-track boombox",
+        "Crystal ball radio"
+      ],
+      "correctIndex": 1,
+      "banterHint": "No, not a crystal ball."
+    },
+    {
+      "id": "w39-e-silent-elvis",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "King Corner",
+      "prompt": "Which singer is widely called the King of Rock and Roll?",
+      "choices": [
+        "Elvis Presley",
+        "Little Richard",
+        "Buddy Holly",
+        "Chuck Berry"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Map Mayhem",
+      "prompt": "What is the capital city of Canada?",
+      "choices": [
+        "Toronto",
+        "Ottawa",
+        "Vancouver",
+        "Montreal"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-road",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Beat Shelf",
+      "prompt": "Who wrote the Beat Generation novel On the Road?",
+      "choices": [
+        "Allen Ginsberg",
+        "Jack Kerouac",
+        "Neal Cassady",
+        "William S. Burroughs"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-sputnik",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Orbit Origins",
+      "prompt": "Which country launched Sputnik 1, the first artificial satellite, in 1957?",
+      "choices": [
+        "United States",
+        "France",
+        "China",
+        "Soviet Union"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-hula",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fad Files",
+      "prompt": "The 1950s toy craze of a spinning plastic ring around the waist was the…",
+      "choices": [
+        "Pogo stick",
+        "Tamagotchi",
+        "Rubik’s Cube",
+        "Hula hoop"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-polio",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Public Health",
+      "prompt": "Which American scientist led the team behind the first widely used polio vaccine in the 1950s?",
+      "choices": [
+        "Alexander Fleming",
+        "Jonas Salk",
+        "Edward Jenner",
+        "Louis Pasteur"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-korea",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Cold War Map",
+      "prompt": "The Korean War armistice was signed in which year?",
+      "choices": [
+        "1953",
+        "1960",
+        "1945",
+        "1975"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-interstate",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Road Builders",
+      "prompt": "Which U.S. president signed the Federal-Aid Highway Act that kicked off the Interstate system in 1956?",
+      "choices": [
+        "Harry Truman",
+        "Dwight D. Eisenhower",
+        "John F. Kennedy",
+        "Lyndon B. Johnson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-disneyland",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Theme Park Dawn",
+      "prompt": "In which U.S. state did Disneyland first open in 1955?",
+      "choices": [
+        "New York",
+        "California",
+        "Florida",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Cold War Sky",
+      "prompt": "Francis Gary Powers was shot down in 1960 while flying which type of U.S. reconnaissance aircraft?",
+      "choices": [
+        "SR-71 only",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-silent-cool-wall",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "silent-generation",
+      "categoryTitle": "Finale · Power Lap",
+      "prompt": "On Top Gear’s Cool Wall, what zone sits between Cool and Uncool?",
+      "choices": [
+        "Subzero",
+        "Slightly Warm",
+        "Meh",
+        "Seriously Uncool"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    }
+  ]
+}

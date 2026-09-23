@@ -1,0 +1,249 @@
+{
+  "generation": "gen-y",
+  "locale": "de",
+  "target": 150,
+  "held": 15,
+  "shortfall": 135,
+  "questions": [
+    {
+      "id": "w39-e-geny-matrix",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Rote-Pille-Runde",
+      "prompt": "Welche Farbe hat die Pille, die Neo in Matrix nimmt, um die Wahrheit zu sehen?",
+      "choices": [
+        "Lila",
+        "Blau",
+        "Grün",
+        "Rot"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-ipod",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Weiße Ohrhörer",
+      "prompt": "In welchem Jahr brachte Apple den ersten iPod heraus?",
+      "choices": [
+        "1998",
+        "2001",
+        "2007",
+        "2005"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-luke",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Sci-Fi-Blitzrunde",
+      "prompt": "Welche Farbe hat Lukes erstes Lichtschwert in Star Wars (Eine neue Hoffnung)?",
+      "choices": [
+        "Lila",
+        "Rot",
+        "Blau",
+        "Grün"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-gmg",
+      "tier": "easy",
+      "topic": "gmg",
+      "generation": "gen-y",
+      "categoryTitle": "Mitternacht in Montréal",
+      "prompt": "Wo hat GMG Brand Label seinen Sitz?",
+      "choices": [
+        "Montréal, Kanada",
+        "Paris, Frankreich",
+        "Berlin, Deutschland",
+        "Toronto, Kanada"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-gigi",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "gen-y",
+      "categoryTitle": "Gigis Easy Lane",
+      "prompt": "DJ Gigi ist der Flaggschiff-Künstler welches Montréaler Labels?",
+      "choices": [
+        "Warp Records",
+        "GMG Brand Label",
+        "Sub Pop",
+        "Def Jam"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-geny-google",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Suchparty",
+      "prompt": "Welches Unternehmen startete Ende der 1990er einen Suchdienst namens Google?",
+      "choices": [
+        "AltaVista",
+        "Ask Jeeves",
+        "Yahoo",
+        "Google"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Ja, das war die leichte Frage."
+    },
+    {
+      "id": "w39-h-geny-ipod-hd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Scrollrad tief",
+      "prompt": "Welchen Laufwerkstyp nutzte der Speicher des ersten iPods?",
+      "choices": [
+        "Nur Cloud-Streaming",
+        "Nur Disketten",
+        "Nur Vinyl",
+        "Festplatte"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-facebook",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Campus-Login",
+      "prompt": "In welchem Jahr wurde Facebook (heute Meta) gegründet?",
+      "choices": [
+        "2004",
+        "2008",
+        "2012",
+        "1998"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-dune",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Sand & Syntax",
+      "prompt": "Wer schrieb den Originalroman Dune?",
+      "choices": [
+        "Philip K. Dick",
+        "Isaac Asimov",
+        "Arthur C. Clarke",
+        "Frank Herbert"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-gmg2",
+      "tier": "hard",
+      "topic": "gmg",
+      "generation": "gen-y",
+      "categoryTitle": "Label-Lore",
+      "prompt": "Womit wird GMG Brand Label vor allem assoziiert?",
+      "choices": [
+        "Musik",
+        "Landwirtschaftsmaschinen",
+        "Steuersoftware",
+        "Flugzeug-Catering"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-friends",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Sofa-Kontinuität",
+      "prompt": "Wie heißt in Friends der Central-Perk-Barista, der später zur Stammbesetzung gehört?",
+      "choices": [
+        "Gunner",
+        "Gareth",
+        "Gregory",
+        "Gunther"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-hybrid",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Leises Drehmoment",
+      "prompt": "Welches Toyota-Modell gilt weithin als Wegbereiter der Massenmarkt-Hybride?",
+      "choices": [
+        "Nur Corolla FX",
+        "Prius",
+        "Nur Land Cruiser Diesel",
+        "Nur Supra Mk IV"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-geny-iphone",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Keynote-Chronologie",
+      "prompt": "In welchem Jahr kündigte Apple das originale iPhone an?",
+      "choices": [
+        "2010",
+        "2007",
+        "2005",
+        "2009"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-geny-inception",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Traumschichten",
+      "prompt": "Wer führte Regie beim Film Inception (2010)?",
+      "choices": [
+        "Christopher Nolan",
+        "James Cameron",
+        "Denis Villeneuve",
+        "Ridley Scott"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-f-geny-matrix-arch",
+      "tier": "extreme",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Finale · Code Grün",
+      "prompt": "Welchen Titel trägt in der Lore von Matrix Reloaded / Revolutions das Programm, das die Matrix erschuf?",
+      "choices": [
+        "The Architect",
+        "Nur The Oracle",
+        "Nur Agent Smith",
+        "Morpheus"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    }
+  ]
+}
