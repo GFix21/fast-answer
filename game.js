@@ -18,6 +18,10 @@ import {
   placementSlice,
   sittingsRemaining,
   PLACEMENT_SITTINGS,
+  PLACEMENT_MANDATORY_YEARS,
+  addYearsIso,
+  placementMandatoryAt,
+  placementIsDue,
 } from "./lib/device-cohort.js";
 import {
   PACK_TARGET,
@@ -138,6 +142,7 @@ const CELEB_BOTS = [
   { id: "denzel", name: "Denzel", generation: "baby-boomer", skill: 0.64, buzzDelayMs: [1000, 2400], blurb: "Precision over panic." },
   { id: "meryl", name: "Meryl", generation: "silent-generation", skill: 0.66, buzzDelayMs: [1300, 2800], blurb: "Never first. Rarely wrong." },
 ];
+const AGE_BRACKETS = ["10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s"];
 const GEN_KEYS = {
   "silent-generation": "genSilent",
   "baby-boomer": "genBoomer",
@@ -767,6 +772,19 @@ function readGeneration(el) {
   const g = normalizeGeneration(el && el.value);
   return GENERATIONS.includes(g) ? g : "";
 }
+function readAge(el) {
+  const v = String((el && el.value) || "");
+  return AGE_BRACKETS.includes(v) ? v : "";
+}
+function ageBracketHTML(id, selected) {
+  const current = AGE_BRACKETS.includes(selected) ? selected : "30s";
+  return `
+    <label class="field" for="${id}">${tt("ageBracket")}</label>
+    <p class="meta">${escapeHtml(tt("ageLead"))}</p>
+    <select class="gen-select" id="${id}">
+      ${AGE_BRACKETS.map((b) => `<option value="${b}" ${b === current ? "selected" : ""}>${escapeHtml(tt("age" + b))}</option>`).join("")}
+    </select>`;
+}
 function generationSelectHTML(id, selected) {
   const current = GENERATIONS.includes(normalizeGeneration(selected))
     ? normalizeGeneration(selected)
@@ -879,6 +897,7 @@ function flipShowDeck() {
   return deck.map((q) => ({ ...q, choices: [...q.choices] }));
 }
 function placementAttemptsLeft() {
+  if (placementIsDue(state.profile)) return PLACEMENT_SITTINGS;
   const cohort = state.cohort || ensureCohort();
   return sittingsRemaining(
     state.profile?.placementSittingsUsed,
@@ -889,11 +908,12 @@ function placementAttemptsLeft() {
 function beginPlacementSitting() {
   const cohort = ensureCohort();
   const renewsAt = cohort?.renewsAt || addMonthsIso(new Date().toISOString(), 3);
+  const mandatory = placementIsDue(state.profile);
   const left = placementAttemptsLeft();
-  if (left <= 0) return { blocked: true, renewsAt };
-  const usedSame = state.profile?.cohortBuiltAt === cohort?.builtAt
-    ? (Number(state.profile?.placementSittingsUsed) || 0)
-    : 0;
+  if (!mandatory && left <= 0) return { blocked: true, renewsAt };
+  const usedSame = mandatory || state.profile?.cohortBuiltAt !== cohort?.builtAt
+    ? 0
+    : (Number(state.profile?.placementSittingsUsed) || 0);
   const pool = placementSlice(cohort?.placement?.length ? cohort.placement : state.placementQs, usedSame);
   saveProfile({
     cohortBuiltAt: cohort?.builtAt || "",
@@ -1076,12 +1096,10 @@ function formatDue(iso) {
   }
 }
 function needsPlacement(p) {
-  if (!p || !p.placementCompletedAt || !p.nextPlacementDueAt) return true;
-  const cohort = state.cohort;
-  if (cohort?.builtAt && p.cohortBuiltAt && p.cohortBuiltAt !== cohort.builtAt) return true;
-  const due = Date.parse(p.nextPlacementDueAt);
-  if (!Number.isFinite(due)) return true;
-  return Date.now() >= due;
+  return placementIsDue(p);
+}
+function mandatoryPlacementDue(p) {
+  return placementMandatoryAt(p?.placementCompletedAt, p?.placementMandatoryAt);
 }
 function isPlaced() {
   return Boolean(state.profile && !needsPlacement(state.profile));
@@ -1190,10 +1208,12 @@ async function commitNewProfile(name, email, pw) {
     createdAt: keepLegacy && base.createdAt ? base.createdAt : new Date().toISOString(),
   };
   const generation = readGeneration($("#playerGen") || $("#roomPlayerGen") || $("#entryGen"));
+  const ageBracket = readAge($("#playerAge") || $("#roomPlayerAge") || $("#entryAge")) || "30s";
   saveProfile({
     displayName: cleanName,
     email: cleanEmail,
     passwordHash,
+    ageBracket,
     ...(generation ? { generation } : {}),
   });
   state.dojoMode = "home";
@@ -1214,6 +1234,7 @@ function saveProfile(patch = {}) {
   next.email = String(next.email || "").trim().slice(0, 120);
   const generation = normalizeGeneration(next.generation);
   next.generation = GENERATIONS.includes(generation) ? generation : "";
+  next.ageBracket = AGE_BRACKETS.includes(String(next.ageBracket || "")) ? String(next.ageBracket) : "";
   state.profile = next;
   state.name = next.displayName;
   localStorage.setItem("fa-name", state.name);
@@ -2549,12 +2570,13 @@ function finishDojo() {
   const completedAt = new Date().toISOString();
   const ids = d.answers.map((a) => a.question.id);
   const cohort = ensureCohort();
-  const renewsAt = cohort?.renewsAt || addMonthsIso(completedAt, 3);
+  const mandatoryAt = addYearsIso(completedAt, PLACEMENT_MANDATORY_YEARS);
   saveProfile({
     abilityTier,
     placementScore: correct,
     placementCompletedAt: completedAt,
-    nextPlacementDueAt: renewsAt,
+    placementMandatoryAt: mandatoryAt,
+    nextPlacementDueAt: mandatoryAt,
     cohortBuiltAt: cohort?.builtAt || state.profile?.cohortBuiltAt || "",
     placementQuestionIds: [...(state.profile?.placementQuestionIds || []), ...ids].slice(-200),
   });
@@ -2671,9 +2693,14 @@ function startDojo() {
 
 function placementNoteHTML() {
   const left = placementAttemptsLeft();
-  const due = formatDue((state.cohort && state.cohort.renewsAt) || state.profile?.nextPlacementDueAt || "");
+  const due = formatDue((state.cohort && state.cohort.renewsAt) || "");
+  if (state.profile?.placementCompletedAt && placementIsDue(state.profile)) {
+    return `<p class="meta">${escapeHtml(tt("placementExpired"))}</p>`;
+  }
   if (!isPlaced() && left === PLACEMENT_SITTINGS) return `<p class="meta">${tt("dojoIntro")}</p>`;
-  return `<p class="meta">${escapeHtml(tt("placementLeft", left, due))}</p>`;
+  const again = mandatoryPlacementDue(state.profile);
+  const againLine = again ? ` ${tt("placementAgain", formatDue(again))}` : "";
+  return `<p class="meta">${escapeHtml(tt("placementLeft", left, due) + againLine)}</p>`;
 }
 function refreshPlacementSet() {
   const before = state.profile?.placementSittingsUsed || 0;
@@ -2771,6 +2798,7 @@ function dojoBody() {
       <label class="field" for="nm">${tt("name")}</label>
       <input id="nm" type="text" value="${escapeHtml(p.displayName && hasPhoneProfile() ? p.displayName : "")}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
       ${generationSelectHTML("playerGen", p.generation)}
+      ${ageBracketHTML("playerAge", p.ageBracket)}
       <label class="field" for="emNew">${tt("email")}</label>
       <input id="emNew" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
       <label class="field" for="pwNew">${tt("password")}</label>
@@ -2848,6 +2876,7 @@ function dojoBody() {
     <label class="field" for="nm">${tt("name")}</label>
     <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
     ${generationSelectHTML("playerGen", p.generation)}
+    ${ageBracketHTML("playerAge", p.ageBracket)}
     <label class="field" for="em">${tt("email")}</label>
     <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("optional")}"/>
     <label class="field" for="thDojo">${tt("photoTv")}</label>
@@ -2861,7 +2890,7 @@ function dojoBody() {
     <input id="pwConfirm" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("optional")}"/>
     <button class="ghost" id="saveProfileEdit" type="button">${tt("saveProfile")}</button>
     ${placed
-      ? `<p class="meta">${escapeHtml(tt("abilityRetake", (ab && ab.label) || tt("placed"), formatDue(p.nextPlacementDueAt || state.cohort?.renewsAt)))}</p>`
+      ? `<p class="meta">${escapeHtml(tt("abilityRetake", (ab && ab.label) || tt("placed"), formatDue(mandatoryPlacementDue(p) || p.placementCompletedAt)))}</p>`
       : ""}
     ${placementNoteHTML()}
     <button class="primary" id="${p.abilityTier ? "retake" : "dojoGo"}" type="button" ${placementAttemptsLeft() <= 0 && placed ? "disabled" : ""}>${p.abilityTier ? tt("retakeMedal") : tt("startDojo")}</button>
@@ -2902,6 +2931,7 @@ function roomDojoEntryHTML() {
         <label class="field" for="roomNm">${tt("name")}</label>
         <input id="roomNm" type="text" value="${escapeHtml(hasPhoneProfile() ? (p.displayName || "") : (state.name || ""))}" maxlength="18" autocomplete="nickname"/>
         ${generationSelectHTML("roomPlayerGen", p.generation)}
+        ${ageBracketHTML("roomPlayerAge", p.ageBracket)}
         <label class="field" for="roomEm">${tt("email")}</label>
         <input id="roomEm" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email"/>
         <label class="field" for="roomPwNew">${tt("password")}</label>
@@ -3226,6 +3256,7 @@ function entryHTML() {
         <input id="entryName" type="text" value="${escapeHtml(name)}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
         <label class="field" for="entryEmail">${tt("email")}</label>
         <input id="entryEmail" type="email" value="${escapeHtml(email)}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
+        ${existing ? "" : ageBracketHTML("entryAge", draft.ageBracket || p.ageBracket)}
         <label class="field" for="entryPw">${tt("password")}</label>
         <input id="entryPw" type="password" value="${escapeHtml(pw)}" maxlength="64" autocomplete="${existing ? "current-password" : "new-password"}" placeholder="${tt("passwordHint")}"/>
         <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${entryActionLabel(name)}</button>
@@ -3295,6 +3326,7 @@ function syncEntryDraft() {
     name: String(($("#entryName") && $("#entryName").value) || ""),
     email: String(($("#entryEmail") && $("#entryEmail").value) || ""),
     password: String(($("#entryPw") && $("#entryPw").value) || ""),
+    ageBracket: readAge($("#entryAge")) || (state.entryDraft && state.entryDraft.ageBracket) || "",
   };
 }
 
@@ -3311,7 +3343,8 @@ async function submitEntry() {
       paint(true);
       return;
     }
-    saveProfile({ displayName: name, email });
+    const ageBracket = readAge($("#entryAge"));
+    saveProfile({ displayName: name, email, ...(ageBracket ? { ageBracket } : {}) });
     state.dojoMode = "home";
     state.roomDojoPanel = "";
     state.statusMsg = tt("profileEntered");
@@ -3668,7 +3701,13 @@ function bindDojoSurface() {
     const pw = String(($("#pwNew") && $("#pwNew").value) || "");
     const pw2 = String(($("#pwConfirm") && $("#pwConfirm").value) || "");
     const generation = readGeneration($("#playerGen"));
-    const patch = { displayName: name || state.name, email, ...(generation ? { generation } : {}) };
+    const ageBracket = readAge($("#playerAge"));
+    const patch = {
+      displayName: name || state.name,
+      email,
+      ...(generation ? { generation } : {}),
+      ...(ageBracket ? { ageBracket } : {}),
+    };
     if (pw || pw2) {
       if (pw.length < 4) {
         state.statusMsg = tt("passwordHint");

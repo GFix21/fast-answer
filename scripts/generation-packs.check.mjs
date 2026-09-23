@@ -11,7 +11,7 @@ import {
   refreshLockdown,
   shufflePacks,
 } from "../lib/generation-packs.js";
-import { buildDeviceCohort } from "../lib/device-cohort.js";
+import { buildDeviceCohort, placementIsDue, placementMandatoryAt, addYearsIso } from "../lib/device-cohort.js";
 
 const weekly = JSON.parse(fs.readFileSync(new URL("../questions.json", import.meta.url), "utf8"));
 const placement = JSON.parse(fs.readFileSync(new URL("../banks/placement/generational-first-pass.json", import.meta.url), "utf8"));
@@ -119,5 +119,14 @@ assert.notEqual(
   reversed["multi-gen"].map((q) => q.id).join("|"),
   packs["multi-gen"].map((q) => q.id).join("|"),
 );
+
+const done = "2024-09-01T00:00:00.000Z";
+const due = placementMandatoryAt(done);
+assert.equal(due, addYearsIso(done, 2));
+assert.equal(placementIsDue({ placementCompletedAt: done, placementMandatoryAt: due }, Date.parse("2026-08-31T00:00:00.000Z")), false);
+assert.equal(placementIsDue({ placementCompletedAt: done, placementMandatoryAt: due }, Date.parse("2026-09-01T00:00:00.000Z")), true);
+assert.equal(placementIsDue({ placementCompletedAt: done }, Date.parse("2026-09-01T00:00:00.000Z")), true);
+assert.equal(placementIsDue({}, Date.parse("2026-01-01T00:00:00.000Z")), true);
+assert.equal(placementIsDue({ placementCompletedAt: done, placementMandatoryAt: "2025-01-01T00:00:00.000Z" }, Date.parse("2025-06-01T00:00:00.000Z")), true);
 
 console.log("generation packs ok", summary.counts);
