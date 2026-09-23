@@ -1,16 +1,24 @@
+import { normalizeFlowLocale, FLOW_LOCALES } from "../lib/flow-locale.js";
+import { flowLocaleLabel, t as translate } from "./strings.js";
+
 const IDLE_MS = 30_000;
 const GLOW_URL = "https://gmgbrand.vercel.app/games";
 const app = document.getElementById("app");
 
 const LOCALE_KEY = "fa-flow-locale";
-const LOCALES = ["en", "fr", "de"];
+const LOCALES = FLOW_LOCALES;
 function loadFlowLocale() {
   try {
-    const v = (localStorage.getItem(LOCALE_KEY) || "en").toLowerCase().slice(0, 2);
-    return LOCALES.includes(v) ? v : "en";
+    const q = new URLSearchParams(location.search).get("locale");
+    const stored = localStorage.getItem(LOCALE_KEY);
+    return normalizeFlowLocale(q || stored || "en");
   } catch {
     return "en";
   }
+}
+
+function t(key, vars) {
+  return translate(state.locale, key, vars);
 }
 
 const state = {
@@ -89,7 +97,7 @@ function fmtCounts(c) {
   const order = ["easy", "hard", "difficult", "finale", "extreme"];
   const parts = order
     .filter((k) => c[k] != null)
-    .map((k) => `${c[k]} ${k}`);
+    .map((k) => `${c[k]} ${t("tier_" + k)}`);
   for (const [k, v] of Object.entries(c)) {
     if (!order.includes(k)) parts.push(`${v} ${k}`);
   }
@@ -100,64 +108,76 @@ function readyBenchHTML() {
   const ready = state.rejectReady;
   const questions = ready?.questions || [];
   const hand = ready?.onHand;
-  if (!hand) return `<p class="mut">No question is on hand for Regenerate yet.</p>`;
+  if (!hand) return `<p class="mut">${t("noReplacement")}</p>`;
   return `
     <div class="ready-bench">
-      <p><b>${questions.length} ready</b> for rejected questions. <b>On hand</b> for Regenerate: ${esc(hand.prompt)}</p>
+      <p><b>${questions.length} ${t("readyCount")}</b>. <b>${t("potential")}</b> : ${esc(hand.prompt)}</p>
       <ol class="ready-list">
-        ${questions.map((q, i) => `<li class="${i === 0 ? "on-hand" : ""}"><span>${i === 0 ? "On hand" : "Ready"}</span> ${esc(q.tier)} · ${esc(q.generation || "")} · ${esc(q.prompt)}</li>`).join("")}
+        ${questions.map((q, i) => `<li class="${i === 0 ? "on-hand" : ""}"><span>${i === 0 ? t("potentialShort") : t("readyShort")}</span> ${esc(t("tier_" + (q.tier || "")))} · ${esc(q.prompt)}</li>`).join("")}
       </ol>
     </div>`;
 }
 
+function potentialReplacement(exceptId) {
+  const list = state.rejectReady?.questions || [];
+  return list.find((q) => q && q.id !== exceptId) || null;
+}
+
 function archiveQItem(q) {
-  const rejected = q.status === "rejected";
-  const regen = state.rejectReady?.onHand ? "Regenerate · on hand" : "Regenerate";
+  const offer = potentialReplacement(q.id);
   return `
     <div class="q-item ${esc(q.status || "")}">
-      <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation || "")}${q.status ? ` · <b>${esc(q.status)}</b>` : ""} · ${esc(q.id)}</div>
+      <div class="q-meta">${esc(t("tier_" + (q.tier || "")))} · ${esc(q.topic)} · ${esc(q.generation || "")}${q.status ? ` · <b>${esc(q.status)}</b>` : ""} · ${esc(q.id)}</div>
       <div class="q-prompt">${esc(q.categoryTitle || "")}${q.categoryTitle ? " — " : ""}${esc(q.prompt || "")}</div>
       <div class="choices">${(q.choices || []).map((c, i) => `<div class="${i === q.correctIndex ? "hit" : ""}">${String.fromCharCode(65 + i)}. ${esc(c)}</div>`).join("")}</div>
-      <div class="row" style="margin-top:10px">
-        ${rejected
-          ? `<button class="btn primary" data-arch-regen="${esc(q.id)}">${regen}</button>`
-          : `<button class="btn danger" data-arch-reject="${esc(q.id)}">Reject</button>
-             <button class="btn" data-arch-regen="${esc(q.id)}">Reject &amp; regenerate</button>`}
-      </div>
+      ${offer ? `
+        <div class="replace-offer">
+          <div>
+            <div class="mut">${t("potential")}</div>
+            <div class="q-prompt" style="margin:4px 0 0">${esc(offer.prompt)}</div>
+          </div>
+          <button class="btn primary" type="button" data-arch-replace="${esc(q.id)}" data-on-hand="${esc(offer.id)}">${t("replace")}</button>
+        </div>` : `<p class="mut" style="margin-top:10px">${t("noReplacement")}</p>`}
     </div>`;
 }
 
 function bindArchiveQuestionActions(panel) {
-  panel.querySelectorAll("[data-arch-reject]").forEach((b) =>
-    b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.archReject, false)),
-  );
-  panel.querySelectorAll("[data-arch-regen]").forEach((b) =>
-    b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.archRegen, true)),
+  panel.querySelectorAll("[data-arch-replace]").forEach((b) =>
+    b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.archReplace, true, null, b.dataset.onHand)),
   );
 }
 
 function render() {
   if (!app) return;
+  document.documentElement.lang = state.locale === "fr-CA" ? "fr-CA" : (state.locale || "en");
   if (!state.authed) {
     app.innerHTML = `
       <div class="login-screen">
-        <p class="eyebrow">Private</p>
+        <p class="eyebrow">${t("private")}</p>
         <h1>Flow</h1>
-        <p class="mut login-sub">Fast Answer console. The password stays on the server.</p>
+        <p class="mut login-sub">${t("loginSub")}</p>
         <form id="login-form" class="card login-card">
-          ${state.locked ? `<div class="banner">Session locked — enter the password again.</div>` : ""}
+          ${state.locked ? `<div class="banner">${t("locked")}</div>` : ""}
           ${state.message ? `<div class="banner">${esc(state.message)}</div>` : ""}
-          <label for="pw">Password</label>
+          <label for="pw">${t("password")}</label>
           <input id="pw" name="password" type="password" autocomplete="current-password" required />
-          <button class="btn primary" id="login" type="submit">Enter</button>
+          <button class="btn primary" id="login" type="submit">${t("enter")}</button>
         </form>
-        <p class="mut" style="margin-top:16px"><a class="glow-link" href="/">Back to the game</a></p>
+        <div class="lang-switch" role="group" aria-label="${t("localeGroup")}" style="margin-top:16px">
+          ${LOCALES.map((loc) =>
+            `<button type="button" class="btn lang-btn ${state.locale===loc?"primary":""}" data-flow-locale="${loc}">${flowLocaleLabel(loc)}</button>`
+          ).join("")}
+        </div>
+        <p class="mut" style="margin-top:16px"><a class="glow-link" href="/">${t("backGame")}</a></p>
       </div>`;
     document.getElementById("login-form")?.addEventListener("submit", (e) => {
       e.preventDefault();
       doLogin();
     });
     document.getElementById("pw")?.focus();
+    app.querySelectorAll("[data-flow-locale]").forEach((b) =>
+      b.addEventListener("click", () => setFlowLocale(b.dataset.flowLocale)),
+    );
     return;
   }
 
@@ -169,32 +189,32 @@ function render() {
   app.innerHTML = `
     <div class="flow-head">
       <div>
-        <p class="eyebrow">Private</p>
+        <p class="eyebrow">${t("private")}</p>
         <h1>Flow</h1>
-        <p class="mut">Week ${esc(pack?.weekKey || "—")} · locale <b>${esc((state.locale||"en").toUpperCase())}</b> · review, metrics, profiles, rooms.</p>
+        <p class="mut">${t("weekLine", { week: pack?.weekKey || "—", locale: flowLocaleLabel(state.locale) })}</p>
       </div>
       <div class="row">
-        <div class="lang-switch" role="group" aria-label="Locale">
+        <div class="lang-switch" role="group" aria-label="${t("localeGroup")}">
           ${LOCALES.map((loc) =>
-            `<button type="button" class="btn lang-btn ${state.locale===loc?"primary":""}" data-flow-locale="${loc}">${loc.toUpperCase()}</button>`
+            `<button type="button" class="btn lang-btn ${state.locale===loc?"primary":""}" data-flow-locale="${loc}">${flowLocaleLabel(loc)}</button>`
           ).join("")}
         </div>
-        <a class="btn" href="/">Play</a>
-        <button class="btn" id="logout">Log out</button>
+        <a class="btn" href="/">${t("play")}</a>
+        <button class="btn" id="logout">${t("logout")}</button>
       </div>
     </div>
     ${state.message ? `<div class="banner ok-banner">${esc(state.message)}</div>` : ""}
     <nav class="tabs">
       ${[
-        ["console", "Console"],
-        ["metrics", "Metrics"],
-        ["queue", "Queue"],
-        ["profiles", "Profiles"],
-        ["rooms", "Rooms"],
-        ["bank", "Bank"],
-        ["archive", "Archives"],
-        ["topic", "Topics"],
-        ["reject", "Reject"],
+        ["console", t("tab_console")],
+        ["metrics", t("tab_metrics")],
+        ["queue", t("tab_queue")],
+        ["profiles", t("tab_profiles")],
+        ["rooms", t("tab_rooms")],
+        ["bank", t("tab_bank")],
+        ["archive", t("tab_archive")],
+        ["topic", t("tab_topic")],
+        ["reject", t("tab_reject")],
       ].map(([t, label]) =>
         `<button data-tab="${t}" class="${state.tab===t?"on":""}">${label}</button>`
       ).join("")}
@@ -238,31 +258,31 @@ function render() {
   } else if (state.tab === "metrics" || state.tab === "overview") {
     panel.innerHTML = `
       <div class="card">
-        <h2>Metrics</h2>
+        <h2>${t("metrics")}</h2>
         <div class="row" style="margin:12px 0 16px">
-          <div class="stat"><b>${sc.easy||0}</b><span>easy</span></div>
-          <div class="stat"><b>${sc.hard||0}</b><span>hard</span></div>
-          <div class="stat"><b>${sc.difficult||0}</b><span>difficult</span></div>
-          <div class="stat"><b>${sc.finale||0}</b><span>finale→extreme</span></div>
+          <div class="stat"><b>${sc.easy||0}</b><span>${t("tier_easy")}</span></div>
+          <div class="stat"><b>${sc.hard||0}</b><span>${t("tier_hard")}</span></div>
+          <div class="stat"><b>${sc.difficult||0}</b><span>${t("tier_difficult")}</span></div>
+          <div class="stat"><b>${sc.finale||0}</b><span>${t("tier_finale")}</span></div>
         </div>
         <div class="row" style="margin-bottom:16px">
-          <div class="stat"><b>${st.pending||0}</b><span>pending</span></div>
-          <div class="stat"><b>${st.approved||0}</b><span>approved</span></div>
-          <div class="stat"><b>${st.rejected||0}</b><span>rejected</span></div>
+          <div class="stat"><b>${st.pending||0}</b><span>${t("pending")}</span></div>
+          <div class="stat"><b>${st.approved||0}</b><span>${t("approved")}</span></div>
+          <div class="stat"><b>${st.rejected||0}</b><span>${t("rejected")}</span></div>
         </div>
         <p class="mut">${esc(pack?.inspirationSummary || "")}</p>
         <p class="mut" style="margin-top:8px">
-          Last publish: ${pub?.publishedAt ? esc(pub.publishedAt) : "not yet (repo may already ship questions.json)"}
-          · ${pub?.questionCount ?? "—"} questions
+          ${t("lastPublish")}: ${pub?.publishedAt ? esc(pub.publishedAt) : t("notYet")}
+          · ${pub?.questionCount ?? "—"} ${t("questions")}
           ${pub?.counts ? `· ${esc(JSON.stringify(pub.counts))}` : ""}
           ${pub?.generations ? `· generations ${esc(JSON.stringify(pub.generations))}` : ""}
         </p>
         <div class="row" style="margin-top:16px">
-          <button class="btn primary" id="publish">Publish week → questions.json</button>
-          <button class="btn" id="refresh">Refresh</button>
+          <button class="btn primary" id="publish">${t("publishWeek")}</button>
+          <button class="btn" id="refresh">${t("refresh")}</button>
         </div>
         ${metricDonut()}
-        <p class="mut" style="margin-top:12px">Durable path: <code>npm run handoff</code> (or <code>node scripts/publish-week.mjs</code>) then git push / redeploy. Handoff keeps each generation on <code>questions.json</code> and the FR/DE banks. EN publish also snapshots into <code>banks/archive/YYYY-MM/</code>. <a class="glow-link" href="${GLOW_URL}" target="_blank" rel="noopener noreferrer">Glow</a> opens the GMG game room.</p>
+        <p class="mut" style="margin-top:12px">${t("durable")} <a class="glow-link" href="${GLOW_URL}" target="_blank" rel="noopener noreferrer">Glow</a></p>
       </div>`;
     document.getElementById("publish")?.addEventListener("click", doPublish);
     document.getElementById("refresh")?.addEventListener("click", () => loadWeek(true));
@@ -271,26 +291,26 @@ function render() {
     panel.innerHTML = `
       <div class="card">
         <div class="row spread">
-          <h2>Activated profiles</h2>
+          <h2>${t("activatedProfiles")}</h2>
           <div class="row">
             <button class="btn" id="refreshProfiles">Refresh</button>
-            <button class="btn primary" id="downloadMail">Download mailing list</button>
+            <button class="btn primary" id="downloadMail">${t("downloadMail")}</button>
           </div>
         </div>
-        <p class="mut">Players who tap <b>Enter Profile</b> (name, email, password) are activated here. The mailing list is every email on this list.</p>
+        <p class="mut">${t("profilesNote")}</p>
         <p class="mut" style="margin-top:8px">${rows.length} active · ${rows.length} email${rows.length === 1 ? "" : "s"}</p>
         ${rows.length ? `
           <table class="plist">
-            <thead><tr><th>Name</th><th>Email</th><th>Activated</th><th>Status</th></tr></thead>
+            <thead><tr><th>${t("name")}</th><th>${t("email")}</th><th>${t("activated")}</th><th>${t("status")}</th></tr></thead>
             <tbody>
               ${rows.map((p) => `<tr>
                 <td>${esc(p.displayName)}</td>
                 <td>${esc(p.email)}</td>
                 <td>${esc(p.activatedAt ? String(p.activatedAt).replace("T", " ").slice(0, 16) : "")}</td>
-                <td>Active</td>
+                <td>${t("active")}</td>
               </tr>`).join("")}
             </tbody>
-          </table>` : `<p class="mut" style="margin-top:16px">No activated profiles yet.</p>`}
+          </table>` : `<p class="mut" style="margin-top:16px">${t("noProfiles")}</p>`}
       </div>`;
     document.getElementById("refreshProfiles")?.addEventListener("click", () => loadProfiles(true));
     document.getElementById("downloadMail")?.addEventListener("click", downloadMailingList);
@@ -303,32 +323,32 @@ function render() {
     const louis = state.week?.louis;
     const comedyLines = (rows) => (rows || []).length
       ? rows.map((r) => `<li><b>${esc(r.rating)}</b> · ${esc(r.prompt)}</li>`).join("")
-      : `<li class="mut">None this week.</li>`;
+      : `<li class="mut">${t("noneWeek")}</li>`;
     const louisNotes = (louis?.shaped || [])
       .map((r) => (r.notes || []).find((n) => /kind line/i.test(n)))
       .filter(Boolean);
     panel.innerHTML = `
       ${louis ? `<div class="card" id="louis-liberty">
         <h2>${esc(louis.bot)}</h2>
-        <p class="mut">Q&A safeguard · ages 13–16. Child psychology and human behaviour: fun, happiness, and a non-threatening shape.</p>
-        <p class="mut">${(louis.shaped || []).length} structured · ${(louis.held || []).length} held. Notes can go to ${esc(louis.mail)}.</p>
+        <p class="mut">${t("louisBlurb")}</p>
+        <p class="mut">${t("louisCount", { shaped: (louis.shaped || []).length, held: (louis.held || []).length, mail: louis.mail || "" })}</p>
         ${(louis.held || []).length ? `<ul>${louis.held.map((r) => `<li>${esc(r.prompt)} · ${esc((r.reasons || []).join(", "))}</li>`).join("")}</ul>` : ""}
         ${louisNotes.length ? `<p class="mut">${louisNotes.length} still want a kind line so a miss stays light.</p>` : ""}
       </div>` : ""}
       ${comedy ? `<div class="card" id="comedy-bot">
         <h2>${esc(comedy.bot)}</h2>
-        <p class="mut">Q&A comedy bot · week ${esc(comedy.week)}. New funny questions, then the highest rated.</p>
+        <p class="mut">${t("comedyBlurb", { week: comedy.week || "" })}</p>
         ${(comedy.blocked || []).length ? `<p class="mut">${esc(louis?.bot || "Louis Liberty")} held ${comedy.blocked.length}.</p>` : ""}
-        <h3 class="tier-h">Viral this week</h3>
+        <h3 class="tier-h">${t("viralWeek")}</h3>
         <ul>${comedyLines(comedy.viral)}</ul>
-        <h3 class="tier-h">Highest rated</h3>
+        <h3 class="tier-h">${t("highest")}</h3>
         <ul>${comedyLines(comedy.highestRated)}</ul>
       </div>` : ""}
       <div class="card">
         <div class="row spread">
-          <h2>Weekly bank review</h2>
+          <h2>${t("bankReview")}</h2>
           ${readyBenchHTML()}
-          <select id="tierFilter">${tiers.map((t)=>`<option value="${t}" ${state.filterTier===t?"selected":""}>${t}</option>`).join("")}</select>
+          <select id="tierFilter">${tiers.map((tier)=>`<option value="${tier}" ${state.filterTier===tier?"selected":""}>${t("tier_"+tier)}</option>`).join("")}</select>
         </div>
         <div class="q-list" style="margin-top:12px">
           ${qs.map((q) => `
@@ -337,14 +357,11 @@ function render() {
               <div class="q-prompt">${esc(q.categoryTitle)} — ${esc(q.prompt)}</div>
               <div class="choices">${(q.choices||[]).map((c,i)=>`<div class="${i===q.correctIndex?"hit":""}">${String.fromCharCode(65+i)}. ${esc(c)}</div>`).join("")}</div>
               <div class="row" style="margin-top:10px">
-                <button class="btn ok" data-approve="${esc(q.id)}">Approve</button>
-                <button class="btn danger" data-reject="${esc(q.id)}">Reject</button>
-                ${(q.status === "rejected")
-                  ? `<button class="btn primary" data-regen="${esc(q.id)}">${state.rejectReady?.onHand ? "Regenerate · on hand" : "Regenerate"}</button>`
-                  : `<button class="btn" data-regen="${esc(q.id)}">Reject &amp; regenerate</button>`}
-                <button class="btn" data-pending="${esc(q.id)}">Pending</button>
+                <button class="btn ok" data-approve="${esc(q.id)}">${t("approve")}</button>
+                <button class="btn danger" data-reject="${esc(q.id)}">${t("reject")}</button>
+                <button class="btn" data-pending="${esc(q.id)}">${t("pendingBtn")}</button>
               </div>
-            </div>`).join("") || `<p class="mut">No questions in filter.</p>`}
+            </div>`).join("") || `<p class="mut">${t("noFilter")}</p>`}
         </div>
       </div>`;
     document.getElementById("tierFilter")?.addEventListener("change", (e) => {
@@ -357,9 +374,6 @@ function render() {
     panel.querySelectorAll("[data-reject]").forEach((b) =>
       b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.reject, false)),
     );
-    panel.querySelectorAll("[data-regen]").forEach((b) =>
-      b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.regen, true)),
-    );
     panel.querySelectorAll("[data-pending]").forEach((b) =>
       b.addEventListener("click", () => setStatus(b.dataset.pending, "pending")),
     );
@@ -369,15 +383,15 @@ function render() {
     const topics = state.topics?.topics || [];
     panel.innerHTML = `
       <div class="card">
-        <h2>Add topic</h2>
-        <p class="mut">Adds to this Flow instance (Q-and-A shaped). Persist in studio for durability.</p>
+        <h2>${t("addTopic")}</h2>
+        <p class="mut">${t("topicNote")}</p>
         <label>id</label><input id="tid" placeholder="e.g. sports-canada"/>
         <label>title</label><input id="ttitle" placeholder="Sports · Canada"/>
         <label>blurb</label><input id="tblurb" placeholder="Short blurb"/>
-        <label class="row"><input id="teasy" type="checkbox" style="width:auto;margin-right:8px"/> easy only</label>
-        <button class="btn primary" id="addTopic">Add topic</button>
-        <h3 class="tier-h">Topics</h3>
-        <ul class="mut">${topics.map((t)=>`<li><code>${esc(t.id)}</code> — ${esc(t.title)}${t.easyOnly?" (easy only)":""}</li>`).join("")}</ul>
+        <label class="row"><input id="teasy" type="checkbox" style="width:auto;margin-right:8px"/> ${t("easyOnly")}</label>
+        <button class="btn primary" id="addTopic">${t("addTopic")}</button>
+        <h3 class="tier-h">${t("topics")}</h3>
+        <ul class="mut">${topics.map((topic)=>`<li><code>${esc(topic.id)}</code> — ${esc(topic.title)}${topic.easyOnly?" ("+t("easyOnly")+")":""}</li>`).join("")}</ul>
       </div>`;
     document.getElementById("addTopic")?.addEventListener("click", doAddTopic);
   } else if (state.tab === "reject") {
@@ -388,57 +402,28 @@ function render() {
     ];
     panel.innerHTML = `
       <div class="card">
-        <h2>Rejected-question log</h2>
-        <p class="mut">Q-and-A is optional. Every reject lands in this log. Regenerate inserts the question on hand, then the next of the 12 moves up.</p>
-        ${readyBenchHTML()}
-        ${lessons ? `<p class="mut" style="margin-top:10px">${esc(lessons.brief)}</p>` : `<p class="mut">Loading the log…</p>`}
-        ${lessons?.reasonCounts && Object.keys(lessons.reasonCounts).length ? `
-          <ul class="mut">${Object.entries(lessons.reasonCounts).map(([k, n]) => `<li><code>${esc(k)}</code> — ${n}</li>`).join("")}</ul>
-        ` : ""}
+        <h2>${t("rejectLogTitle")}</h2>
+        <p class="mut">${t("rejectLogNote")}</p>
+        ${lessons ? "" : `<p class="mut">${t("loadingLog")}</p>`}
         <div class="row">
-          <button class="btn" id="refreshRejectLog">Refresh log</button>
-          <button class="btn" id="downloadRejectLog">Download log</button>
+          <button class="btn" id="refreshRejectLog">${t("refreshLog")}</button>
+          <button class="btn" id="downloadRejectLog">${t("downloadLog")}</button>
         </div>
       </div>
       <div class="card">
-        <h2>Log</h2>
+        <h2>${t("logTitle")}</h2>
         ${log.length ? `<div class="q-list">${log.map((r) => {
           const snap = r.snapshot || {};
-          const needs = r.regeneratedQuestionId ? `Replacement ${r.regeneratedQuestionId}` : "Needs regeneration";
+          const needs = r.regeneratedQuestionId ? t("replacementOf", { id: r.regeneratedQuestionId }) : t("logged");
           return `
             <div class="q-item rejected">
               <div class="q-meta">${esc(r.bank || "")} · ${esc(snap.tier || "")} · ${esc(needs)} · ${esc(r.questionId)} · ${(r.reasonCodes || []).map(esc).join(", ")}</div>
               <div class="q-prompt">${esc(snap.categoryTitle || "")}${snap.categoryTitle ? " — " : ""}${esc(snap.prompt || r.note || "")}</div>
-              ${r.regeneratedQuestionId ? "" : `<div class="row" style="margin-top:10px"><button class="btn primary" data-log-regen="${esc(r.questionId)}" data-log-bank="${esc(r.bank || "weekly")}">${state.rejectReady?.onHand ? "Regenerate · on hand" : "Regenerate"}</button></div>`}
             </div>`;
-        }).join("")}</div>` : `<p class="mut">No rejected questions yet.</p>`}
-      </div>
-      <div class="card">
-        <h2>Reject → regenerate</h2>
-        <p class="mut">Logs the rejection for locale <b>${esc((state.locale || "en").toUpperCase())}</b>. Leave the replacement blank to insert the question on hand.</p>
-        <label>bank</label>
-        <select id="rbank">
-          <option value="week">Weekly bank</option>
-          <option value="placement">Placement (Dojo)</option>
-        </select>
-        <label>question id</label><input id="rid" placeholder="w39-e-… or place-…"/>
-        <label>reason codes (comma)</label><input id="rreasons" value="weak-distractors"/>
-        <label>note</label><textarea id="rnote" rows="2"></textarea>
-        <label>replacement prompt (optional)</label><textarea id="rprompt" rows="2"></textarea>
-        <label>replacement choices CSV (optional, 4)</label><input id="rchoices" placeholder="A, B, C, D"/>
-        <label>correctIndex</label><input id="ridx" type="number" min="0" max="3" value="0"/>
-        <div class="row">
-          <button class="btn danger" id="doReject">Reject &amp; log</button>
-          <button class="btn primary" id="doRegen">Reject &amp; regenerate</button>
-        </div>
+        }).join("")}</div>` : `<p class="mut">${t("noRejected")}</p>`}
       </div>`;
-    document.getElementById("doReject")?.addEventListener("click", () => doReject(false));
-    document.getElementById("doRegen")?.addEventListener("click", () => doReject(true));
     document.getElementById("refreshRejectLog")?.addEventListener("click", () => loadQueue(true));
     document.getElementById("downloadRejectLog")?.addEventListener("click", downloadRejectLog);
-    panel.querySelectorAll("[data-log-regen]").forEach((b) =>
-      b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.logRegen, true, b.dataset.logBank)),
-    );
   }
 }
 
@@ -465,15 +450,15 @@ function gotoTab(tab) {
 function renderConsole(panel) {
   const c = flowCounts();
   const cards = [
-    ["queue", "Awaiting review", c.pending],
-    ["queue", "Rejected", c.rejected],
-    ["queue", "Regeneration", c.regen],
-    ["profiles", "Profiles", c.profiles],
-    ["rooms", "Open rooms", c.rooms],
+    ["queue", t("awaiting"), c.pending],
+    ["queue", t("rejectedCard"), c.rejected],
+    ["reject", t("regenCard"), c.regen],
+    ["profiles", t("profilesCard"), c.profiles],
+    ["rooms", t("roomsCard"), c.rooms],
   ];
   panel.innerHTML = `
     <section>
-      <h2 class="eyebrow">Analytics</h2>
+      <h2 class="eyebrow">${t("analytics")}</h2>
       <div class="metric-grid">
         ${cards.map(([tab, label, value], i) => `
           <button type="button" class="metric-card" data-goto="${tab}" data-goto-i="${i}">
@@ -481,12 +466,12 @@ function renderConsole(panel) {
             <b>${value}</b>
           </button>`).join("")}
       </div>
-      <p class="mut">${state.queue.loading ? "Refreshing banks, profiles, and rooms…" : "Counts cover the weekly bank and Dojo placement for this locale, plus activated profiles and open rooms."}</p>
+      <p class="mut">${state.queue.loading ? t("refreshing") : t("countsNote")}</p>
     </section>
     <section class="card">
-      <h2 class="eyebrow">Glow</h2>
-      <p class="mut">GMGbrand links Flow out to the house game room — Fast Answer, SunFun, and Last Call on the glowing cards.</p>
-      <p style="margin-top:12px"><a class="btn glow-link" href="${GLOW_URL}" target="_blank" rel="noopener noreferrer">Open Glow</a></p>
+      <h2 class="eyebrow">${t("glowTitle")}</h2>
+      <p class="mut">${t("glowNote")}</p>
+      <p style="margin-top:12px"><a class="btn glow-link" href="${GLOW_URL}" target="_blank" rel="noopener noreferrer">${t("openGlow")}</a></p>
     </section>`;
   panel.querySelectorAll("[data-goto]").forEach((b) =>
     b.addEventListener("click", () => gotoTab(b.dataset.goto)),
@@ -498,18 +483,18 @@ function renderRooms(panel) {
   panel.innerHTML = `
     <div class="card">
       <div class="row spread">
-        <h2>Open rooms</h2>
-        <button class="btn" id="refreshRooms">Refresh rooms</button>
+        <h2>${t("openRooms")}</h2>
+        <button class="btn" id="refreshRooms">${t("refreshRooms")}</button>
       </div>
-      <p class="mut">Same list as Join TV. A room appears when its TV link is open. Delete removes it for everyone.</p>
+      <p class="mut">${t("roomsNote")}</p>
       ${rooms.length ? rooms.map((r) => `
         <div class="room-admin">
           <div>
             <b>${esc(r.code)}</b>
-            <span class="mut"> · ${esc(r.host || "TV")} · ${r.guests || 0} pads · ${esc(r.phase || "lobby")}</span>
+            <span class="mut"> · ${esc(r.host || "TV")} · ${r.guests || 0} · ${esc(r.phase || "lobby")}</span>
           </div>
-          <button class="btn danger" type="button" data-delete-room="${esc(r.code)}">Delete</button>
-        </div>`).join("") : `<p class="mut" style="margin-top:12px">No open rooms.</p>`}
+          <button class="btn danger" type="button" data-delete-room="${esc(r.code)}">${t("delete")}</button>
+        </div>`).join("") : `<p class="mut" style="margin-top:12px">${t("noRooms")}</p>`}
     </div>`;
   document.getElementById("refreshRooms")?.addEventListener("click", () => loadQueue(true));
   panel.querySelectorAll("[data-delete-room]").forEach((b) =>
@@ -520,11 +505,11 @@ function renderRooms(panel) {
 function metricDonut() {
   const c = flowCounts();
   const slices = [
-    { label: "Pending", value: c.pending, color: "#e8a87c" },
-    { label: "Approved", value: c.approved, color: "#7dd3fc" },
-    { label: "Rejected", value: c.rejected, color: "#f87171" },
-    { label: "Regeneration", value: c.regen, color: "#a78bfa" },
-    { label: "Profiles", value: c.profiles, color: "#34d399" },
+    { label: t("pending"), value: c.pending, color: "#e8a87c" },
+    { label: t("approved"), value: c.approved, color: "#7dd3fc" },
+    { label: t("rejected"), value: c.rejected, color: "#f87171" },
+    { label: t("regenCard"), value: c.regen, color: "#a78bfa" },
+    { label: t("profilesCard"), value: c.profiles, color: "#34d399" },
   ];
   const total = slices.reduce((s, x) => s + x.value, 0) || 1;
   const r = 42;
@@ -561,7 +546,7 @@ function qCard(q, bank) {
 
 function renderQueue(panel) {
   if (state.queue.loading && !state.week && !state.queue.placement) {
-    panel.innerHTML = `<div class="card"><p class="mut">Loading questions, profiles, and rooms…</p></div>`;
+    panel.innerHTML = `<div class="card"><p class="mut">${t("loadingQueue")}</p></div>`;
     return;
   }
 
@@ -590,61 +575,60 @@ function renderQueue(panel) {
     ${state.queue.error ? `<div class="banner">${esc(state.queue.error)}</div>` : ""}
     <div class="card">
       <div class="row spread">
-        <h2>Review queue</h2>
-        <button class="btn" id="refreshQueue">Refresh</button>
+        <h2>${t("reviewQueue")}</h2>
+        <button class="btn" id="refreshQueue">${t("refresh")}</button>
       </div>
-      <p class="mut">Every question still awaiting review, already rejected, or logged for regeneration — weekly bank and Dojo placement, locale <b>${esc((state.locale || "en").toUpperCase())}</b>. ${state.queue.lessons ? esc(state.queue.lessons.brief) : "Rejected questions feed a log so the next regenerate is better, even without Q-and-A."}</p>
-      <h3 class="queue-sec">Awaiting review <span class="mut">(${pending.length})</span></h3>
+      <p class="mut">${t("queueNote", { locale: flowLocaleLabel(state.locale) })}</p>
+      <h3 class="queue-sec">${t("awaiting")} <span class="mut">(${pending.length})</span></h3>
       ${state.week || state.queue.placement
-        ? list(pending, "No questions are waiting for review.")
-        : `<p class="mut">Week and placement banks did not load.</p>`}
-      <h3 class="queue-sec">Rejection <span class="mut">(${rejected.length})</span></h3>
-      ${list(rejected, "No rejected questions.")}
-      <h3 class="queue-sec">Regeneration <span class="mut">(${regen.length})</span></h3>
+        ? list(pending, t("waitingNone"))
+        : `<p class="mut">${t("banksMissing")}</p>`}
+      <h3 class="queue-sec">${t("rejection")} <span class="mut">(${rejected.length})</span></h3>
+      ${list(rejected, t("noRejectedQs"))}
+      <h3 class="queue-sec">${t("regenCard")} <span class="mut">(${regen.length})</span></h3>
       ${regen.length ? `<div class="q-list cap">${regen.map((r) => {
         const snap = r.snapshot || {};
-        const needs = r.regeneratedQuestionId ? "Replacement drafted" : "Needs regeneration";
+        const needs = r.regeneratedQuestionId ? t("replacementOf", { id: r.regeneratedQuestionId }) : t("inLog");
         return `
           <div class="q-item rejected">
             <div class="q-meta">${esc(r.bank)} · ${esc(snap.tier || "")} · ${esc(needs)} · ${esc(r.questionId)} · ${(r.reasonCodes || []).map(esc).join(", ")}</div>
             <div class="q-prompt">${esc(snap.categoryTitle || "")}${snap.categoryTitle ? " — " : ""}${esc(snap.prompt || r.note || "")}</div>
-            ${r.regeneratedQuestionId ? `<p class="mut">Replacement: <code>${esc(r.regeneratedQuestionId)}</code></p>` : `<div class="row" style="margin-top:10px"><button class="btn primary" data-q-regen="${esc(r.questionId)}" data-log-bank="${esc(r.bank || "weekly")}">Regenerate</button></div>`}
           </div>`;
-      }).join("")}</div>` : `<p class="mut">No questions are logged for regeneration.</p>`}
+      }).join("")}</div>` : `<p class="mut">${t("noneLogged")}</p>`}
     </div>
     <div class="card">
       <div class="row spread">
-        <h2>Profiles</h2>
-        <button class="btn primary" id="downloadMail">Download mailing list</button>
+        <h2>${t("profiles")}</h2>
+        <button class="btn primary" id="downloadMail">${t("downloadMail")}</button>
       </div>
-      <p class="mut">${profiles.length} activated · ${profiles.length} email${profiles.length === 1 ? "" : "s"}. The CSV is every email on this list.</p>
+      <p class="mut">${profiles.length === 1 ? t("mailOne", { n: profiles.length }) : t("mailLine", { n: profiles.length })}</p>
       ${profiles.length ? `
         <table class="plist">
-          <thead><tr><th>Name</th><th>Email</th><th>Activated</th><th>Status</th></tr></thead>
+          <thead><tr><th>${t("name")}</th><th>${t("email")}</th><th>${t("activated")}</th><th>${t("status")}</th></tr></thead>
           <tbody>
             ${profiles.map((p) => `<tr>
               <td>${esc(p.displayName)}</td>
               <td>${esc(p.email)}</td>
               <td>${esc(p.activatedAt ? String(p.activatedAt).replace("T", " ").slice(0, 16) : "")}</td>
-              <td>Active</td>
+              <td>${t("active")}</td>
             </tr>`).join("")}
           </tbody>
-        </table>` : `<p class="mut" style="margin-top:12px">No activated profiles yet. They appear when a player taps Enter Profile.</p>`}
+        </table>` : `<p class="mut" style="margin-top:12px">${t("noProfiles")}</p>`}
     </div>
     <div class="card">
       <div class="row spread">
-        <h2>Open rooms</h2>
-        <button class="btn" id="refreshRooms">Refresh rooms</button>
+        <h2>${t("openRooms")}</h2>
+        <button class="btn" id="refreshRooms">${t("refreshRooms")}</button>
       </div>
-      <p class="mut">Same list as Join TV. A room appears when its TV link is open. Delete removes it for everyone.</p>
+      <p class="mut">${t("roomsNote")}</p>
       ${rooms.length ? rooms.map((r) => `
         <div class="room-admin">
           <div>
             <b>${esc(r.code)}</b>
-            <span class="mut"> · ${esc(r.host || "TV")} · ${r.guests || 0} pads · ${esc(r.phase || "lobby")}</span>
+            <span class="mut"> · ${esc(r.host || "TV")} · ${r.guests || 0} · ${esc(r.phase || "lobby")}</span>
           </div>
-          <button class="btn danger" type="button" data-delete-room="${esc(r.code)}">Delete</button>
-        </div>`).join("") : `<p class="mut" style="margin-top:12px">No open rooms.</p>`}
+          <button class="btn danger" type="button" data-delete-room="${esc(r.code)}">${t("delete")}</button>
+        </div>`).join("") : `<p class="mut" style="margin-top:12px">${t("noRooms")}</p>`}
     </div>`;
 
   document.getElementById("refreshQueue")?.addEventListener("click", () => loadQueue(true));
@@ -652,9 +636,6 @@ function renderQueue(panel) {
   document.getElementById("downloadMail")?.addEventListener("click", downloadMailingList);
   panel.querySelectorAll("[data-delete-room]").forEach((b) =>
     b.addEventListener("click", () => deleteFlowRoom(b.dataset.deleteRoom)),
-  );
-  panel.querySelectorAll("[data-q-regen]").forEach((b) =>
-    b.addEventListener("click", () => archiveRejectOrRegen(b.dataset.qRegen, true, b.dataset.logBank)),
   );
   document.getElementById("refreshRooms")?.addEventListener("click", () => loadQueue(true));
   document.getElementById("downloadMail")?.addEventListener("click", downloadMailingList);
@@ -666,7 +647,7 @@ function renderQueue(panel) {
 function renderArchivePanel(panel) {
   const a = state.archive;
   if (a.loading) {
-    panel.innerHTML = `<div class="card"><p class="mut">Loading archive…</p></div>`;
+    panel.innerHTML = `<div class="card"><p class="mut">${t("loadingArchive")}</p></div>`;
     return;
   }
 
@@ -685,19 +666,19 @@ function renderArchivePanel(panel) {
       <div class="card">
         <div class="row spread">
           <div>
-            <button class="btn" id="archBackPlacement">← Archives</button>
-            <h2 style="margin-top:12px">Placement <span class="mut" style="font-size:14px;font-family:var(--font-body)">(Dojo · reject / regenerate)</span></h2>
+            <button class="btn" id="archBackPlacement">${t("backArchives")}</button>
+            <h2 style="margin-top:12px">${t("placementTitle")}</h2>
             <p class="mut">${esc(a.pack.title || a.pack.id || "")}</p>
-            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · Regenerate replaces that question on this card</p>
+            <p class="mut" style="margin-top:6px">${t("countsLine", { counts: fmtCounts(sc), n: (a.pack.questions || []).length })}</p>
             ${readyBenchHTML()}
           </div>
         </div>
         <div class="row" style="margin-top:12px;gap:12px">
-          <select id="archTier" style="width:auto;margin:0">${tiers.map((t)=>`<option value="${t}" ${a.filterTier===t?"selected":""}>${t}</option>`).join("")}</select>
-          <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="Filter topic / generation / prompt…" value="${esc(a.filterTopic)}"/>
+          <select id="archTier" style="width:auto;margin:0">${tiers.map((tier)=>`<option value="${tier}" ${a.filterTier===tier?"selected":""}>${t("tier_"+tier)}</option>`).join("")}</select>
+          <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="${t("filterPh")}" value="${esc(a.filterTopic)}"/>
         </div>
         <div class="q-list" style="margin-top:12px">
-          ${qs.map((q) => archiveQItem(q)).join("") || `<p class="mut">No questions in filter.</p>`}
+          ${qs.map((q) => archiveQItem(q)).join("") || `<p class="mut">${t("noFilter")}</p>`}
         </div>
       </div>`;
     document.getElementById("archBackPlacement")?.addEventListener("click", () => {
@@ -744,18 +725,18 @@ function renderArchivePanel(panel) {
         <div class="row spread">
           <div>
             <button class="btn" id="archBackWeek">← ${esc(a.monthKey)}</button>
-            <h2 style="margin-top:12px">${esc(a.weekKey)} <span class="mut" style="font-size:14px;font-family:var(--font-body)">(archived · reject / regenerate)</span></h2>
+            <h2 style="margin-top:12px">${esc(a.weekKey)}</h2>
             <p class="mut">${esc(a.pack.inspirationSummary || "")}</p>
-            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · Regenerate replaces that question on this card</p>
+            <p class="mut" style="margin-top:6px">${t("countsLine", { counts: fmtCounts(sc), n: (a.pack.questions || []).length })}</p>
             ${readyBenchHTML()}
           </div>
         </div>
         <div class="row" style="margin-top:12px;gap:12px">
-          <select id="archTier" style="width:auto;margin:0">${tiers.map((t)=>`<option value="${t}" ${a.filterTier===t?"selected":""}>${t}</option>`).join("")}</select>
-          <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="Filter topic / prompt…" value="${esc(a.filterTopic)}"/>
+          <select id="archTier" style="width:auto;margin:0">${tiers.map((tier)=>`<option value="${tier}" ${a.filterTier===tier?"selected":""}>${t("tier_"+tier)}</option>`).join("")}</select>
+          <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="${t("filterPh")}" value="${esc(a.filterTopic)}"/>
         </div>
         <div class="q-list" style="margin-top:12px">
-          ${qs.map((q) => archiveQItem(q)).join("") || `<p class="mut">No questions in filter.</p>`}
+          ${qs.map((q) => archiveQItem(q)).join("") || `<p class="mut">${t("noFilter")}</p>`}
         </div>
       </div>`;
     document.getElementById("archBackWeek")?.addEventListener("click", () => {
@@ -782,7 +763,7 @@ function renderArchivePanel(panel) {
       });
       const list = panel.querySelector(".q-list");
       if (!list) return;
-      list.innerHTML = filtered.map((q) => archiveQItem(q)).join("") || `<p class="mut">No questions in filter.</p>`;
+      list.innerHTML = filtered.map((q) => archiveQItem(q)).join("") || `<p class="mut">${t("noFilter")}</p>`;
       bindArchiveQuestionActions(panel);
     });
     bindArchiveQuestionActions(panel);
@@ -798,9 +779,9 @@ function renderArchivePanel(panel) {
       <div class="card">
         <div class="row spread">
           <div>
-            <button class="btn" id="archBackMonths">← All months</button>
+            <button class="btn" id="archBackMonths">${t("backMonths")}</button>
             <h2 style="margin-top:12px">${esc(a.monthKey)}</h2>
-            <p class="mut">${weeks.length} week${weeks.length===1?"":"s"} · updated ${esc(a.index.updatedAt || "—")}</p>
+            <p class="mut">${weeks.length} ${weeks.length===1?t("weekOne"):t("weekMany")} · ${t("updated")} ${esc(a.index.updatedAt || "—")}</p>
           </div>
         </div>
         <div class="arch-list" style="margin-top:14px">
@@ -809,11 +790,11 @@ function renderArchivePanel(panel) {
               <div class="row spread">
                 <div>
                   <b>${esc(w.weekKey)}</b>
-                  <div class="mut">${w.questionCount ?? "—"} questions · ${esc(fmtCounts(w.studioCounts || w.counts))}</div>
+                  <div class="mut">${w.questionCount ?? "—"} ${t("questions")} · ${esc(fmtCounts(w.studioCounts || w.counts))}</div>
                 </div>
                 <span class="mut">${esc((w.publishedAt || "").slice(0, 10) || "")}</span>
               </div>
-            </button>`).join("") || `<p class="mut">No weeks archived this month.</p>`}
+            </button>`).join("") || `<p class="mut">${t("noWeeks")}</p>`}
         </div>
       </div>`;
     document.getElementById("archBackMonths")?.addEventListener("click", () => {
@@ -832,35 +813,35 @@ function renderArchivePanel(panel) {
   const placementPages = a.placementPages || [];
   panel.innerHTML = `
     <div class="card">
-      <h2>Placement</h2>
-      <p class="mut">Dojo placement bank — reject and regenerate here. The log still learns if Q-and-A is not connected.</p>
+      <h2>${t("placementTitle")}</h2>
+      <p class="mut">${t("placementNote")}</p>
       <div class="arch-list" style="margin-top:14px">
         ${placementPages.map((p) => `
           <button class="arch-row" data-placement="${esc(p.id)}">
             <div class="row spread">
               <div>
                 <b>${esc(p.title || p.id)}</b>
-                <div class="mut">${p.questionCount || 0} questions · ${(p.generations||[]).length} generations</div>
+                <div class="mut">${p.questionCount || 0} ${t("questions")}</div>
               </div>
-              <span class="mut">placement</span>
+              <span class="mut">${t("placementTag")}</span>
             </div>
-          </button>`).join("") || `<p class="mut">No placement pack bundled.</p>`}
+          </button>`).join("") || `<p class="mut">${t("noPlacement")}</p>`}
       </div>
     </div>
     <div class="card" style="margin-top:16px">
-      <h2>Monthly archive</h2>
-      <p class="mut">Published week packs by America/Toronto month. Reject a question, then regenerate from the log.</p>
+      <h2>${t("monthlyTitle")}</h2>
+      <p class="mut">${t("monthlyNote")}</p>
       <div class="arch-list" style="margin-top:14px">
         ${months.map((m) => `
           <button class="arch-row" data-month="${esc(m.monthKey)}">
             <div class="row spread">
               <div>
                 <b>${esc(m.monthKey)}</b>
-                <div class="mut">${m.weekCount || 0} week${m.weekCount===1?"":"s"} · ${m.questionCount || 0} questions</div>
+                <div class="mut">${m.weekCount || 0} ${m.weekCount===1?t("weekOne"):t("weekMany")} · ${m.questionCount || 0} ${t("questions")}</div>
               </div>
               <span class="mut">${esc((m.updatedAt || "").slice(0, 10) || "")}</span>
             </div>
-          </button>`).join("") || `<p class="mut">Archive empty — publish a week to seed it.</p>`}
+          </button>`).join("") || `<p class="mut">${t("emptyArchive")}</p>`}
       </div>
     </div>`;
   panel.querySelectorAll("[data-month]").forEach((b) =>
@@ -970,7 +951,11 @@ async function setFlowLocale(next) {
   const loc = LOCALES.includes(next) ? next : "en";
   state.locale = loc;
   try { localStorage.setItem(LOCALE_KEY, loc); } catch { /* ignore */ }
-  state.message = `Locale ${loc.toUpperCase()}`;
+  state.message = t("localeSet", { locale: flowLocaleLabel(loc) });
+  if (!state.authed) {
+    render();
+    return;
+  }
   state.archive.months = null;
   state.archive.kind = null;
   state.archive.pack = null;
@@ -1029,7 +1014,7 @@ async function doAddTopic() {
         easyOnly: document.getElementById("teasy").checked,
       }),
     });
-    state.message = "Topic added (runtime).";
+    state.message = t("topicAdded");
     await loadTopics(true);
   } catch (e) {
     state.message = e.message;
@@ -1108,11 +1093,11 @@ function replaceQuestionOnCard(id, next) {
 
 function markReplacing(id) {
   const safe = String(id).replace(/\\/g, "\\\\").replace(/"/g, '\\"');
-  const sel = `[data-arch-regen="${safe}"],[data-regen="${safe}"],[data-q-regen="${safe}"],[data-log-regen="${safe}"]`;
+  const sel = `[data-arch-replace="${safe}"]`;
   document.querySelectorAll(sel).forEach((b) => b.closest(".q-item")?.classList.add("replacing"));
 }
 
-async function archiveRejectOrRegen(id, regen, bankHint) {
+async function archiveRejectOrRegen(id, regen, bankHint, onHandId) {
   const a = state.archive;
   const fromArchive = state.tab === "archive";
   const placement = (fromArchive && a.kind === "placement")
@@ -1121,11 +1106,11 @@ async function archiveRejectOrRegen(id, regen, bankHint) {
     action: regen ? "regenerate" : "reject",
     questionId: id,
     locale: state.locale,
-    reasonCodes: regen ? ["archive-regen"] : ["archive-reject"],
-    note: regen ? "Regenerated from Flow" : "Rejected from Flow",
+    reasonCodes: regen ? ["archive-replace"] : ["archive-reject"],
+    note: regen ? "Replaced from the archive" : "Rejected from Flow",
   };
   if (placement) body.bank = "placement";
-  if (regen && !body.replacement && state.rejectReady?.onHand?.id) body.onHandId = state.rejectReady.onHand.id;
+  if (regen) body.onHandId = onHandId || state.rejectReady?.onHand?.id || undefined;
   if (fromArchive && a.monthKey && a.monthKey !== "placement") {
     body.monthKey = a.monthKey;
     body.weekKey = a.weekKey || null;
@@ -1135,14 +1120,10 @@ async function archiveRejectOrRegen(id, regen, bankHint) {
     const endpoint = placement ? "placement" : "reject";
     const data = await api(endpoint, { method: "POST", body: JSON.stringify(body) });
     if (data.ready) state.rejectReady = data.ready;
-    if (regen && data.regenerated && replaceQuestionOnCard(id, data.regenerated)) {
-      state.message = `Replaced ${id} on this card with the question that was on hand.`;
-      render();
-      return;
-    }
+    if (regen && data.regenerated) replaceQuestionOnCard(id, data.regenerated);
     state.message = regen
-      ? `Regenerated ${id} → ${data.regenerated?.id || "draft"}. ${data.learningBrief || ""}`
-      : `Rejected ${id}. ${data.learningBrief || ""}`;
+      ? t("replacedLogged", { id })
+      : `${t("reject")} ${id}`;
     await loadQueue(false);
     if (fromArchive && placement) await openPlacementPage(a.pageKey || "placement");
     else if (fromArchive && a.weekKey) await openArchiveWeek(a.monthKey, a.weekKey);
@@ -1169,7 +1150,7 @@ async function downloadRejectLog() {
     a.click();
     a.remove();
     URL.revokeObjectURL(url);
-    state.message = "Rejected-question log downloaded.";
+    state.message = t("downloadedLog");
     render();
   } catch (e) {
     state.message = e.message;
@@ -1292,7 +1273,7 @@ async function deleteFlowRoom(code) {
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data.error || res.statusText);
     state.queue.rooms = data.rooms || [];
-    state.message = `Deleted room ${code}.`;
+    state.message = t("deletedRoom", { code });
   } catch (e) {
     state.message = e.message || "Could not delete room";
   }
@@ -1328,7 +1309,7 @@ async function downloadMailingList() {
     a.click();
     a.remove();
     URL.revokeObjectURL(url);
-    state.message = "Mailing list downloaded.";
+    state.message = t("mailDownloaded");
     render();
   } catch (e) {
     state.message = e.message;

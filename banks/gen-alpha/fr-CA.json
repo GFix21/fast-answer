@@ -1,0 +1,157 @@
+{
+  "locale": "fr-CA",
+  "questions": [
+    {
+      "id": "ga-joke-clock",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Les aiguilles",
+      "prompt": "C'est quoi qui a des aiguilles et qui donne l'heure ?",
+      "choices": [
+        "Une horloge",
+        "Un hérisson",
+        "Une abeille",
+        "Un cactus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Elle peut quand même faire coucou.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-bear",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dent sucrée",
+      "prompt": "Comment on appelle un ours sans dents ?",
+      "choices": [
+        "Un ours polaire",
+        "Un toutou",
+        "Un ours en jujube",
+        "Un koala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Toujours collant. Bien plus gentil.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-math",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Trop de problèmes",
+      "prompt": "Pourquoi le livre de maths est triste ?",
+      "choices": [
+        "Il a trop de problèmes",
+        "Il déteste les chiffres",
+        "C'est une bande dessinée",
+        "Il a perdu sa couverture"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le marque-page lui a fait un câlin.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-ocean",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Bord de mer",
+      "prompt": "Que dit l'océan à la plage ?",
+      "choices": [
+        "Rien, il fait juste la vague",
+        "Apporte une serviette",
+        "Je suis salé",
+        "À la pêche"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plage a répondu d'un signe.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-flamingo",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Parade rose",
+      "prompt": "Comment on appelle un groupe de flamants roses ?",
+      "choices": [
+        "Une flamboyance",
+        "Un troupeau",
+        "Une meute",
+        "Un banc"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Ils étaient habillés pour l'occasion.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-octopus",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Cœur en plus",
+      "prompt": "Combien de cœurs a une pieuvre ?",
+      "choices": [
+        "Un",
+        "Deux",
+        "Trois",
+        "Huit"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Huit bras, trois cœurs, aucune hâte.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-scarecrow",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dans son champ",
+      "prompt": "Pourquoi l'épouvantail a reçu un prix ?",
+      "choices": [
+        "Il était le meilleur dans son champ",
+        "Il a raconté une histoire de fantôme",
+        "Il a mangé le maïs",
+        "Il a dormi toute la journée"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Les corbeaux ont ouvert un fan-club.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-homework",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Du gâteau",
+      "prompt": "Pourquoi l'élève a mangé ses devoirs ?",
+      "choices": [
+        "Le prof a dit que c'était du gâteau",
+        "C'était l'heure du dîner",
+        "Le chien n'avait plus faim",
+        "C'était un sandwich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le dessert comptait en bonus.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    }
+  ]
+}

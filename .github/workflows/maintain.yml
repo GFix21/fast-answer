@@ -36,6 +36,7 @@ jobs:
         run: |
           node scripts/q-and-a.check.mjs
           node scripts/bots.check.mjs
+          node scripts/flow-archive.check.mjs
 
   security:
     name: Security

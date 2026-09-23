@@ -4,7 +4,8 @@ import {
   loadMonthIndex,
   loadArchivedWeek,
 } from "../../lib/archive-store.js";
-import { listPlacementPages, loadPlacementPack, normalizeLocale } from "../../lib/placement-store.js";
+import { listPlacementPages, loadPlacementPack } from "../../lib/placement-store.js";
+import { normalizeFlowLocale } from "../../lib/flow-locale.js";
 import { listRejectLog } from "../../lib/reject-log.js";
 import { compileLessons, overlayPackWithLog } from "../../lib/reject-learn.js";
 import { collectQuestionPool } from "../../lib/reject-actions.js";
@@ -17,12 +18,12 @@ export default async function handler(req, res) {
   const url = new URL(req.url || "/", "http://localhost");
   const month = url.searchParams.get("month");
   const week = url.searchParams.get("week");
-  const locale = normalizeLocale(url.searchParams.get("locale") || "en");
+  const locale = normalizeFlowLocale(url.searchParams.get("locale") || "en");
 
   if (!month) {
     return json(res, 200, {
       locale,
-      months: listArchiveMonths(),
+      months: listArchiveMonths(locale),
       placementPages: listPlacementPages(locale),
     });
   }
@@ -57,7 +58,7 @@ export default async function handler(req, res) {
     if (!/^\d{4}-W\d{2}$/.test(week)) {
       return json(res, 400, { error: "bad week key (YYYY-Www)" });
     }
-    const base = loadArchivedWeek(month, week);
+    const base = loadArchivedWeek(month, week, locale);
     if (!base) return json(res, 404, { error: "week not in archive" });
     const log = await listRejectLog({ locale });
     const pack = overlayPackWithLog(base, log, { monthKey: month, weekKey: week });
@@ -75,7 +76,7 @@ export default async function handler(req, res) {
     });
   }
 
-  const index = loadMonthIndex(month);
+  const index = loadMonthIndex(month, locale);
   if (!index) return json(res, 404, { error: "month not in archive" });
   return json(res, 200, { index });
 }

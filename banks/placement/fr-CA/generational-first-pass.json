@@ -1,0 +1,572 @@
+{
+  "id": "placement-gen-first-pass-2026",
+  "title": "Classement générationnel — première passe (Silent / Boomer / Gen X / Y / Z / Alpha + multi-gen)",
+  "generations": [
+    "silent-generation",
+    "baby-boomer",
+    "gen-x",
+    "gen-y",
+    "gen-z",
+    "gen-alpha",
+    "multi-gen"
+  ],
+  "scoringSummary": "Dojo adaptatif de 10 questions : départ en hard ; bonne réponse → difficult ; échec → easy. Score de bonnes réponses / 10 → Bronze (<0,5), Silver (0,5–0,79), Gold (≥0,8). Bande de départ : bronze→easy, silver→hard, gold→difficult. Préférer les questions de classement pas encore vues. Les étiquettes de génération guident l'équilibre — les questions multi-gen servent de repères.",
+  "questions": [
+    {
+      "id": "place-mg-e-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Carte",
+      "prompt": "Quelle est la capitale du Canada ?",
+      "choices": [
+        "Ottawa",
+        "Toronto",
+        "Montréal",
+        "Vancouver"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Ancre multi-générationnelle — devrait presque toujours réussir ; un échec signale une bande basse.",
+      "sources": [
+        {
+          "label": "Wikipedia — Ottawa"
+        },
+        {
+          "label": "Government of Canada"
+        }
+      ]
+    },
+    {
+      "id": "place-mg-h-enterprise",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Sci-Fi",
+      "prompt": "Comment s’appelle le vaisseau commandé par le capitaine Kirk dans la série originale Star Trek ?",
+      "choices": [
+        "Falcon",
+        "Enterprise",
+        "Serenity",
+        "Galactica"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Discriminateur moyen selon les âges ; franchise célèbre, pas dépendante des mèmes.",
+      "sources": [
+        {
+          "label": "Wikipedia — USS Enterprise (NCC-1701)"
+        },
+        {
+          "label": "Star Trek: The Original Series"
+        }
+      ]
+    },
+    {
+      "id": "place-mg-d-stravinsky",
+      "tier": "difficult",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Deep Cut",
+      "prompt": "Qui a composé Le Sacre du printemps ?",
+      "choices": [
+        "Piotr Tchaïkovski",
+        "Igor Stravinsky",
+        "Ludwig van Beethoven",
+        "John Williams"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Sonde de bande haute — récompense la culture généraliste, pas l’argot générationnel.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Rite of Spring"
+        },
+        {
+          "label": "Ballet / programme histories"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-e-fdr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Qui était président des États-Unis pendant la plus grande partie de la Seconde Guerre mondiale ?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Dwight D. Eisenhower",
+        "Herbert Hoover"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Silent Gen facile — civisme milieu de siècle de manuel ; juste via la scolarité.",
+      "sources": [
+        {
+          "label": "Wikipedia — Franklin D. Roosevelt"
+        },
+        {
+          "label": "US National Archives / WWII chronology"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-e-ike",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Le slogan de campagne des années 1950 « I Like Ike » promouvait quel futur président américain ?",
+      "choices": [
+        "Richard Nixon",
+        "John F. Kennedy",
+        "Lyndon B. Johnson",
+        "Dwight D. Eisenhower"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Silent Gen facile — slogan de Guerre froide largement enseigné.",
+      "sources": [
+        {
+          "label": "Wikipedia — Dwight D. Eisenhower"
+        },
+        {
+          "label": "Smithsonian / campaign history primers"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-h-transistor",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "En quelle année le premier radio à transistors commercial (Regency TR-1) a été introduit ?",
+      "choices": [
+        "1971",
+        "1945",
+        "1962",
+        "1954"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Silent Gen difficile — chronologie tech milieu de siècle vérifiable.",
+      "sources": [
+        {
+          "label": "Wikipedia — Regency TR-1"
+        },
+        {
+          "label": "IEEE Spectrum / Computer History Museum notes"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-h-kerouac",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Qui a écrit le roman de la Beat Generation On the Road ?",
+      "choices": [
+        "Ernest Hemingway",
+        "Jack Kerouac",
+        "F. Scott Fitzgerald",
+        "J. D. Salinger"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Silent Gen difficile — littérature canonique milieu de siècle, sans ambiguïté.",
+      "sources": [
+        {
+          "label": "Wikipedia — On the Road"
+        },
+        {
+          "label": "Library of Congress / Beat Generation primers"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-e-armstrong",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Qui a été la première personne à marcher sur la Lune ?",
+      "choices": [
+        "Youri Gagarine",
+        "Buzz Aldrin",
+        "Neil Armstrong",
+        "John Glenn"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer facile — universel culturel de l’ère Apollo.",
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 mission pages"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-e-apollo11",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "En quelle année Apollo 11 a fait atterrir les premiers humains sur la Lune ?",
+      "choices": [
+        "1975",
+        "1957",
+        "1969",
+        "1963"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer facile — fait d’année sur l’alunissage, connu des manuels.",
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 11"
+        },
+        {
+          "label": "NASA Apollo program chronology"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-h-woodstock",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "En quelle année s’est tenu le festival de musique original de Woodstock ?",
+      "choices": [
+        "1964",
+        "1967",
+        "1972",
+        "1969"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Boomer difficile — discriminateur d’année iconique ; toujours vérifiable.",
+      "sources": [
+        {
+          "label": "Wikipedia — Woodstock"
+        },
+        {
+          "label": "Contemporary festival / NY history coverage"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-h-sullivan",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "En quelle année les Beatles sont-ils apparus pour la première fois dans The Ed Sullivan Show aux États-Unis ?",
+      "choices": [
+        "1969",
+        "1960",
+        "1964",
+        "1970"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer difficile — année repère de la British Invasion.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Ed Sullivan Show"
+        },
+        {
+          "label": "Beatles / CBS broadcast histories — Feb 1964"
+        }
+      ]
+    },
+    {
+      "id": "place-x-h-mtv",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Gen X",
+      "prompt": "Quelle chaîne câblée américaine a été lancée en 1981 avec un focus sur les clips musicaux ?",
+      "choices": [
+        "Nickelodeon",
+        "CNN",
+        "MTV",
+        "ESPN"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Item médian orienté Gen X ; juste pour les autres via osmose culturelle.",
+      "sources": [
+        {
+          "label": "Wikipedia — MTV"
+        },
+        {
+          "label": "Contemporary launch coverage — 1981"
+        }
+      ]
+    },
+    {
+      "id": "place-x-e-back-future",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Écran 80s",
+      "prompt": "Dans Retour vers le futur, quel type de véhicule est la machine à remonter le temps ?",
+      "choices": [
+        "Un hélicoptère",
+        "Une cabine téléphonique",
+        "Un train à vapeur",
+        "Une DeLorean"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Facile avec saveur Gen X — encore très connu.",
+      "sources": [
+        {
+          "label": "Wikipedia — Back to the Future"
+        },
+        {
+          "label": "Film itself (1985)"
+        }
+      ]
+    },
+    {
+      "id": "place-y-h-matrix",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Gen Y",
+      "prompt": "Dans Matrix (1999), quelle pilule Neo prend-il pour voir la vérité ?",
+      "choices": [
+        "Rouge",
+        "Bleue",
+        "Verte",
+        "Jaune"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Sonde médiane milléniale — iconique, non ambiguë.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Matrix"
+        },
+        {
+          "label": "The Matrix (1999) film"
+        }
+      ]
+    },
+    {
+      "id": "place-y-d-ipod",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Early iPod",
+      "prompt": "En quelle année Apple a présenté l’iPod original ?",
+      "choices": [
+        "1998",
+        "2001",
+        "2004",
+        "2007"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Chronologie tech milléniale plus difficile.",
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple press archive — 2001"
+        }
+      ]
+    },
+    {
+      "id": "place-z-h-fortnite",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Gen Z",
+      "prompt": "Fortnite est surtout connu comme quel type de jeu ?",
+      "choices": [
+        "Un battle royale / jeu multijoueur en ligne",
+        "Un outil de préparation fiscale",
+        "Un moteur d’échecs",
+        "Un simulateur de vol des années 1980"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen Z médian — lisible pour les autres ; éviter les pièges d’argot.",
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games product pages"
+        }
+      ]
+    },
+    {
+      "id": "place-z-e-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Streams",
+      "prompt": "Lequel de ceux-ci est un grand service de streaming musical ?",
+      "choices": [
+        "Blockbuster",
+        "Spotify",
+        "Boutique CD Napster",
+        "Betamax Radio"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Contrôle facile de la culture musicale moderne.",
+      "sources": [
+        {
+          "label": "Wikipedia — Spotify"
+        },
+        {
+          "label": "Company / press materials"
+        }
+      ]
+    },
+    {
+      "id": "place-a-e-tablet",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Gen Alpha",
+      "prompt": "Quel appareil est conçu surtout pour les applis et la vidéo sur écran tactile, pas pour un clavier physique ?",
+      "choices": [
+        "Tourne-disque",
+        "Télécopieur",
+        "Tablette",
+        "Uniquement une télécommande de téléviseur CRT"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Item facile équitable selon l’âge — reconnaissance d’objet, pas fluence mème.",
+      "sources": [
+        {
+          "label": "Wikipedia — Tablet computer"
+        },
+        {
+          "label": "Consumer electronics definitions"
+        }
+      ]
+    },
+    {
+      "id": "place-a-h-youtube",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Créateurs",
+      "prompt": "YouTube est avant tout une plateforme pour quoi ?",
+      "choices": [
+        "Vidéo mise en ligne et diffusée par les utilisateurs",
+        "Livraison postale du lendemain uniquement",
+        "Uniquement des ballons météo satellite",
+        "Pressage de vinyle"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Médian pertinent Gen Alpha ; toujours universel.",
+      "sources": [
+        {
+          "label": "Wikipedia — YouTube"
+        },
+        {
+          "label": "Google / YouTube about pages"
+        }
+      ]
+    },
+    {
+      "id": "place-gt-h-hammond",
+      "tier": "hard",
+      "topic": "grand-tour-top-gear",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Essence",
+      "prompt": "Quel présentateur de Top Gear / The Grand Tour est surnommé le Hamster ?",
+      "choices": [
+        "Jeremy Clarkson",
+        "James May",
+        "Richard Hammond",
+        "The Stig"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Item médian du sujet cœur produit.",
+      "sources": [
+        {
+          "label": "Wikipedia — Richard Hammond"
+        },
+        {
+          "label": "BBC Top Gear materials"
+        }
+      ]
+    },
+    {
+      "id": "place-cars-e-abs",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Garage",
+      "prompt": "Que signifie l’abréviation ABS dans les systèmes de sécurité automobile ?",
+      "choices": [
+        "Anti-lock Braking System",
+        "Automatic Boost System",
+        "Axle Balance Sensor",
+        "Advanced Battery Switch"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Littératie automobile facile.",
+      "sources": [
+        {
+          "label": "Wikipedia — Anti-lock braking system"
+        },
+        {
+          "label": "NHTSA glossaries"
+        }
+      ]
+    },
+    {
+      "id": "place-gigi-e-flagship",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Gigi",
+      "prompt": "DJ Gigi est l’artiste phare de quel label montréalais ?",
+      "choices": [
+        "Island Records",
+        "Motown",
+        "XL Recordings",
+        "GMG Brand Label"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Marque easy-only — ne jamais monter le tier Gigi en placement.",
+      "sources": [
+        {
+          "label": "GMG Brand Label roster"
+        },
+        {
+          "label": "DJ Gigi public bio"
+        }
+      ]
+    },
+    {
+      "id": "place-art-d-braque",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Cubisme",
+      "prompt": "Picasso a cofondé le cubisme avec quel artiste ?",
+      "choices": [
+        "Georges Braque",
+        "Andy Warhol",
+        "Jackson Pollock",
+        "Frida Kahlo"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Sonde culturelle difficile — signal Gold de capacité.",
+      "sources": [
+        {
+          "label": "Wikipedia — Cubism"
+        },
+        {
+          "label": "MoMA / Tate primers"
+        }
+      ]
+    }
+  ],
+  "locale": "fr",
+  "sourceLocale": "en",
+  "sourceFile": "banks/placement/generational-first-pass.json",
+  "translatedAt": "2026-09-21T16:52:01.000Z"
+}

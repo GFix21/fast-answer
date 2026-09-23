@@ -82,6 +82,8 @@ a.glow-link:hover{text-decoration:underline}
 .ready-list{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}
 .ready-list .on-hand{color:var(--fg);font-weight:600}
 .ready-list li span{display:inline-block;min-width:72px;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.replace-offer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;padding:10px 12px;border:1px dashed var(--line);border-radius:var(--radius-md)}
+.replace-offer .btn{flex:none}
 .q-meta{font-size:12px;color:var(--mut);margin-bottom:6px}
 .q-prompt{font-size:15px;line-height:1.35;margin-bottom:8px}
 .choices{font-size:13px;color:var(--mut);display:grid;grid-template-columns:1fr 1fr;gap:4px 12px}

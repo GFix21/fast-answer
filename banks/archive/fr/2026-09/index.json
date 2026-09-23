@@ -1,0 +1,23 @@
+{
+  "monthKey": "2026-09",
+  "weeks": [
+    {
+      "weekKey": "2026-W39",
+      "publishedAt": "2026-09-23T17:15:00.000Z",
+      "counts": {
+        "easy": 79,
+        "hard": 66,
+        "difficult": 10,
+        "extreme": 6
+      },
+      "studioCounts": {
+        "easy": 79,
+        "hard": 66,
+        "difficult": 10,
+        "finale": 6
+      },
+      "questionCount": 161
+    }
+  ],
+  "updatedAt": "2026-09-23T17:15:00.000Z"
+}

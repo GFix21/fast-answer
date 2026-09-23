@@ -1,0 +1,4374 @@
+{
+  "weekKey": "2026-W39",
+  "generatedAt": "2026-09-21T13:25:56.070Z",
+  "host": "Jeremy",
+  "inspirationSummary": "America/Toronto-Woche 2026-W39 — 40/40/10/6 über Themen; DJ Gigi easy-only; sechs Generationen im Mix (nicht 96×6); PG-13; ≥2 Quellen pro Item.",
+  "locale": "de",
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "banterHint": "Drei kleine Wörter. Große Hüte.",
+      "id": "w39-e-silent-ike",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Motto der Jahrhundertmitte",
+      "prompt": "Mit welchem Wahlkampfslogan wird Dwight D. Eisenhower berühmt assoziiert?",
+      "choices": [
+        "I Like Ike",
+        "Tippecanoe and Tyler Too",
+        "Morning in America",
+        "Yes We Can"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Dwight D. Eisenhower"
+        },
+        {
+          "label": "Smithsonian / presidential campaign history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-silent-fdr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Weißes Haus im Krieg",
+      "prompt": "Welcher US-Präsident führte das Land durch den größten Teil des Zweiten Weltkriegs?",
+      "choices": [
+        "Franklin D. Roosevelt",
+        "Harry S. Truman",
+        "Woodrow Wilson",
+        "Herbert Hoover"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Franklin D. Roosevelt"
+        },
+        {
+          "label": "Encyclopædia Britannica — World War II"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "banterHint": "Nein, keine Kristallkugel.",
+      "id": "w39-e-silent-transistor",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Ära des Taschenradios",
+      "prompt": "Welches kleine Radio wurde in den 1950er-Jahren zum Teenager-Hit?",
+      "choices": [
+        "Vakuum-Toaster",
+        "Kristallkugel-Radio",
+        "Transistorradio",
+        "Achtspur-Boombox"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Transistor radio"
+        },
+        {
+          "label": "IEEE / transistor history primers"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-silent-elvis",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "King-Ecke",
+      "prompt": "Welcher Sänger wird weithin als „King of Rock and Roll“ bezeichnet?",
+      "choices": [
+        "Buddy Holly",
+        "Chuck Berry",
+        "Elvis Presley",
+        "Little Richard"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Elvis Presley"
+        },
+        {
+          "label": "Rock & Roll Hall of Fame biography"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-silent-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Kartenchaos",
+      "prompt": "Was ist die Hauptstadt Kanadas?",
+      "choices": [
+        "Montreal",
+        "Toronto",
+        "Ottawa",
+        "Vancouver"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Ottawa"
+        },
+        {
+          "label": "Government of Canada — capital city"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-silent-road",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Beat-Regal",
+      "prompt": "Wer schrieb den Beat-Generation-Roman On the Road?",
+      "choices": [
+        "Neal Cassady",
+        "Allen Ginsberg",
+        "William S. Burroughs",
+        "Jack Kerouac"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — On the Road"
+        },
+        {
+          "label": "Library of Congress / Beat Generation primers"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-boomer-moon",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ein kleiner Schritt",
+      "prompt": "Wer war der erste Mensch auf dem Mond?",
+      "choices": [
+        "Juri Gagarin",
+        "Buzz Aldrin",
+        "Neil Armstrong",
+        "John Glenn"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 mission summary"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-boomer-apollo",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Apollo-Uhr",
+      "prompt": "In welchem Jahr landete Apollo 11 auf dem Mond?",
+      "choices": [
+        "1961",
+        "1965",
+        "1972",
+        "1969"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 11"
+        },
+        {
+          "label": "NASA official mission timeline"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Festival-Folklore",
+      "prompt": "In welchem US-Bundesstaat fand das Woodstock-Festival 1969 statt?",
+      "choices": [
+        "Florida",
+        "Kalifornien",
+        "Texas",
+        "New York"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Woodstock"
+        },
+        {
+          "label": "Bethel Woods Center for the Arts history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-boomer-beatles",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sullivan-Sonntag",
+      "prompt": "Welche britische Band sorgte 1964 in The Ed Sullivan Show für Furore in den USA?",
+      "choices": [
+        "The Beatles",
+        "The Rolling Stones",
+        "The Who",
+        "The Kinks"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Ed Sullivan Show"
+        },
+        {
+          "label": "Beatles official chronology / CBS archives"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-boomer-kirk",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Brücken-Banter",
+      "prompt": "Wer befehligte das Raumschiff Enterprise in der Originalserie Star Trek?",
+      "choices": [
+        "Jean-Luc Picard",
+        "James T. Kirk",
+        "Spock",
+        "Han Solo"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — James T. Kirk"
+        },
+        {
+          "label": "Star Trek: The Original Series credits"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-boomer-abs",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "baby-boomer",
+      "categoryTitle": "Petrolhead-Quiz",
+      "prompt": "Wofür steht die Abkürzung ABS bei Kfz-Sicherheitssystemen?",
+      "choices": [
+        "Axle Balance Sensor",
+        "Automatic Boost System",
+        "Anti-lock Braking System",
+        "Advanced Battery Switch"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Anti-lock braking system"
+        },
+        {
+          "label": "NHTSA / automotive safety primers"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genx-mtv",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Kabel-Tag eins",
+      "prompt": "Welcher Sender startete 1981 mit „Video Killed the Radio Star“?",
+      "choices": [
+        "VH1",
+        "MTV",
+        "Nickelodeon",
+        "CNN"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — MTV"
+        },
+        {
+          "label": "Billboard / cable launch retrospectives"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "banterHint": "Great Scott — Strom, kein Obst.",
+      "id": "w39-e-genx-bttf",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Flux & Freunde",
+      "prompt": "Wofür braucht Doc Brown in Zurück in die Zukunft 1,21 Gigawatt?",
+      "choices": [
+        "Plutoniumstaub",
+        "Elektrizität",
+        "Bananenschalen",
+        "Kaffee"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Back to the Future"
+        },
+        {
+          "label": "Film dialogue / Universal Pictures"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "banterHint": "Hamster. Ja. Wissen wir.",
+      "id": "w39-e-genx-hamster",
+      "tier": "easy",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Hammonds Horror-Ecke",
+      "prompt": "Welcher Moderator gilt als der kleinste des Top-Gear- / Grand-Tour-Trios?",
+      "choices": [
+        "James May",
+        "Jeremy Clarkson",
+        "Richard Hammond",
+        "The Stig"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Richard Hammond"
+        },
+        {
+          "label": "BBC Top Gear / Amazon Grand Tour production notes"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genx-may",
+      "tier": "easy",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Captain-Slow-Ecke",
+      "prompt": "Welcher Grand-Tour-Moderator trägt den Spitznamen Captain Slow?",
+      "choices": [
+        "Abie",
+        "Richard Hammond",
+        "Jeremy Clarkson",
+        "James May"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — James May"
+        },
+        {
+          "label": "Top Gear / Grand Tour episode credits"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genx-tetris",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Blockparty",
+      "prompt": "Welches Puzzle-Spiel mit fallenden Blöcken schuf Alexey Pajitnov?",
+      "choices": [
+        "Tetris",
+        "Pac-Man",
+        "Snake",
+        "Minesweeper"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Tetris"
+        },
+        {
+          "label": "Encyclopædia Britannica — Tetris"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genx-simpsons",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Gelbe Familie",
+      "prompt": "Wie heißt die Heimatstadt der Simpsons?",
+      "choices": [
+        "South Park",
+        "Shelbyville",
+        "Quahog",
+        "Springfield"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — The Simpsons"
+        },
+        {
+          "label": "Fox / series production materials"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-geny-matrix",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Rote-Pille-Runde",
+      "prompt": "Welche Farbe hat die Pille, die Neo in Matrix nimmt, um die Wahrheit zu sehen?",
+      "choices": [
+        "Lila",
+        "Blau",
+        "Grün",
+        "Rot"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — The Matrix"
+        },
+        {
+          "label": "Warner Bros. film synopsis"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-geny-ipod",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Weiße Ohrhörer",
+      "prompt": "In welchem Jahr brachte Apple den ersten iPod heraus?",
+      "choices": [
+        "2001",
+        "1998",
+        "2005",
+        "2007"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple press archive — Oct 2001"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-geny-luke",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Sci-Fi-Blitzrunde",
+      "prompt": "Welche Farbe hat Lukes erstes Lichtschwert in Star Wars (Eine neue Hoffnung)?",
+      "choices": [
+        "Lila",
+        "Grün",
+        "Rot",
+        "Blau"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Lightsaber"
+        },
+        {
+          "label": "Star Wars: A New Hope (1977) film"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-geny-gmg",
+      "tier": "easy",
+      "topic": "gmg-brand",
+      "generation": "gen-y",
+      "categoryTitle": "Mitternacht in Montréal",
+      "prompt": "Wo hat GMG Brand Label seinen Sitz?",
+      "choices": [
+        "Montréal, Kanada",
+        "Toronto, Kanada",
+        "Paris, Frankreich",
+        "Berlin, Deutschland"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "GMG Brand Label public materials"
+        },
+        {
+          "label": "Montréal music-label listings"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-geny-gigi",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "gen-y",
+      "categoryTitle": "Gigis Easy Lane",
+      "prompt": "DJ Gigi ist der Flaggschiff-Künstler welches Montréaler Labels?",
+      "choices": [
+        "Def Jam",
+        "Warp Records",
+        "Sub Pop",
+        "GMG Brand Label"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "GMG Brand Label roster notes"
+        },
+        {
+          "label": "DJ Gigi public artist pages"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "banterHint": "Ja, das war die leichte Frage.",
+      "id": "w39-e-geny-google",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Suchparty",
+      "prompt": "Welches Unternehmen startete Ende der 1990er einen Suchdienst namens Google?",
+      "choices": [
+        "Yahoo",
+        "Google",
+        "AltaVista",
+        "Ask Jeeves"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Google"
+        },
+        {
+          "label": "Stanford / company founding history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genz-fortnite",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Battle-Bus-Basics",
+      "prompt": "Was für ein Spiel ist Fortnite in erster Linie?",
+      "choices": [
+        "Battle Royale",
+        "Textadventure",
+        "Schachsimulator",
+        "Steuersoftware"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games Fortnite overview"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genz-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Stream-Maschine",
+      "prompt": "Welches schwedische Unternehmen ist vor allem für die Musik-Streaming-App Spotify bekannt?",
+      "choices": [
+        "Netflix",
+        "Spotify",
+        "Skype",
+        "IKEA"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Spotify"
+        },
+        {
+          "label": "Company About / Stockholm HQ materials"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genz-tiktok",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Kurzform",
+      "prompt": "Wofür ist TikTok vor allem bekannt?",
+      "choices": [
+        "Nur Spielfilme",
+        "Kurzvideos",
+        "Nur Live-Oper",
+        "Nur gedruckte Zeitungen"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — TikTok"
+        },
+        {
+          "label": "ByteDance product descriptions"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genz-france",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt-Blitz",
+      "prompt": "Was ist die Hauptstadt Frankreichs?",
+      "choices": [
+        "Lyon",
+        "Paris",
+        "Marseille",
+        "Nizza"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Paris"
+        },
+        {
+          "label": "Encyclopædia Britannica — France"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genz-gigi2",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "gen-z",
+      "categoryTitle": "Gigis Easy Lane",
+      "prompt": "Mit welchem Stadt-Vibe wird DJ Gigis Musik am ehesten verbunden?",
+      "choices": [
+        "Country-Scheunen in Nashville",
+        "Nächte in Montréal",
+        "Nur Wiener Walzer",
+        "Stille Wüsten-Retreats"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "GMG Brand Label artist materials"
+        },
+        {
+          "label": "DJ Gigi public bio notes"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-genz-marvel",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "MCU 101",
+      "prompt": "Welches Studio startete das Marvel Cinematic Universe mit Iron Man (2008)?",
+      "choices": [
+        "Studio Ghibli",
+        "Nur Pixar",
+        "A24",
+        "Marvel Studios / Disney"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Marvel Cinematic Universe"
+        },
+        {
+          "label": "Marvel Studios / Disney release history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-alpha-yt",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Play-Taste",
+      "prompt": "YouTube ist in erster Linie eine Plattform für was?",
+      "choices": [
+        "Nur gedruckte Bücher",
+        "Online-Video",
+        "Nur AM-Radioskalen",
+        "Nur Vinylpressung"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — YouTube"
+        },
+        {
+          "label": "Google / YouTube About pages"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-alpha-tablet",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Touch First",
+      "prompt": "Ein iPad lässt sich am besten als welches Gerät beschreiben?",
+      "choices": [
+        "Filmprojektor",
+        "Toaster",
+        "Festnetztelefon",
+        "Tablet-Computer"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — iPad"
+        },
+        {
+          "label": "Apple iPad product pages"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-alpha-dory",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fischfreunde",
+      "prompt": "Was für ein Fisch ist Nemo in Findet Nemo?",
+      "choices": [
+        "Thunfisch",
+        "Hai",
+        "Goldfisch",
+        "Clownfisch"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Finding Nemo"
+        },
+        {
+          "label": "Pixar / Disney film materials"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "banterHint": "Wenn das daneben geht, braucht Jeremy einen Kaffee.",
+      "id": "w39-e-alpha-earth",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Blauer Marmor",
+      "prompt": "Auf welchem Planeten leben wir?",
+      "choices": [
+        "Erde",
+        "Mars",
+        "Jupiter",
+        "Venus"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Earth"
+        },
+        {
+          "label": "NASA solar system overview"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-alpha-lego",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Ziegel-Logik",
+      "prompt": "Wofür sind LEGO-Steine am berühmtesten?",
+      "choices": [
+        "Ineinandergreifende Kunststoff-Bausteine",
+        "Essbare Süßigkeiten",
+        "Automotoren",
+        "Farbmarken"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Lego"
+        },
+        {
+          "label": "LEGO Group company history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-alpha-cars",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "gen-alpha",
+      "categoryTitle": "Vier Räder",
+      "prompt": "Wie viele Räder hat ein typisches Auto?",
+      "choices": [
+        "Eins",
+        "Zwei",
+        "Acht",
+        "Vier"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Car"
+        },
+        {
+          "label": "Standard automotive design references"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-mix-japan",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Kartenchaos",
+      "prompt": "Was ist die Hauptstadt Japans?",
+      "choices": [
+        "Tokio",
+        "Osaka",
+        "Kyoto",
+        "Nagoya"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Tokyo"
+        },
+        {
+          "label": "Encyclopædia Britannica — Japan"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-mix-mona",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Louvre Lite",
+      "prompt": "Wer malte die Mona Lisa?",
+      "choices": [
+        "Raffael",
+        "Michelangelo",
+        "Leonardo da Vinci",
+        "Donatello"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Mona Lisa"
+        },
+        {
+          "label": "Louvre Museum collection notes"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-mix-gigi3",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Gigis Easy Lane",
+      "prompt": "Wahr oder Vibe-Check: Unter welcher Label-Familie veröffentlicht DJ Gigi?",
+      "choices": [
+        "GMG Brand Label",
+        "Nur Motown",
+        "Nur Deutsche Grammophon",
+        "Nintendo Sound Team"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "GMG Brand Label roster"
+        },
+        {
+          "label": "DJ Gigi public credits"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-e-mix-stig",
+      "tier": "easy",
+      "topic": "grand-tour-top-gear",
+      "generation": "multi-gen",
+      "categoryTitle": "Weißes-Anzug-Rätsel",
+      "prompt": "Wie heißt der anonyme Rennfahrer mit Helm bei Top Gear?",
+      "choices": [
+        "The Sprinter",
+        "The Stag",
+        "The Stig",
+        "The Shadow"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — The Stig"
+        },
+        {
+          "label": "BBC Top Gear programme notes"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-silent-sputnik",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Orbit-Ursprünge",
+      "prompt": "Welches Land startete 1957 Sputnik 1, den ersten künstlichen Satelliten?",
+      "choices": [
+        "Vereinigte Staaten",
+        "Sowjetunion",
+        "China",
+        "Frankreich"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Sputnik 1"
+        },
+        {
+          "label": "NASA history — Space Race"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-silent-hula",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Mode-Akten",
+      "prompt": "Der Spielzeug-Hype der 1950er mit dem drehenden Plastikring um die Taille war…",
+      "choices": [
+        "Der Pogo-Stick",
+        "Der Hula-Hoop",
+        "Der Rubik’s Cube",
+        "Das Tamagotchi"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Hula hoop"
+        },
+        {
+          "label": "Wham-O company history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-silent-polio",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Öffentliche Gesundheit",
+      "prompt": "Welcher amerikanische Wissenschaftler leitete das Team hinter dem ersten weit verbreiteten Polio-Impfstoff der 1950er?",
+      "choices": [
+        "Louis Pasteur",
+        "Alexander Fleming",
+        "Jonas Salk",
+        "Edward Jenner"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Jonas Salk"
+        },
+        {
+          "label": "CDC / polio vaccine history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-silent-korea",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Kalter-Krieg-Karte",
+      "prompt": "In welchem Jahr wurde der Waffenstillstand des Koreakriegs unterzeichnet?",
+      "choices": [
+        "1953",
+        "1945",
+        "1960",
+        "1975"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Korean War"
+        },
+        {
+          "label": "Encyclopædia Britannica — Korean War"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-silent-interstate",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "silent-generation",
+      "categoryTitle": "Straßenbauer",
+      "prompt": "Welcher US-Präsident unterzeichnete 1956 den Federal-Aid Highway Act, der das Interstate-System anstieß?",
+      "choices": [
+        "Lyndon B. Johnson",
+        "John F. Kennedy",
+        "Harry Truman",
+        "Dwight D. Eisenhower"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Federal-Aid Highway Act of 1956"
+        },
+        {
+          "label": "FHWA interstate history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-silent-disneyland",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Themenpark-Dämmerung",
+      "prompt": "In welchem US-Bundesstaat öffnete Disneyland 1955 erstmals?",
+      "choices": [
+        "Kalifornien",
+        "Florida",
+        "Texas",
+        "New York"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Disneyland"
+        },
+        {
+          "label": "Disney Parks historical timeline"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-boomer-jfk",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Camelot-Uhr",
+      "prompt": "In welchem Jahr wurde der US-Präsident John F. Kennedy ermordet?",
+      "choices": [
+        "1968",
+        "1963",
+        "1960",
+        "1972"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Assassination of John F. Kennedy"
+        },
+        {
+          "label": "National Archives / JFK presidential library"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-boomer-mlk",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Marsch-Erinnerung",
+      "prompt": "In welcher Stadt hielt Martin Luther King Jr. die Rede „I Have a Dream“?",
+      "choices": [
+        "Atlanta",
+        "Washington, D.C.",
+        "Selma",
+        "Memphis"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — I Have a Dream"
+        },
+        {
+          "label": "National Park Service — Lincoln Memorial"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-boomer-beatles2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Abbey-Noten",
+      "prompt": "Welches Beatles-Album enthält die Songs „Come Together“ und „Here Comes the Sun“?",
+      "choices": [
+        "Help!",
+        "Revolver",
+        "Abbey Road",
+        "Let It Be"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Abbey Road"
+        },
+        {
+          "label": "Apple Corps / Beatles discography"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-boomer-ali",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Rope-a-Dope",
+      "prompt": "Unter welchem Namen wurde Muhammad Ali geboren?",
+      "choices": [
+        "Sugar Ray Robinson",
+        "Joe Frazier",
+        "George Foreman",
+        "Cassius Clay"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Muhammad Ali"
+        },
+        {
+          "label": "Encyclopædia Britannica — Muhammad Ali"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-boomer-concorde",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "baby-boomer",
+      "categoryTitle": "Überschall-Nebenquest",
+      "prompt": "Die Concorde war ein berühmtes Beispiel für welche Art von Passagierflugzeug?",
+      "choices": [
+        "Cargo-Luftschiff",
+        "Helikopterfähre",
+        "Heißluftballon",
+        "Überschall-Verkehrsflugzeug"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Concorde"
+        },
+        {
+          "label": "British Airways / Air France Concorde history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-boomer-starwars",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Galaxie-Premiere",
+      "prompt": "In welchem Jahr kam der originale Star-Wars-Film (später Eine neue Hoffnung) heraus?",
+      "choices": [
+        "1980",
+        "1975",
+        "1977",
+        "1983"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Star Wars (film)"
+        },
+        {
+          "label": "Lucasfilm release history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genx-amazon-gt",
+      "tier": "hard",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Prime-Time-Benzin",
+      "prompt": "Welcher Streamingdienst produzierte The Grand Tour?",
+      "choices": [
+        "Hulu",
+        "Netflix",
+        "Amazon Prime Video",
+        "Disney+"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — The Grand Tour"
+        },
+        {
+          "label": "Amazon MGM Studios / Prime Video listings"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genx-chernobyl",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Atomkarte",
+      "prompt": "Die Tschernobyl-Katastrophe 1986 ereignete sich in welchem heutigen Land?",
+      "choices": [
+        "Polen",
+        "Ukraine",
+        "Deutschland",
+        "Schweden"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Chernobyl disaster"
+        },
+        {
+          "label": "IAEA / Chernobyl historical summaries"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genx-nirvana",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Grunge-Tor",
+      "prompt": "Welches Nirvana-Album enthält den Song „Smells Like Teen Spirit“?",
+      "choices": [
+        "Bleach",
+        "In Utero",
+        "Nevermind",
+        "Unplugged in New York"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Nevermind"
+        },
+        {
+          "label": "DGC Records / Nirvana discography"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genx-www",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Hyperlink-Dämmerung",
+      "prompt": "Wem wird die Erfindung des World Wide Web zugeschrieben?",
+      "choices": [
+        "Bill Gates",
+        "Tim Berners-Lee",
+        "Steve Jobs",
+        "Mark Zuckerberg"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Tim Berners-Lee"
+        },
+        {
+          "label": "CERN WWW project history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genx-seinfeld",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Über nichts",
+      "prompt": "In welcher US-Stadt spielt Seinfeld hauptsächlich?",
+      "choices": [
+        "New York City",
+        "Los Angeles",
+        "Chicago",
+        "Boston"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Seinfeld"
+        },
+        {
+          "label": "NBC series production notes"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genx-gameboy",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Handheld-Geschichte",
+      "prompt": "In welchem Jahr erschien Nintendos originaler Game Boy in Japan?",
+      "choices": [
+        "1985",
+        "1989",
+        "1994",
+        "1998"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Game Boy"
+        },
+        {
+          "label": "Nintendo corporate history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-geny-ipod-hd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Scrollrad tief",
+      "prompt": "Welchen Laufwerkstyp nutzte der Speicher des ersten iPods?",
+      "choices": [
+        "Nur Disketten",
+        "Nur Cloud-Streaming",
+        "Festplatte",
+        "Nur Vinyl"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple iPod (2001) technical specs"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-geny-facebook",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Campus-Login",
+      "prompt": "In welchem Jahr wurde Facebook (heute Meta) gegründet?",
+      "choices": [
+        "2004",
+        "1998",
+        "2008",
+        "2012"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Facebook"
+        },
+        {
+          "label": "Meta / company founding history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-geny-dune",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Sand & Syntax",
+      "prompt": "Wer schrieb den Originalroman Dune?",
+      "choices": [
+        "Philip K. Dick",
+        "Isaac Asimov",
+        "Arthur C. Clarke",
+        "Frank Herbert"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Dune (novel)"
+        },
+        {
+          "label": "Publisher / copyright records — Frank Herbert"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-geny-gmg2",
+      "tier": "hard",
+      "topic": "gmg-brand",
+      "generation": "gen-y",
+      "categoryTitle": "Label-Lore",
+      "prompt": "Womit wird GMG Brand Label vor allem assoziiert?",
+      "choices": [
+        "Landwirtschaftsmaschinen",
+        "Musik",
+        "Flugzeug-Catering",
+        "Steuersoftware"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "GMG Brand Label public site / materials"
+        },
+        {
+          "label": "Montréal independent label listings"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-geny-friends",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Sofa-Kontinuität",
+      "prompt": "Wie heißt in Friends der Central-Perk-Barista, der später zur Stammbesetzung gehört?",
+      "choices": [
+        "Gregory",
+        "Gunner",
+        "Gunther",
+        "Gareth"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Friends"
+        },
+        {
+          "label": "NBC / Warner Bros. Television credits"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-geny-hybrid",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "gen-y",
+      "categoryTitle": "Leises Drehmoment",
+      "prompt": "Welches Toyota-Modell gilt weithin als Wegbereiter der Massenmarkt-Hybride?",
+      "choices": [
+        "Nur Corolla FX",
+        "Prius",
+        "Nur Land Cruiser Diesel",
+        "Nur Supra Mk IV"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Toyota Prius"
+        },
+        {
+          "label": "Toyota hybrid technology history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genz-fortnite2",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Insel-Code",
+      "prompt": "Welches Unternehmen entwickelt Fortnite?",
+      "choices": [
+        "Valve",
+        "Epic Games",
+        "Nintendo",
+        "Sega"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games corporate pages"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genz-spotify2",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Stream-HQ",
+      "prompt": "In welchem Land wurde Spotify gegründet?",
+      "choices": [
+        "Vereinigte Staaten",
+        "Schweden",
+        "Südkorea",
+        "Brasilien"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Spotify"
+        },
+        {
+          "label": "Spotify About / company filings summaries"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genz-btsv",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "K-Pop-Kompass",
+      "prompt": "Aus welchem Land kommt die Musikgruppe BTS?",
+      "choices": [
+        "China",
+        "Japan",
+        "Südkorea",
+        "Thailand"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — BTS"
+        },
+        {
+          "label": "HYBE / official artist biographies"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genz-tesla",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "gen-z",
+      "categoryTitle": "EV-Autobahn",
+      "prompt": "Wofür ist Tesla, Inc. vor allem bekannt?",
+      "choices": [
+        "Nur Segelboote",
+        "Nur mechanische Schreibmaschinen",
+        "Elektrofahrzeuge",
+        "Nur Vinylpressen"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Tesla, Inc."
+        },
+        {
+          "label": "Company SEC / About Tesla materials"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genz-blackpanther",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Wakanda-Wochenende",
+      "prompt": "Wer führte Regie beim Marvel-Film Black Panther (2018)?",
+      "choices": [
+        "Ryan Coogler",
+        "Taika Waititi",
+        "Patty Jenkins",
+        "James Gunn"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Black Panther (film)"
+        },
+        {
+          "label": "Marvel Studios credits"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-genz-paris-acc",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Klimakarte",
+      "prompt": "Worum geht es im Pariser Klimaabkommen vor allem?",
+      "choices": [
+        "Währungsschriften",
+        "Briefmarken",
+        "Olympia-Maskottchen",
+        "Klimawandel"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Paris Agreement"
+        },
+        {
+          "label": "UNFCCC official materials"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-alpha-minecraft",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Block-Universum",
+      "prompt": "Wer hat Minecraft ursprünglich geschaffen?",
+      "choices": [
+        "Gabe Newell",
+        "Shigeru Miyamoto",
+        "Markus Persson (Notch)",
+        "Hideo Kojima"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Minecraft"
+        },
+        {
+          "label": "Mojang / Xbox Game Studios history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-alpha-roblox",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Avatar-Plaza",
+      "prompt": "Wie lässt sich Roblox am besten beschreiben?",
+      "choices": [
+        "Eine Online-Plattform für nutzererstellte Spiele",
+        "Nur ein physisches Brettspiel",
+        "Ein Satelliten-TV-Sender",
+        "Eine Art Motoröl"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Roblox"
+        },
+        {
+          "label": "Roblox Corporation About pages"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-alpha-pixar",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lampe & Luxo",
+      "prompt": "Welches Studio machte Toy Story, den ersten vollständig computeranimierten Spielfilm?",
+      "choices": [
+        "Nur DreamWorks",
+        "Pixar",
+        "Studio Ghibli",
+        "Nur Aardman"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Toy Story"
+        },
+        {
+          "label": "Pixar Animation Studios history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-alpha-among",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sus-Patrouille",
+      "prompt": "Among Us ist ein Social-Deduction-Spiel, das hauptsächlich in welcher Umgebung spielt?",
+      "choices": [
+        "Nur ein Finanzamt",
+        "Nur eine mittelalterliche Bäckerei",
+        "Raumschiff / Raumcrew",
+        "Nur eine stille Bibliothek"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Among Us"
+        },
+        {
+          "label": "Innersloth game description"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-alpha-ev",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "gen-alpha",
+      "categoryTitle": "Plug & Play",
+      "prompt": "Wofür steht EV bei modernen Autos üblicherweise?",
+      "choices": [
+        "Emergency Vinyl",
+        "Extra Volume",
+        "Engine Vacuum",
+        "Electric vehicle (Elektrofahrzeug)"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Electric vehicle"
+        },
+        {
+          "label": "IEA / EV technology overviews"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-alpha-ghibli",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Totoro-Territorium",
+      "prompt": "In welchem Land hat Studio Ghibli seinen Sitz?",
+      "choices": [
+        "Brasilien",
+        "Frankreich",
+        "Japan",
+        "Kanada"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Studio Ghibli"
+        },
+        {
+          "label": "Studio Ghibli official materials"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-mix-nile",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Fluss-Rang",
+      "prompt": "Welcher afrikanische Fluss gilt traditionell als einer der längsten der Welt?",
+      "choices": [
+        "Nil",
+        "Themse",
+        "Seine",
+        "Hudson"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Nile"
+        },
+        {
+          "label": "Encyclopædia Britannica — Nile River"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-mix-van-gogh",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Sternen-Fakt",
+      "prompt": "Mit welchem Gemälde wird Vincent van Gogh stark verbunden?",
+      "choices": [
+        "Die Sternennacht",
+        "Die Beständigkeit der Erinnerung",
+        "Guernica",
+        "Der Schrei als einziges Werk"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — The Starry Night"
+        },
+        {
+          "label": "MoMA collection notes"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-mix-v8",
+      "tier": "hard",
+      "topic": "cars-motoring",
+      "generation": "multi-gen",
+      "categoryTitle": "Zylinderzahl",
+      "prompt": "Wie viele Zylinder hat ein typischer V8-Motor?",
+      "choices": [
+        "Acht",
+        "Vier",
+        "Zwei",
+        "Sechzehn"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — V8 engine"
+        },
+        {
+          "label": "Automotive engineering primers"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-h-mix-hamilton",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Broadway-Beats",
+      "prompt": "Wer schrieb Musik und Text für das Musical Hamilton?",
+      "choices": [
+        "Stephen Sondheim",
+        "Andrew Lloyd Webber",
+        "Lin-Manuel Miranda",
+        "Elton John"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Hamilton (musical)"
+        },
+        {
+          "label": "Official Hamilton / Miranda credits"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Kalter-Krieg-Himmel",
+      "prompt": "Francis Gary Powers wurde 1960 in welchem Typ US-Aufklärungsflugzeug abgeschossen?",
+      "choices": [
+        "P-51 Mustang",
+        "Nur SR-71",
+        "B-29 Superfortress",
+        "U-2"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — 1960 U-2 incident"
+        },
+        {
+          "label": "CIA / Cold War aviation histories"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-d-boomer-apollo13",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Versagen ist keine…",
+      "prompt": "In welchem Jahr explodierte der Sauerstofftank von Apollo 13?",
+      "choices": [
+        "1968",
+        "1969",
+        "1972",
+        "1970"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 13"
+        },
+        {
+          "label": "NASA Apollo 13 mission report"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "banterHint": "Nach der BBC, bevor alle übers Campen stritten.",
+      "id": "w39-d-genx-gt-year",
+      "tier": "difficult",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Studio-Chronologie",
+      "prompt": "In welchem Jahr hatte The Grand Tour Premiere auf Amazon Prime Video?",
+      "choices": [
+        "2014",
+        "2016",
+        "2015",
+        "2018"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — The Grand Tour (TV series)"
+        },
+        {
+          "label": "Contemporary reviews — Nov 2016 premiere"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-d-genx-berlin",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Mauer-Uhr",
+      "prompt": "In welchem Jahr fiel die Berliner Mauer?",
+      "choices": [
+        "1979",
+        "1985",
+        "1991",
+        "1989"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Fall of the Berlin Wall"
+        },
+        {
+          "label": "Encyclopædia Britannica — Berlin Wall"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-d-geny-iphone",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Keynote-Chronologie",
+      "prompt": "In welchem Jahr kündigte Apple das originale iPhone an?",
+      "choices": [
+        "2007",
+        "2005",
+        "2009",
+        "2010"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — iPhone (1st generation)"
+        },
+        {
+          "label": "Apple special event — Jan 2007"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-d-geny-inception",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Traumschichten",
+      "prompt": "Wer führte Regie beim Film Inception (2010)?",
+      "choices": [
+        "Ridley Scott",
+        "Denis Villeneuve",
+        "Christopher Nolan",
+        "James Cameron"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Inception"
+        },
+        {
+          "label": "Warner Bros. / film credits"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-d-genz-openai",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Modell-Manieren",
+      "prompt": "In welchem Jahr veröffentlichte OpenAI ChatGPT für die Öffentlichkeit?",
+      "choices": [
+        "2022",
+        "2018",
+        "2020",
+        "2024"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — ChatGPT"
+        },
+        {
+          "label": "OpenAI blog — Nov 2022 announcement"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-d-genz-parasite",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Treppen & Untertitel",
+      "prompt": "Aus welchem Land stammt der Film Parasite, der den Oscar als Bester Film gewann?",
+      "choices": [
+        "Frankreich",
+        "Japan",
+        "Südkorea",
+        "Mexiko"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — Parasite (2019 film)"
+        },
+        {
+          "label": "Academy of Motion Picture Arts and Sciences records"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-d-alpha-switch",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hybrid-Handheld",
+      "prompt": "In welchem Jahr erschien die Nintendo Switch weltweit?",
+      "choices": [
+        "2015",
+        "2017",
+        "2019",
+        "2013"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Nintendo Switch"
+        },
+        {
+          "label": "Nintendo corporate news — March 2017"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-d-mix-louvre",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Pyramiden-Problem",
+      "prompt": "I. M. Peis Glaspyramide ist das moderne Eingangs-Wahrzeichen welches Museums?",
+      "choices": [
+        "British Museum",
+        "Louvre",
+        "Met (NYC)",
+        "Prado"
+      ],
+      "correctIndex": 1,
+      "sources": [
+        {
+          "label": "Wikipedia — Louvre Pyramid"
+        },
+        {
+          "label": "Louvre Museum architectural notes"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-f-silent-cool-wall",
+      "tier": "finale",
+      "topic": "grand-tour-top-gear",
+      "generation": "silent-generation",
+      "categoryTitle": "Finale · Power Lap",
+      "prompt": "Welche Zone liegt an Top Gears Cool Wall zwischen Cool und Uncool?",
+      "choices": [
+        "Subzero",
+        "Slightly Warm",
+        "Meh",
+        "Seriously Uncool"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Cool Wall"
+        },
+        {
+          "label": "BBC Top Gear Cool Wall segments"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-f-boomer-armstrong-quote",
+      "tier": "finale",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Finale · Mondzeile",
+      "prompt": "Vervollständigen Sie Neil Armstrongs Mondsatz: „That’s one small step for [a] man, one giant leap for ___.“",
+      "choices": [
+        "mankind",
+        "NASA",
+        "Texas",
+        "rockets"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 transcript"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-f-genx-stig-reveal",
+      "tier": "finale",
+      "topic": "grand-tour-top-gear",
+      "generation": "gen-x",
+      "categoryTitle": "Finale · Helm ab",
+      "prompt": "Welcher Rennfahrer wurde 2009 als damaliger BBC-Top-Gear-Stig enthüllt?",
+      "choices": [
+        "Damon Hill",
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Ben Collins"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — The Stig"
+        },
+        {
+          "label": "Contemporary news — Ben Collins identification 2009"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-f-geny-matrix-arch",
+      "tier": "finale",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Finale · Code Grün",
+      "prompt": "Welchen Titel trägt in der Lore von Matrix Reloaded / Revolutions das Programm, das die Matrix erschuf?",
+      "choices": [
+        "Nur Agent Smith",
+        "Nur The Oracle",
+        "The Architect",
+        "Morpheus"
+      ],
+      "correctIndex": 2,
+      "sources": [
+        {
+          "label": "Wikipedia — The Architect (The Matrix)"
+        },
+        {
+          "label": "Warner Bros. Matrix trilogy materials"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-f-genz-fortnite-mode",
+      "tier": "finale",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Finale · Sturmkreis",
+      "prompt": "Wie heißt der originale Free-to-Play-PvP-Modus von Fortnite, der den Boom prägte, üblicherweise?",
+      "choices": [
+        "Battle Royale",
+        "Nur Save the World",
+        "Nur Creative",
+        "Nur Rocket Racing"
+      ],
+      "correctIndex": 0,
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite Battle Royale"
+        },
+        {
+          "label": "Epic Games Fortnite mode history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "w39-f-alpha-minecraft-biome",
+      "tier": "finale",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Finale · Deep Dark",
+      "prompt": "Welcher feindliche Mob in Minecraft wird stark mit dem Deep Dark / Ancient Cities verbunden?",
+      "choices": [
+        "Eisengolem",
+        "Nur Creeper",
+        "Nur Ender Dragon",
+        "Warden"
+      ],
+      "correctIndex": 3,
+      "sources": [
+        {
+          "label": "Wikipedia — Minecraft"
+        },
+        {
+          "label": "Minecraft Wiki — Warden / Deep Dark"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-roar",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Jazzjahrzehnt",
+      "prompt": "Welchen Spitznamen tragen die 1920er-Jahre in den USA?",
+      "choices": [
+        "Die wilden Zwanziger",
+        "Das vergoldete Zeitalter",
+        "Die Depressionsjahre",
+        "Das Raumfahrtzeitalter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Bands waren laut. Der Name blieb.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Library of Congress — American history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — 1920s"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-vote",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Wahlurne",
+      "prompt": "Welche Ergänzung der US-Verfassung von 1920 erkennt das Wahlrecht der Frauen an?",
+      "choices": [
+        "Der 19. Zusatzartikel",
+        "Der 15. Zusatzartikel",
+        "Der 13. Zusatzartikel",
+        "Der 26. Zusatzartikel"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Schlange vor dem Wahllokal wurde absichtlich länger.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "National Archives — 19th Amendment"
+        },
+        {
+          "label": "Encyclopaedia Britannica — women's suffrage"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-silent-chamberlain",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "September 1939",
+      "prompt": "Wer war Premierminister des Vereinigten Königreichs, als Großbritannien 1939 Deutschland den Krieg erklärte?",
+      "choices": [
+        "Neville Chamberlain",
+        "Winston Churchill",
+        "Clement Attlee",
+        "Stanley Baldwin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Churchill übernahm den Stuhl im Jahr darauf.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "UK National Archives — 1939"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Neville Chamberlain"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-silent-assembly",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Erste Sitzung",
+      "prompt": "In welcher Stadt hielt die UNO 1946 ihre erste Generalversammlung ab?",
+      "choices": [
+        "London",
+        "New York",
+        "Genf",
+        "Paris"
+      ],
+      "correctIndex": 0,
+      "banterHint": "New York wurde ein paar Jahre später der Sitz.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "United Nations — General Assembly history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — United Nations"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-radio",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Am Fenster",
+      "prompt": "Warum saß das Radio am Fenster?",
+      "choices": [
+        "Es wollte eine Welle fangen",
+        "Es versteckte sich vor den Nachrichten",
+        "Es verlor die Skala",
+        "Es wollte Stille"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Lied kam trotzdem durch.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-liberty",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Kupfermantel",
+      "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hat die Freiheitsstatue heute?“ Der andere antwortet…",
+      "choices": [
+        "Grün",
+        "Grau",
+        "Gold, wenn die Fackel die Geschichte erzählt",
+        "Weiß, noch schüchtern von der Überfahrt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Kupfer hat sich nach Jahren Wetter verändert.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "dialogue",
+      "technique": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "National Park Service — Statue of Liberty"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Statue of Liberty"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-h-silent-empire",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Skyline",
+      "prompt": "Wann wurde das Empire State Building fertig?",
+      "choices": [
+        "1931",
+        "1925",
+        "1941",
+        "1950"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Spitze stand, bevor das Jahrzehnt um war.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Empire State Building"
+        },
+        {
+          "label": "New York City Landmarks — Empire State Building"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-silent-taxi",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Medaillon",
+      "prompt": "Ein Freund rät wild. Der andere beantwortet die gestellte Frage: „Welche Farbe hat ein klassisches New Yorker Taxi?“",
+      "choices": [
+        "Gelb",
+        "Grün",
+        "Schwarz, angezogen für einen sehr ernsten Auftrag",
+        "Weiß, beim Vorsprechen für den Eiswagen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das wilde Raten kann warten. Das Taxi ist das helle.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "straight-man",
+      "technique": "straight-man",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NYC Taxi and Limousine Commission"
+        },
+        {
+          "label": "Encyclopaedia Britannica — taxicab"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-boomer-gaye",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Soul-Stunde",
+      "prompt": "Wer veröffentlichte 1971 das Album What's Going On?",
+      "choices": [
+        "Stevie Wonder",
+        "Marvin Gaye",
+        "Otis Redding",
+        "Sam Cooke"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die Fragen auf der Platte gelten noch.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Motown / album notes — What's Going On"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Marvin Gaye"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-boomer-skylab",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Werkstatt im Orbit",
+      "prompt": "Wie hieß die erste Raumstation der NASA, gestartet 1973?",
+      "choices": [
+        "Mir",
+        "Saljut",
+        "Skylab",
+        "Freedom"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Eine Werkstatt mit sehr langem Arbeitsweg.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Skylab"
+        },
+        {
+          "label": "Encyclopaedia Britannica — space stations"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-sesame",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Straßenpremiere",
+      "prompt": "In welchem Jahr lief Sesame Street zum ersten Mal in den USA?",
+      "choices": [
+        "1969",
+        "1965",
+        "1974",
+        "1979"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Straße öffnete gegen Ende der Sechziger.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Sesame Workshop — history"
+        },
+        {
+          "label": "Library of Congress — television history"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-earthday",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Erster grüner Tag",
+      "prompt": "In welchem Jahr fand der erste Earth Day statt?",
+      "choices": [
+        "1962",
+        "1970",
+        "1977",
+        "1984"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Planet bekam ein Datum im Kalender.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Earth Day Network — history"
+        },
+        {
+          "label": "U.S. EPA — Earth Day"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-record",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Noch eine Runde",
+      "prompt": "Warum blieb die Schallplatte mit dem Spieler befreundet?",
+      "choices": [
+        "Sie kam immer wieder herum",
+        "Sie versteckte sich in der Hülle",
+        "Sie übersprang den Refrain",
+        "Sie verlor das Etikett"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das nächste Lied kam trotzdem dran.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "callback",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-boomer-submarine",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Unter dem Meer",
+      "prompt": "Welche Farbe hat das U-Boot im Beatles-Lied?",
+      "choices": [
+        "Gelb",
+        "Blau",
+        "Rot",
+        "Grün"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Titel verrät schon die Farbe.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — the Beatles"
+        },
+        {
+          "label": "Library of Congress — Yellow Submarine"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-gate",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Spannweite",
+      "prompt": "Welche Farbe hat die Golden Gate Bridge?",
+      "choices": [
+        "International Orange",
+        "Gold",
+        "Rot",
+        "Blau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Name klingt nach Gold. Die Farbe ist die andere.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Golden Gate Bridge Highway and Transportation District"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Golden Gate Bridge"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Das Feld",
+      "prompt": "Erster Tipp, falsch. Zweiter Tipp, falsch. Dann die echte Frage: „Wann begann das Woodstock-Festival?“",
+      "choices": [
+        "15. August 1969",
+        "15. August 1967",
+        "4. Juli, als das Feuerwerk dachte, es sei die Band",
+        "1. Juni, einen Monat zu früh und schon matschig"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Zwei falsche Daten, dann der Freitag der Eröffnung.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "rule-of-three",
+      "technique": "rule-of-three",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Bethel Woods Center for the Arts — Woodstock"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Woodstock"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-genx-gameboy",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Taschenbildschirm",
+      "prompt": "Welche Handheld-Konsole brachte Nintendo 1989 heraus?",
+      "choices": [
+        "Game Boy",
+        "Game Gear",
+        "Lynx",
+        "PSP"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Tetris reiste in vielen Taschen mit.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Nintendo — Game Boy history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — video game consoles"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genx-pdf",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Seite ohne Papier",
+      "prompt": "Wofür steht PDF?",
+      "choices": [
+        "Public Data File",
+        "Printed Document Form",
+        "Portable Document Format",
+        "Personal Disk Folder"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Seite hat reisen gelernt.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Adobe — PDF history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — document formats"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-ram",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Kurzes Gedächtnis",
+      "prompt": "Wofür steht RAM in einem Computer?",
+      "choices": [
+        "Read And Modify",
+        "Random Access Memory",
+        "Rapid Archive Module",
+        "Remote Access Mainframe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Schneller Speicher, und er vergisst ohne Strom.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Computer History Museum — memory"
+        },
+        {
+          "label": "Encyclopaedia Britannica — computer memory"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-cd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silberner Kreis",
+      "prompt": "Wofür steht CD beim Musikformat der frühen 1980er?",
+      "choices": [
+        "Compact Disc",
+        "Cassette Deck",
+        "Crystal Drive",
+        "Catalog Download"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Ein kleiner Spiegel, der ein Album hielt.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Philips / Sony — Compact Disc"
+        },
+        {
+          "label": "Encyclopaedia Britannica — compact disc"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genx-cassette",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Aufgedreht",
+      "prompt": "Warum war die Kassette schüchtern?",
+      "choices": [
+        "Sie war etwas aufgedreht",
+        "Sie verlor den Bleistift",
+        "Sie versteckte sich im Walkman",
+        "Sie übersprang den Refrain"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Seite B wurde trotzdem gehört.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-blinky",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Geisterdienst",
+      "prompt": "Welche Farbe hat Blinky, der Pac-Man-Geist?",
+      "choices": [
+        "Rot",
+        "Rosa",
+        "Cyan",
+        "Orange"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die anderen drei tragen den Rest.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Bandai Namco — Pac-Man"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Pac-Man"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genx-tennis",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Platz",
+      "prompt": "Welche Farbe hat ein Tennisball nach den Regeln?",
+      "choices": [
+        "Gelb",
+        "Weiß",
+        "Grün",
+        "Orange"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Ältere Bälle waren weiß. Die Regel ist jetzt der helle.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "International Tennis Federation — rules"
+        },
+        {
+          "label": "Encyclopaedia Britannica — tennis"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-web",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Erste Seite",
+      "prompt": "Die Geschichte scheint woanders hinzugehen. Die Frage bleibt: „Wann wurde das World Wide Web der Öffentlichkeit zugänglich?“",
+      "choices": [
+        "6. August 1991",
+        "6. August 1989",
+        "1. Januar, als der Kalender offiziell aussah",
+        "12. März, der Tag, an dem die Idee sich räusperte"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Idee ist älter. Die öffentliche Seite hat dieses Datum.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "misdirection",
+      "technique": "misdirection",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "CERN — World Wide Web"
+        },
+        {
+          "label": "Encyclopaedia Britannica — World Wide Web"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-geny-wiki",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Offenes Buch",
+      "prompt": "Welche Website, gestartet 2001, lässt Menschen Enzyklopädie-Artikel gemeinsam schreiben?",
+      "choices": [
+        "Wikipedia",
+        "MySpace",
+        "GeoCities",
+        "AltaVista"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Bearbeiten-Knopf ist die ganze Idee.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Wikimedia Foundation — Wikipedia history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Wikipedia"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-geny-sms",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Kurze Notiz",
+      "prompt": "Wofür steht SMS?",
+      "choices": [
+        "Simple Mail Switch",
+        "Short Message Service",
+        "Secure Media Stream",
+        "Standard Mobile Signal"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Einhundertsechzig Zeichen, und viele Verabredungen.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "GSM Association — SMS"
+        },
+        {
+          "label": "Encyclopaedia Britannica — text messaging"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-iphone",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Taschengerät",
+      "prompt": "Welche Firma brachte 2007 das erste iPhone heraus?",
+      "choices": [
+        "Apple",
+        "Nokia",
+        "BlackBerry",
+        "Motorola"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Tastatur wanderte aufs Glas.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Apple — iPhone announcement, 2007"
+        },
+        {
+          "label": "Encyclopaedia Britannica — smartphone"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-facebook",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Offene Anmeldung",
+      "prompt": "In welchem Jahr öffnete Facebook die Anmeldung über Schulen hinaus für alle ab 13?",
+      "choices": [
+        "2004",
+        "2005",
+        "2006",
+        "2008"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Das Campus-Tor fiel im September.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Meta — company history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Facebook"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-inbox",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Immer ruhig",
+      "prompt": "Warum blieb der Posteingang ruhig?",
+      "choices": [
+        "Er wusste, wie man Briefe behält",
+        "Er löschte den Morgen",
+        "Er versteckte das Passwort",
+        "Er verpasste den Senden-Knopf"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der ungelesene Stapel blieb höflich.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-ocean",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Schmucketui",
+      "prompt": "Welche Farbe hat das Herz des Ozeans im Film Titanic?",
+      "choices": [
+        "Blau",
+        "Grün",
+        "Rot",
+        "Gelb"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Kette behielt genau diesen Ton.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Paramount — Titanic (1997)"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Titanic, film"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-geny-potter",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Erstes Buch",
+      "prompt": "Wann erschien das erste Harry-Potter-Buch im Vereinigten Königreich?",
+      "choices": [
+        "1997",
+        "1995",
+        "1999",
+        "2001"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Schulanfang im Buch kommt nach dem Buch.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — J. K. Rowling"
+        },
+        {
+          "label": "British Library — Harry Potter"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-euro",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Scheine und Münzen",
+      "prompt": "Ein Wort kann zweierlei heißen. Die gewertete Bedeutung ist die schlichte: „Wann kamen Euro-Banknoten und Münzen in Umlauf?“",
+      "choices": [
+        "1. Januar 2002",
+        "1. Januar 1999",
+        "2004, als die Münzen jonglieren lernten",
+        "Juli, auf halbem Weg durch eine sehr lange Quittung"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Währung hatte einen Geburtstag vor dem Bargeld.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "wordplay",
+      "technique": "wordplay",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "European Central Bank — euro cash"
+        },
+        {
+          "label": "Encyclopaedia Britannica — euro"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-genz-gif",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Kleine Schleife",
+      "prompt": "Wofür steht GIF?",
+      "choices": [
+        "Graphics Interchange Format",
+        "Global Image File",
+        "Grouped Internet Frame",
+        "General Icon Folder"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Ein Bild, das nicht stillsitzen will.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "CompuServe — GIF specification"
+        },
+        {
+          "label": "Encyclopaedia Britannica — GIF"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-vr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Kopfhörerbrille",
+      "prompt": "Wofür steht VR bei einem Headset?",
+      "choices": [
+        "Video Relay",
+        "Virtual Reality",
+        "Visual Radio",
+        "Vector Render"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Raum bleibt. Die Sicht nicht.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IEEE — virtual reality overview"
+        },
+        {
+          "label": "Encyclopaedia Britannica — virtual reality"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genz-bytedance",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Kurzvideo",
+      "prompt": "Welche Firma besitzt TikTok?",
+      "choices": [
+        "Meta",
+        "Google",
+        "ByteDance",
+        "Snap"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die App ist der berühmte Teil. Die Firma ist leiser.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "ByteDance — company overview"
+        },
+        {
+          "label": "Encyclopaedia Britannica — TikTok"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genz-hashtag",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Raute",
+      "prompt": "Wie heißt das Zeichen #, wenn es Beiträge in sozialen Medien bündelt?",
+      "choices": [
+        "Ein Hashtag",
+        "Ein Sternchen",
+        "Ein Caret",
+        "Eine Tilde"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Ein Zeichen, und die Beiträge finden sich.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Oxford English Dictionary — hashtag"
+        },
+        {
+          "label": "Encyclopaedia Britannica — social media"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-emoji",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Ein Auge",
+      "prompt": "Warum zwinkerte das Emoji?",
+      "choices": [
+        "Es hatte etwas zu sagen",
+        "Es verlor das andere Auge",
+        "Es versteckte die Tastatur",
+        "Es verpasste den Chat"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Nachricht kam trotzdem freundlich an.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "misdirection",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-spotify",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Logo-Kreis",
+      "prompt": "Welche Farbe hat der Kreis im Spotify-Logo?",
+      "choices": [
+        "Grün",
+        "Blau",
+        "Rot",
+        "Gelb"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Schallwellen liegen darauf.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Spotify — brand"
+        },
+        {
+          "label": "Spotify Newsroom — company"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-instagram",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Erster Beitrag",
+      "prompt": "Wann wurde Instagram gestartet?",
+      "choices": [
+        "2010",
+        "2008",
+        "2012",
+        "2014"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die quadratischen Fotos kamen in dem Jahr.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Instagram"
+        },
+        {
+          "label": "Meta — Instagram"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-genz-bus",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Der Stopparm",
+      "prompt": "Dieselben Freunde wie zuvor. Sie kommen hierauf zurück: „Welche Farbe hat ein üblicher Schulbus in den USA?“",
+      "choices": [
+        "Gelb",
+        "Orange",
+        "Blau, wenn der Ozean die Strecke fährt",
+        "Weiß, nach einer sehr gründlichen Wäsche"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Stopparm ist der Hinweis. Kinder sehen diese Farbe vom Bordstein.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "callback",
+      "technique": "callback",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "National Highway Traffic Safety Administration — school bus"
+        },
+        {
+          "label": "Encyclopaedia Britannica — school bus"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-alpha-cat",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Quiz-Katze",
+      "prompt": "Wie nennt man eine Katze, die das Quiz moderiert?",
+      "choices": [
+        "Die Schnurr-Chefin",
+        "Eine Angsthase",
+        "Ein Nachmacher",
+        "Ein Nickerchen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Sie landet trotzdem auf den Pfoten.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-alpha-backpack",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Guter Tag",
+      "prompt": "Warum sah der Rucksack stolz aus?",
+      "choices": [
+        "Er trug einen guten Tag",
+        "Er aß die Hausaufgaben",
+        "Er verpasste den Bus",
+        "Er versteckte die Karte"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Jedes Buch bekam eine Mitfahrgelegenheit.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "misdirection",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-alpha-pencil",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Mannschaft",
+      "prompt": "Warum trat der Bleistift der Mannschaft bei?",
+      "choices": [
+        "Er konnte ein Publikum anziehen",
+        "Er rollte weg",
+        "Er versteckte sich im Etui",
+        "Er verlor seine Kappe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Radiergummi hielt ihm den Rücken frei.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-alpha-bookmark",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Immer noch da",
+      "prompt": "Warum blieb das Lesezeichen in der Geschichte ruhig?",
+      "choices": [
+        "Es behielt immer seinen Platz",
+        "Es zerriss die Seite",
+        "Es übersprang das Ende",
+        "Es versteckte den Titel"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Kapitel für Kapitel, immer freundlich.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "callback",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-alpha-frog",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Offenes Mikro",
+      "prompt": "Welche Farbe hat ein Frosch am Open-Mic-Abend?",
+      "choices": [
+        "Grün",
+        "Lila",
+        "Orange",
+        "Silber"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Raum blieb quakend freundlich.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "misdirection",
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-alpha-planets",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Heimat-System",
+      "prompt": "Wie viele Planeten hat unser Sonnensystem?",
+      "choices": [
+        "8",
+        "9",
+        "7",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Reihe wurde 2006 kürzer und blieb freundlich.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — solar system"
+        },
+        {
+          "label": "International Astronomical Union — planets"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-alpha-banana",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Snack",
+      "prompt": "Die Geschichte wird größer. Die Frage bleibt gleich groß: „Welche Farbe hat die Schale einer reifen Banane?“",
+      "choices": [
+        "Gelb",
+        "Grün",
+        "Braun, einen Tag nach der Lunchbox",
+        "Rot, falls es für die Apfelschale vorgesprochen hat"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Geschichte darf wachsen. Die Schale bleibt die helle.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "escalation",
+      "technique": "escalation",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — banana"
+        },
+        {
+          "label": "Royal Botanic Gardens, Kew — banana"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-multi-guitar",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Sechs Saiten",
+      "prompt": "Wie viele Saiten hat eine gewöhnliche Gitarre?",
+      "choices": [
+        "Vier",
+        "Sechs",
+        "Acht",
+        "Zwölf"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Zwölfsaiter sind die lauteren Verwandten.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — guitar"
+        },
+        {
+          "label": "Metropolitan Museum — string instruments"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-multi-boil",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Kessel",
+      "prompt": "Wie hoch ist der Siedepunkt von Wasser auf Meereshöhe, in Celsius?",
+      "choices": [
+        "100",
+        "90",
+        "80",
+        "120"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Auf dem Berg ist der Kessel etwas früher fertig.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NIST — water properties"
+        },
+        {
+          "label": "Encyclopaedia Britannica — boiling point"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-photo",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Grüne Arbeit",
+      "prompt": "Welches Gas nehmen Pflanzen bei der Fotosynthese auf?",
+      "choices": [
+        "Sauerstoff",
+        "Stickstoff",
+        "Kohlenstoffdioxid",
+        "Helium"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Sauerstoff geben sie dem Raum zurück.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — photosynthesis"
+        },
+        {
+          "label": "NASA Earth Observatory — carbon cycle"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-pitch",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Auf dem Platz",
+      "prompt": "Wie viele Spieler einer Fußballmannschaft stehen gleichzeitig auf dem Feld?",
+      "choices": [
+        "9",
+        "11",
+        "13",
+        "15"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Torwart zählt mit.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "FIFA — laws of the game"
+        },
+        {
+          "label": "Encyclopaedia Britannica — football"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-compass",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Kurs Nord",
+      "prompt": "Warum trat der Kompass dem Quiz bei?",
+      "choices": [
+        "Er wollte sich orientieren",
+        "Er versteckte die Karte",
+        "Er verlor die Nadel",
+        "Er übersprang den Weg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Norden blieb eine freundliche Richtung.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "misdirection",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-eclipse",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Nachtton",
+      "prompt": "Welche Farbe hat der Mond während einer totalen Mondfinsternis?",
+      "choices": [
+        "Rot",
+        "Blau",
+        "Grün",
+        "Weiß"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Schatten der Erde leiht diesen Ton.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — lunar eclipse"
+        },
+        {
+          "label": "Encyclopaedia Britannica — eclipse"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-multi-titanic",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Unterwegs",
+      "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Wann ist die Titanic gesunken?“ Der andere antwortet…",
+      "choices": [
+        "15. April 1912",
+        "15. April 1911",
+        "7. Mai, wenn die Fortsetzung anlegt",
+        "1. April (Aprilscherz)"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die andere Person hat die gestellte Frage beantwortet.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "dialogue",
+      "technique": "dialogue",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Titanic"
+        },
+        {
+          "label": "National Maritime Museum — Titanic"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-h-multi-titanic-hull",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Gleicher Weg",
+      "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hatte der Rumpf der Titanic?“ Der andere antwortet…",
+      "choices": [
+        "Schwarz",
+        "Weiß",
+        "Rot, wenn der Schornstein die Geschichte erzählt",
+        "Grün, nach einem langen Aufenthalt im Hafen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Gleicher Weg. Andere Struktur. Der Rumpf war nicht das Datum.",
+      "funny": true,
+      "humorous": true,
+      "renegade": true,
+      "injection": "dialogue",
+      "technique": "dialogue",
+      "structure": "colour",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Titanic"
+        },
+        {
+          "label": "National Maritime Museum — Titanic"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-multi-stop",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Achteck",
+      "prompt": "Wie viele Seiten hat ein übliches Stoppschild?",
+      "choices": [
+        "8",
+        "6",
+        "4",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Zähl die flachen Kanten, nicht den Pfosten.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Federal Highway Administration — stop sign"
+        },
+        {
+          "label": "Encyclopaedia Britannica — traffic sign"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-e-multi-sky",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Über uns",
+      "prompt": "Ein kurzer Schritt zur Seite, dann zurück zur Frage: „Welche Farbe hat ein klarer Himmel am Tag?“",
+      "choices": [
+        "Blau",
+        "Grün, falls der Rasen befördert wurde",
+        "Rot, aufgehoben für die Abendschicht",
+        "Schwarz"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Zurück in die Szene. Die Antwort ist die gewöhnliche.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "aside",
+      "technique": "aside",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Earth's atmosphere"
+        },
+        {
+          "label": "Encyclopaedia Britannica — sky"
+        }
+      ],
+      "status": "pending",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "ga-joke-clock",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Zeiger",
+      "prompt": "Was hat Zeiger, kann aber nicht klatschen?",
+      "choices": [
+        "Eine Uhr",
+        "Ein Handschuh",
+        "Ein Oktopus",
+        "Eine Statue"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Winken kann sie trotzdem.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-bear",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Süße Zähne",
+      "prompt": "Wie nennt man einen Bären ohne Zähne?",
+      "choices": [
+        "Einen Eisbären",
+        "Einen Teddy",
+        "Einen Gummibären",
+        "Einen Koala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Immer noch klebrig. Viel freundlicher.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-math",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Zu viele Aufgaben",
+      "prompt": "Warum ist das Mathebuch traurig?",
+      "choices": [
+        "Es hat zu viele Probleme",
+        "Es mag keine Zahlen",
+        "Es ist ein Comic",
+        "Es hat den Umschlag verloren"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Lesezeichen hat es umarmt.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-ocean",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Strandgruß",
+      "prompt": "Was sagt das Meer zum Strand?",
+      "choices": [
+        "Nichts, es winkt nur",
+        "Bring ein Handtuch",
+        "Ich bin salzig",
+        "Petri Heil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Strand hat zurückgewinkt.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-flamingo",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Rosa Parade",
+      "prompt": "Wie nennt man eine Gruppe Flamingos?",
+      "choices": [
+        "Eine Flamboyance",
+        "Eine Herde",
+        "Ein Rudel",
+        "Einen Schwarm nur"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Sie kamen passend angezogen.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-octopus",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Extra-Herz",
+      "prompt": "Wie viele Herzen hat ein Oktopus?",
+      "choices": [
+        "Eins",
+        "Zwei",
+        "Drei",
+        "Acht"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Acht Arme, drei Herzen, null Eile.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-scarecrow",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Auf dem Feld",
+      "prompt": "Warum hat die Vogelscheuche einen Preis bekommen?",
+      "choices": [
+        "Sie war die Beste auf ihrem Feld",
+        "Sie erzählte eine Geistergeschichte",
+        "Sie aß den Mais",
+        "Sie schlief den ganzen Tag"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Krähen gründeten einen Fanclub.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    },
+    {
+      "id": "ga-joke-homework",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Kinderspiel",
+      "prompt": "Warum hat die Schülerin die Hausaufgaben gegessen?",
+      "choices": [
+        "Die Lehrerin sagte, das sei ein Kinderspiel",
+        "Es war Mittag",
+        "Der Hund war satt",
+        "Es war ein Brot"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Nachtisch gab Extra-Punkte.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "live"
+    }
+  ]
+}

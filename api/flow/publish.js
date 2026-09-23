@@ -22,14 +22,11 @@ export default async function handler(req, res) {
   if (!pack) return json(res, 404, { error: "no week pack" });
   const overlaid = applyReviewOverlay(pack, locale);
   const { meta, exported } = publishToQuestions(overlaid, locale);
-  // Monthly archive snapshots EN (source of truth). Locale packs stay beside weekly/.
-  const archive =
-    locale === "en"
-      ? archivePublishedWeek(overlaid, {
-          publishedAt: meta.publishedAt,
-          counts: meta.counts,
-        })
-      : null;
+  const archive = archivePublishedWeek(overlaid, {
+    publishedAt: meta.publishedAt,
+    counts: meta.counts,
+    locale,
+  });
   return json(res, 200, {
     ok: true,
     locale,
@@ -43,7 +40,7 @@ export default async function handler(req, res) {
           summary: archive.summary,
         }
       : {
-          note: "FR/DE publish is in-memory on this instance; durable locale files come from scripts/publish-week.mjs",
+          note: "Durable archive files come from scripts/publish-week.mjs",
         },
     note: meta.wroteToDisk
       ? "Wrote questions on this instance. Commit + redeploy for durable Hobby hosting."
