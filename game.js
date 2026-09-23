@@ -1961,6 +1961,17 @@ function footHTML() {
   return `<div class="buzzbar foot">${flow}</div>`;
 }
 
+/** Header actions, ranked: Rules, then Dojo, then Directions. Flow stays in the footer only. */
+function headerLinks({ dojo = false, directions = false } = {}) {
+  const dojoLink = dojo && !(isTvDisplay() && forcedDisplay)
+    ? `<a class="word" href="${dojoHref()}">${tt("dojo")}</a>`
+    : "";
+  const dirLink = directions
+    ? `<a class="word" href="./directions.html">${tt("directions")}</a>`
+    : "";
+  return `<button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>${dojoLink}${dirLink}`;
+}
+
 function joinQrChip(size = 120) {
   if (!state.room || !isTvDisplay()) return "";
   const open = state.qrOpen;
@@ -1991,6 +2002,7 @@ function directionsHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale, { idPrefix: "dirlang" })}
       <a class="word" href="./index.html">${tt("lobby")}</a>
+      ${headerLinks()}
     </div>
     <div class="lobby">
       <div class="lobby-copy">
@@ -2055,6 +2067,7 @@ function directionsHTML() {
     </div>
     <div></div>
     ${footHTML()}
+    ${rulesHTML()}
   `;
 }
 
@@ -2068,7 +2081,7 @@ function dojoPageHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       <a class="word" href="/">${tt("lobby")}</a>
-      <a class="word" href="${FLOW_URL}">Flow</a>
+      ${headerLinks()}
     </div>
     <div class="dojo-page">
       <div class="dojo-page-scroll">
@@ -2078,6 +2091,7 @@ function dojoPageHTML() {
     </div>
     <div></div>
     ${footHTML()}
+    ${rulesHTML()}
   `;
 }
 
@@ -2086,6 +2100,7 @@ function bindDojoPage() {
     b.onclick = () => { void setLocale(b.dataset.locale); };
   });
   bindDojoSurface();
+  bindRules();
 }
 
 function bindDirections() {
@@ -2099,6 +2114,7 @@ function bindDirections() {
       paint(true);
     };
   });
+  bindRules();
 }
 
 let dojoTick = null;
@@ -2762,8 +2778,7 @@ function entryHTML() {
       <div class="logo">Fast Answer!<small>${tt("tagline")}</small></div>
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
-      <a class="word" href="${dojoHref()}">${tt("dojo")}</a>
-      <a class="word" href="${FLOW_URL}">Flow</a>
+      ${headerLinks({ dojo: true })}
     </div>
     <div class="entry-stage">
       <img class="entry-title" src="${TITLE_3D}" alt="Fast Answer!"/>
@@ -2787,6 +2802,7 @@ function entryHTML() {
     </div>
     <div></div>
     ${footHTML()}
+    ${rulesHTML()}
   `;
 }
 
@@ -2835,6 +2851,7 @@ function bindEntry() {
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
   bindForgotPassword();
+  bindRules();
 }
 
 function syncEntryDraft() {
@@ -2897,10 +2914,7 @@ function lobbyHTML() {
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
-      ${tv && forcedDisplay ? "" : `<a class="word" href="${dojoHref()}">${tt("dojo")}</a>`}
-      ${tv && forcedDisplay ? "" : `<a class="word" href="${FLOW_URL}">Flow</a>`}
-      <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
-      <a class="word" href="./directions.html">${tt("directions")}</a>
+      ${headerLinks({ dojo: true, directions: true })}
     </div>
     <div class="lobby">
       <div class="lobby-copy">
@@ -3034,7 +3048,7 @@ function playHTML() {
       <div class="top">
         <div class="logo">Fast Answer!<small>${tier}${n}</small></div>
         <div class="grow"></div>
-        <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
+        <button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>
         ${canLeaveNow() ? `<button class="word" id="quit" type="button">${leaveLabel}</button>` : ""}
       </div>
       <div class="phone-lock">
@@ -3065,7 +3079,7 @@ function playHTML() {
       <div class="logo">Fast Answer!<small>${tier}${n}</small></div>
       <div class="grow"></div>
       ${readyPhase || endPhase ? "" : scoreboard()}
-      <button class="word" id="rulesBtn" type="button">${tt("rules")}</button>
+      <button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>
       ${leaveTop}
     </div>
     <div class="play">

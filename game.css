@@ -44,8 +44,9 @@ button:disabled{cursor:not-allowed}
   position:relative;z-index:4;
   display:flex;align-items:center;gap:var(--space-2);
   padding:calc(6px + env(safe-area-inset-top)) 12px 6px;
-  min-height:44px;flex-shrink:0;flex-wrap:nowrap;
+  min-height:44px;flex-shrink:0;flex-wrap:wrap;
 }
+.top .rules-link{flex-shrink:0;font-weight:700;color:var(--fg)}
 .chip.scores{max-width:46%;overflow:hidden;text-overflow:ellipsis}
 .logo{font-family:var(--font-display);font-weight:600;font-size:18px;letter-spacing:-.02em;line-height:1.05;white-space:nowrap}
 .logo small{display:block;font-family:var(--font-body);font-weight:500;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
