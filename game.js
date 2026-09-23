@@ -2718,8 +2718,8 @@ function joinQrChip(size = 120) {
     <button type="button" class="qr-toggle" id="qrToggle" aria-expanded="${open ? "true" : "false"}" title="${escapeHtml(state.room)}">
       ${open ? tt("hideJoin") : tt("joinChip", escapeHtml(state.room))}
     </button>
-    ${open ? `<img class="qr corner" alt="Join" src="https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${url}"/>
-    <p class="qr-code">Room <b>${escapeHtml(state.room)}</b></p>` : ""}
+    ${open ? `<img class="qr corner" alt="${escapeHtml(tt("qrJoinAlt"))}" src="https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${url}"/>
+    <p class="qr-code">${tt("roomLabel", `<b>${escapeHtml(state.room)}</b>`)}</p>` : ""}
   </div>`;
 }
 
@@ -2750,28 +2750,28 @@ function directionsHTML() {
           ${dirAcc("lang", tt("dirLangTitle"), "<small>EN · FR · DE</small>", `
             <p class="dir-copy">${tt("dirLangBody")}</p>
           `)}
-          ${dirAcc("tv", "TV / AirPlay / Cast", "<small>Web page</small>", `
-            <p class="dir-copy">Fast Answer is a <b>web page</b>. The “TV” is whichever screen opens the URL — smart TV browser, Apple TV (Safari or AirPlay mirror), Chromecast “Cast tab”, HDMI from a laptop, Fire TV Silk, a projector, etc. There is no special Fast Answer AirPlay API.</p>
-            <p class="dir-copy"><b>Recommended (Silk / Fire TV).</b> Open <code>https://fast-answer-seven.vercel.app</code> (or <code>?tv=1</code>) on the set. The TV <b>creates and owns</b> the room automatically. A small <b>Join</b> chip sits in the corner — expand it for the QR and code. Phones scan and join that room; game state follows the TV.</p>
+          ${dirAcc("tv", tt("dirTvTitle"), `<small>${tt("dirTvExtra")}</small>`, `
+            <p class="dir-copy">${tt("dirTvLead")}</p>
+            <p class="dir-copy">${tt("dirTvSilk")}</p>
             <ol class="dir-ol">
-              <li><b>Best — TV browser.</b> Open the URL on the set (Samsung, LG, Fire TV Silk, Apple TV Safari if available). Silk / Fire TV and <code>?tv=1</code> turn <b>On Screen</b> on and open a room. That tab owns Jeremy, questions, scores — no buzzer. Flow is hidden on the TV.</li>
-              <li><b>Corner QR.</b> On the TV, tap the discreet Join chip to expand the QR. Phones scan or open <code>/?role=pad&amp;room=CODE</code>. Pads are buzzers only.</li>
-              <li><b>Ready → start.</b> Once everyone has joined, each phone presses <b>Buzz</b> to ready up. When every pad has buzzed in, the show starts on the TV.</li>
-              <li><b>Join only if room exists.</b> <b>Join TV / Join as buzzer</b> is rejected when the room code is not open yet — open the set (or Cast TV Silk link) first, then join.</li>
-              <li><b>AirPlay / Cast / HDMI.</b> Mirroring or casting a tab still works, but the set’s own browser is best so the TV tab owns the room. Phones never receive the TV picture.</li>
+              <li>${tt("dirTvBest")}</li>
+              <li>${tt("dirTvQr")}</li>
+              <li>${tt("dirTvReady")}</li>
+              <li>${tt("dirTvJoin")}</li>
+              <li>${tt("dirTvAir")}</li>
             </ol>
           `)}
-          ${dirAcc("screen", tt("dirScreenTitle"), "<small>TV + pads</small>", `
+          ${dirAcc("screen", tt("dirScreenTitle"), `<small>${tt("dirScreenExtra")}</small>`, `
             <p class="dir-copy"><b>${tt("dirOff")}</b></p>
             <p class="dir-copy"><b>${tt("dirOn")}</b></p>
             <p class="dir-copy">${tt("dirOnFeatures")}</p>
             <p class="dir-copy">${tt("dirDojoExtra")}</p>
           `)}
-          ${dirAcc("room", "Multiplayer", "<small>2–12</small>", `
-            <p class="dir-copy">Room holds <b>2 to 12</b> seats. The TV creates the room. Empty seats fill with celebrity first names — Oprah, Elton, Serena, Usain, Adele, Idris, Keanu, Zendaya, Rihanna, Denzel, Meryl — each with its own skill and buzz timing.</p>
-            <p class="dir-copy"><b>TV owns the room.</b> Open the site on the set (or <code>?tv=1</code>). Expand the corner Join chip for QR/code. Phones open <code>/?role=pad&amp;room=CODE</code> and follow the TV. Pads <b>replace bots</b> as they arrive.</p>
-            <p class="dir-copy"><b>All-buzz start.</b> When seats are set, each pad presses Buzz to ready. The show starts when every joined pad has buzzed in. Same-origin tabs also sync over BroadcastChannel; <code>api/rooms.js</code> syncs TV + phones.</p>
-            <p class="dir-copy"><b>Lobby modes (phone).</b> <b>Host</b> = local / Off Screen or optional On Screen on this device. <b>Cast TV</b> = make a Silk <code>?tv=1&amp;room=</code> link for the set. <b>Join TV</b> = pad into an existing TV room only.</p>
+          ${dirAcc("room", tt("dirRoomTitle"), "<small>2–12</small>", `
+            <p class="dir-copy">${tt("dirRoomSeats")}</p>
+            <p class="dir-copy">${tt("dirRoomOwns")}</p>
+            <p class="dir-copy">${tt("dirRoomStart")}</p>
+            <p class="dir-copy">${tt("dirRoomModes")}</p>
           `)}
           ${dirAcc("points", tt("dirPointsTitle"), "<small>37Q</small>", `
             <p class="dir-copy">${tt("dirPointsBody")}</p>
@@ -3496,7 +3496,7 @@ function roomBody() {
           <input id="silkUrl" type="text" readonly value="${escapeHtml(silk)}"/>
           <button class="ghost" id="copySilk" type="button">${tt("copy")}</button>
         </div>
-        <img class="qr" alt="Open on TV" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(silk)}"/>
+        <img class="qr" alt="${escapeHtml(tt("qrOpenAlt"))}" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(silk)}"/>
         <p class="meta">${escapeHtml(tt("padJoinMeta", state.room, humans, bots))}</p>
       ` : `<p class="meta">${tt("makeTvLinkMeta")}</p>`}
       <button class="primary" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
@@ -3547,7 +3547,7 @@ function roomBody() {
           <input id="silkUrl" type="text" readonly value="${escapeHtml(silk || tvSilkUrl(state.room))}"/>
           <button class="ghost" id="copySilk" type="button">${tt("copy")}</button>
         </div>
-        <img class="qr" alt="Join" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(shareUrl())}"/>
+        <img class="qr" alt="${escapeHtml(tt("qrJoinAlt"))}" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(shareUrl())}"/>
       ` : ""}
       <p class="meta">${escapeHtml(tt("humansBots", humans, bots))}</p>
       ${isTvDisplay() || state.onScreen ? `

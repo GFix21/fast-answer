@@ -22,6 +22,16 @@ assert.equal(t("fr", "tierHard"), "Dur");
 assert.equal(t("fr-CA", "tierHard"), "Dur");
 assert.notEqual(t("fr", "tierHard"), t("fr", "tierDifficult"));
 assert.equal(t("de", "win"), "Gewinn");
+for (const key of ["dirTvLead", "dirTvAir", "dirRoomSeats", "dirRoomModes"]) {
+  assert.notEqual(t("fr", key), t("en", key));
+  assert.equal(t("fr-CA", key), t("fr", key));
+  assert.notEqual(t("de", key), t("en", key));
+}
+assert.match(t("fr", "dirTvLead"), /page web/);
+assert.match(t("de", "dirTvLead"), /Webseite/);
+assert.match(t("de", "dirScreenTitle"), /Bildschirm/);
+assert.doesNotMatch(t("de", "onScreen"), /On Screen/);
+assert.doesNotMatch(t("de", "offScreen"), /Off Screen/);
 
 assert.notEqual(hashProfilePassword("same", "salt-a"), hashProfilePassword("same", "salt-b"));
 assert.equal(hashProfilePassword("legacy"), hashProfilePassword("legacy"));
