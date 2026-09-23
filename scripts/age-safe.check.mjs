@@ -7,7 +7,8 @@ import {
   PROFILE_FLOOR,
 } from "../lib/age-gate.js";
 import { reviewForChildren } from "../lib/safeguard.js";
-import { scoreJoke, weeklyComedyReview, isoWeek } from "../lib/crackd-kerr.js";
+import { COMEDY_BOT, scoreJoke, weeklyComedyReview, isoWeek } from "../q-and-a/crackd-kerr.js";
+import { comedyReview, questionsForComedy } from "../lib/week-store.js";
 import { generationForYears } from "../lib/generation-packs.js";
 
 assert.equal(PROFILE_FLOOR, 13);
@@ -74,7 +75,12 @@ for (const q of bank.questions) {
 const week = isoWeek(new Date("2026-09-23T12:00:00Z"));
 assert.equal(week, "2026-W39");
 const review = weeklyComedyReview(bank.questions, { week, now: "2026-09-23T12:00:00.000Z" });
-assert.equal(review.bot, "Crack'd Kerr");
+assert.equal(COMEDY_BOT, "Crack'd Kerr");
+assert.equal(review.bot, COMEDY_BOT);
+const qanda = comedyReview("en", { questions: [] }, "2026-09-23T12:00:00.000Z");
+assert.equal(qanda.bot, COMEDY_BOT);
+assert.ok(questionsForComedy("en", { questions: [] }).some((q) => q.id === "ga-joke-clock"));
+assert.ok(qanda.viral.some((q) => q.id === "ga-joke-clock"));
 assert.equal(review.blocked.length, 0);
 assert.equal(review.weak.length, 0);
 assert.ok(review.fresh.length >= 3);

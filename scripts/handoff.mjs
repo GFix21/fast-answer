@@ -31,7 +31,7 @@ import {
 } from "../q-and-a/map.js";
 import { buildGenerationPacks, packSummary, PACK_TARGET } from "../lib/generation-packs.js";
 import { reviewForChildren } from "../lib/safeguard.js";
-import { isoWeek, weeklyComedyReview } from "../lib/crackd-kerr.js";
+import { isoWeek, weeklyComedyReview } from "../q-and-a/crackd-kerr.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const QANDA = path.resolve(ROOT, "../Q-and-A/banks");
