@@ -1629,8 +1629,8 @@ function clockText() {
     const t = playerById(state.maps[state.youId]);
     const left = mapUsesLeft(state.mapUses?.[state.youId]);
     return t
-      ? `MAP ${t.name} · $${stakeOf(q)} · ${left} left · buzz in ${state.readLeft}s`
-      : `Read ${state.readLeft}s — tap a rival to MAP (${left} left), or wait and buzz`;
+      ? tt("readMap", t.name, stakeOf(q), left, state.readLeft)
+      : tt("readOpen", state.readLeft, left);
   }
   if (state.phase === "buzz") {
     return state.maps[state.youId] ? tt("buzzMap") : tt("buzzNow");
