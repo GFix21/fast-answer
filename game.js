@@ -12,6 +12,13 @@ import {
 import { dropoutEndsGame, nextQuestionAllowsJoin } from "./lib/seat-rules.js";
 import { hashProfilePassword } from "./lib/password.js";
 import { spreadByGeneration } from "./lib/generation-deal.js";
+import {
+  buildDeviceCohort,
+  bankSignature,
+  placementSlice,
+  sittingsRemaining,
+  PLACEMENT_SITTINGS,
+} from "./lib/device-cohort.js";
 
 const STUDIOS = [
   "./studio/studio-01-contestant-pov.jpg",
@@ -224,11 +231,22 @@ const state = {
   topicCatalog: [],
   topicsOn: loadStoredTopicIds(),
   dealFresh: false,
+  /** Two show decks plus placement questions kept on this device. */
+  cohort: null,
+  cohortShow: 0,
+  placementPool: null,
+  /** Shared “questions are being refreshed” banner. phase: loading | ready. */
+  refreshNotice: null,
+  refreshNoticeAt: 0,
+  refreshAppliedAt: 0,
+  refreshHoldUntil: 0,
 };
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
 let poll = null;
 let pollN = 0;
+let refreshInFlight = false;
+let refreshHoldTimer = null;
 
 function tt(key, ...args) {
   return t(state.locale, key, ...args);
@@ -259,6 +277,7 @@ async function loadBanksForLocale(locale = state.locale, { bust = false } = {}) 
     state.topicsOn = state.topicCatalog.filter((t) => t.defaultOn !== false).map((t) => t.id);
   }
   document.documentElement.lang = loc;
+  ensureCohort();
 }
 
 async function setLocale(next) {
@@ -606,28 +625,194 @@ function deal(all) {
     ...take("extreme", DEAL.extreme),
   ];
 }
-async function refreshQuestionSet() {
-  try {
-    await loadBanksForLocale(state.locale, { bust: true });
-  } catch { /* keep the bank already in memory */ }
-  if (state.qs && state.qs.length) rememberDealtIds(state.qs.map((q) => q.id));
-  state.qs = deal(state.questions);
+function refreshPlayerName() {
+  return String(state.profile?.displayName || state.name || "TV").trim().slice(0, 40) || "TV";
+}
+function armRefreshHold() {
+  if (state.refreshHoldUntil && Date.now() < state.refreshHoldUntil) return;
+  state.refreshHoldUntil = Date.now() + 1600;
+  if (refreshHoldTimer) clearTimeout(refreshHoldTimer);
+  refreshHoldTimer = setTimeout(() => paint(true), 1650);
+}
+function broadcastRefresh() {
+  if (!bc || !state.refreshNotice) return;
+  bc.postMessage({
+    type: "refresh-notice",
+    notice: state.refreshNotice,
+    refreshQs: state.refreshNotice.phase === "ready" ? (state.qs || []) : [],
+  });
+}
+function adoptRefreshQuestions(questions, at) {
+  if (!Array.isArray(questions) || !questions.length) return false;
+  if (state.phase !== "lobby" && state.phase !== "ready") return false;
+  if (state.refreshAppliedAt === at) return false;
+  if (state.qs?.length) rememberDealtIds(state.qs.map((q) => q.id));
+  state.qs = questions;
   state.dealFresh = true;
   state.dealTopicKey = topicDealKey();
+  state.refreshAppliedAt = at;
+  return true;
+}
+/** Apply a room refresh notice. Contestants in the lobby pick up the new set. */
+function applyRefreshFromRoom(room) {
+  const notice = room?.notice;
+  if (!notice || notice.kind !== "refresh") return false;
+  const at = Number(notice.at) || 0;
+  const prevAt = Number(state.refreshNoticeAt) || 0;
+  const phase = notice.phase === "ready" ? "ready" : "loading";
+  if (at && at < prevAt) return false;
+  if (at === prevAt && state.refreshNotice?.phase === phase) {
+    if (phase !== "ready" || state.refreshAppliedAt === at) return false;
+  }
+  state.refreshNotice = {
+    kind: "refresh",
+    by: String(notice.by || "Player").slice(0, 40),
+    phase,
+    at,
+  };
+  state.refreshNoticeAt = at;
+  armRefreshHold();
+  if (phase === "ready") adoptRefreshQuestions(room.refreshQs, at);
+  return true;
+}
+const COHORT_KEY = "fa-cohort-v1";
+function readStoredCohort(locale) {
+  try {
+    const all = JSON.parse(localStorage.getItem(COHORT_KEY) || "{}");
+    const row = all?.[locale];
+    return row && row.v === 1 ? row : null;
+  } catch {
+    return null;
+  }
+}
+function writeStoredCohort(cohort) {
+  if (!cohort?.locale) return;
+  let all = {};
+  try { all = JSON.parse(localStorage.getItem(COHORT_KEY) || "{}") || {}; } catch { all = {}; }
+  all[cohort.locale] = cohort;
+  try { localStorage.setItem(COHORT_KEY, JSON.stringify(all)); } catch { /* quota */ }
+}
+function cohortUsable(cohort, signature) {
+  if (!cohort || cohort.locale !== state.locale) return false;
+  if (cohort.signature !== signature) return false;
+  if (!(Date.parse(cohort.renewsAt) > Date.now())) return false;
+  return Array.isArray(cohort.shows)
+    && cohort.shows.length >= 2
+    && cohort.shows[0]?.length >= ROUND
+    && cohort.shows[1]?.length >= ROUND;
+}
+function ensureCohort() {
+  if (!state.questions?.length) return state.cohort;
+  const signature = bankSignature(state.questions, state.placementQs);
+  const saved = state.cohort?.locale === state.locale ? state.cohort : readStoredCohort(state.locale);
+  if (cohortUsable(saved, signature)) {
+    state.cohort = saved;
+    return saved;
+  }
+  const built = buildDeviceCohort(state.questions, state.placementQs, state.locale);
+  built.shows = built.shows.map((deck) => deck.map(shuffleQuestionChoices));
+  built.placement = (built.placement || []).map(shuffleQuestionChoices);
+  state.cohort = built;
+  state.cohortShow = 0;
+  writeStoredCohort(built);
+  return built;
+}
+function currentShowDeck() {
+  const cohort = ensureCohort();
+  const i = state.cohortShow === 1 ? 1 : 0;
+  const deck = cohort?.shows?.[i];
+  if (deck?.length) return deck.map((q) => ({ ...q, choices: [...q.choices] }));
+  return deal(state.questions);
+}
+function flipShowDeck() {
+  const cohort = ensureCohort();
+  state.cohortShow = state.cohortShow === 1 ? 0 : 1;
+  const deck = cohort?.shows?.[state.cohortShow];
+  if (!deck?.length) return deal(state.questions);
+  return deck.map((q) => ({ ...q, choices: [...q.choices] }));
+}
+function placementAttemptsLeft() {
+  const cohort = state.cohort || ensureCohort();
+  return sittingsRemaining(
+    state.profile?.placementSittingsUsed,
+    cohort?.builtAt,
+    state.profile?.cohortBuiltAt,
+  );
+}
+function beginPlacementSitting() {
+  const cohort = ensureCohort();
+  const renewsAt = cohort?.renewsAt || addMonthsIso(new Date().toISOString(), 3);
+  const left = placementAttemptsLeft();
+  if (left <= 0) return { blocked: true, renewsAt };
+  const usedSame = state.profile?.cohortBuiltAt === cohort?.builtAt
+    ? (Number(state.profile?.placementSittingsUsed) || 0)
+    : 0;
+  const pool = placementSlice(cohort?.placement?.length ? cohort.placement : state.placementQs, usedSame);
+  saveProfile({
+    cohortBuiltAt: cohort?.builtAt || "",
+    placementSittingsUsed: usedSame + 1,
+  });
+  state.placementPool = pool;
+  return { blocked: false, renewsAt, pool, left: left - 1 };
+}
+async function refreshQuestionSet() {
+  if (refreshInFlight) return;
+  refreshInFlight = true;
+  const by = refreshPlayerName();
+  const deck = flipShowDeck();
+  if (state.qs?.length) rememberDealtIds(state.qs.map((q) => q.id));
+  state.qs = deck;
+  state.dealFresh = true;
+  state.dealTopicKey = topicDealKey();
+  const at = Date.now();
+  state.refreshNotice = { kind: "refresh", by, phase: "ready", at };
+  state.refreshNoticeAt = at;
+  state.refreshAppliedAt = at;
+  armRefreshHold();
   const n = state.qs.length;
-  const bank = state.questions.length;
-  state.statusMsg = tt("questionsRefreshed", n, bank, generationCount(state.qs));
+  state.statusMsg = tt("questionsRefreshed", n, state.questions.length, generationCount(state.qs));
+  broadcastRefresh();
   paint(true);
+  try {
+    const inRoom = Boolean(state.room) && !isPad() && state.mpMode !== "join";
+    if (inRoom) {
+      const data = await rooms("POST", {
+        action: "refresh",
+        code: state.room,
+        by,
+        locale: state.locale,
+        questions: state.qs,
+      });
+      if (data && !data.error && data.notice) applyRefreshFromRoom(data);
+      broadcastRefresh();
+      paint(true);
+    }
+  } finally {
+    refreshInFlight = false;
+  }
+}
+function refreshNoticeHTML() {
+  const n = state.refreshNotice;
+  if (!n?.by) return "";
+  const holding = Date.now() < (state.refreshHoldUntil || 0);
+  const text = n.phase !== "ready" || holding
+    ? tt("questionsRefreshing", n.by)
+    : tt("questionsRefreshedBy", n.by);
+  return `<p class="refresh-note" role="status">${escapeHtml(text)}</p>`;
 }
 function questionRefreshHTML() {
   if (isPad() || state.mpMode === "join") return "";
-  const n = state.dealFresh && state.qs?.length ? state.qs.length : ROUND;
-  const bank = state.questions.length || 0;
-  const gens = generationCount(state.dealFresh && state.qs?.length ? state.qs : state.questions);
+  const cohort = state.cohort;
+  const showN = (cohort?.shows || []).reduce((n, deck) => n + (deck?.length || 0), 0);
+  const placeN = cohort?.placement?.length || 0;
+  const active = state.dealFresh && state.qs?.length ? state.qs : (cohort?.shows?.[state.cohortShow === 1 ? 1 : 0] || []);
+  const n = active.length || ROUND;
+  const gens = generationCount(active.length ? active : state.questions);
   return `
     <div class="q-refresh">
       <button class="ghost js-refresh-qs" type="button">${tt("refreshQuestions")}</button>
-      <p class="meta">${escapeHtml(tt("questionDealMeta", n, bank, gens))}</p>
+      <p class="meta">${escapeHtml(tt("showSetOf", state.cohortShow === 1 ? 2 : 1))} ${escapeHtml(tt("questionDealMeta", n, showN || state.questions.length, gens))}</p>
+      <p class="meta">${escapeHtml(tt("cohortOnDevice", showN, placeN))}</p>
     </div>`;
 }
 function pickLockdownSlots() {
@@ -738,6 +923,8 @@ function formatDue(iso) {
 }
 function needsPlacement(p) {
   if (!p || !p.placementCompletedAt || !p.nextPlacementDueAt) return true;
+  const cohort = state.cohort;
+  if (cohort?.builtAt && p.cohortBuiltAt && p.cohortBuiltAt !== cohort.builtAt) return true;
   const due = Date.parse(p.nextPlacementDueAt);
   if (!Number.isFinite(due)) return true;
   return Date.now() >= due;
@@ -884,9 +1071,11 @@ function nextPlacementTier(current, correct) {
 function pickPlacementQuestion(tier, exclude, seenGenerations) {
   const skip = new Set(exclude || []);
   const seen = seenGenerations instanceof Set ? seenGenerations : new Set();
-  const pool = (state.placementQs && state.placementQs.length)
-    ? state.placementQs
-    : state.questions;
+  const pool = (state.placementPool && state.placementPool.length)
+    ? state.placementPool
+    : (state.placementQs && state.placementQs.length)
+      ? state.placementQs
+      : state.questions;
   const available = shuffle(pool.filter((q) => !skip.has(q.id) && q.tier !== "finale"));
   const order = {
     easy: ["easy", "hard", "difficult", "extreme"],
@@ -1030,6 +1219,10 @@ if (bc) {
     }
     if (d.type === "answer" && role !== "pad") {
       applyRemoteAnswer(d.id, d.index, Boolean(d.lockdown));
+      return;
+    }
+    if (d.type === "refresh-notice") {
+      if (applyRefreshFromRoom({ notice: d.notice, refreshQs: d.refreshQs })) paint(true);
       return;
     }
     if (role === "pad" && !state.leftPad && d.phase) {
@@ -2125,10 +2318,7 @@ function clearDojoTick() {
 
 function ensureDojo() {
   if (state.dojo && state.dojo.q) return;
-  const used = new Set(state.profile?.placementQuestionIds || []);
-  const q = pickPlacementQuestion("hard", used);
-  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", showAnswers: false, readLeft: PLACE_READ_S };
-  armDojoRead();
+  startDojo();
 }
 
 function finishDojo() {
@@ -2139,11 +2329,14 @@ function finishDojo() {
   const abilityTier = abilityFromDojo(d.answers);
   const completedAt = new Date().toISOString();
   const ids = d.answers.map((a) => a.question.id);
+  const cohort = ensureCohort();
+  const renewsAt = cohort?.renewsAt || addMonthsIso(completedAt, 3);
   saveProfile({
     abilityTier,
     placementScore: correct,
     placementCompletedAt: completedAt,
-    nextPlacementDueAt: addMonthsIso(completedAt, 3),
+    nextPlacementDueAt: renewsAt,
+    cohortBuiltAt: cohort?.builtAt || state.profile?.cohortBuiltAt || "",
     placementQuestionIds: [...(state.profile?.placementQuestionIds || []), ...ids].slice(-200),
   });
   state.dojo = { ...d, done: true, q: null, picked: -1, showAnswers: false };
@@ -2227,11 +2420,27 @@ function openDojoPage(mode) {
   }
   paint(true);
 }
-function startDojo(skip) {
+function startDojo() {
   clearDojoTick();
-  const used = skip instanceof Set ? skip : new Set(state.profile?.placementQuestionIds || []);
-  const q = pickPlacementQuestion("hard", used);
-  state.dojo = { q, answers: [], used, picked: -1, tier: "hard", done: false, showAnswers: false, readLeft: PLACE_READ_S };
+  const begun = beginPlacementSitting();
+  if (begun.blocked) {
+    state.dojo = state.dojo ? { ...state.dojo, done: true, q: null } : null;
+    state.statusMsg = tt("placementLocked", formatDue(begun.renewsAt));
+    if (isDojoPage) paint(true);
+    return;
+  }
+  state.placementPool = begun.pool;
+  const q = pickPlacementQuestion("hard", new Set());
+  state.dojo = {
+    q,
+    answers: [],
+    used: new Set(),
+    picked: -1,
+    tier: "hard",
+    done: false,
+    showAnswers: false,
+    readLeft: PLACE_READ_S,
+  };
   state.dojoMode = "home";
   try { sessionStorage.setItem("fa-dojo-mode", "home"); } catch { /* ignore */ }
   if (!isDojoPage) {
@@ -2241,16 +2450,19 @@ function startDojo(skip) {
   armDojoRead();
 }
 
-async function refreshPlacementSet() {
-  try {
-    await loadBanksForLocale(state.locale, { bust: true });
-  } catch { /* keep the bank already in memory */ }
-  const pool = state.placementQs || [];
-  const used = new Set(state.profile?.placementQuestionIds || []);
-  const leftover = pool.filter((q) => !used.has(q.id) && q.tier !== "finale");
-  if (leftover.length < PLACE_N) used.clear();
-  state.statusMsg = tt("placementRefreshed");
-  startDojo(used);
+function placementNoteHTML() {
+  const left = placementAttemptsLeft();
+  const due = formatDue((state.cohort && state.cohort.renewsAt) || state.profile?.nextPlacementDueAt || "");
+  if (!isPlaced() && left === PLACEMENT_SITTINGS) return `<p class="meta">${tt("dojoIntro")}</p>`;
+  return `<p class="meta">${escapeHtml(tt("placementLeft", left, due))}</p>`;
+}
+function refreshPlacementSet() {
+  const before = state.profile?.placementSittingsUsed || 0;
+  startDojo();
+  if ((state.profile?.placementSittingsUsed || 0) > before && state.dojo?.q) {
+    state.statusMsg = tt("placementRefreshed");
+    paint(true);
+  }
 }
 
 function acc(id, title, extra, body, scope = "lobby") {
@@ -2328,7 +2540,8 @@ function dojoBody() {
           return `<button class="${cls}" type="button" data-dojo="${i}" ${reveal ? "disabled" : ""}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
         }).join("")}
       </div>` : `<p class="dir-copy">${tt("dojoHold")}</p>`}
-      <button class="ghost" id="refreshPlacement" type="button">${tt("refreshPlacement")}</button>
+      <button class="ghost" id="refreshPlacement" type="button" ${placementAttemptsLeft() <= 0 ? "disabled" : ""}>${tt("refreshPlacement")}</button>
+      ${placementNoteHTML()}
     `);
   }
 
@@ -2427,10 +2640,11 @@ function dojoBody() {
     <input id="pwConfirm" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("optional")}"/>
     <button class="ghost" id="saveProfileEdit" type="button">${tt("saveProfile")}</button>
     ${placed
-      ? `<p class="meta">${escapeHtml(tt("abilityRetake", (ab && ab.label) || tt("placed"), formatDue(p.nextPlacementDueAt)))}</p>`
-      : `<p class="meta">${tt("dojoIntro")}</p>`}
-    <button class="primary" id="${p.abilityTier ? "retake" : "dojoGo"}" type="button">${p.abilityTier ? tt("retakeMedal") : tt("startDojo")}</button>
-    <button class="ghost" id="refreshPlacement" type="button">${tt("refreshPlacement")}</button>
+      ? `<p class="meta">${escapeHtml(tt("abilityRetake", (ab && ab.label) || tt("placed"), formatDue(p.nextPlacementDueAt || state.cohort?.renewsAt)))}</p>`
+      : ""}
+    ${placementNoteHTML()}
+    <button class="primary" id="${p.abilityTier ? "retake" : "dojoGo"}" type="button" ${placementAttemptsLeft() <= 0 && placed ? "disabled" : ""}>${p.abilityTier ? tt("retakeMedal") : tt("startDojo")}</button>
+    <button class="ghost" id="refreshPlacement" type="button" ${placementAttemptsLeft() <= 0 ? "disabled" : ""}>${tt("refreshPlacement")}</button>
     <button class="ghost" id="lockProfile" type="button">${tt("lockProfile")}</button>
   `);
 }
@@ -2915,6 +3129,7 @@ function lobbyHTML() {
       ${languageSwitcherHtml(state.locale)}
       ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
       ${headerLinks({ dojo: true, directions: true })}
+      ${refreshNoticeHTML()}
     </div>
     <div class="lobby">
       <div class="lobby-copy">
@@ -2928,7 +3143,7 @@ function lobbyHTML() {
         </div>
         <div class="row">
           <button class="primary ${goGated ? "go-dojo-cta" : ""}" id="go" type="button">${goLabel}</button>
-          ${isPad() || mode === "join" ? "" : `<button class="ghost js-refresh-qs" type="button">${tt("refreshQuestions")}</button>`}
+          ${isPad() || mode === "join" ? "" : `<button class="ghost js-refresh-qs" type="button" ${state.refreshNotice?.phase === "loading" ? "disabled" : ""}>${tt("refreshQuestions")}</button>`}
           ${state.onScreen && !forcedDisplay && role !== "pad" ? `<button class="ghost" data-off-screen type="button">${tt("offScreenReturn")}</button>` : ""}
         </div>
         <p class="status" id="stt">${escapeHtml(status)}</p>
@@ -3050,6 +3265,7 @@ function playHTML() {
         <div class="grow"></div>
         <button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>
         ${canLeaveNow() ? `<button class="word" id="quit" type="button">${leaveLabel}</button>` : ""}
+        ${refreshNoticeHTML()}
       </div>
       <div class="phone-lock">
         <div class="accord">
@@ -3081,6 +3297,7 @@ function playHTML() {
       ${readyPhase || endPhase ? "" : scoreboard()}
       <button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>
       ${leaveTop}
+      ${refreshNoticeHTML()}
     </div>
     <div class="play">
       ${readyPhase ? readyCardHTML() : (endPhase ? `<div class="qwrap"><div class="qcard">
@@ -3833,7 +4050,7 @@ function startGame() {
   state.playOpen = "ask";
   const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length >= ROUND)
     && state.dealTopicKey === topicDealKey();
-  if (!reuse) state.qs = deal(state.questions);
+  if (!reuse) state.qs = currentShowDeck();
   state.dealFresh = false;
   state.spent = new Set(state.qs.map((q) => q.id));
   rememberDealtIds(state.qs.map((q) => q.id));
@@ -3854,6 +4071,7 @@ function startPoll() {
     const j = await rooms("GET");
     if (!j || j.error) return;
     pollN += 1;
+    if (applyRefreshFromRoom(j)) paint(true);
     if (j.guests) {
       const before = (state.guests || []).map((g) => g.id).join(",");
       ingestGuests(j.guests);
@@ -3969,6 +4187,11 @@ function paint(force = false) {
     state.viewing ? 1 : 0, state.joinOffer?.code || "", state.joinOffer?.canPlay ? 1 : 0,
     state.playOpen, (state.topicsOn || []).join(","),
     state.dealFresh ? (state.qs || []).length : 0,
+    state.refreshNotice?.phase || "",
+    state.refreshNotice?.by || "",
+    state.refreshNoticeAt || 0,
+    state.cohortShow || 0,
+    state.profile?.placementSittingsUsed || 0,
     Object.keys(state.dropoutIds || {}).sort().join(","),
     (state.pendingJoins || []).map((g) => g.id).join(","),
     ld?.wagers?.[state.youId]?.locked, ld?.wagers?.[state.youId]?.side, ld?.wagers?.[state.youId]?.amount,

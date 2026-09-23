@@ -83,9 +83,15 @@ const STRINGS = {
     copy: "Copy",
     startDojo: "Start dojo",
     refreshPlacement: "Refresh questions",
-    placementRefreshed: "New placement questions.",
+    placementRefreshed: "New placement questions from this device.",
     retakeDojo: "Retake dojo",
-    dojoIntro: "Ten placement questions. Each prompt reads for 5 seconds, then answers appear. Phone only — not on the TV.",
+    dojoIntro: "Ten questions from the placement set kept on this device. You can take the test 3 times. After that, the next test is in 3 months, when the questions renew. Each prompt reads for 5 seconds, then answers appear. Phone only — not on the TV.",
+    cohortOnDevice: (showN, placeN) => `${showN} show questions and ${placeN} placement questions are on this device.`,
+    showSetOf: (n) => `Show set ${n} of 2.`,
+    placementLeft: (left, due) => (left > 0
+      ? `${left} placement test${left === 1 ? "" : "s"} left in this set. Questions renew ${due}.`
+      : `Placement is closed until ${due}, when these questions renew.`),
+    placementLocked: (due) => `Three placement tests are already used. The next one is ${due}, when the questions renew.`,
     dojoHold: "Hold the question. Answers appear after the read.",
     dojoTap: "tap an answer",
     dojoRead: (s) => `Read ${s}s — answers next`,
@@ -222,6 +228,8 @@ const STRINGS = {
     questionsRefreshed: (n, bank, gens) => (gens
       ? `New ${n}-question set from this week's ${bank}, across ${gens} generations.`
       : `New ${n}-question set from this week's ${bank}.`),
+    questionsRefreshing: (name) => `The questions are being refreshed — ${name}`,
+    questionsRefreshedBy: (name) => `New questions are in — refreshed by ${name}`,
     topicsOn: (n) => `${n} on`,
     topicsNeedOne: "Leave at least one topic on.",
     activeRooms: "Active rooms",
@@ -313,9 +321,15 @@ const STRINGS = {
     copy: "Copier",
     startDojo: "Lancer le dojo",
     refreshPlacement: "Rafraîchir les questions",
-    placementRefreshed: "Nouvelles questions de placement.",
+    placementRefreshed: "Nouvelles questions de placement depuis cet appareil.",
     retakeDojo: "Refaire le dojo",
-    dojoIntro: "Dix questions de placement. Chaque énoncé s'affiche 5 secondes, puis les réponses. Téléphone seulement — pas sur la TV.",
+    dojoIntro: "Dix questions du jeu de placement gardé sur cet appareil. Le test peut être fait 3 fois. Ensuite, le prochain est dans 3 mois, quand les questions se renouvellent. Chaque énoncé s'affiche 5 secondes, puis les réponses. Téléphone seulement — pas sur la TV.",
+    cohortOnDevice: (showN, placeN) => `${showN} questions de show et ${placeN} questions de placement sont sur cet appareil.`,
+    showSetOf: (n) => `Jeu ${n} sur 2.`,
+    placementLeft: (left, due) => (left > 0
+      ? `${left} test${left === 1 ? "" : "s"} de placement restant${left === 1 ? "" : "s"} dans ce jeu. Les questions se renouvellent le ${due}.`
+      : `Placement fermé jusqu'au ${due}, au renouvellement des questions.`),
+    placementLocked: (due) => `Les 3 tests de placement sont déjà utilisés. Le prochain est le ${due}, au renouvellement des questions.`,
     dojoHold: "Gardez la question. Les réponses apparaissent après la lecture.",
     dojoTap: "touchez une réponse",
     dojoRead: (s) => `Lecture ${s}s — réponses ensuite`,
@@ -452,6 +466,8 @@ const STRINGS = {
     questionsRefreshed: (n, bank, gens) => (gens
       ? `Nouveau jeu de ${n} questions sur les ${bank} de cette semaine, sur ${gens} générations.`
       : `Nouveau jeu de ${n} questions sur les ${bank} de cette semaine.`),
+    questionsRefreshing: (name) => `Les questions sont en cours de rafraîchissement — ${name}`,
+    questionsRefreshedBy: (name) => `Nouvelles questions en place — rafraîchies par ${name}`,
     topicsOn: (n) => `${n} actifs`,
     topicsNeedOne: "Laissez au moins un thème activé.",
     activeRooms: "Salles actives",
@@ -543,9 +559,15 @@ const STRINGS = {
     copy: "Kopieren",
     startDojo: "Dojo starten",
     refreshPlacement: "Fragen aktualisieren",
-    placementRefreshed: "Neue Placement-Fragen.",
+    placementRefreshed: "Neue Placement-Fragen von diesem Gerät.",
     retakeDojo: "Dojo wiederholen",
-    dojoIntro: "Zehn Placement-Fragen. Prompt 5 Sekunden, dann Antworten. Nur Telefon — nicht auf der TV.",
+    dojoIntro: "Zehn Fragen aus dem Placement-Satz auf diesem Gerät. Der Test ist 3 Mal möglich. Danach erst in 3 Monaten, wenn die Fragen sich erneuern. Prompt 5 Sekunden, dann Antworten. Nur Telefon — nicht auf der TV.",
+    cohortOnDevice: (showN, placeN) => `${showN} Show-Fragen und ${placeN} Placement-Fragen sind auf diesem Gerät.`,
+    showSetOf: (n) => `Show-Satz ${n} von 2.`,
+    placementLeft: (left, due) => (left > 0
+      ? `${left} Placement-Test${left === 1 ? "" : "s"} übrig in diesem Satz. Fragen erneuern sich am ${due}.`
+      : `Placement geschlossen bis ${due}, wenn diese Fragen sich erneuern.`),
+    placementLocked: (due) => `Drei Placement-Tests sind schon verbraucht. Der nächste ist am ${due}, wenn die Fragen sich erneuern.`,
     dojoHold: "Frage halten. Antworten erscheinen nach dem Lesen.",
     dojoTap: "Antwort tippen",
     dojoRead: (s) => `Lesen ${s}s — danach Antworten`,
@@ -682,6 +704,8 @@ const STRINGS = {
     questionsRefreshed: (n, bank, gens) => (gens
       ? `Neues ${n}-Fragen-Set aus den ${bank} dieser Woche, über ${gens} Generationen.`
       : `Neues ${n}-Fragen-Set aus den ${bank} dieser Woche.`),
+    questionsRefreshing: (name) => `Die Fragen werden aktualisiert — ${name}`,
+    questionsRefreshedBy: (name) => `Neue Fragen sind da — aktualisiert von ${name}`,
     topicsOn: (n) => `${n} an`,
     topicsNeedOne: "Mindestens ein Thema muss an bleiben.",
     activeRooms: "Aktive Räume",

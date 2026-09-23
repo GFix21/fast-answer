@@ -97,7 +97,6 @@ function fmtCounts(c) {
 
 function archiveQItem(q) {
   const rejected = q.status === "rejected";
-  const regenId = q.regeneratedQuestionId;
   return `
     <div class="q-item ${esc(q.status || "")}">
       <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation || "")}${q.status ? ` · <b>${esc(q.status)}</b>` : ""} · ${esc(q.id)}</div>
@@ -109,7 +108,6 @@ function archiveQItem(q) {
           : `<button class="btn danger" data-arch-reject="${esc(q.id)}">Reject</button>
              <button class="btn" data-arch-regen="${esc(q.id)}">Reject &amp; regenerate</button>`}
       </div>
-      ${regenId ? `<p class="mut">Replacement pending in review: <code>${esc(regenId)}</code></p>` : ""}
     </div>`;
 }
 
@@ -648,7 +646,7 @@ function renderArchivePanel(panel) {
             <button class="btn" id="archBackPlacement">← Archives</button>
             <h2 style="margin-top:12px">Placement <span class="mut" style="font-size:14px;font-family:var(--font-body)">(Dojo · reject / regenerate)</span></h2>
             <p class="mut">${esc(a.pack.title || a.pack.id || "")}</p>
-            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · rejected questions go to the Flow log even without Q-and-A</p>
+            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · Regenerate replaces that question on this card</p>
           </div>
         </div>
         <div class="row" style="margin-top:12px;gap:12px">
@@ -705,7 +703,7 @@ function renderArchivePanel(panel) {
             <button class="btn" id="archBackWeek">← ${esc(a.monthKey)}</button>
             <h2 style="margin-top:12px">${esc(a.weekKey)} <span class="mut" style="font-size:14px;font-family:var(--font-body)">(archived · reject / regenerate)</span></h2>
             <p class="mut">${esc(a.pack.inspirationSummary || "")}</p>
-            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · replacements land in the weekly review queue</p>
+            <p class="mut" style="margin-top:6px">${fmtCounts(sc)} · ${(a.pack.questions||[]).length} questions · Regenerate replaces that question on this card</p>
           </div>
         </div>
         <div class="row" style="margin-top:12px;gap:12px">
@@ -1017,7 +1015,13 @@ async function doReject(regen = false) {
   try {
     const endpoint = bank === "placement" ? "placement" : "reject";
     if (bank === "placement") body.bank = "placement";
+    if (regen) markReplacing(body.questionId);
     const data = await api(endpoint, { method: "POST", body: JSON.stringify(body) });
+    if (regen && data.regenerated && replaceQuestionOnCard(body.questionId, data.regenerated)) {
+      state.message = `Replaced ${body.questionId} on this card.`;
+      render();
+      return;
+    }
     state.message = regen
       ? `Regenerated ${body.questionId} → ${data.regenerated?.id || "draft"}. ${data.learningBrief || ""}`
       : `Rejected ${data.rejection?.questionId}. ${data.learningBrief || ""}`;
@@ -1037,6 +1041,29 @@ async function doReject(regen = false) {
   }
 }
 
+function replaceQuestionOnCard(id, next) {
+  if (!id || !next?.prompt) return false;
+  const card = { ...next, status: next.status || "pending" };
+  let hit = false;
+  const swap = (list) => {
+    if (!Array.isArray(list)) return;
+    const i = list.findIndex((q) => q && q.id === id);
+    if (i < 0) return;
+    list.splice(i, 1, card);
+    hit = true;
+  };
+  swap(state.archive?.pack?.questions);
+  swap(state.week?.pack?.questions);
+  swap(state.queue?.placement?.pack?.questions);
+  return hit;
+}
+
+function markReplacing(id) {
+  const safe = String(id).replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+  const sel = `[data-arch-regen="${safe}"],[data-regen="${safe}"],[data-q-regen="${safe}"],[data-log-regen="${safe}"]`;
+  document.querySelectorAll(sel).forEach((b) => b.closest(".q-item")?.classList.add("replacing"));
+}
+
 async function archiveRejectOrRegen(id, regen, bankHint) {
   const a = state.archive;
   const fromArchive = state.tab === "archive";
@@ -1054,9 +1081,15 @@ async function archiveRejectOrRegen(id, regen, bankHint) {
     body.monthKey = a.monthKey;
     body.weekKey = a.weekKey || null;
   }
+  if (regen) markReplacing(id);
   try {
     const endpoint = placement ? "placement" : "reject";
     const data = await api(endpoint, { method: "POST", body: JSON.stringify(body) });
+    if (regen && data.regenerated && replaceQuestionOnCard(id, data.regenerated)) {
+      state.message = `Replaced ${id} on this card.`;
+      render();
+      return;
+    }
     state.message = regen
       ? `Regenerated ${id} → ${data.regenerated?.id || "draft"}. ${data.learningBrief || ""}`
       : `Rejected ${id}. ${data.learningBrief || ""}`;

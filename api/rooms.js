@@ -1,5 +1,65 @@
 import { getRoom, hasRoom, saveRoom, listRooms, deleteRoom } from "../lib/room-store.js";
 import { requireAuth } from "../lib/flow-auth.js";
+import { loadCurrentPack } from "../lib/week-store.js";
+import { exportPack } from "../q-and-a/map.js";
+import { dealShow, SHOW_DEAL } from "../lib/generation-deal.js";
+
+const SHOW_N = Object.values(SHOW_DEAL).reduce((sum, n) => sum + n, 0);
+
+function poolForTopics(questions, topics) {
+  const allow = new Set((topics || []).map((t) => String(t).toLowerCase()).filter(Boolean));
+  if (!allow.size) return questions || [];
+  const preferred = (questions || []).filter((q) => allow.has(String(q.topic || "").toLowerCase()));
+  return preferred.length ? preferred : (questions || []);
+}
+
+function questionsFromDevice(raw) {
+  if (!Array.isArray(raw)) return [];
+  const out = [];
+  for (const q of raw) {
+    if (!q || !q.id || !q.prompt || !Array.isArray(q.choices) || q.choices.length < 2) continue;
+    const correctIndex = Number(q.correctIndex);
+    if (!Number.isInteger(correctIndex) || correctIndex < 0 || correctIndex >= q.choices.length) continue;
+    out.push({
+      id: String(q.id).slice(0, 80),
+      tier: String(q.tier || "easy").slice(0, 20),
+      topic: String(q.topic || "").slice(0, 40),
+      generation: String(q.generation || "").slice(0, 40),
+      categoryTitle: String(q.categoryTitle || "").slice(0, 80),
+      prompt: String(q.prompt).slice(0, 400),
+      choices: q.choices.slice(0, 4).map((c) => String(c).slice(0, 200)),
+      correctIndex,
+    });
+    if (out.length >= SHOW_N) break;
+  }
+  return out;
+}
+
+/** Ask Q&A for a fresh show. Falls back to the handed-off weekly pack when no studio URL is set. */
+async function askQanda({ locale, avoid, topics }) {
+  const url = process.env.QANDA_REFRESH_URL;
+  if (url) {
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ locale, avoid, topics, deal: SHOW_DEAL }),
+        signal: AbortSignal.timeout(20000),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const raw = Array.isArray(data?.questions) ? data.questions : [];
+        const mapped = poolForTopics(exportPack({ questions: raw }), topics);
+        if (mapped.length) {
+          const questions = mapped.length === SHOW_N ? mapped : dealShow(mapped, avoid);
+          if (questions.length) return { questions, source: "q-and-a" };
+        }
+      }
+    } catch { /* weekly pack below */ }
+  }
+  const mapped = poolForTopics(exportPack(loadCurrentPack(locale)), topics);
+  return { questions: dealShow(mapped, avoid), source: "q-and-a-bank" };
+}
 
 function touch(cur) {
   return saveRoom(cur);
@@ -167,6 +227,40 @@ export default async function handler(req, res) {
       at: Date.now(),
     };
     await touch(cur);
+  } else if (body.action === "refresh") {
+    const by = String(body.by || "Player").trim().slice(0, 40) || "Player";
+    const locale = String(body.locale || "en");
+    const avoid = Array.isArray(body.avoid) ? body.avoid.map(String).slice(0, 120) : [];
+    const topics = Array.isArray(body.topics) ? body.topics.map(String).slice(0, 40) : [];
+    const held = questionsFromDevice(body.questions);
+    if (held.length) {
+      cur.notice = {
+        kind: "refresh",
+        by,
+        phase: "ready",
+        at: Date.now(),
+        count: held.length,
+        source: "device",
+      };
+      cur.refreshQs = held;
+      await touch(cur);
+    } else {
+    cur.notice = { kind: "refresh", by, phase: "loading", at: Date.now() };
+    delete cur.refreshQs;
+    await touch(cur);
+    const result = await askQanda({ locale, avoid, topics });
+    const latest = (await getRoom(code)) || cur;
+    latest.notice = {
+      kind: "refresh",
+      by,
+      phase: "ready",
+      at: Date.now(),
+      count: result.questions.length,
+      source: result.source,
+    };
+    latest.refreshQs = result.questions;
+    await touch(latest);
+    }
   } else if (body.action === "ready") {
     cur.guests = cur.guests || [];
     const id = body.id || ("p-" + String(body.name || "pad"));

@@ -482,6 +482,19 @@ html.tv-scroll, html.tv-scroll body{
 .stage.tv-scroll #pc{display:none}
 .q-refresh{margin:4px 0 8px}
 .q-refresh .ghost{min-height:44px}
+.q-refresh .ghost:disabled,.row .js-refresh-qs:disabled{opacity:.55}
+.refresh-note{
+  flex-basis:100%;
+  margin:4px 0 0;
+  padding:8px 12px;
+  border-radius:var(--radius-md);
+  background:color-mix(in oklab, var(--accent) 24%, var(--elev));
+  border:1px solid color-mix(in oklab, var(--accent) 55%, var(--line));
+  color:var(--fg);
+  font-size:14px;
+  font-weight:700;
+  line-height:1.35;
+}
 .buzzer.ready-on{filter:grayscale(.2);opacity:.85}
 .ready-seats{margin-top:10px}
 .pad .qr-chip{display:none}
