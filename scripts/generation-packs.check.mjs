@@ -34,13 +34,13 @@ for (const g of GENERATIONS) {
   for (const q of packs[g]) assert.ok(sourceIds.has(q.id), q.id);
 }
 assert.deepEqual(summary.counts, {
-  "silent-generation": 22,
-  "baby-boomer": 22,
-  "gen-x": 23,
-  "gen-y": 23,
-  "gen-z": 23,
-  "gen-alpha": 29,
-  "multi-gen": 19,
+  "silent-generation": 24,
+  "baby-boomer": 24,
+  "gen-x": 25,
+  "gen-y": 25,
+  "gen-z": 25,
+  "gen-alpha": 31,
+  "multi-gen": 21,
 });
 
 const padded = buildGenerationPacks([
@@ -130,7 +130,7 @@ assert.ok(shared.questions.every((q) => q.fromGeneration === "gen-x"));
 const cohort = buildDeviceCohort(weekly, placement.questions, "en", "2026-09-01T00:00:00.000Z");
 assert.equal(cohort.v, 2);
 assert.equal(cohort.target, 150);
-assert.equal(cohort.held, 161);
+assert.equal(cohort.held, 175);
 const easyJokes = cohort.shows[0].filter((q) => q.tier === "easy" && q.funny === true);
 const hardJokes = cohort.shows[0].filter((q) => q.tier === "hard" && q.funny === true);
 const renegade = (list) => list.filter((q) => q.renegade === true);

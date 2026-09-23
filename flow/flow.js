@@ -123,11 +123,25 @@ function potentialReplacement(exceptId) {
   return list.find((q) => q && q.id !== exceptId) || null;
 }
 
+function statusText(status) {
+  const s = status || "active";
+  if (s === "active" || s === "pending" || s === "approved" || s === "rejected") return t(s);
+  return s;
+}
+
+function weekProgress(row) {
+  const n = row?.questionCount ?? (row?.questions || []).length ?? 0;
+  const target = row?.weekTarget || 1050;
+  const complete = row?.weekComplete === true || n >= target;
+  return complete ? t("weekFull", { n, target }) : t("weekOpen", { n, target });
+}
+
 function archiveQItem(q) {
   const offer = potentialReplacement(q.id);
+  const status = q.status || "active";
   return `
-    <div class="q-item ${esc(q.status || "")}">
-      <div class="q-meta">${esc(t("tier_" + (q.tier || "")))} · ${esc(q.topic)} · ${esc(q.generation || "")}${q.status ? ` · <b>${esc(q.status)}</b>` : ""} · ${esc(q.id)}</div>
+    <div class="q-item ${esc(status)}">
+      <div class="q-meta">${esc(t("tier_" + (q.tier || "")))} · ${esc(q.topic)} · ${esc(q.generation || "")} · <b>${esc(statusText(status))}</b> · ${esc(q.id)}</div>
       <div class="q-prompt">${esc(q.categoryTitle || "")}${q.categoryTitle ? " — " : ""}${esc(q.prompt || "")}</div>
       <div class="choices">${(q.choices || []).map((c, i) => `<div class="${i === q.correctIndex ? "hit" : ""}">${String.fromCharCode(65 + i)}. ${esc(c)}</div>`).join("")}</div>
       ${offer ? `
@@ -266,6 +280,7 @@ function render() {
           <div class="stat"><b>${sc.finale||0}</b><span>${t("tier_finale")}</span></div>
         </div>
         <div class="row" style="margin-bottom:16px">
+          <div class="stat"><b>${st.active||0}</b><span>${t("active")}</span></div>
           <div class="stat"><b>${st.pending||0}</b><span>${t("pending")}</span></div>
           <div class="stat"><b>${st.approved||0}</b><span>${t("approved")}</span></div>
           <div class="stat"><b>${st.rejected||0}</b><span>${t("rejected")}</span></div>
@@ -352,8 +367,8 @@ function render() {
         </div>
         <div class="q-list" style="margin-top:12px">
           ${qs.map((q) => `
-            <div class="q-item ${esc(q.status||"pending")}">
-              <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation||"")} · <b>${esc(q.status||"pending")}</b> · ${esc(q.id)}</div>
+            <div class="q-item ${esc(q.status||"active")}">
+              <div class="q-meta">${esc(q.tier)} · ${esc(q.topic)} · ${esc(q.generation||"")} · <b>${esc(statusText(q.status||"active"))}</b> · ${esc(q.id)}</div>
               <div class="q-prompt">${esc(q.categoryTitle)} — ${esc(q.prompt)}</div>
               <div class="choices">${(q.choices||[]).map((c,i)=>`<div class="${i===q.correctIndex?"hit":""}">${String.fromCharCode(65+i)}. ${esc(c)}</div>`).join("")}</div>
               <div class="row" style="margin-top:10px">
@@ -432,7 +447,8 @@ function flowCounts() {
   const placeQs = state.queue.placement?.pack?.questions || [];
   const all = [...weekQs, ...placeQs];
   return {
-    pending: all.filter((q) => (q.status || "pending") === "pending").length,
+    active: all.filter((q) => (q.status || "active") === "active").length,
+    pending: all.filter((q) => q.status === "pending").length,
     rejected: all.filter((q) => q.status === "rejected").length,
     approved: all.filter((q) => q.status === "approved").length,
     regen: (state.queue.weekRejections || []).length + (state.queue.placementRejections || []).length,
@@ -450,7 +466,7 @@ function gotoTab(tab) {
 function renderConsole(panel) {
   const c = flowCounts();
   const cards = [
-    ["queue", t("awaiting"), c.pending],
+    ["queue", t("active"), c.active],
     ["queue", t("rejectedCard"), c.rejected],
     ["reject", t("regenCard"), c.regen],
     ["profiles", t("profilesCard"), c.profiles],
@@ -505,6 +521,7 @@ function renderRooms(panel) {
 function metricDonut() {
   const c = flowCounts();
   const slices = [
+    { label: t("active"), value: c.active, color: "#f5d76e" },
     { label: t("pending"), value: c.pending, color: "#e8a87c" },
     { label: t("approved"), value: c.approved, color: "#7dd3fc" },
     { label: t("rejected"), value: c.rejected, color: "#f87171" },
@@ -536,10 +553,10 @@ function metricDonut() {
 }
 
 function qCard(q, bank) {
-  const status = q.status || "pending";
+  const status = q.status || "active";
   return `
     <div class="q-item ${esc(status)}">
-      <div class="q-meta">${esc(bank)} · ${esc(q.tier || "")} · ${esc(q.topic || "")} · <b>${esc(status)}</b> · ${esc(q.id)}</div>
+      <div class="q-meta">${esc(bank)} · ${esc(q.tier || "")} · ${esc(q.topic || "")} · <b>${esc(statusText(status))}</b> · ${esc(q.id)}</div>
       <div class="q-prompt">${esc(q.categoryTitle || "")}${q.categoryTitle ? " — " : ""}${esc(q.prompt || "")}</div>
     </div>`;
 }
@@ -552,9 +569,13 @@ function renderQueue(panel) {
 
   const weekQs = state.week?.pack?.questions || [];
   const placeQs = state.queue.placement?.pack?.questions || [];
+  const activeQs = [
+    ...weekQs.filter((q) => (q.status || "active") === "active").map((q) => ({ ...q, bank: "Weekly" })),
+    ...placeQs.filter((q) => (q.status || "active") === "active").map((q) => ({ ...q, bank: "Placement" })),
+  ];
   const pending = [
-    ...weekQs.filter((q) => (q.status || "pending") === "pending").map((q) => ({ ...q, bank: "Weekly" })),
-    ...placeQs.filter((q) => (q.status || "pending") === "pending").map((q) => ({ ...q, bank: "Placement" })),
+    ...weekQs.filter((q) => q.status === "pending").map((q) => ({ ...q, bank: "Weekly" })),
+    ...placeQs.filter((q) => q.status === "pending").map((q) => ({ ...q, bank: "Placement" })),
   ];
   const rejected = [
     ...weekQs.filter((q) => q.status === "rejected").map((q) => ({ ...q, bank: "Weekly" })),
@@ -579,10 +600,12 @@ function renderQueue(panel) {
         <button class="btn" id="refreshQueue">${t("refresh")}</button>
       </div>
       <p class="mut">${t("queueNote", { locale: flowLocaleLabel(state.locale) })}</p>
-      <h3 class="queue-sec">${t("awaiting")} <span class="mut">(${pending.length})</span></h3>
+      <h3 class="queue-sec">${t("active")} <span class="mut">(${activeQs.length})</span></h3>
+      <p class="mut">${t("activeNote")}</p>
       ${state.week || state.queue.placement
-        ? list(pending, t("waitingNone"))
+        ? list(activeQs, t("waitingNone"))
         : `<p class="mut">${t("banksMissing")}</p>`}
+      ${pending.length ? `<h3 class="queue-sec">${t("awaiting")} <span class="mut">(${pending.length})</span></h3>${list(pending, t("waitingNone"))}` : ""}
       <h3 class="queue-sec">${t("rejection")} <span class="mut">(${rejected.length})</span></h3>
       ${list(rejected, t("noRejectedQs"))}
       <h3 class="queue-sec">${t("regenCard")} <span class="mut">(${regen.length})</span></h3>
@@ -728,6 +751,7 @@ function renderArchivePanel(panel) {
             <h2 style="margin-top:12px">${esc(a.weekKey)}</h2>
             <p class="mut">${esc(a.pack.inspirationSummary || "")}</p>
             <p class="mut" style="margin-top:6px">${t("countsLine", { counts: fmtCounts(sc), n: (a.pack.questions || []).length })}</p>
+            <p class="mut">${esc(weekProgress(a.pack))}. ${t("activeNote")}</p>
             ${readyBenchHTML()}
           </div>
         </div>
@@ -790,7 +814,7 @@ function renderArchivePanel(panel) {
               <div class="row spread">
                 <div>
                   <b>${esc(w.weekKey)}</b>
-                  <div class="mut">${w.questionCount ?? "—"} ${t("questions")} · ${esc(fmtCounts(w.studioCounts || w.counts))}</div>
+                  <div class="mut">${w.questionCount ?? "—"} ${t("questions")} · ${esc(weekProgress(w))} · ${esc(fmtCounts(w.studioCounts || w.counts))}</div>
                 </div>
                 <span class="mut">${esc((w.publishedAt || "").slice(0, 10) || "")}</span>
               </div>

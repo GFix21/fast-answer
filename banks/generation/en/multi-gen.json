@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "en",
   "target": 150,
-  "held": 19,
-  "shortfall": 131,
+  "held": 21,
+  "shortfall": 129,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -354,6 +354,38 @@
         0,
         3
       ]
+    },
+    {
+      "id": "cq-e-multi-pacific",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Open Water",
+      "prompt": "Which ocean is the largest on Earth?",
+      "choices": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The map gives it the widest blue."
+    },
+    {
+      "id": "cq-h-multi-piano",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Keyboard",
+      "prompt": "How many keys does a standard piano have?",
+      "choices": [
+        "61",
+        "76",
+        "88",
+        "92"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Count the black and the white. The total is the long one."
     }
   ]
 }

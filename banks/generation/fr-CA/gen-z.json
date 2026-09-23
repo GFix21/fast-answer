@@ -1,6 +1,6 @@
 {
   "generation": "gen-z",
-  "locale": "en",
+  "locale": "fr-CA",
   "target": 150,
   "held": 25,
   "shortfall": 125,
@@ -37,12 +37,12 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Battle Bus Basics",
-      "prompt": "Fortnite is primarily what type of game?",
+      "categoryTitle": "Bases du Battle Bus",
+      "prompt": "Fortnite est avant tout quel type de jeu ?",
       "choices": [
-        "Text adventure",
-        "Chess simulator",
-        "Tax software",
+        "Aventure textuelle",
+        "Simulateur d’échecs",
+        "Logiciel fiscal",
         "Battle royale"
       ],
       "correctIndex": 3,
@@ -53,8 +53,8 @@
       "tier": "easy",
       "topic": "music",
       "generation": "gen-z",
-      "categoryTitle": "Stream Machine",
-      "prompt": "Which Swedish company is best known for a music streaming app called Spotify?",
+      "categoryTitle": "Machine à streams",
+      "prompt": "Quelle entreprise suédoise est surtout connue pour l'application de streaming musical Spotify ?",
       "choices": [
         "Netflix",
         "Skype",
@@ -69,13 +69,13 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Short Form",
-      "prompt": "TikTok is best known for what kind of videos?",
+      "categoryTitle": "Format court",
+      "prompt": "TikTok est surtout connu pour quel type de vidéos ?",
       "choices": [
-        "Feature films only",
-        "Short-form video",
-        "Live opera only",
-        "Printed newspapers"
+        "Uniquement des longs métrages",
+        "Vidéos courtes",
+        "Uniquement de l’opéra en direct",
+        "Uniquement des journaux imprimés"
       ],
       "correctIndex": 1,
       "banterHint": null
@@ -85,8 +85,8 @@
       "tier": "easy",
       "topic": "geography",
       "generation": "gen-z",
-      "categoryTitle": "Capital Quick Hit",
-      "prompt": "What is the capital of France?",
+      "categoryTitle": "Capitale express",
+      "prompt": "Quelle est la capitale de la France ?",
       "choices": [
         "Marseille",
         "Nice",
@@ -101,13 +101,13 @@
       "tier": "easy",
       "topic": "dj-gigi",
       "generation": "gen-z",
-      "categoryTitle": "Gigi’s Easy Lane",
-      "prompt": "DJ Gigi’s music is most often associated with which city vibe?",
+      "categoryTitle": "Voie facile de Gigi",
+      "prompt": "La musique de DJ Gigi est le plus souvent associée à quelle ambiance de ville ?",
       "choices": [
-        "Nashville country barns",
-        "Vienna waltzes only",
-        "Montréal nights",
-        "Desert silent retreats"
+        "Granges country de Nashville",
+        "Uniquement des valses viennoises",
+        "Nuits montréalaises",
+        "Retraites silencieuses dans le désert"
       ],
       "correctIndex": 2,
       "banterHint": null
@@ -118,9 +118,9 @@
       "topic": "film-tv",
       "generation": "gen-z",
       "categoryTitle": "MCU 101",
-      "prompt": "Which studio’s Marvel Cinematic Universe began with Iron Man (2008)?",
+      "prompt": "L’univers cinématographique Marvel de quel studio a commencé avec Iron Man (2008) ?",
       "choices": [
-        "Pixar only",
+        "Pixar uniquement",
         "A24",
         "Marvel Studios / Disney",
         "Studio Ghibli"
@@ -133,8 +133,8 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Island Code",
-      "prompt": "Which company develops Fortnite?",
+      "categoryTitle": "Code de l’île",
+      "prompt": "Quelle entreprise développe Fortnite ?",
       "choices": [
         "Valve",
         "Nintendo",
@@ -149,13 +149,13 @@
       "tier": "hard",
       "topic": "music",
       "generation": "gen-z",
-      "categoryTitle": "Stream HQ",
-      "prompt": "In which country was Spotify founded?",
+      "categoryTitle": "QG du stream",
+      "prompt": "Dans quel pays Spotify a été fondé ?",
       "choices": [
-        "Sweden",
-        "Brazil",
-        "South Korea",
-        "United States"
+        "Suède",
+        "Brésil",
+        "Corée du Sud",
+        "États-Unis"
       ],
       "correctIndex": 0,
       "banterHint": null
@@ -165,13 +165,13 @@
       "tier": "hard",
       "topic": "music",
       "generation": "gen-z",
-      "categoryTitle": "K-Pop Compass",
-      "prompt": "BTS is a music group from which country?",
+      "categoryTitle": "Boussole K-pop",
+      "prompt": "BTS est un groupe de musique de quel pays ?",
       "choices": [
-        "South Korea",
-        "Thailand",
-        "China",
-        "Japan"
+        "Corée du Sud",
+        "Thaïlande",
+        "Chine",
+        "Japon"
       ],
       "correctIndex": 0,
       "banterHint": null
@@ -181,13 +181,13 @@
       "tier": "hard",
       "topic": "cars",
       "generation": "gen-z",
-      "categoryTitle": "EV Highway",
-      "prompt": "Tesla, Inc. is best known for manufacturing what?",
+      "categoryTitle": "Autoroute VE",
+      "prompt": "Tesla, Inc. est surtout connue pour fabriquer quoi ?",
       "choices": [
-        "Only sailboats",
-        "Only mechanical typewriters",
-        "Electric vehicles",
-        "Only vinyl presses"
+        "Uniquement des voiliers",
+        "Uniquement des machines à écrire mécaniques",
+        "Des véhicules électriques",
+        "Uniquement des presses à vinyle"
       ],
       "correctIndex": 2,
       "banterHint": null
@@ -197,8 +197,8 @@
       "tier": "hard",
       "topic": "film-tv",
       "generation": "gen-z",
-      "categoryTitle": "Wakanda Weekend",
-      "prompt": "Who directed the 2018 Marvel film Black Panther?",
+      "categoryTitle": "Fin de semaine à Wakanda",
+      "prompt": "Qui a réalisé le film Marvel Black Panther de 2018 ?",
       "choices": [
         "Ryan Coogler",
         "Patty Jenkins",
@@ -213,13 +213,13 @@
       "tier": "hard",
       "topic": "geography",
       "generation": "gen-z",
-      "categoryTitle": "Climate Map",
-      "prompt": "The Paris Agreement is a major international deal focused on what?",
+      "categoryTitle": "Carte climat",
+      "prompt": "L’Accord de Paris est un grand accord international portant sur quoi ?",
       "choices": [
-        "Currency fonts",
-        "Postage stamps",
-        "Olympic mascots",
-        "Climate change"
+        "Les polices de devises",
+        "Les timbres-poste",
+        "Les mascottes olympiques",
+        "Le changement climatique"
       ],
       "correctIndex": 3,
       "banterHint": null
@@ -229,8 +229,8 @@
       "tier": "difficult",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Model Manners",
-      "prompt": "OpenAI released ChatGPT to the public in which year?",
+      "categoryTitle": "Manières de modèles",
+      "prompt": "En quelle année OpenAI a mis ChatGPT à disposition du public ?",
       "choices": [
         "2018",
         "2024",
@@ -245,13 +245,13 @@
       "tier": "difficult",
       "topic": "film-tv",
       "generation": "gen-z",
-      "categoryTitle": "Stairs & Subtitles",
-      "prompt": "Which country’s film Parasite won the Academy Award for Best Picture?",
+      "categoryTitle": "Escaliers et sous-titres",
+      "prompt": "Le film Parasite, de quel pays, a remporté l’Oscar du meilleur film ?",
       "choices": [
-        "South Korea",
-        "Japan",
+        "Corée du Sud",
+        "Japon",
         "France",
-        "Mexico"
+        "Mexique"
       ],
       "correctIndex": 0,
       "banterHint": null
@@ -261,13 +261,13 @@
       "tier": "extreme",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Finale · Storm Circle",
-      "prompt": "Fortnite’s original free-to-play PvP mode that defined its boom is commonly called what?",
+      "categoryTitle": "Finale · Cercle de tempête",
+      "prompt": "Le mode PvP free-to-play original de Fortnite qui a défini son boom s’appelle couramment comment ?",
       "choices": [
         "Battle Royale",
-        "Save the World only",
-        "Creative only",
-        "Rocket Racing only"
+        "Save the World uniquement",
+        "Creative uniquement",
+        "Rocket Racing uniquement"
       ],
       "correctIndex": 0,
       "banterHint": null
@@ -277,8 +277,8 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Tiny Loop",
-      "prompt": "What does GIF stand for?",
+      "categoryTitle": "Petite boucle",
+      "prompt": "GIF veut dire quoi ?",
       "choices": [
         "Global Image File",
         "General Icon Folder",
@@ -286,15 +286,15 @@
         "Graphics Interchange Format"
       ],
       "correctIndex": 3,
-      "banterHint": "A picture that refuses to sit still."
+      "banterHint": "Une image qui refuse de rester tranquille."
     },
     {
       "id": "cq-e-genz-vr",
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Headset",
-      "prompt": "What does VR stand for in a headset?",
+      "categoryTitle": "Casque",
+      "prompt": "VR, sur un casque, veut dire quoi ?",
       "choices": [
         "Visual Radio",
         "Vector Render",
@@ -302,15 +302,15 @@
         "Video Relay"
       ],
       "correctIndex": 2,
-      "banterHint": "The room stays put. The view does not."
+      "banterHint": "La pièce reste là. Pas la vue."
     },
     {
       "id": "cq-h-genz-bytedance",
       "tier": "hard",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Short Video",
-      "prompt": "Which company owns TikTok?",
+      "categoryTitle": "Vidéo courte",
+      "prompt": "Quelle compagnie possède TikTok ?",
       "choices": [
         "Snap",
         "Meta",
@@ -318,39 +318,39 @@
         "ByteDance"
       ],
       "correctIndex": 3,
-      "banterHint": "The app is the famous part. The company is quieter."
+      "banterHint": "L'appli est la partie connue. La compagnie, moins."
     },
     {
       "id": "cq-h-genz-hashtag",
       "tier": "hard",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Pound Sign",
-      "prompt": "What is the name of the # symbol when it groups posts on social media?",
+      "categoryTitle": "Dièse",
+      "prompt": "Comment on appelle le symbole # quand il regroupe des publications sur les réseaux sociaux ?",
       "choices": [
-        "A hashtag",
-        "A caret",
-        "A tilde",
-        "An asterisk"
+        "Un hashtag",
+        "Un caret",
+        "Un tilde",
+        "Un astérisque"
       ],
       "correctIndex": 0,
-      "banterHint": "One mark, and the posts find each other."
+      "banterHint": "Une marque, et les publications se retrouvent."
     },
     {
       "id": "cq-e-genz-emoji",
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "One Eye",
-      "prompt": "Why did the emoji wink?",
+      "categoryTitle": "Un œil",
+      "prompt": "Pourquoi l'emoji a fait un clin d'œil ?",
       "choices": [
-        "It lost the other eye",
-        "It hid the keyboard",
-        "It missed the chat",
-        "It had a point to make"
+        "Il a perdu l'autre œil",
+        "Il a caché le clavier",
+        "Il a manqué la discussion",
+        "Il avait quelque chose à dire"
       ],
       "correctIndex": 3,
-      "banterHint": "The message still landed kindly.",
+      "banterHint": "Le message est quand même arrivé gentiment.",
       "funny": true,
       "structure": "joke"
     },
@@ -359,16 +359,16 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Logo Circle",
-      "prompt": "What colour is the circle in the Spotify logo?",
+      "categoryTitle": "Cercle du logo",
+      "prompt": "C'est quoi la couleur du cercle dans le logo Spotify ?",
       "choices": [
-        "Blue",
-        "Red",
-        "Yellow",
-        "Green"
+        "Bleu",
+        "Rouge",
+        "Jaune",
+        "Vert"
       ],
       "correctIndex": 3,
-      "banterHint": "The sound waves sit on top of it.",
+      "banterHint": "Les ondes sonores sont posées dessus.",
       "structure": "colour"
     },
     {
@@ -376,8 +376,8 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "First Post",
-      "prompt": "When was Instagram launched?",
+      "categoryTitle": "Premier post",
+      "prompt": "Instagram a été lancé quand ?",
       "choices": [
         "2014",
         "2010",
@@ -385,7 +385,7 @@
         "2012"
       ],
       "correctIndex": 1,
-      "banterHint": "The square photos showed up in that year.",
+      "banterHint": "Les photos carrées sont arrivées cette année-là.",
       "structure": "when"
     },
     {
@@ -393,16 +393,16 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "The Stop Arm",
-      "prompt": "Same friends as before. They come back to this: \"What colour is a standard school bus in the United States?\"",
+      "categoryTitle": "Le bras d'arrêt",
+      "prompt": "Les mêmes amis qu'avant. Ils reviennent à ceci : « C'est quoi la couleur d'un autobus scolaire standard aux États-Unis ? »",
       "choices": [
         "Orange",
-        "Blue, if the ocean is driving the route",
-        "White, after a very thorough wash",
-        "Yellow"
+        "Bleu, si l'océan conduit la ligne",
+        "Blanc, après un lavage très soigné",
+        "Jaune"
       ],
       "correctIndex": 3,
-      "banterHint": "The stop arm is the clue. Kids spot that paint from the curb.",
+      "banterHint": "Le bras d'arrêt est l'indice. Les enfants voient cette peinture du trottoir.",
       "funny": true,
       "humorous": true,
       "injection": "callback",
@@ -418,8 +418,8 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Starting Side",
-      "prompt": "How many players from one team are on the field in a standard football match?",
+      "categoryTitle": "Équipe de départ",
+      "prompt": "Dans un match de soccer standard, une équipe a combien de joueurs sur le terrain ?",
       "choices": [
         "10",
         "9",
@@ -427,23 +427,23 @@
         "15"
       ],
       "correctIndex": 2,
-      "banterHint": "The bench watches. The count is the ones on the grass."
+      "banterHint": "Le banc regarde. Le compte, ce sont ceux sur le gazon."
     },
     {
       "id": "cq-h-genz-mohs",
       "tier": "hard",
       "topic": "culture",
       "generation": "gen-z",
-      "categoryTitle": "Hardness",
-      "prompt": "What is the hardest natural mineral on the Mohs scale?",
+      "categoryTitle": "Dureté",
+      "prompt": "C'est quoi le minéral naturel le plus dur sur l'échelle de Mohs ?",
       "choices": [
-        "Quartz",
-        "Corundum",
-        "Diamond",
-        "Topaz"
+        "Le quartz",
+        "Le corindon",
+        "Le diamant",
+        "La topaze"
       ],
       "correctIndex": 2,
-      "banterHint": "The scale stops at ten. This one sits there."
+      "banterHint": "L'échelle arrête à dix. Celui-ci est là."
     }
   ]
 }

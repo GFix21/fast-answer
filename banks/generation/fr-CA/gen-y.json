@@ -1,6 +1,6 @@
 {
   "generation": "gen-y",
-  "locale": "fr",
+  "locale": "fr-CA",
   "target": 150,
   "held": 25,
   "shortfall": 125,
@@ -58,7 +58,7 @@
       "topic": "music",
       "generation": "gen-y",
       "categoryTitle": "Écouteurs blancs",
-      "prompt": "En quelle année Apple a-t-il lancé le premier iPod ?",
+      "prompt": "En quelle année Apple a lancé le premier iPod ?",
       "choices": [
         "1998",
         "2001",
@@ -154,7 +154,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Connexion campus",
-      "prompt": "En quelle année Facebook (aujourd’hui Meta) a-t-il été fondé ?",
+      "prompt": "En quelle année Facebook (aujourd’hui Meta) a été fondé ?",
       "choices": [
         "2004",
         "2008",
@@ -234,7 +234,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Chronologie keynote",
-      "prompt": "En quelle année Apple a-t-il annoncé l’iPhone original ?",
+      "prompt": "En quelle année Apple a annoncé l’iPhone original ?",
       "choices": [
         "2010",
         "2007",
@@ -282,7 +282,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Livre ouvert",
-      "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie à plusieurs ?",
+      "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie ensemble ?",
       "choices": [
         "Wikipédia",
         "AltaVista",
@@ -290,7 +290,7 @@
         "MySpace"
       ],
       "correctIndex": 0,
-      "banterHint": "Le bouton modifier est toute l'idée."
+      "banterHint": "Le bouton modifier, c'est toute l'idée."
     },
     {
       "id": "cq-e-geny-sms",
@@ -298,7 +298,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Note courte",
-      "prompt": "Que signifie SMS ?",
+      "prompt": "SMS veut dire quoi ?",
       "choices": [
         "Short Message Service",
         "Standard Mobile Signal",
@@ -314,7 +314,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Ordinateur de poche",
-      "prompt": "Quelle société a sorti le premier iPhone en 2007 ?",
+      "prompt": "Quelle compagnie a lancé le premier iPhone en 2007 ?",
       "choices": [
         "Apple",
         "BlackBerry",
@@ -330,7 +330,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Inscription ouverte",
-      "prompt": "En quelle année Facebook a-t-il ouvert l'inscription au-delà des écoles, à toute personne de 13 ans ou plus ?",
+      "prompt": "En quelle année Facebook a ouvert l'inscription au-delà des écoles, à toute personne de 13 ans ou plus ?",
       "choices": [
         "2005",
         "2006",
@@ -346,7 +346,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Toujours calme",
-      "prompt": "Pourquoi la boîte de réception est-elle restée calme ?",
+      "prompt": "Pourquoi la boîte de réception est restée calme ?",
       "choices": [
         "Elle a effacé le matin",
         "Elle savait garder ses lettres",
@@ -364,7 +364,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Écrin",
-      "prompt": "De quelle couleur est le Cœur de l'océan dans le film Titanic ?",
+      "prompt": "C'est quoi la couleur du Cœur de l'océan dans le film Titanic ?",
       "choices": [
         "Vert",
         "Jaune",
@@ -381,7 +381,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Premier livre",
-      "prompt": "Quand le premier livre Harry Potter a-t-il été publié au Royaume-Uni ?",
+      "prompt": "Le premier livre Harry Potter a été publié au Royaume-Uni quand ?",
       "choices": [
         "1997",
         "1995",
@@ -398,7 +398,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Billets et pièces",
-      "prompt": "Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « Quand les billets et les pièces en euros sont-ils entrés en circulation ? »",
+      "prompt": "Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « Les billets et les pièces en euros sont entrés en circulation quand ? »",
       "choices": [
         "1 janvier 2002",
         "2004, quand les pièces ont appris à jongler",
@@ -423,7 +423,7 @@
       "topic": "geography",
       "generation": "gen-y",
       "categoryTitle": "Capitale",
-      "prompt": "Quelle est la capitale de l'Australie ?",
+      "prompt": "C'est quoi la capitale de l'Australie ?",
       "choices": [
         "Melbourne",
         "Sydney",
@@ -439,7 +439,7 @@
       "topic": "culture",
       "generation": "gen-y",
       "categoryTitle": "Langage de page",
-      "prompt": "Que signifie le sigle HTML ?",
+      "prompt": "HTML veut dire quoi ?",
       "choices": [
         "Home Tool Markup Language",
         "High Transfer Mail Link",

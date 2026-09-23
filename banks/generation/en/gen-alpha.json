@@ -2,8 +2,8 @@
   "generation": "gen-alpha",
   "locale": "en",
   "target": 150,
-  "held": 29,
-  "shortfall": 121,
+  "held": 31,
+  "shortfall": 119,
   "ageYear": 2026,
   "born": [
     2010,
@@ -376,6 +376,38 @@
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-alpha-leap",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Extra Day",
+      "prompt": "How many days are in a leap year?",
+      "choices": [
+        "360",
+        "366",
+        "365",
+        "364"
+      ],
+      "correctIndex": 1,
+      "banterHint": "February borrows one day, then gives the year back."
+    },
+    {
+      "id": "cq-h-alpha-elephant",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "On Land",
+      "prompt": "Which animal is the largest living land animal?",
+      "choices": [
+        "Blue whale",
+        "Giraffe",
+        "Polar bear",
+        "African elephant"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The whale takes the ocean. This one stays on the ground."
     },
     {
       "id": "ga-joke-clock",

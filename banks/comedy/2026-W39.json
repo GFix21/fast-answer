@@ -6,7 +6,7 @@
     "en": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T16:59:32.616Z",
+      "reviewedAt": "2026-09-23T19:06:39.600Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -763,6 +763,64 @@
           "renegade": false
         },
         {
+          "id": "cq-e-silent-adenauer",
+          "generation": "silent-generation",
+          "prompt": "Who was the first Chancellor of West Germany?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-marshall",
+          "generation": "silent-generation",
+          "prompt": "In which year did the Marshall Plan become law in the United States?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-boomer-gaye",
           "generation": "baby-boomer",
           "prompt": "Who released the album What's Going On in 1971?",
@@ -932,6 +990,64 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-parks",
+          "generation": "baby-boomer",
+          "prompt": "Whose arrest in Montgomery on December 1, 1955, started the bus boycott?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-gold",
+          "generation": "baby-boomer",
+          "prompt": "What is the chemical symbol for gold?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -1111,6 +1227,64 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genx-redspot",
+          "generation": "gen-x",
+          "prompt": "Which planet is known for the Great Red Spot?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-cdsale",
+          "generation": "gen-x",
+          "prompt": "In which year did the compact disc first go on sale?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-geny-wiki",
           "generation": "gen-y",
           "prompt": "Which website, launched in 2001, lets people write encyclopedia articles together?",
@@ -1280,6 +1454,64 @@
           "fresh": true,
           "funny": false,
           "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-canberra",
+          "generation": "gen-y",
+          "prompt": "What is the capital city of Australia?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-html",
+          "generation": "gen-y",
+          "prompt": "What does HTML stand for?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -1459,9 +1691,125 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genz-eleven",
+          "generation": "gen-z",
+          "prompt": "How many players from one team are on the field in a standard football match?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-mohs",
+          "generation": "gen-z",
+          "prompt": "What is the hardest natural mineral on the Mohs scale?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-h-alpha-planets",
           "generation": "gen-alpha",
           "prompt": "How many planets are in our solar system?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-alpha-leap",
+          "generation": "gen-alpha",
+          "prompt": "How many days are in a leap year?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-elephant",
+          "generation": "gen-alpha",
+          "prompt": "Which animal is the largest living land animal?",
           "rating": 90,
           "safety": {
             "bot": "Louis Liberty",
@@ -1636,6 +1984,64 @@
           "id": "cq-e-multi-stop",
           "generation": "multi-gen",
           "prompt": "How many sides does a standard stop sign have?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-pacific",
+          "generation": "multi-gen",
+          "prompt": "Which ocean is the largest on Earth?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-piano",
+          "generation": "multi-gen",
+          "prompt": "How many keys does a standard piano have?",
           "rating": 90,
           "safety": {
             "bot": "Louis Liberty",
@@ -2136,7 +2542,7 @@
     "fr": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T16:59:32.617Z",
+      "reviewedAt": "2026-09-23T19:06:39.601Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -2835,6 +3241,64 @@
           "renegade": false
         },
         {
+          "id": "cq-e-silent-adenauer",
+          "generation": "silent-generation",
+          "prompt": "Qui a été le premier chancelier de l'Allemagne de l'Ouest ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-marshall",
+          "generation": "silent-generation",
+          "prompt": "En quelle année le plan Marshall est-il devenu une loi aux États-Unis ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-boomer-gaye",
           "generation": "baby-boomer",
           "prompt": "Qui a sorti l'album What's Going On en 1971 ?",
@@ -3004,6 +3468,64 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-parks",
+          "generation": "baby-boomer",
+          "prompt": "L'arrestation de qui, à Montgomery le 1er décembre 1955, a lancé le boycott des bus ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-gold",
+          "generation": "baby-boomer",
+          "prompt": "Quel est le symbole chimique de l'or ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -3183,6 +3705,64 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genx-redspot",
+          "generation": "gen-x",
+          "prompt": "Quelle planète est connue pour la Grande Tache rouge ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-cdsale",
+          "generation": "gen-x",
+          "prompt": "En quelle année le disque compact a-t-il été mis en vente ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-geny-wiki",
           "generation": "gen-y",
           "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie à plusieurs ?",
@@ -3323,6 +3903,64 @@
           "fresh": true,
           "funny": false,
           "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-canberra",
+          "generation": "gen-y",
+          "prompt": "Quelle est la capitale de l'Australie ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-html",
+          "generation": "gen-y",
+          "prompt": "Que signifie le sigle HTML ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -3502,9 +4140,125 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genz-eleven",
+          "generation": "gen-z",
+          "prompt": "Combien de joueurs d'une équipe sont sur le terrain dans un match de football standard ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-mohs",
+          "generation": "gen-z",
+          "prompt": "Quel est le minéral naturel le plus dur sur l'échelle de Mohs ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-h-alpha-planets",
           "generation": "gen-alpha",
           "prompt": "Combien de planètes compte notre système solaire ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-alpha-leap",
+          "generation": "gen-alpha",
+          "prompt": "Combien de jours compte une année bissextile ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-elephant",
+          "generation": "gen-alpha",
+          "prompt": "Quel animal est le plus grand animal terrestre vivant ?",
           "rating": 90,
           "safety": {
             "bot": "Louis Liberty",
@@ -3679,6 +4433,64 @@
           "id": "cq-e-multi-stop",
           "generation": "multi-gen",
           "prompt": "Combien de côtés a un panneau stop standard ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-pacific",
+          "generation": "multi-gen",
+          "prompt": "Quel océan est le plus grand sur Terre ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-piano",
+          "generation": "multi-gen",
+          "prompt": "Combien de touches a un piano standard ?",
           "rating": 90,
           "safety": {
             "bot": "Louis Liberty",
@@ -4263,10 +5075,2546 @@
       "blocked": [],
       "weak": []
     },
+    "fr-CA": {
+      "bot": "Crack'd Kerr",
+      "week": "2026-W39",
+      "reviewedAt": "2026-09-23T19:06:39.602Z",
+      "fresh": [
+        {
+          "id": "cq-e-silent-radio",
+          "generation": "silent-generation",
+          "prompt": "Pourquoi la radio s'est assise près de la fenêtre ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « C'est quoi la couleur de la Statue de la Liberté aujourd'hui ? » L'autre répond…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « C'est quoi la couleur d'un taxi classique de New York ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-record",
+          "generation": "baby-boomer",
+          "prompt": "Pourquoi le disque est resté ami avec le tourne-disque ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-woodstock",
+          "generation": "baby-boomer",
+          "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Le festival de Woodstock a commencé quand ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genx-cassette",
+          "generation": "gen-x",
+          "prompt": "Pourquoi la cassette se sentait gênée ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-web",
+          "generation": "gen-x",
+          "prompt": "L'histoire semble partir ailleurs. La question reste : « Le Web a été ouvert au public quand ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-inbox",
+          "generation": "gen-y",
+          "prompt": "Pourquoi la boîte de réception est restée calme ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-euro",
+          "generation": "gen-y",
+          "prompt": "Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « Les billets et les pièces en euros sont entrés en circulation quand ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": false,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "Make it one playful question, not a lecture.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-emoji",
+          "generation": "gen-z",
+          "prompt": "Pourquoi l'emoji a fait un clin d'œil ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-bus",
+          "generation": "gen-z",
+          "prompt": "Les mêmes amis qu'avant. Ils reviennent à ceci : « C'est quoi la couleur d'un autobus scolaire standard aux États-Unis ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-alpha-cat",
+          "generation": "gen-alpha",
+          "prompt": "Comment on appelle un chat qui anime le quiz ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-alpha-backpack",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi le sac à dos avait l'air fier ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-pencil",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi le crayon s'est joint à l'équipe ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-bookmark",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi le signet restait calme dans l'histoire ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-alpha-frog",
+          "generation": "gen-alpha",
+          "prompt": "C'est quoi la couleur d'une grenouille le soir du micro ouvert ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-alpha-banana",
+          "generation": "gen-alpha",
+          "prompt": "L'histoire grossit. La question garde la même taille : « C'est quoi la couleur de la peau d'une banane mûre ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-compass",
+          "generation": "multi-gen",
+          "prompt": "Pourquoi la boussole s'est jointe au quiz ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-titanic",
+          "generation": "multi-gen",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « Le Titanic a coulé quand ? » L'autre répond…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-titanic-hull",
+          "generation": "multi-gen",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « C'est quoi la couleur de la coque du Titanic ? » L'autre répond…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": true
+        },
+        {
+          "id": "cq-e-multi-sky",
+          "generation": "multi-gen",
+          "prompt": "Un petit pas de côté, puis retour à la question : « C'est quoi la couleur d'un ciel clair en journée ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-roar",
+          "generation": "silent-generation",
+          "prompt": "Les années 1920 aux États-Unis portent quel surnom ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-assembly",
+          "generation": "silent-generation",
+          "prompt": "Dans quelle ville l'ONU a tenu sa première Assemblée générale en 1946 ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-empire",
+          "generation": "silent-generation",
+          "prompt": "L'Empire State Building a été achevé quand ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-adenauer",
+          "generation": "silent-generation",
+          "prompt": "Qui a été le premier chancelier de l'Allemagne de l'Ouest ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-marshall",
+          "generation": "silent-generation",
+          "prompt": "En quelle année le plan Marshall est devenu une loi aux États-Unis ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-gaye",
+          "generation": "baby-boomer",
+          "prompt": "Qui a lancé l'album What's Going On en 1971 ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-skylab",
+          "generation": "baby-boomer",
+          "prompt": "Quel était le nom de la première station spatiale de la NASA, lancée en 1973 ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-sesame",
+          "generation": "baby-boomer",
+          "prompt": "En quelle année Sesame Street a été diffusé pour la première fois aux États-Unis ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-earthday",
+          "generation": "baby-boomer",
+          "prompt": "En quelle année a eu lieu le premier Jour de la Terre ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-submarine",
+          "generation": "baby-boomer",
+          "prompt": "C'est quoi la couleur du sous-marin dans la chanson des Beatles ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-gate",
+          "generation": "baby-boomer",
+          "prompt": "C'est quoi la couleur du pont du Golden Gate ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-parks",
+          "generation": "baby-boomer",
+          "prompt": "L'arrestation de qui, à Montgomery le 1er décembre 1955, a lancé le boycott des autobus ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-gold",
+          "generation": "baby-boomer",
+          "prompt": "C'est quoi le symbole chimique de l'or ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genx-gameboy",
+          "generation": "gen-x",
+          "prompt": "Quelle console portative Nintendo a sortie en 1989 ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genx-pdf",
+          "generation": "gen-x",
+          "prompt": "PDF veut dire quoi ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-ram",
+          "generation": "gen-x",
+          "prompt": "RAM, dans un ordinateur, ça veut dire quoi ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-cd",
+          "generation": "gen-x",
+          "prompt": "CD, pour le format musical du début des années 1980, veut dire quoi ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-blinky",
+          "generation": "gen-x",
+          "prompt": "C'est quoi la couleur de Blinky, le fantôme de Pac-Man ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genx-tennis",
+          "generation": "gen-x",
+          "prompt": "C'est quoi la couleur d'une balle de tennis réglementaire ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genx-redspot",
+          "generation": "gen-x",
+          "prompt": "Quelle planète est connue pour la Grande Tache rouge ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-cdsale",
+          "generation": "gen-x",
+          "prompt": "En quelle année le disque compact a été mis en vente ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-wiki",
+          "generation": "gen-y",
+          "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie ensemble ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-sms",
+          "generation": "gen-y",
+          "prompt": "SMS veut dire quoi ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-iphone",
+          "generation": "gen-y",
+          "prompt": "Quelle compagnie a lancé le premier iPhone en 2007 ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-ocean",
+          "generation": "gen-y",
+          "prompt": "C'est quoi la couleur du Cœur de l'océan dans le film Titanic ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-potter",
+          "generation": "gen-y",
+          "prompt": "Le premier livre Harry Potter a été publié au Royaume-Uni quand ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-canberra",
+          "generation": "gen-y",
+          "prompt": "C'est quoi la capitale de l'Australie ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-html",
+          "generation": "gen-y",
+          "prompt": "HTML veut dire quoi ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-gif",
+          "generation": "gen-z",
+          "prompt": "GIF veut dire quoi ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-vr",
+          "generation": "gen-z",
+          "prompt": "VR, sur un casque, veut dire quoi ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-bytedance",
+          "generation": "gen-z",
+          "prompt": "Quelle compagnie possède TikTok ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-spotify",
+          "generation": "gen-z",
+          "prompt": "C'est quoi la couleur du cercle dans le logo Spotify ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-instagram",
+          "generation": "gen-z",
+          "prompt": "Instagram a été lancé quand ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-genz-eleven",
+          "generation": "gen-z",
+          "prompt": "Dans un match de soccer standard, une équipe a combien de joueurs sur le terrain ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-mohs",
+          "generation": "gen-z",
+          "prompt": "C'est quoi le minéral naturel le plus dur sur l'échelle de Mohs ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-planets",
+          "generation": "gen-alpha",
+          "prompt": "Notre système solaire compte combien de planètes ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-alpha-leap",
+          "generation": "gen-alpha",
+          "prompt": "Une année bissextile a combien de jours ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-elephant",
+          "generation": "gen-alpha",
+          "prompt": "C'est quoi le plus grand animal terrestre vivant ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-guitar",
+          "generation": "multi-gen",
+          "prompt": "Une guitare standard a combien de cordes ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-boil",
+          "generation": "multi-gen",
+          "prompt": "Le point d'ébullition de l'eau au niveau de la mer, en Celsius, c'est quoi ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-photo",
+          "generation": "multi-gen",
+          "prompt": "Quel gaz les plantes prennent pendant la photosynthèse ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-pitch",
+          "generation": "multi-gen",
+          "prompt": "Combien de joueurs d'une équipe de soccer sont sur le terrain en même temps ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-eclipse",
+          "generation": "multi-gen",
+          "prompt": "C'est quoi la couleur de la Lune pendant une éclipse lunaire totale ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-stop",
+          "generation": "multi-gen",
+          "prompt": "Un panneau d'arrêt standard a combien de côtés ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-pacific",
+          "generation": "multi-gen",
+          "prompt": "C'est quoi le plus grand océan sur la Terre ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-piano",
+          "generation": "multi-gen",
+          "prompt": "Un piano standard a combien de touches ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "ga-joke-clock",
+          "generation": "gen-alpha",
+          "prompt": "C'est quoi qui a des aiguilles et qui donne l'heure ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "ga-joke-bear",
+          "generation": "gen-alpha",
+          "prompt": "Comment on appelle un ours sans dents ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "ga-joke-math",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi le livre de maths est triste ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "ga-joke-ocean",
+          "generation": "gen-alpha",
+          "prompt": "Que dit l'océan à la plage ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "ga-joke-flamingo",
+          "generation": "gen-alpha",
+          "prompt": "Comment on appelle un groupe de flamants roses ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "ga-joke-octopus",
+          "generation": "gen-alpha",
+          "prompt": "Combien de cœurs a une pieuvre ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "ga-joke-scarecrow",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi l'épouvantail a reçu un prix ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "ga-joke-homework",
+          "generation": "gen-alpha",
+          "prompt": "Pourquoi l'élève a mangé ses devoirs ?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-vote",
+          "generation": "silent-generation",
+          "prompt": "Quel amendement de la Constitution des États-Unis, ratifié en 1920, reconnaît le droit de vote des femmes ?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-chamberlain",
+          "generation": "silent-generation",
+          "prompt": "Qui était le premier ministre du Royaume-Uni quand la Grande-Bretagne a déclaré la guerre à l'Allemagne en 1939 ?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-facebook",
+          "generation": "gen-y",
+          "prompt": "En quelle année Facebook a ouvert l'inscription au-delà des écoles, à toute personne de 13 ans ou plus ?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-hashtag",
+          "generation": "gen-z",
+          "prompt": "Comment on appelle le symbole # quand il regroupe des publications sur les réseaux sociaux ?",
+          "rating": 80,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        }
+      ],
+      "highestRated": [
+        {
+          "id": "cq-e-silent-radio",
+          "generation": "silent-generation",
+          "prompt": "Pourquoi la radio s'est assise près de la fenêtre ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « C'est quoi la couleur de la Statue de la Liberté aujourd'hui ? » L'autre répond…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « C'est quoi la couleur d'un taxi classique de New York ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-record",
+          "generation": "baby-boomer",
+          "prompt": "Pourquoi le disque est resté ami avec le tourne-disque ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-woodstock",
+          "generation": "baby-boomer",
+          "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Le festival de Woodstock a commencé quand ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "when",
+          "fromStructure": "when",
+          "humorous": true,
+          "renegade": false
+        }
+      ],
+      "viral": [
+        {
+          "id": "cq-e-silent-radio",
+          "generation": "silent-generation",
+          "prompt": "Pourquoi la radio s'est assise près de la fenêtre ?",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "joke",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-liberty",
+          "generation": "silent-generation",
+          "prompt": "Deux amis se promènent. L'un demande à l'autre : « C'est quoi la couleur de la Statue de la Liberté aujourd'hui ? » L'autre répond…",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-silent-taxi",
+          "generation": "silent-generation",
+          "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « C'est quoi la couleur d'un taxi classique de New York ? »",
+          "rating": 95,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": false
+            },
+            "notes": [
+              "Keep one short question and two to four concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": true,
+          "structure": "colour",
+          "fromStructure": "colour",
+          "humorous": true,
+          "renegade": false
+        }
+      ],
+      "blocked": [],
+      "weak": []
+    },
     "de": {
       "bot": "Crack'd Kerr",
       "week": "2026-W39",
-      "reviewedAt": "2026-09-23T16:59:32.619Z",
+      "reviewedAt": "2026-09-23T19:06:39.603Z",
       "fresh": [
         {
           "id": "cq-e-silent-radio",
@@ -4994,6 +8342,64 @@
           "renegade": false
         },
         {
+          "id": "cq-e-silent-adenauer",
+          "generation": "silent-generation",
+          "prompt": "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-silent-marshall",
+          "generation": "silent-generation",
+          "prompt": "In welchem Jahr wurde der Marshallplan in den USA Gesetz?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-boomer-gaye",
           "generation": "baby-boomer",
           "prompt": "Wer veröffentlichte 1971 das Album What's Going On?",
@@ -5163,6 +8569,64 @@
           "fresh": true,
           "funny": false,
           "structure": "colour",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-boomer-parks",
+          "generation": "baby-boomer",
+          "prompt": "Wessen Festnahme in Montgomery am 1. Dezember 1955 löste den Busboykott aus?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-boomer-gold",
+          "generation": "baby-boomer",
+          "prompt": "Welches chemische Zeichen steht für Gold?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -5342,6 +8806,64 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genx-redspot",
+          "generation": "gen-x",
+          "prompt": "Welcher Planet ist für den Großen Roten Fleck bekannt?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genx-cdsale",
+          "generation": "gen-x",
+          "prompt": "In welchem Jahr kam die Compact Disc erstmals in den Handel?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-e-geny-wiki",
           "generation": "gen-y",
           "prompt": "Welche Website, gestartet 2001, lässt Menschen Enzyklopädie-Artikel gemeinsam schreiben?",
@@ -5511,6 +9033,64 @@
           "fresh": true,
           "funny": false,
           "structure": "when",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-geny-canberra",
+          "generation": "gen-y",
+          "prompt": "Was ist die Hauptstadt Australiens?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-geny-html",
+          "generation": "gen-y",
+          "prompt": "Wofür steht HTML?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
           "fromStructure": "",
           "humorous": false,
           "renegade": false
@@ -5690,9 +9270,125 @@
           "renegade": false
         },
         {
+          "id": "cq-e-genz-eleven",
+          "generation": "gen-z",
+          "prompt": "Wie viele Spieler einer Mannschaft stehen bei einem üblichen Fußballspiel auf dem Feld?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-genz-mohs",
+          "generation": "gen-z",
+          "prompt": "Welches natürliche Mineral ist auf der Mohs-Skala das härteste?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
           "id": "cq-h-alpha-planets",
           "generation": "gen-alpha",
           "prompt": "Wie viele Planeten hat unser Sonnensystem?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-alpha-leap",
+          "generation": "gen-alpha",
+          "prompt": "Wie viele Tage hat ein Schaltjahr?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-alpha-elephant",
+          "generation": "gen-alpha",
+          "prompt": "Welches Tier ist das größte lebende Landtier?",
           "rating": 90,
           "safety": {
             "bot": "Louis Liberty",
@@ -5867,6 +9563,64 @@
           "id": "cq-e-multi-stop",
           "generation": "multi-gen",
           "prompt": "Wie viele Seiten hat ein übliches Stoppschild?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-e-multi-pacific",
+          "generation": "multi-gen",
+          "prompt": "Welcher Ozean ist der größte auf der Erde?",
+          "rating": 90,
+          "safety": {
+            "bot": "Louis Liberty",
+            "ok": true,
+            "reasons": [],
+            "shape": {
+              "fun": true,
+              "happy": true,
+              "calm": true,
+              "clear": true
+            },
+            "notes": [
+              "One short question with concrete choices.",
+              "The ask stays playful, which suits 13–16.",
+              "The extra line is kind, so a miss still feels light.",
+              "Nothing here threatens, shames, or asks for anything personal."
+            ]
+          },
+          "fresh": true,
+          "funny": false,
+          "structure": "",
+          "fromStructure": "",
+          "humorous": false,
+          "renegade": false
+        },
+        {
+          "id": "cq-h-multi-piano",
+          "generation": "multi-gen",
+          "prompt": "Wie viele Tasten hat ein gewöhnliches Klavier?",
           "rating": 90,
           "safety": {
             "bot": "Louis Liberty",

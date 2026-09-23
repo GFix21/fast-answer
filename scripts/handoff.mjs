@@ -3,7 +3,8 @@
  * Fast handoff: Q-and-A generation packs → live Fast Answer banks.
  *
  * Checks every generation is present on the weekly and placement packs
- * (EN / FR / DE), then writes questions.json + questions.{fr,de}.json
+ * (EN / France / Quebec / DE), then writes questions.json, questions.fr.json,
+ * questions.fr-CA.json, and questions.de.json.
  * with the generation tag kept. Also writes one generation pack file per
  * generation (target 150). A shortfall is recorded; it does not block handoff.
  *
@@ -35,7 +36,7 @@ import { isoWeek, weeklyComedyReview } from "../q-and-a/crackd-kerr.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const QANDA = path.resolve(ROOT, "../Q-and-A/banks");
-const LOCALES = ["en", "fr", "de"];
+const LOCALES = ["en", "fr", "fr-CA", "de"];
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));
@@ -120,11 +121,17 @@ for (const loc of LOCALES) {
 if (weekly.en && weekly.fr) {
   issues.push(...localeAlignIssues(weekly.en.pack.questions, weekly.fr.pack.questions, "fr weekly"));
 }
+if (weekly.en && weekly["fr-CA"]) {
+  issues.push(...localeAlignIssues(weekly.en.pack.questions, weekly["fr-CA"].pack.questions, "fr-CA weekly"));
+}
 if (weekly.en && weekly.de) {
   issues.push(...localeAlignIssues(weekly.en.pack.questions, weekly.de.pack.questions, "de weekly"));
 }
 if (placement.en && placement.fr) {
   issues.push(...localeAlignIssues(placement.en.pack.questions, placement.fr.pack.questions, "fr placement"));
+}
+if (placement.en && placement["fr-CA"]) {
+  issues.push(...localeAlignIssues(placement.en.pack.questions, placement["fr-CA"].pack.questions, "fr-CA placement"));
 }
 if (placement.en && placement.de) {
   issues.push(...localeAlignIssues(placement.en.pack.questions, placement.de.pack.questions, "de placement"));

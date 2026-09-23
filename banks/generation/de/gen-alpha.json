@@ -2,8 +2,8 @@
   "generation": "gen-alpha",
   "locale": "de",
   "target": 150,
-  "held": 29,
-  "shortfall": 121,
+  "held": 31,
+  "shortfall": 119,
   "ageYear": 2026,
   "born": [
     2010,
@@ -376,6 +376,38 @@
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-alpha-leap",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Extra-Tag",
+      "prompt": "Wie viele Tage hat ein Schaltjahr?",
+      "choices": [
+        "360",
+        "366",
+        "365",
+        "364"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Februar leiht sich einen Tag und gibt das Jahr zurück."
+    },
+    {
+      "id": "cq-h-alpha-elephant",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "An Land",
+      "prompt": "Welches Tier ist das größte lebende Landtier?",
+      "choices": [
+        "Blauwal",
+        "Giraffe",
+        "Eisbär",
+        "Afrikanischer Elefant"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Der Wal nimmt den Ozean. Dieses bleibt am Boden."
     },
     {
       "id": "ga-joke-clock",

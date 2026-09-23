@@ -3,21 +3,23 @@
   "weeks": [
     {
       "weekKey": "2026-W39",
-      "publishedAt": "2026-09-21T18:48:05.346Z",
+      "publishedAt": "2026-09-23T17:15:00.000Z",
       "counts": {
-        "easy": 40,
-        "hard": 40,
+        "easy": 86,
+        "hard": 73,
         "difficult": 10,
         "extreme": 6
       },
       "studioCounts": {
-        "easy": 40,
-        "hard": 40,
+        "easy": 86,
+        "hard": 73,
         "difficult": 10,
         "finale": 6
       },
-      "questionCount": 96
+      "questionCount": 175,
+      "weekTarget": 1050,
+      "weekComplete": false
     }
   ],
-  "updatedAt": "2026-09-21T18:48:05.346Z"
+  "updatedAt": "2026-09-23T17:15:00.000Z"
 }

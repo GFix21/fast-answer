@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "de",
   "target": 150,
-  "held": 22,
-  "shortfall": 128,
+  "held": 24,
+  "shortfall": 126,
   "ageYear": 2026,
   "born": [
     1928,
@@ -410,6 +410,38 @@
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-silent-adenauer",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Erster Kanzler",
+      "prompt": "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
+      "choices": [
+        "Helmut Kohl",
+        "Helmut Schmidt",
+        "Willy Brandt",
+        "Konrad Adenauer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Er übernahm den Stuhl 1949 und behielt ihn lange."
+    },
+    {
+      "id": "cq-h-silent-marshall",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Aufbaugesetz",
+      "prompt": "In welchem Jahr wurde der Marshallplan in den USA Gesetz?",
+      "choices": [
+        "1945",
+        "1948",
+        "1953",
+        "1951"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Der Krieg war vorbei. Der Aufbau hat ein Startdatum."
     }
   ]
 }

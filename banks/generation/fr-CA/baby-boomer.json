@@ -1,6 +1,6 @@
 {
   "generation": "baby-boomer",
-  "locale": "de",
+  "locale": "fr-CA",
   "target": 150,
   "held": 24,
   "shortfall": 126,
@@ -45,11 +45,11 @@
       "tier": "easy",
       "topic": "sci-fi",
       "generation": "baby-boomer",
-      "categoryTitle": "Ein kleiner Schritt",
-      "prompt": "Wer war der erste Mensch auf dem Mond?",
+      "categoryTitle": "Un petit pas",
+      "prompt": "Qui a été la première personne à marcher sur la Lune ?",
       "choices": [
         "John Glenn",
-        "Juri Gagarin",
+        "Youri Gagarine",
         "Buzz Aldrin",
         "Neil Armstrong"
       ],
@@ -61,8 +61,8 @@
       "tier": "easy",
       "topic": "sci-fi",
       "generation": "baby-boomer",
-      "categoryTitle": "Apollo-Uhr",
-      "prompt": "In welchem Jahr landete Apollo 11 auf dem Mond?",
+      "categoryTitle": "Horloge Apollo",
+      "prompt": "En quelle année Apollo 11 s’est posé sur la Lune ?",
       "choices": [
         "1965",
         "1972",
@@ -77,12 +77,12 @@
       "tier": "easy",
       "topic": "music",
       "generation": "baby-boomer",
-      "categoryTitle": "Festival-Folklore",
-      "prompt": "In welchem US-Bundesstaat fand das Woodstock-Festival 1969 statt?",
+      "categoryTitle": "Folklore festivalier",
+      "prompt": "Dans quel État américain s’est tenu le festival de Woodstock en 1969 ?",
       "choices": [
-        "Kalifornien",
+        "Californie",
         "New York",
-        "Florida",
+        "Floride",
         "Texas"
       ],
       "correctIndex": 1,
@@ -93,8 +93,8 @@
       "tier": "easy",
       "topic": "music",
       "generation": "baby-boomer",
-      "categoryTitle": "Sullivan-Sonntag",
-      "prompt": "Welche britische Band sorgte 1964 in The Ed Sullivan Show für Furore in den USA?",
+      "categoryTitle": "Dimanche Sullivan",
+      "prompt": "Quel groupe britannique a fait sensation aux États-Unis dans The Ed Sullivan Show en 1964 ?",
       "choices": [
         "The Beatles",
         "The Who",
@@ -109,8 +109,8 @@
       "tier": "easy",
       "topic": "sci-fi",
       "generation": "baby-boomer",
-      "categoryTitle": "Brücken-Banter",
-      "prompt": "Wer befehligte das Raumschiff Enterprise in der Originalserie Star Trek?",
+      "categoryTitle": "Banter sur le pont",
+      "prompt": "Qui commandait le vaisseau Enterprise dans la série originale Star Trek ?",
       "choices": [
         "James T. Kirk",
         "Han Solo",
@@ -125,8 +125,8 @@
       "tier": "easy",
       "topic": "cars",
       "generation": "baby-boomer",
-      "categoryTitle": "Petrolhead-Quiz",
-      "prompt": "Wofür steht die Abkürzung ABS bei Kfz-Sicherheitssystemen?",
+      "categoryTitle": "Quiz du petrolhead",
+      "prompt": "Que signifie l’abréviation ABS dans les systèmes de sécurité automobile ?",
       "choices": [
         "Axle Balance Sensor",
         "Advanced Battery Switch",
@@ -141,8 +141,8 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "Camelot-Uhr",
-      "prompt": "In welchem Jahr wurde der US-Präsident John F. Kennedy ermordet?",
+      "categoryTitle": "Horloge Camelot",
+      "prompt": "En quelle année le président américain John F. Kennedy a été assassiné ?",
       "choices": [
         "1968",
         "1972",
@@ -157,8 +157,8 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "Marsch-Erinnerung",
-      "prompt": "In welcher Stadt hielt Martin Luther King Jr. die Rede „I Have a Dream“?",
+      "categoryTitle": "Mémoire de la marche",
+      "prompt": "Le discours « I Have a Dream » de Martin Luther King Jr. a été prononcé dans quelle ville ?",
       "choices": [
         "Selma",
         "Memphis",
@@ -173,8 +173,8 @@
       "tier": "hard",
       "topic": "music",
       "generation": "baby-boomer",
-      "categoryTitle": "Abbey-Noten",
-      "prompt": "Welches Beatles-Album enthält die Songs „Come Together“ und „Here Comes the Sun“?",
+      "categoryTitle": "Notes d’Abbey",
+      "prompt": "Quel album des Beatles contient les chansons « Come Together » et « Here Comes the Sun » ?",
       "choices": [
         "Let It Be",
         "Help!",
@@ -190,7 +190,7 @@
       "topic": "culture",
       "generation": "baby-boomer",
       "categoryTitle": "Rope-a-Dope",
-      "prompt": "Unter welchem Namen wurde Muhammad Ali geboren?",
+      "prompt": "Sous quel nom Muhammad Ali est né ?",
       "choices": [
         "Cassius Clay",
         "Sugar Ray Robinson",
@@ -205,13 +205,13 @@
       "tier": "hard",
       "topic": "cars",
       "generation": "baby-boomer",
-      "categoryTitle": "Überschall-Nebenquest",
-      "prompt": "Die Concorde war ein berühmtes Beispiel für welche Art von Passagierflugzeug?",
+      "categoryTitle": "Quête secondaire supersonique",
+      "prompt": "Concorde était un exemple célèbre de quel type d’avion de passagers ?",
       "choices": [
-        "Cargo-Luftschiff",
-        "Heißluftballon",
-        "Überschall-Verkehrsflugzeug",
-        "Helikopterfähre"
+        "Dirigeable cargo",
+        "Montgolfière",
+        "Avion de ligne supersonique",
+        "Ferry hélicoptère"
       ],
       "correctIndex": 2,
       "banterHint": null
@@ -221,8 +221,8 @@
       "tier": "hard",
       "topic": "sci-fi",
       "generation": "baby-boomer",
-      "categoryTitle": "Galaxie-Premiere",
-      "prompt": "In welchem Jahr kam der originale Star-Wars-Film (später Eine neue Hoffnung) heraus?",
+      "categoryTitle": "Première galactique",
+      "prompt": "En quelle année le film original Star Wars (plus tard Un nouvel espoir) est sorti ?",
       "choices": [
         "1980",
         "1977",
@@ -237,8 +237,8 @@
       "tier": "difficult",
       "topic": "sci-fi",
       "generation": "baby-boomer",
-      "categoryTitle": "Versagen ist keine…",
-      "prompt": "In welchem Jahr explodierte der Sauerstofftank von Apollo 13?",
+      "categoryTitle": "L’échec n’est pas…",
+      "prompt": "L’explosion du réservoir d’oxygène d’Apollo 13 s’est produite en quelle année ?",
       "choices": [
         "1968",
         "1972",
@@ -253,8 +253,8 @@
       "tier": "extreme",
       "topic": "sci-fi",
       "generation": "baby-boomer",
-      "categoryTitle": "Finale · Mondzeile",
-      "prompt": "Vervollständigen Sie Neil Armstrongs Mondsatz: „That’s one small step for [a] man, one giant leap for ___.“",
+      "categoryTitle": "Finale · Réplique lunaire",
+      "prompt": "Complétez la phrase de Neil Armstrong sur la Lune : « That’s one small step for [a] man, one giant leap for ___ . »",
       "choices": [
         "NASA",
         "Texas",
@@ -269,8 +269,8 @@
       "tier": "easy",
       "topic": "music",
       "generation": "baby-boomer",
-      "categoryTitle": "Soul-Stunde",
-      "prompt": "Wer veröffentlichte 1971 das Album What's Going On?",
+      "categoryTitle": "Heure soul",
+      "prompt": "Qui a lancé l'album What's Going On en 1971 ?",
       "choices": [
         "Sam Cooke",
         "Stevie Wonder",
@@ -278,31 +278,31 @@
         "Otis Redding"
       ],
       "correctIndex": 2,
-      "banterHint": "Die Fragen auf der Platte gelten noch."
+      "banterHint": "Les questions de ce disque tiennent encore."
     },
     {
       "id": "cq-e-boomer-skylab",
       "tier": "easy",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "Werkstatt im Orbit",
-      "prompt": "Wie hieß die erste Raumstation der NASA, gestartet 1973?",
+      "categoryTitle": "Atelier en orbite",
+      "prompt": "Quel était le nom de la première station spatiale de la NASA, lancée en 1973 ?",
       "choices": [
-        "Saljut",
+        "Saliout",
         "Freedom",
         "Skylab",
         "Mir"
       ],
       "correctIndex": 2,
-      "banterHint": "Eine Werkstatt mit sehr langem Arbeitsweg."
+      "banterHint": "Un atelier avec un très long trajet."
     },
     {
       "id": "cq-h-boomer-sesame",
       "tier": "hard",
       "topic": "film-tv",
       "generation": "baby-boomer",
-      "categoryTitle": "Straßenpremiere",
-      "prompt": "In welchem Jahr lief Sesame Street zum ersten Mal in den USA?",
+      "categoryTitle": "Première dans la rue",
+      "prompt": "En quelle année Sesame Street a été diffusé pour la première fois aux États-Unis ?",
       "choices": [
         "1974",
         "1965",
@@ -310,15 +310,15 @@
         "1979"
       ],
       "correctIndex": 2,
-      "banterHint": "Die Straße öffnete gegen Ende der Sechziger."
+      "banterHint": "La rue a ouvert vers la fin des années soixante."
     },
     {
       "id": "cq-h-boomer-earthday",
       "tier": "hard",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "Erster grüner Tag",
-      "prompt": "In welchem Jahr fand der erste Earth Day statt?",
+      "categoryTitle": "Premier jour vert",
+      "prompt": "En quelle année a eu lieu le premier Jour de la Terre ?",
       "choices": [
         "1962",
         "1970",
@@ -326,23 +326,23 @@
         "1984"
       ],
       "correctIndex": 1,
-      "banterHint": "Der Planet bekam ein Datum im Kalender."
+      "banterHint": "La planète a eu une date au calendrier."
     },
     {
       "id": "cq-h-boomer-record",
       "tier": "hard",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "Noch eine Runde",
-      "prompt": "Warum blieb die Schallplatte mit dem Spieler befreundet?",
+      "categoryTitle": "Encore un tour",
+      "prompt": "Pourquoi le disque est resté ami avec le tourne-disque ?",
       "choices": [
-        "Sie versteckte sich in der Hülle",
-        "Sie verlor das Etikett",
-        "Sie kam immer wieder herum",
-        "Sie übersprang den Refrain"
+        "Il se cachait dans la pochette",
+        "Il a perdu l'étiquette",
+        "Il revenait toujours",
+        "Il sautait le refrain"
       ],
       "correctIndex": 2,
-      "banterHint": "Das nächste Lied kam trotzdem dran.",
+      "banterHint": "La chanson suivante a eu son tour.",
       "funny": true,
       "structure": "joke"
     },
@@ -351,16 +351,16 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "Unter dem Meer",
-      "prompt": "Welche Farbe hat das U-Boot im Beatles-Lied?",
+      "categoryTitle": "Sous la mer",
+      "prompt": "C'est quoi la couleur du sous-marin dans la chanson des Beatles ?",
       "choices": [
-        "Blau",
-        "Grün",
-        "Gelb",
-        "Rot"
+        "Bleu",
+        "Vert",
+        "Jaune",
+        "Rouge"
       ],
       "correctIndex": 2,
-      "banterHint": "Der Titel verrät schon die Farbe.",
+      "banterHint": "Le titre donne déjà la peinture.",
       "structure": "colour"
     },
     {
@@ -368,16 +368,16 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "Spannweite",
-      "prompt": "Welche Farbe hat die Golden Gate Bridge?",
+      "categoryTitle": "Travée",
+      "prompt": "C'est quoi la couleur du pont du Golden Gate ?",
       "choices": [
-        "Rot",
-        "Blau",
-        "Gold",
-        "International Orange"
+        "Rouge",
+        "Bleu",
+        "Or",
+        "Orange international"
       ],
       "correctIndex": 3,
-      "banterHint": "Der Name klingt nach Gold. Die Farbe ist die andere.",
+      "banterHint": "Le nom sonne comme l'or. La peinture est l'autre.",
       "structure": "colour"
     },
     {
@@ -385,16 +385,16 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "Das Feld",
-      "prompt": "Erster Tipp, falsch. Zweiter Tipp, falsch. Dann die echte Frage: „Wann begann das Woodstock-Festival?“",
+      "categoryTitle": "Le champ",
+      "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Le festival de Woodstock a commencé quand ? »",
       "choices": [
-        "15. August 1969",
-        "4. Juli, als das Feuerwerk dachte, es sei die Band",
-        "1. Juni, einen Monat zu früh und schon matschig",
-        "15. August 1967"
+        "15 août 1969",
+        "4 juillet, quand les feux d'artifice se prenaient pour le groupe",
+        "1er juin, un mois trop tôt et déjà boueux",
+        "15 août 1967"
       ],
       "correctIndex": 0,
-      "banterHint": "Zwei falsche Daten, dann der Freitag der Eröffnung.",
+      "banterHint": "Deux mauvaises dates, puis le vendredi d'ouverture.",
       "funny": true,
       "humorous": true,
       "injection": "rule-of-three",
@@ -410,8 +410,8 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "1. Dezember",
-      "prompt": "Wessen Festnahme in Montgomery am 1. Dezember 1955 löste den Busboykott aus?",
+      "categoryTitle": "1er décembre",
+      "prompt": "L'arrestation de qui, à Montgomery le 1er décembre 1955, a lancé le boycott des autobus ?",
       "choices": [
         "Rosa Parks",
         "Dorothy Height",
@@ -419,15 +419,15 @@
         "Claudette Colvin"
       ],
       "correctIndex": 0,
-      "banterHint": "Der Platz blieb besetzt. Der Boykott folgte."
+      "banterHint": "La place est restée prise. Le boycott a suivi."
     },
     {
       "id": "cq-h-boomer-gold",
       "tier": "hard",
       "topic": "culture",
       "generation": "baby-boomer",
-      "categoryTitle": "Element",
-      "prompt": "Welches chemische Zeichen steht für Gold?",
+      "categoryTitle": "Élément",
+      "prompt": "C'est quoi le symbole chimique de l'or ?",
       "choices": [
         "Au",
         "Ag",
@@ -435,7 +435,7 @@
         "Cu"
       ],
       "correctIndex": 0,
-      "banterHint": "Silber ist der Nachbar in der Tabelle."
+      "banterHint": "L'argent est le voisin sur le tableau."
     }
   ]
 }

@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "en",
   "target": 150,
-  "held": 23,
-  "shortfall": 127,
+  "held": 25,
+  "shortfall": 125,
   "ageYear": 2026,
   "born": [
     1965,
@@ -416,6 +416,38 @@
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-genx-redspot",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Storm",
+      "prompt": "Which planet is known for the Great Red Spot?",
+      "choices": [
+        "Jupiter",
+        "Venus",
+        "Saturn",
+        "Mars"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The spot is a storm that has outlasted a lot of weather reports."
+    },
+    {
+      "id": "cq-h-genx-cdsale",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silver Disc",
+      "prompt": "In which year did the compact disc first go on sale?",
+      "choices": [
+        "1988",
+        "1977",
+        "1982",
+        "1991"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The shiny circle arrived before the playlist apps."
     }
   ]
 }

@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "de",
   "target": 150,
-  "held": 23,
-  "shortfall": 127,
+  "held": 25,
+  "shortfall": 125,
   "ageYear": 2026,
   "born": [
     1997,
@@ -412,6 +412,38 @@
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-genz-eleven",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Startelf",
+      "prompt": "Wie viele Spieler einer Mannschaft stehen bei einem üblichen Fußballspiel auf dem Feld?",
+      "choices": [
+        "10",
+        "9",
+        "11",
+        "15"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Bank schaut zu. Gezählt werden die auf dem Rasen."
+    },
+    {
+      "id": "cq-h-genz-mohs",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Härte",
+      "prompt": "Welches natürliche Mineral ist auf der Mohs-Skala das härteste?",
+      "choices": [
+        "Quarz",
+        "Korund",
+        "Diamant",
+        "Topas"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Skala endet bei zehn. Dieses sitzt dort."
     }
   ]
 }

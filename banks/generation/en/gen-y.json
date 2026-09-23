@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "en",
   "target": 150,
-  "held": 23,
-  "shortfall": 127,
+  "held": 25,
+  "shortfall": 125,
   "ageYear": 2026,
   "born": [
     1981,
@@ -416,6 +416,38 @@
         1,
         3
       ]
+    },
+    {
+      "id": "cq-e-geny-canberra",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital city of Australia?",
+      "choices": [
+        "Melbourne",
+        "Sydney",
+        "Canberra",
+        "Brisbane"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The harbour city is famous. The capital is the planned one."
+    },
+    {
+      "id": "cq-h-geny-html",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Page Language",
+      "prompt": "What does HTML stand for?",
+      "choices": [
+        "Home Tool Markup Language",
+        "High Transfer Mail Link",
+        "HyperText Markup Language",
+        "Hyperlink Text Main Language"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The page you are reading is written in it."
     }
   ]
 }

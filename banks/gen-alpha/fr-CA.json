@@ -18,7 +18,7 @@
       "banterHint": "Elle peut quand même faire coucou.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-bear",
@@ -37,7 +37,7 @@
       "banterHint": "Toujours collant. Bien plus gentil.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-math",
@@ -56,7 +56,7 @@
       "banterHint": "Le marque-page lui a fait un câlin.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-ocean",
@@ -75,7 +75,7 @@
       "banterHint": "La plage a répondu d'un signe.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-flamingo",
@@ -94,7 +94,7 @@
       "banterHint": "Ils étaient habillés pour l'occasion.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-octopus",
@@ -113,7 +113,7 @@
       "banterHint": "Huit bras, trois cœurs, aucune hâte.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-scarecrow",
@@ -132,7 +132,7 @@
       "banterHint": "Les corbeaux ont ouvert un fan-club.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-homework",
@@ -151,7 +151,7 @@
       "banterHint": "Le dessert comptait en bonus.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     }
   ]
 }

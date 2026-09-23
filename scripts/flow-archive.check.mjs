@@ -10,18 +10,53 @@ import { normalizeFlowLocale } from "../lib/flow-locale.js";
 import { loadCurrentPack } from "../lib/week-store.js";
 import { loadPlacementPack } from "../lib/placement-store.js";
 import { t } from "../flow/strings.js";
+import { languageSwitcherHtml, normalizeLocale, questionsUrl } from "../i18n.js";
+import { WEEK_TARGET, nextIsoWeek, monthKeyForWeek, openWeekKey } from "../lib/week-roll.js";
+import { reviewStatus } from "../lib/review-status.js";
 
 assert.equal(normalizeFlowLocale("fr-CA"), "fr-CA");
 assert.equal(normalizeFlowLocale("fr-ca"), "fr-CA");
 assert.equal(normalizeFlowLocale("fr"), "fr");
 assert.notEqual(normalizeFlowLocale("fr-CA"), normalizeFlowLocale("fr"));
 
-for (const loc of ["fr", "fr-CA", "de"]) {
+assert.equal(normalizeLocale("fr-CA"), "fr-CA");
+assert.equal(normalizeLocale("fr-ca"), "fr-CA");
+assert.equal(normalizeLocale("fr"), "fr");
+assert.equal(questionsUrl("fr-CA"), "./questions.fr-CA.json");
+assert.equal(questionsUrl("fr"), "./questions.fr.json");
+const switcher = languageSwitcherHtml("fr");
+assert.match(switcher, /data-locale="fr"/);
+assert.match(switcher, /data-locale="fr-CA"/);
+assert.match(switcher, />France</);
+assert.match(switcher, />Québec</);
+
+assert.equal(WEEK_TARGET, 1050);
+assert.equal(nextIsoWeek("2026-W39"), "2026-W40");
+assert.equal(nextIsoWeek("2026-W52"), "2026-W53");
+assert.equal(nextIsoWeek("2026-W53"), "2027-W01");
+assert.equal(monthKeyForWeek("2026-W39"), "2026-09");
+assert.equal(openWeekKey("2026-W39", 175), "2026-W39");
+assert.equal(openWeekKey("2026-W39", 1050), "2026-W40");
+assert.equal(reviewStatus({ id: "a", status: "pending" }, {}), "active");
+assert.equal(reviewStatus({ id: "a", status: "rejected" }, {}), "rejected");
+
+const live = JSON.parse(fs.readFileSync(new URL("../questions.json", import.meta.url), "utf8"));
+const liveQc = JSON.parse(fs.readFileSync(new URL("../questions.fr-CA.json", import.meta.url), "utf8"));
+assert.equal(liveQc.length, live.length);
+const liveFr = JSON.parse(fs.readFileSync(new URL("../questions.fr.json", import.meta.url), "utf8"));
+const byLive = (rows, id) => rows.find((q) => q.id === id);
+assert.notEqual(byLive(liveFr, "cq-e-multi-titanic").prompt, byLive(liveQc, "cq-e-multi-titanic").prompt);
+assert.match(byLive(liveQc, "cq-h-multi-pitch").prompt, /soccer/);
+
+for (const loc of ["en", "fr", "fr-CA", "de"]) {
   const months = listArchiveMonths(loc);
-  assert.equal(months[0].questionCount, 161, loc);
+  assert.equal(months[0].questionCount, live.length, loc);
   const week = loadArchivedWeek("2026-09", "2026-W39", loc);
-  assert.equal(week.questions.length, 161, loc);
+  assert.equal(week.questions.length, live.length, loc);
   assert.equal(week.locale, loc);
+  assert.equal(week.weekTarget, 1050, loc);
+  assert.equal(week.weekComplete, false, loc);
+  assert.ok(week.questions.every((q) => q.status === "active"), loc);
 }
 
 const fr = loadArchivedWeek("2026-09", "2026-W39", "fr");

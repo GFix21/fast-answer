@@ -5,6 +5,8 @@
   "inspirationSummary": "America/Toronto-Woche 2026-W39 — 40/40/10/6 über Themen; DJ Gigi easy-only; sechs Generationen im Mix (nicht 96×6); PG-13; ≥2 Quellen pro Item.",
   "locale": "de",
   "schemaVersion": 1,
+  "weekTarget": 1050,
+  "weekComplete": false,
   "questions": [
     {
       "banterHint": "Drei kleine Wörter. Große Hüte.",
@@ -29,7 +31,7 @@
           "label": "Smithsonian / presidential campaign history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-silent-fdr",
@@ -53,7 +55,7 @@
           "label": "Encyclopædia Britannica — World War II"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Nein, keine Kristallkugel.",
@@ -78,7 +80,7 @@
           "label": "IEEE / transistor history primers"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-silent-elvis",
@@ -102,7 +104,7 @@
           "label": "Rock & Roll Hall of Fame biography"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-silent-ottawa",
@@ -126,7 +128,7 @@
           "label": "Government of Canada — capital city"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-silent-road",
@@ -150,7 +152,7 @@
           "label": "Library of Congress / Beat Generation primers"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-moon",
@@ -174,7 +176,7 @@
           "label": "NASA Apollo 11 mission summary"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-apollo",
@@ -198,7 +200,7 @@
           "label": "NASA official mission timeline"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-woodstock",
@@ -222,7 +224,7 @@
           "label": "Bethel Woods Center for the Arts history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-beatles",
@@ -246,7 +248,7 @@
           "label": "Beatles official chronology / CBS archives"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-kirk",
@@ -270,7 +272,7 @@
           "label": "Star Trek: The Original Series credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-abs",
@@ -294,7 +296,7 @@
           "label": "NHTSA / automotive safety primers"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genx-mtv",
@@ -318,7 +320,7 @@
           "label": "Billboard / cable launch retrospectives"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Great Scott — Strom, kein Obst.",
@@ -343,7 +345,7 @@
           "label": "Film dialogue / Universal Pictures"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Hamster. Ja. Wissen wir.",
@@ -368,7 +370,7 @@
           "label": "BBC Top Gear / Amazon Grand Tour production notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genx-may",
@@ -392,7 +394,7 @@
           "label": "Top Gear / Grand Tour episode credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genx-tetris",
@@ -416,7 +418,7 @@
           "label": "Encyclopædia Britannica — Tetris"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genx-simpsons",
@@ -440,7 +442,7 @@
           "label": "Fox / series production materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-matrix",
@@ -464,7 +466,7 @@
           "label": "Warner Bros. film synopsis"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-ipod",
@@ -488,7 +490,7 @@
           "label": "Apple press archive — Oct 2001"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-luke",
@@ -512,7 +514,7 @@
           "label": "Star Wars: A New Hope (1977) film"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-gmg",
@@ -536,7 +538,7 @@
           "label": "Montréal music-label listings"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-gigi",
@@ -560,7 +562,7 @@
           "label": "DJ Gigi public artist pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Ja, das war die leichte Frage.",
@@ -585,7 +587,7 @@
           "label": "Stanford / company founding history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-fortnite",
@@ -609,7 +611,7 @@
           "label": "Epic Games Fortnite overview"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-spotify",
@@ -633,7 +635,7 @@
           "label": "Company About / Stockholm HQ materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-tiktok",
@@ -657,7 +659,7 @@
           "label": "ByteDance product descriptions"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-france",
@@ -681,7 +683,7 @@
           "label": "Encyclopædia Britannica — France"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-gigi2",
@@ -705,7 +707,7 @@
           "label": "DJ Gigi public bio notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-marvel",
@@ -729,7 +731,7 @@
           "label": "Marvel Studios / Disney release history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-yt",
@@ -753,7 +755,7 @@
           "label": "Google / YouTube About pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-tablet",
@@ -777,7 +779,7 @@
           "label": "Apple iPad product pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-dory",
@@ -801,7 +803,7 @@
           "label": "Pixar / Disney film materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Wenn das daneben geht, braucht Jeremy einen Kaffee.",
@@ -826,7 +828,7 @@
           "label": "NASA solar system overview"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-lego",
@@ -850,7 +852,7 @@
           "label": "LEGO Group company history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-cars",
@@ -874,7 +876,7 @@
           "label": "Standard automotive design references"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-mix-japan",
@@ -898,7 +900,7 @@
           "label": "Encyclopædia Britannica — Japan"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-mix-mona",
@@ -922,7 +924,7 @@
           "label": "Louvre Museum collection notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-mix-gigi3",
@@ -946,7 +948,7 @@
           "label": "DJ Gigi public credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-mix-stig",
@@ -970,7 +972,7 @@
           "label": "BBC Top Gear programme notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-sputnik",
@@ -994,7 +996,7 @@
           "label": "NASA history — Space Race"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-hula",
@@ -1018,7 +1020,7 @@
           "label": "Wham-O company history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-polio",
@@ -1042,7 +1044,7 @@
           "label": "CDC / polio vaccine history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-korea",
@@ -1066,7 +1068,7 @@
           "label": "Encyclopædia Britannica — Korean War"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-interstate",
@@ -1090,7 +1092,7 @@
           "label": "FHWA interstate history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-disneyland",
@@ -1114,7 +1116,7 @@
           "label": "Disney Parks historical timeline"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-jfk",
@@ -1138,7 +1140,7 @@
           "label": "National Archives / JFK presidential library"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-mlk",
@@ -1162,7 +1164,7 @@
           "label": "National Park Service — Lincoln Memorial"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-beatles2",
@@ -1186,7 +1188,7 @@
           "label": "Apple Corps / Beatles discography"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-ali",
@@ -1210,7 +1212,7 @@
           "label": "Encyclopædia Britannica — Muhammad Ali"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-concorde",
@@ -1234,7 +1236,7 @@
           "label": "British Airways / Air France Concorde history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-starwars",
@@ -1258,7 +1260,7 @@
           "label": "Lucasfilm release history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-amazon-gt",
@@ -1282,7 +1284,7 @@
           "label": "Amazon MGM Studios / Prime Video listings"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-chernobyl",
@@ -1306,7 +1308,7 @@
           "label": "IAEA / Chernobyl historical summaries"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-nirvana",
@@ -1330,7 +1332,7 @@
           "label": "DGC Records / Nirvana discography"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-www",
@@ -1354,7 +1356,7 @@
           "label": "CERN WWW project history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-seinfeld",
@@ -1378,7 +1380,7 @@
           "label": "NBC series production notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-gameboy",
@@ -1402,7 +1404,7 @@
           "label": "Nintendo corporate history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-ipod-hd",
@@ -1426,7 +1428,7 @@
           "label": "Apple iPod (2001) technical specs"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-facebook",
@@ -1450,7 +1452,7 @@
           "label": "Meta / company founding history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-dune",
@@ -1474,7 +1476,7 @@
           "label": "Publisher / copyright records — Frank Herbert"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-gmg2",
@@ -1498,7 +1500,7 @@
           "label": "Montréal independent label listings"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-friends",
@@ -1522,7 +1524,7 @@
           "label": "NBC / Warner Bros. Television credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-hybrid",
@@ -1546,7 +1548,7 @@
           "label": "Toyota hybrid technology history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-fortnite2",
@@ -1570,7 +1572,7 @@
           "label": "Epic Games corporate pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-spotify2",
@@ -1594,7 +1596,7 @@
           "label": "Spotify About / company filings summaries"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-btsv",
@@ -1618,7 +1620,7 @@
           "label": "HYBE / official artist biographies"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-tesla",
@@ -1642,7 +1644,7 @@
           "label": "Company SEC / About Tesla materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-blackpanther",
@@ -1666,7 +1668,7 @@
           "label": "Marvel Studios credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-paris-acc",
@@ -1690,7 +1692,7 @@
           "label": "UNFCCC official materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-minecraft",
@@ -1714,7 +1716,7 @@
           "label": "Mojang / Xbox Game Studios history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-roblox",
@@ -1738,7 +1740,7 @@
           "label": "Roblox Corporation About pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-pixar",
@@ -1762,7 +1764,7 @@
           "label": "Pixar Animation Studios history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-among",
@@ -1786,7 +1788,7 @@
           "label": "Innersloth game description"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-ev",
@@ -1810,7 +1812,7 @@
           "label": "IEA / EV technology overviews"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-ghibli",
@@ -1834,7 +1836,7 @@
           "label": "Studio Ghibli official materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-mix-nile",
@@ -1858,7 +1860,7 @@
           "label": "Encyclopædia Britannica — Nile River"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-mix-van-gogh",
@@ -1882,7 +1884,7 @@
           "label": "MoMA collection notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-mix-v8",
@@ -1906,7 +1908,7 @@
           "label": "Automotive engineering primers"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-mix-hamilton",
@@ -1930,7 +1932,7 @@
           "label": "Official Hamilton / Miranda credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-silent-u2",
@@ -1954,7 +1956,7 @@
           "label": "CIA / Cold War aviation histories"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-boomer-apollo13",
@@ -1978,7 +1980,7 @@
           "label": "NASA Apollo 13 mission report"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Nach der BBC, bevor alle übers Campen stritten.",
@@ -2003,7 +2005,7 @@
           "label": "Contemporary reviews — Nov 2016 premiere"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-genx-berlin",
@@ -2027,7 +2029,7 @@
           "label": "Encyclopædia Britannica — Berlin Wall"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-geny-iphone",
@@ -2051,7 +2053,7 @@
           "label": "Apple special event — Jan 2007"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-geny-inception",
@@ -2075,7 +2077,7 @@
           "label": "Warner Bros. / film credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-genz-openai",
@@ -2099,7 +2101,7 @@
           "label": "OpenAI blog — Nov 2022 announcement"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-genz-parasite",
@@ -2123,7 +2125,7 @@
           "label": "Academy of Motion Picture Arts and Sciences records"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-alpha-switch",
@@ -2147,7 +2149,7 @@
           "label": "Nintendo corporate news — March 2017"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-mix-louvre",
@@ -2171,7 +2173,7 @@
           "label": "Louvre Museum architectural notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-silent-cool-wall",
@@ -2195,7 +2197,7 @@
           "label": "BBC Top Gear Cool Wall segments"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-boomer-armstrong-quote",
@@ -2219,7 +2221,7 @@
           "label": "NASA Apollo 11 transcript"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-genx-stig-reveal",
@@ -2243,7 +2245,7 @@
           "label": "Contemporary news — Ben Collins identification 2009"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-geny-matrix-arch",
@@ -2267,7 +2269,7 @@
           "label": "Warner Bros. Matrix trilogy materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-genz-fortnite-mode",
@@ -2291,7 +2293,7 @@
           "label": "Epic Games Fortnite mode history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-alpha-minecraft-biome",
@@ -2315,7 +2317,7 @@
           "label": "Minecraft Wiki — Warden / Deep Dark"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-silent-roar",
@@ -2349,7 +2351,7 @@
           "label": "Encyclopaedia Britannica — 1920s"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-silent-vote",
@@ -2383,7 +2385,7 @@
           "label": "Encyclopaedia Britannica — women's suffrage"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-silent-chamberlain",
@@ -2417,7 +2419,7 @@
           "label": "Encyclopaedia Britannica — Neville Chamberlain"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-silent-assembly",
@@ -2451,7 +2453,7 @@
           "label": "Encyclopaedia Britannica — United Nations"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-silent-radio",
@@ -2478,7 +2480,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-silent-liberty",
@@ -2512,7 +2514,7 @@
           "label": "Encyclopaedia Britannica — Statue of Liberty"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         2,
         3
@@ -2550,7 +2552,7 @@
           "label": "New York City Landmarks — Empire State Building"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-silent-taxi",
@@ -2584,11 +2586,79 @@
           "label": "Encyclopaedia Britannica — taxicab"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-silent-adenauer",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Erster Kanzler",
+      "prompt": "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
+      "choices": [
+        "Konrad Adenauer",
+        "Willy Brandt",
+        "Helmut Kohl",
+        "Helmut Schmidt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Er übernahm den Stuhl 1949 und behielt ihn lange.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "German Federal Archives — Konrad Adenauer"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Konrad Adenauer"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-silent-marshall",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Aufbaugesetz",
+      "prompt": "In welchem Jahr wurde der Marshallplan in den USA Gesetz?",
+      "choices": [
+        "1948",
+        "1945",
+        "1951",
+        "1953"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Krieg war vorbei. Der Aufbau hat ein Startdatum.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US National Archives — Marshall Plan"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Marshall Plan"
+        }
+      ],
+      "status": "active"
     },
     {
       "id": "cq-e-boomer-gaye",
@@ -2622,7 +2692,7 @@
           "label": "Encyclopaedia Britannica — Marvin Gaye"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-boomer-skylab",
@@ -2656,7 +2726,7 @@
           "label": "Encyclopaedia Britannica — space stations"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-boomer-sesame",
@@ -2690,7 +2760,7 @@
           "label": "Library of Congress — television history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-boomer-earthday",
@@ -2724,7 +2794,7 @@
           "label": "U.S. EPA — Earth Day"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-boomer-record",
@@ -2751,7 +2821,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-boomer-submarine",
@@ -2785,7 +2855,7 @@
           "label": "Library of Congress — Yellow Submarine"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-boomer-gate",
@@ -2819,7 +2889,7 @@
           "label": "Encyclopaedia Britannica — Golden Gate Bridge"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-boomer-woodstock",
@@ -2853,11 +2923,79 @@
           "label": "Encyclopaedia Britannica — Woodstock"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-boomer-parks",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "1. Dezember",
+      "prompt": "Wessen Festnahme in Montgomery am 1. Dezember 1955 löste den Busboykott aus?",
+      "choices": [
+        "Rosa Parks",
+        "Claudette Colvin",
+        "Ella Baker",
+        "Dorothy Height"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Platz blieb besetzt. Der Boykott folgte.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US National Archives — Rosa Parks"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Montgomery bus boycott"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-boomer-gold",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Element",
+      "prompt": "Welches chemische Zeichen steht für Gold?",
+      "choices": [
+        "Au",
+        "Ag",
+        "Fe",
+        "Cu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Silber ist der Nachbar in der Tabelle.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IUPAC — gold"
+        },
+        {
+          "label": "Encyclopaedia Britannica — gold"
+        }
+      ],
+      "status": "active"
     },
     {
       "id": "cq-e-genx-gameboy",
@@ -2891,7 +3029,7 @@
           "label": "Encyclopaedia Britannica — video game consoles"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-genx-pdf",
@@ -2925,7 +3063,7 @@
           "label": "Encyclopaedia Britannica — document formats"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-genx-ram",
@@ -2959,7 +3097,7 @@
           "label": "Encyclopaedia Britannica — computer memory"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-genx-cd",
@@ -2993,7 +3131,7 @@
           "label": "Encyclopaedia Britannica — compact disc"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-genx-cassette",
@@ -3020,7 +3158,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-genx-blinky",
@@ -3054,7 +3192,7 @@
           "label": "Encyclopaedia Britannica — Pac-Man"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-genx-tennis",
@@ -3088,7 +3226,7 @@
           "label": "Encyclopaedia Britannica — tennis"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-genx-web",
@@ -3122,11 +3260,79 @@
           "label": "Encyclopaedia Britannica — World Wide Web"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-genx-redspot",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Sturm",
+      "prompt": "Welcher Planet ist für den Großen Roten Fleck bekannt?",
+      "choices": [
+        "Jupiter",
+        "Mars",
+        "Saturn",
+        "Venus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Fleck ist ein Sturm, der viele Wetterberichte überdauert hat.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Jupiter"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Great Red Spot"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genx-cdsale",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silberne Scheibe",
+      "prompt": "In welchem Jahr kam die Compact Disc erstmals in den Handel?",
+      "choices": [
+        "1982",
+        "1977",
+        "1988",
+        "1991"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der glänzende Kreis kam vor den Playlists.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Philips — compact disc history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — compact disc"
+        }
+      ],
+      "status": "active"
     },
     {
       "id": "cq-e-geny-wiki",
@@ -3160,7 +3366,7 @@
           "label": "Encyclopaedia Britannica — Wikipedia"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-geny-sms",
@@ -3194,7 +3400,7 @@
           "label": "Encyclopaedia Britannica — text messaging"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-geny-iphone",
@@ -3228,7 +3434,7 @@
           "label": "Encyclopaedia Britannica — smartphone"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-geny-facebook",
@@ -3262,7 +3468,7 @@
           "label": "Encyclopaedia Britannica — Facebook"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-geny-inbox",
@@ -3289,7 +3495,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-geny-ocean",
@@ -3323,7 +3529,7 @@
           "label": "Encyclopaedia Britannica — Titanic, film"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-geny-potter",
@@ -3357,7 +3563,7 @@
           "label": "British Library — Harry Potter"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-geny-euro",
@@ -3391,11 +3597,79 @@
           "label": "Encyclopaedia Britannica — euro"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-geny-canberra",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt Australiens?",
+      "choices": [
+        "Canberra",
+        "Sydney",
+        "Melbourne",
+        "Brisbane"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hafenstadt ist berühmt. Die Hauptstadt ist die geplante.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Australian Government — capital"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Canberra"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-geny-html",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Seitensprache",
+      "prompt": "Wofür steht HTML?",
+      "choices": [
+        "HyperText Markup Language",
+        "High Transfer Mail Link",
+        "Home Tool Markup Language",
+        "Hyperlink Text Main Language"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Seite, die du liest, ist darin geschrieben.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "W3C — HTML"
+        },
+        {
+          "label": "Encyclopaedia Britannica — HTML"
+        }
+      ],
+      "status": "active"
     },
     {
       "id": "cq-e-genz-gif",
@@ -3429,7 +3703,7 @@
           "label": "Encyclopaedia Britannica — GIF"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-genz-vr",
@@ -3463,7 +3737,7 @@
           "label": "Encyclopaedia Britannica — virtual reality"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-genz-bytedance",
@@ -3497,7 +3771,7 @@
           "label": "Encyclopaedia Britannica — TikTok"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-genz-hashtag",
@@ -3531,7 +3805,7 @@
           "label": "Encyclopaedia Britannica — social media"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-genz-emoji",
@@ -3558,7 +3832,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-genz-spotify",
@@ -3592,7 +3866,7 @@
           "label": "Spotify Newsroom — company"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-genz-instagram",
@@ -3626,7 +3900,7 @@
           "label": "Meta — Instagram"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-genz-bus",
@@ -3660,11 +3934,79 @@
           "label": "Encyclopaedia Britannica — school bus"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-genz-eleven",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Startelf",
+      "prompt": "Wie viele Spieler einer Mannschaft stehen bei einem üblichen Fußballspiel auf dem Feld?",
+      "choices": [
+        "11",
+        "9",
+        "10",
+        "15"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Bank schaut zu. Gezählt werden die auf dem Rasen.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IFAB — Laws of the Game"
+        },
+        {
+          "label": "FIFA — laws of the game"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genz-mohs",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Härte",
+      "prompt": "Welches natürliche Mineral ist auf der Mohs-Skala das härteste?",
+      "choices": [
+        "Diamant",
+        "Quarz",
+        "Topas",
+        "Korund"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Skala endet bei zehn. Dieses sitzt dort.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Mohs scale"
+        },
+        {
+          "label": "Mindat — Mohs hardness"
+        }
+      ],
+      "status": "active"
     },
     {
       "id": "cq-e-alpha-cat",
@@ -3691,7 +4033,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-alpha-backpack",
@@ -3718,7 +4060,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-alpha-pencil",
@@ -3745,7 +4087,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-alpha-bookmark",
@@ -3772,7 +4114,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-alpha-frog",
@@ -3799,7 +4141,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-alpha-planets",
@@ -3833,7 +4175,7 @@
           "label": "International Astronomical Union — planets"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-alpha-banana",
@@ -3867,11 +4209,79 @@
           "label": "Royal Botanic Gardens, Kew — banana"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-alpha-leap",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Extra-Tag",
+      "prompt": "Wie viele Tage hat ein Schaltjahr?",
+      "choices": [
+        "366",
+        "365",
+        "364",
+        "360"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Februar leiht sich einen Tag und gibt das Jahr zurück.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US Naval Observatory — leap years"
+        },
+        {
+          "label": "Encyclopaedia Britannica — calendar"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-alpha-elephant",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "An Land",
+      "prompt": "Welches Tier ist das größte lebende Landtier?",
+      "choices": [
+        "Afrikanischer Elefant",
+        "Blauwal",
+        "Giraffe",
+        "Eisbär"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Der Wal nimmt den Ozean. Dieses bleibt am Boden.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — African elephant"
+        },
+        {
+          "label": "WWF — African elephant"
+        }
+      ],
+      "status": "active"
     },
     {
       "id": "cq-e-multi-guitar",
@@ -3905,7 +4315,7 @@
           "label": "Metropolitan Museum — string instruments"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-multi-boil",
@@ -3939,7 +4349,7 @@
           "label": "Encyclopaedia Britannica — boiling point"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-multi-photo",
@@ -3973,7 +4383,7 @@
           "label": "NASA Earth Observatory — carbon cycle"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-multi-pitch",
@@ -4007,7 +4417,7 @@
           "label": "Encyclopaedia Britannica — football"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-multi-compass",
@@ -4034,7 +4444,7 @@
       "straight": null,
       "addedWeek": "2026-W39",
       "sources": [],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-h-multi-eclipse",
@@ -4068,7 +4478,7 @@
           "label": "Encyclopaedia Britannica — eclipse"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-multi-titanic",
@@ -4102,7 +4512,7 @@
           "label": "National Maritime Museum — Titanic"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         2,
         3
@@ -4140,7 +4550,7 @@
           "label": "National Maritime Museum — Titanic"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         2,
         3
@@ -4178,7 +4588,7 @@
           "label": "Encyclopaedia Britannica — traffic sign"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "cq-e-multi-sky",
@@ -4212,11 +4622,79 @@
           "label": "Encyclopaedia Britannica — sky"
         }
       ],
-      "status": "pending",
+      "status": "active",
       "jokeWrongIndexes": [
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-multi-pacific",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Offenes Wasser",
+      "prompt": "Welcher Ozean ist der größte auf der Erde?",
+      "choices": [
+        "Pazifischer Ozean",
+        "Atlantischer Ozean",
+        "Indischer Ozean",
+        "Arktischer Ozean"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Karte gibt ihm das breiteste Blau.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NOAA — Pacific Ocean"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Pacific Ocean"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-multi-piano",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Tastatur",
+      "prompt": "Wie viele Tasten hat ein gewöhnliches Klavier?",
+      "choices": [
+        "88",
+        "76",
+        "61",
+        "92"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Zähl die schwarzen und die weißen. Die Summe ist die lange.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — piano"
+        },
+        {
+          "label": "Steinway & Sons — piano keyboard"
+        }
+      ],
+      "status": "active"
     },
     {
       "id": "ga-joke-clock",
@@ -4235,7 +4713,7 @@
       "banterHint": "Winken kann sie trotzdem.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-bear",
@@ -4254,7 +4732,7 @@
       "banterHint": "Immer noch klebrig. Viel freundlicher.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-math",
@@ -4273,7 +4751,7 @@
       "banterHint": "Das Lesezeichen hat es umarmt.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-ocean",
@@ -4292,7 +4770,7 @@
       "banterHint": "Der Strand hat zurückgewinkt.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-flamingo",
@@ -4311,7 +4789,7 @@
       "banterHint": "Sie kamen passend angezogen.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-octopus",
@@ -4330,7 +4808,7 @@
       "banterHint": "Acht Arme, drei Herzen, null Eile.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-scarecrow",
@@ -4349,7 +4827,7 @@
       "banterHint": "Die Krähen gründeten einen Fanclub.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     },
     {
       "id": "ga-joke-homework",
@@ -4368,7 +4846,7 @@
       "banterHint": "Der Nachtisch gab Extra-Punkte.",
       "funny": true,
       "addedWeek": "2026-W39",
-      "status": "live"
+      "status": "active"
     }
   ]
 }

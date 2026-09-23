@@ -2,8 +2,8 @@
   "generation": "multi-gen",
   "locale": "fr",
   "target": 150,
-  "held": 19,
-  "shortfall": 131,
+  "held": 21,
+  "shortfall": 129,
   "ageYear": 2026,
   "born": null,
   "ageBrackets": [
@@ -354,6 +354,38 @@
         0,
         3
       ]
+    },
+    {
+      "id": "cq-e-multi-pacific",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Eau libre",
+      "prompt": "Quel océan est le plus grand sur Terre ?",
+      "choices": [
+        "L'océan Atlantique",
+        "L'océan Indien",
+        "L'océan Arctique",
+        "L'océan Pacifique"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La carte lui donne le bleu le plus large."
+    },
+    {
+      "id": "cq-h-multi-piano",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Clavier",
+      "prompt": "Combien de touches a un piano standard ?",
+      "choices": [
+        "61",
+        "76",
+        "88",
+        "92"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Compte les noires et les blanches. Le total est le long."
     }
   ]
 }

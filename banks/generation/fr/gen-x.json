@@ -2,8 +2,8 @@
   "generation": "gen-x",
   "locale": "fr",
   "target": 150,
-  "held": 23,
-  "shortfall": 127,
+  "held": 25,
+  "shortfall": 125,
   "ageYear": 2026,
   "born": [
     1965,
@@ -416,6 +416,38 @@
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-genx-redspot",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Tempête",
+      "prompt": "Quelle planète est connue pour la Grande Tache rouge ?",
+      "choices": [
+        "Jupiter",
+        "Vénus",
+        "Saturne",
+        "Mars"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La tache est une tempête plus vieille que bien des bulletins."
+    },
+    {
+      "id": "cq-h-genx-cdsale",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Disque argenté",
+      "prompt": "En quelle année le disque compact a-t-il été mis en vente ?",
+      "choices": [
+        "1988",
+        "1977",
+        "1982",
+        "1991"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le cercle brillant est arrivé avant les listes d'écoute."
     }
   ]
 }

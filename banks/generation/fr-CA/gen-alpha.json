@@ -1,6 +1,6 @@
 {
   "generation": "gen-alpha",
-  "locale": "fr",
+  "locale": "fr-CA",
   "target": 150,
   "held": 31,
   "shortfall": 119,
@@ -44,7 +44,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Le tactile d’abord",
-      "prompt": "Un iPad se décrit le mieux comme quel type d’appareil ?",
+      "prompt": "Un iPad est surtout quel type d’appareil ?",
       "choices": [
         "Téléphone fixe",
         "Grille-pain",
@@ -140,7 +140,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Place des avatars",
-      "prompt": "Roblox se décrit le mieux comme quoi ?",
+      "prompt": "Roblox est surtout quoi ?",
       "choices": [
         "Uniquement un jeu de société physique",
         "Une plateforme en ligne de jeux créés par les utilisateurs",
@@ -219,8 +219,8 @@
       "tier": "difficult",
       "topic": "culture",
       "generation": "gen-alpha",
-      "categoryTitle": "Portable hybride",
-      "prompt": "En quelle année la Nintendo Switch est-elle sortie dans le monde ?",
+      "categoryTitle": "Portative hybride",
+      "prompt": "En quelle année la Nintendo Switch est sortie dans le monde ?",
       "choices": [
         "2017",
         "2019",
@@ -251,12 +251,12 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-alpha",
-      "categoryTitle": "Hôte du quiz",
-      "prompt": "Comment appelle-t-on un chat qui présente le quiz ?",
+      "categoryTitle": "Animateur du quiz",
+      "prompt": "Comment on appelle un chat qui anime le quiz ?",
       "choices": [
         "Un chat peureux",
-        "Le ron-ron en chef",
-        "Une sieste de chat",
+        "Le ronron en charge",
+        "Un somme de chat",
         "Un copieur"
       ],
       "correctIndex": 1,
@@ -270,15 +270,15 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Belle journée",
-      "prompt": "Pourquoi le sac à dos avait-il l'air fier ?",
+      "prompt": "Pourquoi le sac à dos avait l'air fier ?",
       "choices": [
         "Il a mangé les devoirs",
         "Il a caché la carte",
         "Il portait une bonne journée",
-        "Il a raté le bus"
+        "Il a manqué l'autobus"
       ],
       "correctIndex": 2,
-      "banterHint": "Chaque livre a eu un coup de main.",
+      "banterHint": "Chaque livre a eu un coup de pouce.",
       "funny": true,
       "structure": "joke"
     },
@@ -288,15 +288,15 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Esprit d'équipe",
-      "prompt": "Pourquoi le crayon a-t-il rejoint l'équipe ?",
+      "prompt": "Pourquoi le crayon s'est joint à l'équipe ?",
       "choices": [
         "Il a roulé plus loin",
-        "Il s'est caché dans la trousse",
+        "Il s'est caché dans l'étui",
         "Il a perdu son capuchon",
-        "Il savait attirer la foule"
+        "Il savait attirer la gang"
       ],
       "correctIndex": 3,
-      "banterHint": "La gomme veillait sur lui.",
+      "banterHint": "L'efface veillait sur lui.",
       "funny": true,
       "structure": "joke"
     },
@@ -306,7 +306,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Toujours là",
-      "prompt": "Pourquoi le marque-page restait-il calme dans l'histoire ?",
+      "prompt": "Pourquoi le signet restait calme dans l'histoire ?",
       "choices": [
         "Il gardait toujours sa place",
         "Il a déchiré la page",
@@ -324,7 +324,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Scène ouverte",
-      "prompt": "De quelle couleur est une grenouille le soir du micro ouvert ?",
+      "prompt": "C'est quoi la couleur d'une grenouille le soir du micro ouvert ?",
       "choices": [
         "Violet",
         "Vert",
@@ -342,7 +342,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Système maison",
-      "prompt": "Combien de planètes compte notre système solaire ?",
+      "prompt": "Notre système solaire compte combien de planètes ?",
       "choices": [
         "9",
         "10",
@@ -358,7 +358,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Collation",
-      "prompt": "L'histoire grossit. La question garde la même taille : « De quelle couleur est la peau d'une banane mûre ? »",
+      "prompt": "L'histoire grossit. La question garde la même taille : « C'est quoi la couleur de la peau d'une banane mûre ? »",
       "choices": [
         "Jaune",
         "Vert",
@@ -383,7 +383,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Jour en plus",
-      "prompt": "Combien de jours compte une année bissextile ?",
+      "prompt": "Une année bissextile a combien de jours ?",
       "choices": [
         "360",
         "366",
@@ -391,7 +391,7 @@
         "364"
       ],
       "correctIndex": 1,
-      "banterHint": "Février emprunte un jour, puis rend l'année."
+      "banterHint": "Février emprunte une journée, puis rend l'année."
     },
     {
       "id": "cq-h-alpha-elephant",
@@ -399,7 +399,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Sur terre",
-      "prompt": "Quel animal est le plus grand animal terrestre vivant ?",
+      "prompt": "C'est quoi le plus grand animal terrestre vivant ?",
       "choices": [
         "La baleine bleue",
         "La girafe",
@@ -415,7 +415,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Les aiguilles",
-      "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
+      "prompt": "C'est quoi qui a des aiguilles et qui donne l'heure ?",
       "choices": [
         "Une horloge",
         "Un hérisson",
@@ -432,10 +432,10 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Dent sucrée",
-      "prompt": "Comment appelle-t-on un ours sans dents ?",
+      "prompt": "Comment on appelle un ours sans dents ?",
       "choices": [
-        "Un ours en gomme",
-        "Un nounours",
+        "Un ours en jujube",
+        "Un toutou",
         "Un ours polaire",
         "Un koala"
       ],
@@ -449,7 +449,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Trop de problèmes",
-      "prompt": "Pourquoi le livre de maths est-il triste ?",
+      "prompt": "Pourquoi le livre de maths est triste ?",
       "choices": [
         "Il a trop de problèmes",
         "C'est une bande dessinée",
@@ -483,7 +483,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Parade rose",
-      "prompt": "Comment appelle-t-on un groupe de flamants roses ?",
+      "prompt": "Comment on appelle un groupe de flamants roses ?",
       "choices": [
         "Un troupeau",
         "Un banc",
@@ -517,7 +517,7 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Dans son champ",
-      "prompt": "Pourquoi l'épouvantail a-t-il reçu un prix ?",
+      "prompt": "Pourquoi l'épouvantail a reçu un prix ?",
       "choices": [
         "Il a mangé le maïs",
         "Il a dormi toute la journée",
@@ -534,10 +534,10 @@
       "topic": "culture",
       "generation": "gen-alpha",
       "categoryTitle": "Du gâteau",
-      "prompt": "Pourquoi l'élève a-t-il mangé ses devoirs ?",
+      "prompt": "Pourquoi l'élève a mangé ses devoirs ?",
       "choices": [
         "Le chien n'avait plus faim",
-        "C'était l'heure du déjeuner",
+        "C'était l'heure du dîner",
         "Le prof a dit que c'était du gâteau",
         "C'était un sandwich"
       ],

@@ -2,8 +2,8 @@
   "generation": "baby-boomer",
   "locale": "en",
   "target": 150,
-  "held": 22,
-  "shortfall": 128,
+  "held": 24,
+  "shortfall": 126,
   "ageYear": 2026,
   "born": [
     1946,
@@ -404,6 +404,38 @@
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-boomer-parks",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "December 1",
+      "prompt": "Whose arrest in Montgomery on December 1, 1955, started the bus boycott?",
+      "choices": [
+        "Rosa Parks",
+        "Dorothy Height",
+        "Ella Baker",
+        "Claudette Colvin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The seat stayed taken. The boycott followed."
+    },
+    {
+      "id": "cq-h-boomer-gold",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Element",
+      "prompt": "What is the chemical symbol for gold?",
+      "choices": [
+        "Au",
+        "Ag",
+        "Fe",
+        "Cu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Silver is the neighbour on the chart."
     }
   ]
 }

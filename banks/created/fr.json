@@ -275,6 +275,74 @@
       ]
     },
     {
+      "id": "cq-e-silent-adenauer",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Premier chancelier",
+      "prompt": "Qui a été le premier chancelier de l'Allemagne de l'Ouest ?",
+      "choices": [
+        "Konrad Adenauer",
+        "Willy Brandt",
+        "Helmut Kohl",
+        "Helmut Schmidt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Il a pris le fauteuil en 1949 et l'a gardé longtemps.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "German Federal Archives — Konrad Adenauer"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Konrad Adenauer"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-silent-marshall",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Loi de relève",
+      "prompt": "En quelle année le plan Marshall est-il devenu une loi aux États-Unis ?",
+      "choices": [
+        "1948",
+        "1945",
+        "1951",
+        "1953"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La guerre était finie. La reconstruction a une date de départ.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US National Archives — Marshall Plan"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Marshall Plan"
+        }
+      ],
+      "status": "pending"
+    },
+    {
       "id": "cq-e-boomer-gaye",
       "tier": "easy",
       "topic": "music",
@@ -542,6 +610,74 @@
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-boomer-parks",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "1er décembre",
+      "prompt": "L'arrestation de qui, à Montgomery le 1er décembre 1955, a lancé le boycott des bus ?",
+      "choices": [
+        "Rosa Parks",
+        "Claudette Colvin",
+        "Ella Baker",
+        "Dorothy Height"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La place est restée prise. Le boycott a suivi.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US National Archives — Rosa Parks"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Montgomery bus boycott"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-gold",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Élément",
+      "prompt": "Quel est le symbole chimique de l'or ?",
+      "choices": [
+        "Au",
+        "Ag",
+        "Fe",
+        "Cu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'argent est le voisin sur le tableau.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IUPAC — gold"
+        },
+        {
+          "label": "Encyclopaedia Britannica — gold"
+        }
+      ],
+      "status": "pending"
     },
     {
       "id": "cq-e-genx-gameboy",
@@ -813,6 +949,74 @@
       ]
     },
     {
+      "id": "cq-e-genx-redspot",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Tempête",
+      "prompt": "Quelle planète est connue pour la Grande Tache rouge ?",
+      "choices": [
+        "Jupiter",
+        "Mars",
+        "Saturne",
+        "Vénus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La tache est une tempête plus vieille que bien des bulletins.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Jupiter"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Great Red Spot"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-cdsale",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Disque argenté",
+      "prompt": "En quelle année le disque compact a-t-il été mis en vente ?",
+      "choices": [
+        "1982",
+        "1977",
+        "1988",
+        "1991"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le cercle brillant est arrivé avant les listes d'écoute.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Philips — compact disc history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — compact disc"
+        }
+      ],
+      "status": "pending"
+    },
+    {
       "id": "cq-e-geny-wiki",
       "tier": "easy",
       "topic": "current-culture",
@@ -1080,6 +1284,74 @@
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-geny-canberra",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Australie ?",
+      "choices": [
+        "Canberra",
+        "Sydney",
+        "Melbourne",
+        "Brisbane"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La ville du port est célèbre. La capitale est celle qui a été planifiée.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Australian Government — capital"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Canberra"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-html",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Langage de page",
+      "prompt": "Que signifie le sigle HTML ?",
+      "choices": [
+        "HyperText Markup Language",
+        "High Transfer Mail Link",
+        "Home Tool Markup Language",
+        "Hyperlink Text Main Language"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La page que tu lis est écrite avec.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "W3C — HTML"
+        },
+        {
+          "label": "Encyclopaedia Britannica — HTML"
+        }
+      ],
+      "status": "pending"
     },
     {
       "id": "cq-e-genz-gif",
@@ -1351,6 +1623,74 @@
       ]
     },
     {
+      "id": "cq-e-genz-eleven",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Équipe de départ",
+      "prompt": "Combien de joueurs d'une équipe sont sur le terrain dans un match de football standard ?",
+      "choices": [
+        "11",
+        "9",
+        "10",
+        "15"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le banc regarde. Le compte, ce sont ceux sur l'herbe.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IFAB — Laws of the Game"
+        },
+        {
+          "label": "FIFA — laws of the game"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genz-mohs",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dureté",
+      "prompt": "Quel est le minéral naturel le plus dur sur l'échelle de Mohs ?",
+      "choices": [
+        "Le diamant",
+        "Le quartz",
+        "La topaze",
+        "Le corindon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'échelle s'arrête à dix. Celui-ci y est.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Mohs scale"
+        },
+        {
+          "label": "Mindat — Mohs hardness"
+        }
+      ],
+      "status": "pending"
+    },
+    {
       "id": "cq-e-alpha-cat",
       "tier": "easy",
       "topic": "current-culture",
@@ -1556,6 +1896,74 @@
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-alpha-leap",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Jour en plus",
+      "prompt": "Combien de jours compte une année bissextile ?",
+      "choices": [
+        "366",
+        "365",
+        "364",
+        "360"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Février emprunte un jour, puis rend l'année.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US Naval Observatory — leap years"
+        },
+        {
+          "label": "Encyclopaedia Britannica — calendar"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-alpha-elephant",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sur terre",
+      "prompt": "Quel animal est le plus grand animal terrestre vivant ?",
+      "choices": [
+        "L'éléphant d'Afrique",
+        "La baleine bleue",
+        "La girafe",
+        "L'ours polaire"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La baleine prend l'océan. Celui-ci reste au sol.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — African elephant"
+        },
+        {
+          "label": "WWF — African elephant"
+        }
+      ],
+      "status": "pending"
     },
     {
       "id": "cq-e-multi-guitar",
@@ -1901,6 +2309,74 @@
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-multi-pacific",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Eau libre",
+      "prompt": "Quel océan est le plus grand sur Terre ?",
+      "choices": [
+        "L'océan Pacifique",
+        "L'océan Atlantique",
+        "L'océan Indien",
+        "L'océan Arctique"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La carte lui donne le bleu le plus large.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NOAA — Pacific Ocean"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Pacific Ocean"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-piano",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Clavier",
+      "prompt": "Combien de touches a un piano standard ?",
+      "choices": [
+        "88",
+        "76",
+        "61",
+        "92"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Compte les noires et les blanches. Le total est le long.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — piano"
+        },
+        {
+          "label": "Steinway & Sons — piano keyboard"
+        }
+      ],
+      "status": "pending"
     }
   ]
 }

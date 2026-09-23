@@ -8,6 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { creatorQuestions } from "../q-and-a/bots/creators.js";
 import { mappedCountsFromPack, studioCountsFromPack, writeArchiveManifest } from "../lib/archive-store.js";
+import { WEEK_TARGET } from "../lib/week-roll.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WEEK = "2026-W39";
@@ -45,7 +46,7 @@ function quebecPrompt(value) {
 }
 
 function withStatus(q) {
-  return { ...q, status: q.status || "pending" };
+  return { ...q, status: q.status === "rejected" ? "rejected" : "active" };
 }
 
 function mergeJokes(pack, jokes) {
@@ -61,6 +62,7 @@ function mergeJokes(pack, jokes) {
 
 function archivePack(locale, pack) {
   const questions = pack.questions || [];
+  const weekComplete = questions.length >= WEEK_TARGET;
   const stored = {
     weekKey: pack.weekKey || WEEK,
     generatedAt: pack.generatedAt || PUBLISHED,
@@ -68,6 +70,8 @@ function archivePack(locale, pack) {
     inspirationSummary: pack.inspirationSummary || "",
     locale,
     schemaVersion: 1,
+    weekTarget: WEEK_TARGET,
+    weekComplete,
     questions,
   };
   const summary = {
@@ -76,8 +80,10 @@ function archivePack(locale, pack) {
     counts: mappedCountsFromPack(stored),
     studioCounts: studioCountsFromPack(stored),
     questionCount: questions.length,
+    weekTarget: WEEK_TARGET,
+    weekComplete,
   };
-  const folder = path.join("banks/archive", locale);
+  const folder = locale === "en" ? "banks/archive" : path.join("banks/archive", locale);
   write(path.join(folder, "registry.json"), { months: [MONTH], updatedAt: PUBLISHED });
   write(path.join(folder, MONTH, "index.json"), {
     monthKey: MONTH,
@@ -87,6 +93,11 @@ function archivePack(locale, pack) {
   write(path.join(folder, MONTH, `${stored.weekKey}.json`), stored);
   return summary;
 }
+
+const enWeek = read("banks/weekly/current.json");
+const enJokes = read("banks/gen-alpha/en.json").questions || [];
+const en = mergeJokes(enWeek, enJokes);
+const enSummary = archivePack("en", { ...en, locale: "en" });
 
 const frWeek = read("banks/weekly/fr/current.json");
 const deWeek = read("banks/weekly/de/current.json");
@@ -153,6 +164,7 @@ write("banks/placement/fr-CA/generational-first-pass.json", {
 
 writeArchiveManifest();
 console.log("locale archives", {
+  en: enSummary.questionCount,
   fr: frSummary.questionCount,
   "fr-CA": qcSummary.questionCount,
   de: deSummary.questionCount,

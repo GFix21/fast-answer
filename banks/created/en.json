@@ -275,6 +275,74 @@
       ]
     },
     {
+      "id": "cq-e-silent-adenauer",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "First Chancellor",
+      "prompt": "Who was the first Chancellor of West Germany?",
+      "choices": [
+        "Konrad Adenauer",
+        "Willy Brandt",
+        "Helmut Kohl",
+        "Helmut Schmidt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "He took the chair in 1949 and kept it for a long stretch.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "German Federal Archives — Konrad Adenauer"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Konrad Adenauer"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-silent-marshall",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Recovery Act",
+      "prompt": "In which year did the Marshall Plan become law in the United States?",
+      "choices": [
+        "1948",
+        "1945",
+        "1951",
+        "1953"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The war was already over. The rebuild had a start date.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US National Archives — Marshall Plan"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Marshall Plan"
+        }
+      ],
+      "status": "pending"
+    },
+    {
       "id": "cq-e-boomer-gaye",
       "tier": "easy",
       "topic": "music",
@@ -542,6 +610,74 @@
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-boomer-parks",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "December 1",
+      "prompt": "Whose arrest in Montgomery on December 1, 1955, started the bus boycott?",
+      "choices": [
+        "Rosa Parks",
+        "Claudette Colvin",
+        "Ella Baker",
+        "Dorothy Height"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The seat stayed taken. The boycott followed.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US National Archives — Rosa Parks"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Montgomery bus boycott"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-boomer-gold",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Element",
+      "prompt": "What is the chemical symbol for gold?",
+      "choices": [
+        "Au",
+        "Ag",
+        "Fe",
+        "Cu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Silver is the neighbour on the chart.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IUPAC — gold"
+        },
+        {
+          "label": "Encyclopaedia Britannica — gold"
+        }
+      ],
+      "status": "pending"
     },
     {
       "id": "cq-e-genx-gameboy",
@@ -813,6 +949,74 @@
       ]
     },
     {
+      "id": "cq-e-genx-redspot",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Storm",
+      "prompt": "Which planet is known for the Great Red Spot?",
+      "choices": [
+        "Jupiter",
+        "Mars",
+        "Saturn",
+        "Venus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The spot is a storm that has outlasted a lot of weather reports.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Jupiter"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Great Red Spot"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genx-cdsale",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silver Disc",
+      "prompt": "In which year did the compact disc first go on sale?",
+      "choices": [
+        "1982",
+        "1977",
+        "1988",
+        "1991"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The shiny circle arrived before the playlist apps.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Philips — compact disc history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — compact disc"
+        }
+      ],
+      "status": "pending"
+    },
+    {
       "id": "cq-e-geny-wiki",
       "tier": "easy",
       "topic": "current-culture",
@@ -1080,6 +1284,74 @@
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-geny-canberra",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital city of Australia?",
+      "choices": [
+        "Canberra",
+        "Sydney",
+        "Melbourne",
+        "Brisbane"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The harbour city is famous. The capital is the planned one.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Australian Government — capital"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Canberra"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-geny-html",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Page Language",
+      "prompt": "What does HTML stand for?",
+      "choices": [
+        "HyperText Markup Language",
+        "High Transfer Mail Link",
+        "Home Tool Markup Language",
+        "Hyperlink Text Main Language"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The page you are reading is written in it.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "W3C — HTML"
+        },
+        {
+          "label": "Encyclopaedia Britannica — HTML"
+        }
+      ],
+      "status": "pending"
     },
     {
       "id": "cq-e-genz-gif",
@@ -1351,6 +1623,74 @@
       ]
     },
     {
+      "id": "cq-e-genz-eleven",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Starting Side",
+      "prompt": "How many players from one team are on the field in a standard football match?",
+      "choices": [
+        "11",
+        "9",
+        "10",
+        "15"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The bench watches. The count is the ones on the grass.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IFAB — Laws of the Game"
+        },
+        {
+          "label": "FIFA — laws of the game"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-genz-mohs",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Hardness",
+      "prompt": "What is the hardest natural mineral on the Mohs scale?",
+      "choices": [
+        "Diamond",
+        "Quartz",
+        "Topaz",
+        "Corundum"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The scale stops at ten. This one sits there.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Mohs scale"
+        },
+        {
+          "label": "Mindat — Mohs hardness"
+        }
+      ],
+      "status": "pending"
+    },
+    {
       "id": "cq-e-alpha-cat",
       "tier": "easy",
       "topic": "current-culture",
@@ -1556,6 +1896,74 @@
         2,
         3
       ]
+    },
+    {
+      "id": "cq-e-alpha-leap",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Extra Day",
+      "prompt": "How many days are in a leap year?",
+      "choices": [
+        "366",
+        "365",
+        "364",
+        "360"
+      ],
+      "correctIndex": 0,
+      "banterHint": "February borrows one day, then gives the year back.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US Naval Observatory — leap years"
+        },
+        {
+          "label": "Encyclopaedia Britannica — calendar"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-alpha-elephant",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "On Land",
+      "prompt": "Which animal is the largest living land animal?",
+      "choices": [
+        "African elephant",
+        "Blue whale",
+        "Giraffe",
+        "Polar bear"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The whale takes the ocean. This one stays on the ground.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — African elephant"
+        },
+        {
+          "label": "WWF — African elephant"
+        }
+      ],
+      "status": "pending"
     },
     {
       "id": "cq-e-multi-guitar",
@@ -1901,6 +2309,74 @@
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-multi-pacific",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Open Water",
+      "prompt": "Which ocean is the largest on Earth?",
+      "choices": [
+        "Pacific Ocean",
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The map gives it the widest blue.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NOAA — Pacific Ocean"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Pacific Ocean"
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cq-h-multi-piano",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Keyboard",
+      "prompt": "How many keys does a standard piano have?",
+      "choices": [
+        "88",
+        "76",
+        "61",
+        "92"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Count the black and the white. The total is the long one.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — piano"
+        },
+        {
+          "label": "Steinway & Sons — piano keyboard"
+        }
+      ],
+      "status": "pending"
     }
   ]
 }

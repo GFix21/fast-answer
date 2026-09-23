@@ -2,8 +2,8 @@
   "generation": "gen-z",
   "locale": "fr",
   "target": 150,
-  "held": 23,
-  "shortfall": 127,
+  "held": 25,
+  "shortfall": 125,
   "ageYear": 2026,
   "born": [
     1997,
@@ -412,6 +412,38 @@
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-genz-eleven",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Équipe de départ",
+      "prompt": "Combien de joueurs d'une équipe sont sur le terrain dans un match de football standard ?",
+      "choices": [
+        "10",
+        "9",
+        "11",
+        "15"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le banc regarde. Le compte, ce sont ceux sur l'herbe."
+    },
+    {
+      "id": "cq-h-genz-mohs",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dureté",
+      "prompt": "Quel est le minéral naturel le plus dur sur l'échelle de Mohs ?",
+      "choices": [
+        "Le quartz",
+        "Le corindon",
+        "Le diamant",
+        "La topaze"
+      ],
+      "correctIndex": 2,
+      "banterHint": "L'échelle s'arrête à dix. Celui-ci y est."
     }
   ]
 }

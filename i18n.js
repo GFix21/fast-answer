@@ -1,13 +1,15 @@
-/** Fast Answer player-facing i18n (EN / FR / DE). Locale packs live beside EN banks. */
-export const LOCALES = ["en", "fr", "de"];
-export const LOCALE_LABELS = { en: "EN", fr: "FR", de: "DE" };
+/** Fast Answer player-facing i18n. French is France (fr) or Quebec (fr-CA). */
+export const LOCALES = ["en", "fr", "fr-CA", "de"];
+export const LOCALE_LABELS = { en: "EN", fr: "France", "fr-CA": "Québec", de: "DE" };
 export const LOCALE_KEY = "fa-locale";
 
-const SPEECH = { en: "en-US", fr: "fr-FR", de: "de-DE" };
+const SPEECH = { en: "en-US", fr: "fr-FR", "fr-CA": "fr-CA", de: "de-DE" };
 
 export function normalizeLocale(raw) {
-  const v = String(raw || "en").toLowerCase().slice(0, 2);
-  return LOCALES.includes(v) ? v : "en";
+  const text = String(raw || "en").trim().replace(/_/g, "-");
+  if (/^fr-ca$/i.test(text)) return "fr-CA";
+  const v = text.toLowerCase().slice(0, 2);
+  return v === "fr" || v === "de" || v === "en" ? v : "en";
 }
 
 export function loadStoredLocale() {
@@ -327,7 +329,7 @@ const STRINGS = {
     ruleDojo: "Dojo — profile + password on the phone, then ten placement questions. Prompt 5s, then answers. Bronze / Silver / Gold. Placement is required again after two years. Karate belts rise with career points.",
     ruleRoom: "Room — TV owns the room. Phones join via corner QR. Buzz to ready; when every pad is in, the show starts. Empty seats are celebrity bots. Join as buzzer only works if the TV room already exists.",
     dirLangTitle: "Language",
-    dirLangBody: "Use the EN / FR / DE switcher in the lobby. Preference is saved on this device. Questions and Dojo placement load from the matching locale bank (same ids and correct answers as English).",
+    dirLangBody: "Use EN, France, Québec, or DE in the lobby. Preference is saved on this device. France loads the France bank. Québec loads the Quebec bank. Same ids and correct answers as English.",
     dirScreenTitle: "On Screen vs Off Screen",
     dirOff: "Off Screen — one locked page on this device. Jeremy, the question, the answers, and the buzzer sit together. Drag Jeremy and Studio in Set. Local play: you plus celebrity bots.",
     dirOn: "On Screen — this display is the television and owns the multiplayer room. It hides the buzzer and Flow. Phones join as pads. Empty seats stay celebrity bots until a pad takes them, up to 12.",
@@ -617,7 +619,7 @@ const STRINGS = {
     ruleDojo: "Dojo — profil + mot de passe sur le téléphone, puis dix questions. Énoncé 5 s. Bronze / Argent / Or. Le placement est de nouveau obligatoire après deux ans. Ceintures = points de carrière.",
     ruleRoom: "Salle — la TV possède la salle. Les téléphones rejoignent via le QR du coin. Buzz pour être prêt ; quand chaque pad est in, le show démarre. Places vides = bots. Rejoindre ne marche que si la salle TV existe déjà.",
     dirLangTitle: "Langue",
-    dirLangBody: "Utilisez le sélecteur EN / FR / DE dans le lobby. La préférence est enregistrée sur cet appareil. Les questions et le Dojo viennent de la banque locale (mêmes ids et bonnes réponses qu'en anglais).",
+    dirLangBody: "Choisis EN, France, Québec ou DE dans le lobby. La préférence est enregistrée sur cet appareil. France charge la banque de France. Québec charge la banque en français du Québec. Mêmes ids et bonnes réponses qu'en anglais.",
     dirScreenTitle: "À l'écran vs hors écran",
     dirOff: "Hors écran — une page verrouillée sur cet appareil. Jeremy, la question, les réponses et le buzzer ensemble. Glissez Jeremy et Studio dans Décor. Jeu local : vous plus bots célébrités.",
     dirOn: "À l'écran — cet affichage est la télévision et possède la salle multijoueur. Il cache le buzzer et Flow. Les téléphones rejoignent comme pads. Places vides = bots jusqu'à 12.",
@@ -907,7 +909,7 @@ const STRINGS = {
     ruleDojo: "Dojo — Profil + Passwort am Telefon, dann zehn Placement-Fragen. Prompt 5s. Bronze / Silber / Gold. Placement ist nach zwei Jahren wieder Pflicht. Gürtel = Karrierepunkte.",
     ruleRoom: "Raum — TV besitzt den Raum. Telefone per Ecken-QR. Buzz zum Ready; wenn jedes Pad da ist, startet die Show. Leere Plätze = Bots. Beitreten nur wenn der TV-Raum schon existiert.",
     dirLangTitle: "Sprache",
-    dirLangBody: "EN / FR / DE-Schalter in der Lobby. Präferenz wird auf diesem Gerät gespeichert. Fragen und Dojo kommen aus der Locale-Bank (gleiche IDs und richtige Antworten wie Englisch).",
+    dirLangBody: "EN, France, Québec oder DE in der Lobby. Die Wahl bleibt auf diesem Gerät. France lädt die Frankreich-Bank. Québec lädt die Québec-Bank. Gleiche IDs und richtige Antworten wie Englisch.",
     dirScreenTitle: "On Screen vs Off Screen",
     dirOff: "Off Screen — eine gesperrte Seite auf diesem Gerät. Jeremy, Frage, Antworten und Buzzer zusammen. Jeremy und Studio unter Set ziehen. Lokal: Sie plus Celebrity-Bots.",
     dirOn: "On Screen — dieses Display ist das TV und besitzt den Multiplayer-Raum. Versteckt Buzzer und Flow. Telefone als Pads. Leere Plätze = Bots bis 12.",
@@ -916,10 +918,14 @@ const STRINGS = {
   },
 };
 
+const QC_UI = {
+  dirLangBody: "Choisis EN, France ou Québec dans le lobby. La préférence est enregistrée sur cet appareil. Québec charge la banque en français du Québec. France charge la banque de France. Mêmes ids et bonnes réponses.",
+};
+
 export function t(locale, key, ...args) {
   const loc = normalizeLocale(locale);
-  const table = STRINGS[loc] || STRINGS.en;
-  const v = table[key] ?? STRINGS.en[key] ?? key;
+  const table = loc === "fr-CA" ? STRINGS.fr : (STRINGS[loc] || STRINGS.en);
+  const v = (loc === "fr-CA" ? QC_UI[key] : undefined) ?? table[key] ?? STRINGS.en[key] ?? key;
   return typeof v === "function" ? v(...args) : v;
 }
 

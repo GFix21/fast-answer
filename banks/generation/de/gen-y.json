@@ -2,8 +2,8 @@
   "generation": "gen-y",
   "locale": "de",
   "target": 150,
-  "held": 23,
-  "shortfall": 127,
+  "held": 25,
+  "shortfall": 125,
   "ageYear": 2026,
   "born": [
     1981,
@@ -416,6 +416,38 @@
         1,
         3
       ]
+    },
+    {
+      "id": "cq-e-geny-canberra",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt Australiens?",
+      "choices": [
+        "Melbourne",
+        "Sydney",
+        "Canberra",
+        "Brisbane"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Hafenstadt ist berühmt. Die Hauptstadt ist die geplante."
+    },
+    {
+      "id": "cq-h-geny-html",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Seitensprache",
+      "prompt": "Wofür steht HTML?",
+      "choices": [
+        "Home Tool Markup Language",
+        "High Transfer Mail Link",
+        "HyperText Markup Language",
+        "Hyperlink Text Main Language"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Seite, die du liest, ist darin geschrieben."
     }
   ]
 }

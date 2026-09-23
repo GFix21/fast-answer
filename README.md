@@ -22,12 +22,12 @@ Phones never receive the TV picture. Flow is hidden on the TV display. Same Wi�
 
 
 
-## Language (EN / FR / DE)
+## Language (EN / France / Québec / DE)
 
-Lobby and Directions include an **EN / FR / DE** switcher (saved in `localStorage` as `fa-locale`).
+Lobby and Directions include an **EN / France / Québec / DE** switcher (saved in `localStorage` as `fa-locale`). France loads `fr`. Québec loads `fr-CA` and does not fall back to France.
 
-- Live questions: `questions.json` (EN), `questions.fr.json`, `questions.de.json`
-- Placement / Dojo: `banks/placement/[fr|de]/generational-first-pass.json`
+- Live questions: `questions.json` (EN), `questions.fr.json`, `questions.fr-CA.json`, `questions.de.json`
+- Placement / Dojo: `banks/placement/[fr|fr-CA|de]/generational-first-pass.json`
 - Weekly studio packs: `banks/weekly/[fr|de]/<weekKey>.json` (same layout as Q-and-A)
 - Flow admin has a matching locale switcher for weekly review, placement archive, and reject/regen
 

@@ -567,7 +567,7 @@ html.tv-scroll, html.tv-scroll body{
 .copy-row .ghost{flex-shrink:0;min-height:40px;padding:8px 12px}
 
 
-/* Language switcher EN / FR / DE */
+/* Language switcher EN / France / Québec / DE */
 .lang-switch {
   display: inline-flex;
   gap: 4px;

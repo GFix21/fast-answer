@@ -1685,6 +1685,38 @@
     ]
   },
   {
+    "id": "cq-e-silent-adenauer",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Erster Kanzler",
+    "prompt": "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
+    "choices": [
+      "Helmut Kohl",
+      "Helmut Schmidt",
+      "Willy Brandt",
+      "Konrad Adenauer"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Er übernahm den Stuhl 1949 und behielt ihn lange."
+  },
+  {
+    "id": "cq-h-silent-marshall",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "silent-generation",
+    "categoryTitle": "Aufbaugesetz",
+    "prompt": "In welchem Jahr wurde der Marshallplan in den USA Gesetz?",
+    "choices": [
+      "1945",
+      "1948",
+      "1953",
+      "1951"
+    ],
+    "correctIndex": 1,
+    "banterHint": "Der Krieg war vorbei. Der Aufbau hat ein Startdatum."
+  },
+  {
     "id": "cq-e-boomer-gaye",
     "tier": "easy",
     "topic": "music",
@@ -1824,6 +1856,38 @@
       1,
       2
     ]
+  },
+  {
+    "id": "cq-e-boomer-parks",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "1. Dezember",
+    "prompt": "Wessen Festnahme in Montgomery am 1. Dezember 1955 löste den Busboykott aus?",
+    "choices": [
+      "Rosa Parks",
+      "Dorothy Height",
+      "Ella Baker",
+      "Claudette Colvin"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Der Platz blieb besetzt. Der Boykott folgte."
+  },
+  {
+    "id": "cq-h-boomer-gold",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "baby-boomer",
+    "categoryTitle": "Element",
+    "prompt": "Welches chemische Zeichen steht für Gold?",
+    "choices": [
+      "Au",
+      "Ag",
+      "Fe",
+      "Cu"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Silber ist der Nachbar in der Tabelle."
   },
   {
     "id": "cq-e-genx-gameboy",
@@ -1967,6 +2031,38 @@
     ]
   },
   {
+    "id": "cq-e-genx-redspot",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-x",
+    "categoryTitle": "Sturm",
+    "prompt": "Welcher Planet ist für den Großen Roten Fleck bekannt?",
+    "choices": [
+      "Jupiter",
+      "Venus",
+      "Saturn",
+      "Mars"
+    ],
+    "correctIndex": 0,
+    "banterHint": "Der Fleck ist ein Sturm, der viele Wetterberichte überdauert hat."
+  },
+  {
+    "id": "cq-h-genx-cdsale",
+    "tier": "hard",
+    "topic": "music",
+    "generation": "gen-x",
+    "categoryTitle": "Silberne Scheibe",
+    "prompt": "In welchem Jahr kam die Compact Disc erstmals in den Handel?",
+    "choices": [
+      "1988",
+      "1977",
+      "1982",
+      "1991"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Der glänzende Kreis kam vor den Playlists."
+  },
+  {
     "id": "cq-e-geny-wiki",
     "tier": "easy",
     "topic": "culture",
@@ -2106,6 +2202,38 @@
       1,
       3
     ]
+  },
+  {
+    "id": "cq-e-geny-canberra",
+    "tier": "easy",
+    "topic": "geography",
+    "generation": "gen-y",
+    "categoryTitle": "Hauptstadt",
+    "prompt": "Was ist die Hauptstadt Australiens?",
+    "choices": [
+      "Melbourne",
+      "Sydney",
+      "Canberra",
+      "Brisbane"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Die Hafenstadt ist berühmt. Die Hauptstadt ist die geplante."
+  },
+  {
+    "id": "cq-h-geny-html",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-y",
+    "categoryTitle": "Seitensprache",
+    "prompt": "Wofür steht HTML?",
+    "choices": [
+      "Home Tool Markup Language",
+      "High Transfer Mail Link",
+      "HyperText Markup Language",
+      "Hyperlink Text Main Language"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Die Seite, die du liest, ist darin geschrieben."
   },
   {
     "id": "cq-e-genz-gif",
@@ -2249,6 +2377,38 @@
     ]
   },
   {
+    "id": "cq-e-genz-eleven",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Startelf",
+    "prompt": "Wie viele Spieler einer Mannschaft stehen bei einem üblichen Fußballspiel auf dem Feld?",
+    "choices": [
+      "10",
+      "9",
+      "11",
+      "15"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Die Bank schaut zu. Gezählt werden die auf dem Rasen."
+  },
+  {
+    "id": "cq-h-genz-mohs",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-z",
+    "categoryTitle": "Härte",
+    "prompt": "Welches natürliche Mineral ist auf der Mohs-Skala das härteste?",
+    "choices": [
+      "Quarz",
+      "Korund",
+      "Diamant",
+      "Topas"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Die Skala endet bei zehn. Dieses sitzt dort."
+  },
+  {
     "id": "cq-e-alpha-cat",
     "tier": "easy",
     "topic": "culture",
@@ -2378,6 +2538,38 @@
       2,
       3
     ]
+  },
+  {
+    "id": "cq-e-alpha-leap",
+    "tier": "easy",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "Extra-Tag",
+    "prompt": "Wie viele Tage hat ein Schaltjahr?",
+    "choices": [
+      "360",
+      "366",
+      "365",
+      "364"
+    ],
+    "correctIndex": 1,
+    "banterHint": "Der Februar leiht sich einen Tag und gibt das Jahr zurück."
+  },
+  {
+    "id": "cq-h-alpha-elephant",
+    "tier": "hard",
+    "topic": "culture",
+    "generation": "gen-alpha",
+    "categoryTitle": "An Land",
+    "prompt": "Welches Tier ist das größte lebende Landtier?",
+    "choices": [
+      "Blauwal",
+      "Giraffe",
+      "Eisbär",
+      "Afrikanischer Elefant"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Der Wal nimmt den Ozean. Dieses bleibt am Boden."
   },
   {
     "id": "cq-e-multi-guitar",
@@ -2569,6 +2761,38 @@
       0,
       3
     ]
+  },
+  {
+    "id": "cq-e-multi-pacific",
+    "tier": "easy",
+    "topic": "geography",
+    "generation": "multi-gen",
+    "categoryTitle": "Offenes Wasser",
+    "prompt": "Welcher Ozean ist der größte auf der Erde?",
+    "choices": [
+      "Atlantischer Ozean",
+      "Indischer Ozean",
+      "Arktischer Ozean",
+      "Pazifischer Ozean"
+    ],
+    "correctIndex": 3,
+    "banterHint": "Die Karte gibt ihm das breiteste Blau."
+  },
+  {
+    "id": "cq-h-multi-piano",
+    "tier": "hard",
+    "topic": "music",
+    "generation": "multi-gen",
+    "categoryTitle": "Tastatur",
+    "prompt": "Wie viele Tasten hat ein gewöhnliches Klavier?",
+    "choices": [
+      "61",
+      "76",
+      "88",
+      "92"
+    ],
+    "correctIndex": 2,
+    "banterHint": "Zähl die schwarzen und die weißen. Die Summe ist die lange."
   },
   {
     "id": "ga-joke-clock",

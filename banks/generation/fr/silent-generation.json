@@ -2,8 +2,8 @@
   "generation": "silent-generation",
   "locale": "fr",
   "target": 150,
-  "held": 22,
-  "shortfall": 128,
+  "held": 24,
+  "shortfall": 126,
   "ageYear": 2026,
   "born": [
     1928,
@@ -410,6 +410,38 @@
         1,
         2
       ]
+    },
+    {
+      "id": "cq-e-silent-adenauer",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Premier chancelier",
+      "prompt": "Qui a été le premier chancelier de l'Allemagne de l'Ouest ?",
+      "choices": [
+        "Helmut Kohl",
+        "Helmut Schmidt",
+        "Willy Brandt",
+        "Konrad Adenauer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Il a pris le fauteuil en 1949 et l'a gardé longtemps."
+    },
+    {
+      "id": "cq-h-silent-marshall",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Loi de relève",
+      "prompt": "En quelle année le plan Marshall est-il devenu une loi aux États-Unis ?",
+      "choices": [
+        "1945",
+        "1948",
+        "1953",
+        "1951"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La guerre était finie. La reconstruction a une date de départ."
     }
   ]
 }

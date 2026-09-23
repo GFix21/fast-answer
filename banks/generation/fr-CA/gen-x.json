@@ -1,6 +1,6 @@
 {
   "generation": "gen-x",
-  "locale": "de",
+  "locale": "fr-CA",
   "target": 150,
   "held": 25,
   "shortfall": 125,
@@ -41,8 +41,8 @@
       "tier": "easy",
       "topic": "music",
       "generation": "gen-x",
-      "categoryTitle": "Kabel-Tag eins",
-      "prompt": "Welcher Sender startete 1981 mit „Video Killed the Radio Star“?",
+      "categoryTitle": "Jour un du câble",
+      "prompt": "Quelle chaîne a été lancée en 1981 avec « Video Killed the Radio Star » ?",
       "choices": [
         "MTV",
         "CNN",
@@ -57,24 +57,24 @@
       "tier": "easy",
       "topic": "film-tv",
       "generation": "gen-x",
-      "categoryTitle": "Flux & Freunde",
-      "prompt": "Wofür braucht Doc Brown in Zurück in die Zukunft 1,21 Gigawatt?",
+      "categoryTitle": "Flux et compagnie",
+      "prompt": "Dans Retour vers le futur, de quoi Doc Brown a besoin de 1,21 gigawatt ?",
       "choices": [
-        "Plutoniumstaub",
-        "Bananenschalen",
-        "Elektrizität",
-        "Kaffee"
+        "De poussière de plutonium",
+        "De peaux de banane",
+        "D’électricité",
+        "De café"
       ],
       "correctIndex": 2,
-      "banterHint": "Great Scott — Strom, kein Obst."
+      "banterHint": "Nom d’un tonnerre — de l’énergie, pas des fruits."
     },
     {
       "id": "w39-e-genx-hamster",
       "tier": "easy",
       "topic": "grand-tour",
       "generation": "gen-x",
-      "categoryTitle": "Hammonds Horror-Ecke",
-      "prompt": "Welcher Moderator gilt als der kleinste des Top-Gear- / Grand-Tour-Trios?",
+      "categoryTitle": "Coin d’horreur de Hammond",
+      "prompt": "Quel présentateur est célèbrement le plus petit du trio Top Gear / The Grand Tour ?",
       "choices": [
         "James May",
         "The Stig",
@@ -82,15 +82,15 @@
         "Jeremy Clarkson"
       ],
       "correctIndex": 2,
-      "banterHint": "Hamster. Ja. Wissen wir."
+      "banterHint": "Hamster. Oui. On sait."
     },
     {
       "id": "w39-e-genx-may",
       "tier": "easy",
       "topic": "grand-tour",
       "generation": "gen-x",
-      "categoryTitle": "Captain-Slow-Ecke",
-      "prompt": "Welcher Grand-Tour-Moderator trägt den Spitznamen Captain Slow?",
+      "categoryTitle": "Coin du Captain Slow",
+      "prompt": "Quel présentateur de The Grand Tour est surnommé Captain Slow ?",
       "choices": [
         "Richard Hammond",
         "James May",
@@ -105,11 +105,11 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Blockparty",
-      "prompt": "Welches Puzzle-Spiel mit fallenden Blöcken schuf Alexey Pajitnov?",
+      "categoryTitle": "Fête des blocs",
+      "prompt": "Quel jeu de puzzle aux blocs tombants a été créé par Alexey Pajitnov ?",
       "choices": [
         "Pac-Man",
-        "Minesweeper",
+        "Démineur",
         "Snake",
         "Tetris"
       ],
@@ -121,8 +121,8 @@
       "tier": "easy",
       "topic": "film-tv",
       "generation": "gen-x",
-      "categoryTitle": "Gelbe Familie",
-      "prompt": "Wie heißt die Heimatstadt der Simpsons?",
+      "categoryTitle": "Famille jaune",
+      "prompt": "Quelle est la ville natale des Simpson ?",
       "choices": [
         "South Park",
         "Quahog",
@@ -137,8 +137,8 @@
       "tier": "hard",
       "topic": "grand-tour",
       "generation": "gen-x",
-      "categoryTitle": "Prime-Time-Benzin",
-      "prompt": "Welcher Streamingdienst produzierte The Grand Tour?",
+      "categoryTitle": "Essence en prime time",
+      "prompt": "Quel service de streaming a produit The Grand Tour ?",
       "choices": [
         "Netflix",
         "Disney+",
@@ -153,13 +153,13 @@
       "tier": "hard",
       "topic": "geography",
       "generation": "gen-x",
-      "categoryTitle": "Atomkarte",
-      "prompt": "Die Tschernobyl-Katastrophe 1986 ereignete sich in welchem heutigen Land?",
+      "categoryTitle": "Carte atomique",
+      "prompt": "La catastrophe nucléaire de Tchernobyl en 1986 s’est produite dans quel pays actuel ?",
       "choices": [
-        "Schweden",
-        "Polen",
+        "Suède",
+        "Pologne",
         "Ukraine",
-        "Deutschland"
+        "Allemagne"
       ],
       "correctIndex": 2,
       "banterHint": null
@@ -169,8 +169,8 @@
       "tier": "hard",
       "topic": "music",
       "generation": "gen-x",
-      "categoryTitle": "Grunge-Tor",
-      "prompt": "Welches Nirvana-Album enthält den Song „Smells Like Teen Spirit“?",
+      "categoryTitle": "Porte grunge",
+      "prompt": "Quel album de Nirvana contient la chanson « Smells Like Teen Spirit » ?",
       "choices": [
         "Bleach",
         "Nevermind",
@@ -185,8 +185,8 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Hyperlink-Dämmerung",
-      "prompt": "Wem wird die Erfindung des World Wide Web zugeschrieben?",
+      "categoryTitle": "Aube de l’hyperlien",
+      "prompt": "À qui attribue-t-on l’invention du World Wide Web ?",
       "choices": [
         "Steve Jobs",
         "Mark Zuckerberg",
@@ -201,13 +201,13 @@
       "tier": "hard",
       "topic": "film-tv",
       "generation": "gen-x",
-      "categoryTitle": "Über nichts",
-      "prompt": "In welcher US-Stadt spielt Seinfeld hauptsächlich?",
+      "categoryTitle": "À propos de rien",
+      "prompt": "Seinfeld se déroule principalement dans quelle ville américaine ?",
       "choices": [
         "Chicago",
         "Boston",
         "Los Angeles",
-        "New York City"
+        "New York"
       ],
       "correctIndex": 3,
       "banterHint": null
@@ -217,8 +217,8 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Handheld-Geschichte",
-      "prompt": "In welchem Jahr erschien Nintendos originaler Game Boy in Japan?",
+      "categoryTitle": "Histoire portative",
+      "prompt": "En quelle année le Game Boy original de Nintendo est sorti au Japon ?",
       "choices": [
         "1994",
         "1998",
@@ -233,8 +233,8 @@
       "tier": "difficult",
       "topic": "grand-tour",
       "generation": "gen-x",
-      "categoryTitle": "Studio-Chronologie",
-      "prompt": "In welchem Jahr hatte The Grand Tour Premiere auf Amazon Prime Video?",
+      "categoryTitle": "Chronologie studio",
+      "prompt": "En quelle année The Grand Tour a été diffusé pour la première fois sur Amazon Prime Video ?",
       "choices": [
         "2015",
         "2018",
@@ -242,15 +242,15 @@
         "2016"
       ],
       "correctIndex": 3,
-      "banterHint": "Nach der BBC, bevor alle übers Campen stritten."
+      "banterHint": "Après la BBC, avant que tout le monde se dispute sur le camping."
     },
     {
       "id": "w39-d-genx-berlin",
       "tier": "difficult",
       "topic": "geography",
       "generation": "gen-x",
-      "categoryTitle": "Mauer-Uhr",
-      "prompt": "In welchem Jahr fiel die Berliner Mauer?",
+      "categoryTitle": "Horloge du Mur",
+      "prompt": "En quelle année le mur de Berlin est tombé ?",
       "choices": [
         "1989",
         "1979",
@@ -265,8 +265,8 @@
       "tier": "extreme",
       "topic": "grand-tour",
       "generation": "gen-x",
-      "categoryTitle": "Finale · Helm ab",
-      "prompt": "Welcher Rennfahrer wurde 2009 als damaliger BBC-Top-Gear-Stig enthüllt?",
+      "categoryTitle": "Finale · Casque ôté",
+      "prompt": "Quel pilote de course a été révélé en 2009 comme le Stig alors en poste de la BBC Top Gear ?",
       "choices": [
         "Damon Hill",
         "Michael Schumacher",
@@ -281,8 +281,8 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Taschenbildschirm",
-      "prompt": "Welche Handheld-Konsole brachte Nintendo 1989 heraus?",
+      "categoryTitle": "Écran de poche",
+      "prompt": "Quelle console portative Nintendo a sortie en 1989 ?",
       "choices": [
         "Lynx",
         "PSP",
@@ -290,15 +290,15 @@
         "Game Boy"
       ],
       "correctIndex": 3,
-      "banterHint": "Tetris reiste in vielen Taschen mit."
+      "banterHint": "Tetris a voyagé dans bien des poches."
     },
     {
       "id": "cq-e-genx-pdf",
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Seite ohne Papier",
-      "prompt": "Wofür steht PDF?",
+      "categoryTitle": "Page sans papier",
+      "prompt": "PDF veut dire quoi ?",
       "choices": [
         "Personal Disk Folder",
         "Public Data File",
@@ -306,15 +306,15 @@
         "Portable Document Format"
       ],
       "correctIndex": 3,
-      "banterHint": "Die Seite hat reisen gelernt."
+      "banterHint": "La page a appris à voyager."
     },
     {
       "id": "cq-h-genx-ram",
       "tier": "hard",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Kurzes Gedächtnis",
-      "prompt": "Wofür steht RAM in einem Computer?",
+      "categoryTitle": "Mémoire courte",
+      "prompt": "RAM, dans un ordinateur, ça veut dire quoi ?",
       "choices": [
         "Read And Modify",
         "Rapid Archive Module",
@@ -322,15 +322,15 @@
         "Remote Access Mainframe"
       ],
       "correctIndex": 2,
-      "banterHint": "Schneller Speicher, und er vergisst ohne Strom."
+      "banterHint": "Une mémoire rapide, qui oublie quand le courant coupe."
     },
     {
       "id": "cq-h-genx-cd",
       "tier": "hard",
       "topic": "music",
       "generation": "gen-x",
-      "categoryTitle": "Silberner Kreis",
-      "prompt": "Wofür steht CD beim Musikformat der frühen 1980er?",
+      "categoryTitle": "Cercle d'argent",
+      "prompt": "CD, pour le format musical du début des années 1980, veut dire quoi ?",
       "choices": [
         "Cassette Deck",
         "Catalog Download",
@@ -338,23 +338,23 @@
         "Crystal Drive"
       ],
       "correctIndex": 2,
-      "banterHint": "Ein kleiner Spiegel, der ein Album hielt."
+      "banterHint": "Un petit miroir qui contenait un album."
     },
     {
       "id": "cq-e-genx-cassette",
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Aufgedreht",
-      "prompt": "Warum war die Kassette schüchtern?",
+      "categoryTitle": "Un peu tendue",
+      "prompt": "Pourquoi la cassette se sentait gênée ?",
       "choices": [
-        "Sie verlor den Bleistift",
-        "Sie war etwas aufgedreht",
-        "Sie übersprang den Refrain",
-        "Sie versteckte sich im Walkman"
+        "Elle a perdu le crayon",
+        "Elle était un peu tendue",
+        "Elle a sauté le refrain",
+        "Elle s'est cachée dans le baladeur"
       ],
       "correctIndex": 1,
-      "banterHint": "Seite B wurde trotzdem gehört.",
+      "banterHint": "La face B a quand même eu son écoute.",
       "funny": true,
       "structure": "joke"
     },
@@ -363,16 +363,16 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Geisterdienst",
-      "prompt": "Welche Farbe hat Blinky, der Pac-Man-Geist?",
+      "categoryTitle": "Service fantôme",
+      "prompt": "C'est quoi la couleur de Blinky, le fantôme de Pac-Man ?",
       "choices": [
-        "Rosa",
+        "Rose",
         "Orange",
         "Cyan",
-        "Rot"
+        "Rouge"
       ],
       "correctIndex": 3,
-      "banterHint": "Die anderen drei tragen den Rest.",
+      "banterHint": "Les trois autres portent le reste.",
       "structure": "colour"
     },
     {
@@ -380,16 +380,16 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Platz",
-      "prompt": "Welche Farbe hat ein Tennisball nach den Regeln?",
+      "categoryTitle": "Court",
+      "prompt": "C'est quoi la couleur d'une balle de tennis réglementaire ?",
       "choices": [
-        "Grün",
-        "Weiß",
-        "Gelb",
+        "Vert",
+        "Blanc",
+        "Jaune",
         "Orange"
       ],
       "correctIndex": 2,
-      "banterHint": "Ältere Bälle waren weiß. Die Regel ist jetzt der helle.",
+      "banterHint": "Les anciennes balles étaient blanches. La règle est la vive.",
       "structure": "colour"
     },
     {
@@ -397,16 +397,16 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Erste Seite",
-      "prompt": "Die Geschichte scheint woanders hinzugehen. Die Frage bleibt: „Wann wurde das World Wide Web der Öffentlichkeit zugänglich?“",
+      "categoryTitle": "Première page",
+      "prompt": "L'histoire semble partir ailleurs. La question reste : « Le Web a été ouvert au public quand ? »",
       "choices": [
-        "6. August 1991",
-        "12. März, der Tag, an dem die Idee sich räusperte",
-        "1. Januar, als der Kalender offiziell aussah",
-        "6. August 1989"
+        "6 août 1991",
+        "12 mars, le jour où l'idée s'est raclé la gorge",
+        "1er janvier, quand le calendrier avait l'air officiel",
+        "6 août 1989"
       ],
       "correctIndex": 0,
-      "banterHint": "Die Idee ist älter. Die öffentliche Seite hat dieses Datum.",
+      "banterHint": "L'idée est plus vieille. La page publique est cette date.",
       "funny": true,
       "humorous": true,
       "injection": "misdirection",
@@ -422,24 +422,24 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "gen-x",
-      "categoryTitle": "Sturm",
-      "prompt": "Welcher Planet ist für den Großen Roten Fleck bekannt?",
+      "categoryTitle": "Tempête",
+      "prompt": "Quelle planète est connue pour la Grande Tache rouge ?",
       "choices": [
         "Jupiter",
-        "Venus",
-        "Saturn",
+        "Vénus",
+        "Saturne",
         "Mars"
       ],
       "correctIndex": 0,
-      "banterHint": "Der Fleck ist ein Sturm, der viele Wetterberichte überdauert hat."
+      "banterHint": "La tache est une tempête plus vieille que bien des bulletins."
     },
     {
       "id": "cq-h-genx-cdsale",
       "tier": "hard",
       "topic": "music",
       "generation": "gen-x",
-      "categoryTitle": "Silberne Scheibe",
-      "prompt": "In welchem Jahr kam die Compact Disc erstmals in den Handel?",
+      "categoryTitle": "Disque argenté",
+      "prompt": "En quelle année le disque compact a été mis en vente ?",
       "choices": [
         "1988",
         "1977",
@@ -447,7 +447,7 @@
         "1991"
       ],
       "correctIndex": 2,
-      "banterHint": "Der glänzende Kreis kam vor den Playlists."
+      "banterHint": "Le cercle brillant est arrivé avant les listes de lecture."
     }
   ]
 }

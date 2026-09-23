@@ -34,9 +34,9 @@ export default async function handler(req, res) {
     for (const q of overlaid.questions) {
       studioCounts[q.tier] = (studioCounts[q.tier] || 0) + 1;
     }
-    const statusCounts = { pending: 0, approved: 0, rejected: 0 };
+    const statusCounts = { active: 0, pending: 0, approved: 0, rejected: 0 };
     for (const q of overlaid.questions) {
-      const s = q.status || "pending";
+      const s = q.status || "active";
       statusCounts[s] = (statusCounts[s] || 0) + 1;
     }
     return json(res, 200, {
@@ -68,7 +68,7 @@ export default async function handler(req, res) {
     }
     const loc = normalizeLocale(body.locale || locale);
     if (body.action === "status" && body.id && body.status) {
-      if (!["pending", "approved", "rejected"].includes(body.status)) {
+      if (!["active", "pending", "approved", "rejected"].includes(body.status)) {
         return json(res, 400, { error: "bad status" });
       }
       setQuestionStatus(body.id, body.status, loc);

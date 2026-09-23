@@ -1,6 +1,6 @@
 {
   "generation": "multi-gen",
-  "locale": "de",
+  "locale": "fr-CA",
   "target": 150,
   "held": 21,
   "shortfall": 129,
@@ -25,10 +25,10 @@
       "tier": "easy",
       "topic": "geography",
       "generation": "multi-gen",
-      "categoryTitle": "Kartenchaos",
-      "prompt": "Was ist die Hauptstadt Japans?",
+      "categoryTitle": "Chaos cartographique",
+      "prompt": "Quelle est la capitale du Japon ?",
       "choices": [
-        "Tokio",
+        "Tokyo",
         "Kyoto",
         "Nagoya",
         "Osaka"
@@ -41,13 +41,13 @@
       "tier": "easy",
       "topic": "art",
       "generation": "multi-gen",
-      "categoryTitle": "Louvre Lite",
-      "prompt": "Wer malte die Mona Lisa?",
+      "categoryTitle": "Louvre lite",
+      "prompt": "Qui a peint la Joconde ?",
       "choices": [
         "Donatello",
-        "Raffael",
-        "Michelangelo",
-        "Leonardo da Vinci"
+        "Raphaël",
+        "Michel-Ange",
+        "Léonard de Vinci"
       ],
       "correctIndex": 3,
       "banterHint": null
@@ -57,13 +57,13 @@
       "tier": "easy",
       "topic": "dj-gigi",
       "generation": "multi-gen",
-      "categoryTitle": "Gigis Easy Lane",
-      "prompt": "Wahr oder Vibe-Check: Unter welcher Label-Familie veröffentlicht DJ Gigi?",
+      "categoryTitle": "Voie facile de Gigi",
+      "prompt": "Vrai ou vibe-check : DJ Gigi sort sous quelle famille de labels ?",
       "choices": [
-        "Nur Motown",
+        "Motown uniquement",
         "GMG Brand Label",
         "Nintendo Sound Team",
-        "Nur Deutsche Grammophon"
+        "Deutsche Grammophon uniquement"
       ],
       "correctIndex": 1,
       "banterHint": null
@@ -73,8 +73,8 @@
       "tier": "easy",
       "topic": "grand-tour",
       "generation": "multi-gen",
-      "categoryTitle": "Weißes-Anzug-Rätsel",
-      "prompt": "Wie heißt der anonyme Rennfahrer mit Helm bei Top Gear?",
+      "categoryTitle": "Mystère de la combinaison blanche",
+      "prompt": "Dans Top Gear, comment s’appelle le pilote anonyme du show, casqué ?",
       "choices": [
         "The Stag",
         "The Shadow",
@@ -89,13 +89,13 @@
       "tier": "hard",
       "topic": "geography",
       "generation": "multi-gen",
-      "categoryTitle": "Fluss-Rang",
-      "prompt": "Welcher afrikanische Fluss gilt traditionell als einer der längsten der Welt?",
+      "categoryTitle": "Classement des fleuves",
+      "prompt": "Quel fleuve africain est traditionnellement cité parmi les plus longs du monde ?",
       "choices": [
-        "Themse",
-        "Seine",
-        "Hudson",
-        "Nil"
+        "La Tamise",
+        "La Seine",
+        "L’Hudson",
+        "Le Nil"
       ],
       "correctIndex": 3,
       "banterHint": null
@@ -105,13 +105,13 @@
       "tier": "hard",
       "topic": "art",
       "generation": "multi-gen",
-      "categoryTitle": "Sternen-Fakt",
-      "prompt": "Mit welchem Gemälde wird Vincent van Gogh stark verbunden?",
+      "categoryTitle": "Fait étoilé",
+      "prompt": "Vincent van Gogh est fortement associé à quel tableau ?",
       "choices": [
         "Guernica",
-        "Der Schrei als einziges Werk",
-        "Die Sternennacht",
-        "Die Beständigkeit der Erinnerung"
+        "Le Cri comme seule œuvre",
+        "La Nuit étoilée",
+        "La Persistance de la mémoire"
       ],
       "correctIndex": 2,
       "banterHint": null
@@ -121,13 +121,13 @@
       "tier": "hard",
       "topic": "cars",
       "generation": "multi-gen",
-      "categoryTitle": "Zylinderzahl",
-      "prompt": "Wie viele Zylinder hat ein typischer V8-Motor?",
+      "categoryTitle": "Compte des cylindres",
+      "prompt": "Un moteur V8 a typiquement combien de cylindres ?",
       "choices": [
-        "Vier",
-        "Zwei",
-        "Sechzehn",
-        "Acht"
+        "Quatre",
+        "Deux",
+        "Seize",
+        "Huit"
       ],
       "correctIndex": 3,
       "banterHint": null
@@ -137,8 +137,8 @@
       "tier": "hard",
       "topic": "music",
       "generation": "multi-gen",
-      "categoryTitle": "Broadway-Beats",
-      "prompt": "Wer schrieb Musik und Text für das Musical Hamilton?",
+      "categoryTitle": "Rythmes Broadway",
+      "prompt": "Qui a écrit la musique et les paroles de la comédie musicale Hamilton ?",
       "choices": [
         "Andrew Lloyd Webber",
         "Stephen Sondheim",
@@ -153,13 +153,13 @@
       "tier": "difficult",
       "topic": "art",
       "generation": "multi-gen",
-      "categoryTitle": "Pyramiden-Problem",
-      "prompt": "I. M. Peis Glaspyramide ist das moderne Eingangs-Wahrzeichen welches Museums?",
+      "categoryTitle": "Problème de pyramide",
+      "prompt": "La pyramide de verre d’I. M. Pei est l’entrée moderne emblématique de quel musée ?",
       "choices": [
-        "Met (NYC)",
-        "Louvre",
-        "British Museum",
-        "Prado"
+        "Le Met (NYC)",
+        "Le Louvre",
+        "Le British Museum",
+        "Le Prado"
       ],
       "correctIndex": 1,
       "banterHint": null
@@ -169,24 +169,24 @@
       "tier": "easy",
       "topic": "music",
       "generation": "multi-gen",
-      "categoryTitle": "Sechs Saiten",
-      "prompt": "Wie viele Saiten hat eine gewöhnliche Gitarre?",
+      "categoryTitle": "Six cordes",
+      "prompt": "Une guitare standard a combien de cordes ?",
       "choices": [
-        "Vier",
-        "Sechs",
-        "Acht",
-        "Zwölf"
+        "Quatre",
+        "Six",
+        "Huit",
+        "Douze"
       ],
       "correctIndex": 1,
-      "banterHint": "Zwölfsaiter sind die lauteren Verwandten."
+      "banterHint": "Les guitares à douze cordes sont les cousines plus bruyantes."
     },
     {
       "id": "cq-e-multi-boil",
       "tier": "easy",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Kessel",
-      "prompt": "Wie hoch ist der Siedepunkt von Wasser auf Meereshöhe, in Celsius?",
+      "categoryTitle": "Bouilloire",
+      "prompt": "Le point d'ébullition de l'eau au niveau de la mer, en Celsius, c'est quoi ?",
       "choices": [
         "100",
         "90",
@@ -194,31 +194,31 @@
         "120"
       ],
       "correctIndex": 0,
-      "banterHint": "Auf dem Berg ist der Kessel etwas früher fertig."
+      "banterHint": "En montagne, la bouilloire finit un peu plus tôt."
     },
     {
       "id": "cq-h-multi-photo",
       "tier": "hard",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Grüne Arbeit",
-      "prompt": "Welches Gas nehmen Pflanzen bei der Fotosynthese auf?",
+      "categoryTitle": "Travail vert",
+      "prompt": "Quel gaz les plantes prennent pendant la photosynthèse ?",
       "choices": [
-        "Stickstoff",
-        "Helium",
-        "Kohlenstoffdioxid",
-        "Sauerstoff"
+        "L'azote",
+        "L'hélium",
+        "Le dioxyde de carbone",
+        "L'oxygène"
       ],
       "correctIndex": 2,
-      "banterHint": "Sauerstoff geben sie dem Raum zurück."
+      "banterHint": "Elles redonnent l'oxygène à la pièce."
     },
     {
       "id": "cq-h-multi-pitch",
       "tier": "hard",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Auf dem Platz",
-      "prompt": "Wie viele Spieler einer Fußballmannschaft stehen gleichzeitig auf dem Feld?",
+      "categoryTitle": "Sur le terrain",
+      "prompt": "Combien de joueurs d'une équipe de soccer sont sur le terrain en même temps ?",
       "choices": [
         "11",
         "15",
@@ -226,23 +226,23 @@
         "13"
       ],
       "correctIndex": 0,
-      "banterHint": "Der Torwart zählt mit."
+      "banterHint": "Le gardien compte parmi eux."
     },
     {
       "id": "cq-h-multi-compass",
       "tier": "hard",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Kurs Nord",
-      "prompt": "Warum trat der Kompass dem Quiz bei?",
+      "categoryTitle": "Plein nord",
+      "prompt": "Pourquoi la boussole s'est jointe au quiz ?",
       "choices": [
-        "Er versteckte die Karte",
-        "Er übersprang den Weg",
-        "Er verlor die Nadel",
-        "Er wollte sich orientieren"
+        "Elle a caché la carte",
+        "Elle a sauté le sentier",
+        "Elle a perdu l'aiguille",
+        "Elle voulait trouver ses repères"
       ],
       "correctIndex": 3,
-      "banterHint": "Norden blieb eine freundliche Richtung.",
+      "banterHint": "Le nord est resté une direction gentille.",
       "funny": true,
       "structure": "joke"
     },
@@ -251,16 +251,16 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Nachtton",
-      "prompt": "Welche Farbe hat der Mond während einer totalen Mondfinsternis?",
+      "categoryTitle": "Teinte de nuit",
+      "prompt": "C'est quoi la couleur de la Lune pendant une éclipse lunaire totale ?",
       "choices": [
-        "Rot",
-        "Blau",
-        "Grün",
-        "Weiß"
+        "Rouge",
+        "Bleu",
+        "Vert",
+        "Blanc"
       ],
       "correctIndex": 0,
-      "banterHint": "Der Schatten der Erde leiht diesen Ton.",
+      "banterHint": "L'ombre de la Terre prête cette teinte.",
       "structure": "colour"
     },
     {
@@ -268,16 +268,16 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Unterwegs",
-      "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Wann ist die Titanic gesunken?“ Der andere antwortet…",
+      "categoryTitle": "En marchant",
+      "prompt": "Deux amis se promènent. L'un demande à l'autre : « Le Titanic a coulé quand ? » L'autre répond…",
       "choices": [
-        "15. April 1912",
-        "15. April 1911",
-        "7. Mai, wenn die Fortsetzung anlegt",
-        "1. April (Aprilscherz)"
+        "15 avril 1912",
+        "15 avril 1911",
+        "7 mai, quand la suite accoste",
+        "1er avril (poisson d'avril)"
       ],
       "correctIndex": 0,
-      "banterHint": "Die andere Person hat die gestellte Frage beantwortet.",
+      "banterHint": "L'autre a répondu à la question posée.",
       "funny": true,
       "humorous": true,
       "injection": "dialogue",
@@ -293,16 +293,16 @@
       "tier": "hard",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Gleicher Weg",
-      "prompt": "Zwei Freunde gehen spazieren. Einer fragt den anderen: „Welche Farbe hatte der Rumpf der Titanic?“ Der andere antwortet…",
+      "categoryTitle": "Même marche",
+      "prompt": "Deux amis se promènent. L'un demande à l'autre : « C'est quoi la couleur de la coque du Titanic ? » L'autre répond…",
       "choices": [
-        "Weiß",
-        "Grün, nach einem langen Aufenthalt im Hafen",
-        "Rot, wenn der Schornstein die Geschichte erzählt",
-        "Schwarz"
+        "Blanc",
+        "Vert, après un long séjour au port",
+        "Rouge, si la cheminée raconte l'histoire",
+        "Noir"
       ],
       "correctIndex": 3,
-      "banterHint": "Gleicher Weg. Andere Struktur. Der Rumpf war nicht das Datum.",
+      "banterHint": "Même marche. Autre structure. La coque n'était pas la date.",
       "funny": true,
       "humorous": true,
       "renegade": true,
@@ -319,8 +319,8 @@
       "tier": "easy",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Achteck",
-      "prompt": "Wie viele Seiten hat ein übliches Stoppschild?",
+      "categoryTitle": "Octogone",
+      "prompt": "Un panneau d'arrêt standard a combien de côtés ?",
       "choices": [
         "8",
         "10",
@@ -328,23 +328,23 @@
         "6"
       ],
       "correctIndex": 0,
-      "banterHint": "Zähl die flachen Kanten, nicht den Pfosten."
+      "banterHint": "Compte les bords plats, pas le poteau."
     },
     {
       "id": "cq-e-multi-sky",
       "tier": "easy",
       "topic": "culture",
       "generation": "multi-gen",
-      "categoryTitle": "Über uns",
-      "prompt": "Ein kurzer Schritt zur Seite, dann zurück zur Frage: „Welche Farbe hat ein klarer Himmel am Tag?“",
+      "categoryTitle": "Au-dessus",
+      "prompt": "Un petit pas de côté, puis retour à la question : « C'est quoi la couleur d'un ciel clair en journée ? »",
       "choices": [
-        "Grün, falls der Rasen befördert wurde",
-        "Schwarz",
-        "Blau",
-        "Rot, aufgehoben für die Abendschicht"
+        "Vert, si la pelouse a eu une promotion",
+        "Noir",
+        "Bleu",
+        "Rouge, gardé pour l'équipe du coucher"
       ],
       "correctIndex": 2,
-      "banterHint": "Zurück in die Szene. Die Antwort ist die gewöhnliche.",
+      "banterHint": "Reviens dans la scène. La réponse est la simple.",
       "funny": true,
       "humorous": true,
       "injection": "aside",
@@ -360,24 +360,24 @@
       "tier": "easy",
       "topic": "geography",
       "generation": "multi-gen",
-      "categoryTitle": "Offenes Wasser",
-      "prompt": "Welcher Ozean ist der größte auf der Erde?",
+      "categoryTitle": "Eau libre",
+      "prompt": "C'est quoi le plus grand océan sur la Terre ?",
       "choices": [
-        "Atlantischer Ozean",
-        "Indischer Ozean",
-        "Arktischer Ozean",
-        "Pazifischer Ozean"
+        "L'océan Atlantique",
+        "L'océan Indien",
+        "L'océan Arctique",
+        "L'océan Pacifique"
       ],
       "correctIndex": 3,
-      "banterHint": "Die Karte gibt ihm das breiteste Blau."
+      "banterHint": "La carte lui donne le bleu le plus large."
     },
     {
       "id": "cq-h-multi-piano",
       "tier": "hard",
       "topic": "music",
       "generation": "multi-gen",
-      "categoryTitle": "Tastatur",
-      "prompt": "Wie viele Tasten hat ein gewöhnliches Klavier?",
+      "categoryTitle": "Clavier",
+      "prompt": "Un piano standard a combien de touches ?",
       "choices": [
         "61",
         "76",
@@ -385,7 +385,7 @@
         "92"
       ],
       "correctIndex": 2,
-      "banterHint": "Zähl die schwarzen und die weißen. Die Summe ist die lange."
+      "banterHint": "Compte les noires et les blanches. Le total est le long."
     }
   ]
 }

@@ -3,7 +3,10 @@
   "generatedAt": "2026-09-21T13:25:56.070Z",
   "host": "Jeremy",
   "inspirationSummary": "America/Toronto week 2026-W39 — 40/40/10/6 across topics; DJ Gigi easy-only; six generations represented in the mix (not 96×6); PG-13; ≥2 sources per item.",
+  "locale": "en",
   "schemaVersion": 1,
+  "weekTarget": 1050,
+  "weekComplete": false,
   "questions": [
     {
       "banterHint": "Three little words. Huge hats.",
@@ -28,7 +31,7 @@
           "label": "Smithsonian / presidential campaign history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-silent-fdr",
@@ -52,7 +55,7 @@
           "label": "Encyclopædia Britannica — World War II"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "No, not a crystal ball.",
@@ -77,7 +80,7 @@
           "label": "IEEE / transistor history primers"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-silent-elvis",
@@ -101,7 +104,7 @@
           "label": "Rock & Roll Hall of Fame biography"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-silent-ottawa",
@@ -125,7 +128,7 @@
           "label": "Government of Canada — capital city"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-silent-road",
@@ -149,7 +152,7 @@
           "label": "Library of Congress / Beat Generation primers"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-moon",
@@ -173,7 +176,7 @@
           "label": "NASA Apollo 11 mission summary"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-apollo",
@@ -197,7 +200,7 @@
           "label": "NASA official mission timeline"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-woodstock",
@@ -221,7 +224,7 @@
           "label": "Bethel Woods Center for the Arts history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-beatles",
@@ -245,7 +248,7 @@
           "label": "Beatles official chronology / CBS archives"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-kirk",
@@ -269,7 +272,7 @@
           "label": "Star Trek: The Original Series credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-boomer-abs",
@@ -293,7 +296,7 @@
           "label": "NHTSA / automotive safety primers"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genx-mtv",
@@ -317,7 +320,7 @@
           "label": "Billboard / cable launch retrospectives"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Great Scott — power, not produce.",
@@ -342,7 +345,7 @@
           "label": "Film dialogue / Universal Pictures"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Hamster. Yes. We know.",
@@ -367,7 +370,7 @@
           "label": "BBC Top Gear / Amazon Grand Tour production notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genx-may",
@@ -391,7 +394,7 @@
           "label": "Top Gear / Grand Tour episode credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genx-tetris",
@@ -415,7 +418,7 @@
           "label": "Encyclopædia Britannica — Tetris"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genx-simpsons",
@@ -439,7 +442,7 @@
           "label": "Fox / series production materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-matrix",
@@ -463,7 +466,7 @@
           "label": "Warner Bros. film synopsis"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-ipod",
@@ -487,7 +490,7 @@
           "label": "Apple press archive — Oct 2001"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-luke",
@@ -511,7 +514,7 @@
           "label": "Star Wars: A New Hope (1977) film"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-gmg",
@@ -535,7 +538,7 @@
           "label": "Montréal music-label listings"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-geny-gigi",
@@ -559,7 +562,7 @@
           "label": "DJ Gigi public artist pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Yes, that was the easy one.",
@@ -584,7 +587,7 @@
           "label": "Stanford / company founding history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-fortnite",
@@ -608,7 +611,7 @@
           "label": "Epic Games Fortnite overview"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-spotify",
@@ -632,7 +635,7 @@
           "label": "Company About / Stockholm HQ materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-tiktok",
@@ -656,7 +659,7 @@
           "label": "ByteDance product descriptions"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-france",
@@ -680,7 +683,7 @@
           "label": "Encyclopædia Britannica — France"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-gigi2",
@@ -704,7 +707,7 @@
           "label": "DJ Gigi public bio notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-genz-marvel",
@@ -728,7 +731,7 @@
           "label": "Marvel Studios / Disney release history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-yt",
@@ -752,7 +755,7 @@
           "label": "Google / YouTube About pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-tablet",
@@ -776,7 +779,7 @@
           "label": "Apple iPad product pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-dory",
@@ -800,7 +803,7 @@
           "label": "Pixar / Disney film materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "If you miss this, Jeremy will need a coffee.",
@@ -825,7 +828,7 @@
           "label": "NASA solar system overview"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-lego",
@@ -849,7 +852,7 @@
           "label": "LEGO Group company history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-alpha-cars",
@@ -873,7 +876,7 @@
           "label": "Standard automotive design references"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-mix-japan",
@@ -897,7 +900,7 @@
           "label": "Encyclopædia Britannica — Japan"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-mix-mona",
@@ -921,7 +924,7 @@
           "label": "Louvre Museum collection notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-mix-gigi3",
@@ -945,7 +948,7 @@
           "label": "DJ Gigi public credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-e-mix-stig",
@@ -969,7 +972,7 @@
           "label": "BBC Top Gear programme notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-sputnik",
@@ -993,7 +996,7 @@
           "label": "NASA history — Space Race"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-hula",
@@ -1017,7 +1020,7 @@
           "label": "Wham-O company history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-polio",
@@ -1041,7 +1044,7 @@
           "label": "CDC / polio vaccine history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-korea",
@@ -1065,7 +1068,7 @@
           "label": "Encyclopædia Britannica — Korean War"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-interstate",
@@ -1089,7 +1092,7 @@
           "label": "FHWA interstate history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-silent-disneyland",
@@ -1113,7 +1116,7 @@
           "label": "Disney Parks historical timeline"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-jfk",
@@ -1137,7 +1140,7 @@
           "label": "National Archives / JFK presidential library"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-mlk",
@@ -1161,7 +1164,7 @@
           "label": "National Park Service — Lincoln Memorial"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-beatles2",
@@ -1185,7 +1188,7 @@
           "label": "Apple Corps / Beatles discography"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-ali",
@@ -1209,7 +1212,7 @@
           "label": "Encyclopædia Britannica — Muhammad Ali"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-concorde",
@@ -1233,7 +1236,7 @@
           "label": "British Airways / Air France Concorde history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-boomer-starwars",
@@ -1257,7 +1260,7 @@
           "label": "Lucasfilm release history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-amazon-gt",
@@ -1281,7 +1284,7 @@
           "label": "Amazon MGM Studios / Prime Video listings"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-chernobyl",
@@ -1305,7 +1308,7 @@
           "label": "IAEA / Chernobyl historical summaries"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-nirvana",
@@ -1329,7 +1332,7 @@
           "label": "DGC Records / Nirvana discography"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-www",
@@ -1353,7 +1356,7 @@
           "label": "CERN WWW project history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-seinfeld",
@@ -1377,7 +1380,7 @@
           "label": "NBC series production notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genx-gameboy",
@@ -1401,7 +1404,7 @@
           "label": "Nintendo corporate history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-ipod-hd",
@@ -1425,7 +1428,7 @@
           "label": "Apple iPod (2001) technical specs"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-facebook",
@@ -1449,7 +1452,7 @@
           "label": "Meta / company founding history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-dune",
@@ -1473,7 +1476,7 @@
           "label": "Publisher / copyright records — Frank Herbert"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-gmg2",
@@ -1497,7 +1500,7 @@
           "label": "Montréal independent label listings"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-friends",
@@ -1521,7 +1524,7 @@
           "label": "NBC / Warner Bros. Television credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-geny-hybrid",
@@ -1545,7 +1548,7 @@
           "label": "Toyota hybrid technology history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-fortnite2",
@@ -1569,7 +1572,7 @@
           "label": "Epic Games corporate pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-spotify2",
@@ -1593,7 +1596,7 @@
           "label": "Spotify About / company filings summaries"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-btsv",
@@ -1617,7 +1620,7 @@
           "label": "HYBE / official artist biographies"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-tesla",
@@ -1641,7 +1644,7 @@
           "label": "Company SEC / About Tesla materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-blackpanther",
@@ -1665,7 +1668,7 @@
           "label": "Marvel Studios credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-genz-paris-acc",
@@ -1689,7 +1692,7 @@
           "label": "UNFCCC official materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-minecraft",
@@ -1713,7 +1716,7 @@
           "label": "Mojang / Xbox Game Studios history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-roblox",
@@ -1737,7 +1740,7 @@
           "label": "Roblox Corporation About pages"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-pixar",
@@ -1761,7 +1764,7 @@
           "label": "Pixar Animation Studios history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-among",
@@ -1785,7 +1788,7 @@
           "label": "Innersloth game description"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-ev",
@@ -1809,7 +1812,7 @@
           "label": "IEA / EV technology overviews"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-alpha-ghibli",
@@ -1833,7 +1836,7 @@
           "label": "Studio Ghibli official materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-mix-nile",
@@ -1857,7 +1860,7 @@
           "label": "Encyclopædia Britannica — Nile River"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-mix-van-gogh",
@@ -1881,7 +1884,7 @@
           "label": "MoMA collection notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-mix-v8",
@@ -1905,7 +1908,7 @@
           "label": "Automotive engineering primers"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-h-mix-hamilton",
@@ -1929,7 +1932,7 @@
           "label": "Official Hamilton / Miranda credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-silent-u2",
@@ -1953,7 +1956,7 @@
           "label": "CIA / Cold War aviation histories"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-boomer-apollo13",
@@ -1977,7 +1980,7 @@
           "label": "NASA Apollo 13 mission report"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "banterHint": "Post-BBC, pre-everyone-arguing-about-camping.",
@@ -2002,7 +2005,7 @@
           "label": "Contemporary reviews — Nov 2016 premiere"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-genx-berlin",
@@ -2026,7 +2029,7 @@
           "label": "Encyclopædia Britannica — Berlin Wall"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-geny-iphone",
@@ -2050,7 +2053,7 @@
           "label": "Apple special event — Jan 2007"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-geny-inception",
@@ -2074,7 +2077,7 @@
           "label": "Warner Bros. / film credits"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-genz-openai",
@@ -2098,7 +2101,7 @@
           "label": "OpenAI blog — Nov 2022 announcement"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-genz-parasite",
@@ -2122,7 +2125,7 @@
           "label": "Academy of Motion Picture Arts and Sciences records"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-alpha-switch",
@@ -2146,7 +2149,7 @@
           "label": "Nintendo corporate news — March 2017"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-d-mix-louvre",
@@ -2170,7 +2173,7 @@
           "label": "Louvre Museum architectural notes"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-silent-cool-wall",
@@ -2194,7 +2197,7 @@
           "label": "BBC Top Gear Cool Wall segments"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-boomer-armstrong-quote",
@@ -2218,7 +2221,7 @@
           "label": "NASA Apollo 11 transcript"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-genx-stig-reveal",
@@ -2242,7 +2245,7 @@
           "label": "Contemporary news — Ben Collins identification 2009"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-geny-matrix-arch",
@@ -2266,7 +2269,7 @@
           "label": "Warner Bros. Matrix trilogy materials"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-genz-fortnite-mode",
@@ -2290,7 +2293,7 @@
           "label": "Epic Games Fortnite mode history"
         }
       ],
-      "status": "pending"
+      "status": "active"
     },
     {
       "id": "w39-f-alpha-minecraft-biome",
@@ -2314,7 +2317,2536 @@
           "label": "Minecraft Wiki — Warden / Deep Dark"
         }
       ],
-      "status": "pending"
+      "status": "active"
+    },
+    {
+      "id": "cq-e-silent-roar",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Jazz Decade",
+      "prompt": "What nickname is given to the 1920s in the United States?",
+      "choices": [
+        "The Roaring Twenties",
+        "The Gilded Age",
+        "The Depression Years",
+        "The Space Age"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The bands were loud. The name stuck.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Library of Congress — American history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — 1920s"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-silent-vote",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Ballot Box",
+      "prompt": "Which U.S. constitutional amendment, ratified in 1920, recognized women's right to vote?",
+      "choices": [
+        "The 19th Amendment",
+        "The 15th Amendment",
+        "The 13th Amendment",
+        "The 26th Amendment"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The line at the poll got longer, on purpose.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "National Archives — 19th Amendment"
+        },
+        {
+          "label": "Encyclopaedia Britannica — women's suffrage"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-silent-chamberlain",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "September 1939",
+      "prompt": "Who was Prime Minister of the United Kingdom when Britain declared war on Germany in 1939?",
+      "choices": [
+        "Neville Chamberlain",
+        "Winston Churchill",
+        "Clement Attlee",
+        "Stanley Baldwin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Churchill took the chair the next year.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "UK National Archives — 1939"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Neville Chamberlain"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-silent-assembly",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "First Session",
+      "prompt": "In which city did the United Nations hold its first General Assembly in 1946?",
+      "choices": [
+        "London",
+        "New York",
+        "Geneva",
+        "Paris"
+      ],
+      "correctIndex": 0,
+      "banterHint": "New York became home a few years later.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "United Nations — General Assembly history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — United Nations"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-silent-radio",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "By the Window",
+      "prompt": "Why did the radio sit near the window?",
+      "choices": [
+        "It wanted to catch a wave",
+        "It hid from the news",
+        "It lost the dial",
+        "It preferred silence"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The song still came through.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-silent-liberty",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Copper Coat",
+      "prompt": "Two friends are walking. One asks the other, \"What colour is the Statue of Liberty today?\" The other answers…",
+      "choices": [
+        "Green",
+        "Grey",
+        "Gold, if the torch is telling the story",
+        "White, still shy from the crossing"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The copper coat changed after years of weather.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "dialogue",
+      "technique": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "National Park Service — Statue of Liberty"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Statue of Liberty"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-h-silent-empire",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Skyline",
+      "prompt": "When was the Empire State Building completed?",
+      "choices": [
+        "1931",
+        "1925",
+        "1941",
+        "1950"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The spire was up before the decade turned.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Empire State Building"
+        },
+        {
+          "label": "New York City Landmarks — Empire State Building"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-silent-taxi",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Medallion",
+      "prompt": "One friend guesses wildly. The other answers the question that was asked: \"What colour is a classic New York City taxi?\"",
+      "choices": [
+        "Yellow",
+        "Green",
+        "Black, dressed for a very serious errand",
+        "White, trying out for the ice cream truck"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The wild guess can wait. The cab is the bright one.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "straight-man",
+      "technique": "straight-man",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NYC Taxi and Limousine Commission"
+        },
+        {
+          "label": "Encyclopaedia Britannica — taxicab"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-silent-adenauer",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "First Chancellor",
+      "prompt": "Who was the first Chancellor of West Germany?",
+      "choices": [
+        "Konrad Adenauer",
+        "Willy Brandt",
+        "Helmut Kohl",
+        "Helmut Schmidt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "He took the chair in 1949 and kept it for a long stretch.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "German Federal Archives — Konrad Adenauer"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Konrad Adenauer"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-silent-marshall",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Recovery Act",
+      "prompt": "In which year did the Marshall Plan become law in the United States?",
+      "choices": [
+        "1948",
+        "1945",
+        "1951",
+        "1953"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The war was already over. The rebuild had a start date.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US National Archives — Marshall Plan"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Marshall Plan"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-boomer-gaye",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Soul Hour",
+      "prompt": "Who released the album What's Going On in 1971?",
+      "choices": [
+        "Stevie Wonder",
+        "Marvin Gaye",
+        "Otis Redding",
+        "Sam Cooke"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The questions on that record still stand.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Motown / album notes — What's Going On"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Marvin Gaye"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-boomer-skylab",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Workshop in Orbit",
+      "prompt": "What was the name of NASA's first space station, launched in 1973?",
+      "choices": [
+        "Mir",
+        "Salyut",
+        "Skylab",
+        "Freedom"
+      ],
+      "correctIndex": 2,
+      "banterHint": "A workshop with a very long commute.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Skylab"
+        },
+        {
+          "label": "Encyclopaedia Britannica — space stations"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-boomer-sesame",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "baby-boomer",
+      "categoryTitle": "Street Premiere",
+      "prompt": "In which year did Sesame Street first air in the United States?",
+      "choices": [
+        "1969",
+        "1965",
+        "1974",
+        "1979"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The street opened near the end of the sixties.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Sesame Workshop — history"
+        },
+        {
+          "label": "Library of Congress — television history"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-boomer-earthday",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "First Green Day",
+      "prompt": "In which year was the first Earth Day held?",
+      "choices": [
+        "1962",
+        "1970",
+        "1977",
+        "1984"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The planet got a date on the calendar.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Earth Day Network — history"
+        },
+        {
+          "label": "U.S. EPA — Earth Day"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-boomer-record",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Spin Again",
+      "prompt": "Why did the record stay friends with the player?",
+      "choices": [
+        "It kept coming back around",
+        "It hid in the sleeve",
+        "It skipped the chorus",
+        "It lost the label"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The next song still got a turn.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "callback",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-boomer-submarine",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Under the Sea",
+      "prompt": "What colour is the submarine in the Beatles song?",
+      "choices": [
+        "Yellow",
+        "Blue",
+        "Red",
+        "Green"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The title gives the paint job away.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — the Beatles"
+        },
+        {
+          "label": "Library of Congress — Yellow Submarine"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-boomer-gate",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Span",
+      "prompt": "What colour is the Golden Gate Bridge?",
+      "choices": [
+        "International Orange",
+        "Gold",
+        "Red",
+        "Blue"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The name sounds like gold. The paint is the other one.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Golden Gate Bridge Highway and Transportation District"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Golden Gate Bridge"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-boomer-woodstock",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "The Field",
+      "prompt": "First guess, wrong. Second guess, wrong. Then the real question: \"When did the Woodstock festival begin?\"",
+      "choices": [
+        "August 15, 1969",
+        "August 15, 1967",
+        "July 4, when the fireworks thought they were the band",
+        "June 1, a month early and already muddy"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Two wrong dates, then the Friday it opened.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "rule-of-three",
+      "technique": "rule-of-three",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Bethel Woods Center for the Arts — Woodstock"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Woodstock"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-boomer-parks",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "December 1",
+      "prompt": "Whose arrest in Montgomery on December 1, 1955, started the bus boycott?",
+      "choices": [
+        "Rosa Parks",
+        "Claudette Colvin",
+        "Ella Baker",
+        "Dorothy Height"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The seat stayed taken. The boycott followed.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US National Archives — Rosa Parks"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Montgomery bus boycott"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-boomer-gold",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Element",
+      "prompt": "What is the chemical symbol for gold?",
+      "choices": [
+        "Au",
+        "Ag",
+        "Fe",
+        "Cu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Silver is the neighbour on the chart.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IUPAC — gold"
+        },
+        {
+          "label": "Encyclopaedia Britannica — gold"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genx-gameboy",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Pocket Screen",
+      "prompt": "Which handheld console did Nintendo release in 1989?",
+      "choices": [
+        "Game Boy",
+        "Game Gear",
+        "Lynx",
+        "PSP"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Tetris rode along in a lot of pockets.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Nintendo — Game Boy history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — video game consoles"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genx-pdf",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Paperless Page",
+      "prompt": "What does PDF stand for?",
+      "choices": [
+        "Public Data File",
+        "Printed Document Form",
+        "Portable Document Format",
+        "Personal Disk Folder"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The page learned to travel.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Adobe — PDF history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — document formats"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genx-ram",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Short Memory",
+      "prompt": "What does RAM stand for in a computer?",
+      "choices": [
+        "Read And Modify",
+        "Random Access Memory",
+        "Rapid Archive Module",
+        "Remote Access Mainframe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Fast memory, and it forgets when the power goes.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Computer History Museum — memory"
+        },
+        {
+          "label": "Encyclopaedia Britannica — computer memory"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genx-cd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silver Circle",
+      "prompt": "What does CD stand for in the music format introduced in the early 1980s?",
+      "choices": [
+        "Compact Disc",
+        "Cassette Deck",
+        "Crystal Drive",
+        "Catalog Download"
+      ],
+      "correctIndex": 0,
+      "banterHint": "A small mirror that held an album.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Philips / Sony — Compact Disc"
+        },
+        {
+          "label": "Encyclopaedia Britannica — compact disc"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genx-cassette",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Wound Up",
+      "prompt": "Why did the cassette feel shy?",
+      "choices": [
+        "It was a little wound up",
+        "It lost the pencil",
+        "It hid in the walkman",
+        "It skipped the chorus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Side B still got a listen.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genx-blinky",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Ghost Duty",
+      "prompt": "What colour is Blinky, the Pac-Man ghost?",
+      "choices": [
+        "Red",
+        "Pink",
+        "Cyan",
+        "Orange"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The other three ghosts wear the rest.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Bandai Namco — Pac-Man"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Pac-Man"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genx-tennis",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Court",
+      "prompt": "What colour is a regulation tennis ball?",
+      "choices": [
+        "Yellow",
+        "White",
+        "Green",
+        "Orange"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Older balls were white. The rule now is the bright one.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "International Tennis Federation — rules"
+        },
+        {
+          "label": "Encyclopaedia Britannica — tennis"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genx-web",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "First Page",
+      "prompt": "The story seems to head somewhere else. The question is still, \"When was the World Wide Web made available to the public?\"",
+      "choices": [
+        "August 6, 1991",
+        "August 6, 1989",
+        "January 1, when the calendar looked official",
+        "March 12, the day the idea cleared its throat"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The idea is older. The public page is this date.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "misdirection",
+      "technique": "misdirection",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "CERN — World Wide Web"
+        },
+        {
+          "label": "Encyclopaedia Britannica — World Wide Web"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-genx-redspot",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Storm",
+      "prompt": "Which planet is known for the Great Red Spot?",
+      "choices": [
+        "Jupiter",
+        "Mars",
+        "Saturn",
+        "Venus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The spot is a storm that has outlasted a lot of weather reports.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Jupiter"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Great Red Spot"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genx-cdsale",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silver Disc",
+      "prompt": "In which year did the compact disc first go on sale?",
+      "choices": [
+        "1982",
+        "1977",
+        "1988",
+        "1991"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The shiny circle arrived before the playlist apps.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Philips — compact disc history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — compact disc"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-geny-wiki",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Open Book",
+      "prompt": "Which website, launched in 2001, lets people write encyclopedia articles together?",
+      "choices": [
+        "Wikipedia",
+        "MySpace",
+        "GeoCities",
+        "AltaVista"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The edit button is the whole idea.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Wikimedia Foundation — Wikipedia history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Wikipedia"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-geny-sms",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Short Note",
+      "prompt": "What does SMS stand for?",
+      "choices": [
+        "Simple Mail Switch",
+        "Short Message Service",
+        "Secure Media Stream",
+        "Standard Mobile Signal"
+      ],
+      "correctIndex": 1,
+      "banterHint": "One hundred and sixty characters, and a lot of plans.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "GSM Association — SMS"
+        },
+        {
+          "label": "Encyclopaedia Britannica — text messaging"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-geny-iphone",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Pocket Computer",
+      "prompt": "Which company released the first iPhone in 2007?",
+      "choices": [
+        "Apple",
+        "Nokia",
+        "BlackBerry",
+        "Motorola"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The keyboard moved onto the glass.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Apple — iPhone announcement, 2007"
+        },
+        {
+          "label": "Encyclopaedia Britannica — smartphone"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-geny-facebook",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Open Registration",
+      "prompt": "In which year did Facebook open registration beyond schools to anyone 13 or older?",
+      "choices": [
+        "2004",
+        "2005",
+        "2006",
+        "2008"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The campus gate came down in September.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Meta — company history"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Facebook"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-geny-inbox",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Still Calm",
+      "prompt": "Why did the inbox stay calm?",
+      "choices": [
+        "It knew how to keep its letters",
+        "It deleted the morning",
+        "It hid the password",
+        "It missed the send button"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The unread pile stayed polite.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-geny-ocean",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Jewel Case",
+      "prompt": "What colour is the Heart of the Ocean in the film Titanic?",
+      "choices": [
+        "Blue",
+        "Green",
+        "Red",
+        "Yellow"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The necklace kept that one shade.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Paramount — Titanic (1997)"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Titanic, film"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-geny-potter",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "First Book",
+      "prompt": "When was the first Harry Potter book published in the United Kingdom?",
+      "choices": [
+        "1997",
+        "1995",
+        "1999",
+        "2001"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The school term in the book starts later than the book itself.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — J. K. Rowling"
+        },
+        {
+          "label": "British Library — Harry Potter"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-geny-euro",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Notes and Coins",
+      "prompt": "One word can mean two things. The scored meaning is the plain one: \"When did euro banknotes and coins enter circulation?\"",
+      "choices": [
+        "January 1, 2002",
+        "January 1, 1999",
+        "2004, when the coins learned to juggle",
+        "July, halfway through a very long receipt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The currency had a birthday before the cash did.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "wordplay",
+      "technique": "wordplay",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "European Central Bank — euro cash"
+        },
+        {
+          "label": "Encyclopaedia Britannica — euro"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-geny-canberra",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital city of Australia?",
+      "choices": [
+        "Canberra",
+        "Sydney",
+        "Melbourne",
+        "Brisbane"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The harbour city is famous. The capital is the planned one.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Australian Government — capital"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Canberra"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-geny-html",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Page Language",
+      "prompt": "What does HTML stand for?",
+      "choices": [
+        "HyperText Markup Language",
+        "High Transfer Mail Link",
+        "Home Tool Markup Language",
+        "Hyperlink Text Main Language"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The page you are reading is written in it.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "W3C — HTML"
+        },
+        {
+          "label": "Encyclopaedia Britannica — HTML"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genz-gif",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Tiny Loop",
+      "prompt": "What does GIF stand for?",
+      "choices": [
+        "Graphics Interchange Format",
+        "Global Image File",
+        "Grouped Internet Frame",
+        "General Icon Folder"
+      ],
+      "correctIndex": 0,
+      "banterHint": "A picture that refuses to sit still.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "CompuServe — GIF specification"
+        },
+        {
+          "label": "Encyclopaedia Britannica — GIF"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genz-vr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Headset",
+      "prompt": "What does VR stand for in a headset?",
+      "choices": [
+        "Video Relay",
+        "Virtual Reality",
+        "Visual Radio",
+        "Vector Render"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The room stays put. The view does not.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IEEE — virtual reality overview"
+        },
+        {
+          "label": "Encyclopaedia Britannica — virtual reality"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genz-bytedance",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Short Video",
+      "prompt": "Which company owns TikTok?",
+      "choices": [
+        "Meta",
+        "Google",
+        "ByteDance",
+        "Snap"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The app is the famous part. The company is quieter.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "ByteDance — company overview"
+        },
+        {
+          "label": "Encyclopaedia Britannica — TikTok"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genz-hashtag",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Pound Sign",
+      "prompt": "What is the name of the # symbol when it groups posts on social media?",
+      "choices": [
+        "A hashtag",
+        "An asterisk",
+        "A caret",
+        "A tilde"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One mark, and the posts find each other.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Oxford English Dictionary — hashtag"
+        },
+        {
+          "label": "Encyclopaedia Britannica — social media"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genz-emoji",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "One Eye",
+      "prompt": "Why did the emoji wink?",
+      "choices": [
+        "It had a point to make",
+        "It lost the other eye",
+        "It hid the keyboard",
+        "It missed the chat"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The message still landed kindly.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "misdirection",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genz-spotify",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Logo Circle",
+      "prompt": "What colour is the circle in the Spotify logo?",
+      "choices": [
+        "Green",
+        "Blue",
+        "Red",
+        "Yellow"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The sound waves sit on top of it.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Spotify — brand"
+        },
+        {
+          "label": "Spotify Newsroom — company"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genz-instagram",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "First Post",
+      "prompt": "When was Instagram launched?",
+      "choices": [
+        "2010",
+        "2008",
+        "2012",
+        "2014"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The square photos showed up in that year.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "when",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Instagram"
+        },
+        {
+          "label": "Meta — Instagram"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-genz-bus",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "The Stop Arm",
+      "prompt": "Same friends as before. They come back to this: \"What colour is a standard school bus in the United States?\"",
+      "choices": [
+        "Yellow",
+        "Orange",
+        "Blue, if the ocean is driving the route",
+        "White, after a very thorough wash"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The stop arm is the clue. Kids spot that paint from the curb.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "callback",
+      "technique": "callback",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "National Highway Traffic Safety Administration — school bus"
+        },
+        {
+          "label": "Encyclopaedia Britannica — school bus"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-genz-eleven",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Starting Side",
+      "prompt": "How many players from one team are on the field in a standard football match?",
+      "choices": [
+        "11",
+        "9",
+        "10",
+        "15"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The bench watches. The count is the ones on the grass.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "IFAB — Laws of the Game"
+        },
+        {
+          "label": "FIFA — laws of the game"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-genz-mohs",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Hardness",
+      "prompt": "What is the hardest natural mineral on the Mohs scale?",
+      "choices": [
+        "Diamond",
+        "Quartz",
+        "Topaz",
+        "Corundum"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The scale stops at ten. This one sits there.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Mohs scale"
+        },
+        {
+          "label": "Mindat — Mohs hardness"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-alpha-cat",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Quiz Host",
+      "prompt": "What do you call a cat who hosts the quiz?",
+      "choices": [
+        "The purr-son in charge",
+        "A scaredy cat",
+        "A copycat",
+        "A catnap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "It still lands on its feet.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-alpha-backpack",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Good Day",
+      "prompt": "Why did the backpack look proud?",
+      "choices": [
+        "It was carrying a good day",
+        "It ate the homework",
+        "It missed the bus",
+        "It hid the map"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Every book got a lift.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "misdirection",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-alpha-pencil",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Team Player",
+      "prompt": "Why did the pencil join the team?",
+      "choices": [
+        "It could draw a crowd",
+        "It rolled away",
+        "It hid in the case",
+        "It lost its cap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The eraser had its back.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "wordplay",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-alpha-bookmark",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Still Here",
+      "prompt": "Why did the bookmark stay calm in the story?",
+      "choices": [
+        "It always held its place",
+        "It tore the page",
+        "It skipped the ending",
+        "It hid the title"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Chapter after chapter, still kind.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "callback",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-alpha-frog",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Open Mic",
+      "prompt": "What colour is a frog on open-mic night?",
+      "choices": [
+        "Green",
+        "Purple",
+        "Orange",
+        "Silver"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The room stayed ribbiting.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "misdirection",
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-alpha-planets",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Home System",
+      "prompt": "How many planets are in our solar system?",
+      "choices": [
+        "8",
+        "9",
+        "7",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The lineup got shorter in 2006, and it stayed kind.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — solar system"
+        },
+        {
+          "label": "International Astronomical Union — planets"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-alpha-banana",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Snack",
+      "prompt": "The story gets bigger. The question stays the same size: \"What colour is the peel of a ripe banana?\"",
+      "choices": [
+        "Yellow",
+        "Green",
+        "Brown, a day past the lunchbox",
+        "Red, if it tried out for the apple bowl"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The story can grow. The peel stays the bright one.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "escalation",
+      "technique": "escalation",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — banana"
+        },
+        {
+          "label": "Royal Botanic Gardens, Kew — banana"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-alpha-leap",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Extra Day",
+      "prompt": "How many days are in a leap year?",
+      "choices": [
+        "366",
+        "365",
+        "364",
+        "360"
+      ],
+      "correctIndex": 0,
+      "banterHint": "February borrows one day, then gives the year back.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "US Naval Observatory — leap years"
+        },
+        {
+          "label": "Encyclopaedia Britannica — calendar"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-alpha-elephant",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "On Land",
+      "prompt": "Which animal is the largest living land animal?",
+      "choices": [
+        "African elephant",
+        "Blue whale",
+        "Giraffe",
+        "Polar bear"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The whale takes the ocean. This one stays on the ground.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — African elephant"
+        },
+        {
+          "label": "WWF — African elephant"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-multi-guitar",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Six Strings",
+      "prompt": "How many strings does a standard guitar have?",
+      "choices": [
+        "Four",
+        "Six",
+        "Eight",
+        "Twelve"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Twelve-string guitars are the extra-loud cousins.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — guitar"
+        },
+        {
+          "label": "Metropolitan Museum — string instruments"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-multi-boil",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Kettle",
+      "prompt": "What is the boiling point of water at sea level, in Celsius?",
+      "choices": [
+        "100",
+        "90",
+        "80",
+        "120"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Up a mountain, the kettle finishes a little sooner.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NIST — water properties"
+        },
+        {
+          "label": "Encyclopaedia Britannica — boiling point"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-multi-photo",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Green Work",
+      "prompt": "Which gas do plants take in during photosynthesis?",
+      "choices": [
+        "Oxygen",
+        "Nitrogen",
+        "Carbon dioxide",
+        "Helium"
+      ],
+      "correctIndex": 2,
+      "banterHint": "They hand oxygen back to the room.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — photosynthesis"
+        },
+        {
+          "label": "NASA Earth Observatory — carbon cycle"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-multi-pitch",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "On the Field",
+      "prompt": "How many players from one soccer team are on the field at a time?",
+      "choices": [
+        "9",
+        "11",
+        "13",
+        "15"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The goalkeeper counts as one of them.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "FIFA — laws of the game"
+        },
+        {
+          "label": "Encyclopaedia Britannica — football"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-multi-compass",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "True North",
+      "prompt": "Why did the compass join the quiz?",
+      "choices": [
+        "It wanted to get its bearings",
+        "It hid the map",
+        "It lost the needle",
+        "It skipped the trail"
+      ],
+      "correctIndex": 0,
+      "banterHint": "North stayed a kind direction.",
+      "funny": true,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": "misdirection",
+      "structure": "joke",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-multi-eclipse",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Night Shade",
+      "prompt": "What colour is the Moon during a total lunar eclipse?",
+      "choices": [
+        "Red",
+        "Blue",
+        "Green",
+        "White"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Earth's shadow lends that shade.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": "colour",
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — lunar eclipse"
+        },
+        {
+          "label": "Encyclopaedia Britannica — eclipse"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-multi-titanic",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "On the Walk",
+      "prompt": "Two friends are walking. One asks the other, \"When did the Titanic sink?\" The other answers…",
+      "choices": [
+        "April 15, 1912",
+        "April 15, 1911",
+        "May 7, whenever the sequel docks",
+        "April 1 (April Fool's Day)"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The other person answered the question that was asked.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "dialogue",
+      "technique": "dialogue",
+      "structure": "when",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Titanic"
+        },
+        {
+          "label": "National Maritime Museum — Titanic"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-h-multi-titanic-hull",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Same Walk",
+      "prompt": "Two friends are walking. One asks the other, \"What colour was the hull of the Titanic?\" The other answers…",
+      "choices": [
+        "Black",
+        "White",
+        "Red, if the funnel is telling the story",
+        "Green, after a long stay in the harbour"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Same walk. Different structure. The hull was not the date.",
+      "funny": true,
+      "humorous": true,
+      "renegade": true,
+      "injection": "dialogue",
+      "technique": "dialogue",
+      "structure": "colour",
+      "fromStructure": "when",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Titanic"
+        },
+        {
+          "label": "National Maritime Museum — Titanic"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-multi-stop",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Octagon",
+      "prompt": "How many sides does a standard stop sign have?",
+      "choices": [
+        "8",
+        "6",
+        "4",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Count the flat edges, not the pole.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Federal Highway Administration — stop sign"
+        },
+        {
+          "label": "Encyclopaedia Britannica — traffic sign"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-e-multi-sky",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Overhead",
+      "prompt": "A quick step aside, then back to the question: \"What colour is a clear daytime sky?\"",
+      "choices": [
+        "Blue",
+        "Green, if the lawn got promoted",
+        "Red, saved for the sunset shift",
+        "Black"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Step back in. The answer is the ordinary one.",
+      "funny": true,
+      "humorous": true,
+      "renegade": false,
+      "injection": "aside",
+      "technique": "aside",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NASA — Earth's atmosphere"
+        },
+        {
+          "label": "Encyclopaedia Britannica — sky"
+        }
+      ],
+      "status": "active",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-e-multi-pacific",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Open Water",
+      "prompt": "Which ocean is the largest on Earth?",
+      "choices": [
+        "Pacific Ocean",
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The map gives it the widest blue.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "NOAA — Pacific Ocean"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Pacific Ocean"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cq-h-multi-piano",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Keyboard",
+      "prompt": "How many keys does a standard piano have?",
+      "choices": [
+        "88",
+        "76",
+        "61",
+        "92"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Count the black and the white. The total is the long one.",
+      "funny": false,
+      "humorous": false,
+      "renegade": false,
+      "injection": null,
+      "technique": null,
+      "structure": null,
+      "fromStructure": null,
+      "straight": null,
+      "addedWeek": "2026-W39",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — piano"
+        },
+        {
+          "label": "Steinway & Sons — piano keyboard"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "ga-joke-clock",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hands Up",
+      "prompt": "What has hands but cannot clap?",
+      "choices": [
+        "A clock",
+        "A glove",
+        "An octopus",
+        "A statue"
+      ],
+      "correctIndex": 0,
+      "banterHint": "It can still wave hello.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "active"
+    },
+    {
+      "id": "ga-joke-bear",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sweet Tooth",
+      "prompt": "What do you call a bear with no teeth?",
+      "choices": [
+        "A polar bear",
+        "A teddy",
+        "A gummy bear",
+        "A koala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Still sticky. Much friendlier.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "active"
+    },
+    {
+      "id": "ga-joke-math",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Too Many Problems",
+      "prompt": "Why was the math book sad?",
+      "choices": [
+        "It had too many problems",
+        "It hates numbers",
+        "It is a comic",
+        "It lost its cover"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The bookmark offered a hug.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "active"
+    },
+    {
+      "id": "ga-joke-ocean",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Shore Thing",
+      "prompt": "What did the ocean say to the shore?",
+      "choices": [
+        "Nothing, it just waved",
+        "Bring a towel",
+        "I am salty",
+        "Go fish"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The beach waved back.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "active"
+    },
+    {
+      "id": "ga-joke-flamingo",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Pink Parade",
+      "prompt": "What is a group of flamingos called?",
+      "choices": [
+        "A flamboyance",
+        "A flock only",
+        "A herd",
+        "A pack"
+      ],
+      "correctIndex": 0,
+      "banterHint": "They showed up dressed for it.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "active"
+    },
+    {
+      "id": "ga-joke-octopus",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Extra Heart",
+      "prompt": "How many hearts does an octopus have?",
+      "choices": [
+        "One",
+        "Two",
+        "Three",
+        "Eight"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Eight arms, three hearts, zero hurry.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "active"
+    },
+    {
+      "id": "ga-joke-scarecrow",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Field Day",
+      "prompt": "Why did the scarecrow win a prize?",
+      "choices": [
+        "He was outstanding in his field",
+        "He told a ghost story",
+        "He ate the corn",
+        "He napped all day"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The crows started a fan club.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "active"
+    },
+    {
+      "id": "ga-joke-homework",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Easy Slice",
+      "prompt": "Why did the student eat the homework?",
+      "choices": [
+        "The teacher said it was a piece of cake",
+        "It was lunchtime",
+        "The dog was full",
+        "It was a sandwich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Dessert was extra credit.",
+      "funny": true,
+      "addedWeek": "2026-W39",
+      "status": "active"
     }
   ]
 }

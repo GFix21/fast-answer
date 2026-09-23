@@ -14,6 +14,8 @@ import { checkQuestion } from "../q-and-a/bots/checker.js";
 import { findDupes } from "../q-and-a/bots/dupe.js";
 import { reviewForChildren } from "../q-and-a/louis-liberty.js";
 import { scoreJoke } from "../q-and-a/crackd-kerr.js";
+import { WEEK_TARGET, nextIsoWeek, monthKeyForWeek } from "../lib/week-roll.js";
+import { archivePublishedWeek } from "../lib/archive-store.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const LOCALES = ["en", "fr", "de"];
@@ -59,7 +61,21 @@ for (const loc of LOCALES) {
     }
   }
   const week = readJson(weeklyFile(loc));
-  const existing = [...kept(week.questions), ...funnyQuestions(loc)];
+  let base = kept(week.questions);
+  if (base.length >= WEEK_TARGET) {
+    archivePublishedWeek({
+      ...week,
+      locale: loc,
+      weekTarget: WEEK_TARGET,
+      weekComplete: true,
+      questions: base.map((q) => ({ ...q, status: q.status === "rejected" ? "rejected" : "active" })),
+    }, { locale: loc, monthKey: monthKeyForWeek(week.weekKey) });
+    week.weekKey = nextIsoWeek(week.weekKey);
+    week.questions = [];
+    base = [];
+    console.log(`${loc}: week full (${WEEK_TARGET}). Opened ${week.weekKey}.`);
+  }
+  const existing = [...base, ...funnyQuestions(loc)];
   const dupes = findDupes(created, existing);
   if (!dupes.ok) {
     for (const row of dupes.dupes) issues.push(`${row.id}: Dupe Check same as ${row.sameAs}`);
@@ -76,7 +92,9 @@ for (const loc of LOCALES) {
     path.join(dir, `${loc}.json`),
     `${JSON.stringify({ locale: loc, questions: created }, null, 2)}\n`,
   );
-  week.questions = [...kept(week.questions), ...created];
+  week.questions = [...base, ...created];
+  week.weekTarget = WEEK_TARGET;
+  week.weekComplete = week.questions.length >= WEEK_TARGET;
   fs.writeFileSync(weeklyFile(loc), `${JSON.stringify(week, null, 2)}\n`);
   console.log(`${loc}: merged ${created.length} creator questions`);
 }

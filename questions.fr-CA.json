@@ -37,7 +37,7 @@
     "topic": "music",
     "generation": "silent-generation",
     "categoryTitle": "L’ère de la radio de poche",
-    "prompt": "Quel petit type de radio est devenu un hit auprès des adolescents dans les années 1950 ?",
+    "prompt": "Quel petit type de radio est devenu un gros succès auprès des adolescents dans les années 1950 ?",
     "choices": [
       "Grille-pain à vide",
       "Radio à transistors",
@@ -117,7 +117,7 @@
     "topic": "sci-fi",
     "generation": "baby-boomer",
     "categoryTitle": "Horloge Apollo",
-    "prompt": "En quelle année Apollo 11 s’est-il posé sur la Lune ?",
+    "prompt": "En quelle année Apollo 11 s’est posé sur la Lune ?",
     "choices": [
       "1965",
       "1972",
@@ -213,7 +213,7 @@
     "topic": "film-tv",
     "generation": "gen-x",
     "categoryTitle": "Flux et compagnie",
-    "prompt": "Dans Retour vers le futur, de quoi Doc Brown a-t-il besoin de 1,21 gigawatt ?",
+    "prompt": "Dans Retour vers le futur, de quoi Doc Brown a besoin de 1,21 gigawatt ?",
     "choices": [
       "De poussière de plutonium",
       "De peaux de banane",
@@ -309,7 +309,7 @@
     "topic": "music",
     "generation": "gen-y",
     "categoryTitle": "Écouteurs blancs",
-    "prompt": "En quelle année Apple a-t-il lancé le premier iPod ?",
+    "prompt": "En quelle année Apple a lancé le premier iPod ?",
     "choices": [
       "1998",
       "2001",
@@ -405,7 +405,7 @@
     "topic": "music",
     "generation": "gen-z",
     "categoryTitle": "Machine à streams",
-    "prompt": "Quelle entreprise suédoise est surtout connue pour l’appli de streaming musical Spotify ?",
+    "prompt": "Quelle entreprise suédoise est surtout connue pour l'application de streaming musical Spotify ?",
     "choices": [
       "Netflix",
       "Skype",
@@ -501,7 +501,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Le tactile d’abord",
-    "prompt": "Un iPad se décrit le mieux comme quel type d’appareil ?",
+    "prompt": "Un iPad est surtout quel type d’appareil ?",
     "choices": [
       "Téléphone fixe",
       "Grille-pain",
@@ -677,7 +677,7 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Santé publique",
-    "prompt": "Quel scientifique américain a dirigé l’équipe derrière le premier vaccin antipoliomyélitique largement utiliséé dans les années 1950 ?",
+    "prompt": "Quel scientifique américain a dirigé l’équipe derrière le premier vaccin antipoliomyélitique largement utilisé dans les années 1950 ?",
     "choices": [
       "Alexander Fleming",
       "Jonas Salk",
@@ -693,7 +693,7 @@
     "topic": "geography",
     "generation": "silent-generation",
     "categoryTitle": "Carte de la Guerre froide",
-    "prompt": "En quelle année l’armistice de la guerre de Corée a-t-il été signé ?",
+    "prompt": "En quelle année l’armistice de la guerre de Corée a été signé ?",
     "choices": [
       "1953",
       "1960",
@@ -725,7 +725,7 @@
     "topic": "film-tv",
     "generation": "silent-generation",
     "categoryTitle": "Aube des parcs à thème",
-    "prompt": "Dans quel État américain Disneyland a-t-il ouvert pour la première fois en 1955 ?",
+    "prompt": "Dans quel État américain Disneyland a ouvert pour la première fois en 1955 ?",
     "choices": [
       "New York",
       "Californie",
@@ -741,7 +741,7 @@
     "topic": "culture",
     "generation": "baby-boomer",
     "categoryTitle": "Horloge Camelot",
-    "prompt": "En quelle année le président américain John F. Kennedy a-t-il été assassiné ?",
+    "prompt": "En quelle année le président américain John F. Kennedy a été assassiné ?",
     "choices": [
       "1968",
       "1972",
@@ -789,7 +789,7 @@
     "topic": "culture",
     "generation": "baby-boomer",
     "categoryTitle": "Rope-a-Dope",
-    "prompt": "Sous quel nom Muhammad Ali est-il né ?",
+    "prompt": "Sous quel nom Muhammad Ali est né ?",
     "choices": [
       "Cassius Clay",
       "Sugar Ray Robinson",
@@ -821,7 +821,7 @@
     "topic": "sci-fi",
     "generation": "baby-boomer",
     "categoryTitle": "Première galactique",
-    "prompt": "En quelle année le film original Star Wars (plus tard Un nouvel espoir) est-il sorti ?",
+    "prompt": "En quelle année le film original Star Wars (plus tard Un nouvel espoir) est sorti ?",
     "choices": [
       "1980",
       "1977",
@@ -916,8 +916,8 @@
     "tier": "hard",
     "topic": "culture",
     "generation": "gen-x",
-    "categoryTitle": "Histoire portable",
-    "prompt": "En quelle année le Game Boy original de Nintendo est-il sorti au Japon ?",
+    "categoryTitle": "Histoire portative",
+    "prompt": "En quelle année le Game Boy original de Nintendo est sorti au Japon ?",
     "choices": [
       "1994",
       "1998",
@@ -949,7 +949,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Connexion campus",
-    "prompt": "En quelle année Facebook (aujourd’hui Meta) a-t-il été fondé ?",
+    "prompt": "En quelle année Facebook (aujourd’hui Meta) a été fondé ?",
     "choices": [
       "2004",
       "2008",
@@ -1045,7 +1045,7 @@
     "topic": "music",
     "generation": "gen-z",
     "categoryTitle": "QG du stream",
-    "prompt": "Dans quel pays Spotify a-t-il été fondé ?",
+    "prompt": "Dans quel pays Spotify a été fondé ?",
     "choices": [
       "Suède",
       "Brésil",
@@ -1092,7 +1092,7 @@
     "tier": "hard",
     "topic": "film-tv",
     "generation": "gen-z",
-    "categoryTitle": "Week-end Wakanda",
+    "categoryTitle": "Fin de semaine à Wakanda",
     "prompt": "Qui a réalisé le film Marvel Black Panther de 2018 ?",
     "choices": [
       "Ryan Coogler",
@@ -1141,7 +1141,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Place des avatars",
-    "prompt": "Roblox se décrit le mieux comme quoi ?",
+    "prompt": "Roblox est surtout quoi ?",
     "choices": [
       "Uniquement un jeu de société physique",
       "Une plateforme en ligne de jeux créés par les utilisateurs",
@@ -1317,7 +1317,7 @@
     "topic": "grand-tour",
     "generation": "gen-x",
     "categoryTitle": "Chronologie studio",
-    "prompt": "En quelle année The Grand Tour a-t-il été diffusé pour la première fois sur Amazon Prime Video ?",
+    "prompt": "En quelle année The Grand Tour a été diffusé pour la première fois sur Amazon Prime Video ?",
     "choices": [
       "2015",
       "2018",
@@ -1333,7 +1333,7 @@
     "topic": "geography",
     "generation": "gen-x",
     "categoryTitle": "Horloge du Mur",
-    "prompt": "En quelle année le mur de Berlin est-il tombé ?",
+    "prompt": "En quelle année le mur de Berlin est tombé ?",
     "choices": [
       "1989",
       "1979",
@@ -1349,7 +1349,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Chronologie keynote",
-    "prompt": "En quelle année Apple a-t-il annoncé l’iPhone original ?",
+    "prompt": "En quelle année Apple a annoncé l’iPhone original ?",
     "choices": [
       "2010",
       "2007",
@@ -1381,7 +1381,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Manières de modèles",
-    "prompt": "En quelle année OpenAI a-t-il mis ChatGPT à disposition du public ?",
+    "prompt": "En quelle année OpenAI a mis ChatGPT à disposition du public ?",
     "choices": [
       "2018",
       "2024",
@@ -1412,8 +1412,8 @@
     "tier": "difficult",
     "topic": "culture",
     "generation": "gen-alpha",
-    "categoryTitle": "Portable hybride",
-    "prompt": "En quelle année la Nintendo Switch est-elle sortie dans le monde ?",
+    "categoryTitle": "Portative hybride",
+    "prompt": "En quelle année la Nintendo Switch est sortie dans le monde ?",
     "choices": [
       "2017",
       "2019",
@@ -1541,12 +1541,12 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Décennie jazz",
-    "prompt": "Quel surnom donne-t-on aux années 1920 aux États-Unis ?",
+    "prompt": "Les années 1920 aux États-Unis portent quel surnom ?",
     "choices": [
-      "Les Années folles",
-      "L'ère spatiale",
-      "Les années de crise",
-      "L'Âge doré"
+      "Les années folles",
+      "L'ère de l'espace",
+      "Les années de la Crise",
+      "L'âge d'or"
     ],
     "correctIndex": 0,
     "banterHint": "Les orchestres jouaient fort. Le surnom est resté."
@@ -1557,7 +1557,7 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Urne",
-    "prompt": "Quel amendement de la Constitution américaine, ratifié en 1920, a reconnu le droit de vote des femmes ?",
+    "prompt": "Quel amendement de la Constitution des États-Unis, ratifié en 1920, reconnaît le droit de vote des femmes ?",
     "choices": [
       "Le 19e amendement",
       "Le 26e amendement",
@@ -1565,7 +1565,7 @@
       "Le 15e amendement"
     ],
     "correctIndex": 0,
-    "banterHint": "La file devant l'urne s'est allongée, exprès."
+    "banterHint": "La file devant le bureau de vote a allongé, pour de bon."
   },
   {
     "id": "cq-h-silent-chamberlain",
@@ -1573,7 +1573,7 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Septembre 1939",
-    "prompt": "Qui était Premier ministre du Royaume-Uni lorsque la Grande-Bretagne a déclaré la guerre à l'Allemagne en 1939 ?",
+    "prompt": "Qui était le premier ministre du Royaume-Uni quand la Grande-Bretagne a déclaré la guerre à l'Allemagne en 1939 ?",
     "choices": [
       "Clement Attlee",
       "Stanley Baldwin",
@@ -1581,7 +1581,7 @@
       "Neville Chamberlain"
     ],
     "correctIndex": 3,
-    "banterHint": "Churchill a pris le fauteuil l'année suivante."
+    "banterHint": "Churchill a pris la place l'année d'après."
   },
   {
     "id": "cq-h-silent-assembly",
@@ -1589,7 +1589,7 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Première session",
-    "prompt": "Dans quelle ville l'ONU a-t-elle tenu sa première Assemblée générale en 1946 ?",
+    "prompt": "Dans quelle ville l'ONU a tenu sa première Assemblée générale en 1946 ?",
     "choices": [
       "New York",
       "Genève",
@@ -1605,7 +1605,7 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Près de la fenêtre",
-    "prompt": "Pourquoi la radio s'est-elle assise près de la fenêtre ?",
+    "prompt": "Pourquoi la radio s'est assise près de la fenêtre ?",
     "choices": [
       "Elle se cachait des nouvelles",
       "Elle a perdu le cadran",
@@ -1623,7 +1623,7 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Manteau de cuivre",
-    "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur est la Statue de la Liberté aujourd'hui ? » L'autre répond…",
+    "prompt": "Deux amis se promènent. L'un demande à l'autre : « C'est quoi la couleur de la Statue de la Liberté aujourd'hui ? » L'autre répond…",
     "choices": [
       "Gris",
       "Blanc, encore timide après la traversée",
@@ -1648,7 +1648,7 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Horizon",
-    "prompt": "Quand l'Empire State Building a-t-il été achevé ?",
+    "prompt": "L'Empire State Building a été achevé quand ?",
     "choices": [
       "1941",
       "1950",
@@ -1665,10 +1665,10 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Médaille",
-    "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « De quelle couleur est un taxi classique de New York ? »",
+    "prompt": "Un ami devine n'importe quoi. L'autre répond à la question posée : « C'est quoi la couleur d'un taxi classique de New York ? »",
     "choices": [
       "Jaune",
-      "Blanc, en audition pour le camion de crème glacée",
+      "Blanc, à l'audition du camion de crème glacée",
       "Noir, habillé pour une course très sérieuse",
       "Vert"
     ],
@@ -1706,7 +1706,7 @@
     "topic": "culture",
     "generation": "silent-generation",
     "categoryTitle": "Loi de relève",
-    "prompt": "En quelle année le plan Marshall est-il devenu une loi aux États-Unis ?",
+    "prompt": "En quelle année le plan Marshall est devenu une loi aux États-Unis ?",
     "choices": [
       "1945",
       "1948",
@@ -1722,7 +1722,7 @@
     "topic": "music",
     "generation": "baby-boomer",
     "categoryTitle": "Heure soul",
-    "prompt": "Qui a sorti l'album What's Going On en 1971 ?",
+    "prompt": "Qui a lancé l'album What's Going On en 1971 ?",
     "choices": [
       "Sam Cooke",
       "Stevie Wonder",
@@ -1738,7 +1738,7 @@
     "topic": "culture",
     "generation": "baby-boomer",
     "categoryTitle": "Atelier en orbite",
-    "prompt": "Comment s'appelait la première station spatiale de la NASA, lancée en 1973 ?",
+    "prompt": "Quel était le nom de la première station spatiale de la NASA, lancée en 1973 ?",
     "choices": [
       "Saliout",
       "Freedom",
@@ -1754,7 +1754,7 @@
     "topic": "film-tv",
     "generation": "baby-boomer",
     "categoryTitle": "Première dans la rue",
-    "prompt": "En quelle année Sesame Street a-t-il été diffusé pour la première fois aux États-Unis ?",
+    "prompt": "En quelle année Sesame Street a été diffusé pour la première fois aux États-Unis ?",
     "choices": [
       "1974",
       "1965",
@@ -1786,7 +1786,7 @@
     "topic": "culture",
     "generation": "baby-boomer",
     "categoryTitle": "Encore un tour",
-    "prompt": "Pourquoi le disque est-il resté ami avec le tourne-disque ?",
+    "prompt": "Pourquoi le disque est resté ami avec le tourne-disque ?",
     "choices": [
       "Il se cachait dans la pochette",
       "Il a perdu l'étiquette",
@@ -1804,7 +1804,7 @@
     "topic": "culture",
     "generation": "baby-boomer",
     "categoryTitle": "Sous la mer",
-    "prompt": "De quelle couleur est le sous-marin dans la chanson des Beatles ?",
+    "prompt": "C'est quoi la couleur du sous-marin dans la chanson des Beatles ?",
     "choices": [
       "Bleu",
       "Vert",
@@ -1821,7 +1821,7 @@
     "topic": "culture",
     "generation": "baby-boomer",
     "categoryTitle": "Travée",
-    "prompt": "De quelle couleur est le pont du Golden Gate ?",
+    "prompt": "C'est quoi la couleur du pont du Golden Gate ?",
     "choices": [
       "Rouge",
       "Bleu",
@@ -1838,11 +1838,11 @@
     "topic": "culture",
     "generation": "baby-boomer",
     "categoryTitle": "Le champ",
-    "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Quand le festival de Woodstock a-t-il commencé ? »",
+    "prompt": "Premier essai, faux. Deuxième essai, faux. Puis la vraie question : « Le festival de Woodstock a commencé quand ? »",
     "choices": [
       "15 août 1969",
       "4 juillet, quand les feux d'artifice se prenaient pour le groupe",
-      "1 juin, un mois trop tôt et déjà boueux",
+      "1er juin, un mois trop tôt et déjà boueux",
       "15 août 1967"
     ],
     "correctIndex": 0,
@@ -1863,7 +1863,7 @@
     "topic": "culture",
     "generation": "baby-boomer",
     "categoryTitle": "1er décembre",
-    "prompt": "L'arrestation de qui, à Montgomery le 1er décembre 1955, a lancé le boycott des bus ?",
+    "prompt": "L'arrestation de qui, à Montgomery le 1er décembre 1955, a lancé le boycott des autobus ?",
     "choices": [
       "Rosa Parks",
       "Dorothy Height",
@@ -1879,7 +1879,7 @@
     "topic": "culture",
     "generation": "baby-boomer",
     "categoryTitle": "Élément",
-    "prompt": "Quel est le symbole chimique de l'or ?",
+    "prompt": "C'est quoi le symbole chimique de l'or ?",
     "choices": [
       "Au",
       "Ag",
@@ -1895,7 +1895,7 @@
     "topic": "culture",
     "generation": "gen-x",
     "categoryTitle": "Écran de poche",
-    "prompt": "Quelle console portable Nintendo a-t-elle sortie en 1989 ?",
+    "prompt": "Quelle console portative Nintendo a sortie en 1989 ?",
     "choices": [
       "Lynx",
       "PSP",
@@ -1903,7 +1903,7 @@
       "Game Boy"
     ],
     "correctIndex": 3,
-    "banterHint": "Tetris a voyagé dans beaucoup de poches."
+    "banterHint": "Tetris a voyagé dans bien des poches."
   },
   {
     "id": "cq-e-genx-pdf",
@@ -1911,7 +1911,7 @@
     "topic": "culture",
     "generation": "gen-x",
     "categoryTitle": "Page sans papier",
-    "prompt": "Que signifie PDF ?",
+    "prompt": "PDF veut dire quoi ?",
     "choices": [
       "Personal Disk Folder",
       "Public Data File",
@@ -1927,7 +1927,7 @@
     "topic": "culture",
     "generation": "gen-x",
     "categoryTitle": "Mémoire courte",
-    "prompt": "Que signifie RAM dans un ordinateur ?",
+    "prompt": "RAM, dans un ordinateur, ça veut dire quoi ?",
     "choices": [
       "Read And Modify",
       "Rapid Archive Module",
@@ -1943,7 +1943,7 @@
     "topic": "music",
     "generation": "gen-x",
     "categoryTitle": "Cercle d'argent",
-    "prompt": "Que signifie CD dans le format musical lancé au début des années 1980 ?",
+    "prompt": "CD, pour le format musical du début des années 1980, veut dire quoi ?",
     "choices": [
       "Cassette Deck",
       "Catalog Download",
@@ -1951,7 +1951,7 @@
       "Crystal Drive"
     ],
     "correctIndex": 2,
-    "banterHint": "Un petit miroir qui tenait un album."
+    "banterHint": "Un petit miroir qui contenait un album."
   },
   {
     "id": "cq-e-genx-cassette",
@@ -1959,7 +1959,7 @@
     "topic": "culture",
     "generation": "gen-x",
     "categoryTitle": "Un peu tendue",
-    "prompt": "Pourquoi la cassette se sentait-elle timide ?",
+    "prompt": "Pourquoi la cassette se sentait gênée ?",
     "choices": [
       "Elle a perdu le crayon",
       "Elle était un peu tendue",
@@ -1977,7 +1977,7 @@
     "topic": "culture",
     "generation": "gen-x",
     "categoryTitle": "Service fantôme",
-    "prompt": "De quelle couleur est Blinky, le fantôme de Pac-Man ?",
+    "prompt": "C'est quoi la couleur de Blinky, le fantôme de Pac-Man ?",
     "choices": [
       "Rose",
       "Orange",
@@ -1994,7 +1994,7 @@
     "topic": "culture",
     "generation": "gen-x",
     "categoryTitle": "Court",
-    "prompt": "De quelle couleur est une balle de tennis réglementaire ?",
+    "prompt": "C'est quoi la couleur d'une balle de tennis réglementaire ?",
     "choices": [
       "Vert",
       "Blanc",
@@ -2011,11 +2011,11 @@
     "topic": "culture",
     "generation": "gen-x",
     "categoryTitle": "Première page",
-    "prompt": "L'histoire semble partir ailleurs. La question reste : « Quand le Web a-t-il été ouvert au public ? »",
+    "prompt": "L'histoire semble partir ailleurs. La question reste : « Le Web a été ouvert au public quand ? »",
     "choices": [
       "6 août 1991",
       "12 mars, le jour où l'idée s'est raclé la gorge",
-      "1 janvier, quand le calendrier avait l'air officiel",
+      "1er janvier, quand le calendrier avait l'air officiel",
       "6 août 1989"
     ],
     "correctIndex": 0,
@@ -2052,7 +2052,7 @@
     "topic": "music",
     "generation": "gen-x",
     "categoryTitle": "Disque argenté",
-    "prompt": "En quelle année le disque compact a-t-il été mis en vente ?",
+    "prompt": "En quelle année le disque compact a été mis en vente ?",
     "choices": [
       "1988",
       "1977",
@@ -2060,7 +2060,7 @@
       "1991"
     ],
     "correctIndex": 2,
-    "banterHint": "Le cercle brillant est arrivé avant les listes d'écoute."
+    "banterHint": "Le cercle brillant est arrivé avant les listes de lecture."
   },
   {
     "id": "cq-e-geny-wiki",
@@ -2068,7 +2068,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Livre ouvert",
-    "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie à plusieurs ?",
+    "prompt": "Quel site, lancé en 2001, permet d'écrire des articles d'encyclopédie ensemble ?",
     "choices": [
       "Wikipédia",
       "AltaVista",
@@ -2076,7 +2076,7 @@
       "MySpace"
     ],
     "correctIndex": 0,
-    "banterHint": "Le bouton modifier est toute l'idée."
+    "banterHint": "Le bouton modifier, c'est toute l'idée."
   },
   {
     "id": "cq-e-geny-sms",
@@ -2084,7 +2084,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Note courte",
-    "prompt": "Que signifie SMS ?",
+    "prompt": "SMS veut dire quoi ?",
     "choices": [
       "Short Message Service",
       "Standard Mobile Signal",
@@ -2100,7 +2100,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Ordinateur de poche",
-    "prompt": "Quelle société a sorti le premier iPhone en 2007 ?",
+    "prompt": "Quelle compagnie a lancé le premier iPhone en 2007 ?",
     "choices": [
       "Apple",
       "BlackBerry",
@@ -2116,7 +2116,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Inscription ouverte",
-    "prompt": "En quelle année Facebook a-t-il ouvert l'inscription au-delà des écoles, à toute personne de 13 ans ou plus ?",
+    "prompt": "En quelle année Facebook a ouvert l'inscription au-delà des écoles, à toute personne de 13 ans ou plus ?",
     "choices": [
       "2005",
       "2006",
@@ -2132,7 +2132,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Toujours calme",
-    "prompt": "Pourquoi la boîte de réception est-elle restée calme ?",
+    "prompt": "Pourquoi la boîte de réception est restée calme ?",
     "choices": [
       "Elle a effacé le matin",
       "Elle savait garder ses lettres",
@@ -2150,7 +2150,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Écrin",
-    "prompt": "De quelle couleur est le Cœur de l'océan dans le film Titanic ?",
+    "prompt": "C'est quoi la couleur du Cœur de l'océan dans le film Titanic ?",
     "choices": [
       "Vert",
       "Jaune",
@@ -2167,7 +2167,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Premier livre",
-    "prompt": "Quand le premier livre Harry Potter a-t-il été publié au Royaume-Uni ?",
+    "prompt": "Le premier livre Harry Potter a été publié au Royaume-Uni quand ?",
     "choices": [
       "1997",
       "1995",
@@ -2184,7 +2184,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Billets et pièces",
-    "prompt": "Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « Quand les billets et les pièces en euros sont-ils entrés en circulation ? »",
+    "prompt": "Un mot peut vouloir dire deux choses. Le sens qui compte est le sens simple : « Les billets et les pièces en euros sont entrés en circulation quand ? »",
     "choices": [
       "1 janvier 2002",
       "2004, quand les pièces ont appris à jongler",
@@ -2209,7 +2209,7 @@
     "topic": "geography",
     "generation": "gen-y",
     "categoryTitle": "Capitale",
-    "prompt": "Quelle est la capitale de l'Australie ?",
+    "prompt": "C'est quoi la capitale de l'Australie ?",
     "choices": [
       "Melbourne",
       "Sydney",
@@ -2225,7 +2225,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Langage de page",
-    "prompt": "Que signifie le sigle HTML ?",
+    "prompt": "HTML veut dire quoi ?",
     "choices": [
       "Home Tool Markup Language",
       "High Transfer Mail Link",
@@ -2241,7 +2241,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Petite boucle",
-    "prompt": "Que signifie GIF ?",
+    "prompt": "GIF veut dire quoi ?",
     "choices": [
       "Global Image File",
       "General Icon Folder",
@@ -2249,7 +2249,7 @@
       "Graphics Interchange Format"
     ],
     "correctIndex": 3,
-    "banterHint": "Une image qui refuse de rester sage."
+    "banterHint": "Une image qui refuse de rester tranquille."
   },
   {
     "id": "cq-e-genz-vr",
@@ -2257,7 +2257,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Casque",
-    "prompt": "Que signifie VR sur un casque ?",
+    "prompt": "VR, sur un casque, veut dire quoi ?",
     "choices": [
       "Visual Radio",
       "Vector Render",
@@ -2265,7 +2265,7 @@
       "Video Relay"
     ],
     "correctIndex": 2,
-    "banterHint": "La pièce reste là. La vue, non."
+    "banterHint": "La pièce reste là. Pas la vue."
   },
   {
     "id": "cq-h-genz-bytedance",
@@ -2273,7 +2273,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Vidéo courte",
-    "prompt": "Quelle société possède TikTok ?",
+    "prompt": "Quelle compagnie possède TikTok ?",
     "choices": [
       "Snap",
       "Meta",
@@ -2281,7 +2281,7 @@
       "ByteDance"
     ],
     "correctIndex": 3,
-    "banterHint": "L'appli est la partie célèbre. La société, moins."
+    "banterHint": "L'appli est la partie connue. La compagnie, moins."
   },
   {
     "id": "cq-h-genz-hashtag",
@@ -2289,7 +2289,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Dièse",
-    "prompt": "Comment appelle-t-on le symbole # quand il regroupe des posts sur les réseaux sociaux ?",
+    "prompt": "Comment on appelle le symbole # quand il regroupe des publications sur les réseaux sociaux ?",
     "choices": [
       "Un hashtag",
       "Un caret",
@@ -2297,7 +2297,7 @@
       "Un astérisque"
     ],
     "correctIndex": 0,
-    "banterHint": "Une marque, et les posts se retrouvent."
+    "banterHint": "Une marque, et les publications se retrouvent."
   },
   {
     "id": "cq-e-genz-emoji",
@@ -2305,11 +2305,11 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Un œil",
-    "prompt": "Pourquoi l'emoji a-t-il fait un clin d'œil ?",
+    "prompt": "Pourquoi l'emoji a fait un clin d'œil ?",
     "choices": [
       "Il a perdu l'autre œil",
       "Il a caché le clavier",
-      "Il a raté la discussion",
+      "Il a manqué la discussion",
       "Il avait quelque chose à dire"
     ],
     "correctIndex": 3,
@@ -2323,7 +2323,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Cercle du logo",
-    "prompt": "De quelle couleur est le cercle du logo Spotify ?",
+    "prompt": "C'est quoi la couleur du cercle dans le logo Spotify ?",
     "choices": [
       "Bleu",
       "Rouge",
@@ -2340,7 +2340,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Premier post",
-    "prompt": "Quand Instagram a-t-il été lancé ?",
+    "prompt": "Instagram a été lancé quand ?",
     "choices": [
       "2014",
       "2010",
@@ -2357,7 +2357,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Le bras d'arrêt",
-    "prompt": "Les mêmes amis qu'avant. Ils reviennent à ceci : « De quelle couleur est un autobus scolaire standard aux États-Unis ? »",
+    "prompt": "Les mêmes amis qu'avant. Ils reviennent à ceci : « C'est quoi la couleur d'un autobus scolaire standard aux États-Unis ? »",
     "choices": [
       "Orange",
       "Bleu, si l'océan conduit la ligne",
@@ -2382,7 +2382,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Équipe de départ",
-    "prompt": "Combien de joueurs d'une équipe sont sur le terrain dans un match de football standard ?",
+    "prompt": "Dans un match de soccer standard, une équipe a combien de joueurs sur le terrain ?",
     "choices": [
       "10",
       "9",
@@ -2390,7 +2390,7 @@
       "15"
     ],
     "correctIndex": 2,
-    "banterHint": "Le banc regarde. Le compte, ce sont ceux sur l'herbe."
+    "banterHint": "Le banc regarde. Le compte, ce sont ceux sur le gazon."
   },
   {
     "id": "cq-h-genz-mohs",
@@ -2398,7 +2398,7 @@
     "topic": "culture",
     "generation": "gen-z",
     "categoryTitle": "Dureté",
-    "prompt": "Quel est le minéral naturel le plus dur sur l'échelle de Mohs ?",
+    "prompt": "C'est quoi le minéral naturel le plus dur sur l'échelle de Mohs ?",
     "choices": [
       "Le quartz",
       "Le corindon",
@@ -2406,19 +2406,19 @@
       "La topaze"
     ],
     "correctIndex": 2,
-    "banterHint": "L'échelle s'arrête à dix. Celui-ci y est."
+    "banterHint": "L'échelle arrête à dix. Celui-ci est là."
   },
   {
     "id": "cq-e-alpha-cat",
     "tier": "easy",
     "topic": "culture",
     "generation": "gen-alpha",
-    "categoryTitle": "Hôte du quiz",
-    "prompt": "Comment appelle-t-on un chat qui présente le quiz ?",
+    "categoryTitle": "Animateur du quiz",
+    "prompt": "Comment on appelle un chat qui anime le quiz ?",
     "choices": [
       "Un chat peureux",
-      "Le ron-ron en chef",
-      "Une sieste de chat",
+      "Le ronron en charge",
+      "Un somme de chat",
       "Un copieur"
     ],
     "correctIndex": 1,
@@ -2432,15 +2432,15 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Belle journée",
-    "prompt": "Pourquoi le sac à dos avait-il l'air fier ?",
+    "prompt": "Pourquoi le sac à dos avait l'air fier ?",
     "choices": [
       "Il a mangé les devoirs",
       "Il a caché la carte",
       "Il portait une bonne journée",
-      "Il a raté le bus"
+      "Il a manqué l'autobus"
     ],
     "correctIndex": 2,
-    "banterHint": "Chaque livre a eu un coup de main.",
+    "banterHint": "Chaque livre a eu un coup de pouce.",
     "funny": true,
     "structure": "joke"
   },
@@ -2450,15 +2450,15 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Esprit d'équipe",
-    "prompt": "Pourquoi le crayon a-t-il rejoint l'équipe ?",
+    "prompt": "Pourquoi le crayon s'est joint à l'équipe ?",
     "choices": [
       "Il a roulé plus loin",
-      "Il s'est caché dans la trousse",
+      "Il s'est caché dans l'étui",
       "Il a perdu son capuchon",
-      "Il savait attirer la foule"
+      "Il savait attirer la gang"
     ],
     "correctIndex": 3,
-    "banterHint": "La gomme veillait sur lui.",
+    "banterHint": "L'efface veillait sur lui.",
     "funny": true,
     "structure": "joke"
   },
@@ -2468,7 +2468,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Toujours là",
-    "prompt": "Pourquoi le marque-page restait-il calme dans l'histoire ?",
+    "prompt": "Pourquoi le signet restait calme dans l'histoire ?",
     "choices": [
       "Il gardait toujours sa place",
       "Il a déchiré la page",
@@ -2486,7 +2486,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Scène ouverte",
-    "prompt": "De quelle couleur est une grenouille le soir du micro ouvert ?",
+    "prompt": "C'est quoi la couleur d'une grenouille le soir du micro ouvert ?",
     "choices": [
       "Violet",
       "Vert",
@@ -2504,7 +2504,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Système maison",
-    "prompt": "Combien de planètes compte notre système solaire ?",
+    "prompt": "Notre système solaire compte combien de planètes ?",
     "choices": [
       "9",
       "10",
@@ -2520,7 +2520,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Collation",
-    "prompt": "L'histoire grossit. La question garde la même taille : « De quelle couleur est la peau d'une banane mûre ? »",
+    "prompt": "L'histoire grossit. La question garde la même taille : « C'est quoi la couleur de la peau d'une banane mûre ? »",
     "choices": [
       "Jaune",
       "Vert",
@@ -2545,7 +2545,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Jour en plus",
-    "prompt": "Combien de jours compte une année bissextile ?",
+    "prompt": "Une année bissextile a combien de jours ?",
     "choices": [
       "360",
       "366",
@@ -2553,7 +2553,7 @@
       "364"
     ],
     "correctIndex": 1,
-    "banterHint": "Février emprunte un jour, puis rend l'année."
+    "banterHint": "Février emprunte une journée, puis rend l'année."
   },
   {
     "id": "cq-h-alpha-elephant",
@@ -2561,7 +2561,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Sur terre",
-    "prompt": "Quel animal est le plus grand animal terrestre vivant ?",
+    "prompt": "C'est quoi le plus grand animal terrestre vivant ?",
     "choices": [
       "La baleine bleue",
       "La girafe",
@@ -2577,7 +2577,7 @@
     "topic": "music",
     "generation": "multi-gen",
     "categoryTitle": "Six cordes",
-    "prompt": "Combien de cordes a une guitare standard ?",
+    "prompt": "Une guitare standard a combien de cordes ?",
     "choices": [
       "Quatre",
       "Six",
@@ -2593,7 +2593,7 @@
     "topic": "culture",
     "generation": "multi-gen",
     "categoryTitle": "Bouilloire",
-    "prompt": "Quel est le point d'ébullition de l'eau au niveau de la mer, en Celsius ?",
+    "prompt": "Le point d'ébullition de l'eau au niveau de la mer, en Celsius, c'est quoi ?",
     "choices": [
       "100",
       "90",
@@ -2609,7 +2609,7 @@
     "topic": "culture",
     "generation": "multi-gen",
     "categoryTitle": "Travail vert",
-    "prompt": "Quel gaz les plantes absorbent-elles pendant la photosynthèse ?",
+    "prompt": "Quel gaz les plantes prennent pendant la photosynthèse ?",
     "choices": [
       "L'azote",
       "L'hélium",
@@ -2617,7 +2617,7 @@
       "L'oxygène"
     ],
     "correctIndex": 2,
-    "banterHint": "Elles rendent l'oxygène à la pièce."
+    "banterHint": "Elles redonnent l'oxygène à la pièce."
   },
   {
     "id": "cq-h-multi-pitch",
@@ -2625,7 +2625,7 @@
     "topic": "culture",
     "generation": "multi-gen",
     "categoryTitle": "Sur le terrain",
-    "prompt": "Combien de joueurs d'une équipe de football sont sur le terrain en même temps ?",
+    "prompt": "Combien de joueurs d'une équipe de soccer sont sur le terrain en même temps ?",
     "choices": [
       "11",
       "15",
@@ -2641,7 +2641,7 @@
     "topic": "culture",
     "generation": "multi-gen",
     "categoryTitle": "Plein nord",
-    "prompt": "Pourquoi la boussole a-t-elle rejoint le quiz ?",
+    "prompt": "Pourquoi la boussole s'est jointe au quiz ?",
     "choices": [
       "Elle a caché la carte",
       "Elle a sauté le sentier",
@@ -2659,7 +2659,7 @@
     "topic": "culture",
     "generation": "multi-gen",
     "categoryTitle": "Teinte de nuit",
-    "prompt": "De quelle couleur est la Lune pendant une éclipse lunaire totale ?",
+    "prompt": "C'est quoi la couleur de la Lune pendant une éclipse lunaire totale ?",
     "choices": [
       "Rouge",
       "Bleu",
@@ -2676,12 +2676,12 @@
     "topic": "culture",
     "generation": "multi-gen",
     "categoryTitle": "En marchant",
-    "prompt": "Deux amis se promènent. L'un demande à l'autre : « Quand le Titanic a-t-il coulé ? » L'autre répond…",
+    "prompt": "Deux amis se promènent. L'un demande à l'autre : « Le Titanic a coulé quand ? » L'autre répond…",
     "choices": [
       "15 avril 1912",
       "15 avril 1911",
       "7 mai, quand la suite accoste",
-      "1 avril (poisson d'avril)"
+      "1er avril (poisson d'avril)"
     ],
     "correctIndex": 0,
     "banterHint": "L'autre a répondu à la question posée.",
@@ -2701,7 +2701,7 @@
     "topic": "culture",
     "generation": "multi-gen",
     "categoryTitle": "Même marche",
-    "prompt": "Deux amis se promènent. L'un demande à l'autre : « De quelle couleur était la coque du Titanic ? » L'autre répond…",
+    "prompt": "Deux amis se promènent. L'un demande à l'autre : « C'est quoi la couleur de la coque du Titanic ? » L'autre répond…",
     "choices": [
       "Blanc",
       "Vert, après un long séjour au port",
@@ -2727,7 +2727,7 @@
     "topic": "culture",
     "generation": "multi-gen",
     "categoryTitle": "Octogone",
-    "prompt": "Combien de côtés a un panneau stop standard ?",
+    "prompt": "Un panneau d'arrêt standard a combien de côtés ?",
     "choices": [
       "8",
       "10",
@@ -2743,7 +2743,7 @@
     "topic": "culture",
     "generation": "multi-gen",
     "categoryTitle": "Au-dessus",
-    "prompt": "Un petit pas de côté, puis retour à la question : « De quelle couleur est un ciel clair en journée ? »",
+    "prompt": "Un petit pas de côté, puis retour à la question : « C'est quoi la couleur d'un ciel clair en journée ? »",
     "choices": [
       "Vert, si la pelouse a eu une promotion",
       "Noir",
@@ -2768,7 +2768,7 @@
     "topic": "geography",
     "generation": "multi-gen",
     "categoryTitle": "Eau libre",
-    "prompt": "Quel océan est le plus grand sur Terre ?",
+    "prompt": "C'est quoi le plus grand océan sur la Terre ?",
     "choices": [
       "L'océan Atlantique",
       "L'océan Indien",
@@ -2784,7 +2784,7 @@
     "topic": "music",
     "generation": "multi-gen",
     "categoryTitle": "Clavier",
-    "prompt": "Combien de touches a un piano standard ?",
+    "prompt": "Un piano standard a combien de touches ?",
     "choices": [
       "61",
       "76",
@@ -2800,7 +2800,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Les aiguilles",
-    "prompt": "Qu'est-ce qui a des aiguilles et donne l'heure ?",
+    "prompt": "C'est quoi qui a des aiguilles et qui donne l'heure ?",
     "choices": [
       "Une horloge",
       "Un hérisson",
@@ -2817,10 +2817,10 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Dent sucrée",
-    "prompt": "Comment appelle-t-on un ours sans dents ?",
+    "prompt": "Comment on appelle un ours sans dents ?",
     "choices": [
-      "Un ours en gomme",
-      "Un nounours",
+      "Un ours en jujube",
+      "Un toutou",
       "Un ours polaire",
       "Un koala"
     ],
@@ -2834,7 +2834,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Trop de problèmes",
-    "prompt": "Pourquoi le livre de maths est-il triste ?",
+    "prompt": "Pourquoi le livre de maths est triste ?",
     "choices": [
       "Il a trop de problèmes",
       "C'est une bande dessinée",
@@ -2868,7 +2868,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Parade rose",
-    "prompt": "Comment appelle-t-on un groupe de flamants roses ?",
+    "prompt": "Comment on appelle un groupe de flamants roses ?",
     "choices": [
       "Un troupeau",
       "Un banc",
@@ -2902,7 +2902,7 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Dans son champ",
-    "prompt": "Pourquoi l'épouvantail a-t-il reçu un prix ?",
+    "prompt": "Pourquoi l'épouvantail a reçu un prix ?",
     "choices": [
       "Il a mangé le maïs",
       "Il a dormi toute la journée",
@@ -2919,10 +2919,10 @@
     "topic": "culture",
     "generation": "gen-alpha",
     "categoryTitle": "Du gâteau",
-    "prompt": "Pourquoi l'élève a-t-il mangé ses devoirs ?",
+    "prompt": "Pourquoi l'élève a mangé ses devoirs ?",
     "choices": [
       "Le chien n'avait plus faim",
-      "C'était l'heure du déjeuner",
+      "C'était l'heure du dîner",
       "Le prof a dit que c'était du gâteau",
       "C'était un sandwich"
     ],
