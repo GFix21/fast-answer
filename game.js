@@ -3876,7 +3876,7 @@ function roomBody() {
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
       ${lobbyPlayExtras()}
-      ${genAlphaReviewHTML()}
+      ${roomDojoEntryHTML()}
     `;
   }
 
