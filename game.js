@@ -181,6 +181,10 @@ const $ = (s, r = document) => r.querySelector(s);
 const params = new URLSearchParams(location.search);
 let role = params.get("role") || (params.get("pad") ? "pad" : "host");
 const joinCode = (params.get("room") || "").toUpperCase();
+const silkHostKey = String(params.get("k") || "").trim();
+if (silkHostKey.length >= 16 && joinCode) {
+  try { localStorage.setItem(`fa-host-${joinCode}`, silkHostKey); } catch { /* private mode */ }
+}
 const isDirections =
   params.get("page") === "directions" ||
   /(?:^|\/)directions\.html$/i.test(location.pathname);
@@ -393,6 +397,8 @@ function tvSilkUrl(roomCode = state.room) {
   const u = new URL("/", location.origin);
   u.searchParams.set("tv", "1");
   if (code) u.searchParams.set("room", code);
+  if (code && !state.hostKey) ensureHostKey();
+  if (state.hostKey) u.searchParams.set("k", state.hostKey);
   return u.toString();
 }
 function isTvDisplay() {
@@ -1640,6 +1646,10 @@ if (bc) {
       return;
     }
     if (role === "pad" && !state.leftPad && d.phase) {
+      if (state.showLive && (d.phase === "ready" || d.phase === "lobby")) return;
+      if (["read", "buzz", "answer", "reveal", "setbreak", "between", "end"].includes(d.phase)) {
+        state.showLive = true;
+      }
       applyHostState(d);
       paint();
     }
@@ -2012,6 +2022,7 @@ function leaveToLobby() {
   state.joinOffer = null;
   state.lockdown = null;
   state.phase = "lobby";
+  state.showLive = false;
   state.readyIds = {};
   state.wagerDraft = null;
   state.statusMsg = "";
@@ -5105,7 +5116,6 @@ async function identifyCountry() {
     if (res.ok) {
       const data = await res.json();
       fromIp = normalizeCountry(data && data.country);
-      if (fromIp === "OTHER") fromIp = "";
     }
   } catch {
     /* This host has no IP country header. The device zone is the fallback. */

@@ -52,7 +52,8 @@ assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "FR" }), "FR");
 assert.equal(countryFromIpHeaders({ "cf-ipcountry": "UK" }), "GB");
 assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "DE" }), "DE");
 assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "XX" }), "");
-assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "BR" }), "");
+assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "BR" }), "OTHER");
+assert.equal(countryFromIpHeaders({ "x-vercel-ip-country": "JP" }), "OTHER");
 
 assert.equal(countryFromTimeZone("Europe/Paris"), "FR");
 assert.equal(countryFromTimeZone("Europe/Berlin"), "DE");
