@@ -861,6 +861,26 @@ function renderArchivePanel(panel) {
       </div>
     </div>
     <div class="card" style="margin-top:16px">
+      <h2>${t("setsTitle")}</h2>
+      <p class="mut">${t("setsNote")}</p>
+      <div class="arch-list" style="margin-top:14px">
+        ${(a.sets || []).map((s) => `
+          <div class="arch-row">
+            <div class="row spread">
+              <div>
+                <b>${esc(s.id)}</b>
+                <div class="mut">${esc(s.folder)} · ${s.questions || 0} ${t("questions")}</div>
+                <div class="mut">${s.archived ? t("setArchived") : t("setRunning", { until: (s.playUntil || "").slice(0, 10) })}</div>
+              </div>
+              <span>
+                ${s.archived ? `<button class="btn" type="button" data-set-zip="${esc(s.id)}">${t("downloadSet")}</button>
+                <a class="btn primary" href="/?replay=${encodeURIComponent(s.id)}">${t("replaySet")}</a>` : ""}
+              </span>
+            </div>
+          </div>`).join("") || `<p class="mut">${t("setsEmpty")}</p>`}
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
       <h2>${t("monthlyTitle")}</h2>
       <p class="mut">${t("monthlyNote")}</p>
       <div class="arch-list" style="margin-top:14px">
@@ -879,6 +899,9 @@ function renderArchivePanel(panel) {
   panel.querySelectorAll("[data-month]").forEach((b) =>
     b.addEventListener("click", () => openArchiveMonth(b.dataset.month)),
   );
+  panel.querySelectorAll("[data-set-zip]").forEach((b) =>
+    b.addEventListener("click", () => downloadSetZip(b.dataset.setZip)),
+  );
   panel.querySelectorAll("[data-placement]").forEach((b) =>
     b.addEventListener("click", () => openPlacementPage(b.dataset.placement)),
   );
@@ -891,6 +914,12 @@ async function loadArchiveMonths(rerender) {
     const data = await api("archive");
     state.archive.months = data.months || [];
     state.archive.placementPages = data.placementPages || [];
+    try {
+      const sets = await api("sets");
+      state.archive.sets = sets.sets || [];
+    } catch {
+      state.archive.sets = [];
+    }
   } catch (e) {
     state.message = e.message || "Failed to load archive";
     state.archive.months = [];
@@ -1324,6 +1353,27 @@ async function loadProfiles(force) {
   } catch (e) {
     state.message = e.message;
     state.profiles = state.profiles || [];
+  }
+  render();
+}
+
+async function downloadSetZip(id) {
+  state.message = "";
+  try {
+    const res = await fetch(`/api/flow/sets?download=${encodeURIComponent(id)}`, { credentials: "same-origin" });
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data.error || "Could not download that set");
+    }
+    const blob = await res.blob();
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `${id}.zip`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+    state.message = t("setDownloaded", { id });
+  } catch (e) {
+    state.message = e.message || "Could not download that set";
   }
   render();
 }

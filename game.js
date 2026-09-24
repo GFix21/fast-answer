@@ -1410,6 +1410,12 @@ function markEntered() {
   state.entered = true;
   state.profileUnlocked = true;
   try { sessionStorage.setItem("fa-entered", "1"); } catch { /* private mode */ }
+  if (state.replaySet) {
+    state.offline = true;
+    state.room = "";
+    queueMicrotask(() => startGame());
+    return;
+  }
   if (!isTvDisplay()) {
     state.mpMode = "join";
     state.lobbyOpen = "room";
@@ -5141,6 +5147,24 @@ function bindAcc() {
   });
 }
 
+async function loadReplaySet() {
+  const id = params.get("replay");
+  if (!id) return;
+  try {
+    const res = await fetch(`/api/sets?id=${encodeURIComponent(id)}&locale=${encodeURIComponent(state.locale || "en")}`);
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !Array.isArray(data.questions) || !data.questions.length) {
+      state.statusMsg = data.error || "This set is not ready to replay.";
+      return;
+    }
+    state.questions = data.questions;
+    state.replaySet = data.id || id;
+    state.statusMsg = "";
+  } catch {
+    state.statusMsg = "Could not open that archived set.";
+  }
+}
+
 async function startOffline() {
   const gate = lobbyGateReason();
   if (gate) {
@@ -5595,6 +5619,7 @@ if (isDirections) {
   } catch {
     state.statusMsg = "Questions did not load.";
   }
+  await loadReplaySet();
   state.profile = loadProfile();
   if (state.profile?.displayName) state.name = state.profile.displayName;
   state.botFill = true;
@@ -5644,6 +5669,11 @@ if (isDirections) {
     void refreshActiveRooms().then(() => paint(true));
   }
   startLobbyList();
+  if (state.replaySet && state.entered && !forcedDisplay) {
+    state.offline = true;
+    state.room = "";
+    startGame();
+  }
   paint(true);
   window.__fa = state;
 }
