@@ -43,6 +43,8 @@ jobs:
           node scripts/room-wire.check.mjs
           node scripts/release-blockers.check.mjs
           node scripts/parental.check.mjs
+          node scripts/room-guard.check.mjs
+          node scripts/content-freeze.check.mjs
 
   security:
     name: Security

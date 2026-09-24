@@ -6,6 +6,7 @@ import {
   normalizeLocale,
 } from "../../lib/week-store.js";
 import { archivePublishedWeek } from "../../lib/archive-store.js";
+import { questionDealable } from "../../lib/content-freeze.js";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return json(res, 405, { error: "method" });
@@ -21,7 +22,9 @@ export default async function handler(req, res) {
   const pack = loadCurrentPack(locale);
   if (!pack) return json(res, 404, { error: "no week pack" });
   const overlaid = applyReviewOverlay(pack, locale);
-  const { meta, exported } = publishToQuestions(overlaid, locale);
+  const questions = (overlaid.questions || []).filter((q) => questionDealable(q));
+  if (!questions.length) return json(res, 409, { error: "frozen" });
+  const { meta, exported } = publishToQuestions({ ...overlaid, questions }, locale);
   const archive = archivePublishedWeek(overlaid, {
     publishedAt: meta.publishedAt,
     counts: meta.counts,

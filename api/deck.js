@@ -10,6 +10,7 @@ import { stripBank, stripQuestion, shuffleKeyedQuestion } from "../lib/strip-ans
 import { dealShow } from "../lib/generation-deal.js";
 import { orderShowSets } from "../lib/show-pace.js";
 import { replayQuestions } from "../lib/set-archive.js";
+import { questionDealable } from "../lib/content-freeze.js";
 
 const LIVE = {
   en: "questions.json",
@@ -35,12 +36,14 @@ function localeOf(raw) {
 
 function liveQuestions(locale) {
   const data = readFullBank(LIVE[localeOf(locale)]);
-  return Array.isArray(data) ? data : (data?.questions || []);
+  const list = Array.isArray(data) ? data : (data?.questions || []);
+  return list.filter((q) => questionDealable(q));
 }
 
 function placementQuestions(locale) {
   const data = readFullBank(PLACE[localeOf(locale)]);
-  return Array.isArray(data) ? data : (data?.questions || []);
+  const list = Array.isArray(data) ? data : (data?.questions || []);
+  return list.filter((q) => questionDealable(q));
 }
 
 function json(res, status, body) {
@@ -112,6 +115,15 @@ function keyed(list) {
 }
 
 export default async function handler(req, res) {
+  try {
+    return await handleDeck(req, res);
+  } catch (err) {
+    if (err && err.code === "store") return json(res, 503, { error: "store" });
+    throw err;
+  }
+}
+
+async function handleDeck(req, res) {
   if (req.method === "GET") {
     const query = queryOf(req);
     const locale = localeOf(query.locale);

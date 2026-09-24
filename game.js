@@ -1699,6 +1699,16 @@ function keepProfileToken(token) {
   if (!token) return;
   try { sessionStorage.setItem("fa-profile-token", token); } catch { /* private mode */ }
 }
+function guestKeyFor(code) {
+  const room = String(code || "");
+  if (!room) return "";
+  try { return sessionStorage.getItem(`fa-guest-${room}`) || ""; } catch { return ""; }
+}
+function keepGuestKey(code, key) {
+  const room = String(code || "");
+  if (!room || !key) return;
+  try { sessionStorage.setItem(`fa-guest-${room}`, key); } catch { /* private mode */ }
+}
 async function profileApi(body) {
   const headers = { "content-type": "application/json" };
   const token = profileToken();
@@ -1765,12 +1775,15 @@ async function rooms(method, body) {
     if (state.hostKey) headers["x-fa-host"] = state.hostKey;
     const token = profileToken();
     if (token) headers["x-fa-profile"] = token;
+    const guest = guestKeyFor(body?.code || state.room);
+    if (guest) headers["x-fa-guest"] = guest;
     const res = await fetch(ROOM_API + qs, {
       method: method === "GET" ? "GET" : "POST",
       headers,
       body: method === "GET" ? undefined : JSON.stringify({ ...body, hostKey: state.hostKey || body?.hostKey || "" }),
     });
     const data = await res.json().catch(() => null);
+    if (data?.guestKey) keepGuestKey(body?.code || state.room, data.guestKey);
     if (!res.ok) return data || { error: "http", status: res.status };
     return data;
   } catch {
@@ -4623,7 +4636,11 @@ async function openRoom(screen) {
     ...roomMeta(),
   });
   if (!saved || saved.error) {
-    state.statusMsg = tt("roomNotListed", state.room);
+    state.statusMsg = saved?.error === "store"
+      ? tt("roomStore")
+      : saved?.error === "host"
+        ? tt("roomHost")
+        : tt("roomNotListed", state.room);
   } else {
     applyRoomSetup(saved);
     const meta = roomMeta();
