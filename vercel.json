@@ -1,7 +1,6 @@
 {
   "functions": {
     "api/**/*.js": {
-      "includeFiles": "api/private-banks/**",
       "regions": ["iad1"]
     }
   },
@@ -51,8 +50,8 @@
       "destination": "/flow/index.html"
     },
     {
-      "source": "/tv/:code",
-      "destination": "/index.html"
+      "source": "/flow/",
+      "destination": "/flow/index.html"
     }
   ]
 }
