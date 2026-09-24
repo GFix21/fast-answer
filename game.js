@@ -56,6 +56,7 @@ import {
   detectCountry,
   normalizeCountry,
 } from "./lib/age-gate.js";
+import { PARENT_MIN_AGE, CHILD_MIN_AGE } from "./lib/parental.js";
 import { GENERATIONS, normalizeGeneration } from "./q-and-a/map.js";
 import { LOUIS_MAIL } from "./q-and-a/louis-liberty.js";
 
@@ -310,6 +311,10 @@ const state = {
   countrySource: "",
   /** Confirm the profile email, then set a new on-device password. */
   forgotPassword: false,
+  /** Child sign-in uses the player name a parent set, not an email. */
+  childSignIn: false,
+  children: [],
+  childrenLoaded: false,
   topicCatalog: [],
   topicsOn: loadStoredTopicIds(),
   dealFresh: false,
@@ -631,11 +636,25 @@ function maybeResetProfile() {
 }
 async function verifyProfilePassword(pw) {
   const email = state.profile?.email;
-  if (email) {
+  const child = state.profile?.role === "child" && state.profile?.loginName;
+  if (email || child) {
     try {
-      const remote = await profileApi({ action: "login", email, password: pw });
-      if (remote.ok) return true;
-      if (remote.status === 401 || remote.status === 409) return false;
+      const remote = await profileApi(child
+        ? { action: "login", loginName: state.profile.loginName, password: pw }
+        : { action: "login", email, password: pw });
+      if (remote.ok) {
+        if (remote.data?.profile) {
+          saveProfile({
+            serverAge: remote.data.profile.age,
+            role: remote.data.profile.role || "player",
+            consent: Boolean(remote.data.profile.consent),
+            playLocked: Boolean(remote.data.profile.playLocked),
+            loginName: remote.data.profile.loginName || "",
+          });
+        }
+        return true;
+      }
+      if (remote.status === 401 || remote.status === 403 || remote.status === 409) return false;
     } catch { /* device lock below */ }
   }
   const want = state.profile?.passwordHash;
@@ -986,7 +1005,7 @@ function bindAgeToPack(prefix, genSel, opts = {}) {
       if (sel && gen) sel.value = gen;
     }
     if (note) note.textContent = gen ? tt("packFromAge", genLabel(gen)) : "";
-    if (opts.save !== false && gen && state.profileUnlocked && hasPhoneProfile()) {
+    if (opts.save !== false && gen && state.profileUnlocked && hasPhoneProfile() && !Number.isInteger(Number(state.profile?.serverAge))) {
       saveProfile({
         age,
         country: chosen,
@@ -1458,41 +1477,22 @@ async function commitNewProfile(name, email, pw) {
     paint(true);
     return false;
   }
-  const sealed = sealPassword(pw);
-  const keepLegacy = Boolean(state.profile && !state.profile.passwordHash);
-  const base = keepLegacy ? state.profile : seedProfile();
-  state.profile = {
-    ...base,
-    id: base.id || uid(),
-    displayName: cleanName,
-    email: cleanEmail,
-    passwordHash: sealed.passwordHash,
-    passwordSalt: sealed.passwordSalt,
-    createdAt: keepLegacy && base.createdAt ? base.createdAt : new Date().toISOString(),
-  };
   const form = readAgeForm();
   const detected = state.detectedCountry || "";
   const min = requiredAge(form.country, detected);
+  const place = ageLimitPlace(form.country, detected);
   if (!ageIsAllowed(form.age, form.country, detected)) {
-    state.statusMsg = tt("ageTooYoung", min, ageLimitPlace(form.country, detected));
+    state.statusMsg = tt("parentNeeded", min, place);
     paint(true);
     return false;
   }
-  const generation = generationForYears(form.age);
-  saveProfile({
-    displayName: cleanName,
-    email: cleanEmail,
-    passwordHash: sealed.passwordHash,
-    passwordSalt: sealed.passwordSalt,
-    age: form.age,
-    country: form.country,
-    detectedCountry: detected,
-    ageBracket: bracketForAge(form.age),
-    generation,
-  });
+  const sealed = sealPassword(pw);
+  const keepLegacy = Boolean(state.profile && !state.profile.passwordHash);
+  const base = keepLegacy ? state.profile : seedProfile();
+  const id = base.id || uid();
   const remote = await profileApi({
     action: "register",
-    id: state.profile.id,
+    id,
     displayName: cleanName,
     email: cleanEmail,
     password: pw,
@@ -1502,11 +1502,39 @@ async function commitNewProfile(name, email, pw) {
   });
   if (!remote.ok && remote.status !== 503) {
     state.statusMsg = remote.data?.error === "age"
-      ? tt("ageTooYoung", remote.data.minimum || min, ageLimitPlace(form.country, detected))
+      ? (remote.data.parent
+        ? tt("parentNeeded", remote.data.minimum || min, place)
+        : tt("ageTooYoung", remote.data.minimum || min, place))
       : tt("wrongPassword");
     paint(true);
     return false;
   }
+  const accepted = remote.data?.profile;
+  state.profile = {
+    ...base,
+    id: accepted?.id || id,
+    displayName: cleanName,
+    email: cleanEmail,
+    passwordHash: sealed.passwordHash,
+    passwordSalt: sealed.passwordSalt,
+    createdAt: keepLegacy && base.createdAt ? base.createdAt : new Date().toISOString(),
+  };
+  saveProfile({
+    displayName: cleanName,
+    email: cleanEmail,
+    passwordHash: sealed.passwordHash,
+    passwordSalt: sealed.passwordSalt,
+    age: accepted?.age || form.age,
+    serverAge: remote.ok ? (accepted?.age || form.age) : "",
+    country: form.country,
+    detectedCountry: detected,
+    ageBracket: bracketForAge(form.age),
+    generation: generationForYears(form.age),
+    role: accepted?.role || "player",
+    consent: true,
+    playLocked: false,
+  });
+  state.childrenLoaded = false;
   state.dojoMode = "home";
   state.roomDojoPanel = "";
   state.statusMsg = remote.status === 503 ? tt("profileStore") : tt("profileCreated");
@@ -1735,6 +1763,8 @@ async function rooms(method, body) {
     }
     const headers = { "content-type": "application/json" };
     if (state.hostKey) headers["x-fa-host"] = state.hostKey;
+    const token = profileToken();
+    if (token) headers["x-fa-profile"] = token;
     const res = await fetch(ROOM_API + qs, {
       method: method === "GET" ? "GET" : "POST",
       headers,
@@ -2195,7 +2225,7 @@ function recordCareer() {
     displayName: p.displayName || state.name,
   });
   saveProfile({ stats, topScores });
-  if (score > 0 && profileToken() && !state.offline && !state.practiceShow) {
+  if (score > 0 && profileToken() && !state.offline && !state.practiceShow && profileMayPlay()) {
     void profileApi({ action: "score", score, at });
   }
 }
@@ -3656,6 +3686,9 @@ function dojoBody() {
     if (state.forgotPassword) {
       return dojoChrome(`${forgotPasswordHTML()}<p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>`);
     }
+    if (state.childSignIn) {
+      return dojoChrome(`${childSignInHTML()}<p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>`);
+    }
     return dojoChrome(`
       <p class="dir-copy">${tt("unlockIntro")}</p>
       <p class="meta">${escapeHtml(p.displayName || "")}</p>
@@ -3664,6 +3697,7 @@ function dojoBody() {
       <input id="pwUnlock" type="password" maxlength="64" autocomplete="current-password"/>
       <button class="primary" id="unlockProfile" type="button">${tt("unlockProfile")}</button>
       <button class="word" id="forgotPassword" type="button">${tt("forgotPassword")}</button>
+      <button class="word" id="childSignIn" type="button">${tt("childSignIn")}</button>
       <button class="ghost" id="resetProfile" type="button">${tt("resetProfile")}</button>
       <button class="ghost" id="dojoCreateAlt" type="button">${tt("createProfile")}</button>
     `);
@@ -3697,6 +3731,7 @@ function dojoBody() {
     <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
     ${generationSelectHTML("playerGen", p.generation, p.age || p.ageBracket)}
     ${ageBracketHTML("playerAge", p)}
+    ${Number.isInteger(Number(p.serverAge)) ? `<p class="meta">${escapeHtml(tt("ageStays"))}</p>` : ""}
     <label class="field" for="em">${tt("email")}</label>
     <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("optional")}"/>
     <label class="field" for="thDojo">${tt("photoTv")}</label>
@@ -3715,6 +3750,7 @@ function dojoBody() {
     ${placementNoteHTML()}
     <button class="primary" id="${p.abilityTier ? "retake" : "dojoGo"}" type="button" ${placementAttemptsLeft() <= 0 && placed ? "disabled" : ""}>${p.abilityTier ? tt("retakeMedal") : tt("startDojo")}</button>
     <button class="ghost" id="refreshPlacement" type="button" ${placementAttemptsLeft() <= 0 ? "disabled" : ""}>${tt("refreshPlacement")}</button>
+    ${parentPanelHTML()}
     <button class="ghost" id="lockProfile" type="button">${tt("lockProfile")}</button>
   `);
 }
@@ -4040,11 +4076,124 @@ function lobbyGoLabel() {
   return tt("createRoom");
 }
 
+function childSignInHTML() {
+  return `
+    <p class="dir-copy">${tt("childSignInLead")}</p>
+    <label class="field" for="entryLogin">${tt("childLogin")}</label>
+    <input id="entryLogin" type="text" maxlength="20" autocapitalize="none" autocomplete="username" placeholder="${tt("childLogin")}"/>
+    <label class="field" for="entryPw">${tt("password")}</label>
+    <input id="entryPw" type="password" maxlength="64" autocomplete="current-password" placeholder="${tt("passwordHint")}"/>
+    <button class="primary" id="enterChild" type="button">${tt("childSignIn")}</button>
+    <button class="ghost" id="cancelChild" type="button">${tt("cancel")}</button>
+  `;
+}
+async function submitChildSignIn() {
+  const loginName = String(($("#entryLogin") && $("#entryLogin").value) || "").trim();
+  const pw = String(($("#entryPw") && $("#entryPw").value) || "");
+  if (loginName.length < 3 || pw.length < 4) {
+    state.statusMsg = tt("childLoginHint");
+    paint(true);
+    return;
+  }
+  const remote = await profileApi({ action: "login", loginName, password: pw });
+  if (!remote.ok || !remote.data?.profile) {
+    state.statusMsg = remote.data?.error === "revoked"
+      ? tt("parentRevoked")
+      : (remote.status === 503 ? tt("profileStore") : tt("wrongPassword"));
+    paint(true);
+    return;
+  }
+  const profile = remote.data.profile;
+  const sealed = sealPassword(pw);
+  state.profile = seedProfile();
+  saveProfile({
+    id: profile.id,
+    displayName: profile.displayName,
+    email: "",
+    age: profile.age,
+    serverAge: profile.age,
+    country: profile.country || "",
+    role: "child",
+    loginName: profile.loginName || loginName,
+    consent: Boolean(profile.consent),
+    playLocked: Boolean(profile.playLocked),
+    ...sealed,
+  });
+  state.name = profile.displayName || loginName;
+  state.childSignIn = false;
+  state.profileUnlocked = true;
+  state.dojoMode = "home";
+  state.statusMsg = tt("profileEntered");
+  state.entryDraft = null;
+  markEntered();
+  paint(true);
+}
+function bindChildSignIn() {
+  const open = $("#childSignIn");
+  if (open) open.onclick = () => {
+    state.childSignIn = true;
+    state.statusMsg = "";
+    paint(true);
+  };
+  const cancel = $("#cancelChild");
+  if (cancel) cancel.onclick = () => {
+    state.childSignIn = false;
+    state.statusMsg = "";
+    paint(true);
+  };
+  const enter = $("#enterChild");
+  if (enter) enter.onclick = () => { void submitChildSignIn(); };
+}
+function parentPanelHTML() {
+  if (!parentMayAdd()) return "";
+  if (!state.childrenLoaded && profileToken()) {
+    state.childrenLoaded = true;
+    void profileApi({ action: "children" }).then((remote) => {
+      if (!remote.ok || (state.children || []).length) return;
+      state.children = remote.data.children || [];
+      paint(true);
+    });
+  }
+  const kids = state.children || [];
+  return `
+    <section class="q-refresh">
+      <p class="field">${escapeHtml(tt("parentTitle"))}</p>
+      <p class="meta">${escapeHtml(tt("parentLead"))}</p>
+      <label class="field" for="childName">${tt("name")}</label>
+      <input id="childName" type="text" maxlength="18" autocomplete="off"/>
+      <label class="field" for="childLogin">${tt("childLogin")}</label>
+      <input id="childLogin" type="text" maxlength="20" autocapitalize="none" autocomplete="off"/>
+      <p class="meta">${escapeHtml(tt("childLoginHint"))}</p>
+      <label class="field" for="childYears">${tt("ageYears")}</label>
+      <input id="childYears" type="number" min="${CHILD_MIN_AGE}" max="120" inputmode="numeric"/>
+      <p class="meta">${escapeHtml(tt("childAgeHint"))}</p>
+      <label class="field" for="childCountry">${tt("country")}</label>
+      <select id="childCountry">
+        ${COUNTRIES.map((c) => `<option value="${c}">${escapeHtml(tt("country" + c))}</option>`).join("")}
+      </select>
+      <label class="field" for="childPw">${tt("password")}</label>
+      <input id="childPw" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
+      <button class="primary" id="addChild" type="button">${tt("addChild")}</button>
+      ${kids.map((kid) => `
+        <div class="room-row">
+          <span class="room-meta"><b>${escapeHtml(kid.displayName || "")}</b> · ${escapeHtml(kid.loginName || "")} · ${escapeHtml(String(kid.age ?? ""))}${kid.playLocked ? ` · ${escapeHtml(tt("parentOff"))}` : ""}</span>
+          ${kid.playLocked ? "" : `
+            <input data-child-pw="${escapeHtml(kid.id)}" type="password" maxlength="64" autocomplete="new-password" placeholder="${escapeHtml(tt("newPassword"))}"/>
+            <button type="button" class="ghost" data-child-pw-save="${escapeHtml(kid.id)}">${tt("savePassword")}</button>
+            <button type="button" class="ghost danger" data-child-off="${escapeHtml(kid.id)}">${tt("revokeChild")}</button>
+          `}
+        </div>`).join("")}
+    </section>`;
+}
 function lobbyGateReason() {
   if (isTvDisplay()) return "";
   if (!hasPhoneProfile()) return tt("gateProfile");
   if (needsPasswordSetup()) return tt("gateSetPassword");
   if (!state.profileUnlocked) return tt("gatePassword");
+  if (state.profile?.role === "child" && !state.profile?.consent) return tt("parentRevoked");
+  if (state.profile?.role !== "child" && Number.isInteger(Number(state.profile?.serverAge)) && !profileMayPlay()) {
+    return tt("parentNeeded", requiredAge(state.profile?.country, state.profile?.detectedCountry || state.detectedCountry), ageLimitPlace(state.profile?.country, state.detectedCountry || state.detectedCountry));
+  }
   if (!isPlaced()) return tt("gateDojo");
   return "";
 }
@@ -4072,7 +4221,7 @@ function entryHTML() {
       <form class="entry-card" id="entryForm" autocomplete="on">
         <p class="dir-copy">${tt("entryLead")}</p>
         ${stored ? `<p class="meta">${tt("entryCreateHint")}</p>` : ""}
-        ${state.forgotPassword && existing ? forgotPasswordHTML() : `
+        ${state.childSignIn ? childSignInHTML() : state.forgotPassword && existing ? forgotPasswordHTML() : `
         <label class="field" for="entryName">${tt("name")}</label>
         <input id="entryName" type="text" value="${escapeHtml(name)}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
         <label class="field" for="entryEmail">${tt("email")}</label>
@@ -4084,6 +4233,7 @@ function entryHTML() {
         <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${entryActionLabel(name)}</button>
         ${stored ? `<button class="word ${existing ? "" : "hidden"}" id="forgotPassword" type="button">${tt("forgotPassword")}</button>` : ""}
         ${stored ? `<button class="word" id="entryCreateNew" type="button">${tt("createNewProfile")}</button>` : ""}
+        <button class="word" id="childSignIn" type="button">${tt("childSignIn")}</button>
         <button class="ghost" id="resetProfile" type="button">${tt("resetProfile")}</button>
         `}
         <p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>
@@ -4110,10 +4260,12 @@ function bindEntry() {
     const em = emailEl && emailEl.value;
     const pw = pwEl && pwEl.value;
     const existing = entryIsExisting(nm);
-    const ageOk = existing || ageIsAllowed(readYears($("#entryAgeYears")), readCountry($("#entryAgeCountry")), state.detectedCountry);
+    const years = readYears($("#entryAgeYears"));
+    const ageOk = existing || ageIsAllowed(years, readCountry($("#entryAgeCountry")), state.detectedCountry);
+    const tooYoung = !existing && Number.isInteger(years) && !ageOk;
     if (btn) {
-      btn.classList.toggle("hidden", !entryReady(nm, em, pw) || !ageOk);
-      btn.textContent = entryActionLabel(nm);
+      btn.classList.toggle("hidden", !entryReady(nm, em, pw) || (!ageOk && !tooYoung));
+      btn.textContent = tooYoung ? tt("askParent") : entryActionLabel(nm);
     }
     if (pwEl) pwEl.autocomplete = existing ? "current-password" : "new-password";
     if (forgot) forgot.classList.toggle("hidden", !existing);
@@ -4123,10 +4275,19 @@ function bindEntry() {
   if (emailEl) emailEl.oninput = sync;
   if (pwEl) {
     pwEl.oninput = sync;
-    pwEl.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); void submitEntry(); } };
+    pwEl.onkeydown = (e) => {
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      if (state.childSignIn) void submitChildSignIn();
+      else void submitEntry();
+    };
   }
   const form = $("#entryForm");
-  if (form) form.onsubmit = (e) => { e.preventDefault(); void submitEntry(); };
+  if (form) form.onsubmit = (e) => {
+    e.preventDefault();
+    if (state.childSignIn) void submitChildSignIn();
+    else void submitEntry();
+  };
   if (btn) btn.onclick = () => { void submitEntry(); };
   const createNew = $("#entryCreateNew");
   if (createNew) createNew.onclick = () => {
@@ -4142,6 +4303,7 @@ function bindEntry() {
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
   bindForgotPassword();
+  bindChildSignIn();
   bindRules();
 }
 
@@ -4620,6 +4782,59 @@ function bindDojoSurface() {
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
   bindForgotPassword();
+  bindChildSignIn();
+  const addChild = $("#addChild");
+  if (addChild) addChild.onclick = async () => {
+    const remote = await profileApi({
+      action: "child",
+      displayName: ($("#childName") && $("#childName").value) || "",
+      loginName: ($("#childLogin") && $("#childLogin").value) || "",
+      age: Number($("#childYears") && $("#childYears").value),
+      country: ($("#childCountry") && $("#childCountry").value) || "",
+      password: ($("#childPw") && $("#childPw").value) || "",
+    });
+    if (!remote.ok || !remote.data?.profile) {
+      const code = remote.data?.error;
+      state.statusMsg = code === "parent" ? tt("notAParent")
+        : code === "exists" ? tt("childExists")
+        : code === "age" ? tt("childAgeHint")
+        : code === "login" ? tt("childLoginHint")
+        : remote.status === 503 ? tt("profileStore")
+        : tt("passwordHint");
+      paint(true);
+      return;
+    }
+    state.children = [remote.data.profile, ...(state.children || []).filter((c) => c.id !== remote.data.profile.id)];
+    state.statusMsg = tt("childAdded", remote.data.profile.loginName || remote.data.profile.displayName);
+    paint(true);
+  };
+  document.querySelectorAll("[data-child-off]").forEach((b) => {
+    b.onclick = async () => {
+      const remote = await profileApi({ action: "revoke", childId: b.dataset.childOff });
+      if (!remote.ok) {
+        state.statusMsg = remote.status === 503 ? tt("profileStore") : tt("wrongPassword");
+        paint(true);
+        return;
+      }
+      state.children = (state.children || []).map((c) => (
+        c.id === b.dataset.childOff ? { ...c, playLocked: true, consent: false } : c
+      ));
+      state.statusMsg = tt("childRevoked");
+      paint(true);
+    };
+  });
+  document.querySelectorAll("[data-child-pw-save]").forEach((b) => {
+    b.onclick = async () => {
+      const field = document.querySelector(`[data-child-pw="${b.dataset.childPwSave}"]`);
+      const remote = await profileApi({
+        action: "child-password",
+        childId: b.dataset.childPwSave,
+        password: field ? field.value : "",
+      });
+      state.statusMsg = remote.ok ? tt("passwordSaved") : (remote.data?.error === "revoked" ? tt("parentRevoked") : tt("passwordHint"));
+      paint(true);
+    };
+  });
   const dojoCreateAlt = $("#dojoCreateAlt");
   if (dojoCreateAlt) dojoCreateAlt.onclick = () => openDojoPage("create");
   const dojoCancelMode = $("#dojoCancelMode");
@@ -4638,19 +4853,22 @@ function bindDojoSurface() {
     const generation = readGeneration($("#playerGen"));
     const form = readAgeForm("playerAge");
     const detected = state.detectedCountry || "";
-    if (!ageIsAllowed(form.age, form.country, detected)) {
-      state.statusMsg = tt("ageTooYoung", requiredAge(form.country, detected), ageLimitPlace(form.country, detected));
+    const lockedAge = Number.isInteger(Number(state.profile?.serverAge)) ? Number(state.profile.serverAge) : form.age;
+    const child = state.profile?.role === "child";
+    if (!child && !ageIsAllowed(lockedAge, form.country, detected)) {
+      state.statusMsg = tt("parentNeeded", requiredAge(form.country, detected), ageLimitPlace(form.country, detected));
       paint(true);
       return;
     }
     const patch = {
       displayName: name || state.name,
-      email,
-      age: form.age,
-      country: form.country,
+      email: child ? (state.profile?.email || "") : email,
+      age: child ? state.profile.age : lockedAge,
+      serverAge: state.profile?.serverAge ?? "",
+      country: child ? (state.profile?.country || form.country) : form.country,
       detectedCountry: detected,
-      ageBracket: bracketForAge(form.age),
-      generation: generationForYears(form.age) || generation,
+      ageBracket: bracketForAge(child ? state.profile.age : lockedAge),
+      generation: generationForYears(child ? state.profile.age : lockedAge) || generation,
     };
     if (pw || pw2) {
       if (pw.length < 4) {
@@ -5096,6 +5314,19 @@ function ageGateMessage() {
   const detected = state.profile?.detectedCountry || state.detectedCountry;
   return tt("ageTooYoung", requiredAge(state.profile?.country, detected), ageLimitPlace(state.profile?.country, detected));
 }
+function profileMayPlay() {
+  const p = state.profile;
+  if (!p || p.playLocked) return false;
+  if (p.role === "child") return Boolean(p.consent);
+  const age = Number.isInteger(Number(p.serverAge)) ? Number(p.serverAge) : Number(p.age);
+  return ageIsAllowed(age, p.country, p.detectedCountry || state.detectedCountry);
+}
+function parentMayAdd() {
+  const p = state.profile;
+  if (!p || p.role === "child" || !state.profileUnlocked) return false;
+  const age = Number.isInteger(Number(p.serverAge)) ? Number(p.serverAge) : Number(p.age);
+  return age >= PARENT_MIN_AGE && ageIsAllowed(age, p.country, p.detectedCountry || state.detectedCountry);
+}
 async function joinAsBuzzer() {
   const code = String(state.room || state.joinInput || joinCode || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
   if (!code || code.length < 3) {
@@ -5120,8 +5351,11 @@ async function joinAsBuzzer() {
     openDojoPage("home");
     return false;
   }
-  if (!state.viewing && !ageIsAllowed(state.profile?.age, state.profile?.country, state.profile?.detectedCountry || state.detectedCountry)) {
-    state.statusMsg = ageGateMessage();
+  if (!state.viewing && !profileMayPlay()) {
+    const detected = state.profile?.detectedCountry || state.detectedCountry;
+    state.statusMsg = state.profile?.role === "child" || state.profile?.playLocked
+      ? tt("parentRevoked")
+      : tt("parentNeeded", requiredAge(state.profile?.country, detected), ageLimitPlace(state.profile?.country, detected));
     openDojoPage("home");
     return false;
   }
@@ -5151,8 +5385,11 @@ async function joinAsBuzzer() {
     generation: playerGeneration(state.profile),
   });
   if (!joined || joined.error) {
-    state.statusMsg = (joined && joined.message)
-      || tt("roomMissing", code);
+    state.statusMsg = joined?.error === "unauthorized"
+      ? tt("parentSignIn")
+      : joined?.error === "revoked"
+        ? tt("parentRevoked")
+        : ((joined && joined.message) || tt("roomMissing", code));
     role = prevRole;
     paint(true);
     return false;

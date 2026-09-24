@@ -37,7 +37,7 @@ English remains the source of truth for ids and `correctIndex`. Sync locale pack
 
 One page. Collapsible menus. Jeremy and the studio stay live behind the card.
 
-- **Dojo (profile)** — below Join TV in the lobby (phone only; hidden on TV / `?tv=1`). Create a profile (name, age, email, photo) and a password. The server checks the password and keeps scores with the profile when Redis is set. Without Redis on Vercel, the profile store says it is offline and the score stays on the phone. Create profile starts placement immediately. The age check uses the higher of the chosen country and the IP country.
+- **Dojo (profile)** — below Join TV in the lobby (phone only; hidden on TV / `?tv=1`). Create a profile (name, age, email, photo) and a password. The server checks the password and keeps scores with the profile when Redis is set. Without Redis on Vercel, the profile store says it is offline and the score stays on the phone. Create profile starts placement immediately. The age check uses the higher of the chosen country and the IP country. Under that age, the child's form saves nothing. A profile aged 18 or older adds the child from Dojo, sets the player name and password, and can turn that player off. Joining a room to play uses the age stored on the account, not a number typed on the phone. This parent lock is not an identity-document check.
 - **Karate belt** — white→black from career points, shown as a belt strip in Dojo.
 - **Medals** — Bronze / Silver / Gold from the 10-question placement. Placement is required again after two years.
 - **Placement** — ten questions. Prompt for 5s, then answers. No name/points on the live Dojo card. The questions stored on the device renew after three months.

@@ -42,6 +42,7 @@ jobs:
           node scripts/flow-archive.check.mjs
           node scripts/room-wire.check.mjs
           node scripts/release-blockers.check.mjs
+          node scripts/parental.check.mjs
 
   security:
     name: Security

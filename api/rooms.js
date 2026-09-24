@@ -3,7 +3,10 @@ import { requireAuth } from "../lib/flow-auth.js";
 import { loadCurrentPack } from "../lib/week-store.js";
 import { exportPack } from "../q-and-a/map.js";
 import { generationForSeat } from "../lib/generation-packs.js";
-import { ageIsAllowed, requiredAge } from "../lib/age-gate.js";
+import { countryFromIpHeaders, requiredAge } from "../lib/age-gate.js";
+import { canPlay } from "../lib/parental.js";
+import { findProfileById } from "../lib/profile-store.js";
+import { sessionProfileId } from "../lib/profile-session.js";
 import { dealRamp, SHOW_DEAL } from "../lib/generation-deal.js";
 import { orderShowSets } from "../lib/show-pace.js";
 import { publicRoom, redactState } from "../lib/room-wire.js";
@@ -88,7 +91,7 @@ export default async function handler(req, res) {
   res.setHeader("content-type", "application/json");
   res.setHeader("access-control-allow-origin", "*");
   res.setHeader("access-control-allow-methods", "GET,POST,OPTIONS");
-  res.setHeader("access-control-allow-headers", "content-type, x-fa-host");
+  res.setHeader("access-control-allow-headers", "content-type, x-fa-host, x-fa-profile");
   if (req.method === "OPTIONS") {
     res.status(204).end();
     return;
@@ -217,22 +220,33 @@ export default async function handler(req, res) {
       return;
     }
     const age = Number(body.age);
+    let playAge = Number.isInteger(age) ? age : "";
+    let playCountry = String(body.country || "").slice(0, 8);
+    if (seat === "play") {
+      const profileId = await sessionProfileId(req);
+      const profile = profileId ? await findProfileById(profileId) : null;
+      const ipCountry = countryFromIpHeaders(req.headers);
+      if (!profile) {
+        res.status(401).end(JSON.stringify({ error: "unauthorized", message: "Sign in before playing." }));
+        return;
+      }
+      if (!canPlay(profile, ipCountry)) {
+        res.status(403).end(JSON.stringify({
+          error: profile.playLocked || profile.role === "child" ? "revoked" : "age",
+          minimum: requiredAge(profile.country, ipCountry),
+          message: profile.playLocked ? "A parent turned this profile off." : "This profile cannot play.",
+        }));
+        return;
+      }
+      playAge = Number(profile.age);
+      playCountry = String(profile.country || "").slice(0, 8);
+    }
     const from = Number(cur.ageFrom);
     const to = Number(cur.ageTo);
-    const ageKnown = Number.isFinite(age) && age >= 10 && age <= 99;
-    if (seat === "play" && ageKnown && Number.isFinite(from) && Number.isFinite(to) && (age < from || age > to)) {
+    if (seat === "play" && Number.isFinite(from) && Number.isFinite(to) && (playAge < from || playAge > to)) {
       res.status(403).end(JSON.stringify({
         error: "age",
         message: `This room is for ages ${from} to ${to}.`,
-      }));
-      return;
-    }
-    if (seat === "play" && !ageIsAllowed(body.age, body.country, body.detectedCountry)) {
-      const minimum = requiredAge(body.country, body.detectedCountry);
-      res.status(403).end(JSON.stringify({
-        error: "age",
-        minimum,
-        message: `A profile starts at ${minimum}.`,
       }));
       return;
     }
@@ -242,11 +256,11 @@ export default async function handler(req, res) {
       id: body.id || ("p-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16)),
       thumb: body.thumb || "",
       seat,
-      age: Number.isInteger(Number(body.age)) ? Number(body.age) : "",
-      country: String(body.country || "").slice(0, 8),
+      age: playAge === "" ? "" : playAge,
+      country: playCountry,
       ageBracket: String(body.ageBracket || "").slice(0, 8),
       generation: generationForSeat({
-        age: body.age,
+        age: playAge,
         ageBracket: body.ageBracket,
         generation: body.generation,
       }).slice(0, 40),
