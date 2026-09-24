@@ -1,0 +1,30 @@
+{
+  "id": "SET00001",
+  "folder": "23:09:2026-SET00001",
+  "startedAt": "2026-09-23T00:00:00.000Z",
+  "playUntil": "2026-09-27T00:00:00.000Z",
+  "qualityHours": 30,
+  "qualityUntil": "2026-09-24T06:00:00.000Z",
+  "status": "banked",
+  "locales": [
+    "en",
+    "fr-CA",
+    "de"
+  ],
+  "target": 1050,
+  "placementTarget": 30,
+  "counts": {
+    "en": {
+      "questions": 1050,
+      "placement": 30
+    },
+    "fr-CA": {
+      "questions": 1050,
+      "placement": 30
+    },
+    "de": {
+      "questions": 1050,
+      "placement": 30
+    }
+  }
+}

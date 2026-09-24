@@ -1,0 +1,346 @@
+{
+  "locale": "en",
+  "generation": "gen-x",
+  "tier": "difficult",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-genx-gt-year",
+      "tier": "difficult",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Studio Chronology",
+      "prompt": "In which year did The Grand Tour first premiere on Amazon Prime Video?",
+      "choices": [
+        "2015",
+        "2018",
+        "2014",
+        "2016"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Post-BBC, pre-everyone-arguing-about-camping."
+    },
+    {
+      "id": "w39-d-genx-berlin",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Wall Clock",
+      "prompt": "In which year did the Berlin Wall fall?",
+      "choices": [
+        "1989",
+        "1979",
+        "1985",
+        "1991"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-genx-columbia",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "First Flight",
+      "prompt": "Which space shuttle flew the first orbital shuttle mission in 1981?",
+      "choices": [
+        "Discovery",
+        "Challenger",
+        "Columbia",
+        "Atlantis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The program had several names. This one flew first.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-np-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Nepal?",
+      "choices": [
+        "Kathmandu",
+        "New Delhi",
+        "Lalitpur",
+        "Pokhara"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-kg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Kyrgyzstan?",
+      "choices": [
+        "Bishkek",
+        "Almaty",
+        "Tashkent",
+        "Osh"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-bw-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Botswana?",
+      "choices": [
+        "Windhoek",
+        "Gaborone",
+        "Francistown",
+        "Maun"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-periodic-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the first widely used periodic table?",
+      "choices": [
+        "Antoine Lavoisier",
+        "John Dalton",
+        "Niels Bohr",
+        "Dmitri Mendeleev"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-radium-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the discovery of radium, shared with Pierre Curie?",
+      "choices": [
+        "Marie Curie",
+        "Lise Meitner",
+        "Irene Joliot-Curie",
+        "Dorothy Hodgkin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-marconi-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the first practical radio system across distance?",
+      "choices": [
+        "Thomas Edison",
+        "Lee de Forest",
+        "Heinrich Hertz",
+        "Guglielmo Marconi"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-ride-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the first American woman in space?",
+      "choices": [
+        "Sally Ride",
+        "Valentina Tereshkova",
+        "Eileen Collins",
+        "Mae Jemison"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-shakespeare",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year William Shakespeare was born?",
+      "choices": [
+        "1660",
+        "1564",
+        "1616",
+        "1500"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-ww1-start",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year World War I began?",
+      "choices": [
+        "1918",
+        "1905",
+        "1939",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-ve",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Victory in Europe Day marked the end of the war in Europe?",
+      "choices": [
+        "1941",
+        "1950",
+        "1945",
+        "1944"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-nixon",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Richard Nixon resigned the presidency?",
+      "choices": [
+        "1969",
+        "1974",
+        "1972",
+        "1976"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-hongkong",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Hong Kong was handed over to China?",
+      "choices": [
+        "1997",
+        "1984",
+        "1999",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-brexit-vote",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the United Kingdom voted to leave the European Union?",
+      "choices": [
+        "2016",
+        "2005",
+        "2015",
+        "2020"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-wright",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the Wright brothers flew at Kitty Hawk?",
+      "choices": [
+        "1914",
+        "1927",
+        "1903",
+        "1896"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-olympics-first",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year the first modern Olympic Games were held?",
+      "choices": [
+        "776",
+        "1900",
+        "1896",
+        "1912"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-diff-absolute",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Absolute zero is about how many degrees Celsius?",
+      "choices": [
+        "-273",
+        "0",
+        "-100",
+        "-460"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-diff-email",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Ray Tomlinson sent the first networked email in which year?",
+      "choices": [
+        "1965",
+        "1995",
+        "1971",
+        "1983"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    }
+  ]
+}

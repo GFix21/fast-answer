@@ -1,0 +1,178 @@
+{
+  "locale": "en",
+  "generation": "multi-gen",
+  "tier": "extreme",
+  "held": 10,
+  "questions": [
+    {
+      "id": "cq-x-multi-light",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Travel Time",
+      "prompt": "About how long does sunlight take to reach Earth?",
+      "choices": [
+        "About 8 seconds",
+        "About 8 hours",
+        "About 8 days",
+        "About 8 minutes"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The Sun is far, and the trip is still a coffee break.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-sd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of South Dakota?",
+      "choices": [
+        "Pierre",
+        "Rapid City",
+        "Sioux Falls",
+        "Aberdeen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-nd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of North Dakota?",
+      "choices": [
+        "Fargo",
+        "Grand Forks",
+        "Minot",
+        "Bismarck"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-mt-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Montana?",
+      "choices": [
+        "Helena",
+        "Bozeman",
+        "Missoula",
+        "Billings"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-wy-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Wyoming?",
+      "choices": [
+        "Laramie",
+        "Cheyenne",
+        "Jackson",
+        "Casper"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-in-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Indiana?",
+      "choices": [
+        "Indianapolis",
+        "Evansville",
+        "Fort Wayne",
+        "South Bend"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-gy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Guyana?",
+      "choices": [
+        "Paramaribo",
+        "Georgetown",
+        "Linden",
+        "Cayenne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-hn-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Honduras?",
+      "choices": [
+        "San Pedro Sula",
+        "La Ceiba",
+        "San Salvador",
+        "Tegucigalpa"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-ee-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Estonia?",
+      "choices": [
+        "Riga",
+        "Helsinki",
+        "Tartu",
+        "Tallinn"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-x-me-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Montenegro?",
+      "choices": [
+        "Kotor",
+        "Belgrade",
+        "Budva",
+        "Podgorica"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "For the room,"
+    }
+  ]
+}

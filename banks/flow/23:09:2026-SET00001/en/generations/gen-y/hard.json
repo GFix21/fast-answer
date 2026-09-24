@@ -1,0 +1,865 @@
+{
+  "locale": "en",
+  "generation": "gen-y",
+  "tier": "hard",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-geny-ipod-hd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Scroll Wheel Deep",
+      "prompt": "The first iPod’s storage used what kind of drive?",
+      "choices": [
+        "Only cloud streaming",
+        "Only floppy disks",
+        "Only vinyl",
+        "Hard disk drive"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-facebook",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Campus Login",
+      "prompt": "Facebook (now Meta) was founded in which year?",
+      "choices": [
+        "2004",
+        "2008",
+        "2012",
+        "1998"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-dune",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Sand & Syntax",
+      "prompt": "Who wrote the original novel Dune?",
+      "choices": [
+        "Philip K. Dick",
+        "Isaac Asimov",
+        "Arthur C. Clarke",
+        "Frank Herbert"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-gmg2",
+      "tier": "hard",
+      "topic": "gmg",
+      "generation": "gen-y",
+      "categoryTitle": "Label Lore",
+      "prompt": "GMG Brand Label is primarily associated with which creative field?",
+      "choices": [
+        "Music",
+        "Farm equipment",
+        "Tax software",
+        "Airline catering"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-friends",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Couch Continuity",
+      "prompt": "In Friends, what is the name of the Central Perk barista who later becomes a regular cast member?",
+      "choices": [
+        "Gunner",
+        "Gareth",
+        "Gregory",
+        "Gunther"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-geny-hybrid",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Quiet Torque",
+      "prompt": "Which Toyota model is widely credited with popularizing mass-market hybrids?",
+      "choices": [
+        "Corolla FX only",
+        "Prius",
+        "Land Cruiser diesel only",
+        "Supra Mk IV only"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-geny-iphone",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Pocket Computer",
+      "prompt": "Which company released the first iPhone in 2007?",
+      "choices": [
+        "Apple",
+        "BlackBerry",
+        "Nokia",
+        "Motorola"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The keyboard moved onto the glass.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-h-geny-facebook",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Open Registration",
+      "prompt": "In which year did Facebook open registration beyond schools to anyone 13 or older?",
+      "choices": [
+        "2005",
+        "2006",
+        "2008",
+        "2004"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The campus gate came down in September.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-h-geny-inbox",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Still Calm",
+      "prompt": "Why did the inbox stay calm?",
+      "choices": [
+        "It deleted the morning",
+        "It knew how to keep its letters",
+        "It missed the send button",
+        "It hid the password"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The unread pile stayed polite.",
+      "slang": "Just saying,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-geny-ocean",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Jewel Case",
+      "prompt": "What colour is the Heart of the Ocean in the film Titanic?",
+      "choices": [
+        "Green",
+        "Yellow",
+        "Red",
+        "Blue"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The necklace kept that one shade.",
+      "slang": "Just saying,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-h-geny-euro",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Notes and Coins",
+      "prompt": "One word can mean two things. The scored meaning is the plain one: \"When did euro banknotes and coins enter circulation?\"",
+      "choices": [
+        "January 1, 2002",
+        "2004, when the coins learned to juggle",
+        "January 1, 1999",
+        "July, halfway through a very long receipt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The currency had a birthday before the cash did.",
+      "slang": "Just saying,",
+      "funny": true,
+      "humorous": true,
+      "injection": "wordplay",
+      "structure": "when",
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "cq-h-geny-html",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Page Language",
+      "prompt": "What does HTML stand for?",
+      "choices": [
+        "Home Tool Markup Language",
+        "High Transfer Mail Link",
+        "HyperText Markup Language",
+        "Hyperlink Text Main Language"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The page you are reading is written in it.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-h-geny-youtube",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "First Upload",
+      "prompt": "When did YouTube launch to the public?",
+      "choices": [
+        "2007",
+        "2010",
+        "2005",
+        "2001"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The first clip was short. The year is the middle one of that decade.",
+      "slang": "Just saying,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-gy-h-pk-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Pakistan?",
+      "choices": [
+        "Lahore",
+        "Karachi",
+        "Islamabad",
+        "Rawalpindi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-bg-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Bulgaria?",
+      "choices": [
+        "Sofia",
+        "Varna",
+        "Bucharest",
+        "Plovdiv"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-jo-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Jordan?",
+      "choices": [
+        "Amman",
+        "Jerusalem",
+        "Aqaba",
+        "Petra"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-romeo-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the play Romeo and Juliet?",
+      "choices": [
+        "Ben Jonson",
+        "Christopher Marlowe",
+        "William Shakespeare",
+        "John Milton"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-hobbit-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Hobbit?",
+      "choices": [
+        "J. K. Rowling",
+        "George R. R. Martin",
+        "J. R. R. Tolkien",
+        "C. S. Lewis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-iliad-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the epic poem the Iliad?",
+      "choices": [
+        "Virgil",
+        "Hesiod",
+        "Aeschylus",
+        "Homer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-wild-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book Where the Wild Things Are?",
+      "choices": [
+        "Maurice Sendak",
+        "Eric Carle",
+        "Crockett Johnson",
+        "Dr. Seuss"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-stranger-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Stranger?",
+      "choices": [
+        "Simone de Beauvoir",
+        "Jean-Paul Sartre",
+        "Albert Camus",
+        "André Gide"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-orient-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Murder on the Orient Express?",
+      "choices": [
+        "Arthur Conan Doyle",
+        "Ruth Rendell",
+        "P. D. James",
+        "Agatha Christie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-tale-cities",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel A Tale of Two Cities?",
+      "choices": [
+        "Charles Dickens",
+        "Thomas Hardy",
+        "William Makepeace Thackeray",
+        "George Eliot"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-beloved-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Beloved?",
+      "choices": [
+        "Maya Angelou",
+        "Zora Neale Hurston",
+        "Toni Morrison",
+        "Alice Walker"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-wind-willows",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book The Wind in the Willows?",
+      "choices": [
+        "Kenneth Grahame",
+        "A. A. Milne",
+        "Beatrix Potter",
+        "E. B. White"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-messiah-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the oratorio Messiah?",
+      "choices": [
+        "Henry Purcell",
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Antonio Vivaldi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-purple-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Purple Rain?",
+      "choices": [
+        "David Bowie",
+        "Michael Jackson",
+        "Prince",
+        "Rick James"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-rolling-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Like a Rolling Stone?",
+      "choices": [
+        "Neil Young",
+        "Bob Dylan",
+        "The Rolling Stones",
+        "Mick Jagger"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-old-town-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Old Town Road?",
+      "choices": [
+        "Lil Nas X",
+        "Travis Scott",
+        "Drake",
+        "Post Malone"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-radiohead-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the band Radiohead, as lead singer?",
+      "choices": [
+        "Thom Yorke",
+        "Colin Greenwood",
+        "Ed O'Brien",
+        "Jonny Greenwood"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-et-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film E.T. the Extra-Terrestrial?",
+      "choices": [
+        "Robert Zemeckis",
+        "Chris Columbus",
+        "Steven Spielberg",
+        "George Lucas"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-psycho-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1960 film Psycho?",
+      "choices": [
+        "Orson Welles",
+        "Billy Wilder",
+        "John Ford",
+        "Alfred Hitchcock"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-budapest-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film The Grand Budapest Hotel?",
+      "choices": [
+        "Noah Baumbach",
+        "Paul Thomas Anderson",
+        "Wes Anderson",
+        "Sofia Coppola"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-nemo-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Finding Nemo?",
+      "choices": [
+        "Pete Docter",
+        "John Lasseter",
+        "Andrew Stanton",
+        "Brad Bird"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-fury-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 2015 film Mad Max: Fury Road?",
+      "choices": [
+        "Denis Villeneuve",
+        "Kathryn Bigelow",
+        "Ridley Scott",
+        "George Miller"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-c",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for carbon?",
+      "choices": [
+        "Co",
+        "C",
+        "Ca",
+        "Cl"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ag",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for silver?",
+      "choices": [
+        "Si",
+        "Al",
+        "Ag",
+        "Au"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ca",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for calcium?",
+      "choices": [
+        "Ca",
+        "K",
+        "Cl",
+        "C"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-ne",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for neon?",
+      "choices": [
+        "N",
+        "Na",
+        "Ne",
+        "Ni"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-sym-w",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for tungsten?",
+      "choices": [
+        "Tu",
+        "W",
+        "Sn",
+        "Tg"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-arctic-ocean",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which ocean is the smallest of the five commonly named oceans?",
+      "choices": [
+        "the Indian Ocean",
+        "the Arctic Ocean",
+        "the Southern Ocean",
+        "the Atlantic Ocean"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-ring-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which planet is famous for a bright ring system seen from Earth?",
+      "choices": [
+        "Jupiter",
+        "Saturn",
+        "Neptune",
+        "Uranus"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-photosynthesis-out",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What gas do plants release during photosynthesis?",
+      "choices": [
+        "hydrogen",
+        "oxygen",
+        "carbon dioxide",
+        "nitrogen"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-origin-tea",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is treated as the origin of tea drinking?",
+      "choices": [
+        "India",
+        "the United Kingdom",
+        "Japan",
+        "China"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-diesel-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who invented the diesel engine?",
+      "choices": [
+        "Karl Benz",
+        "Henry Ford",
+        "Rudolf Diesel",
+        "Nikolaus Otto"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-morse-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who developed the telegraph code of dots and dashes that carries his name?",
+      "choices": [
+        "Alexander Graham Bell",
+        "Samuel Morse",
+        "Guglielmo Marconi",
+        "Thomas Edison"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-peace-nobel-country",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Nobel Peace Prize awarded?",
+      "choices": [
+        "Switzerland",
+        "Finland",
+        "Norway",
+        "Sweden"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-garrett-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who was the first woman to qualify as a physician and surgeon in Britain?",
+      "choices": [
+        "Elizabeth Garrett Anderson",
+        "Marie Curie",
+        "Florence Nightingale",
+        "Elizabeth Blackwell"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-diamond-carbon",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Diamond is a form of which element?",
+      "choices": [
+        "carbon",
+        "quartz",
+        "calcium",
+        "silicon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-h-pearl-origin",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "A pearl forms inside what?",
+      "choices": [
+        "a clam only",
+        "a snail",
+        "a crab",
+        "an oyster"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,"
+    }
+  ]
+}

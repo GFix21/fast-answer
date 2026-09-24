@@ -1,0 +1,177 @@
+{
+  "locale": "de",
+  "generation": "gen-alpha",
+  "tier": "extreme",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-alpha-minecraft-biome",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Finale · Deep Dark",
+      "prompt": "Welcher feindliche Mob in Minecraft wird stark mit dem Deep Dark / Ancient Cities verbunden?",
+      "choices": [
+        "Warden",
+        "Eisengolem",
+        "Nur Creeper",
+        "Nur Ender Dragon"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-al-x-sr-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Suriname?",
+      "choices": [
+        "Georgetown",
+        "Paramaribo",
+        "Caracas",
+        "Cayenne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-x-gt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Guatemala?",
+      "choices": [
+        "Antigua",
+        "Quetzaltenango",
+        "San Salvador",
+        "Guatemala-Stadt"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-x-si-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Slowenien?",
+      "choices": [
+        "Ljubljana",
+        "Zagreb",
+        "Triest",
+        "Maribor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-x-mk-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Nordmazedonien?",
+      "choices": [
+        "Bitola",
+        "Tirana",
+        "Skopje",
+        "Ohrid"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-x-az-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Aserbaidschan?",
+      "choices": [
+        "Tiflis",
+        "Yerevan",
+        "Ganja",
+        "Baku"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-x-cm-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Kamerun?",
+      "choices": [
+        "Garoua",
+        "Lagos",
+        "Yaoundé",
+        "Douala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-x-sd-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Sudan?",
+      "choices": [
+        "Omdurman",
+        "Port Sudan",
+        "Kairo",
+        "Khartum"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-x-atomic-w",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Ordnungszahl hat Wolfram?",
+      "choices": [
+        "74",
+        "42",
+        "26",
+        "78"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-x-chromosomes",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Chromosomen hat eine typische menschliche Körperzelle?",
+      "choices": [
+        "48",
+        "23",
+        "46",
+        "44"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    }
+  ]
+}

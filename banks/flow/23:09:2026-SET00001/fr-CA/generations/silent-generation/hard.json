@@ -1,0 +1,853 @@
+{
+  "locale": "fr-CA",
+  "generation": "silent-generation",
+  "tier": "hard",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-silent-sputnik",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Origines orbitales",
+      "prompt": "Quel pays a lancé Spoutnik 1, le premier satellite artificiel, en 1957 ?",
+      "choices": [
+        "États-Unis",
+        "France",
+        "Chine",
+        "Union soviétique"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-hula",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dossiers de modes",
+      "prompt": "La folie des années 1950 du cercle de plastique qui tourne autour de la taille, c’était…",
+      "choices": [
+        "Le bâton sauteur (pogo)",
+        "Le Tamagotchi",
+        "Le Rubik’s Cube",
+        "Le hula hoop"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-polio",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Santé publique",
+      "prompt": "Quel scientifique américain a dirigé l’équipe derrière le premier vaccin antipoliomyélitique largement utilisé dans les années 1950 ?",
+      "choices": [
+        "Alexander Fleming",
+        "Jonas Salk",
+        "Edward Jenner",
+        "Louis Pasteur"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-korea",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Carte de la Guerre froide",
+      "prompt": "En quelle année l’armistice de la guerre de Corée a été signé ?",
+      "choices": [
+        "1953",
+        "1960",
+        "1945",
+        "1975"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-interstate",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Bâtisseurs de routes",
+      "prompt": "Quel président américain a signé le Federal-Aid Highway Act qui a lancé le réseau Interstate en 1956 ?",
+      "choices": [
+        "Harry Truman",
+        "Dwight D. Eisenhower",
+        "John F. Kennedy",
+        "Lyndon B. Johnson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-silent-disneyland",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Aube des parcs à thème",
+      "prompt": "Dans quel État américain Disneyland a ouvert pour la première fois en 1955 ?",
+      "choices": [
+        "New York",
+        "Californie",
+        "Floride",
+        "Texas"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-silent-chamberlain",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Septembre 1939",
+      "prompt": "Qui était le premier ministre du Royaume-Uni quand la Grande-Bretagne a déclaré la guerre à l'Allemagne en 1939 ?",
+      "choices": [
+        "Clement Attlee",
+        "Stanley Baldwin",
+        "Winston Churchill",
+        "Neville Chamberlain"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Churchill a pris la place l'année d'après.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-h-silent-assembly",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Première session",
+      "prompt": "Dans quelle ville l'ONU a tenu sa première Assemblée générale en 1946 ?",
+      "choices": [
+        "New York",
+        "Genève",
+        "Paris",
+        "Londres"
+      ],
+      "correctIndex": 3,
+      "banterHint": "New York est devenu le siège quelques années plus tard.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-h-silent-empire",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Horizon",
+      "prompt": "L'Empire State Building a été achevé quand ?",
+      "choices": [
+        "1941",
+        "1950",
+        "1925",
+        "1931"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La flèche était en place avant la fin de la décennie.",
+      "slang": "Dites,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-h-silent-marshall",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Loi de relève",
+      "prompt": "En quelle année le plan Marshall est devenu une loi aux États-Unis ?",
+      "choices": [
+        "1945",
+        "1948",
+        "1953",
+        "1951"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La guerre était finie. La reconstruction a une date de départ.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-ch-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Suisse?",
+      "choices": [
+        "Genève",
+        "Bâle",
+        "Berne",
+        "Zurich"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-iq-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Irak?",
+      "choices": [
+        "Erbil",
+        "Bagdad",
+        "Bassora",
+        "Mossoul"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-my-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Malaisie?",
+      "choices": [
+        "Singapour",
+        "Kuala Lumpur",
+        "George Town",
+        "Johor Bahru"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sn-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Sénégal?",
+      "choices": [
+        "Thiès",
+        "Saint-Louis",
+        "Dakar",
+        "Bamako"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-pride-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Pride and Prejudice ?",
+      "choices": [
+        "Jane Austen",
+        "Emily Brontë",
+        "Charlotte Brontë",
+        "Mary Shelley"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-crime-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Crime and Punishment ?",
+      "choices": [
+        "Anton Chekhov",
+        "Leo Tolstoy",
+        "Fyodor Dostoevsky",
+        "Ivan Turgenev"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-matilda-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the book Matilda ?",
+      "choices": [
+        "Roald Dahl",
+        "J. K. Rowling",
+        "Dr. Seuss",
+        "Enid Blyton"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-alchemist-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel The Alchemist ?",
+      "choices": [
+        "Isabel Allende",
+        "Jorge Luis Borges",
+        "Paulo Coelho",
+        "Gabriel García Márquez"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-eighty-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Around the World in Eighty Days ?",
+      "choices": [
+        "Jules Verne",
+        "Agatha Christie",
+        "Mark Twain",
+        "H. G. Wells"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-gulliver-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit Gulliver's Travels ?",
+      "choices": [
+        "Voltaire",
+        "Laurence Sterne",
+        "Jonathan Swift",
+        "Daniel Defoe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-madame-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Madame Bovary ?",
+      "choices": [
+        "Honoré de Balzac",
+        "Gustave Flaubert",
+        "Émile Zola",
+        "Victor Hugo"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-kindred-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a écrit the novel Kindred ?",
+      "choices": [
+        "Toni Morrison",
+        "N. K. Jemisin",
+        "Ursula K. Le Guin",
+        "Octavia E. Butler"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-nutcracker-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the ballet The Nutcracker ?",
+      "choices": [
+        "Sergei Prokofiev",
+        "Maurice Ravel",
+        "Pyotr Ilyich Tchaikovsky",
+        "Igor Stravinsky"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-bolero-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the orchestral piece Boléro ?",
+      "choices": [
+        "Claude Debussy",
+        "Camille Saint-Saëns",
+        "Gabriel Fauré",
+        "Maurice Ravel"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-no-woman-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song No Woman, No Cry ?",
+      "choices": [
+        "Jimmy Cliff",
+        "Toots Hibbert",
+        "Bob Marley",
+        "Peter Tosh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-blinding-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the song Blinding Lights ?",
+      "choices": [
+        "Drake",
+        "The Weeknd",
+        "Post Malone",
+        "Bruno Mars"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-espresso-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the 2024 song Espresso ?",
+      "choices": [
+        "Sabrina Carpenter",
+        "Dua Lipa",
+        "Chappell Roan",
+        "Olivia Rodrigo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-pepper-year-song",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fait the album Sgt. Pepper's Lonely Hearts Club Band ?",
+      "choices": [
+        "The Beatles",
+        "The Beach Boys",
+        "The Rolling Stones",
+        "The Kinks"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-avatar-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 2009 film Avatar ?",
+      "choices": [
+        "James Cameron",
+        "George Lucas",
+        "Jon Favreau",
+        "Peter Jackson"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-spirited-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Spirited Away ?",
+      "choices": [
+        "Isao Takahata",
+        "Satoshi Kon",
+        "Makoto Shinkai",
+        "Hayao Miyazaki"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-tiger-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the film Crouching Tiger, Hidden Dragon ?",
+      "choices": [
+        "Ang Lee",
+        "Wong Kar-wai",
+        "Zhang Yimou",
+        "John Woo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-shrek-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a réalisé the 2001 film Shrek ?",
+      "choices": [
+        "Andrew Adamson and Vicky Jenson",
+        "Chris Miller",
+        "Pete Docter",
+        "John Lasseter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-h",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément hydrogen ?",
+      "choices": [
+        "H",
+        "N",
+        "O",
+        "He"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-k",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément potassium ?",
+      "choices": [
+        "Na",
+        "K",
+        "P",
+        "Ca"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-sn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément tin ?",
+      "choices": [
+        "Ti",
+        "Sn",
+        "Sb",
+        "Si"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-si",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément silicon ?",
+      "choices": [
+        "Ag",
+        "Sn",
+        "Si",
+        "S"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-sym-ni",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le symbole chimique de l'élément nickel ?",
+      "choices": [
+        "N",
+        "Ne",
+        "Ni",
+        "Na"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-ford-founder",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fondé la Ford Motor Company ?",
+      "choices": [
+        "Ransom Olds",
+        "Henry Ford",
+        "Walter Chrysler",
+        "William Durant"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-largest-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quelle planète, la plus grande du système solaire ?",
+      "choices": [
+        "Saturn",
+        "Neptune",
+        "Earth",
+        "Jupiter"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-farthest-eight",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Des huit planètes, c'est laquelle qui orbite le plus loin du Soleil ?",
+      "choices": [
+        "Saturn",
+        "Pluto",
+        "Uranus",
+        "Neptune"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-invent-gunpowder",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quelle civilisation qui a d'abord mis au point la poudre ?",
+      "choices": [
+        "China",
+        "the Middle East",
+        "India",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-origin-cacao",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le cacao a d'abord été cultivé dans quelle région ?",
+      "choices": [
+        "Europe",
+        "India",
+        "Mesoamerica",
+        "West Africa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-stephenson-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a construit la locomotive Rocket ?",
+      "choices": [
+        "George Stephenson",
+        "Richard Trevithick",
+        "Isambard Kingdom Brunel",
+        "James Watt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-eastman-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fondé l'entreprise qui a vendu les appareils Kodak ?",
+      "choices": [
+        "George Eastman",
+        "Ansel Adams",
+        "Thomas Edison",
+        "Louis Daguerre"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-barton-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a fondé la Croix-Rouge américaine ?",
+      "choices": [
+        "Florence Nightingale",
+        "Clara Barton",
+        "Helen Keller",
+        "Dorothea Dix"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-radium-element",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les Curie ont découvert quel élément avec le polonium ?",
+      "choices": [
+        "uranium",
+        "plutonium",
+        "curium",
+        "radium"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-rust-metal",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "La rouille se forme surtout sur quel métal ?",
+      "choices": [
+        "iron",
+        "copper",
+        "aluminum",
+        "gold"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-maple-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le sirop d'érable vient de la sève de quel arbre ?",
+      "choices": [
+        "the oak",
+        "the birch",
+        "the maple",
+        "the pine"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-pepper-vine",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le poivre noir vient de quel type de plante ?",
+      "choices": [
+        "a grass",
+        "a vine",
+        "a root",
+        "a tree nut"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-h-hard-zhang-heng",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a inventé un sismographe dans la Chine des Han ?",
+      "choices": [
+        "Cai Lun",
+        "Bi Sheng",
+        "Shen Kuo",
+        "Zhang Heng"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,"
+    }
+  ]
+}

@@ -1,0 +1,863 @@
+{
+  "locale": "en",
+  "generation": "gen-x",
+  "tier": "hard",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-genx-amazon-gt",
+      "tier": "hard",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Prime Time Petrol",
+      "prompt": "Which streaming service produced The Grand Tour?",
+      "choices": [
+        "Netflix",
+        "Disney+",
+        "Amazon Prime Video",
+        "Hulu"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-chernobyl",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Atomic Map",
+      "prompt": "The 1986 Chernobyl nuclear disaster occurred in which present-day country?",
+      "choices": [
+        "Sweden",
+        "Poland",
+        "Ukraine",
+        "Germany"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-nirvana",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Grunge Gate",
+      "prompt": "Which Nirvana album includes the song “Smells Like Teen Spirit”?",
+      "choices": [
+        "Bleach",
+        "Nevermind",
+        "In Utero",
+        "Unplugged in New York"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-www",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Hyperlink Dawn",
+      "prompt": "Who is credited with inventing the World Wide Web?",
+      "choices": [
+        "Steve Jobs",
+        "Mark Zuckerberg",
+        "Bill Gates",
+        "Tim Berners-Lee"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-seinfeld",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "About Nothing",
+      "prompt": "Seinfeld is set primarily in which U.S. city?",
+      "choices": [
+        "Chicago",
+        "Boston",
+        "Los Angeles",
+        "New York City"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-genx-gameboy",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Handheld History",
+      "prompt": "Nintendo’s original Game Boy launched in Japan in which year?",
+      "choices": [
+        "1994",
+        "1998",
+        "1989",
+        "1985"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-genx-ram",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Short Memory",
+      "prompt": "What does RAM stand for in a computer?",
+      "choices": [
+        "Read And Modify",
+        "Rapid Archive Module",
+        "Random Access Memory",
+        "Remote Access Mainframe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Fast memory, and it forgets when the power goes.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-h-genx-cd",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silver Circle",
+      "prompt": "What does CD stand for in the music format introduced in the early 1980s?",
+      "choices": [
+        "Cassette Deck",
+        "Catalog Download",
+        "Compact Disc",
+        "Crystal Drive"
+      ],
+      "correctIndex": 2,
+      "banterHint": "A small mirror that held an album.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-h-genx-blinky",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Ghost Duty",
+      "prompt": "What colour is Blinky, the Pac-Man ghost?",
+      "choices": [
+        "Pink",
+        "Orange",
+        "Cyan",
+        "Red"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The other three ghosts wear the rest.",
+      "slang": "Whatever the case,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-h-genx-web",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "First Page",
+      "prompt": "The story seems to head somewhere else. The question is still, \"When was the World Wide Web made available to the public?\"",
+      "choices": [
+        "August 6, 1991",
+        "March 12, the day the idea cleared its throat",
+        "January 1, when the calendar looked official",
+        "August 6, 1989"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The idea is older. The public page is this date.",
+      "slang": "Whatever the case,",
+      "funny": true,
+      "humorous": true,
+      "injection": "misdirection",
+      "structure": "when",
+      "fromStructure": "when",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-h-genx-cdsale",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Silver Disc",
+      "prompt": "In which year did the compact disc first go on sale?",
+      "choices": [
+        "1988",
+        "1977",
+        "1982",
+        "1991"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The shiny circle arrived before the playlist apps.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-h-genx-hubble",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Orbiting Eye",
+      "prompt": "When was the Hubble Space Telescope launched?",
+      "choices": [
+        "1990",
+        "1998",
+        "1981",
+        "2003"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The mirror needed a later visit. The launch year is the first one.",
+      "slang": "Whatever the case,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-gx-h-vn-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Vietnam?",
+      "choices": [
+        "Da Nang",
+        "Ho Chi Minh City",
+        "Hanoi",
+        "Hue"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-ro-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Romania?",
+      "choices": [
+        "Cluj-Napoca",
+        "Budapest",
+        "Bucharest",
+        "Timisoara"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-kw-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Kuwait?",
+      "choices": [
+        "Kuwait City",
+        "Riyadh",
+        "Manama",
+        "Doha"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-mm-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Myanmar?",
+      "choices": [
+        "Naypyidaw",
+        "Mandalay",
+        "Bangkok",
+        "Yangon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-dracula-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Dracula?",
+      "choices": [
+        "Edgar Allan Poe",
+        "Robert Louis Stevenson",
+        "Mary Shelley",
+        "Bram Stoker"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-odyssey-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the epic poem the Odyssey?",
+      "choices": [
+        "Ovid",
+        "Sophocles",
+        "Virgil",
+        "Homer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-cat-hat-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the book The Cat in the Hat?",
+      "choices": [
+        "Maurice Sendak",
+        "Shel Silverstein",
+        "Dr. Seuss",
+        "Eric Carle"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-faust-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the play Faust?",
+      "choices": [
+        "Heinrich Heine",
+        "Bertolt Brecht",
+        "Johann Wolfgang von Goethe",
+        "Friedrich Schiller"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-none-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel And Then There Were None?",
+      "choices": [
+        "Arthur Conan Doyle",
+        "Agatha Christie",
+        "Ngaio Marsh",
+        "Dorothy L. Sayers"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-moby-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel Moby-Dick?",
+      "choices": [
+        "Jack London",
+        "Joseph Conrad",
+        "Herman Melville",
+        "Nathaniel Hawthorne"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-grapes-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the novel The Grapes of Wrath?",
+      "choices": [
+        "William Faulkner",
+        "Harper Lee",
+        "Ernest Hemingway",
+        "John Steinbeck"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-peter-pan",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who wrote the story Peter Pan?",
+      "choices": [
+        "Kenneth Grahame",
+        "J. M. Barrie",
+        "Lewis Carroll",
+        "A. A. Milne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-carmen-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the opera Carmen?",
+      "choices": [
+        "Giuseppe Verdi",
+        "Richard Wagner",
+        "Giacomo Puccini",
+        "Georges Bizet"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-thriller-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Thriller?",
+      "choices": [
+        "Prince",
+        "Stevie Wonder",
+        "Lionel Richie",
+        "Michael Jackson"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-born-usa-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Born in the U.S.A.?",
+      "choices": [
+        "Bruce Springsteen",
+        "John Mellencamp",
+        "Tom Petty",
+        "Bob Seger"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-gangnam-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the song Gangnam Style?",
+      "choices": [
+        "Blackpink",
+        "BTS",
+        "Psy",
+        "Rain"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-coldplay-voice",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who made the band Coldplay, as lead singer?",
+      "choices": [
+        "Chris Martin",
+        "Will Champion",
+        "Guy Berryman",
+        "Jonny Buckland"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-jaws-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Jaws?",
+      "choices": [
+        "James Cameron",
+        "Steven Spielberg",
+        "George Lucas",
+        "Ridley Scott"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-godfather-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 1972 film The Godfather?",
+      "choices": [
+        "Brian De Palma",
+        "Martin Scorsese",
+        "Francis Ford Coppola",
+        "Sergio Leone"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-get-out-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the film Get Out?",
+      "choices": [
+        "Ryan Coogler",
+        "Jordan Peele",
+        "Boots Riley",
+        "Barry Jenkins"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-dark-knight-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 2008 film The Dark Knight?",
+      "choices": [
+        "Christopher Nolan",
+        "Matt Reeves",
+        "Tim Burton",
+        "Zack Snyder"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-moana-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who directed the 2016 film Moana?",
+      "choices": [
+        "Ron Clements and John Musker",
+        "Chris Buck and Jennifer Lee",
+        "Don Hall and Chris Williams",
+        "Lee Unkrich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-o",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for oxygen?",
+      "choices": [
+        "C",
+        "N",
+        "O",
+        "H"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-cu",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for copper?",
+      "choices": [
+        "Cr",
+        "Cu",
+        "Co",
+        "C"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-cl",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for chlorine?",
+      "choices": [
+        "Cl",
+        "Cr",
+        "C",
+        "Ca"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-s",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for sulfur?",
+      "choices": [
+        "S",
+        "Si",
+        "Na",
+        "Sr"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-sym-i",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the chemical symbol for iodine?",
+      "choices": [
+        "I",
+        "Fe",
+        "In",
+        "Ir"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-amazon-volume",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which river carries the greatest volume of water?",
+      "choices": [
+        "the Amazon",
+        "the Mississippi",
+        "the Yangtze",
+        "the Nile"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-hottest-planet",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which planet is the hottest in the solar system?",
+      "choices": [
+        "Mercury",
+        "Mars",
+        "Jupiter",
+        "Venus"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-our-star",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "What star sits at the center of our solar system?",
+      "choices": [
+        "Sirius",
+        "Polaris",
+        "the Sun",
+        "Alpha Centauri"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-origin-coffee",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is treated as the origin of coffee plants?",
+      "choices": [
+        "Ethiopia",
+        "Italy",
+        "Colombia",
+        "Brazil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-denim-city",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "The word denim comes from a fabric of which French city?",
+      "choices": [
+        "Paris",
+        "Marseille",
+        "Nîmes",
+        "Lyon"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-fulton-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with a successful commercial steamboat in the United States?",
+      "choices": [
+        "Robert Fulton",
+        "James Watt",
+        "George Stephenson",
+        "Samuel Morse"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-nobel-prize-country",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country are the Nobel Prizes awarded, except the Peace Prize?",
+      "choices": [
+        "Denmark",
+        "Sweden",
+        "Norway",
+        "Switzerland"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-blackwell-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who was the first woman to receive a medical degree in the United States?",
+      "choices": [
+        "Elizabeth Garrett Anderson",
+        "Florence Nightingale",
+        "Marie Curie",
+        "Elizabeth Blackwell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-balloon-gas",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which gas is commonly used to make party balloons float?",
+      "choices": [
+        "helium",
+        "hydrogen",
+        "oxygen",
+        "nitrogen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-amber-origin",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Amber is fossilized what?",
+      "choices": [
+        "coral",
+        "seashell",
+        "lava",
+        "tree resin"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-h-saffron-flower",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "Saffron comes from which flower?",
+      "choices": [
+        "the crocus",
+        "the tulip",
+        "the rose",
+        "the sunflower"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    }
+  ]
+}

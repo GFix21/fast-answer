@@ -1,0 +1,1212 @@
+{
+  "locale": "en",
+  "generation": "silent-generation",
+  "tier": "easy",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-silent-ike",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Mid-Century Motto",
+      "prompt": "What campaign slogan is Dwight D. Eisenhower famously linked with?",
+      "choices": [
+        "I Like Ike",
+        "Morning in America",
+        "Tippecanoe and Tyler Too",
+        "Yes We Can"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Three little words. Huge hats."
+    },
+    {
+      "id": "w39-e-silent-fdr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Wartime White House",
+      "prompt": "Which U.S. president led the country through most of World War II?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Herbert Hoover",
+        "Woodrow Wilson"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-transistor",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Pocket Radio Era",
+      "prompt": "What small radio type became a teenage hit in the 1950s?",
+      "choices": [
+        "Vacuum toaster",
+        "Transistor radio",
+        "Eight-track boombox",
+        "Crystal ball radio"
+      ],
+      "correctIndex": 1,
+      "banterHint": "No, not a crystal ball."
+    },
+    {
+      "id": "w39-e-silent-elvis",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "King Corner",
+      "prompt": "Which singer is widely called the King of Rock and Roll?",
+      "choices": [
+        "Elvis Presley",
+        "Little Richard",
+        "Buddy Holly",
+        "Chuck Berry"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Map Mayhem",
+      "prompt": "What is the capital city of Canada?",
+      "choices": [
+        "Toronto",
+        "Ottawa",
+        "Vancouver",
+        "Montreal"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-silent-road",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Beat Shelf",
+      "prompt": "Who wrote the Beat Generation novel On the Road?",
+      "choices": [
+        "Allen Ginsberg",
+        "Jack Kerouac",
+        "Neal Cassady",
+        "William S. Burroughs"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-silent-roar",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Jazz Decade",
+      "prompt": "What nickname is given to the 1920s in the United States?",
+      "choices": [
+        "The Roaring Twenties",
+        "The Space Age",
+        "The Depression Years",
+        "The Gilded Age"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The bands were loud. The name stuck.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-e-silent-vote",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Ballot Box",
+      "prompt": "Which U.S. constitutional amendment, ratified in 1920, recognized women's right to vote?",
+      "choices": [
+        "The 19th Amendment",
+        "The 26th Amendment",
+        "The 13th Amendment",
+        "The 15th Amendment"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The line at the poll got longer, on purpose.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-e-silent-radio",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "By the Window",
+      "prompt": "Why did the radio sit near the window?",
+      "choices": [
+        "It hid from the news",
+        "It lost the dial",
+        "It preferred silence",
+        "It wanted to catch a wave"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The song still came through.",
+      "slang": "Say,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-silent-liberty",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Copper Coat",
+      "prompt": "Two friends are walking. One asks the other, \"What colour is the Statue of Liberty today?\" The other answers…",
+      "choices": [
+        "Grey",
+        "White, still shy from the crossing",
+        "Gold, if the torch is telling the story",
+        "Green"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The copper coat changed after years of weather.",
+      "slang": "Say,",
+      "funny": true,
+      "humorous": true,
+      "injection": "dialogue",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-e-silent-taxi",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Medallion",
+      "prompt": "One friend guesses wildly. The other answers the question that was asked: \"What colour is a classic New York City taxi?\"",
+      "choices": [
+        "Yellow",
+        "White, trying out for the ice cream truck",
+        "Black, dressed for a very serious errand",
+        "Green"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The wild guess can wait. The cab is the bright one.",
+      "slang": "Say,",
+      "funny": true,
+      "humorous": true,
+      "injection": "straight-man",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-e-silent-adenauer",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "First Chancellor",
+      "prompt": "Who was the first Chancellor of West Germany?",
+      "choices": [
+        "Helmut Kohl",
+        "Helmut Schmidt",
+        "Willy Brandt",
+        "Konrad Adenauer"
+      ],
+      "correctIndex": 3,
+      "banterHint": "He took the chair in 1949 and kept it for a long stretch.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-it-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Italy?",
+      "choices": [
+        "Madrid",
+        "Berlin",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-nl-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of the Netherlands?",
+      "choices": [
+        "Rotterdam",
+        "Utrecht",
+        "Amsterdam",
+        "The Hague"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-ru-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Russia?",
+      "choices": [
+        "Saint Petersburg",
+        "Sochi",
+        "Kazan",
+        "Moscow"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-eg-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Egypt?",
+      "choices": [
+        "Cairo",
+        "Alexandria",
+        "Giza",
+        "Luxor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cz-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Czechia?",
+      "choices": [
+        "Brno",
+        "Vienna",
+        "Bratislava",
+        "Prague"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-tr-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Turkey?",
+      "choices": [
+        "Ankara",
+        "Izmir",
+        "Antalya",
+        "Istanbul"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-greek-letters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many letters are in the Greek alphabet?",
+      "choices": [
+        "20",
+        "24",
+        "22",
+        "26"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-right-angle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many degrees are in a right angle?",
+      "choices": [
+        "60",
+        "90",
+        "45",
+        "180"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cube-corners",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many corners does a cube have?",
+      "choices": [
+        "12",
+        "8",
+        "6",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-rainbow-colors",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many colours are in a traditional rainbow?",
+      "choices": [
+        "6",
+        "5",
+        "7",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-canada-regions",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many provinces and territories does Canada have?",
+      "choices": [
+        "15",
+        "13",
+        "10",
+        "12"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-mars-moons",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many moons does Mars have?",
+      "choices": [
+        "8",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-hockey-skaters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many skaters from one team are on the ice in ice hockey, including the goalkeeper?",
+      "choices": [
+        "6",
+        "7",
+        "5",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-field-goal-points",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many points is a field goal worth in American football?",
+      "choices": [
+        "1",
+        "3",
+        "6",
+        "2"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-nhl-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many teams are in the NHL?",
+      "choices": [
+        "32",
+        "16",
+        "31",
+        "30"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-piano-black",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many black keys are on a standard piano?",
+      "choices": [
+        "36",
+        "32",
+        "52",
+        "24"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-haiku-syllables",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many syllables are in a traditional haiku?",
+      "choices": [
+        "14",
+        "15",
+        "19",
+        "17"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cm-mm",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many millimeters are in a centimeter?",
+      "choices": [
+        "10",
+        "12",
+        "5",
+        "100"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-bicycle-wheels",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many wheels does a typical bicycle have?",
+      "choices": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-stonehenge-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is Stonehenge?",
+      "choices": [
+        "France",
+        "Denmark",
+        "the United Kingdom",
+        "Ireland"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-forbidden-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Forbidden City?",
+      "choices": [
+        "South Korea",
+        "Mongolia",
+        "Japan",
+        "China"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-andes-continent",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Andes?",
+      "choices": [
+        "Europe",
+        "South America",
+        "North America",
+        "Africa"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-bigben-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the bell called Big Ben?",
+      "choices": [
+        "France",
+        "Ireland",
+        "the United States",
+        "the United Kingdom"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-guernica-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted Guernica?",
+      "choices": [
+        "Francisco Goya",
+        "Diego Velázquez",
+        "Pablo Picasso",
+        "Salvador Dalí"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-son-man-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The Son of Man?",
+      "choices": [
+        "Giorgio de Chirico",
+        "René Magritte",
+        "Salvador Dalí",
+        "Max Ernst"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-whistler-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted Arrangement in Grey and Black No. 1, often called Whistler's Mother?",
+      "choices": [
+        "James McNeill Whistler",
+        "Winslow Homer",
+        "John Singer Sargent",
+        "Thomas Eakins"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-hyundai-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Hyundai?",
+      "choices": [
+        "South Korea",
+        "China",
+        "Germany",
+        "Japan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-fiat-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Fiat?",
+      "choices": [
+        "Italy",
+        "Germany",
+        "Spain",
+        "France"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-mexico",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Mexico in this question?",
+      "choices": [
+        "Portuguese",
+        "French",
+        "Spanish",
+        "English"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-austria",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Austria in this question?",
+      "choices": [
+        "Hungarian",
+        "French",
+        "German",
+        "Italian"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-thailand",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Thailand in this question?",
+      "choices": [
+        "Vietnamese",
+        "Thai",
+        "Malay",
+        "Lao"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-lang-israel",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Israel, as the main official language in this question?",
+      "choices": [
+        "Hebrew",
+        "Arabic",
+        "English",
+        "Yiddish"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-4",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Ghana?",
+      "choices": [
+        "Africa",
+        "Europe",
+        "Asia",
+        "South America"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-11",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Vietnam?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "North America",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-18",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Sweden?",
+      "choices": [
+        "Asia",
+        "South America",
+        "Africa",
+        "Europe"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-25",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Brazil?",
+      "choices": [
+        "Africa",
+        "Europe",
+        "North America",
+        "South America"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-32",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Fiji?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "Europe",
+        "Oceania"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cont-39",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Philippines?",
+      "choices": [
+        "Asia",
+        "Africa",
+        "Europe",
+        "North America"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-6",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Brazil?",
+      "choices": [
+        "the real",
+        "the euro",
+        "the dollar",
+        "the yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-13",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Australia?",
+      "choices": [
+        "the euro",
+        "the yen",
+        "the dollar",
+        "the peso"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-20",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Egypt?",
+      "choices": [
+        "the pound",
+        "the dollar",
+        "the euro",
+        "the yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-cur-27",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Czechia?",
+      "choices": [
+        "the yen",
+        "the euro",
+        "the koruna",
+        "the dollar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-food-4",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with paella?",
+      "choices": [
+        "Spain",
+        "Japan",
+        "Italy",
+        "Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-food-11",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with poutine?",
+      "choices": [
+        "Canada",
+        "Mexico",
+        "Japan",
+        "Italy"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-food-18",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with ramen?",
+      "choices": [
+        "Italy",
+        "France",
+        "Mexico",
+        "Japan"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-food-25",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with pierogi?",
+      "choices": [
+        "Italy",
+        "Japan",
+        "Mexico",
+        "Poland"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-1",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is largest bird?",
+      "choices": [
+        "the eagle",
+        "the ostrich",
+        "the swan",
+        "the penguin"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-7",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is animal famous for changing colour?",
+      "choices": [
+        "the octopus",
+        "the frog",
+        "the parrot",
+        "the chameleon"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-13",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is animal with a trunk?",
+      "choices": [
+        "the elephant",
+        "the rhinoceros",
+        "the hippopotamus",
+        "the walrus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-ani-19",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is nocturnal bird of proverb?",
+      "choices": [
+        "the owl",
+        "the crow",
+        "the robin",
+        "the bat"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-seasons-four",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many seasons do temperate regions usually name?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-human-ears",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many ears does a typical human have?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-vowels-en",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many vowels are usually listed in English: a, e, i, o, and u?",
+      "choices": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-wonders-ancient",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many wonders are in the classic list of the ancient world?",
+      "choices": [
+        "7",
+        "10",
+        "8",
+        "5"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-pedals-piano-grand",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many pedals does a typical grand piano have?",
+      "choices": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-easy-angles-triangle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many angles does a triangle have?",
+      "choices": [
+        "4",
+        "6",
+        "2",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-easy-chair-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many legs does a typical chair have?",
+      "choices": [
+        "6",
+        "4",
+        "3",
+        "2"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-e-easy-days-fortnight",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many days are in a fortnight?",
+      "choices": [
+        "10",
+        "15",
+        "7",
+        "14"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    }
+  ]
+}

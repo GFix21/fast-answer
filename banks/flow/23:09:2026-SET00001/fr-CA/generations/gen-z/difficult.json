@@ -1,0 +1,346 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-z",
+  "tier": "difficult",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-genz-openai",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Manières de modèles",
+      "prompt": "En quelle année OpenAI a mis ChatGPT à disposition du public ?",
+      "choices": [
+        "2018",
+        "2024",
+        "2022",
+        "2020"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-genz-parasite",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Escaliers et sous-titres",
+      "prompt": "Le film Parasite, de quel pays, a remporté l’Oscar du meilleur film ?",
+      "choices": [
+        "Corée du Sud",
+        "Japon",
+        "France",
+        "Mexique"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-genz-webb",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Œil lointain",
+      "prompt": "En quelle année le télescope spatial James-Webb a été lancé ?",
+      "choices": [
+        "2021",
+        "2024",
+        "2016",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le jour de Noël, depuis un port spatial en Amérique du Sud.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-af-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Afghanistan?",
+      "choices": [
+        "Kandahar",
+        "Mazar-i-Sharif",
+        "Herat",
+        "Kabul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-mg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de Madagascar?",
+      "choices": [
+        "Antananarivo",
+        "Nairobi",
+        "Antsirabe",
+        "Toamasina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-zm-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Zambie?",
+      "choices": [
+        "Harare",
+        "Lusaka",
+        "Ndola",
+        "Kitwe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-bulb-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui a practical incandescent light bulb sold widely in the United States ?",
+      "choices": [
+        "Nikola Tesla",
+        "George Westinghouse",
+        "Alexander Graham Bell",
+        "Thomas Edison"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-pasteur-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the process called pasteurization ?",
+      "choices": [
+        "Louis Pasteur",
+        "Robert Koch",
+        "Joseph Lister",
+        "Edward Jenner"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-lovelace-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the notes often called the first computer program, on Babbage's engine ?",
+      "choices": [
+        "Charles Babbage",
+        "Grace Hopper",
+        "Alan Turing",
+        "Ada Lovelace"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-shepard-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first American in space ?",
+      "choices": [
+        "Gus Grissom",
+        "Alan Shepard",
+        "John Glenn",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-independence",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la Déclaration d'indépendance des États-Unis a été adoptée ?",
+      "choices": [
+        "1812",
+        "1776",
+        "1787",
+        "1789"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-revolution-ru",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la révolution d'Octobre a eu lieu en Russie ?",
+      "choices": [
+        "1917",
+        "1905",
+        "1914",
+        "1922"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-china-prc",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la République populaire de Chine a été proclamée ?",
+      "choices": [
+        "1949",
+        "1950",
+        "1912",
+        "1945"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-election-sa",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Afrique du Sud a tenu sa première élection au suffrage universel adulte ?",
+      "choices": [
+        "1990",
+        "2000",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-beijing-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que les Jeux olympiques d'été de Pékin ont eu lieu ?",
+      "choices": [
+        "2008",
+        "2012",
+        "2004",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-pluto",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que l'Union astronomique internationale a reclassé Pluton comme planète naine ?",
+      "choices": [
+        "2003",
+        "1999",
+        "2015",
+        "2006"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-panama",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que le canal de Panama a été ouvert à la circulation ?",
+      "choices": [
+        "1904",
+        "1898",
+        "1869",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-y-superbowl",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que le premier Super Bowl a été joué ?",
+      "choices": [
+        "1970",
+        "1960",
+        "1967",
+        "1958"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-diff-protons-o",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un atome d'oxygène a combien de protons ?",
+      "choices": [
+        "8",
+        "6",
+        "16",
+        "2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-diff-airlift",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le pont aérien de Berlin a commencé en quelle année ?",
+      "choices": [
+        "1953",
+        "1945",
+        "1948",
+        "1961"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    }
+  ]
+}

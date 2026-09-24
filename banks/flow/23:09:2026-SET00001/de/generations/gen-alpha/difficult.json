@@ -1,0 +1,347 @@
+{
+  "locale": "de",
+  "generation": "gen-alpha",
+  "tier": "difficult",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-alpha-switch",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hybrid-Handheld",
+      "prompt": "In welchem Jahr erschien die Nintendo Switch weltweit?",
+      "choices": [
+        "2017",
+        "2019",
+        "2013",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-alpha-perseverance",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Jezero",
+      "prompt": "In welchem Jahr landete der NASA-Rover Perseverance auf dem Mars?",
+      "choices": [
+        "2012",
+        "2021",
+        "2004",
+        "2020"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Ein kleiner Hubschrauber flog mit.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-uz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Usbekistan?",
+      "choices": [
+        "Samarkand",
+        "Buchara",
+        "Astana",
+        "Tashkent"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-ci-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von der Elfenbeinküste?",
+      "choices": [
+        "Bouaké",
+        "Accra",
+        "Yamoussoukro",
+        "Abidjan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-relativity-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the theory of relativity, as its main author?",
+      "choices": [
+        "Isaac Newton",
+        "Stephen Hawking",
+        "Niels Bohr",
+        "Albert Einstein"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-plane-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the first powered airplane flight, in 1903?",
+      "choices": [
+        "the Wright brothers",
+        "Amelia Earhart",
+        "Charles Lindbergh",
+        "Alberto Santos-Dumont"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-tesla-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the alternating-current induction motor, as its inventor?",
+      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Michael Faraday",
+        "George Westinghouse"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-hopper-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the compiler work that helped create COBOL?",
+      "choices": [
+        "Grace Hopper",
+        "Margaret Hamilton",
+        "Ada Lovelace",
+        "Katherine Johnson"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-glenn-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the first American to orbit Earth?",
+      "choices": [
+        "John Glenn",
+        "Scott Carpenter",
+        "Neil Armstrong",
+        "Alan Shepard"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-y-constitution",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die US-Verfassung in Philadelphia unterzeichnet wurde?",
+      "choices": [
+        "1787",
+        "1791",
+        "1783",
+        "1776"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-y-crash",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr der Wall-Street-Crash die Große Depression einleitete?",
+      "choices": [
+        "1929",
+        "1933",
+        "1920",
+        "1919"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-y-missile",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Kubakrise stattfand?",
+      "choices": [
+        "1959",
+        "1962",
+        "1961",
+        "1963"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-y-good-friday",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr das Karfreitagsabkommen unterzeichnet wurde?",
+      "choices": [
+        "1998",
+        "2001",
+        "1994",
+        "1990"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-y-london-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Olympischen Sommerspiele in London stattfanden?",
+      "choices": [
+        "2016",
+        "2004",
+        "2012",
+        "2008"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-y-higgs",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr das Higgs-Boson am CERN bekannt gegeben wurde?",
+      "choices": [
+        "2008",
+        "2015",
+        "2019",
+        "2012"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-y-liberty-dedicated",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Freiheitsstatue eingeweiht wurde?",
+      "choices": [
+        "1886",
+        "1876",
+        "1889",
+        "1776"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-y-live-aid",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr das Live-Aid-Konzert stattfand?",
+      "choices": [
+        "1985",
+        "1980",
+        "1975",
+        "1990"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-diff-electrons-neutral-c",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Elektronen hat ein neutrales Kohlenstoffatom?",
+      "choices": [
+        "8",
+        "12",
+        "6",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-diff-euro-book",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr begann der Euro als Buchgeld, vor dem Bargeld?",
+      "choices": [
+        "1992",
+        "2002",
+        "1999",
+        "2004"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-d-diff-sound",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Schall in Luft bei Raumtemperatur legt etwa wie viele Meter pro Sekunde zurück?",
+      "choices": [
+        "343",
+        "1500",
+        "1000",
+        "123"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    }
+  ]
+}

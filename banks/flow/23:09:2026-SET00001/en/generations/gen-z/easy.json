@@ -1,0 +1,1205 @@
+{
+  "locale": "en",
+  "generation": "gen-z",
+  "tier": "easy",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-genz-fortnite",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Battle Bus Basics",
+      "prompt": "Fortnite is primarily what type of game?",
+      "choices": [
+        "Text adventure",
+        "Chess simulator",
+        "Tax software",
+        "Battle royale"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Stream Machine",
+      "prompt": "Which Swedish company is best known for a music streaming app called Spotify?",
+      "choices": [
+        "Netflix",
+        "Skype",
+        "Spotify",
+        "IKEA"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-tiktok",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Short Form",
+      "prompt": "TikTok is best known for what kind of videos?",
+      "choices": [
+        "Feature films only",
+        "Short-form video",
+        "Live opera only",
+        "Printed newspapers"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-france",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital Quick Hit",
+      "prompt": "What is the capital of France?",
+      "choices": [
+        "Marseille",
+        "Nice",
+        "Paris",
+        "Lyon"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-gigi2",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "gen-z",
+      "categoryTitle": "Gigi’s Easy Lane",
+      "prompt": "DJ Gigi’s music is most often associated with which city vibe?",
+      "choices": [
+        "Nashville country barns",
+        "Vienna waltzes only",
+        "Montréal nights",
+        "Desert silent retreats"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-marvel",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "MCU 101",
+      "prompt": "Which studio’s Marvel Cinematic Universe began with Iron Man (2008)?",
+      "choices": [
+        "Pixar only",
+        "A24",
+        "Marvel Studios / Disney",
+        "Studio Ghibli"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-genz-gif",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Tiny Loop",
+      "prompt": "What does GIF stand for?",
+      "choices": [
+        "Global Image File",
+        "General Icon Folder",
+        "Grouped Internet Frame",
+        "Graphics Interchange Format"
+      ],
+      "correctIndex": 3,
+      "banterHint": "A picture that refuses to sit still.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-e-genz-vr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Headset",
+      "prompt": "What does VR stand for in a headset?",
+      "choices": [
+        "Visual Radio",
+        "Vector Render",
+        "Virtual Reality",
+        "Video Relay"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The room stays put. The view does not.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-e-genz-emoji",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "One Eye",
+      "prompt": "Why did the emoji wink?",
+      "choices": [
+        "It lost the other eye",
+        "It hid the keyboard",
+        "It missed the chat",
+        "It had a point to make"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The message still landed kindly.",
+      "slang": "Low-key,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-genz-spotify",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Logo Circle",
+      "prompt": "What colour is the circle in the Spotify logo?",
+      "choices": [
+        "Blue",
+        "Red",
+        "Yellow",
+        "Green"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The sound waves sit on top of it.",
+      "slang": "Low-key,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-e-genz-instagram",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "First Post",
+      "prompt": "When was Instagram launched?",
+      "choices": [
+        "2014",
+        "2010",
+        "2008",
+        "2012"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The square photos showed up in that year.",
+      "slang": "Low-key,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-e-genz-bus",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "The Stop Arm",
+      "prompt": "Same friends as before. They come back to this: \"What colour is a standard school bus in the United States?\"",
+      "choices": [
+        "Orange",
+        "Blue, if the ocean is driving the route",
+        "White, after a very thorough wash",
+        "Yellow"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The stop arm is the clue. Kids spot that paint from the curb.",
+      "slang": "Low-key,",
+      "funny": true,
+      "humorous": true,
+      "injection": "callback",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-e-genz-eleven",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Starting Side",
+      "prompt": "How many players from one team are on the field in a standard football match?",
+      "choices": [
+        "10",
+        "9",
+        "11",
+        "15"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The bench watches. The count is the ones on the grass.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-ie-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Ireland?",
+      "choices": [
+        "Cork",
+        "Galway",
+        "London",
+        "Dublin"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-no-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Norway?",
+      "choices": [
+        "Oslo",
+        "Bergen",
+        "Stockholm",
+        "Tromsø"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-mx-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Mexico?",
+      "choices": [
+        "Mexico City",
+        "Monterrey",
+        "Cancún",
+        "Guadalajara"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-pe-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Peru?",
+      "choices": [
+        "Lima",
+        "Arequipa",
+        "Cusco",
+        "Santiago"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-sg-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Singapore?",
+      "choices": [
+        "Kuala Lumpur",
+        "Bangkok",
+        "Jakarta",
+        "Singapore"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-us-stars",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many stars are on the flag of the United States?",
+      "choices": [
+        "50",
+        "13",
+        "52",
+        "48"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-hour-minutes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many minutes are in an hour?",
+      "choices": [
+        "60",
+        "30",
+        "100",
+        "24"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-octagon-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many sides does an octagon have?",
+      "choices": [
+        "8",
+        "10",
+        "6",
+        "4"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-chess-squares",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many squares are on a chessboard?",
+      "choices": [
+        "32",
+        "100",
+        "64",
+        "81"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-supreme-court",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many justices sit on the U.S. Supreme Court?",
+      "choices": [
+        "7",
+        "9",
+        "12",
+        "8"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-spider-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many legs does a spider have?",
+      "choices": [
+        "4",
+        "8",
+        "6",
+        "10"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-baseball-bases",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many bases are on a baseball diamond?",
+      "choices": [
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-nba-quarters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many quarters are in an NBA game?",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-nfl-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many teams are in the NFL?",
+      "choices": [
+        "30",
+        "28",
+        "16",
+        "32"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-water-polo",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players from one team are in the water in water polo?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-mandolin-strings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many strings does a standard mandolin have?",
+      "choices": [
+        "4",
+        "6",
+        "12",
+        "8"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-km-meters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many meters are in a kilometer?",
+      "choices": [
+        "100",
+        "1609",
+        "1000",
+        "500"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-week-hours",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many hours are in a week?",
+      "choices": [
+        "120",
+        "144",
+        "168",
+        "240"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-machu-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is Machu Picchu?",
+      "choices": [
+        "Mexico",
+        "Chile",
+        "Bolivia",
+        "Peru"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-kremlin-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is the Moscow Kremlin?",
+      "choices": [
+        "Finland",
+        "Russia",
+        "Ukraine",
+        "Poland"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-fuji-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is Mount Fuji?",
+      "choices": [
+        "South Korea",
+        "Indonesia",
+        "China",
+        "Japan"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-niagara-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which country is Niagara Falls, on the side shared with New York?",
+      "choices": [
+        "the United Kingdom",
+        "Mexico",
+        "Canada",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-scream-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The Scream?",
+      "choices": [
+        "Edvard Munch",
+        "Edvard Grieg",
+        "Claude Monet",
+        "Vincent van Gogh"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-lilies-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted the Water Lilies series?",
+      "choices": [
+        "Pierre-Auguste Renoir",
+        "Claude Monet",
+        "Paul Cézanne",
+        "Edgar Degas"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-athens-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who painted The School of Athens?",
+      "choices": [
+        "Raphael",
+        "Leonardo da Vinci",
+        "Titian",
+        "Michelangelo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-ferrari-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of Ferrari?",
+      "choices": [
+        "Italy",
+        "France",
+        "Germany",
+        "the United Kingdom"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-bmw-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is the home of BMW?",
+      "choices": [
+        "Italy",
+        "Germany",
+        "Austria",
+        "Sweden"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-rpm-mean",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What does RPM stand for on a tachometer?",
+      "choices": [
+        "revolutions per mile",
+        "revolutions per minute",
+        "rounds per mile",
+        "rotations per meter"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-france",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with France in this question?",
+      "choices": [
+        "French",
+        "Italian",
+        "German",
+        "Spanish"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-poland",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Poland in this question?",
+      "choices": [
+        "Russian",
+        "German",
+        "Czech",
+        "Polish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-sweden",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main language associated with Sweden in this question?",
+      "choices": [
+        "Danish",
+        "Finnish",
+        "Norwegian",
+        "Swedish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-1",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Nigeria?",
+      "choices": [
+        "Africa",
+        "Europe",
+        "Asia",
+        "South America"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-8",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is India?",
+      "choices": [
+        "North America",
+        "Asia",
+        "Europe",
+        "Africa"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-15",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Germany?",
+      "choices": [
+        "South America",
+        "Europe",
+        "Asia",
+        "Africa"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-22",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Canada?",
+      "choices": [
+        "South America",
+        "Africa",
+        "Europe",
+        "North America"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-29",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Colombia?",
+      "choices": [
+        "Africa",
+        "North America",
+        "South America",
+        "Europe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-36",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "On which continent is Turkey?",
+      "choices": [
+        "Africa",
+        "Europe",
+        "Asia",
+        "North America"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-3",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of China?",
+      "choices": [
+        "the dollar",
+        "the yen",
+        "the yuan",
+        "the euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Denmark?",
+      "choices": [
+        "the krone",
+        "the euro",
+        "the dollar",
+        "the yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Indonesia?",
+      "choices": [
+        "the euro",
+        "the rupiah",
+        "the yen",
+        "the dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-24",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the main currency of Kenya?",
+      "choices": [
+        "the yen",
+        "the euro",
+        "the dollar",
+        "the shilling"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-1",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with sushi?",
+      "choices": [
+        "Mexico",
+        "Italy",
+        "Japan",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-8",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with maple syrup?",
+      "choices": [
+        "Mexico",
+        "Canada",
+        "Italy",
+        "Japan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-15",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with haggis?",
+      "choices": [
+        "Mexico",
+        "Scotland",
+        "Italy",
+        "Japan"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-22",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with moussaka?",
+      "choices": [
+        "Italy",
+        "Mexico",
+        "Japan",
+        "Greece"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-29",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which country is most closely associated with baklava?",
+      "choices": [
+        "Japan",
+        "Italy",
+        "Turkey",
+        "Mexico"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is Australian hopper?",
+      "choices": [
+        "the wombat",
+        "the emu",
+        "the kangaroo",
+        "the koala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-11",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is insect that makes honey?",
+      "choices": [
+        "the wasp",
+        "the ant",
+        "the butterfly",
+        "the honeybee"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is animal that builds dams?",
+      "choices": [
+        "the platypus",
+        "the beaver",
+        "the otter",
+        "the muskrat"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-23",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which animal is largest fish?",
+      "choices": [
+        "the whale shark",
+        "the great white shark",
+        "the blue whale",
+        "the manta ray"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-human-kidneys",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many kidneys does a typical human have?",
+      "choices": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-sense-classic",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many senses are in the classic school list of sight, hearing, smell, taste, and touch?",
+      "choices": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-billy-goats",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many billy goats cross the bridge in the classic tale?",
+      "choices": [
+        "2",
+        "7",
+        "3",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-strings-cello",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many strings does a standard cello have?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-sides-rectangle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many sides does a rectangle have?",
+      "choices": [
+        "6",
+        "8",
+        "3",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-players-singles",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many players are on one side in singles tennis?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-months-named",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "April is which number of month in a year, if January is 1?",
+      "choices": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    }
+  ]
+}

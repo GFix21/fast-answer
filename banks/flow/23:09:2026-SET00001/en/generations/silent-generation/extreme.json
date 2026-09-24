@@ -1,0 +1,177 @@
+{
+  "locale": "en",
+  "generation": "silent-generation",
+  "tier": "extreme",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-silent-cool-wall",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "silent-generation",
+      "categoryTitle": "Finale · Power Lap",
+      "prompt": "On Top Gear’s Cool Wall, what zone sits between Cool and Uncool?",
+      "choices": [
+        "Subzero",
+        "Slightly Warm",
+        "Meh",
+        "Seriously Uncool"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-si-x-uy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Uruguay?",
+      "choices": [
+        "Punta del Este",
+        "Montevideo",
+        "Buenos Aires",
+        "Salto"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-x-ht-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Haiti?",
+      "choices": [
+        "Santo Domingo",
+        "Kingston",
+        "Cap-Haïtien",
+        "Port-au-Prince"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-x-sv-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of El Salvador?",
+      "choices": [
+        "San Salvador",
+        "Santa Ana",
+        "Tegucigalpa",
+        "Guatemala City"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-x-lv-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Latvia?",
+      "choices": [
+        "Daugavpils",
+        "Vilnius",
+        "Riga",
+        "Tallinn"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-x-ba-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Bosnia and Herzegovina?",
+      "choices": [
+        "Sarajevo",
+        "Banja Luka",
+        "Mostar",
+        "Zagreb"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-x-cy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Cyprus?",
+      "choices": [
+        "Limassol",
+        "Larnaca",
+        "Athens",
+        "Nicosia"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-x-ml-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Mali?",
+      "choices": [
+        "Sikasso",
+        "Timbuktu",
+        "Bamako",
+        "Dakar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-x-er-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Eritrea?",
+      "choices": [
+        "Asmara",
+        "Addis Ababa",
+        "Khartoum",
+        "Massawa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-x-atomic-hg",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the atomic number of mercury?",
+      "choices": [
+        "79",
+        "30",
+        "82",
+        "80"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    }
+  ]
+}

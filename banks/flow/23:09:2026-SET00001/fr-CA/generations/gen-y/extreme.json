@@ -1,0 +1,177 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-y",
+  "tier": "extreme",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-geny-matrix-arch",
+      "tier": "extreme",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Finale · Code vert",
+      "prompt": "Dans la lore de Matrix Reloaded / Revolutions, quel titre porte le programme qui a créé la Matrice ?",
+      "choices": [
+        "The Architect",
+        "The Oracle uniquement",
+        "Agent Smith uniquement",
+        "Morpheus"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-gy-x-ve-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Venezuela?",
+      "choices": [
+        "Caracas",
+        "Maracaibo",
+        "Valencia",
+        "Bogota"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-cr-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Costa Rica?",
+      "choices": [
+        "Limón",
+        "Liberia",
+        "San José",
+        "Panama"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-pg-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Papouasie-Nouvelle-Guinée?",
+      "choices": [
+        "Port Moresby",
+        "Lae",
+        "Mount Hagen",
+        "Suva"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-mt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de Malte?",
+      "choices": [
+        "La Valette",
+        "Sliema",
+        "Mdina",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-am-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Arménie?",
+      "choices": [
+        "Gyumri",
+        "Bakou",
+        "Yerevan",
+        "Tbilissi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-rw-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Rwanda?",
+      "choices": [
+        "Kigali",
+        "Kampala",
+        "Gisenyi",
+        "Butare"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-dz-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Algérie?",
+      "choices": [
+        "Tunis",
+        "Alger",
+        "Oran",
+        "Constantine"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-atomic-pb",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi le numéro atomique du plomb ?",
+      "choices": [
+        "82",
+        "26",
+        "50",
+        "80"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-x-harp-strings",
+      "tier": "extreme",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "Une harpe à pédales de concert a d'habitude combien de cordes ?",
+      "choices": [
+        "46",
+        "40",
+        "47",
+        "88"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    }
+  ]
+}

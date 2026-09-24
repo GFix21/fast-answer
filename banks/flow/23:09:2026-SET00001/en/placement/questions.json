@@ -1,0 +1,727 @@
+{
+  "locale": "en",
+  "held": 30,
+  "target": 30,
+  "questions": [
+    {
+      "id": "place-mg-e-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Map",
+      "prompt": "What is the capital of Canada?",
+      "choices": [
+        "Ottawa",
+        "Toronto",
+        "Montreal",
+        "Vancouver"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Multi-gen anchor — should nearly always hit; misses signal low band.",
+      "sources": [
+        {
+          "label": "Wikipedia — Ottawa"
+        },
+        {
+          "label": "Government of Canada"
+        }
+      ]
+    },
+    {
+      "id": "place-mg-h-enterprise",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Sci-Fi",
+      "prompt": "What is the name of the starship commanded by Captain Kirk in the original Star Trek series?",
+      "choices": [
+        "Falcon",
+        "Enterprise",
+        "Serenity",
+        "Galactica"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Mid discriminator across ages; famous franchise, not meme-dependent.",
+      "sources": [
+        {
+          "label": "Wikipedia — USS Enterprise (NCC-1701)"
+        },
+        {
+          "label": "Star Trek: The Original Series"
+        }
+      ]
+    },
+    {
+      "id": "place-mg-d-stravinsky",
+      "tier": "difficult",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Deep Cut",
+      "prompt": "Who composed The Rite of Spring?",
+      "choices": [
+        "Pyotr Tchaikovsky",
+        "Igor Stravinsky",
+        "Ludwig van Beethoven",
+        "John Williams"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Top-band probe — rewards generalist culture, not age slang.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Rite of Spring"
+        },
+        {
+          "label": "Ballet / programme histories"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-e-fdr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Who was US President for most of World War II?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Dwight D. Eisenhower",
+        "Herbert Hoover"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Silent Gen easy — textbook mid-century civics; fair via schooling.",
+      "sources": [
+        {
+          "label": "Wikipedia — Franklin D. Roosevelt"
+        },
+        {
+          "label": "US National Archives / WWII chronology"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-e-ike",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "The 1950s campaign slogan “I Like Ike” promoted which future US President?",
+      "choices": [
+        "Richard Nixon",
+        "John F. Kennedy",
+        "Lyndon B. Johnson",
+        "Dwight D. Eisenhower"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Silent Gen easy — widely taught Cold War-era slogan.",
+      "sources": [
+        {
+          "label": "Wikipedia — Dwight D. Eisenhower"
+        },
+        {
+          "label": "Smithsonian / campaign history primers"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-h-transistor",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "In which year was the first commercial transistor radio (Regency TR-1) introduced?",
+      "choices": [
+        "1971",
+        "1945",
+        "1962",
+        "1954"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Silent Gen hard — verifiable mid-century tech chronology.",
+      "sources": [
+        {
+          "label": "Wikipedia — Regency TR-1"
+        },
+        {
+          "label": "IEEE Spectrum / Computer History Museum notes"
+        }
+      ]
+    },
+    {
+      "id": "place-silent-h-kerouac",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Who wrote the Beat Generation novel On the Road?",
+      "choices": [
+        "Ernest Hemingway",
+        "Jack Kerouac",
+        "F. Scott Fitzgerald",
+        "J. D. Salinger"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Silent Gen hard — canonical mid-century literature, unambiguous.",
+      "sources": [
+        {
+          "label": "Wikipedia — On the Road"
+        },
+        {
+          "label": "Library of Congress / Beat Generation primers"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-e-armstrong",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Who was the first person to walk on the Moon?",
+      "choices": [
+        "Yuri Gagarin",
+        "Buzz Aldrin",
+        "Neil Armstrong",
+        "John Glenn"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer easy — Apollo-era cultural universal.",
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 mission pages"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-e-apollo11",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In which year did Apollo 11 land the first humans on the Moon?",
+      "choices": [
+        "1975",
+        "1957",
+        "1969",
+        "1963"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer easy — year-level Moon-landing fact, textbook-known.",
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 11"
+        },
+        {
+          "label": "NASA Apollo program chronology"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-h-woodstock",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In which year did the original Woodstock music festival take place?",
+      "choices": [
+        "1964",
+        "1967",
+        "1972",
+        "1969"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Boomer hard — iconic year discriminator; still verifiable.",
+      "sources": [
+        {
+          "label": "Wikipedia — Woodstock"
+        },
+        {
+          "label": "Contemporary festival / NY history coverage"
+        }
+      ]
+    },
+    {
+      "id": "place-boomer-h-sullivan",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "In which year did The Beatles first appear on The Ed Sullivan Show in the US?",
+      "choices": [
+        "1969",
+        "1960",
+        "1964",
+        "1970"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer hard — British Invasion landmark year.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Ed Sullivan Show"
+        },
+        {
+          "label": "Beatles / CBS broadcast histories — Feb 1964"
+        }
+      ]
+    },
+    {
+      "id": "place-x-h-mtv",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Gen X",
+      "prompt": "Which US cable channel launched in 1981 with a focus on music videos?",
+      "choices": [
+        "Nickelodeon",
+        "CNN",
+        "MTV",
+        "ESPN"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Gen X-leaning mid item; still fair to others via cultural osmosis.",
+      "sources": [
+        {
+          "label": "Wikipedia — MTV"
+        },
+        {
+          "label": "Contemporary launch coverage — 1981"
+        }
+      ]
+    },
+    {
+      "id": "place-x-e-back-future",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · 80s Screen",
+      "prompt": "In Back to the Future, what kind of vehicle is the time machine?",
+      "choices": [
+        "A helicopter",
+        "A phone booth",
+        "A steam train",
+        "A DeLorean car"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Easy Gen X flavour — still widely known.",
+      "sources": [
+        {
+          "label": "Wikipedia — Back to the Future"
+        },
+        {
+          "label": "Film itself (1985)"
+        }
+      ]
+    },
+    {
+      "id": "place-y-h-matrix",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Gen Y",
+      "prompt": "In The Matrix (1999), which pill does Neo take to see the truth?",
+      "choices": [
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Millennial mid probe — iconic, unambiguous.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Matrix"
+        },
+        {
+          "label": "The Matrix (1999) film"
+        }
+      ]
+    },
+    {
+      "id": "place-y-d-ipod",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Early iPod",
+      "prompt": "In which year did Apple introduce the original iPod?",
+      "choices": [
+        "1998",
+        "2001",
+        "2004",
+        "2007"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Harder Millennial tech chronology.",
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple press archive — 2001"
+        }
+      ]
+    },
+    {
+      "id": "place-z-h-fortnite",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Gen Z",
+      "prompt": "Fortnite is primarily known as which type of game?",
+      "choices": [
+        "A battle royale / online multiplayer game",
+        "A tax preparation tool",
+        "A chess engine",
+        "A flight simulator from the 1980s"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen Z mid — still readable for others; avoid slang traps.",
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games product pages"
+        }
+      ]
+    },
+    {
+      "id": "place-z-e-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Streams",
+      "prompt": "Which of these is a major music streaming service?",
+      "choices": [
+        "Blockbuster",
+        "Spotify",
+        "Napster CD shop",
+        "Betamax Radio"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Easy modern music-culture check.",
+      "sources": [
+        {
+          "label": "Wikipedia — Spotify"
+        },
+        {
+          "label": "Company / press materials"
+        }
+      ]
+    },
+    {
+      "id": "place-a-e-tablet",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Gen Alpha",
+      "prompt": "Which device is designed mainly for touch-screen apps and video, not physical keyboards?",
+      "choices": [
+        "Turntable",
+        "Fax machine",
+        "Tablet",
+        "CRT television remote only"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Age-fair easy item — object recognition, not meme fluency.",
+      "sources": [
+        {
+          "label": "Wikipedia — Tablet computer"
+        },
+        {
+          "label": "Consumer electronics definitions"
+        }
+      ]
+    },
+    {
+      "id": "place-a-h-youtube",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Creators",
+      "prompt": "YouTube is primarily a platform for what?",
+      "choices": [
+        "User-uploaded and streamed video",
+        "Overnight postal shipping",
+        "Satellite weather balloons only",
+        "Vinyl pressing"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen Alpha-relevant mid; still universal.",
+      "sources": [
+        {
+          "label": "Wikipedia — YouTube"
+        },
+        {
+          "label": "Google / YouTube about pages"
+        }
+      ]
+    },
+    {
+      "id": "place-gt-h-hammond",
+      "tier": "hard",
+      "topic": "grand-tour-top-gear",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Petrol",
+      "prompt": "Which Top Gear / Grand Tour presenter is nicknamed the Hamster?",
+      "choices": [
+        "Jeremy Clarkson",
+        "James May",
+        "Richard Hammond",
+        "The Stig"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Product-core topic mid item.",
+      "sources": [
+        {
+          "label": "Wikipedia — Richard Hammond"
+        },
+        {
+          "label": "BBC Top Gear materials"
+        }
+      ]
+    },
+    {
+      "id": "place-cars-e-abs",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Garage",
+      "prompt": "What does ABS stand for in car safety systems?",
+      "choices": [
+        "Anti-lock Braking System",
+        "Automatic Boost System",
+        "Axle Balance Sensor",
+        "Advanced Battery Switch"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy motoring literacy.",
+      "sources": [
+        {
+          "label": "Wikipedia — Anti-lock braking system"
+        },
+        {
+          "label": "NHTSA glossaries"
+        }
+      ]
+    },
+    {
+      "id": "place-gigi-e-flagship",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Gigi",
+      "prompt": "DJ Gigi is the flagship artist of which Montréal label?",
+      "choices": [
+        "Island Records",
+        "Motown",
+        "XL Recordings",
+        "GMG Brand Label"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Brand easy-only — never escalate Gigi tier in placement.",
+      "sources": [
+        {
+          "label": "GMG Brand Label roster"
+        },
+        {
+          "label": "DJ Gigi public bio"
+        }
+      ]
+    },
+    {
+      "id": "place-art-d-braque",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Cubism",
+      "prompt": "Picasso co-founded Cubism with which artist?",
+      "choices": [
+        "Georges Braque",
+        "Andy Warhol",
+        "Jackson Pollock",
+        "Frida Kahlo"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Difficult culture probe — ability gold signal.",
+      "sources": [
+        {
+          "label": "Wikipedia — Cubism"
+        },
+        {
+          "label": "MoMA / Tate primers"
+        }
+      ]
+    },
+    {
+      "id": "place-mus-e-violin",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Strings",
+      "prompt": "How many strings does a standard violin have?",
+      "choices": [
+        "4",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy instrument fact. A guitar is a different count.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — violin"
+        },
+        {
+          "label": "Grove Music Online — violin"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-saturn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Rings",
+      "prompt": "Which planet is best known for its rings?",
+      "choices": [
+        "Saturn",
+        "Jupiter",
+        "Neptune",
+        "Mars"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Hard solar-system fact. The Great Red Spot is a different planet.",
+      "sources": [
+        {
+          "label": "NASA — Saturn"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Saturn"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-e-water",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Formula",
+      "prompt": "What is the chemical symbol for water?",
+      "choices": [
+        "H2O",
+        "CO2",
+        "NaCl",
+        "O2"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy chemistry fact.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — water"
+        },
+        {
+          "label": "IUPAC — chemical formulae"
+        }
+      ]
+    },
+    {
+      "id": "place-geo-h-indian",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Between Coasts",
+      "prompt": "Which ocean lies between Africa and Australia?",
+      "choices": [
+        "Indian Ocean",
+        "Atlantic Ocean",
+        "Pacific Ocean",
+        "Arctic Ocean"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Hard map fact. The largest ocean is a different question.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Indian Ocean"
+        },
+        {
+          "label": "NOAA — ocean basins"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-e-planets",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Orbits",
+      "prompt": "How many planets are in the Solar System?",
+      "choices": [
+        "8",
+        "9",
+        "7",
+        "12"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy count after the 2006 definition.",
+      "sources": [
+        {
+          "label": "IAU — planet definition"
+        },
+        {
+          "label": "NASA — solar system"
+        }
+      ]
+    },
+    {
+      "id": "place-sci-h-mercury",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Metal",
+      "prompt": "Which metal is liquid at room temperature?",
+      "choices": [
+        "Mercury",
+        "Iron",
+        "Gold",
+        "Copper"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Hard materials fact. This is the metal, not the planet.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — mercury"
+        },
+        {
+          "label": "Royal Society of Chemistry — mercury"
+        }
+      ]
+    },
+    {
+      "id": "place-geo-e-continents",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Land",
+      "prompt": "How many continents are in the common seven-continent model?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Easy geography count in the common model.",
+      "sources": [
+        {
+          "label": "National Geographic — continents"
+        },
+        {
+          "label": "Encyclopaedia Britannica — continent"
+        }
+      ]
+    }
+  ]
+}

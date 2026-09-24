@@ -1,0 +1,346 @@
+{
+  "locale": "de",
+  "generation": "gen-y",
+  "tier": "difficult",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-geny-iphone",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Keynote-Chronologie",
+      "prompt": "In welchem Jahr kündigte Apple das originale iPhone an?",
+      "choices": [
+        "2010",
+        "2007",
+        "2005",
+        "2009"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-geny-inception",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Traumschichten",
+      "prompt": "Wer führte Regie beim Film Inception (2010)?",
+      "choices": [
+        "Christopher Nolan",
+        "James Cameron",
+        "Denis Villeneuve",
+        "Ridley Scott"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-geny-wiki",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Offene Seiten",
+      "prompt": "In welchem Jahr startete Wikipedia?",
+      "choices": [
+        "1998",
+        "1995",
+        "2004",
+        "2001"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Seiten sind viele. Der Anfang ist ein Jahr.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-bd-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Bangladesch?",
+      "choices": [
+        "Chittagong",
+        "Kalkutta",
+        "Dhaka",
+        "Khulna"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-tj-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Tadschikistan?",
+      "choices": [
+        "Khujand",
+        "Dushanbe",
+        "Bishkek",
+        "Tashkent"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-zw-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Simbabwe?",
+      "choices": [
+        "Gaborone",
+        "Lusaka",
+        "Harare",
+        "Bulawayo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-telephone-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the telephone patent of 1876?",
+      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi",
+        "Alexander Graham Bell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-smallpox-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the first smallpox vaccine?",
+      "choices": [
+        "Louis Pasteur",
+        "Edward Jenner",
+        "Alexander Fleming",
+        "Jonas Salk"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-turing-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the idea of a universal computing machine in 1936?",
+      "choices": [
+        "Ada Lovelace",
+        "John von Neumann",
+        "Alan Turing",
+        "Charles Babbage"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-tereshkova-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the first woman in space?",
+      "choices": [
+        "Mae Jemison",
+        "Valentina Tereshkova",
+        "Sally Ride",
+        "Svetlana Savitskaya"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-bastille",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Bastille in Paris gestürmt wurde?",
+      "choices": [
+        "1815",
+        "1848",
+        "1789",
+        "1776"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-ww1-end",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr der Waffenstillstand des Ersten Weltkriegs in Kraft trat?",
+      "choices": [
+        "1914",
+        "1945",
+        "1918",
+        "1919"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-india",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Indien unabhängig wurde?",
+      "choices": [
+        "1945",
+        "1948",
+        "1950",
+        "1947"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-mandela",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Nelson Mandela aus dem Gefängnis entlassen wurde?",
+      "choices": [
+        "1990",
+        "1964",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-nine-eleven",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Anschläge vom 11. September in den USA stattfanden?",
+      "choices": [
+        "2003",
+        "2000",
+        "2001",
+        "1999"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-brexit-leave",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr das Vereinigte Königreich die Europäische Union verließ?",
+      "choices": [
+        "2020",
+        "2016",
+        "2019",
+        "2021"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-model-t",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Ford den Model T zu verkaufen begann?",
+      "choices": [
+        "1908",
+        "1920",
+        "1914",
+        "1903"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-y-world-cup-first",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die erste FIFA-Weltmeisterschaft stattfand?",
+      "choices": [
+        "1930",
+        "1924",
+        "1950",
+        "1934"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-ph",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welchen pH-Wert hat reines Wasser bei Raumtemperatur?",
+      "choices": [
+        "1",
+        "14",
+        "7",
+        "0"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-diff-genome",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr wurde der Abschluss des Humangenomprojekts verkündet?",
+      "choices": [
+        "1990",
+        "1998",
+        "2003",
+        "2010"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Nur so,"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "locale": "en",
+  "generation": "gen-alpha",
+  "tier": "extreme",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-alpha-minecraft-biome",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Finale · Deep Dark",
+      "prompt": "In Minecraft, which hostile mob is strongly associated with the Deep Dark / ancient cities?",
+      "choices": [
+        "Warden",
+        "Iron Golem",
+        "Creeper only",
+        "Ender Dragon only"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-al-x-sr-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Suriname?",
+      "choices": [
+        "Georgetown",
+        "Paramaribo",
+        "Caracas",
+        "Cayenne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-x-gt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Guatemala?",
+      "choices": [
+        "Antigua",
+        "Quetzaltenango",
+        "San Salvador",
+        "Guatemala City"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-x-si-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Slovenia?",
+      "choices": [
+        "Ljubljana",
+        "Zagreb",
+        "Trieste",
+        "Maribor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-x-mk-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of North Macedonia?",
+      "choices": [
+        "Bitola",
+        "Tirana",
+        "Skopje",
+        "Ohrid"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-x-az-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Azerbaijan?",
+      "choices": [
+        "Tbilisi",
+        "Yerevan",
+        "Ganja",
+        "Baku"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-x-cm-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Cameroon?",
+      "choices": [
+        "Garoua",
+        "Lagos",
+        "Yaoundé",
+        "Douala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-x-sd-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Sudan?",
+      "choices": [
+        "Omdurman",
+        "Port Sudan",
+        "Cairo",
+        "Khartoum"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-x-atomic-w",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the atomic number of tungsten?",
+      "choices": [
+        "74",
+        "42",
+        "26",
+        "78"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    },
+    {
+      "id": "cq-w39-al-x-chromosomes",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fast fact",
+      "prompt": "How many chromosomes are in a typical human body cell?",
+      "choices": [
+        "48",
+        "23",
+        "46",
+        "44"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Real quick,"
+    }
+  ]
+}

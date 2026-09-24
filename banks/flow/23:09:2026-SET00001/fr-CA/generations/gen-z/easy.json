@@ -1,0 +1,1205 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-z",
+  "tier": "easy",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-genz-fortnite",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Bases du Battle Bus",
+      "prompt": "Fortnite est avant tout quel type de jeu ?",
+      "choices": [
+        "Aventure textuelle",
+        "Simulateur d’échecs",
+        "Logiciel fiscal",
+        "Battle royale"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Machine à streams",
+      "prompt": "Quelle entreprise suédoise est surtout connue pour l'application de streaming musical Spotify ?",
+      "choices": [
+        "Netflix",
+        "Skype",
+        "Spotify",
+        "IKEA"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-tiktok",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Format court",
+      "prompt": "TikTok est surtout connu pour quel type de vidéos ?",
+      "choices": [
+        "Uniquement des longs métrages",
+        "Vidéos courtes",
+        "Uniquement de l’opéra en direct",
+        "Uniquement des journaux imprimés"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-france",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale express",
+      "prompt": "Quelle est la capitale de la France ?",
+      "choices": [
+        "Marseille",
+        "Nice",
+        "Paris",
+        "Lyon"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-gigi2",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "gen-z",
+      "categoryTitle": "Voie facile de Gigi",
+      "prompt": "La musique de DJ Gigi est le plus souvent associée à quelle ambiance de ville ?",
+      "choices": [
+        "Granges country de Nashville",
+        "Uniquement des valses viennoises",
+        "Nuits montréalaises",
+        "Retraites silencieuses dans le désert"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-genz-marvel",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "MCU 101",
+      "prompt": "L’univers cinématographique Marvel de quel studio a commencé avec Iron Man (2008) ?",
+      "choices": [
+        "Pixar uniquement",
+        "A24",
+        "Marvel Studios / Disney",
+        "Studio Ghibli"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-genz-gif",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Petite boucle",
+      "prompt": "GIF veut dire quoi ?",
+      "choices": [
+        "Global Image File",
+        "General Icon Folder",
+        "Grouped Internet Frame",
+        "Graphics Interchange Format"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Une image qui refuse de rester tranquille.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-e-genz-vr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Casque",
+      "prompt": "VR, sur un casque, veut dire quoi ?",
+      "choices": [
+        "Visual Radio",
+        "Vector Render",
+        "Virtual Reality",
+        "Video Relay"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La pièce reste là. Pas la vue.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-e-genz-emoji",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Un œil",
+      "prompt": "Pourquoi l'emoji a fait un clin d'œil ?",
+      "choices": [
+        "Il a perdu l'autre œil",
+        "Il a caché le clavier",
+        "Il a manqué la discussion",
+        "Il avait quelque chose à dire"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le message est quand même arrivé gentiment.",
+      "slang": "Sans chichi,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-genz-spotify",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Cercle du logo",
+      "prompt": "C'est quoi la couleur du cercle dans le logo Spotify ?",
+      "choices": [
+        "Bleu",
+        "Rouge",
+        "Jaune",
+        "Vert"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les ondes sonores sont posées dessus.",
+      "slang": "Sans chichi,",
+      "structure": "colour"
+    },
+    {
+      "id": "cq-e-genz-instagram",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Premier post",
+      "prompt": "Instagram a été lancé quand ?",
+      "choices": [
+        "2014",
+        "2010",
+        "2008",
+        "2012"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Les photos carrées sont arrivées cette année-là.",
+      "slang": "Sans chichi,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-e-genz-bus",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Le bras d'arrêt",
+      "prompt": "Les mêmes amis qu'avant. Ils reviennent à ceci : « C'est quoi la couleur d'un autobus scolaire standard aux États-Unis ? »",
+      "choices": [
+        "Orange",
+        "Bleu, si l'océan conduit la ligne",
+        "Blanc, après un lavage très soigné",
+        "Jaune"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le bras d'arrêt est l'indice. Les enfants voient cette peinture du trottoir.",
+      "slang": "Sans chichi,",
+      "funny": true,
+      "humorous": true,
+      "injection": "callback",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "cq-e-genz-eleven",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Équipe de départ",
+      "prompt": "Dans un match de soccer standard, une équipe a combien de joueurs sur le terrain ?",
+      "choices": [
+        "10",
+        "9",
+        "11",
+        "15"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le banc regarde. Le compte, ce sont ceux sur le gazon.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ie-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Irlande?",
+      "choices": [
+        "Cork",
+        "Galway",
+        "Londres",
+        "Dublin"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-no-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Norvège?",
+      "choices": [
+        "Oslo",
+        "Bergen",
+        "Stockholm",
+        "Tromsø"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-mx-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Mexique?",
+      "choices": [
+        "Mexico",
+        "Monterrey",
+        "Cancún",
+        "Guadalajara"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-pe-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Pérou?",
+      "choices": [
+        "Lima",
+        "Arequipa",
+        "Cusco",
+        "Santiago"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-sg-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de Singapour?",
+      "choices": [
+        "Kuala Lumpur",
+        "Bangkok",
+        "Jakarta",
+        "Singapour"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-us-stars",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'étoiles il y a sur le drapeau des États-Unis ?",
+      "choices": [
+        "50",
+        "13",
+        "52",
+        "48"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-hour-minutes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de minutes il y a dans une heure ?",
+      "choices": [
+        "60",
+        "30",
+        "100",
+        "24"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-octagon-sides",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de côtés il y a sur un octogone ?",
+      "choices": [
+        "8",
+        "10",
+        "6",
+        "4"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-chess-squares",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de cases il y a sur un échiquier ?",
+      "choices": [
+        "32",
+        "100",
+        "64",
+        "81"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-supreme-court",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de juges il y a à la Cour suprême des États-Unis ?",
+      "choices": [
+        "7",
+        "9",
+        "12",
+        "8"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-spider-legs",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de pattes il y a sur une araignée ?",
+      "choices": [
+        "4",
+        "8",
+        "6",
+        "10"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-baseball-bases",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de buts il y a sur un terrain de baseball ?",
+      "choices": [
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-nba-quarters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de quarts il y a dans un match de la NBA ?",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-nfl-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'équipes il y a dans la NFL ?",
+      "choices": [
+        "30",
+        "28",
+        "16",
+        "32"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-water-polo",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de joueurs d'une équipe il y a dans l'eau au water-polo ?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "11"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-mandolin-strings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de cordes il y a sur une mandoline standard ?",
+      "choices": [
+        "4",
+        "6",
+        "12",
+        "8"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-km-meters",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de mètres il y a dans un kilomètre ?",
+      "choices": [
+        "100",
+        "1609",
+        "1000",
+        "500"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-week-hours",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'heures il y a dans une semaine ?",
+      "choices": [
+        "120",
+        "144",
+        "168",
+        "240"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-machu-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le Machu Picchu ?",
+      "choices": [
+        "Mexico",
+        "Chile",
+        "Bolivia",
+        "Peru"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-kremlin-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le Kremlin de Moscou ?",
+      "choices": [
+        "Finland",
+        "Russia",
+        "Ukraine",
+        "Poland"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-fuji-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le mont Fuji ?",
+      "choices": [
+        "South Korea",
+        "Indonesia",
+        "China",
+        "Japan"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-niagara-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, les chutes du Niagara, du côté partagé avec New York ?",
+      "choices": [
+        "the United Kingdom",
+        "Mexico",
+        "Canada",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-scream-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint The Scream ?",
+      "choices": [
+        "Edvard Munch",
+        "Edvard Grieg",
+        "Claude Monet",
+        "Vincent van Gogh"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-lilies-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint the Water Lilies series ?",
+      "choices": [
+        "Pierre-Auguste Renoir",
+        "Claude Monet",
+        "Paul Cézanne",
+        "Edgar Degas"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-athens-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint The School of Athens ?",
+      "choices": [
+        "Raphael",
+        "Leonardo da Vinci",
+        "Titian",
+        "Michelangelo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ferrari-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Ferrari ?",
+      "choices": [
+        "Italy",
+        "France",
+        "Germany",
+        "the United Kingdom"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-bmw-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de BMW ?",
+      "choices": [
+        "Italy",
+        "Germany",
+        "Austria",
+        "Sweden"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-rpm-mean",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "RPM sur un compte-tours, ça veut dire quoi ?",
+      "choices": [
+        "revolutions per mile",
+        "revolutions per minute",
+        "rounds per mile",
+        "rotations per meter"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-france",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à France dans cette question ?",
+      "choices": [
+        "French",
+        "Italian",
+        "German",
+        "Spanish"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-poland",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Poland dans cette question ?",
+      "choices": [
+        "Russian",
+        "German",
+        "Czech",
+        "Polish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-lang-sweden",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Sweden dans cette question ?",
+      "choices": [
+        "Danish",
+        "Finnish",
+        "Norwegian",
+        "Swedish"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-1",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Nigeria est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Asie",
+        "Amérique du Sud"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-8",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'Inde est sur quel continent ?",
+      "choices": [
+        "Amérique du Nord",
+        "Asie",
+        "Europe",
+        "Afrique"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-15",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'Allemagne est sur quel continent ?",
+      "choices": [
+        "Amérique du Sud",
+        "Europe",
+        "Asie",
+        "Afrique"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-22",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Canada est sur quel continent ?",
+      "choices": [
+        "Amérique du Sud",
+        "Afrique",
+        "Europe",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-29",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Colombie est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Amérique du Nord",
+        "Amérique du Sud",
+        "Europe"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cont-36",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Turquie est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Asie",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-3",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de la Chine ?",
+      "choices": [
+        "le dollar",
+        "le yen",
+        "le yuan",
+        "l'euro"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-10",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale du Danemark ?",
+      "choices": [
+        "la couronne",
+        "l'euro",
+        "le dollar",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de l'Indonésie ?",
+      "choices": [
+        "l'euro",
+        "la roupie",
+        "le yen",
+        "le dollar"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-cur-24",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale du Kenya ?",
+      "choices": [
+        "le yen",
+        "l'euro",
+        "le dollar",
+        "le shilling"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-1",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les sushis, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Mexique",
+        "Italie",
+        "Japon",
+        "France"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-8",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le sirop d'érable, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Mexique",
+        "Canada",
+        "Italie",
+        "Japon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-15",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le haggis, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Mexique",
+        "Écosse",
+        "Italie",
+        "Japon"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-22",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La moussaka, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Italie",
+        "Mexique",
+        "Japon",
+        "Grèce"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-food-29",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le baklava, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Japon",
+        "Italie",
+        "Turquie",
+        "Mexique"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-5",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le sauteur australien, c'est quel animal ?",
+      "choices": [
+        "le wombat",
+        "l'émeu",
+        "le kangourou",
+        "le koala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-11",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'insecte qui fait le miel, c'est quel animal ?",
+      "choices": [
+        "la guêpe",
+        "la fourmi",
+        "le papillon",
+        "l'abeille"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-17",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'animal qui construit des barrages, c'est quel animal ?",
+      "choices": [
+        "l'ornithorynque",
+        "le castor",
+        "la loutre",
+        "le rat musqué"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-ani-23",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le plus grand poisson, c'est quel animal ?",
+      "choices": [
+        "le requin-baleine",
+        "le grand requin blanc",
+        "la baleine bleue",
+        "la raie manta"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-human-kidneys",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un humain typique a combien de reins ?",
+      "choices": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-sense-classic",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "La liste scolaire classique compte combien de sens : vue, ouïe, odorat, goût et toucher ?",
+      "choices": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-billy-goats",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Dans le conte classique, combien de boucs traversent le pont ?",
+      "choices": [
+        "2",
+        "7",
+        "3",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-strings-cello",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un violoncelle standard a combien de cordes ?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "8"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-sides-rectangle",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un rectangle a combien de côtés ?",
+      "choices": [
+        "6",
+        "8",
+        "3",
+        "4"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-players-singles",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un camp en simple au tennis compte combien de joueurs ?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-e-easy-months-named",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Avril est le combien du mois, si janvier est 1 ?",
+      "choices": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,"
+    }
+  ]
+}

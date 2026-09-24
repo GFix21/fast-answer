@@ -1,0 +1,178 @@
+{
+  "locale": "de",
+  "generation": "multi-gen",
+  "tier": "extreme",
+  "held": 10,
+  "questions": [
+    {
+      "id": "cq-x-multi-light",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Reisezeit",
+      "prompt": "Ungefähr wie lange braucht das Sonnenlicht bis zur Erde?",
+      "choices": [
+        "Etwa 8 Sekunden",
+        "Etwa 8 Stunden",
+        "Etwa 8 Tage",
+        "Etwa 8 Minuten"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Sonne ist weit, und die Reise passt in eine Kaffeepause.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-x-sd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats South Dakota?",
+      "choices": [
+        "Pierre",
+        "Rapid City",
+        "Sioux Falls",
+        "Aberdeen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-x-nd-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats North Dakota?",
+      "choices": [
+        "Fargo",
+        "Grand Forks",
+        "Minot",
+        "Bismarck"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-x-mt-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Montana?",
+      "choices": [
+        "Helena",
+        "Bozeman",
+        "Missoula",
+        "Billings"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-x-wy-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Wyoming?",
+      "choices": [
+        "Laramie",
+        "Cheyenne",
+        "Jackson",
+        "Casper"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-x-in-cap",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Indiana?",
+      "choices": [
+        "Indianapolis",
+        "Evansville",
+        "Fort Wayne",
+        "South Bend"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-x-gy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Guyana?",
+      "choices": [
+        "Paramaribo",
+        "Georgetown",
+        "Linden",
+        "Cayenne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-x-hn-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Honduras?",
+      "choices": [
+        "San Pedro Sula",
+        "La Ceiba",
+        "San Salvador",
+        "Tegucigalpa"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-x-ee-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Estland?",
+      "choices": [
+        "Riga",
+        "Helsinki",
+        "Tartu",
+        "Tallinn"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-x-me-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Montenegro?",
+      "choices": [
+        "Kotor",
+        "Belgrad",
+        "Budva",
+        "Podgorica"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Für alle,"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "SET00002",
+  "folder": "27:09:2026-SET00002",
+  "startedAt": "2026-09-27T00:00:00.000Z",
+  "playUntil": "2026-10-01T00:00:00.000Z",
+  "qualityHours": 30,
+  "qualityOpenedAt": "2026-09-24T14:59:40.973Z",
+  "qualityUntil": "2026-09-25T20:59:40.973Z",
+  "status": "quality",
+  "locales": [
+    "en",
+    "fr-CA",
+    "de"
+  ],
+  "target": 1050,
+  "placementTarget": 30,
+  "note": "Creators fill generations and the 30-question placement folder before qualityUntil. The set stays banked for later games."
+}

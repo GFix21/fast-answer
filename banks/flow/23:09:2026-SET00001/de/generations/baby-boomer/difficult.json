@@ -1,0 +1,347 @@
+{
+  "locale": "de",
+  "generation": "baby-boomer",
+  "tier": "difficult",
+  "held": 20,
+  "questions": [
+    {
+      "id": "w39-d-boomer-apollo13",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Versagen ist keine…",
+      "prompt": "In welchem Jahr explodierte der Sauerstofftank von Apollo 13?",
+      "choices": [
+        "1968",
+        "1972",
+        "1970",
+        "1969"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-boomer-salt",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Vertrag 1972",
+      "prompt": "Welches Rüstungskontrollabkommen unterzeichneten die USA und die Sowjetunion 1972?",
+      "choices": [
+        "Camp-David-Abkommen",
+        "Schlussakte von Helsinki",
+        "SALT I",
+        "Warschauer Pakt"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Initialen sind der kurze Name. Das Jahr ist 1972.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-la-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Laos?",
+      "choices": [
+        "Luang Prabang",
+        "Hanoi",
+        "Vientiane",
+        "Phnom Penh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-bt-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Bhutan?",
+      "choices": [
+        "Thimphu",
+        "Punakha",
+        "Kathmandu",
+        "Paro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-na-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Namibia?",
+      "choices": [
+        "Walfischbucht",
+        "Gaborone",
+        "Swakopmund",
+        "Windhoek"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-penicillin-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the discovery of penicillin?",
+      "choices": [
+        "Louis Pasteur",
+        "Marie Curie",
+        "Jonas Salk",
+        "Alexander Fleming"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-evolution-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu On the Origin of Species?",
+      "choices": [
+        "Jean-Baptiste Lamarck",
+        "Charles Darwin",
+        "Alfred Russel Wallace",
+        "Gregor Mendel"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-hertz-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu radio waves produced in the laboratory?",
+      "choices": [
+        "Guglielmo Marconi",
+        "Nikola Tesla",
+        "Heinrich Hertz",
+        "James Clerk Maxwell"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-jemison-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the first Black woman to travel in space?",
+      "choices": [
+        "Sally Ride",
+        "Katherine Johnson",
+        "Mae Jemison",
+        "Guion Bluford"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-columbus",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Christoph Kolumbus Amerika erreichte?",
+      "choices": [
+        "1519",
+        "1607",
+        "1498",
+        "1492"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-gettysburg",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Abraham Lincoln die Gettysburg Address hielt?",
+      "choices": [
+        "1861",
+        "1850",
+        "1865",
+        "1863"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-dday",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Landung in der Normandie begann?",
+      "choices": [
+        "1945",
+        "1943",
+        "1941",
+        "1944"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-saigon",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Saigon fiel und der Vietnamkrieg endete?",
+      "choices": [
+        "1968",
+        "1979",
+        "1975",
+        "1973"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-reunify",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Deutschland wiedervereinigt wurde?",
+      "choices": [
+        "1989",
+        "1949",
+        "1991",
+        "1990"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-pandemic",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr die Weltgesundheitsorganisation COVID-19 zur Pandemie erklärte?",
+      "choices": [
+        "2020",
+        "2019",
+        "2021",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-paris-agree",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr das Übereinkommen von Paris angenommen wurde?",
+      "choices": [
+        "2016",
+        "2015",
+        "1997",
+        "2009"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-suez-open",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr der Suezkanal eröffnet wurde?",
+      "choices": [
+        "1956",
+        "1859",
+        "1869",
+        "1914"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-diff-speed-light",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Ungefähr wie viele Kilometer legt Licht in einer Sekunde im Vakuum zurück?",
+      "choices": [
+        "186000",
+        "150000",
+        "3000",
+        "300000"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-diff-heart",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr leitete Christiaan Barnard die erste Herztransplantation beim Menschen?",
+      "choices": [
+        "1963",
+        "1967",
+        "1954",
+        "1978"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-diff-water-pct",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Ungefähr welcher Anteil der Erdoberfläche ist Wasser, in Prozent?",
+      "choices": [
+        "91",
+        "30",
+        "71",
+        "51"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,"
+    }
+  ]
+}

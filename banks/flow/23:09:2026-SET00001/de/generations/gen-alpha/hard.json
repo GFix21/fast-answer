@@ -1,0 +1,857 @@
+{
+  "locale": "de",
+  "generation": "gen-alpha",
+  "tier": "hard",
+  "held": 50,
+  "questions": [
+    {
+      "id": "w39-h-alpha-minecraft",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Block-Universum",
+      "prompt": "Wer hat Minecraft ursprünglich geschaffen?",
+      "choices": [
+        "Markus Persson (Notch)",
+        "Shigeru Miyamoto",
+        "Gabe Newell",
+        "Hideo Kojima"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-roblox",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Avatar-Plaza",
+      "prompt": "Wie lässt sich Roblox am besten beschreiben?",
+      "choices": [
+        "Nur ein physisches Brettspiel",
+        "Eine Online-Plattform für nutzererstellte Spiele",
+        "Eine Art Motoröl",
+        "Ein Satelliten-TV-Sender"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-pixar",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lampe & Luxo",
+      "prompt": "Welches Studio machte Toy Story, den ersten vollständig computeranimierten Spielfilm?",
+      "choices": [
+        "Pixar",
+        "Nur Aardman",
+        "Studio Ghibli",
+        "Nur DreamWorks"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-among",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sus-Patrouille",
+      "prompt": "Among Us ist ein Social-Deduction-Spiel, das hauptsächlich in welcher Umgebung spielt?",
+      "choices": [
+        "Nur eine mittelalterliche Bäckerei",
+        "Nur eine stille Bibliothek",
+        "Nur ein Finanzamt",
+        "Raumschiff / Raumcrew"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ev",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Plug & Play",
+      "prompt": "Wofür steht EV bei modernen Autos üblicherweise?",
+      "choices": [
+        "Emergency Vinyl",
+        "Engine Vacuum",
+        "Electric vehicle (Elektrofahrzeug)",
+        "Extra Volume"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-h-alpha-ghibli",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Totoro-Territorium",
+      "prompt": "In welchem Land hat Studio Ghibli seinen Sitz?",
+      "choices": [
+        "Brasilien",
+        "Kanada",
+        "Japan",
+        "Frankreich"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-h-alpha-pencil",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Mannschaft",
+      "prompt": "Warum trat der Bleistift der Mannschaft bei?",
+      "choices": [
+        "Er rollte weg",
+        "Er versteckte sich im Etui",
+        "Er verlor seine Kappe",
+        "Er konnte ein Publikum anziehen"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Der Radiergummi hielt ihm den Rücken frei.",
+      "slang": "Kurz mal,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-bookmark",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Immer noch da",
+      "prompt": "Warum blieb das Lesezeichen in der Geschichte ruhig?",
+      "choices": [
+        "Es behielt immer seinen Platz",
+        "Es zerriss die Seite",
+        "Es übersprang das Ende",
+        "Es versteckte den Titel"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Kapitel für Kapitel, immer freundlich.",
+      "slang": "Kurz mal,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-h-alpha-planets",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Heimat-System",
+      "prompt": "Wie viele Planeten hat unser Sonnensystem?",
+      "choices": [
+        "9",
+        "10",
+        "8",
+        "7"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Reihe wurde 2006 kürzer und blieb freundlich.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-h-alpha-elephant",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "An Land",
+      "prompt": "Welches Tier ist das größte lebende Landtier?",
+      "choices": [
+        "Blauwal",
+        "Giraffe",
+        "Eisbär",
+        "Afrikanischer Elefant"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Der Wal nimmt den Ozean. Dieses bleibt am Boden.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-h-alpha-iss",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Erste Besatzung",
+      "prompt": "Wann traf die erste Besatzung auf der Internationalen Raumstation ein?",
+      "choices": [
+        "2011",
+        "1986",
+        "1998",
+        "2000"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Das erste Modul war schon oben. Die Menschen kamen 2000.",
+      "slang": "Kurz mal,",
+      "structure": "when"
+    },
+    {
+      "id": "cq-w39-al-h-ae-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von den Vereinigten Arabischen Emiraten?",
+      "choices": [
+        "Sharjah",
+        "Dubai",
+        "Abu Dhabi",
+        "Doha"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-rs-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Serbien?",
+      "choices": [
+        "Novi Sad",
+        "Niš",
+        "Zagreb",
+        "Belgrad"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-et-capital",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Äthiopien?",
+      "choices": [
+        "Dire Dawa",
+        "Gondar",
+        "Addis Abeba",
+        "Nairobi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-1984-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel 1984?",
+      "choices": [
+        "Ray Bradbury",
+        "H. G. Wells",
+        "Aldous Huxley",
+        "George Orwell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-prince-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the book The Little Prince?",
+      "choices": [
+        "Antoine de Saint-Exupéry",
+        "Victor Hugo",
+        "Jules Verne",
+        "Albert Camus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-mockingbird-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel To Kill a Mockingbird?",
+      "choices": [
+        "Harper Lee",
+        "Toni Morrison",
+        "Flannery O'Connor",
+        "Truman Capote"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-diary-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben The Diary of a Young Girl?",
+      "choices": [
+        "Primo Levi",
+        "Elie Wiesel",
+        "Anne Frank",
+        "Corrie ten Boom"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-musketeers-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel The Three Musketeers?",
+      "choices": [
+        "Victor Hugo",
+        "Jules Verne",
+        "Alexandre Dumas",
+        "Honoré de Balzac"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-wonderland-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben Alice's Adventures in Wonderland?",
+      "choices": [
+        "Roald Dahl",
+        "A. A. Milne",
+        "J. M. Barrie",
+        "Lewis Carroll"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-war-peace",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel War and Peace?",
+      "choices": [
+        "Ivan Turgenev",
+        "Fyodor Dostoevsky",
+        "Leo Tolstoy",
+        "Anton Chekhov"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-handmaid-book",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat geschrieben the novel The Handmaid's Tale?",
+      "choices": [
+        "Doris Lessing",
+        "Alice Munro",
+        "Ursula K. Le Guin",
+        "Margaret Atwood"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-ode-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the symphony that contains the Ode to Joy finale?",
+      "choices": [
+        "Wolfgang Amadeus Mozart",
+        "Franz Schubert",
+        "Johannes Brahms",
+        "Ludwig van Beethoven"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-rhapsody-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht Rhapsody in Blue?",
+      "choices": [
+        "Duke Ellington",
+        "George Gershwin",
+        "Aaron Copland",
+        "Leonard Bernstein"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-imagine-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Imagine?",
+      "choices": [
+        "Paul McCartney",
+        "John Lennon",
+        "Bob Dylan",
+        "George Harrison"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-single-music",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song Single Ladies (Put a Ring on It)?",
+      "choices": [
+        "Alicia Keys",
+        "Jennifer Lopez",
+        "Rihanna",
+        "Beyoncé"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-as-it-was",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the song As It Was?",
+      "choices": [
+        "Ed Sheeran",
+        "Harry Styles",
+        "Niall Horan",
+        "Louis Tomlinson"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-kind-blue",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat gemacht the album Kind of Blue?",
+      "choices": [
+        "Duke Ellington",
+        "John Coltrane",
+        "Miles Davis",
+        "Louis Armstrong"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-schindler-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film Schindler's List?",
+      "choices": [
+        "Steven Spielberg",
+        "Roman Polanski",
+        "Martin Scorsese",
+        "Francis Ford Coppola"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-2001-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film 2001: A Space Odyssey?",
+      "choices": [
+        "Ridley Scott",
+        "George Lucas",
+        "Stanley Kubrick",
+        "Andrei Tarkovsky"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-pan-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the film Pan's Labyrinth?",
+      "choices": [
+        "Alfonso Cuarón",
+        "Pedro Almodóvar",
+        "Guillermo del Toro",
+        "Alejandro G. Iñárritu"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-lion-king-director",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 1994 film The Lion King?",
+      "choices": [
+        "Roger Allers and Rob Minkoff",
+        "Andrew Adamson",
+        "Chris Buck and Jennifer Lee",
+        "John Musker and Ron Clements"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-dune-film",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer hat inszeniert the 2021 film Dune?",
+      "choices": [
+        "Denis Villeneuve",
+        "Ridley Scott",
+        "David Lynch",
+        "Christopher Nolan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-na",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element sodium?",
+      "choices": [
+        "Na",
+        "N",
+        "S",
+        "K"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-hg",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element mercury?",
+      "choices": [
+        "Hg",
+        "Mg",
+        "H",
+        "Me"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-al",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element aluminum?",
+      "choices": [
+        "Al",
+        "Ag",
+        "Au",
+        "Ar"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-ti",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element titanium?",
+      "choices": [
+        "Ti",
+        "Tl",
+        "Te",
+        "Sn"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-sym-cr",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches chemische Symbol hat das Element chromium?",
+      "choices": [
+        "Cr",
+        "Cl",
+        "Cu",
+        "Co"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-highest-peak",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welcher Berg hat den höchsten Gipfel über dem Meeresspiegel?",
+      "choices": [
+        "K2",
+        "Denali",
+        "Mount Everest",
+        "Kangchenjunga"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-closest-sun",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welcher Planet kreist der Sonne am nächsten?",
+      "choices": [
+        "Venus",
+        "Earth",
+        "Mars",
+        "Mercury"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-invent-paper",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man in China das Papierverfahren der Han-Zeit zu?",
+      "choices": [
+        "Cai Lun",
+        "Bi Sheng",
+        "Johannes Gutenberg",
+        "Zhang Heng"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-origin-tomato",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welcher Region wurde die Tomate zuerst angebaut?",
+      "choices": [
+        "India",
+        "China",
+        "the Americas",
+        "Italy"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-watt-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer verbesserte die Dampfmaschine zu einer weit genutzten Industriemaschine?",
+      "choices": [
+        "James Watt",
+        "Isambard Kingdom Brunel",
+        "George Stephenson",
+        "Thomas Newcomen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-daguerre-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer gab einem frühen Fotoverfahren, der Daguerreotypie, seinen Namen?",
+      "choices": [
+        "George Eastman",
+        "Louis Daguerre",
+        "Ansel Adams",
+        "Nicéphore Niépce"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-nightingale-who",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer wurde durch die Pflege im Krimkrieg berühmt?",
+      "choices": [
+        "Florence Nightingale",
+        "Elizabeth Blackwell",
+        "Mary Seacole",
+        "Clara Barton"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-polonium-name",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welches Element benannte Marie Curie nach ihrer Heimat?",
+      "choices": [
+        "polonium",
+        "radium",
+        "curium",
+        "francium"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-dry-ice",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Trockeneis ist die feste Form welches Gases?",
+      "choices": [
+        "carbon dioxide",
+        "oxygen",
+        "water vapor",
+        "nitrogen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-rubber-tree",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Naturkautschuk kommt vor allem von welchem Baum?",
+      "choices": [
+        "the rubber tree",
+        "the oak",
+        "the palm",
+        "the pine"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-cinnamon-bark",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Zimt ist die Rinde welcher Baumart?",
+      "choices": [
+        "a pine",
+        "a birch",
+        "an oak",
+        "a cinnamon tree"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    },
+    {
+      "id": "cq-w39-al-h-hard-shen-kuo",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer beschrieb den Magnetkompass in den Pinselunterhaltungen am Traumbach?",
+      "choices": [
+        "Cai Lun",
+        "Bi Sheng",
+        "Zhang Heng",
+        "Shen Kuo"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Kurz mal,"
+    }
+  ]
+}

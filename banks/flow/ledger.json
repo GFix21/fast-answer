@@ -1,0 +1,41 @@
+{
+  "gapDays": 4,
+  "qualityHours": 30,
+  "locales": [
+    "en",
+    "fr-CA",
+    "de"
+  ],
+  "placementTarget": 30,
+  "setTarget": 1050,
+  "kept": true,
+  "sets": [
+    {
+      "id": "SET00001",
+      "folder": "23:09:2026-SET00001",
+      "startedAt": "2026-09-23T00:00:00.000Z",
+      "playUntil": "2026-09-27T00:00:00.000Z",
+      "status": "banked",
+      "counts": {
+        "en": {
+          "questions": 1050,
+          "placement": 30
+        },
+        "fr-CA": {
+          "questions": 1050,
+          "placement": 30
+        },
+        "de": {
+          "questions": 1050,
+          "placement": 30
+        }
+      }
+    },
+    {
+      "id": "SET00002",
+      "folder": "27:09:2026-SET00002",
+      "qualityUntil": "2026-09-25T20:59:40.973Z",
+      "status": "quality"
+    }
+  ]
+}

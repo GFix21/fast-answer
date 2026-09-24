@@ -1,0 +1,1207 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-alpha",
+  "tier": "easy",
+  "held": 70,
+  "questions": [
+    {
+      "id": "w39-e-alpha-yt",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Bouton Play",
+      "prompt": "YouTube est avant tout une plateforme pour quoi ?",
+      "choices": [
+        "La vidéo en ligne",
+        "Uniquement le pressage de vinyle",
+        "Uniquement des cadrans radio AM",
+        "Uniquement des livres imprimés"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-tablet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Le tactile d’abord",
+      "prompt": "Un iPad est surtout quel type d’appareil ?",
+      "choices": [
+        "Téléphone fixe",
+        "Grille-pain",
+        "Projecteur de cinéma",
+        "Tablette tactile"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-dory",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Amis des poissons",
+      "prompt": "Dans Le Monde de Nemo, quel type de poisson est Nemo ?",
+      "choices": [
+        "Thon",
+        "Poisson rouge",
+        "Requin",
+        "Poisson-clown"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-earth",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Bille bleue",
+      "prompt": "Sur quelle planète vivons-nous ?",
+      "choices": [
+        "La Terre",
+        "Jupiter",
+        "Mars",
+        "Vénus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Si vous ratez celle-là, Jeremy aura besoin d’un café."
+    },
+    {
+      "id": "w39-e-alpha-lego",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Logique de brique",
+      "prompt": "Les briques LEGO sont surtout célèbres comme quoi ?",
+      "choices": [
+        "Bonbons comestibles",
+        "Moteurs de voiture",
+        "Marques de peinture",
+        "Jouets de construction en plastique emboîtables"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "w39-e-alpha-cars",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Quatre roues",
+      "prompt": "Combien de roues a une voiture typique ?",
+      "choices": [
+        "Quatre",
+        "Une",
+        "Deux",
+        "Huit"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-e-alpha-cat",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Animateur du quiz",
+      "prompt": "Comment on appelle un chat qui anime le quiz ?",
+      "choices": [
+        "Un chat peureux",
+        "Le ronron en charge",
+        "Un somme de chat",
+        "Un copieur"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Il retombe quand même sur ses pattes.",
+      "slang": "Vite fait,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-alpha-backpack",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Belle journée",
+      "prompt": "Pourquoi le sac à dos avait l'air fier ?",
+      "choices": [
+        "Il a mangé les devoirs",
+        "Il a caché la carte",
+        "Il portait une bonne journée",
+        "Il a manqué l'autobus"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Chaque livre a eu un coup de pouce.",
+      "slang": "Vite fait,",
+      "funny": true,
+      "structure": "joke"
+    },
+    {
+      "id": "cq-e-alpha-frog",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Scène ouverte",
+      "prompt": "C'est quoi la couleur d'une grenouille le soir du micro ouvert ?",
+      "choices": [
+        "Violet",
+        "Vert",
+        "Argent",
+        "Orange"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La salle est restée croassante.",
+      "slang": "Vite fait,",
+      "funny": true,
+      "structure": "colour"
+    },
+    {
+      "id": "cq-e-alpha-banana",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Collation",
+      "prompt": "L'histoire grossit. La question garde la même taille : « C'est quoi la couleur de la peau d'une banane mûre ? »",
+      "choices": [
+        "Jaune",
+        "Vert",
+        "Brun, un jour après la boîte à lunch",
+        "Rouge, s'il a passé l'audition du bol de pommes"
+      ],
+      "correctIndex": 0,
+      "banterHint": "L'histoire peut grossir. La peau reste la vive.",
+      "slang": "Vite fait,",
+      "funny": true,
+      "humorous": true,
+      "injection": "escalation",
+      "structure": "colour",
+      "fromStructure": "colour",
+      "jokeWrongIndexes": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "cq-e-alpha-leap",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Jour en plus",
+      "prompt": "Une année bissextile a combien de jours ?",
+      "choices": [
+        "360",
+        "366",
+        "365",
+        "364"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Février emprunte une journée, puis rend l'année.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-pt-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Portugal?",
+      "choices": [
+        "Paris",
+        "Lisbonne",
+        "Madrid",
+        "Porto"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-dk-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Danemark?",
+      "choices": [
+        "Oslo",
+        "Stockholm",
+        "Copenhague",
+        "Aarhus"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-br-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Brésil?",
+      "choices": [
+        "Rio de Janeiro",
+        "Salvador",
+        "Brasilia",
+        "São Paulo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-co-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Colombie?",
+      "choices": [
+        "Carthagène",
+        "Cali",
+        "Medellín",
+        "Bogota"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-id-capital",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de l'Indonésie?",
+      "choices": [
+        "Surabaya",
+        "Bandung",
+        "Jakarta",
+        "Bali"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-us-stripes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de bandes il y a sur le drapeau des États-Unis ?",
+      "choices": [
+        "15",
+        "50",
+        "10",
+        "13"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-minute-seconds",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de secondes il y a dans une minute ?",
+      "choices": [
+        "100",
+        "45",
+        "60",
+        "30"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cube-faces",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de faces il y a sur un cube ?",
+      "choices": [
+        "6",
+        "8",
+        "4",
+        "12"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-chess-pieces",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de pièces chaque joueur d'échecs a au départ ?",
+      "choices": [
+        "16",
+        "32",
+        "12",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-us-states-n",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'États il y a dans les États-Unis ?",
+      "choices": [
+        "52",
+        "48",
+        "50",
+        "13"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-butterfly-wings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'ailes il y a sur un papillon ?",
+      "choices": [
+        "4",
+        "6",
+        "2",
+        "8"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-baseball-innings",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de manches il y a dans un match de baseball standard ?",
+      "choices": [
+        "8",
+        "10",
+        "7",
+        "9"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-football-yards",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de verges mesure un terrain de football américain entre les lignes de but ?",
+      "choices": [
+        "50",
+        "120",
+        "100",
+        "90"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-nba-teams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'équipes il y a dans la NBA ?",
+      "choices": [
+        "30",
+        "16",
+        "28",
+        "32"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-handball-seven",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de joueurs d'une équipe il y a sur un terrain de handball ?",
+      "choices": [
+        "7",
+        "11",
+        "5",
+        "6"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-trumpet-valves",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de pistons il y a sur une trompette standard ?",
+      "choices": [
+        "2",
+        "5",
+        "4",
+        "3"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-kg-grams",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien de grammes il y a dans un kilogramme ?",
+      "choices": [
+        "100",
+        "16",
+        "500",
+        "1000"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-world-cup-2022",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Il y a combien d'équipes ont joué la phase finale de la Coupe du monde 2022 ?",
+      "choices": [
+        "32",
+        "16",
+        "24",
+        "48"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-taj-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le Taj Mahal ?",
+      "choices": [
+        "India",
+        "Nepal",
+        "Iran",
+        "Pakistan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-chichen-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, Chichén Itzá ?",
+      "choices": [
+        "Guatemala",
+        "Spain",
+        "Mexico",
+        "Peru"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-kili-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, le Kilimandjaro ?",
+      "choices": [
+        "Tanzania",
+        "Uganda",
+        "Ethiopia",
+        "Kenya"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-victoria-country",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est dans quel pays, les chutes Victoria ?",
+      "choices": [
+        "Egypt",
+        "Kenya",
+        "on the Zambia–Zimbabwe border",
+        "South Africa"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-pearl-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint Girl with a Pearl Earring ?",
+      "choices": [
+        "Rembrandt",
+        "Jan van Eyck",
+        "Johannes Vermeer",
+        "Johannes Brahms"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-kiss-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint the painting The Kiss ?",
+      "choices": [
+        "Egon Schiele",
+        "August Rodin",
+        "Alphonse Mucha",
+        "Gustav Klimt"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-adam-paint",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est qui qui a peint The Creation of Adam ?",
+      "choices": [
+        "Donatello",
+        "Raphael",
+        "Michelangelo",
+        "Leonardo da Vinci"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-toyota-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Toyota ?",
+      "choices": [
+        "the United States",
+        "Japan",
+        "South Korea",
+        "China"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-mercedes-country",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quel pays, le berceau de Mercedes-Benz ?",
+      "choices": [
+        "Italy",
+        "Sweden",
+        "France",
+        "Germany"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-mph-mean",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "MPH sur un compteur de vitesse, ça veut dire quoi ?",
+      "choices": [
+        "minutes per hour",
+        "miles per hectare",
+        "meters per hour",
+        "miles per hour"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-lang-china",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à China, as the most widely spoken language dans cette question ?",
+      "choices": [
+        "Mandarin",
+        "Japanese",
+        "Cantonese",
+        "Korean"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-lang-turkey",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Turkey dans cette question ?",
+      "choices": [
+        "Arabic",
+        "Greek",
+        "Turkish",
+        "Persian"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-lang-finland",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la langue principale associée à Finland, as the language of the majority dans cette question ?",
+      "choices": [
+        "Russian",
+        "Finnish",
+        "Swedish",
+        "Norwegian"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cont-2",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Kenya est sur quel continent ?",
+      "choices": [
+        "Europe",
+        "Amérique du Sud",
+        "Asie",
+        "Afrique"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cont-9",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le Japon est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Asie",
+        "Amérique du Nord"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cont-16",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'Espagne est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Amérique du Sud",
+        "Europe",
+        "Asie"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cont-23",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Cuba est sur quel continent ?",
+      "choices": [
+        "Amérique du Nord",
+        "Afrique",
+        "Europe",
+        "Amérique du Sud"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cont-30",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'Australie est sur quel continent ?",
+      "choices": [
+        "Afrique",
+        "Europe",
+        "Océanie",
+        "Asie"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cont-37",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "La Norvège est sur quel continent ?",
+      "choices": [
+        "Asie",
+        "Europe",
+        "Amérique du Sud",
+        "Afrique"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cur-4",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de l'Inde ?",
+      "choices": [
+        "le yen",
+        "l'euro",
+        "le dollar",
+        "la roupie"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cur-11",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de la Suisse ?",
+      "choices": [
+        "le yen",
+        "le dollar",
+        "l'euro",
+        "le franc"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cur-18",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de l'Afrique du Sud ?",
+      "choices": [
+        "le rand",
+        "l'euro",
+        "le dollar",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-cur-25",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est quoi la monnaie principale de la Turquie ?",
+      "choices": [
+        "la livre",
+        "l'euro",
+        "le dollar",
+        "le yen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-food-2",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les tacos, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Italie",
+        "Japon",
+        "France",
+        "Mexique"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-food-9",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Les bretzels, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Allemagne",
+        "Japon",
+        "Italie",
+        "Mexique"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-food-16",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le poulet jerk, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Japon",
+        "Mexique",
+        "Jamaïque",
+        "Italie"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-food-23",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'escalope viennoise, c'est associé surtout à quel pays ?",
+      "choices": [
+        "Autriche",
+        "Mexique",
+        "Japon",
+        "Italie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-ani-0",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'animal terrestre le plus rapide, c'est quel animal ?",
+      "choices": [
+        "le lion",
+        "le cheval",
+        "la gazelle",
+        "le guépard"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-ani-6",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'ours noir et blanc d'Asie, c'est quel animal ?",
+      "choices": [
+        "la mouffette",
+        "le panda géant",
+        "l'ours polaire",
+        "le zèbre"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-ani-12",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "L'oiseau signe de paix, c'est quel animal ?",
+      "choices": [
+        "la corneille",
+        "l'aigle",
+        "la colombe",
+        "le hibou"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-ani-18",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le primate le plus proche dans les leçons courantes, c'est quel animal ?",
+      "choices": [
+        "le chimpanzé",
+        "le lémurien",
+        "l'orang-outan",
+        "le gorille"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-ani-24",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le nom des petits du kangourou, c'est quel animal ?",
+      "choices": [
+        "des petits",
+        "des chiots",
+        "des veaux",
+        "des joeys"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-e-human-eyes",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un humain typique a combien d'yeux ?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "ga-joke-clock",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Les aiguilles",
+      "prompt": "C'est quoi qui a des aiguilles et qui donne l'heure ?",
+      "choices": [
+        "Une horloge",
+        "Un hérisson",
+        "Une abeille",
+        "Un cactus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Elle peut quand même faire coucou.",
+      "funny": true
+    },
+    {
+      "id": "ga-joke-bear",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dent sucrée",
+      "prompt": "Comment on appelle un ours sans dents ?",
+      "choices": [
+        "Un ours en jujube",
+        "Un toutou",
+        "Un ours polaire",
+        "Un koala"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Toujours collant. Bien plus gentil.",
+      "funny": true
+    },
+    {
+      "id": "ga-joke-math",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Trop de problèmes",
+      "prompt": "Pourquoi le livre de maths est triste ?",
+      "choices": [
+        "Il a trop de problèmes",
+        "C'est une bande dessinée",
+        "Il déteste les chiffres",
+        "Il a perdu sa couverture"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le marque-page lui a fait un câlin.",
+      "funny": true
+    },
+    {
+      "id": "ga-joke-ocean",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Bord de mer",
+      "prompt": "Que dit l'océan à la plage ?",
+      "choices": [
+        "Rien, il fait juste la vague",
+        "Je suis salé",
+        "Apporte une serviette",
+        "À la pêche"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plage a répondu d'un signe.",
+      "funny": true
+    },
+    {
+      "id": "ga-joke-flamingo",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Parade rose",
+      "prompt": "Comment on appelle un groupe de flamants roses ?",
+      "choices": [
+        "Un troupeau",
+        "Un banc",
+        "Une flamboyance",
+        "Une meute"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Ils étaient habillés pour l'occasion.",
+      "funny": true
+    },
+    {
+      "id": "ga-joke-octopus",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Cœur en plus",
+      "prompt": "Combien de cœurs a une pieuvre ?",
+      "choices": [
+        "Huit",
+        "Un",
+        "Deux",
+        "Trois"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Huit bras, trois cœurs, aucune hâte.",
+      "funny": true
+    },
+    {
+      "id": "ga-joke-scarecrow",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dans son champ",
+      "prompt": "Pourquoi l'épouvantail a reçu un prix ?",
+      "choices": [
+        "Il a mangé le maïs",
+        "Il a dormi toute la journée",
+        "Il a raconté une histoire de fantôme",
+        "Il était le meilleur dans son champ"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les corbeaux ont ouvert un fan-club.",
+      "funny": true
+    },
+    {
+      "id": "ga-joke-homework",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Du gâteau",
+      "prompt": "Pourquoi l'élève a mangé ses devoirs ?",
+      "choices": [
+        "Le chien n'avait plus faim",
+        "C'était l'heure du dîner",
+        "Le prof a dit que c'était du gâteau",
+        "C'était un sandwich"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le dessert comptait en bonus.",
+      "funny": true
+    }
+  ]
+}

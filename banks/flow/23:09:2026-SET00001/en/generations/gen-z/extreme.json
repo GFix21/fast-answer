@@ -1,0 +1,177 @@
+{
+  "locale": "en",
+  "generation": "gen-z",
+  "tier": "extreme",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-genz-fortnite-mode",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Finale · Storm Circle",
+      "prompt": "Fortnite’s original free-to-play PvP mode that defined its boom is commonly called what?",
+      "choices": [
+        "Battle Royale",
+        "Save the World only",
+        "Creative only",
+        "Rocket Racing only"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-gz-x-bo-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the constitutional capital of Bolivia?",
+      "choices": [
+        "La Paz",
+        "Santa Cruz",
+        "Cochabamba",
+        "Sucre"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The seat of government is a different city.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-x-pa-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Panama?",
+      "choices": [
+        "Colón",
+        "David",
+        "San José",
+        "Panama City"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-x-ws-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Samoa?",
+      "choices": [
+        "Apia",
+        "Suva",
+        "Nukuʻalofa",
+        "Pago Pago"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-x-al-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Albania?",
+      "choices": [
+        "Podgorica",
+        "Tirana",
+        "Durrës",
+        "Vlorë"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-x-ge-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Georgia?",
+      "choices": [
+        "Tbilisi",
+        "Yerevan",
+        "Baku",
+        "Batumi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-x-ug-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Uganda?",
+      "choices": [
+        "Kampala",
+        "Gulu",
+        "Nairobi",
+        "Entebbe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-x-ly-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Libya?",
+      "choices": [
+        "Benghazi",
+        "Misrata",
+        "Tunis",
+        "Tripoli"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-x-atomic-ag",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "What is the atomic number of silver?",
+      "choices": [
+        "79",
+        "29",
+        "50",
+        "47"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-x-bones-adult",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fast fact",
+      "prompt": "About how many bones are in an adult human skeleton?",
+      "choices": [
+        "186",
+        "206",
+        "180",
+        "256"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Low-key,"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "locale": "de",
+  "generation": "gen-x",
+  "tier": "extreme",
+  "held": 10,
+  "questions": [
+    {
+      "id": "w39-f-genx-stig-reveal",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Finale · Helm ab",
+      "prompt": "Welcher Rennfahrer wurde 2009 als damaliger BBC-Top-Gear-Stig enthüllt?",
+      "choices": [
+        "Damon Hill",
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Ben Collins"
+      ],
+      "correctIndex": 3,
+      "banterHint": null
+    },
+    {
+      "id": "cq-w39-gx-x-ec-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Ecuador?",
+      "choices": [
+        "Quito",
+        "Guayaquil",
+        "Cuenca",
+        "Lima"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-x-do-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von der Dominikanischen Republik?",
+      "choices": [
+        "Santiago de los Caballeros",
+        "Punta Cana",
+        "Port-au-Prince",
+        "Santo Domingo"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-x-fj-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Fidschi?",
+      "choices": [
+        "Suva",
+        "Nadi",
+        "Lautoka",
+        "Wellington"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-x-lu-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Luxemburg?",
+      "choices": [
+        "Metz",
+        "Luxemburg",
+        "Esch-sur-Alzette",
+        "Brüssel"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-x-by-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Belarus?",
+      "choices": [
+        "Brest",
+        "Gomel",
+        "Moskau",
+        "Minsk"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-x-bh-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Bahrain?",
+      "choices": [
+        "Manama",
+        "Kuwait-Stadt",
+        "Doha",
+        "Riffa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-x-tn-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Tunesien?",
+      "choices": [
+        "Tunis",
+        "Karthago",
+        "Sousse",
+        "Sfax"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-x-atomic-au",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Ordnungszahl hat Gold?",
+      "choices": [
+        "47",
+        "29",
+        "82",
+        "79"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-x-feet-mile",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wie viele Fuß hat eine Meile?",
+      "choices": [
+        "1000",
+        "1609",
+        "1760",
+        "5280"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,"
+    }
+  ]
+}
