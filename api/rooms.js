@@ -171,6 +171,8 @@ export default async function handler(req, res) {
       joinWait: Math.min(45, Math.max(5, Number(body.joinWait ?? cur.joinWait) || 15)),
       ageFrom: Math.min(99, Math.max(10, Number(body.ageFrom ?? cur.ageFrom) || 13)),
       ageTo: Math.min(99, Math.max(10, Number(body.ageTo ?? cur.ageTo) || 99)),
+      playerCount: Math.min(12, Math.max(2, Number(body.playerCount ?? cur.playerCount) || 3)),
+      topics: Array.isArray(body.topics) ? body.topics.map(String).slice(0, 40) : (cur.topics || []),
       screen: cur.screen === "tv" || body.screen === "tv" ? "tv" : "off",
       createdAt: cur.createdAt || Date.now(),
       guests: cur.guests || [],
@@ -217,7 +219,8 @@ export default async function handler(req, res) {
     const age = Number(body.age);
     const from = Number(cur.ageFrom);
     const to = Number(cur.ageTo);
-    if (seat === "play" && Number.isFinite(age) && Number.isFinite(from) && Number.isFinite(to) && (age < from || age > to)) {
+    const ageKnown = Number.isFinite(age) && age >= 10 && age <= 99;
+    if (seat === "play" && ageKnown && Number.isFinite(from) && Number.isFinite(to) && (age < from || age > to)) {
       res.status(403).end(JSON.stringify({
         error: "age",
         message: `This room is for ages ${from} to ${to}.`,

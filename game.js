@@ -415,6 +415,8 @@ function roomMeta() {
     joinWait: clamp(Number(state.joinWait) || 15, 5, 45),
     ageFrom: from,
     ageTo: to,
+    playerCount: clamp(Number(state.playerCount) || 3, 2, 12),
+    topics: (state.topicsOn || []).slice(0, 40),
   };
 }
 function roomGenerations() {
@@ -432,9 +434,21 @@ function roomAgeAllows(q) {
   return roomGenerations().has(g);
 }
 function shareUrlFor(code) {
-  const u = new URL(location.href);
+  const u = new URL("/", location.origin);
   u.search = `?role=pad&room=${encodeURIComponent(code || state.room)}`;
   return u.toString();
+}
+function applyRoomSetup(room) {
+  if (!room || room.error) return;
+  if (room.playerCount) state.playerCount = clamp(Number(room.playerCount) || 3, 2, 12);
+  if (room.joinWait) state.joinWait = clamp(Number(room.joinWait) || 15, 5, 45);
+  if (room.ageFrom) state.ageFrom = clamp(Number(room.ageFrom) || 13, 10, 99);
+  if (room.ageTo) state.ageTo = clamp(Number(room.ageTo) || 99, 10, 99);
+  if (Array.isArray(room.topics) && room.topics.length) state.topicsOn = room.topics.map(String);
+  if (room.name) state.roomName = String(room.name);
+}
+function viewerCount() {
+  return (state.guests || []).filter((g) => g && g.seat === "view" && cleanSeatName(g.name)).length;
 }
 function shareUrl() {
   return shareUrlFor(state.room);
@@ -1751,6 +1765,7 @@ function clearAiBuzz() {
 
 function clockText() {
   const q = currentQ();
+  if (state.phase === "between" && state.introName) return tt("introducing", state.introName, state.introLeft);
   if (state.phase === "ready" && state.joinLeft > 0) return tt("joinWaitClock", state.joinLeft);
   const ld = state.lockdown;
   if (ld?.phase === "wager") return tt("lockWagerClock", ld.wagerLeft);
@@ -2163,8 +2178,7 @@ function finishShow() {
 
 function seatPendingJoins() {
   if (role === "pad") return;
-  const next = state.qs[state.i];
-  if (!next || !nextQuestionAllowsJoin(state.qs, state.i - 1)) return;
+  if (state.i >= 4) return;
   const pending = state.pendingJoins || [];
   if (!pending.length) return;
   for (const g of pending) {
@@ -2318,6 +2332,33 @@ function applyRemoteMap(id, target) {
 
 function afterReveal(ok) {
   const shouldLock = ok && state.lockdownAt.includes(state.i) && !state.lockdown;
+  if (state.i < 4 && !shouldLock) {
+    state.phase = "between";
+    state.introName = cleanSeatName(state.buzzBy) || tt("player");
+    state.introLeft = 15;
+    paint(true);
+    publish();
+    if (state.introTick) clearInterval(state.introTick);
+    state.introTick = setInterval(() => {
+      if (state.phase !== "between") {
+        clearInterval(state.introTick);
+        state.introTick = null;
+        return;
+      }
+      state.introLeft -= 1;
+      if (state.introLeft <= 0) {
+        clearInterval(state.introTick);
+        state.introTick = null;
+        state.introName = "";
+        continueRound();
+        return;
+      }
+      const clock = $("#clock");
+      if (clock) clock.textContent = tt("introducing", state.introName, state.introLeft);
+      publish();
+    }, 1000);
+    return;
+  }
   setTimeout(() => {
     if (shouldLock) startLockdown(state.buzzId);
     else continueRound();
@@ -3702,11 +3743,14 @@ function roomListHTML(screen) {
   const title = want === "tv" ? tt("tvRooms") : tt("offScreenRooms");
   const rows = rooms.map((r) => {
     const label = r.name ? `${r.name} · ${r.code}` : r.code;
+    const joined = state.joinedCode === r.code || (state.room === r.code && role === "pad");
+    const kind = want === "tv" ? tt("linkTv") : tt("linkDevice");
     return `
     <div class="room-row">
-      <span class="room-meta"><b>${escapeHtml(label)}</b>${r.host ? ` · ${escapeHtml(r.host)}` : ""}${r.guests ? ` · ${r.guests}` : ""}</span>
-      <button type="button" class="primary" data-join-room="${escapeHtml(r.code)}">${tt("joinShort")}</button>
-      <button type="button" class="ghost" data-copy-room="${escapeHtml(r.code)}">${tt("copyTv")}</button>
+      <span class="room-meta"><b>${escapeHtml(kind)}</b> ${escapeHtml(label)}${r.host ? ` · ${escapeHtml(r.host)}` : ""}</span>
+      <button type="button" class="${joined ? "joined" : "primary"}" data-join-room="${escapeHtml(r.code)}">${joined ? tt("joinedRoom") : tt("joinShort")}</button>
+      <button type="button" class="ghost" data-copy-room="${escapeHtml(r.code)}">${tt("linkTv")}</button>
+      <button type="button" class="ghost" data-copy-phone="${escapeHtml(r.code)}">${tt("linkDevice")}</button>
     </div>`;
   }).join("");
   return `
@@ -3840,10 +3884,6 @@ function roomBody() {
       ${roomModeButtons()}
       <p class="dir-copy"><b>${tt("castCopy")}</b></p>
       ${playerCountHTML()}
-      <label class="toggle">
-        <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
-        <span>${tt("fillBots")}</span>
-      </label>
       <div class="seats">
         ${seats.map((s) => seatSpan(s)).join("")}
       </div>
@@ -3873,6 +3913,7 @@ function roomBody() {
       ${state.roomSetup ? `
         <p class="dir-copy">${tt("hostSetup")}</p>
         ${roomCreateFields()}
+        ${playerCountHTML()}
         ${topicsBody()}
         <button class="primary" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
         <button class="ghost" id="castRoom" type="button">${tt("castThisRoom")}</button>
@@ -3889,18 +3930,12 @@ function roomBody() {
 
   return `
     ${roomModeButtons()}
-    ${playerCountHTML()}
-    <label class="toggle">
-      <input id="botFill" type="checkbox" ${state.botFill ? "checked" : ""}/>
-      <span>${tt("fillBots")}</span>
-    </label>
     <div class="seats">
       ${seats.map((s) => seatSpan(s)).join("")}
     </div>
     ${state.onScreen || isTvDisplay() ? `
       <p class="dir-copy">${tt("onScreenOwns")}</p>
-      ${roomCreateFields()}
-      ${topicsBody()}
+      <p class="meta">${tt("viewers", viewerCount())}</p>
       <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.roomName ? state.roomName + " · " + (state.room || "····") : (state.room || "····"))}</b>`)}</p>
       ${roomLinksHTML()}
       <p class="meta">${escapeHtml(tt("humansBots", humans, bots))}</p>
@@ -4161,7 +4196,6 @@ function readyCardHTML() {
           : tt("readyTv")}</p>
         <p class="meta" id="clock">${tt("readyMeta", readyN, Math.max(pads.length, 1))}</p>
         <div class="seats ready-seats">${rows}</div>
-        ${role !== "pad" ? `<button class="ghost" id="forceStart" type="button" style="margin-top:10px">${tt("startBots")}</button>` : ""}
       </div>
     </div>
   `;
@@ -4193,7 +4227,7 @@ function playHTML() {
       : state.phase === "answer" || (!state.onScreen && !pad && state.phase === "buzz");
   let prompt;
   if (readyPhase) prompt = "";
-  else if (state.phase === "between") prompt = "";
+  else if (state.phase === "between") prompt = state.introName ? escapeHtml(tt("introducing", state.introName, state.introLeft)) : "";
   else if (endPhase) prompt = tt("showEnd");
   else if (ld?.phase === "wager") prompt = `LOCKDOWN — ${ld.name} · ${tt("lockdownWagers")}`;
   else if (ld?.phase === "intro") prompt = escapeHtml(tt("lockRulesClock", ld.introLeft));
@@ -4264,13 +4298,14 @@ function playHTML() {
         ${canLeaveNow() ? `<button class="word" id="quit" type="button">${leaveLabel}</button>` : ""}
         ${refreshNoticeHTML()}
       </div>
-      <div class="phone-lock">
+      <div class="phone-lock ${state.viewing ? "tv-feed" : ""}">
         <div class="phone-board">
           <div class="qcard ${ld ? "lock" : ""} ${breaking ? "setbreak" : ""} ${state.mapLive ? "map-on" : ""}">
             <p class="cat">${cat}</p>
             ${slang}
             <p class="qtext ${breaking ? "setbreak" : ""}">${prompt}</p>
             <p class="meta" id="clock">${endPhase ? scoreboard() : clockText()}</p>
+            ${state.viewing ? `<p class="meta">${tt("viewers", viewerCount())}</p>` : ""}
           </div>
           <div class="phone-answers">${answersMarkup}</div>
           ${endPhase ? "" : `<div class="phone-scores">${scoreboard()}</div>`}
@@ -4314,6 +4349,7 @@ function playHTML() {
           ${slang}
           <p class="qtext">${prompt}</p>
           <p class="meta" id="clock">${clockText()}</p>
+          <p class="meta">${tt("viewers", viewerCount())}</p>
           ${rivalsHTML()}
         </div>
       </div>`)}
@@ -4364,6 +4400,7 @@ async function openRoom(screen) {
   if (!saved || saved.error) {
     state.statusMsg = tt("roomNotListed", state.room);
   } else {
+    applyRoomSetup(saved);
     const meta = roomMeta();
     const row = {
       code: state.room,
@@ -4875,14 +4912,17 @@ function bindLobby() {
     state.joinInput = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
     state.room = state.joinInput;
   };
-  document.querySelectorAll("[data-copy], [data-copy-room]").forEach((b) => {
+  document.querySelectorAll("[data-copy], [data-copy-room], [data-copy-phone]").forEach((b) => {
     b.onclick = async () => {
+      const phoneCode = b.dataset.copyPhone;
       const roomCode = b.dataset.copyRoom;
-      const url = roomCode
-        ? tvSilkUrl(roomCode)
-        : (b.dataset.copy === "join"
-          ? (($("#joinUrl") && $("#joinUrl").value) || shareUrl())
-          : (($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room)));
+      const url = phoneCode
+        ? shareUrlFor(phoneCode)
+        : roomCode
+          ? tvSilkUrl(roomCode)
+          : (b.dataset.copy === "join"
+            ? (($("#joinUrl") && $("#joinUrl").value) || shareUrl())
+            : (($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room)));
       const ok = await copyText(url);
       state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
       paint(true);
@@ -4949,20 +4989,21 @@ async function beginJoin(raw) {
   state.room = code;
   state.joinInput = code;
   const live = await rooms("GET");
-  const phase = live && live.state && live.state.phase;
-  if (!live || live.error || !phase || phase === "lobby" || phase === "ready") {
-    state.viewing = false;
-    state.seatIntent = "play";
-    state.joinOffer = null;
-    return joinAsBuzzer();
+  if (!live || live.error) {
+    state.statusMsg = (live && live.message) || tt("roomMissing", code);
+    state.lobbyOpen = "room";
+    state.mpMode = "join";
+    paint(true);
+    return false;
   }
-  const qs = live.state.qs || [];
-  const index = Number(live.state.i) || 0;
-  const current = (live.state.q && live.state.q.tier) || (qs[index] && qs[index].tier) || "";
+  const phase = (live.state && live.state.phase) || "lobby";
+  const index = Number(live.state && live.state.i) || 0;
+  const current = (live.state && live.state.q && live.state.q.tier) || "";
+  state.viewing = false;
   state.joinOffer = {
     code,
     phase,
-    canPlay: phase !== "end" && nextQuestionAllowsJoin(qs, index),
+    canPlay: phase !== "end" && (phase === "lobby" || phase === "ready" || index < 4),
     tier: current,
   };
   state.lobbyOpen = "room";
@@ -5027,6 +5068,7 @@ async function joinAsBuzzer() {
   state.mpMode = "join";
   localStorage.setItem("fa-mp", "join");
   state.room = code;
+  state.joinedCode = code;
   state.joinInput = code;
   state.onScreen = false;
   state.youId = "p-" + (state.profile?.id || state.name || "pad").toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16);
@@ -5330,6 +5372,7 @@ function startGame() {
     state.joinTick = null;
   }
   state.joinLeft = 0;
+  state.botFill = true;
   seatPlayers();
   state.playOpen = "ask";
   const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length)
@@ -5359,6 +5402,7 @@ function startPoll() {
     if (!state.room || state.leftPad) return;
     const j = await rooms("GET");
     if (!j || j.error) return;
+    if (forcedDisplay && state.phase === "lobby") applyRoomSetup(j);
     pollN += 1;
     if (applyRefreshFromRoom(j)) paint(true);
     if (j.guests) {
@@ -5602,7 +5646,7 @@ if (isDirections) {
   }
   state.profile = loadProfile();
   if (state.profile?.displayName) state.name = state.profile.displayName;
-  state.botFill = localStorage.getItem("fa-bots") !== "0";
+  state.botFill = true;
   fillSeats();
   const tv = isTvDisplay() || forcedDisplay;
   state.profileUnlocked = false;
