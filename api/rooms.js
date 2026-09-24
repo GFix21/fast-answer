@@ -126,9 +126,13 @@ export default async function handler(req, res) {
       rooms: rooms.map((room) => ({
         code: room.code,
         host: room.host || "",
+        name: room.name || "",
         guests: room.guests || 0,
         phase: room.phase || "lobby",
         screen: room.screen === "tv" ? "tv" : "off",
+        joinWait: room.joinWait || 15,
+        ageFrom: room.ageFrom ?? 13,
+        ageTo: room.ageTo ?? 99,
       })),
     }));
     return;
@@ -163,6 +167,10 @@ export default async function handler(req, res) {
     await touch({
       ...cur,
       host: body.host || cur.host,
+      name: body.name != null ? String(body.name).trim().slice(0, 32) : (cur.name || ""),
+      joinWait: Math.min(45, Math.max(5, Number(body.joinWait ?? cur.joinWait) || 15)),
+      ageFrom: Math.min(99, Math.max(10, Number(body.ageFrom ?? cur.ageFrom) || 13)),
+      ageTo: Math.min(99, Math.max(10, Number(body.ageTo ?? cur.ageTo) || 99)),
       screen: cur.screen === "tv" || body.screen === "tv" ? "tv" : "off",
       createdAt: cur.createdAt || Date.now(),
       guests: cur.guests || [],
@@ -204,6 +212,16 @@ export default async function handler(req, res) {
     const name = String(body.name || "").replace(/\s+/g, " ").trim();
     if (!name) {
       res.status(400).end(JSON.stringify({ error: "name", message: "A player needs a name." }));
+      return;
+    }
+    const age = Number(body.age);
+    const from = Number(cur.ageFrom);
+    const to = Number(cur.ageTo);
+    if (seat === "play" && Number.isFinite(age) && Number.isFinite(from) && Number.isFinite(to) && (age < from || age > to)) {
+      res.status(403).end(JSON.stringify({
+        error: "age",
+        message: `This room is for ages ${from} to ${to}.`,
+      }));
       return;
     }
     if (seat === "play" && !ageIsAllowed(body.age, body.country, body.detectedCountry)) {

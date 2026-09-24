@@ -275,6 +275,13 @@ const state = {
   botFill: true,
   locale: loadStoredLocale(),
   activeRooms: [],
+  roomName: "",
+  joinWait: 15,
+  joinLeft: 0,
+  joinTick: null,
+  ageFrom: 13,
+  ageTo: 99,
+  offline: false,
   leftPad: false,
   wagerDraft: null,
   lastAnswerAt: 0,
@@ -391,10 +398,38 @@ function others() {
 function code() {
   return (state.room || Math.random().toString(36).slice(2, 6)).toUpperCase();
 }
-function shareUrl() {
+function roomMeta() {
+  let from = clamp(Number(state.ageFrom) || 13, 10, 99);
+  let to = clamp(Number(state.ageTo) || 99, 10, 99);
+  if (from > to) [from, to] = [to, from];
+  return {
+    name: String(state.roomName || "").trim().slice(0, 32),
+    joinWait: clamp(Number(state.joinWait) || 15, 5, 45),
+    ageFrom: from,
+    ageTo: to,
+  };
+}
+function roomGenerations() {
+  const meta = roomMeta();
+  const gens = new Set(["multi-gen"]);
+  for (let age = meta.ageFrom; age <= meta.ageTo; age++) {
+    const g = generationForYears(age);
+    if (g) gens.add(g);
+  }
+  return gens;
+}
+function roomAgeAllows(q) {
+  const g = q?.generation;
+  if (!g) return true;
+  return roomGenerations().has(g);
+}
+function shareUrlFor(code) {
   const u = new URL(location.href);
-  u.search = `?role=pad&room=${encodeURIComponent(state.room)}`;
+  u.search = `?role=pad&room=${encodeURIComponent(code || state.room)}`;
   return u.toString();
+}
+function shareUrl() {
+  return shareUrlFor(state.room);
 }
 function tvSilkUrl(roomCode = state.room) {
   const code = String(roomCode || "").toUpperCase();
@@ -970,10 +1005,10 @@ function dealFromPacks() {
   let result = dealRamp(state.questions, {
     seats: players,
     avoid,
-    allow: (q) => inSelectedTopics(q),
+    allow: (q) => inSelectedTopics(q) && roomAgeAllows(q),
   });
   if (result.length < Math.min(ROUND, 8)) {
-    result = dealRamp(state.questions, { seats: players, avoid });
+    result = dealRamp(state.questions, { seats: players, avoid, allow: roomAgeAllows });
   }
   if (!result.length) result = deal(state.questions);
   return orderShowSets(attributeSeats(result, players));
@@ -1688,6 +1723,7 @@ function clearAiBuzz() {
 
 function clockText() {
   const q = currentQ();
+  if (state.phase === "ready" && state.joinLeft > 0) return tt("joinWaitClock", state.joinLeft);
   const ld = state.lockdown;
   if (ld?.phase === "wager") return tt("lockWagerClock", ld.wagerLeft);
   if (ld?.phase === "intro") return tt("lockRulesClock", ld.introLeft);
@@ -1869,8 +1905,28 @@ function enterReady() {
   state.pose = "idle";
   state.readyIds = {};
   state.qrOpen = false;
+  if (state.joinTick) clearInterval(state.joinTick);
+  state.joinLeft = state.offline ? 0 : clamp(Number(state.joinWait) || 15, 5, 45);
   paint(true);
   publish();
+  if (!state.joinLeft || role === "pad") return;
+  state.joinTick = setInterval(() => {
+    if (state.phase !== "ready" || role === "pad") {
+      clearInterval(state.joinTick);
+      state.joinTick = null;
+      return;
+    }
+    state.joinLeft -= 1;
+    if (state.joinLeft <= 0) {
+      clearInterval(state.joinTick);
+      state.joinTick = null;
+      startGame();
+      return;
+    }
+    const clock = $("#clock");
+    if (clock) clock.textContent = clockText();
+    publish();
+  }, 1000);
 }
 
 function buzz() {
@@ -3615,16 +3671,48 @@ function roomListHTML(screen) {
   const want = screen === "tv" ? "tv" : "off";
   const rooms = (state.activeRooms || []).filter((r) => (r.screen === "tv" ? "tv" : "off") === want);
   const title = want === "tv" ? tt("tvRooms") : tt("offScreenRooms");
-  const rows = rooms.map((r) => `
+  const rows = rooms.map((r) => {
+    const label = r.name ? `${r.name} · ${r.code}` : r.code;
+    return `
     <div class="room-row">
-      <span class="room-meta"><b>${escapeHtml(r.code)}</b>${r.host ? ` · ${escapeHtml(r.host)}` : ""}${r.guests ? ` · ${r.guests}` : ""}</span>
+      <span class="room-meta"><b>${escapeHtml(label)}</b>${r.host ? ` · ${escapeHtml(r.host)}` : ""}${r.guests ? ` · ${r.guests}` : ""}</span>
       <button type="button" class="primary" data-join-room="${escapeHtml(r.code)}">${tt("joinShort")}</button>
-    </div>`).join("");
+      <button type="button" class="ghost" data-copy-room="${escapeHtml(r.code)}">${tt("copy")}</button>
+    </div>`;
+  }).join("");
   return `
     <div class="rooms-list">
       <p class="field">${title}</p>
       ${rows || `<p class="meta">${tt("noRooms")}</p>`}
     </div>`;
+}
+function deviceStoreLine() {
+  const c = state.cohort || readStoredCohort(state.locale);
+  const held = Number(c?.held) || 0;
+  const place = (c?.placement || []).length;
+  const show = (c?.shows?.[0] || []).length;
+  return `<p class="meta">${tt("deviceStore", held, place, show)}</p>`;
+}
+function roomCreateFields() {
+  const wait = clamp(Number(state.joinWait) || 15, 5, 45);
+  const waits = [10, 15, 20, 30, 45];
+  return `
+    <label class="field" for="roomName">${tt("roomName")}</label>
+    <input id="roomName" maxlength="32" value="${escapeHtml(state.roomName || "")}" placeholder="${tt("roomNameHint")}"/>
+    <p class="field">${tt("joinWait")} <b>${wait}s</b></p>
+    <div class="seat-n" role="group">${waits.map((n) => `<button type="button" class="seat-n-btn ${wait === n ? "on" : ""}" data-wait="${n}">${n}</button>`).join("")}</div>
+    <div class="copy-row">
+      <label class="field" for="ageFrom">${tt("ageFrom")}
+        <input id="ageFrom" type="number" min="10" max="99" value="${clamp(Number(state.ageFrom) || 13, 10, 99)}"/>
+      </label>
+      <label class="field" for="ageTo">${tt("ageTo")}
+        <input id="ageTo" type="number" min="10" max="99" value="${clamp(Number(state.ageTo) || 99, 10, 99)}"/>
+      </label>
+    </div>`;
+}
+function lobbyPlayExtras() {
+  if (isPad() || state.mpMode === "join") return "";
+  return `${deviceStoreLine()}<button class="ghost" id="playOffline" type="button">${tt("playOffline")}</button>`;
 }
 
 function screenModeHTML() {
@@ -3743,6 +3831,7 @@ function roomBody() {
       <button class="ghost" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
+      ${lobbyPlayExtras()}
       ${roomDojoEntryHTML()}
     `;
   }
@@ -3761,6 +3850,7 @@ function roomBody() {
       ` : ""}
       ${state.roomSetup ? `
         <p class="dir-copy">${tt("hostSetup")}</p>
+        ${roomCreateFields()}
         ${topicsBody()}
         <button class="primary" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
         <button class="ghost" id="castRoom" type="button">${tt("castThisRoom")}</button>
@@ -3770,6 +3860,7 @@ function roomBody() {
       `}
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
+      ${lobbyPlayExtras()}
       ${genAlphaReviewHTML()}
     `;
   }
@@ -3786,7 +3877,9 @@ function roomBody() {
     </div>
     ${state.onScreen || isTvDisplay() ? `
       <p class="dir-copy">${tt("onScreenOwns")}</p>
-      <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
+      ${roomCreateFields()}
+      ${topicsBody()}
+      <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.roomName ? state.roomName + " · " + (state.room || "····") : (state.room || "····"))}</b>`)}</p>
       ${roomLinksHTML()}
       <p class="meta">${escapeHtml(tt("humansBots", humans, bots))}</p>
       ${isTvDisplay() || state.onScreen ? `
@@ -3800,6 +3893,9 @@ function roomBody() {
           ).join("") || `<p class="meta">${tt("noPadsYet")}</p>`}
         </div>` : ""}
     ` : `<p class="meta">${tt("offScreenHint")}</p>`}
+    ${roomListHTML("off")}
+    ${roomListHTML("tv")}
+    ${lobbyPlayExtras()}
     ${roomDojoEntryHTML()}
   `;
 }
@@ -4241,6 +4337,7 @@ async function openRoom(screen) {
     host: state.name,
     hostKey: state.hostKey,
     screen: next,
+    ...roomMeta(),
   });
   if (!saved || saved.error) {
     state.statusMsg = tt("roomNotListed", state.room);
@@ -4742,10 +4839,12 @@ function bindLobby() {
     state.joinInput = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
     state.room = state.joinInput;
   };
-  document.querySelectorAll("[data-copy]").forEach((b) => {
+  document.querySelectorAll("[data-copy], [data-copy-room]").forEach((b) => {
     b.onclick = async () => {
-      const kind = b.dataset.copy === "silk" ? "silk" : "join";
-      const url = kind === "silk" ? (($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room)) : (($("#joinUrl") && $("#joinUrl").value) || shareUrl());
+      const roomCode = b.dataset.copyRoom;
+      const url = roomCode
+        ? shareUrlFor(roomCode)
+        : (b.dataset.copy === "silk" ? (($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room)) : (($("#joinUrl") && $("#joinUrl").value) || shareUrl()));
       const ok = await copyText(url);
       state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
       paint(true);
@@ -4753,6 +4852,29 @@ function bindLobby() {
   });
   bindSliders();
   bindRules();
+  const playOffline = $("#playOffline");
+  if (playOffline) playOffline.onclick = () => { void startOffline(); };
+  const roomName = $("#roomName");
+  if (roomName) roomName.onchange = () => {
+    state.roomName = roomName.value;
+    if (state.room) void openRoom(state.onScreen ? "tv" : "off");
+  };
+  document.querySelectorAll("[data-wait]").forEach((b) => {
+    b.onclick = () => {
+      state.joinWait = clamp(Number(b.dataset.wait) || 15, 5, 45);
+      if (state.room) void openRoom(state.onScreen ? "tv" : "off");
+      else paint(true);
+    };
+  });
+  const ageFrom = $("#ageFrom");
+  const ageTo = $("#ageTo");
+  const saveAges = () => {
+    if (ageFrom) state.ageFrom = clamp(Number(ageFrom.value) || 13, 10, 99);
+    if (ageTo) state.ageTo = clamp(Number(ageTo.value) || 99, 10, 99);
+    if (state.room) void openRoom(state.onScreen ? "tv" : "off");
+  };
+  if (ageFrom) ageFrom.onchange = saveAges;
+  if (ageTo) ageTo.onchange = saveAges;
   const go = $("#go");
   if (go) go.onclick = () => void onLobbyGo();
   const startPhone = $("#startPhone");
@@ -4988,6 +5110,26 @@ function bindAcc() {
   });
 }
 
+async function startOffline() {
+  const gate = lobbyGateReason();
+  if (gate) {
+    state.statusMsg = gate;
+    openDojoPage(dojoModeForGate());
+    return;
+  }
+  state.offline = true;
+  state.room = "";
+  state.onScreen = false;
+  state.viewing = false;
+  state.mpMode = "off";
+  if (poll) {
+    clearInterval(poll);
+    poll = null;
+  }
+  saveProfile({ displayName: state.name });
+  startGame();
+}
+
 async function startPhoneGame() {
   const gate = lobbyGateReason();
   if (gate) {
@@ -5145,6 +5287,11 @@ function ingestGuests(guests) {
 }
 
 function startGame() {
+  if (state.joinTick) {
+    clearInterval(state.joinTick);
+    state.joinTick = null;
+  }
+  state.joinLeft = 0;
   seatPlayers();
   state.playOpen = "ask";
   const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length)
@@ -5161,8 +5308,10 @@ function startGame() {
   state.setBreakLeft = 0;
   state.setBreakTier = "";
   state.tally = { correct: 0, wrong: 0 };
-  if (state.onScreen && !state.room) state.room = code();
-  startPoll();
+  if (!state.offline) {
+    if (state.onScreen && !state.room) state.room = code();
+    startPoll();
+  }
   startRead();
 }
 

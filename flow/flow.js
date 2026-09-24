@@ -497,6 +497,25 @@ function renderConsole(panel) {
   );
 }
 
+function roomAdminLists(rooms) {
+  const block = (screen) => {
+    const want = screen === "tv" ? "tv" : "off";
+    const rows = (rooms || []).filter((r) => (r.screen === "tv" ? "tv" : "off") === want);
+    const title = want === "tv" ? t("onScreenRooms") : t("offScreenRooms");
+    return `
+      <h3 class="queue-sec">${title}</h3>
+      ${rows.length ? rows.map((r) => `
+        <div class="room-admin">
+          <div>
+            <b>${esc(r.name || r.code)}</b>
+            <span class="mut"> · ${esc(r.code)}${r.host ? ` · ${esc(r.host)}` : ""} · ${r.guests || 0} · ${esc(r.phase || "lobby")}</span>
+          </div>
+          <button class="btn danger" type="button" data-delete-room="${esc(r.code)}">${t("delete")}</button>
+        </div>`).join("") : `<p class="mut">${t("noRooms")}</p>`}`;
+  };
+  return `${block("off")}${block("tv")}`;
+}
+
 function renderRooms(panel) {
   const rooms = state.queue.rooms || [];
   panel.innerHTML = `
@@ -506,14 +525,7 @@ function renderRooms(panel) {
         <button class="btn" id="refreshRooms">${t("refreshRooms")}</button>
       </div>
       <p class="mut">${t("roomsNote")}</p>
-      ${rooms.length ? rooms.map((r) => `
-        <div class="room-admin">
-          <div>
-            <b>${esc(r.code)}</b>
-            <span class="mut"> · ${esc(r.host || "TV")} · ${r.guests || 0} · ${esc(r.phase || "lobby")}</span>
-          </div>
-          <button class="btn danger" type="button" data-delete-room="${esc(r.code)}">${t("delete")}</button>
-        </div>`).join("") : `<p class="mut" style="margin-top:12px">${t("noRooms")}</p>`}
+      ${roomAdminLists(rooms)}
     </div>`;
   document.getElementById("refreshRooms")?.addEventListener("click", () => loadQueue(true));
   panel.querySelectorAll("[data-delete-room]").forEach((b) =>
@@ -647,14 +659,7 @@ function renderQueue(panel) {
         <button class="btn" id="refreshRooms">${t("refreshRooms")}</button>
       </div>
       <p class="mut">${t("roomsNote")}</p>
-      ${rooms.length ? rooms.map((r) => `
-        <div class="room-admin">
-          <div>
-            <b>${esc(r.code)}</b>
-            <span class="mut"> · ${esc(r.host || "TV")} · ${r.guests || 0} · ${esc(r.phase || "lobby")}</span>
-          </div>
-          <button class="btn danger" type="button" data-delete-room="${esc(r.code)}">${t("delete")}</button>
-        </div>`).join("") : `<p class="mut" style="margin-top:12px">${t("noRooms")}</p>`}
+      ${roomAdminLists(rooms)}
     </div>`;
 
   document.getElementById("refreshQueue")?.addEventListener("click", () => loadQueue(true));
