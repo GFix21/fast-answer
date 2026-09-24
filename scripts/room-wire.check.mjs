@@ -52,6 +52,9 @@ const shown = redactState({ phase: "reveal", i: 1, qs: deck });
 assert.equal(shown.qs[1].correctIndex, 2);
 const breaking = redactState({ phase: "setbreak", i: 1, qs: deck });
 assert.equal(breaking.qs[1].prompt, undefined);
+const between = redactState({ phase: "between", i: 1, qs: deck });
+assert.equal(between.qs[1].prompt, undefined);
+assert.equal(between.qs[1].correctIndex, undefined);
 
 const weekly = JSON.parse(fs.readFileSync(new URL("../questions.json", import.meta.url), "utf8"));
 const ramp = orderShowSets(dealRamp(weekly, { seats: ["gen-x", "gen-z"] }));

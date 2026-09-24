@@ -594,7 +594,9 @@ function isSeatedPlay() {
 }
 function allPadsReady() {
   const pads = humanPads();
-  if (!pads.length) return false;
+  const hostPlays = role !== "pad" && !state.onScreen && !isTvDisplay();
+  if (!pads.length && !hostPlays) return false;
+  if (hostPlays && !state.readyIds[state.youId]) return false;
   return pads.every((g) => state.readyIds[g.id]);
 }
 function escapeHtml(s) {
@@ -2115,6 +2117,8 @@ function continueRound() {
     startSetBreak(next.tier);
     return;
   }
+  state.picked = -1;
+  state.phase = "between";
   state.pose = "next";
   paint();
   publish();
@@ -3869,6 +3873,7 @@ function playHTML() {
       : state.phase === "answer" || (!state.onScreen && !pad && state.phase === "buzz");
   let prompt;
   if (readyPhase) prompt = "";
+  else if (state.phase === "between") prompt = "";
   else if (endPhase) prompt = tt("showEnd");
   else if (ld?.phase === "wager") prompt = `LOCKDOWN — ${ld.name} · ${tt("lockdownWagers")}`;
   else if (ld?.phase === "intro") prompt = escapeHtml(tt("lockRulesClock", ld.introLeft));
@@ -3886,17 +3891,20 @@ function playHTML() {
     ? `<p class="q-slang">${escapeHtml(q.slang)}</p>`
     : "";
   const backMore = q?.lockdownJump === "back-more" ? ` · ${tt("lockdownBackMore")}` : "";
+  const between = state.phase === "between";
   const cat = readyPhase
     ? tt("ready")
-    : endPhase
-      ? tt("logoEnd")
-      : breaking
-        ? tt("setBreakCat")
+    : between
+      ? ""
+      : endPhase
+        ? tt("logoEnd")
+        : breaking
+          ? tt("setBreakCat")
           : (ld
-          ? lockdownLogo(ld, backMore)
-          : (q && !pad ? escapeHtml([q.categoryTitle, questionCredit(q)].filter(Boolean).join(" · ")) : (pad ? tt("yourPad") : "")));
-  const tier = readyPhase ? tt("logoReady") : (endPhase ? tt("logoEnd") : (breaking ? tt("setBreakCat") : (ld ? tt("lockdownWord") : (q ? tierName(q.tier) : tt("logoEnd")))));
-  const n = readyPhase || ld || endPhase || breaking ? "" : ` · ${state.i + 1}/${state.qs.length || ROUND}`;
+            ? lockdownLogo(ld, backMore)
+            : (q && !pad ? escapeHtml([q.categoryTitle, questionCredit(q)].filter(Boolean).join(" · ")) : (pad ? tt("yourPad") : "")));
+  const tier = readyPhase ? tt("logoReady") : (endPhase ? tt("logoEnd") : (between ? "" : (breaking ? tt("setBreakCat") : (ld ? tt("lockdownWord") : (q ? tierName(q.tier) : tt("logoEnd"))))));
+  const n = readyPhase || ld || endPhase || breaking || between ? "" : ` · ${state.i + 1}/${state.qs.length || ROUND}`;
   const buzzLabel = readyPhase
     ? (state.readyIds[state.youId] ? tt("ready") : tt("buzzReady"))
     : tt("buzz");
