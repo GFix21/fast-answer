@@ -1,0 +1,218 @@
+{
+  "locale": "de",
+  "generation": "baby-boomer",
+  "tier": "extreme",
+  "set": "SET00002",
+  "held": 10,
+  "questions": [
+    {
+      "id": "s2-w39-f-boomer-armstrong-quote",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Finale · Mondzeile",
+      "prompt": "Vervollständigen Sie Neil Armstrongs Mondsatz: „That’s one small step for [a] man, one giant leap for ___.“ diesmal",
+      "choices": [
+        "NASA",
+        "Texas",
+        "rockets",
+        "mankind"
+      ],
+      "correctIndex": 3,
+      "banterHint": null,
+      "factKey": "w39-f-boomer-armstrong-quote",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-py-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Paraguay?",
+      "choices": [
+        "Ciudad del Este",
+        "Asunción",
+        "Montevideo",
+        "Encarnación"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,",
+      "factKey": "cq-w39-bo-x-py-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-jm-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Jamaika?",
+      "choices": [
+        "Montego Bay",
+        "Spanish Town",
+        "Port-au-Prince",
+        "Kingston"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,",
+      "factKey": "cq-w39-bo-x-jm-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-ni-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Nicaragua?",
+      "choices": [
+        "León",
+        "San José",
+        "Granada",
+        "Managua"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,",
+      "factKey": "cq-w39-bo-x-ni-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-lt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Litauen?",
+      "choices": [
+        "Vilnius",
+        "Riga",
+        "Kaunas",
+        "Warschau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,",
+      "factKey": "cq-w39-bo-x-lt-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-md-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von der Republik Moldau?",
+      "choices": [
+        "Bălți",
+        "Bukarest",
+        "Tiraspol",
+        "Chișinău"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,",
+      "factKey": "cq-w39-bo-x-md-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-om-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Oman?",
+      "choices": [
+        "Maskat",
+        "Sohar",
+        "Salalah",
+        "Dubai"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,",
+      "factKey": "cq-w39-bo-x-om-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-ne-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Niger?",
+      "choices": [
+        "Zinder",
+        "Bamako",
+        "Agadez",
+        "Niamey"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,",
+      "factKey": "cq-w39-bo-x-ne-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-atomic-u",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Ordnungszahl hat Uran diesmal?",
+      "choices": [
+        "92",
+        "82",
+        "88",
+        "79"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,",
+      "factKey": "cq-w39-bo-x-atomic-u",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-y-magna-x",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, wurde die Magna Carta besiegelt?",
+      "choices": [
+        "1492",
+        "1776",
+        "1215",
+        "1066"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na klar,",
+      "factKey": "cq-w39-bo-x-y-magna-x",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

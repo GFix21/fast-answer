@@ -1,0 +1,427 @@
+{
+  "locale": "de",
+  "generation": "gen-z",
+  "tier": "difficult",
+  "set": "SET00002",
+  "held": 20,
+  "questions": [
+    {
+      "id": "s2-w39-d-genz-openai",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Modell-Manieren",
+      "prompt": "Wann, in welchem Jahr, veröffentlichte OpenAI ChatGPT für die Öffentlichkeit?",
+      "choices": [
+        "2018",
+        "2024",
+        "2022",
+        "2020"
+      ],
+      "correctIndex": 2,
+      "banterHint": null,
+      "factKey": "w39-d-genz-openai",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-w39-d-genz-parasite",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Treppen & Untertitel",
+      "prompt": "Aus welchem Land stammt der Film Parasite, der den Oscar als Bester Film gewann diesmal?",
+      "choices": [
+        "Südkorea",
+        "Japan",
+        "Frankreich",
+        "Mexiko"
+      ],
+      "correctIndex": 0,
+      "banterHint": null,
+      "factKey": "w39-d-genz-parasite",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-d-genz-webb",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fernes Auge",
+      "prompt": "Wann, in welchem Jahr, startete das James-Webb-Weltraumteleskop?",
+      "choices": [
+        "2021",
+        "2024",
+        "2016",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Am ersten Weihnachtstag, von einem Weltraumbahnhof in Südamerika.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-d-genz-webb",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-af-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Afghanistan?",
+      "choices": [
+        "Kandahar",
+        "Mazar-i-Sharif",
+        "Herat",
+        "Kabul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-af-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-mg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Madagaskar?",
+      "choices": [
+        "Antananarivo",
+        "Nairobi",
+        "Antsirabe",
+        "Toamasina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-mg-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-zm-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Sambia?",
+      "choices": [
+        "Harare",
+        "Lusaka",
+        "Ndola",
+        "Kitwe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-zm-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-bulb-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu a practical incandescent light bulb sold widely in the United States?",
+      "choices": [
+        "Nikola Tesla",
+        "George Westinghouse",
+        "Alexander Graham Bell",
+        "Thomas Edison"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-bulb-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-pasteur-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the process called pasteurization?",
+      "choices": [
+        "Louis Pasteur",
+        "Robert Koch",
+        "Joseph Lister",
+        "Edward Jenner"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-pasteur-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-lovelace-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the notes often called the first computer program, on Babbage's engine?",
+      "choices": [
+        "Charles Babbage",
+        "Grace Hopper",
+        "Alan Turing",
+        "Ada Lovelace"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-lovelace-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-shepard-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the first American in space?",
+      "choices": [
+        "Gus Grissom",
+        "Alan Shepard",
+        "John Glenn",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-shepard-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-y-independence",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die Unabhängigkeitserklärung der USA angenommen wurde?",
+      "choices": [
+        "1812",
+        "1776",
+        "1787",
+        "1789"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-y-independence",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-y-revolution-ru",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die Oktoberrevolution in Russland stattfand?",
+      "choices": [
+        "1917",
+        "1905",
+        "1914",
+        "1922"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-y-revolution-ru",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-y-china-prc",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die Volksrepublik China ausgerufen wurde?",
+      "choices": [
+        "1949",
+        "1950",
+        "1912",
+        "1945"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-y-china-prc",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-y-election-sa",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, Südafrika die erste Wahl mit allgemeinem Erwachsenenwahlrecht abhielt?",
+      "choices": [
+        "1990",
+        "2000",
+        "1986",
+        "1994"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-y-election-sa",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-y-beijing-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die Olympischen Sommerspiele in Peking stattfanden?",
+      "choices": [
+        "2008",
+        "2012",
+        "2004",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-y-beijing-olympics",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-y-pluto",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die Internationale Astronomische Union Pluto zum Zwergplaneten erklärte?",
+      "choices": [
+        "2003",
+        "1999",
+        "2015",
+        "2006"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-y-pluto",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-y-panama",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, der Panamakanal für den Verkehr geöffnet wurde?",
+      "choices": [
+        "1904",
+        "1898",
+        "1869",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-y-panama",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-y-superbowl",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, der erste Super Bowl gespielt wurde?",
+      "choices": [
+        "1970",
+        "1960",
+        "1967",
+        "1958"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-y-superbowl",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-diff-protons-o",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Zahl gilt für Protonen hat ein Sauerstoffatom?",
+      "choices": [
+        "8",
+        "6",
+        "16",
+        "2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-diff-protons-o",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-d-diff-airlift",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, begann die Berliner Luftbrücke?",
+      "choices": [
+        "1953",
+        "1945",
+        "1948",
+        "1961"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,",
+      "factKey": "cq-w39-gz-d-diff-airlift",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

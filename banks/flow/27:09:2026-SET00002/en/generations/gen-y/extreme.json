@@ -1,0 +1,218 @@
+{
+  "locale": "en",
+  "generation": "gen-y",
+  "tier": "extreme",
+  "set": "SET00002",
+  "held": 10,
+  "questions": [
+    {
+      "id": "s2-w39-f-geny-matrix-arch",
+      "tier": "extreme",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Finale · Code Green",
+      "prompt": "In The Matrix Reloaded / Revolutions lore, what title is given to the program that created the Matrix this round?",
+      "choices": [
+        "The Architect",
+        "The Oracle only",
+        "Agent Smith only",
+        "Morpheus"
+      ],
+      "correctIndex": 0,
+      "banterHint": null,
+      "factKey": "w39-f-geny-matrix-arch",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gy-x-ve-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Venezuela?",
+      "choices": [
+        "Caracas",
+        "Maracaibo",
+        "Valencia",
+        "Bogotá"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,",
+      "factKey": "cq-w39-gy-x-ve-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gy-x-cr-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Costa Rica?",
+      "choices": [
+        "Limón",
+        "Liberia",
+        "San José",
+        "Panama City"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,",
+      "factKey": "cq-w39-gy-x-cr-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gy-x-pg-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Papua New Guinea?",
+      "choices": [
+        "Port Moresby",
+        "Lae",
+        "Mount Hagen",
+        "Suva"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,",
+      "factKey": "cq-w39-gy-x-pg-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gy-x-mt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Malta?",
+      "choices": [
+        "Valletta",
+        "Sliema",
+        "Mdina",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,",
+      "factKey": "cq-w39-gy-x-mt-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gy-x-am-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Armenia?",
+      "choices": [
+        "Gyumri",
+        "Baku",
+        "Yerevan",
+        "Tbilisi"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,",
+      "factKey": "cq-w39-gy-x-am-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gy-x-rw-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Rwanda?",
+      "choices": [
+        "Kigali",
+        "Kampala",
+        "Gisenyi",
+        "Butare"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,",
+      "factKey": "cq-w39-gy-x-rw-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gy-x-dz-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Algeria?",
+      "choices": [
+        "Tunis",
+        "Algiers",
+        "Oran",
+        "Constantine"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Just saying,",
+      "factKey": "cq-w39-gy-x-dz-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gy-x-atomic-pb",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which is the atomic number of lead?",
+      "choices": [
+        "82",
+        "26",
+        "50",
+        "80"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,",
+      "factKey": "cq-w39-gy-x-atomic-pb",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gy-x-harp-strings",
+      "tier": "extreme",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Fast fact",
+      "prompt": "What number of strings does a concert pedal harp usually have?",
+      "choices": [
+        "46",
+        "40",
+        "47",
+        "88"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Just saying,",
+      "factKey": "cq-w39-gy-x-harp-strings",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

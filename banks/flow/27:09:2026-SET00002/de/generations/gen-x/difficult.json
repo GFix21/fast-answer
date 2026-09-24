@@ -1,0 +1,427 @@
+{
+  "locale": "de",
+  "generation": "gen-x",
+  "tier": "difficult",
+  "set": "SET00002",
+  "held": 20,
+  "questions": [
+    {
+      "id": "s2-w39-d-genx-gt-year",
+      "tier": "difficult",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Studio-Chronologie",
+      "prompt": "Wann, in welchem Jahr, hatte The Grand Tour Premiere auf Amazon Prime Video?",
+      "choices": [
+        "2015",
+        "2018",
+        "2014",
+        "2016"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Nach der BBC, bevor alle übers Campen stritten.",
+      "factKey": "w39-d-genx-gt-year",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-w39-d-genx-berlin",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Mauer-Uhr",
+      "prompt": "Wann, in welchem Jahr, fiel die Berliner Mauer?",
+      "choices": [
+        "1989",
+        "1979",
+        "1985",
+        "1991"
+      ],
+      "correctIndex": 0,
+      "banterHint": null,
+      "factKey": "w39-d-genx-berlin",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-d-genx-columbia",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Erster Flug",
+      "prompt": "Welches Space Shuttle flog 1981 die erste Orbitalmission diesmal?",
+      "choices": [
+        "Discovery",
+        "Challenger",
+        "Columbia",
+        "Atlantis"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Das Programm hatte mehrere Namen. Dieses flog zuerst.",
+      "slang": "Na ja,",
+      "factKey": "cq-d-genx-columbia",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-np-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Nepal?",
+      "choices": [
+        "Kathmandu",
+        "Neu-Delhi",
+        "Lalitpur",
+        "Pokhara"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-np-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-kg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Kirgisistan?",
+      "choices": [
+        "Bishkek",
+        "Almaty",
+        "Tashkent",
+        "Osh"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-kg-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-bw-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Botswana?",
+      "choices": [
+        "Windhoek",
+        "Gaborone",
+        "Francistown",
+        "Maun"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-bw-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-periodic-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the first widely used periodic table?",
+      "choices": [
+        "Antoine Lavoisier",
+        "John Dalton",
+        "Niels Bohr",
+        "Dmitri Mendeleev"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-periodic-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-radium-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the discovery of radium, shared with Pierre Curie?",
+      "choices": [
+        "Marie Curie",
+        "Lise Meitner",
+        "Irene Joliot-Curie",
+        "Dorothy Hodgkin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-radium-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-marconi-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the first practical radio system across distance?",
+      "choices": [
+        "Thomas Edison",
+        "Lee de Forest",
+        "Heinrich Hertz",
+        "Guglielmo Marconi"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-marconi-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-ride-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the first American woman in space?",
+      "choices": [
+        "Sally Ride",
+        "Valentina Tereshkova",
+        "Eileen Collins",
+        "Mae Jemison"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-ride-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-y-shakespeare",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, William Shakespeare geboren wurde?",
+      "choices": [
+        "1660",
+        "1564",
+        "1616",
+        "1500"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-y-shakespeare",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-y-ww1-start",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, der Erste Weltkrieg begann?",
+      "choices": [
+        "1918",
+        "1905",
+        "1939",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-y-ww1-start",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-y-ve",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, der Tag des Sieges in Europa das Ende des Krieges in Europa markierte?",
+      "choices": [
+        "1941",
+        "1950",
+        "1945",
+        "1944"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-y-ve",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-y-nixon",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, Richard Nixon vom Präsidentenamt zurücktrat?",
+      "choices": [
+        "1969",
+        "1974",
+        "1972",
+        "1976"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-y-nixon",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-y-hongkong",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, Hongkong an China übergeben wurde?",
+      "choices": [
+        "1997",
+        "1984",
+        "1999",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-y-hongkong",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-y-brexit-vote",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, das Vereinigte Königreich für den Austritt aus der Europäischen Union stimmte?",
+      "choices": [
+        "2016",
+        "2005",
+        "2015",
+        "2020"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-y-brexit-vote",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-y-wright",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die Gebrüder Wright bei Kitty Hawk flogen?",
+      "choices": [
+        "1914",
+        "1927",
+        "1903",
+        "1896"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-y-wright",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-y-olympics-first",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die ersten modernen Olympischen Spiele stattfanden?",
+      "choices": [
+        "776",
+        "1900",
+        "1896",
+        "1912"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-y-olympics-first",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-diff-absolute",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Der absolute Nullpunkt liegt bei etwa wie viel Grad Celsius diesmal?",
+      "choices": [
+        "-273",
+        "0",
+        "-100",
+        "-460"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-diff-absolute",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-d-diff-email",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, sandte Ray Tomlinson die erste vernetzte E-Mail?",
+      "choices": [
+        "1965",
+        "1995",
+        "1971",
+        "1983"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,",
+      "factKey": "cq-w39-gx-d-diff-email",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-x",
+  "tier": "extreme",
+  "set": "SET00002",
+  "held": 10,
+  "questions": [
+    {
+      "id": "s2-w39-f-genx-stig-reveal",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Finale · Casque ôté",
+      "prompt": "Quel pilote de course a été révélé en 2009 comme le Stig alors en poste de la BBC Top Gear  cette fois?",
+      "choices": [
+        "Damon Hill",
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Ben Collins"
+      ],
+      "correctIndex": 3,
+      "banterHint": null,
+      "factKey": "w39-f-genx-stig-reveal",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-x-ec-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de l'Équateur?",
+      "choices": [
+        "Quito",
+        "Guayaquil",
+        "Cuenca",
+        "Lima"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,",
+      "factKey": "cq-w39-gx-x-ec-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-x-do-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de la République dominicaine?",
+      "choices": [
+        "Santiago de los Caballeros",
+        "Punta Cana",
+        "Port-au-Prince",
+        "Santo Domingo"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,",
+      "factKey": "cq-w39-gx-x-do-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-x-fj-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale des Fidji?",
+      "choices": [
+        "Suva",
+        "Nadi",
+        "Lautoka",
+        "Wellington"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,",
+      "factKey": "cq-w39-gx-x-fj-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-x-lu-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale du Luxembourg?",
+      "choices": [
+        "Metz",
+        "Luxembourg",
+        "Esch-sur-Alzette",
+        "Bruxelles"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,",
+      "factKey": "cq-w39-gx-x-lu-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-x-by-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de la Biélorussie?",
+      "choices": [
+        "Brest",
+        "Gomel",
+        "Moscou",
+        "Minsk"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,",
+      "factKey": "cq-w39-gx-x-by-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-x-bh-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de Bahreïn?",
+      "choices": [
+        "Manama",
+        "Koweït",
+        "Doha",
+        "Riffa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,",
+      "factKey": "cq-w39-gx-x-bh-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-x-tn-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de la Tunisie?",
+      "choices": [
+        "Tunis",
+        "Carthage",
+        "Sousse",
+        "Sfax"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,",
+      "factKey": "cq-w39-gx-x-tn-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-x-atomic-au",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quel est le numéro atomique de l'or ?",
+      "choices": [
+        "47",
+        "29",
+        "82",
+        "79"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Bref,",
+      "factKey": "cq-w39-gx-x-atomic-au",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gx-x-feet-mile",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait clair",
+      "prompt": "On compte combien de pieds dans un mile ?",
+      "choices": [
+        "1000",
+        "1609",
+        "1760",
+        "5280"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Bref,",
+      "factKey": "cq-w39-gx-x-feet-mile",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

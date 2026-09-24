@@ -14,5 +14,20 @@
   ],
   "target": 1050,
   "placementTarget": 30,
-  "note": "Creators fill generations and the 30-question placement folder before qualityUntil. The set stays banked for later games."
+  "note": "Creators filled this set during the 30-hour quality window. It takes effect on startedAt, then runs 4 days.",
+  "filledAt": "2026-09-24T15:19:13.582Z",
+  "counts": {
+    "en": {
+      "questions": 1050,
+      "placement": 30
+    },
+    "fr-CA": {
+      "questions": 1050,
+      "placement": 30
+    },
+    "de": {
+      "questions": 1050,
+      "placement": 30
+    }
+  }
 }

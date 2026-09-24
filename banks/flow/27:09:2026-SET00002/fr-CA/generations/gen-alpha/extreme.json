@@ -1,0 +1,218 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-alpha",
+  "tier": "extreme",
+  "set": "SET00002",
+  "held": 10,
+  "questions": [
+    {
+      "id": "s2-w39-f-alpha-minecraft-biome",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Finale · Deep Dark",
+      "prompt": "Dans Minecraft, quelle créature hostile est fortement associée au Deep Dark / aux cités antiques  cette fois?",
+      "choices": [
+        "Warden",
+        "Golem de fer",
+        "Creeper uniquement",
+        "Ender Dragon uniquement"
+      ],
+      "correctIndex": 0,
+      "banterHint": null,
+      "factKey": "w39-f-alpha-minecraft-biome",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-al-x-sr-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale du Suriname?",
+      "choices": [
+        "Georgetown",
+        "Paramaribo",
+        "Caracas",
+        "Cayenne"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,",
+      "factKey": "cq-w39-al-x-sr-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-al-x-gt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale du Guatemala?",
+      "choices": [
+        "Antigua",
+        "Quetzaltenango",
+        "San Salvador",
+        "Guatemala"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,",
+      "factKey": "cq-w39-al-x-gt-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-al-x-si-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de la Slovénie?",
+      "choices": [
+        "Ljubljana",
+        "Zagreb",
+        "Trieste",
+        "Maribor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,",
+      "factKey": "cq-w39-al-x-si-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-al-x-mk-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de la Macédoine du Nord?",
+      "choices": [
+        "Bitola",
+        "Tirana",
+        "Skopje",
+        "Ohrid"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,",
+      "factKey": "cq-w39-al-x-mk-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-al-x-az-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de l'Azerbaïdjan?",
+      "choices": [
+        "Tbilissi",
+        "Yerevan",
+        "Ganja",
+        "Bakou"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,",
+      "factKey": "cq-w39-al-x-az-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-al-x-cm-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale du Cameroun?",
+      "choices": [
+        "Garoua",
+        "Lagos",
+        "Yaoundé",
+        "Douala"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,",
+      "factKey": "cq-w39-al-x-cm-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-al-x-sd-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale du Soudan?",
+      "choices": [
+        "Omdurman",
+        "Port-Soudan",
+        "Le Caire",
+        "Khartoum"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,",
+      "factKey": "cq-w39-al-x-sd-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-al-x-atomic-w",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quel est le numéro atomique du tungstène ?",
+      "choices": [
+        "74",
+        "42",
+        "26",
+        "78"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,",
+      "factKey": "cq-w39-al-x-atomic-w",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-al-x-chromosomes",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "Une cellule humaine typique compte combien de chromosomes  cette fois?",
+      "choices": [
+        "48",
+        "23",
+        "46",
+        "44"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,",
+      "factKey": "cq-w39-al-x-chromosomes",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

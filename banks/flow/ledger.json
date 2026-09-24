@@ -35,7 +35,22 @@
       "id": "SET00002",
       "folder": "27:09:2026-SET00002",
       "qualityUntil": "2026-09-25T20:59:40.973Z",
-      "status": "quality"
+      "status": "quality",
+      "counts": {
+        "en": {
+          "questions": 1050,
+          "placement": 30
+        },
+        "fr-CA": {
+          "questions": 1050,
+          "placement": 30
+        },
+        "de": {
+          "questions": 1050,
+          "placement": 30
+        }
+      },
+      "filledAt": "2026-09-24T15:19:13.582Z"
     }
   ]
 }

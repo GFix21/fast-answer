@@ -1,0 +1,218 @@
+{
+  "locale": "de",
+  "generation": "silent-generation",
+  "tier": "extreme",
+  "set": "SET00002",
+  "held": 10,
+  "questions": [
+    {
+      "id": "s2-w39-f-silent-cool-wall",
+      "tier": "extreme",
+      "topic": "grand-tour",
+      "generation": "silent-generation",
+      "categoryTitle": "Finale · Power Lap",
+      "prompt": "Welche Zone liegt an Top Gears Cool Wall zwischen Cool und Uncool diesmal?",
+      "choices": [
+        "Subzero",
+        "Slightly Warm",
+        "Meh",
+        "Seriously Uncool"
+      ],
+      "correctIndex": 3,
+      "banterHint": null,
+      "factKey": "w39-f-silent-cool-wall",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-x-uy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Uruguay?",
+      "choices": [
+        "Punta del Este",
+        "Montevideo",
+        "Buenos Aires",
+        "Salto"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-x-uy-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-x-ht-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Haiti?",
+      "choices": [
+        "Santo Domingo",
+        "Kingston",
+        "Cap-Haïtien",
+        "Port-au-Prince"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-x-ht-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-x-sv-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von El Salvador?",
+      "choices": [
+        "San Salvador",
+        "Santa Ana",
+        "Tegucigalpa",
+        "Guatemala-Stadt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-x-sv-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-x-lv-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Lettland?",
+      "choices": [
+        "Daugavpils",
+        "Vilnius",
+        "Riga",
+        "Tallinn"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-x-lv-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-x-ba-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Bosnien und Herzegowina?",
+      "choices": [
+        "Sarajevo",
+        "Banja Luka",
+        "Mostar",
+        "Zagreb"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-x-ba-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-x-cy-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Zypern?",
+      "choices": [
+        "Limassol",
+        "Larnaca",
+        "Athen",
+        "Nikosia"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-x-cy-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-x-ml-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Mali?",
+      "choices": [
+        "Sikasso",
+        "Timbuktu",
+        "Bamako",
+        "Dakar"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-x-ml-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-x-er-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Eritrea?",
+      "choices": [
+        "Asmara",
+        "Addis Abeba",
+        "Khartum",
+        "Massawa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-x-er-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-x-atomic-hg",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Welche Ordnungszahl hat Quecksilber diesmal?",
+      "choices": [
+        "79",
+        "30",
+        "82",
+        "80"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-x-atomic-hg",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

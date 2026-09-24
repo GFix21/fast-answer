@@ -1,0 +1,218 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-z",
+  "tier": "extreme",
+  "set": "SET00002",
+  "held": 10,
+  "questions": [
+    {
+      "id": "s2-w39-f-genz-fortnite-mode",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Finale · Cercle de tempête",
+      "prompt": "Le mode PvP free-to-play original de Fortnite qui a défini son boom s’appelle couramment comment  cette fois?",
+      "choices": [
+        "Battle Royale",
+        "Save the World uniquement",
+        "Creative uniquement",
+        "Rocket Racing uniquement"
+      ],
+      "correctIndex": 0,
+      "banterHint": null,
+      "factKey": "w39-f-genz-fortnite-mode",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-x-bo-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale constitutionnelle de la Bolivie ?",
+      "choices": [
+        "La Paz",
+        "Santa Cruz",
+        "Cochabamba",
+        "Sucre"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Le siège du gouvernement est une autre ville.",
+      "slang": "Sans chichi,",
+      "factKey": "cq-w39-gz-x-bo-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-x-pa-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale du Panama?",
+      "choices": [
+        "Colón",
+        "David",
+        "San José",
+        "Panama"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,",
+      "factKey": "cq-w39-gz-x-pa-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-x-ws-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale des Samoa?",
+      "choices": [
+        "Apia",
+        "Suva",
+        "Nuku'alofa",
+        "Pago Pago"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,",
+      "factKey": "cq-w39-gz-x-ws-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-x-al-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de l'Albanie?",
+      "choices": [
+        "Podgorica",
+        "Tirana",
+        "Durrës",
+        "Vlorë"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,",
+      "factKey": "cq-w39-gz-x-al-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-x-ge-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de la Géorgie?",
+      "choices": [
+        "Tbilissi",
+        "Yerevan",
+        "Bakou",
+        "Batumi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,",
+      "factKey": "cq-w39-gz-x-ge-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-x-ug-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de l'Ouganda?",
+      "choices": [
+        "Kampala",
+        "Gulu",
+        "Nairobi",
+        "Entebbe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,",
+      "factKey": "cq-w39-gz-x-ug-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-x-ly-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de la Libye?",
+      "choices": [
+        "Benghazi",
+        "Misrata",
+        "Tunis",
+        "Tripoli"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,",
+      "factKey": "cq-w39-gz-x-ly-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-x-atomic-ag",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quel est le numéro atomique de l'argent ?",
+      "choices": [
+        "79",
+        "29",
+        "50",
+        "47"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,",
+      "factKey": "cq-w39-gz-x-atomic-ag",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-gz-x-bones-adult",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fait clair",
+      "prompt": "Un squelette humain adulte compte environ combien d'os  cette fois?",
+      "choices": [
+        "186",
+        "206",
+        "180",
+        "256"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Sans chichi,",
+      "factKey": "cq-w39-gz-x-bones-adult",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

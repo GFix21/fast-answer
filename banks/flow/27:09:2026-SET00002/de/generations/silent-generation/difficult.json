@@ -1,0 +1,428 @@
+{
+  "locale": "de",
+  "generation": "silent-generation",
+  "tier": "difficult",
+  "set": "SET00002",
+  "held": 20,
+  "questions": [
+    {
+      "id": "s2-w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Kalter-Krieg-Himmel",
+      "prompt": "Francis Gary Powers wurde 1960 in welchem Typ US-Aufklärungsflugzeug abgeschossen diesmal?",
+      "choices": [
+        "Nur SR-71",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 2,
+      "banterHint": null,
+      "factKey": "w39-d-silent-u2",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-d-silent-suez",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Kanaljahr",
+      "prompt": "Wann, in welchem Jahr, begann die Suezkrise?",
+      "choices": [
+        "1967",
+        "1950",
+        "1956",
+        "1948"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Der Kanal schloss. Das Jahr ist das frühere.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-d-silent-suez",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-kh-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Kambodscha?",
+      "choices": [
+        "Phnom Penh",
+        "Vientiane",
+        "Bangkok",
+        "Siem Reap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-kh-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-mn-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von der Mongolei?",
+      "choices": [
+        "Ulaanbaatar",
+        "Peking",
+        "Darkhan",
+        "Erdenet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-mn-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-mz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Welche Stadt ist die Hauptstadt von Mosambik?",
+      "choices": [
+        "Maputo",
+        "Johannesburg",
+        "Nampula",
+        "Beira"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-mz-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-heliocentric-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the book On the Revolutions of the Heavenly Spheres?",
+      "choices": [
+        "Nicolaus Copernicus",
+        "Johannes Kepler",
+        "Tycho Brahe",
+        "Galileo Galilei"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-heliocentric-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-dna-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the 1953 model of the DNA double helix, with the scored pair?",
+      "choices": [
+        "Linus Pauling",
+        "Rosalind Franklin and Maurice Wilkins",
+        "James Watson and Francis Crick",
+        "Gregor Mendel"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-dna-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-maxwell-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the equations that united electricity and magnetism?",
+      "choices": [
+        "Michael Faraday",
+        "James Clerk Maxwell",
+        "Oliver Heaviside",
+        "Heinrich Hertz"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-maxwell-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-johnson-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wen nennt man bei zu the orbital calculations celebrated in Hidden Figures?",
+      "choices": [
+        "Mary Jackson",
+        "Margaret Hamilton",
+        "Katherine Johnson",
+        "Dorothy Vaughan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-johnson-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-benz-car",
+      "tier": "difficult",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wer baute den Benz Patent-Motorwagen diesmal?",
+      "choices": [
+        "Karl Benz",
+        "Henry Ford",
+        "Nikolaus Otto",
+        "Gottlieb Daimler"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-benz-car",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-civil-end",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, der Amerikanische Bürgerkrieg endete?",
+      "choices": [
+        "1861",
+        "1863",
+        "1870",
+        "1865"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-y-civil-end",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-new-deal",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, Franklin D. Roosevelt erstmals Präsident wurde?",
+      "choices": [
+        "1939",
+        "1945",
+        "1929",
+        "1933"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-y-new-deal",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-voting",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die USA den Voting Rights Act verabschiedeten?",
+      "choices": [
+        "1964",
+        "1968",
+        "1963",
+        "1965"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-y-voting",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-soviet",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die Sowjetunion aufgelöst wurde?",
+      "choices": [
+        "1991",
+        "1990",
+        "1989",
+        "1993"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-y-soviet",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-paris-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die Olympischen Sommerspiele in Paris stattfanden?",
+      "choices": [
+        "2016",
+        "2020",
+        "2024",
+        "2028"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-y-paris-olympics",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-black-hole",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, das erste Bild eines Schwarzen Lochs veröffentlicht wurde?",
+      "choices": [
+        "2019",
+        "2012",
+        "2022",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-y-black-hole",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-eiffel",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, der Eiffelturm fertiggestellt wurde?",
+      "choices": [
+        "1886",
+        "1789",
+        "1900",
+        "1889"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-y-eiffel",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-womens-cup",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, die erste FIFA-Frauen-Weltmeisterschaft stattfand?",
+      "choices": [
+        "1999",
+        "1995",
+        "1991",
+        "1985"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-y-womens-cup",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-diff-channel",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wann, in welchem Jahr, öffnete der Kanaltunnel für Fahrgäste?",
+      "choices": [
+        "1990",
+        "1981",
+        "2004",
+        "1994"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-diff-channel",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-diff-nitrogen",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Der größte Teil der Luft um die Erde ist welches Gas diesmal?",
+      "choices": [
+        "nitrogen",
+        "oxygen",
+        "argon",
+        "carbon dioxide"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,",
+      "factKey": "cq-w39-si-d-diff-nitrogen",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

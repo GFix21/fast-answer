@@ -1,0 +1,428 @@
+{
+  "locale": "fr-CA",
+  "generation": "silent-generation",
+  "tier": "difficult",
+  "set": "SET00002",
+  "held": 20,
+  "questions": [
+    {
+      "id": "s2-w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Ciel de Guerre froide",
+      "prompt": "Francis Gary Powers a été abattu en 1960 à bord de quel type d’avion de reconnaissance américain  cette fois?",
+      "choices": [
+        "SR-71 uniquement",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 2,
+      "banterHint": null,
+      "factKey": "w39-d-silent-u2",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-d-silent-suez",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Année du canal",
+      "prompt": "Quand, en quelle année, la crise de Suez a commencé ?",
+      "choices": [
+        "1967",
+        "1950",
+        "1956",
+        "1948"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le canal a fermé. L'année est la plus ancienne.",
+      "slang": "Dites,",
+      "factKey": "cq-d-silent-suez",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-kh-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale du Cambodge?",
+      "choices": [
+        "Phnom Penh",
+        "Vientiane",
+        "Bangkok",
+        "Siem Reap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-kh-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-mn-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale de la Mongolie?",
+      "choices": [
+        "Ulaanbaatar",
+        "Pékin",
+        "Darkhan",
+        "Erdenet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-mn-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-mz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle ville est la capitale du Mozambique?",
+      "choices": [
+        "Maputo",
+        "Johannesburg",
+        "Nampula",
+        "Beira"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-mz-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-heliocentric-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le crédit va à qui the book On the Revolutions of the Heavenly Spheres ?",
+      "choices": [
+        "Nicolaus Copernicus",
+        "Johannes Kepler",
+        "Tycho Brahe",
+        "Galileo Galilei"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-heliocentric-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-dna-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le crédit va à qui the 1953 model of the DNA double helix, with the scored pair ?",
+      "choices": [
+        "Linus Pauling",
+        "Rosalind Franklin and Maurice Wilkins",
+        "James Watson and Francis Crick",
+        "Gregor Mendel"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-dna-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-maxwell-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le crédit va à qui the equations that united electricity and magnetism ?",
+      "choices": [
+        "Michael Faraday",
+        "James Clerk Maxwell",
+        "Oliver Heaviside",
+        "Heinrich Hertz"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-maxwell-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-johnson-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le crédit va à qui the orbital calculations celebrated in Hidden Figures ?",
+      "choices": [
+        "Mary Jackson",
+        "Margaret Hamilton",
+        "Katherine Johnson",
+        "Dorothy Vaughan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-johnson-who",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-benz-car",
+      "tier": "difficult",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Qui est-ce qui a construit la Benz Patent-Motorwagen ?",
+      "choices": [
+        "Karl Benz",
+        "Henry Ford",
+        "Nikolaus Otto",
+        "Gottlieb Daimler"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-benz-car",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-civil-end",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quand, en quelle année, que la guerre de Sécession a fini ?",
+      "choices": [
+        "1861",
+        "1863",
+        "1870",
+        "1865"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-y-civil-end",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-new-deal",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quand, en quelle année, que Franklin D. Roosevelt est devenu président pour la première fois ?",
+      "choices": [
+        "1939",
+        "1945",
+        "1929",
+        "1933"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-y-new-deal",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-voting",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quand, en quelle année, que les États-Unis ont adopté le Voting Rights Act ?",
+      "choices": [
+        "1964",
+        "1968",
+        "1963",
+        "1965"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-y-voting",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-soviet",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quand, en quelle année, que l'Union soviétique s'est dissoute ?",
+      "choices": [
+        "1991",
+        "1990",
+        "1989",
+        "1993"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-y-soviet",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-paris-olympics",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quand, en quelle année, que les Jeux olympiques d'été de Paris ont eu lieu ?",
+      "choices": [
+        "2016",
+        "2020",
+        "2024",
+        "2028"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-y-paris-olympics",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-black-hole",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quand, en quelle année, que la première image d'un trou noir a été publiée ?",
+      "choices": [
+        "2019",
+        "2012",
+        "2022",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-y-black-hole",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-eiffel",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quand, en quelle année, que la tour Eiffel a été achevée ?",
+      "choices": [
+        "1886",
+        "1789",
+        "1900",
+        "1889"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-y-eiffel",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-y-womens-cup",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Quand, en quelle année, que la première Coupe du monde féminine de la FIFA a eu lieu ?",
+      "choices": [
+        "1999",
+        "1995",
+        "1991",
+        "1985"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-y-womens-cup",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-diff-channel",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "Le tunnel sous la Manche a ouvert aux passagers en quelle année  cette fois?",
+      "choices": [
+        "1990",
+        "1981",
+        "2004",
+        "1994"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-diff-channel",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-si-d-diff-nitrogen",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fait clair",
+      "prompt": "La plus grande part de l'air autour de la Terre est quel gaz  cette fois?",
+      "choices": [
+        "nitrogen",
+        "oxygen",
+        "argon",
+        "carbon dioxide"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Dites,",
+      "factKey": "cq-w39-si-d-diff-nitrogen",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

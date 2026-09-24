@@ -1,0 +1,848 @@
+{
+  "locale": "fr-CA",
+  "set": "SET00002",
+  "held": 30,
+  "target": 30,
+  "questions": [
+    {
+      "id": "s2-place-mg-e-ottawa",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Carte",
+      "prompt": "Quelle est la capitale du Canada  cette fois?",
+      "choices": [
+        "Ottawa",
+        "Toronto",
+        "Montréal",
+        "Vancouver"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Ancre multi-générationnelle — devrait presque toujours réussir ; un échec signale une bande basse.",
+      "sources": [
+        {
+          "label": "Wikipedia — Ottawa"
+        },
+        {
+          "label": "Government of Canada"
+        }
+      ],
+      "factKey": "place-mg-e-ottawa",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-mg-h-enterprise",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Sci-Fi",
+      "prompt": "Comment s’appelle le vaisseau commandé par le capitaine Kirk dans la série originale Star Trek  cette fois?",
+      "choices": [
+        "Falcon",
+        "Enterprise",
+        "Serenity",
+        "Galactica"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Discriminateur moyen selon les âges ; franchise célèbre, pas dépendante des mèmes.",
+      "sources": [
+        {
+          "label": "Wikipedia — USS Enterprise (NCC-1701)"
+        },
+        {
+          "label": "Star Trek: The Original Series"
+        }
+      ],
+      "factKey": "place-mg-h-enterprise",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-mg-d-stravinsky",
+      "tier": "difficult",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Deep Cut",
+      "prompt": "Qui a composé Le Sacre du printemps  cette fois?",
+      "choices": [
+        "Piotr Tchaïkovski",
+        "Igor Stravinsky",
+        "Ludwig van Beethoven",
+        "John Williams"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Sonde de bande haute — récompense la culture généraliste, pas l’argot générationnel.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Rite of Spring"
+        },
+        {
+          "label": "Ballet / programme histories"
+        }
+      ],
+      "factKey": "place-mg-d-stravinsky",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-silent-e-fdr",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Qui était président des États-Unis pendant la plus grande partie de la Seconde Guerre mondiale  cette fois?",
+      "choices": [
+        "Harry S. Truman",
+        "Franklin D. Roosevelt",
+        "Dwight D. Eisenhower",
+        "Herbert Hoover"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Silent Gen facile — civisme milieu de siècle de manuel ; juste via la scolarité.",
+      "sources": [
+        {
+          "label": "Wikipedia — Franklin D. Roosevelt"
+        },
+        {
+          "label": "US National Archives / WWII chronology"
+        }
+      ],
+      "factKey": "place-silent-e-fdr",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-silent-e-ike",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Le slogan de campagne des années 1950 « I Like Ike » promouvait quel futur président américain  cette fois?",
+      "choices": [
+        "Richard Nixon",
+        "John F. Kennedy",
+        "Lyndon B. Johnson",
+        "Dwight D. Eisenhower"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Silent Gen facile — slogan de Guerre froide largement enseigné.",
+      "sources": [
+        {
+          "label": "Wikipedia — Dwight D. Eisenhower"
+        },
+        {
+          "label": "Smithsonian / campaign history primers"
+        }
+      ],
+      "factKey": "place-silent-e-ike",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-silent-h-transistor",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Quand, en quelle année, le premier radio à transistors commercial (Regency TR-1) a été introduit ?",
+      "choices": [
+        "1971",
+        "1945",
+        "1962",
+        "1954"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Silent Gen difficile — chronologie tech milieu de siècle vérifiable.",
+      "sources": [
+        {
+          "label": "Wikipedia — Regency TR-1"
+        },
+        {
+          "label": "IEEE Spectrum / Computer History Museum notes"
+        }
+      ],
+      "factKey": "place-silent-h-transistor",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-silent-h-kerouac",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Dojo · Silent Gen",
+      "prompt": "Qui a écrit le roman de la Beat Generation On the Road  cette fois?",
+      "choices": [
+        "Ernest Hemingway",
+        "Jack Kerouac",
+        "F. Scott Fitzgerald",
+        "J. D. Salinger"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Silent Gen difficile — littérature canonique milieu de siècle, sans ambiguïté.",
+      "sources": [
+        {
+          "label": "Wikipedia — On the Road"
+        },
+        {
+          "label": "Library of Congress / Beat Generation primers"
+        }
+      ],
+      "factKey": "place-silent-h-kerouac",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-boomer-e-armstrong",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Qui a été la première personne à marcher sur la Lune  cette fois?",
+      "choices": [
+        "Youri Gagarine",
+        "Buzz Aldrin",
+        "Neil Armstrong",
+        "John Glenn"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer facile — universel culturel de l’ère Apollo.",
+      "sources": [
+        {
+          "label": "Wikipedia — Neil Armstrong"
+        },
+        {
+          "label": "NASA Apollo 11 mission pages"
+        }
+      ],
+      "factKey": "place-boomer-e-armstrong",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-boomer-e-apollo11",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Quand, en quelle année, Apollo 11 a fait atterrir les premiers humains sur la Lune ?",
+      "choices": [
+        "1975",
+        "1957",
+        "1969",
+        "1963"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer facile — fait d’année sur l’alunissage, connu des manuels.",
+      "sources": [
+        {
+          "label": "Wikipedia — Apollo 11"
+        },
+        {
+          "label": "NASA Apollo program chronology"
+        }
+      ],
+      "factKey": "place-boomer-e-apollo11",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-boomer-h-woodstock",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Quand, en quelle année, s’est tenu le festival de musique original de Woodstock ?",
+      "choices": [
+        "1964",
+        "1967",
+        "1972",
+        "1969"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Boomer difficile — discriminateur d’année iconique ; toujours vérifiable.",
+      "sources": [
+        {
+          "label": "Wikipedia — Woodstock"
+        },
+        {
+          "label": "Contemporary festival / NY history coverage"
+        }
+      ],
+      "factKey": "place-boomer-h-woodstock",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-boomer-h-sullivan",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Dojo · Boomer",
+      "prompt": "Quand, en quelle année, les Beatles sont-ils apparus pour la première fois dans The Ed Sullivan Show aux États-Unis ?",
+      "choices": [
+        "1969",
+        "1960",
+        "1964",
+        "1970"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Boomer difficile — année repère de la British Invasion.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Ed Sullivan Show"
+        },
+        {
+          "label": "Beatles / CBS broadcast histories — Feb 1964"
+        }
+      ],
+      "factKey": "place-boomer-h-sullivan",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-x-h-mtv",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Gen X",
+      "prompt": "Quelle chaîne câblée américaine a été lancée en 1981 avec un focus sur les clips musicaux  cette fois?",
+      "choices": [
+        "Nickelodeon",
+        "CNN",
+        "MTV",
+        "ESPN"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Item médian orienté Gen X ; juste pour les autres via osmose culturelle.",
+      "sources": [
+        {
+          "label": "Wikipedia — MTV"
+        },
+        {
+          "label": "Contemporary launch coverage — 1981"
+        }
+      ],
+      "factKey": "place-x-h-mtv",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-x-e-back-future",
+      "tier": "easy",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Écran 80s",
+      "prompt": "Dans Retour vers le futur, quel type de véhicule est la machine à remonter le temps  cette fois?",
+      "choices": [
+        "Un hélicoptère",
+        "Une cabine téléphonique",
+        "Un train à vapeur",
+        "Une DeLorean"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Facile avec saveur Gen X — encore très connu.",
+      "sources": [
+        {
+          "label": "Wikipedia — Back to the Future"
+        },
+        {
+          "label": "Film itself (1985)"
+        }
+      ],
+      "factKey": "place-x-e-back-future",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-y-h-matrix",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Gen Y",
+      "prompt": "Dans Matrix (1999), quelle pilule Neo prend-il pour voir la vérité  cette fois?",
+      "choices": [
+        "Rouge",
+        "Bleue",
+        "Verte",
+        "Jaune"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Sonde médiane milléniale — iconique, non ambiguë.",
+      "sources": [
+        {
+          "label": "Wikipedia — The Matrix"
+        },
+        {
+          "label": "The Matrix (1999) film"
+        }
+      ],
+      "factKey": "place-y-h-matrix",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-y-d-ipod",
+      "tier": "difficult",
+      "topic": "current-culture",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Early iPod",
+      "prompt": "Quand, en quelle année, Apple a présenté l’iPod original ?",
+      "choices": [
+        "1998",
+        "2001",
+        "2004",
+        "2007"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Chronologie tech milléniale plus difficile.",
+      "sources": [
+        {
+          "label": "Wikipedia — iPod"
+        },
+        {
+          "label": "Apple press archive — 2001"
+        }
+      ],
+      "factKey": "place-y-d-ipod",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-z-h-fortnite",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Gen Z",
+      "prompt": "Fortnite est surtout connu comme quel type de jeu  cette fois?",
+      "choices": [
+        "Un battle royale / jeu multijoueur en ligne",
+        "Un outil de préparation fiscale",
+        "Un moteur d’échecs",
+        "Un simulateur de vol des années 1980"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Gen Z médian — lisible pour les autres ; éviter les pièges d’argot.",
+      "sources": [
+        {
+          "label": "Wikipedia — Fortnite"
+        },
+        {
+          "label": "Epic Games product pages"
+        }
+      ],
+      "factKey": "place-z-h-fortnite",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-z-e-spotify",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Streams",
+      "prompt": "Lequel de ceux-ci est un grand service de streaming musical  cette fois?",
+      "choices": [
+        "Blockbuster",
+        "Spotify",
+        "Boutique CD Napster",
+        "Betamax Radio"
+      ],
+      "correctIndex": 1,
+      "scoringNote": "Contrôle facile de la culture musicale moderne.",
+      "sources": [
+        {
+          "label": "Wikipedia — Spotify"
+        },
+        {
+          "label": "Company / press materials"
+        }
+      ],
+      "factKey": "place-z-e-spotify",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-a-e-tablet",
+      "tier": "easy",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Gen Alpha",
+      "prompt": "Quel appareil est conçu surtout pour les applis et la vidéo sur écran tactile, pas pour un clavier physique  cette fois?",
+      "choices": [
+        "Tourne-disque",
+        "Télécopieur",
+        "Tablette",
+        "Uniquement une télécommande de téléviseur CRT"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Item facile équitable selon l’âge — reconnaissance d’objet, pas fluence mème.",
+      "sources": [
+        {
+          "label": "Wikipedia — Tablet computer"
+        },
+        {
+          "label": "Consumer electronics definitions"
+        }
+      ],
+      "factKey": "place-a-e-tablet",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-a-h-youtube",
+      "tier": "hard",
+      "topic": "current-culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Créateurs",
+      "prompt": "YouTube est avant tout une plateforme pour quoi  cette fois?",
+      "choices": [
+        "Vidéo mise en ligne et diffusée par les utilisateurs",
+        "Livraison postale du lendemain uniquement",
+        "Uniquement des ballons météo satellite",
+        "Pressage de vinyle"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Médian pertinent Gen Alpha ; toujours universel.",
+      "sources": [
+        {
+          "label": "Wikipedia — YouTube"
+        },
+        {
+          "label": "Google / YouTube about pages"
+        }
+      ],
+      "factKey": "place-a-h-youtube",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-gt-h-hammond",
+      "tier": "hard",
+      "topic": "grand-tour-top-gear",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Essence",
+      "prompt": "Quel présentateur de Top Gear / The Grand Tour est surnommé le Hamster  cette fois?",
+      "choices": [
+        "Jeremy Clarkson",
+        "James May",
+        "Richard Hammond",
+        "The Stig"
+      ],
+      "correctIndex": 2,
+      "scoringNote": "Item médian du sujet cœur produit.",
+      "sources": [
+        {
+          "label": "Wikipedia — Richard Hammond"
+        },
+        {
+          "label": "BBC Top Gear materials"
+        }
+      ],
+      "factKey": "place-gt-h-hammond",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-cars-e-abs",
+      "tier": "easy",
+      "topic": "cars-motoring",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Garage",
+      "prompt": "Que signifie l’abréviation ABS dans les systèmes de sécurité automobile  cette fois?",
+      "choices": [
+        "Anti-lock Braking System",
+        "Automatic Boost System",
+        "Axle Balance Sensor",
+        "Advanced Battery Switch"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Littératie automobile facile.",
+      "sources": [
+        {
+          "label": "Wikipedia — Anti-lock braking system"
+        },
+        {
+          "label": "NHTSA glossaries"
+        }
+      ],
+      "factKey": "place-cars-e-abs",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-gigi-e-flagship",
+      "tier": "easy",
+      "topic": "dj-gigi",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Gigi",
+      "prompt": "DJ Gigi est l’artiste phare de quel label montréalais  cette fois?",
+      "choices": [
+        "Island Records",
+        "Motown",
+        "XL Recordings",
+        "GMG Brand Label"
+      ],
+      "correctIndex": 3,
+      "scoringNote": "Marque easy-only — ne jamais monter le tier Gigi en placement.",
+      "sources": [
+        {
+          "label": "GMG Brand Label roster"
+        },
+        {
+          "label": "DJ Gigi public bio"
+        }
+      ],
+      "factKey": "place-gigi-e-flagship",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-art-d-braque",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Dojo · Cubisme",
+      "prompt": "Picasso a cofondé le cubisme avec quel artiste  cette fois?",
+      "choices": [
+        "Georges Braque",
+        "Andy Warhol",
+        "Jackson Pollock",
+        "Frida Kahlo"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Sonde culturelle difficile — signal Gold de capacité.",
+      "sources": [
+        {
+          "label": "Wikipedia — Cubism"
+        },
+        {
+          "label": "MoMA / Tate primers"
+        }
+      ],
+      "factKey": "place-art-d-braque",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-mus-e-violin",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Cordes",
+      "prompt": "Combien de cordes un violon standard a  cette fois?",
+      "choices": [
+        "4",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Fait facile sur un instrument. Une guitare a un autre nombre.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — violin"
+        },
+        {
+          "label": "Grove Music Online — violin"
+        }
+      ],
+      "factKey": "place-mus-e-violin",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-sci-h-saturn",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Dojo · Anneaux",
+      "prompt": "Quelle planète est surtout connue pour ses anneaux  cette fois?",
+      "choices": [
+        "Saturne",
+        "Jupiter",
+        "Neptune",
+        "Mars"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Fait difficile sur le système solaire. La Grande Tache rouge est une autre planète.",
+      "sources": [
+        {
+          "label": "NASA — Saturn"
+        },
+        {
+          "label": "Encyclopaedia Britannica — Saturn"
+        }
+      ],
+      "factKey": "place-sci-h-saturn",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-sci-e-water",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Formule",
+      "prompt": "Quel est le symbole chimique de l'eau  cette fois?",
+      "choices": [
+        "H2O",
+        "CO2",
+        "NaCl",
+        "O2"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Fait facile de chimie.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — water"
+        },
+        {
+          "label": "IUPAC — chemical formulae"
+        }
+      ],
+      "factKey": "place-sci-e-water",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-geo-h-indian",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Dojo · Entre les côtes",
+      "prompt": "Quel océan se trouve entre l'Afrique et l'Australie  cette fois?",
+      "choices": [
+        "Océan Indien",
+        "Océan Atlantique",
+        "Océan Pacifique",
+        "Océan Arctique"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Fait difficile de carte. Le plus grand océan est une autre question.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — Indian Ocean"
+        },
+        {
+          "label": "NOAA — ocean basins"
+        }
+      ],
+      "factKey": "place-geo-h-indian",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-sci-e-planets",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Orbites",
+      "prompt": "Combien de planètes le système solaire compte  cette fois?",
+      "choices": [
+        "8",
+        "9",
+        "7",
+        "12"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Compte facile après la définition de 2006.",
+      "sources": [
+        {
+          "label": "IAU — planet definition"
+        },
+        {
+          "label": "NASA — solar system"
+        }
+      ],
+      "factKey": "place-sci-e-planets",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-sci-h-mercury",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Dojo · Métal",
+      "prompt": "Quel métal est liquide à température ambiante  cette fois?",
+      "choices": [
+        "Mercure",
+        "Fer",
+        "Or",
+        "Cuivre"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Fait difficile sur les matériaux. Ici, c'est le métal, pas la planète.",
+      "sources": [
+        {
+          "label": "Encyclopaedia Britannica — mercury"
+        },
+        {
+          "label": "Royal Society of Chemistry — mercury"
+        }
+      ],
+      "factKey": "place-sci-h-mercury",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-place-geo-e-continents",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Dojo · Terres",
+      "prompt": "Combien de continents le modèle courant compte  cette fois?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "scoringNote": "Compte facile de géographie dans le modèle courant.",
+      "sources": [
+        {
+          "label": "National Geographic — continents"
+        },
+        {
+          "label": "Encyclopaedia Britannica — continent"
+        }
+      ],
+      "factKey": "place-geo-e-continents",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}

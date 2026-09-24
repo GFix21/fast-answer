@@ -1,0 +1,218 @@
+{
+  "locale": "en",
+  "generation": "baby-boomer",
+  "tier": "extreme",
+  "set": "SET00002",
+  "held": 10,
+  "questions": [
+    {
+      "id": "s2-w39-f-boomer-armstrong-quote",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Finale · Lunar Line",
+      "prompt": "Complete Neil Armstrong’s Moon line: “That’s one small step for [a] man, one giant leap for ___.” this round",
+      "choices": [
+        "NASA",
+        "Texas",
+        "rockets",
+        "mankind"
+      ],
+      "correctIndex": 3,
+      "banterHint": null,
+      "factKey": "w39-f-boomer-armstrong-quote",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-py-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Paraguay?",
+      "choices": [
+        "Ciudad del Este",
+        "Asunción",
+        "Montevideo",
+        "Encarnación"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,",
+      "factKey": "cq-w39-bo-x-py-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-jm-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Jamaica?",
+      "choices": [
+        "Montego Bay",
+        "Spanish Town",
+        "Port-au-Prince",
+        "Kingston"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,",
+      "factKey": "cq-w39-bo-x-jm-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-ni-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Nicaragua?",
+      "choices": [
+        "León",
+        "San José",
+        "Granada",
+        "Managua"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,",
+      "factKey": "cq-w39-bo-x-ni-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-lt-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Lithuania?",
+      "choices": [
+        "Vilnius",
+        "Riga",
+        "Kaunas",
+        "Warsaw"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,",
+      "factKey": "cq-w39-bo-x-lt-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-md-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Moldova?",
+      "choices": [
+        "Bălți",
+        "Bucharest",
+        "Tiraspol",
+        "Chișinău"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,",
+      "factKey": "cq-w39-bo-x-md-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-om-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Oman?",
+      "choices": [
+        "Muscat",
+        "Sohar",
+        "Salalah",
+        "Dubai"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,",
+      "factKey": "cq-w39-bo-x-om-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-ne-capital",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "Which city is the capital of Niger?",
+      "choices": [
+        "Zinder",
+        "Bamako",
+        "Agadez",
+        "Niamey"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,",
+      "factKey": "cq-w39-bo-x-ne-capital",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-atomic-u",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "Which is the atomic number of uranium?",
+      "choices": [
+        "92",
+        "82",
+        "88",
+        "79"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,",
+      "factKey": "cq-w39-bo-x-atomic-u",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    },
+    {
+      "id": "s2-cq-w39-bo-x-y-magna-x",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fast fact",
+      "prompt": "When, in which year, was Magna Carta sealed?",
+      "choices": [
+        "1492",
+        "1776",
+        "1215",
+        "1066"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Right on,",
+      "factKey": "cq-w39-bo-x-y-magna-x",
+      "addedSet": "SET00002",
+      "status": "pending",
+      "technique": null
+    }
+  ]
+}
