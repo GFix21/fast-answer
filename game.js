@@ -2764,9 +2764,12 @@ function joinQrChip(size = 120) {
   const open = state.qrOpen;
   const url = encodeURIComponent(shareUrl());
   return `<div class="qr-chip ${open ? "open" : "collapsed"}" id="qrChip">
-    <button type="button" class="qr-toggle" id="qrToggle" aria-expanded="${open ? "true" : "false"}" title="${escapeHtml(state.room)}">
-      ${open ? tt("hideJoin") : tt("joinChip", escapeHtml(state.room))}
-    </button>
+    <div class="qr-actions">
+      <button type="button" class="qr-toggle" id="qrToggle" aria-expanded="${open ? "true" : "false"}" title="${escapeHtml(state.room)}">
+        ${open ? tt("hideJoin") : tt("joinChip", escapeHtml(state.room))}
+      </button>
+      <button type="button" class="ghost qr-copy" data-copy="join">${tt("copy")}</button>
+    </div>
     ${open ? `<img class="qr corner" alt="${escapeHtml(tt("qrJoinAlt"))}" src="https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${url}"/>
     <p class="qr-code">${tt("roomLabel", `<b>${escapeHtml(state.room)}</b>`)}</p>` : ""}
   </div>`;
@@ -3582,15 +3585,15 @@ function roomLinksHTML() {
   const silk = tvSilkUrl(state.room);
   const join = shareUrl();
   return `
-    <label class="field" for="silkUrl">${tt("silkLink")}</label>
-    <div class="copy-row">
-      <input id="silkUrl" type="text" readonly value="${escapeHtml(silk)}"/>
-      <button class="ghost" id="copySilk" type="button">${tt("copy")}</button>
-    </div>
     <label class="field" for="joinUrl">${tt("joinLink")}</label>
     <div class="copy-row">
       <input id="joinUrl" type="text" readonly value="${escapeHtml(join)}"/>
-      <button class="ghost" id="copyJoin" type="button">${tt("copy")}</button>
+      <button class="ghost" type="button" data-copy="join">${tt("copy")}</button>
+    </div>
+    <label class="field" for="silkUrl">${tt("silkLink")}</label>
+    <div class="copy-row">
+      <input id="silkUrl" type="text" readonly value="${escapeHtml(silk)}"/>
+      <button class="ghost" type="button" data-copy="silk">${tt("copy")}</button>
     </div>`;
 }
 
@@ -3704,6 +3707,7 @@ function roomBody() {
       <div class="copy-row join-code-row">
         <input id="jc" type="text" value="${escapeHtml(state.room || state.joinInput)}" maxlength="8" placeholder="XXXX" autocomplete="off" autocapitalize="characters"/>
         <button class="primary" id="joinRoom" type="button">${tt("joinRoom")}</button>
+        <button class="ghost" type="button" data-copy="join">${tt("copy")}</button>
       </div>
       <p class="meta">${tt("joinByCode")}</p>
       ${roomLinksHTML()}
@@ -3751,10 +3755,12 @@ function roomBody() {
         <b>${escapeHtml(readyName)}</b>
         <span>${tt("activeReady")}</span>
       </div>
+      ${state.room ? `
+        <p class="room-code">${tt("roomLabel", `<b>${escapeHtml(state.room)}</b>`)}</p>
+        ${roomLinksHTML()}
+      ` : ""}
       ${state.roomSetup ? `
         <p class="dir-copy">${tt("hostSetup")}</p>
-        <p class="room-code">${tt("roomLabel", `<b>${escapeHtml(state.room || "····")}</b>`)}</p>
-        ${roomLinksHTML()}
         ${topicsBody()}
         <button class="primary" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
         <button class="ghost" id="castRoom" type="button">${tt("castThisRoom")}</button>
@@ -3986,7 +3992,7 @@ function lobbyHTML() {
       <div class="logo">Fast Answer!<small>${tt("tagline")}</small></div>
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
-      ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span>` : ""}
+      ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span><button class="ghost top-copy" type="button" data-copy="join">${tt("copy")}</button>` : ""}
       ${headerLinks({ dojo: true, directions: true })}
       ${refreshNoticeHTML()}
     </div>
@@ -4135,6 +4141,7 @@ function playHTML() {
       <div class="top">
         <div class="logo">Fast Answer!<small>${tier}${n}</small></div>
         <div class="grow"></div>
+        ${!pad && state.room ? `<button class="ghost top-copy" type="button" data-copy="join">${tt("copy")}</button>` : ""}
         <button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>
         ${canLeaveNow() ? `<button class="word" id="quit" type="button">${leaveLabel}</button>` : ""}
         ${refreshNoticeHTML()}
@@ -4735,20 +4742,15 @@ function bindLobby() {
     state.joinInput = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
     state.room = state.joinInput;
   };
-  const copySilk = $("#copySilk");
-  if (copySilk) copySilk.onclick = async () => {
-    const url = ($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room);
-    const ok = await copyText(url);
-    state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
-    paint(true);
-  };
-  const copyJoin = $("#copyJoin");
-  if (copyJoin) copyJoin.onclick = async () => {
-    const url = ($("#joinUrl") && $("#joinUrl").value) || shareUrl();
-    const ok = await copyText(url);
-    state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
-    paint(true);
-  };
+  document.querySelectorAll("[data-copy]").forEach((b) => {
+    b.onclick = async () => {
+      const kind = b.dataset.copy === "silk" ? "silk" : "join";
+      const url = kind === "silk" ? (($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room)) : (($("#joinUrl") && $("#joinUrl").value) || shareUrl());
+      const ok = await copyText(url);
+      state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
+      paint(true);
+    };
+  });
   bindSliders();
   bindRules();
   const go = $("#go");

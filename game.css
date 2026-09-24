@@ -453,8 +453,11 @@ img.brand{
   position:fixed;z-index:7;
   right:10px;bottom:calc(10px + env(safe-area-inset-bottom));
   display:flex;flex-direction:column;align-items:flex-end;gap:6px;
-  max-width:min(42vw,200px);
+  max-width:min(70vw,280px);
 }
+.qr-actions{display:flex;gap:6px;align-items:center}
+.qr-copy{min-height:32px;padding:4px 12px;font-size:11px}
+.top-copy{min-height:32px;padding:4px 12px;flex-shrink:0}
 .qr-toggle{
   border:1px solid var(--line);
   background:color-mix(in oklab, var(--elev) 88%, transparent);
