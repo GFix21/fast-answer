@@ -10,7 +10,7 @@ process.env.FA_ROOMS_TMP = `${dir}-tmp`;
 process.env.FLOW_PASSWORD = "room-wire-test-secret";
 
 const { redactState } = await import("../lib/room-wire.js");
-const { hashProfilePassword } = await import("../lib/password.js");
+const { hashProfilePassword, hashesMatch } = await import("../lib/password.js");
 const { getFlowPassword } = await import("../lib/flow-auth.js");
 const { t } = await import("../i18n.js");
 const { dealRamp, SHOW_DEAL } = await import("../lib/generation-deal.js");
@@ -36,6 +36,11 @@ assert.doesNotMatch(t("de", "offScreen"), /Off Screen/);
 assert.notEqual(hashProfilePassword("same", "salt-a"), hashProfilePassword("same", "salt-b"));
 assert.equal(hashProfilePassword("legacy"), hashProfilePassword("legacy"));
 assert.notEqual(hashProfilePassword("legacy"), hashProfilePassword("legacy", "salt-a"));
+assert.equal(hashesMatch(hashProfilePassword("legacy", "salt-a"), hashProfilePassword("legacy", "salt-a")), true);
+assert.equal(hashesMatch(hashProfilePassword("legacy", "salt-a"), hashProfilePassword("other", "salt-a")), false);
+const gameSrc = fs.readFileSync(new URL("../game.js", import.meta.url), "utf8");
+assert.match(gameSrc, /DOOR_HASH = "[0-9a-f]{64}"/);
+assert.doesNotMatch(gameSrc, /D00r/);
 
 const deck = [
   { id: "a", tier: "easy", prompt: "past?", choices: ["a", "b", "c", "d"], correctIndex: 0 },

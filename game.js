@@ -21,7 +21,7 @@ import {
 } from "./lib/show-pace.js";
 import { dealRamp } from "./lib/generation-deal.js";
 import { slangFor } from "./q-and-a/bots/slang.js";
-import { hashProfilePassword } from "./lib/password.js";
+import { hashProfilePassword, hashesMatch } from "./lib/password.js";
 import { redactState } from "./lib/room-wire.js";
 import { spreadByGeneration } from "./lib/generation-deal.js";
 import {
@@ -555,7 +555,7 @@ async function verifyProfilePassword(pw) {
   const want = state.profile?.passwordHash;
   if (!want) return false;
   const got = hashProfilePassword(pw, state.profile?.passwordSalt || "");
-  return got === want;
+  return hashesMatch(got, want);
 }
 async function copyText(value) {
   const text = String(value || "");
@@ -3088,7 +3088,8 @@ function medalHTML(tier) {
   </div>`;
 }
 
-const DOOR_PASSWORD = "D00r%\u20AC";
+const DOOR_SALT = "fa-belt-door-v1";
+const DOOR_HASH = "9b260ab9e65792114d1d426493daf7d5fc5922e4293a3f317229dcd92a14040c";
 
 function placementBank() {
   const raw = (state.placementQs && state.placementQs.length)
@@ -3137,8 +3138,8 @@ function grantDoor() {
 }
 
 function submitBeltDoor(raw) {
-  const given = String(raw || "").trim().normalize("NFC");
-  if (given !== DOOR_PASSWORD.normalize("NFC")) {
+  const given = hashProfilePassword(String(raw || "").trim(), DOOR_SALT);
+  if (!hashesMatch(given, DOOR_HASH)) {
     state.statusMsg = tt("wrongPassword");
     paint(true);
     return;
