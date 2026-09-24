@@ -1,0 +1,734 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-x",
+  "tier": "hard",
+  "set": "SET00003",
+  "held": 29,
+  "questions": [
+    {
+      "id": "s3-in-tower-london",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, la Tour de Londres?",
+      "choices": [
+        "le Royaume-Uni",
+        "France",
+        "Irlande",
+        "les Pays-Bas"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-fluorine",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quoi le symbole chimique undefined?",
+      "choices": [
+        "F",
+        "Fl",
+        "Fr",
+        "Fo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-n-teeth",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Nombre",
+      "prompt": "Il y a combien de dents a un adulte, en comptant les dents de sagesse?",
+      "choices": [
+        "32",
+        "28",
+        "30",
+        "36"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-made-moonlight",
+      "tier": "hard",
+      "topic": "film-tv",
+      "generation": "gen-x",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a réalisé Moonlight?",
+      "choices": [
+        "Barry Jenkins",
+        "Jordan Peele",
+        "Steve McQueen",
+        "Ryan Coogler"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-west-side",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a composé West Side Story?",
+      "choices": [
+        "Leonard Bernstein",
+        "Stephen Sondheim",
+        "George Gershwin",
+        "Cole Porter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-ferrero",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "Ferrero a été fondé dans quel pays?",
+      "choices": [
+        "Italie",
+        "Suisse",
+        "France",
+        "Belgique"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-plains",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Année",
+      "prompt": "C'est en quelle année a eu lieu la bataille des plaines d'Abraham?",
+      "choices": [
+        "1759",
+        "1763",
+        "1775",
+        "1812"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-euro-cash",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Année",
+      "prompt": "C'est en quelle année les billets et les pièces en euros sont entrés dans l'usage quotidien?",
+      "choices": [
+        "2002",
+        "1999",
+        "1992",
+        "2007"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cont-south-korea-c",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est sur quel continent, la Corée du Sud?",
+      "choices": [
+        "L'Asie",
+        "L'Afrique",
+        "L'Europe",
+        "L'Amérique du Nord"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-no",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de la Norvège?",
+      "choices": [
+        "47",
+        "46",
+        "45",
+        "354"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-at",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de l'Autriche?",
+      "choices": [
+        "43",
+        "49",
+        "41",
+        "36"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-haleakala",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "Le parc national Haleakala est dans quel État américain?",
+      "choices": [
+        "Hawaii",
+        "California",
+        "Alaska",
+        "Florida"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-evergreen",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Evergreen State »?",
+      "choices": [
+        "Washington",
+        "Oregon",
+        "Maine",
+        "Vermont"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-hawkeye",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Hawkeye State »?",
+      "choices": [
+        "Iowa",
+        "Nebraska",
+        "Illinois",
+        "Minnesota"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-beehive",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Beehive State »?",
+      "choices": [
+        "Utah",
+        "Idaho",
+        "Nevada",
+        "Wyoming"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1978",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Quel pays a gagné la Coupe du monde masculine de la FIFA en 1978?",
+      "choices": [
+        "L'Argentine",
+        "Les Pays-Bas",
+        "Le Brésil",
+        "L'Italie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-inv-periodic",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Nom",
+      "prompt": "On attribue à qui la publication du premier tableau périodique largement utilisé?",
+      "choices": [
+        "Dmitri Mendeleev",
+        "Antoine Lavoisier",
+        "John Dalton",
+        "Marie Curie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-hunt",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Nom",
+      "prompt": "Dans le mythe grec, c'est qui le dieu de la chasse?",
+      "choices": [
+        "Artemis",
+        "Athena",
+        "Apollo",
+        "Demeter"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-peninsula",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Nom",
+      "prompt": "Comment on appelle une terre entourée d'eau sur presque tous les côtés?",
+      "choices": [
+        "Une presqu'île",
+        "Une île",
+        "Un isthme",
+        "Un détroit"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-somalia",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Somalie?",
+      "choices": [
+        "Mogadishu",
+        "Hargeisa",
+        "Kismayo",
+        "Berbera"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-fez",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "La ville de Fès est dans quel pays?",
+      "choices": [
+        "Le Maroc",
+        "La Tunisie",
+        "L'Algérie",
+        "L'Espagne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-mad",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport MAD?",
+      "choices": [
+        "Madrid",
+        "Barcelona",
+        "Lisbon",
+        "Seville"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-ath",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport ATH?",
+      "choices": [
+        "Athens",
+        "Thessaloniki",
+        "Rome",
+        "Istanbul"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1932",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'été de 1932?",
+      "choices": [
+        "Los Angeles",
+        "London",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1994w",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'hiver de 1994?",
+      "choices": [
+        "Lillehammer",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-gulf-mx",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel golfe qui est au sud des États-Unis et à l'est du Mexique?",
+      "choices": [
+        "Le golfe du Mexique",
+        "Le golfe de Californie",
+        "La baie d'Hudson",
+        "La mer des Caraïbes"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-clarinet",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Art",
+      "prompt": "La famille d'instruments qui comprend une clarinette, c'est laquelle?",
+      "choices": [
+        "Les bois",
+        "Les cuivres",
+        "Les cordes",
+        "Les percussions"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-month-8",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Année",
+      "prompt": "C'est quel mois qui vient juste après septembre?",
+      "choices": [
+        "octobre",
+        "novembre",
+        "décembre",
+        "janvier"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-iso-cn",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi le code de pays à deux lettres pour la Chine?",
+      "choices": [
+        "CN",
+        "US",
+        "CA",
+        "FR"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

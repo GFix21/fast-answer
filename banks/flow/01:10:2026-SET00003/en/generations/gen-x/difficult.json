@@ -1,0 +1,459 @@
+{
+  "locale": "en",
+  "generation": "gen-x",
+  "tier": "difficult",
+  "set": "SET00003",
+  "held": 18,
+  "questions": [
+    {
+      "id": "s3-cap-yukon",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Yukon?",
+      "choices": [
+        "Whitehorse",
+        "Dawson City",
+        "Watson Lake",
+        "Haines Junction"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap-grand-est",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Grand Est?",
+      "choices": [
+        "Strasbourg",
+        "Reims",
+        "Metz",
+        "Nancy"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-lang-iceland-lang",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "What is the main language of Iceland?",
+      "choices": [
+        "Icelandic",
+        "Norwegian",
+        "Danish",
+        "English"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-1896",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the first modern Summer Olympics, in 1896?",
+      "choices": [
+        "Athens",
+        "Paris",
+        "Rome",
+        "London"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-river-volga",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "Into which body of water does the Volga empty?",
+      "choices": [
+        "the Caspian Sea",
+        "the Black Sea",
+        "the Baltic Sea",
+        "the Arctic Ocean"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cont-uruguay-c",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "On which continent is Uruguay?",
+      "choices": [
+        "South America",
+        "Africa",
+        "Asia",
+        "Europe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The landmark sits in one country.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-eg",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Egypt?",
+      "choices": [
+        "20",
+        "27",
+        "212",
+        "966"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-my",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Malaysia?",
+      "choices": [
+        "60",
+        "65",
+        "62",
+        "66"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-mesa-verde",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "In which U.S. state is Mesa Verde National Park?",
+      "choices": [
+        "Colorado",
+        "Utah",
+        "New Mexico",
+        "Arizona"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-ocean",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Ocean State?",
+      "choices": [
+        "Rhode Island",
+        "Connecticut",
+        "Massachusetts",
+        "Delaware"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-inv-lovelace",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "Who is credited with writing what is often called the first computer algorithm?",
+      "choices": [
+        "Ada Lovelace",
+        "Charles Babbage",
+        "Alan Turing",
+        "Grace Hopper"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-belize",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Belize?",
+      "choices": [
+        "Belmopan",
+        "Belize City",
+        "San Ignacio",
+        "Orange Walk"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-south-sudan",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of South Sudan?",
+      "choices": [
+        "Juba",
+        "Wau",
+        "Malakal",
+        "Bor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-icn",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "Which city is served by the airport code ICN?",
+      "choices": [
+        "Seoul",
+        "Busan",
+        "Tokyo",
+        "Beijing"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1900",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1900 Summer Olympics?",
+      "choices": [
+        "Paris",
+        "London",
+        "Rome",
+        "Tokyo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1964w",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1964 Winter Olympics?",
+      "choices": [
+        "Innsbruck",
+        "Oslo",
+        "Turin",
+        "Sochi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-play-miranda",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Art",
+      "prompt": "In which Shakespeare play is Miranda?",
+      "choices": [
+        "The Tempest",
+        "Romeo and Juliet",
+        "Hamlet",
+        "Othello"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-iso-nl",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "What is the two-letter country code for the Netherlands?",
+      "choices": [
+        "NL",
+        "US",
+        "CA",
+        "FR"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

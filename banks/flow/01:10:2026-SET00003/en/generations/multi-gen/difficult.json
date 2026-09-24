@@ -1,0 +1,434 @@
+{
+  "locale": "en",
+  "generation": "multi-gen",
+  "tier": "difficult",
+  "set": "SET00003",
+  "held": 17,
+  "questions": [
+    {
+      "id": "s3-cap-hesse",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Hesse?",
+      "choices": [
+        "Wiesbaden",
+        "Frankfurt",
+        "Kassel",
+        "Darmstadt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wrote-comedy",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Who wrote The Divine Comedy?",
+      "choices": [
+        "Dante Alighieri",
+        "Petrarch",
+        "Boccaccio",
+        "Virgil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-cadmium",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical symbol for cadmium?",
+      "choices": [
+        "Cd",
+        "C",
+        "Ca",
+        "Cm"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-made-piano",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Who directed The Piano?",
+      "choices": [
+        "Jane Campion",
+        "Sofia Coppola",
+        "Kathryn Bigelow",
+        "Greta Gerwig"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-roman-d",
+      "tier": "difficult",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Count",
+      "prompt": "What number does the Roman numeral D stand for?",
+      "choices": [
+        "500",
+        "50",
+        "1000",
+        "100"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-pl",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Poland?",
+      "choices": [
+        "48",
+        "49",
+        "420",
+        "36"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-ua",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Ukraine?",
+      "choices": [
+        "380",
+        "7",
+        "48",
+        "40"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-big-bend",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "In which U.S. state is Big Bend National Park?",
+      "choices": [
+        "Texas",
+        "New Mexico",
+        "Arizona",
+        "Oklahoma"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-volunteer",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Volunteer State?",
+      "choices": [
+        "Tennessee",
+        "Kentucky",
+        "Alabama",
+        "North Carolina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-bluegrass",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Bluegrass State?",
+      "choices": [
+        "Kentucky",
+        "Tennessee",
+        "Virginia",
+        "Indiana"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-harvest",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "In Greek myth, who is the god of the harvest?",
+      "choices": [
+        "Demeter",
+        "Hera",
+        "Persephone",
+        "Artemis"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-mauritania",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Mauritania?",
+      "choices": [
+        "Nouakchott",
+        "Nouadhibou",
+        "Rosso",
+        "Kaédi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-congo",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of the Republic of the Congo?",
+      "choices": [
+        "Brazzaville",
+        "Pointe-Noire",
+        "Dolisie",
+        "Nkayi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-akl",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "Which city is served by the airport code AKL?",
+      "choices": [
+        "Auckland",
+        "Wellington",
+        "Christchurch",
+        "Sydney"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1980",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "multi-gen",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1980 Summer Olympics?",
+      "choices": [
+        "Moscow",
+        "London",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-adriatic",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "Which sea lies between Italy and the Balkan Peninsula?",
+      "choices": [
+        "The Adriatic Sea",
+        "The Tyrrhenian Sea",
+        "The Aegean Sea",
+        "The Black Sea"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-fredericton-p",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "In which Canadian province is Fredericton?",
+      "choices": [
+        "New Brunswick",
+        "Nova Scotia",
+        "Prince Edward Island",
+        "Quebec"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

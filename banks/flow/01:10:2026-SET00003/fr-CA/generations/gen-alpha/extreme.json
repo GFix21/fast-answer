@@ -1,0 +1,209 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-alpha",
+  "tier": "extreme",
+  "set": "SET00003",
+  "held": 8,
+  "questions": [
+    {
+      "id": "s3-cap-saarland",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Sarre?",
+      "choices": [
+        "Saarbrücken",
+        "Neunkirchen",
+        "Homburg",
+        "Völklingen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-arsenic",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quoi le symbole chimique undefined?",
+      "choices": [
+        "As",
+        "A",
+        "Ar",
+        "Ac"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-atom-platinum-n",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quoi le numéro atomique undefined?",
+      "choices": [
+        "78",
+        "47",
+        "79",
+        "82"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-ph",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique des Philippines?",
+      "choices": [
+        "63",
+        "62",
+        "60",
+        "66"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-great-basin",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "Le parc national Great Basin est dans quel État américain?",
+      "choices": [
+        "Nevada",
+        "Utah",
+        "California",
+        "Idaho"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-quartz",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quoi la formule chimique du quartz?",
+      "choices": [
+        "SiO2",
+        "CO2",
+        "CaCO3",
+        "Al2O3"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-togo",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Togo?",
+      "choices": [
+        "Lomé",
+        "Sokodé",
+        "Kara",
+        "Atakpamé"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1904",
+      "tier": "extreme",
+      "topic": "sport",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'été de 1904?",
+      "choices": [
+        "St. Louis",
+        "London",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

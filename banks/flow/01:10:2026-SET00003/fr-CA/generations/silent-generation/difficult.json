@@ -1,0 +1,459 @@
+{
+  "locale": "fr-CA",
+  "generation": "silent-generation",
+  "tier": "difficult",
+  "set": "SET00003",
+  "held": 18,
+  "questions": [
+    {
+      "id": "s3-cap-nwt",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale des Territoires du Nord-Ouest?",
+      "choices": [
+        "Yellowknife",
+        "Inuvik",
+        "Hay River",
+        "Fort Smith"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap-bw",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Bade-Wurtemberg?",
+      "choices": [
+        "Stuttgart",
+        "Karlsruhe",
+        "Freiburg",
+        "Heidelberg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wrote-republic",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a écrit La République?",
+      "choices": [
+        "Plato",
+        "Aristotle",
+        "Socrates",
+        "Epicurus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-atom-sodium",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quoi le numéro atomique undefined?",
+      "choices": [
+        "11",
+        "23",
+        "12",
+        "19"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-made-portrait",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a réalisé Portrait de la jeune fille en feu?",
+      "choices": [
+        "Céline Sciamma",
+        "Claire Denis",
+        "Agnès Varda",
+        "Jane Campion"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-hermitage",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Art",
+      "prompt": "Le musée de l'Ermitage est dans quelle ville?",
+      "choices": [
+        "Saint-Pétersbourg",
+        "Moscou",
+        "Kyiv",
+        "Vienne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-ie",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de l'Irlande?",
+      "choices": [
+        "353",
+        "44",
+        "33",
+        "351"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-vn",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique du Vietnam?",
+      "choices": [
+        "84",
+        "66",
+        "86",
+        "855"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-carlsbad",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "Le parc national Carlsbad Caverns est dans quel État américain?",
+      "choices": [
+        "New Mexico",
+        "Texas",
+        "Arizona",
+        "Colorado"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-palmetto",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Palmetto State »?",
+      "choices": [
+        "South Carolina",
+        "Georgia",
+        "North Carolina",
+        "Florida"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1954",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Quel pays a gagné la Coupe du monde masculine de la FIFA en 1954?",
+      "choices": [
+        "L'Allemagne de l'Ouest",
+        "La Hongrie",
+        "L'Autriche",
+        "L'Uruguay"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-forge",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Nom",
+      "prompt": "Dans le mythe grec, c'est qui le dieu de la forge?",
+      "choices": [
+        "Hephaestus",
+        "Ares",
+        "Hermes",
+        "Apollo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-mauritius",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de Maurice?",
+      "choices": [
+        "Port Louis",
+        "Curepipe",
+        "Vacoas",
+        "Mahébourg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-chad",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Tchad?",
+      "choices": [
+        "N'Djamena",
+        "Moundou",
+        "Sarh",
+        "Abéché"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-jnb",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport JNB?",
+      "choices": [
+        "Johannesburg",
+        "Cape Town",
+        "Durban",
+        "Nairobi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1932w",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'hiver de 1932?",
+      "choices": [
+        "Lake Placid",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-tasman",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle mer qui est entre l'Australie et la Nouvelle-Zélande?",
+      "choices": [
+        "La mer de Tasman",
+        "La mer de Corail",
+        "La mer d'Arafura",
+        "La mer de Timor"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-charlottetown-p",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "Charlottetown est dans quelle province canadienne?",
+      "choices": [
+        "Prince Edward Island",
+        "Nova Scotia",
+        "New Brunswick",
+        "Newfoundland and Labrador"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

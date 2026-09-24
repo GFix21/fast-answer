@@ -1,0 +1,459 @@
+{
+  "locale": "en",
+  "generation": "silent-generation",
+  "tier": "difficult",
+  "set": "SET00003",
+  "held": 18,
+  "questions": [
+    {
+      "id": "s3-cap-nwt",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of the Northwest Territories?",
+      "choices": [
+        "Yellowknife",
+        "Inuvik",
+        "Hay River",
+        "Fort Smith"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap-bw",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Baden-Württemberg?",
+      "choices": [
+        "Stuttgart",
+        "Karlsruhe",
+        "Freiburg",
+        "Heidelberg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wrote-republic",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Who wrote The Republic?",
+      "choices": [
+        "Plato",
+        "Aristotle",
+        "Socrates",
+        "Epicurus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-atom-sodium",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Lab",
+      "prompt": "What is the atomic number of sodium?",
+      "choices": [
+        "11",
+        "23",
+        "12",
+        "19"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-made-portrait",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Who directed Portrait of a Lady on Fire?",
+      "choices": [
+        "Céline Sciamma",
+        "Claire Denis",
+        "Agnès Varda",
+        "Jane Campion"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-hermitage",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Art",
+      "prompt": "In which city is the Hermitage Museum?",
+      "choices": [
+        "Saint Petersburg",
+        "Moscow",
+        "Kyiv",
+        "Vienna"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-ie",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Ireland?",
+      "choices": [
+        "353",
+        "44",
+        "33",
+        "351"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-vn",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Vietnam?",
+      "choices": [
+        "84",
+        "66",
+        "86",
+        "855"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-carlsbad",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Place",
+      "prompt": "In which U.S. state is Carlsbad Caverns National Park?",
+      "choices": [
+        "New Mexico",
+        "Texas",
+        "Arizona",
+        "Colorado"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-palmetto",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Palmetto State?",
+      "choices": [
+        "South Carolina",
+        "Georgia",
+        "North Carolina",
+        "Florida"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1954",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Which country won the men's FIFA World Cup in 1954?",
+      "choices": [
+        "West Germany",
+        "Hungary",
+        "Austria",
+        "Uruguay"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-forge",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "In Greek myth, who is the god of the forge?",
+      "choices": [
+        "Hephaestus",
+        "Ares",
+        "Hermes",
+        "Apollo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-mauritius",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Mauritius?",
+      "choices": [
+        "Port Louis",
+        "Curepipe",
+        "Vacoas",
+        "Mahébourg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-chad",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Chad?",
+      "choices": [
+        "N'Djamena",
+        "Moundou",
+        "Sarh",
+        "Abéché"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-jnb",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Place",
+      "prompt": "Which city is served by the airport code JNB?",
+      "choices": [
+        "Johannesburg",
+        "Cape Town",
+        "Durban",
+        "Nairobi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1932w",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1932 Winter Olympics?",
+      "choices": [
+        "Lake Placid",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-tasman",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Place",
+      "prompt": "Which sea lies between Australia and New Zealand?",
+      "choices": [
+        "The Tasman Sea",
+        "The Coral Sea",
+        "The Arafura Sea",
+        "The Timor Sea"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-charlottetown-p",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Place",
+      "prompt": "In which Canadian province is Charlottetown?",
+      "choices": [
+        "Prince Edward Island",
+        "Nova Scotia",
+        "New Brunswick",
+        "Newfoundland and Labrador"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

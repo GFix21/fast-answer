@@ -1,0 +1,759 @@
+{
+  "locale": "de",
+  "generation": "baby-boomer",
+  "tier": "easy",
+  "set": "SET00003",
+  "held": 30,
+  "questions": [
+    {
+      "id": "s3-in-golden-gate",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Golden Gate Bridge?",
+      "choices": [
+        "die Vereinigten Staaten",
+        "Kanada",
+        "Australien",
+        "das Vereinigte Königreich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-leaf",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Farbe",
+      "prompt": "Welche Farbe hat ein gesundes Sommerblatt?",
+      "choices": [
+        "Grün",
+        "Rot",
+        "Blau",
+        "Weiß"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-n-planets",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie viele Planeten hat das Sonnensystem nach heutiger Zählung?",
+      "choices": [
+        "8",
+        "9",
+        "7",
+        "12"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-fifth",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Wer hat die 5. Sinfonie komponiert?",
+      "choices": [
+        "Ludwig van Beethoven",
+        "Wolfgang Amadeus Mozart",
+        "Franz Schubert",
+        "Johannes Brahms"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-samsung",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land wurde Samsung gegründet?",
+      "choices": [
+        "Südkorea",
+        "Japan",
+        "China",
+        "Taiwan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-guinness",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land wurde Guinness gegründet?",
+      "choices": [
+        "Irland",
+        "Vereinigtes Königreich",
+        "Deutschland",
+        "Belgien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-moon",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Jahr",
+      "prompt": "In welchem Jahr betraten Menschen zum ersten Mal den Mond?",
+      "choices": [
+        "1969",
+        "1961",
+        "1972",
+        "1957"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-facebook",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Jahr",
+      "prompt": "In welchem Jahr startete Facebook?",
+      "choices": [
+        "2004",
+        "2001",
+        "2006",
+        "1998"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cheetah",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Welches Landtier ist im Sprint am schnellsten?",
+      "choices": [
+        "Der Gepard",
+        "Der Löwe",
+        "Der Gabelbock",
+        "Das Pferd"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cont-france-c",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Auf welchem Kontinent liegt Frankreich?",
+      "choices": [
+        "Europa",
+        "Afrika",
+        "Asien",
+        "Nordamerika"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-it",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von Italien?",
+      "choices": [
+        "39",
+        "33",
+        "34",
+        "41"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-denali",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Denali?",
+      "choices": [
+        "Alaska",
+        "Washington",
+        "Montana",
+        "Hawaii"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1966",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Welches Land gewann die Fußball-Weltmeisterschaft der Männer 1966?",
+      "choices": [
+        "England",
+        "Deutschland",
+        "Portugal",
+        "Brasilien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-2014",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Welches Land gewann die Fußball-Weltmeisterschaft der Männer 2014?",
+      "choices": [
+        "Deutschland",
+        "Argentinien",
+        "Brasilien",
+        "die Niederlande"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-water",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Labor",
+      "prompt": "Wie lautet die chemische Formel von Wasser?",
+      "choices": [
+        "H2O",
+        "CO2",
+        "NaCl",
+        "O2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-love",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Wer ist in der griechischen Sage der Gott der Liebe?",
+      "choices": [
+        "Aphrodite",
+        "Hera",
+        "Athena",
+        "Artemis"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-piglet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Wie heißt ein Schweinebaby?",
+      "choices": [
+        "Ein Ferkel",
+        "Ein Kalb",
+        "Ein Kitz",
+        "Ein Lamm"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-caterpillar",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Was wird aus einer Raupe?",
+      "choices": [
+        "Ein Schmetterling",
+        "Nur eine Motte",
+        "Ein Käfer",
+        "Eine Biene"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-jean-baptiste",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "In welchem Monat ist in Quebec der Saint-Jean-Baptiste-Tag?",
+      "choices": [
+        "Juni",
+        "Juli",
+        "Mai",
+        "August"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-washington",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von den Vereinigten Staaten?",
+      "choices": [
+        "Washington, D.C.",
+        "New York",
+        "Chicago",
+        "Los Angeles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-seattle",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Stadt Seattle?",
+      "choices": [
+        "die Vereinigten Staaten",
+        "Kanada",
+        "das Vereinigte Königreich",
+        "Australien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-yul",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode YUL?",
+      "choices": [
+        "Montreal",
+        "Toronto",
+        "Ottawa",
+        "Quebec City"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-syd",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode SYD?",
+      "choices": [
+        "Sydney",
+        "Melbourne",
+        "Brisbane",
+        "Auckland"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-med",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Welches Meer liegt zwischen Europa und Afrika?",
+      "choices": [
+        "Das Mittelmeer",
+        "Das Rote Meer",
+        "Die Ostsee",
+        "Das Schwarze Meer"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-home-nest",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Wo legt ein Vogel gewöhnlich seine Eier?",
+      "choices": [
+        "In einem Nest",
+        "In einer Höhle",
+        "In einem Stock",
+        "In einem Netz"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-drum",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Kunst",
+      "prompt": "Zu welcher Instrumentenfamilie gehört eine Trommel?",
+      "choices": [
+        "Schlagzeug",
+        "Streicher",
+        "Blechbläser",
+        "Holzbläser"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-quebec-city-p",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welcher kanadischen Provinz liegt Quebec City?",
+      "choices": [
+        "Quebec",
+        "Ontario",
+        "New Brunswick",
+        "Nova Scotia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-day",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Was ist das Gegenteil von der Tag?",
+      "choices": [
+        "Die Nacht",
+        "Der Morgen",
+        "Der Winter",
+        "Der Mittag"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-left",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Was ist das Gegenteil von links?",
+      "choices": [
+        "Rechts",
+        "Oben",
+        "Unten",
+        "Hinten"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-es",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Wie nennt man eine Person aus Spanien?",
+      "choices": [
+        "Ein Spanier",
+        "Ein Tourist",
+        "Ein Nachbar",
+        "Ein Kapitän"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

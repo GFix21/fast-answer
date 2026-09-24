@@ -1,0 +1,759 @@
+{
+  "locale": "en",
+  "generation": "gen-x",
+  "tier": "easy",
+  "set": "SET00003",
+  "held": 30,
+  "questions": [
+    {
+      "id": "s3-in-versailles",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "In which country is the Palace of Versailles?",
+      "choices": [
+        "France",
+        "Belgium",
+        "Germany",
+        "Spain"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The landmark sits in one country.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-maple",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-x",
+      "categoryTitle": "Colour",
+      "prompt": "What colour is the maple leaf on the flag of Canada?",
+      "choices": [
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-n-triangle",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Count",
+      "prompt": "How many degrees are in the angles of a triangle, added together?",
+      "choices": [
+        "180",
+        "90",
+        "360",
+        "270"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-flute",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "Who composed The Magic Flute?",
+      "choices": [
+        "Wolfgang Amadeus Mozart",
+        "Ludwig van Beethoven",
+        "Joseph Haydn",
+        "Christoph Willibald Gluck"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-ikea",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "In which country was IKEA founded?",
+      "choices": [
+        "Sweden",
+        "Denmark",
+        "Germany",
+        "Norway"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-river-nile",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "Into which body of water does the Nile empty?",
+      "choices": [
+        "the Mediterranean Sea",
+        "the Red Sea",
+        "the Atlantic Ocean",
+        "the Indian Ocean"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-wall-fall",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Year",
+      "prompt": "In which year did the Berlin Wall open?",
+      "choices": [
+        "1989",
+        "1991",
+        "1985",
+        "1979"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-hockey-canada",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "What is Canada's national winter sport?",
+      "choices": [
+        "Ice hockey",
+        "Curling",
+        "Skiing",
+        "Lacrosse"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-blue-whale",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "What is the largest animal alive today?",
+      "choices": [
+        "The blue whale",
+        "The elephant",
+        "The whale shark",
+        "The giraffe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-us",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for the United States?",
+      "choices": [
+        "1",
+        "44",
+        "33",
+        "81"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-es",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Spain?",
+      "choices": [
+        "34",
+        "33",
+        "351",
+        "39"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-lone",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Lone Star State?",
+      "choices": [
+        "Texas",
+        "California",
+        "Florida",
+        "Arizona"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1970",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Which country won the men's FIFA World Cup in 1970?",
+      "choices": [
+        "Brazil",
+        "Italy",
+        "Germany",
+        "Uruguay"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-2018",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Which country won the men's FIFA World Cup in 2018?",
+      "choices": [
+        "France",
+        "Croatia",
+        "Belgium",
+        "England"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-salt",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical formula for table salt?",
+      "choices": [
+        "NaCl",
+        "H2O",
+        "KCl",
+        "NaOH"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-calf",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "What is a baby cow called?",
+      "choices": [
+        "A calf",
+        "A lamb",
+        "A foal",
+        "A kid"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-pride",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "What is a group of lions called?",
+      "choices": [
+        "A pride",
+        "A pack",
+        "A flock",
+        "A school"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-steam",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "What is water vapor often called when it rises from a kettle?",
+      "choices": [
+        "Steam",
+        "Ice",
+        "Snow",
+        "Hail"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-halloween",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "In which month is Halloween?",
+      "choices": [
+        "October",
+        "September",
+        "November",
+        "December"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-calgary",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "In which country is the city of Calgary?",
+      "choices": [
+        "Canada",
+        "the United States",
+        "Australia",
+        "Ireland"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The landmark sits in one country.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-honolulu",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "In which country is the city of Honolulu?",
+      "choices": [
+        "the United States",
+        "Japan",
+        "Australia",
+        "Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The landmark sits in one country.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-yyz",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "Which city is served by the airport code YYZ?",
+      "choices": [
+        "Toronto",
+        "Montreal",
+        "Ottawa",
+        "Vancouver"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1996",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1996 Summer Olympics?",
+      "choices": [
+        "Atlanta",
+        "London",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-channel",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "Which narrow sea lies between Britain and France?",
+      "choices": [
+        "The English Channel",
+        "The Irish Sea",
+        "The North Sea",
+        "The Baltic Sea"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-home-hive",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "Where do honeybees live?",
+      "choices": [
+        "In a hive",
+        "In a nest",
+        "In a dam",
+        "In a burrow"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-xylophone",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-x",
+      "categoryTitle": "Art",
+      "prompt": "Which instrument family includes the xylophone?",
+      "choices": [
+        "Percussion",
+        "Strings",
+        "Brass",
+        "Woodwind"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-month-0",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Year",
+      "prompt": "Which month comes right after January?",
+      "choices": [
+        "February",
+        "March",
+        "April",
+        "May"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-open",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "What is the opposite of open?",
+      "choices": [
+        "Closed",
+        "Full",
+        "Wide",
+        "New"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-qc",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "What do you call a person from Quebec?",
+      "choices": [
+        "A Quebecer",
+        "A tourist",
+        "A neighbour",
+        "A captain"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-jp",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Name",
+      "prompt": "What do you call a person from Japan?",
+      "choices": [
+        "A Japanese person",
+        "A tourist",
+        "A neighbour",
+        "A captain"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,734 @@
+{
+  "locale": "de",
+  "generation": "multi-gen",
+  "tier": "easy",
+  "set": "SET00003",
+  "held": 29,
+  "questions": [
+    {
+      "id": "s3-atom-helium-n",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Labor",
+      "prompt": "Welche Ordnungszahl hat Helium?",
+      "choices": [
+        "2",
+        "4",
+        "1",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-flamingo",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Farbe",
+      "prompt": "Welche Farbe hat ein typischer Flamingo?",
+      "choices": [
+        "Rosa",
+        "Weiß",
+        "Blau",
+        "Gelb"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-2016",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "multi-gen",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Sommerspiele 2016?",
+      "choices": [
+        "Rio de Janeiro",
+        "São Paulo",
+        "Buenos Aires",
+        "Lima"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-bolero",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Wer hat Boléro komponiert?",
+      "choices": [
+        "Maurice Ravel",
+        "Claude Debussy",
+        "Camille Saint-Saëns",
+        "Georges Bizet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-honda",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land wurde Honda gegründet?",
+      "choices": [
+        "Japan",
+        "Südkorea",
+        "Deutschland",
+        "Vereinigte Staaten"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-confed",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Jahr",
+      "prompt": "In welchem Jahr trat die Kanadische Konföderation in Kraft?",
+      "choices": [
+        "1867",
+        "1776",
+        "1967",
+        "1840"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-youtube",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Jahr",
+      "prompt": "In welchem Jahr startete YouTube?",
+      "choices": [
+        "2005",
+        "2003",
+        "2007",
+        "2010"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-skin",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Labor",
+      "prompt": "Welches ist das größte Organ des menschlichen Körpers?",
+      "choices": [
+        "Die Haut",
+        "Die Leber",
+        "Das Gehirn",
+        "Die Lunge"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-louvre-city",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Kunst",
+      "prompt": "In welcher Stadt steht der Louvre?",
+      "choices": [
+        "Paris",
+        "Lyon",
+        "Brüssel",
+        "Rom"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-jp",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von Japan?",
+      "choices": [
+        "81",
+        "82",
+        "86",
+        "66"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-zion",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Zion?",
+      "choices": [
+        "Utah",
+        "Arizona",
+        "Colorado",
+        "Nevada"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-aloha",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher US-Bundesstaat trägt den Beinamen Aloha State?",
+      "choices": [
+        "Hawaii",
+        "Alaska",
+        "California",
+        "Florida"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-2006",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "multi-gen",
+      "categoryTitle": "Sport",
+      "prompt": "Welches Land gewann die Fußball-Weltmeisterschaft der Männer 2006?",
+      "choices": [
+        "Italien",
+        "Frankreich",
+        "Deutschland",
+        "Portugal"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-inv-relativity",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Wem schreibt man die spezielle Relativitätstheorie zu?",
+      "choices": [
+        "Albert Einstein",
+        "Isaac Newton",
+        "Niels Bohr",
+        "Max Planck"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-wisdom",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Wer ist in der griechischen Sage der Gott der Weisheit?",
+      "choices": [
+        "Athena",
+        "Aphrodite",
+        "Hera",
+        "Artemis"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-kitten",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Wie heißt ein Katzenbaby?",
+      "choices": [
+        "Ein Kätzchen",
+        "Ein Welpe",
+        "Ein Junges",
+        "Ein Küken"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-hen",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Wie heißt ein erwachsenes weibliches Huhn?",
+      "choices": [
+        "Eine Henne",
+        "Ein Hahn",
+        "Ein Küken",
+        "Eine Gans"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-february",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Welcher Monat hat gewöhnlich 28 Tage?",
+      "choices": [
+        "Februar",
+        "April",
+        "Juni",
+        "November"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-boiling",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Bei welcher Temperatur in Celsius kocht Wasser auf Meereshöhe?",
+      "choices": [
+        "100",
+        "90",
+        "212",
+        "0"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-san-francisco",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Stadt San Francisco?",
+      "choices": [
+        "die Vereinigten Staaten",
+        "Mexiko",
+        "Spanien",
+        "Kanada"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-naples",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Stadt Neapel?",
+      "choices": [
+        "Italien",
+        "Griechenland",
+        "Spanien",
+        "Frankreich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-lhr",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode LHR?",
+      "choices": [
+        "London",
+        "Manchester",
+        "Paris",
+        "Dublin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-2018w",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "multi-gen",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Winterspiele 2018?",
+      "choices": [
+        "Pyeongchang",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-play-iago",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Kunst",
+      "prompt": "In welchem Shakespeare-Stück kommt Iago vor?",
+      "choices": [
+        "Othello",
+        "Hamlet",
+        "Macbeth",
+        "King Lear"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-trumpet",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Kunst",
+      "prompt": "Zu welcher Instrumentenfamilie gehört eine Trompete?",
+      "choices": [
+        "Blechbläser",
+        "Streicher",
+        "Holzbläser",
+        "Schlagzeug"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-montreal-p",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "In welcher kanadischen Provinz liegt Montreal?",
+      "choices": [
+        "Quebec",
+        "Ontario",
+        "New Brunswick",
+        "Nova Scotia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-hot",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Was ist das Gegenteil von heiß?",
+      "choices": [
+        "Kalt",
+        "Warm",
+        "Nass",
+        "Schnell"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-early",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Was ist das Gegenteil von früh?",
+      "choices": [
+        "Spät",
+        "Langsam",
+        "Weit",
+        "Niedrig"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-de",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Wie nennt man eine Person aus Deutschland?",
+      "choices": [
+        "Ein Deutscher",
+        "Ein Tourist",
+        "Ein Nachbar",
+        "Ein Kapitän"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

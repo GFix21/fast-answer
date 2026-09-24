@@ -1,0 +1,759 @@
+{
+  "locale": "fr-CA",
+  "generation": "baby-boomer",
+  "tier": "easy",
+  "set": "SET00003",
+  "held": 30,
+  "questions": [
+    {
+      "id": "s3-in-golden-gate",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, le pont du Golden Gate?",
+      "choices": [
+        "les États-Unis",
+        "Canada",
+        "Australie",
+        "le Royaume-Uni"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-leaf",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Couleur",
+      "prompt": "C'est quoi la couleur undefined?",
+      "choices": [
+        "Vert",
+        "Rouge",
+        "Bleu",
+        "Blanc"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-n-planets",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nombre",
+      "prompt": "Il y a combien de planètes compte le système solaire, selon le décompte actuel?",
+      "choices": [
+        "8",
+        "9",
+        "7",
+        "12"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-fifth",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a composé la Symphonie no 5?",
+      "choices": [
+        "Ludwig van Beethoven",
+        "Wolfgang Amadeus Mozart",
+        "Franz Schubert",
+        "Johannes Brahms"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-samsung",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "Samsung a été fondé dans quel pays?",
+      "choices": [
+        "Corée du Sud",
+        "Japon",
+        "Chine",
+        "Taïwan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-guinness",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "Guinness a été fondé dans quel pays?",
+      "choices": [
+        "Irlande",
+        "Royaume-Uni",
+        "Allemagne",
+        "Belgique"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-moon",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Année",
+      "prompt": "C'est en quelle année des gens ont marché sur la Lune pour la première fois?",
+      "choices": [
+        "1969",
+        "1961",
+        "1972",
+        "1957"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-facebook",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Année",
+      "prompt": "C'est en quelle année Facebook a été lancé?",
+      "choices": [
+        "2004",
+        "2001",
+        "2006",
+        "1998"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cheetah",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "C'est quel animal terrestre qui est le plus rapide au sprint?",
+      "choices": [
+        "Le guépard",
+        "Le lion",
+        "L'antilocapre",
+        "Le cheval"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cont-france-c",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est sur quel continent, la France?",
+      "choices": [
+        "L'Europe",
+        "L'Afrique",
+        "L'Asie",
+        "L'Amérique du Nord"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-it",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de l'Italie?",
+      "choices": [
+        "39",
+        "33",
+        "34",
+        "41"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-denali",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "Le parc national Denali est dans quel État américain?",
+      "choices": [
+        "Alaska",
+        "Washington",
+        "Montana",
+        "Hawaii"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1966",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Quel pays a gagné la Coupe du monde masculine de la FIFA en 1966?",
+      "choices": [
+        "L'Angleterre",
+        "L'Allemagne",
+        "Le Portugal",
+        "Le Brésil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-2014",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Quel pays a gagné la Coupe du monde masculine de la FIFA en 2014?",
+      "choices": [
+        "L'Allemagne",
+        "L'Argentine",
+        "Le Brésil",
+        "Les Pays-Bas"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-water",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quoi la formule chimique de l'eau?",
+      "choices": [
+        "H2O",
+        "CO2",
+        "NaCl",
+        "O2"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-love",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "Dans le mythe grec, c'est qui le dieu de l'amour?",
+      "choices": [
+        "Aphrodite",
+        "Hera",
+        "Athena",
+        "Artemis"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-piglet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "Comment on appelle un bébé cochon?",
+      "choices": [
+        "Un porcelet",
+        "Un veau",
+        "Un chevreau",
+        "Un agneau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-caterpillar",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "Une chenille devient quoi?",
+      "choices": [
+        "Un papillon",
+        "Seulement un papillon de nuit",
+        "Un scarabée",
+        "Une abeille"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-jean-baptiste",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "La Saint-Jean-Baptiste, au Québec, est dans quel mois?",
+      "choices": [
+        "Juin",
+        "Juillet",
+        "Mai",
+        "Août"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-washington",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale des États-Unis?",
+      "choices": [
+        "Washington, D.C.",
+        "New York",
+        "Chicago",
+        "Los Angeles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-seattle",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "La ville de Seattle est dans quel pays?",
+      "choices": [
+        "Les États-Unis",
+        "Le Canada",
+        "Le Royaume-Uni",
+        "L'Australie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-yul",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport YUL?",
+      "choices": [
+        "Montreal",
+        "Toronto",
+        "Ottawa",
+        "Quebec City"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-syd",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport SYD?",
+      "choices": [
+        "Sydney",
+        "Melbourne",
+        "Brisbane",
+        "Auckland"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-med",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle mer qui est entre l'Europe et l'Afrique?",
+      "choices": [
+        "La mer Méditerranée",
+        "La mer Rouge",
+        "La mer Baltique",
+        "La mer Noire"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-home-nest",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "Un oiseau pond d'habitude ses œufs où?",
+      "choices": [
+        "Dans un nid",
+        "Dans une tanière",
+        "Dans une ruche",
+        "Dans une toile"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-drum",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Art",
+      "prompt": "La famille d'instruments qui comprend un tambour, c'est laquelle?",
+      "choices": [
+        "Les percussions",
+        "Les cordes",
+        "Les cuivres",
+        "Les bois"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-quebec-city-p",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "Quebec City est dans quelle province canadienne?",
+      "choices": [
+        "Quebec",
+        "Ontario",
+        "New Brunswick",
+        "Nova Scotia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-day",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "C'est quoi le contraire de le jour?",
+      "choices": [
+        "La nuit",
+        "Le matin",
+        "L'hiver",
+        "Le midi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-left",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "C'est quoi le contraire de à gauche?",
+      "choices": [
+        "À droite",
+        "En haut",
+        "En bas",
+        "Derrière"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-es",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "Comment on appelle une personne de l'Espagne?",
+      "choices": [
+        "Un Espagnol",
+        "Un touriste",
+        "Un voisin",
+        "Un capitaine"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

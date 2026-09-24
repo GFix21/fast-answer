@@ -1,0 +1,209 @@
+{
+  "locale": "de",
+  "generation": "gen-y",
+  "tier": "extreme",
+  "set": "SET00003",
+  "held": 8,
+  "questions": [
+    {
+      "id": "s3-cap-saxony-anhalt",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Sachsen-Anhalt?",
+      "choices": [
+        "Magdeburg",
+        "Halle",
+        "Dessau",
+        "Wittenberg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-strontium",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Labor",
+      "prompt": "Welches chemische Symbol hat Strontium?",
+      "choices": [
+        "Sr",
+        "S",
+        "St",
+        "Sn"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-palladium",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Labor",
+      "prompt": "Welches chemische Symbol hat Palladium?",
+      "choices": [
+        "Pd",
+        "P",
+        "Pa",
+        "Pt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-cz",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von Tschechien?",
+      "choices": [
+        "420",
+        "421",
+        "48",
+        "36"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-voyageurs",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Voyageurs?",
+      "choices": [
+        "Minnesota",
+        "Wisconsin",
+        "Michigan",
+        "North Dakota"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-prairie",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher US-Bundesstaat trägt den Beinamen Prairie State?",
+      "choices": [
+        "Illinois",
+        "Iowa",
+        "Kansas",
+        "Indiana"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-maldives",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von den Malediven?",
+      "choices": [
+        "Malé",
+        "Addu",
+        "Fuvahmulah",
+        "Kulhudhuffushi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-car",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von der Zentralafrikanischen Republik?",
+      "choices": [
+        "Bangui",
+        "Bimbo",
+        "Berbérati",
+        "Bambari"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

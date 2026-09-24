@@ -1,0 +1,434 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-alpha",
+  "tier": "difficult",
+  "set": "SET00003",
+  "held": 17,
+  "questions": [
+    {
+      "id": "s3-cap-saxony",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Saxe?",
+      "choices": [
+        "Dresden",
+        "Leipzig",
+        "Chemnitz",
+        "Görlitz"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-in-moai",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, les moaï de Rapa Nui?",
+      "choices": [
+        "Chili",
+        "Pérou",
+        "Équateur",
+        "Japon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-xenon",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quoi le symbole chimique undefined?",
+      "choices": [
+        "Xe",
+        "X",
+        "Xn",
+        "Xi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-made-samurai",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a réalisé Les Sept Samouraïs?",
+      "choices": [
+        "Akira Kurosawa",
+        "Yasujiro Ozu",
+        "Kenji Mizoguchi",
+        "Hayao Miyazaki"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-quebec-act",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Année",
+      "prompt": "C'est en quelle année l'Acte de Québec a été adopté?",
+      "choices": [
+        "1774",
+        "1759",
+        "1791",
+        "1867"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-ch",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de la Suisse?",
+      "choices": [
+        "41",
+        "43",
+        "49",
+        "33"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-ro",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de la Roumanie?",
+      "choices": [
+        "40",
+        "36",
+        "359",
+        "381"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-shenandoah",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "Le parc national Shenandoah est dans quel État américain?",
+      "choices": [
+        "Virginia",
+        "West Virginia",
+        "Maryland",
+        "North Carolina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-natural",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Natural State »?",
+      "choices": [
+        "Arkansas",
+        "Missouri",
+        "Tennessee",
+        "Oklahoma"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-wolverine",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Wolverine State »?",
+      "choices": [
+        "Michigan",
+        "Wisconsin",
+        "Ohio",
+        "Minnesota"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-soda",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quoi la formule chimique du bicarbonate de soude?",
+      "choices": [
+        "NaHCO3",
+        "NaCl",
+        "Na2CO3",
+        "CaCO3"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-liberia",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Libéria?",
+      "choices": [
+        "Monrovia",
+        "Gbarnga",
+        "Buchanan",
+        "Kakata"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-gabon",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Gabon?",
+      "choices": [
+        "Libreville",
+        "Port-Gentil",
+        "Franceville",
+        "Oyem"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-lis",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport LIS?",
+      "choices": [
+        "Lisbon",
+        "Porto",
+        "Madrid",
+        "Faro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1952",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'été de 1952?",
+      "choices": [
+        "Helsinki",
+        "London",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1984w",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'hiver de 1984?",
+      "choices": [
+        "Sarajevo",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-regina-p",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "Regina est dans quelle province canadienne?",
+      "choices": [
+        "Saskatchewan",
+        "Alberta",
+        "Manitoba",
+        "Ontario"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

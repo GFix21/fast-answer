@@ -1,0 +1,459 @@
+{
+  "locale": "de",
+  "generation": "silent-generation",
+  "tier": "difficult",
+  "set": "SET00003",
+  "held": 18,
+  "questions": [
+    {
+      "id": "s3-cap-nwt",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von den Nordwest-Territorien?",
+      "choices": [
+        "Yellowknife",
+        "Inuvik",
+        "Hay River",
+        "Fort Smith"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap-bw",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Baden-Württemberg?",
+      "choices": [
+        "Stuttgart",
+        "Karlsruhe",
+        "Freiburg",
+        "Heidelberg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wrote-republic",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wer hat Der Staat geschrieben?",
+      "choices": [
+        "Plato",
+        "Aristotle",
+        "Socrates",
+        "Epicurus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-atom-sodium",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Labor",
+      "prompt": "Welche Ordnungszahl hat Natrium?",
+      "choices": [
+        "11",
+        "23",
+        "12",
+        "19"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-made-portrait",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wer hat Porträt einer jungen Frau in Flammen inszeniert?",
+      "choices": [
+        "Céline Sciamma",
+        "Claire Denis",
+        "Agnès Varda",
+        "Jane Campion"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-hermitage",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Kunst",
+      "prompt": "In welcher Stadt steht die Eremitage?",
+      "choices": [
+        "Sankt Petersburg",
+        "Moskau",
+        "Kiew",
+        "Wien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-ie",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von Irland?",
+      "choices": [
+        "353",
+        "44",
+        "33",
+        "351"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-vn",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von Vietnam?",
+      "choices": [
+        "84",
+        "66",
+        "86",
+        "855"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-carlsbad",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Carlsbad Caverns?",
+      "choices": [
+        "New Mexico",
+        "Texas",
+        "Arizona",
+        "Colorado"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-palmetto",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher US-Bundesstaat trägt den Beinamen Palmetto State?",
+      "choices": [
+        "South Carolina",
+        "Georgia",
+        "North Carolina",
+        "Florida"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1954",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Welches Land gewann die Fußball-Weltmeisterschaft der Männer 1954?",
+      "choices": [
+        "Westdeutschland",
+        "Ungarn",
+        "Österreich",
+        "Uruguay"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-forge",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wer ist in der griechischen Sage der Gott der Schmiede?",
+      "choices": [
+        "Hephaestus",
+        "Ares",
+        "Hermes",
+        "Apollo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-mauritius",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Mauritius?",
+      "choices": [
+        "Port Louis",
+        "Curepipe",
+        "Vacoas",
+        "Mahébourg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-chad",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Tschad?",
+      "choices": [
+        "N'Djamena",
+        "Moundou",
+        "Sarh",
+        "Abéché"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-jnb",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode JNB?",
+      "choices": [
+        "Johannesburg",
+        "Cape Town",
+        "Durban",
+        "Nairobi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1932w",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Winterspiele 1932?",
+      "choices": [
+        "Lake Placid",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-tasman",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welches Meer liegt zwischen Australien und Neuseeland?",
+      "choices": [
+        "Die Tasmansee",
+        "Das Korallenmeer",
+        "Die Arafurasee",
+        "Die Timorsee"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-charlottetown-p",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welcher kanadischen Provinz liegt Charlottetown?",
+      "choices": [
+        "Prince Edward Island",
+        "Nova Scotia",
+        "New Brunswick",
+        "Newfoundland and Labrador"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

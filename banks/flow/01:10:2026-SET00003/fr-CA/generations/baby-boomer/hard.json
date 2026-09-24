@@ -1,0 +1,734 @@
+{
+  "locale": "fr-CA",
+  "generation": "baby-boomer",
+  "tier": "hard",
+  "set": "SET00003",
+  "held": 29,
+  "questions": [
+    {
+      "id": "s3-in-hagia",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, Sainte-Sophie?",
+      "choices": [
+        "Turquie",
+        "Grèce",
+        "Italie",
+        "Égypte"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-lang-ukraine-lang",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "C'est quoi la langue principale de l'Ukraine?",
+      "choices": [
+        "L'ukrainien",
+        "Le russe",
+        "Le polonais",
+        "Le biélorusse"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-chlorophyll",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Couleur",
+      "prompt": "C'est quoi la couleur undefined?",
+      "choices": [
+        "Vert",
+        "Rouge",
+        "Brun",
+        "Bleu"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-1968",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'été de 1968?",
+      "choices": [
+        "Mexico City",
+        "Rio de Janeiro",
+        "Madrid",
+        "Los Angeles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-peer",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a composé Peer Gynt?",
+      "choices": [
+        "Edvard Grieg",
+        "Jean Sibelius",
+        "Carl Nielsen",
+        "Franz Liszt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-volvo",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "Volvo a été fondé dans quel pays?",
+      "choices": [
+        "Suède",
+        "Allemagne",
+        "Japon",
+        "États-Unis"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-river-mississippi",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "Le Mississippi se jette dans quel plan d'eau?",
+      "choices": [
+        "Le golfe du Mexique",
+        "L'océan Atlantique",
+        "L'océan Pacifique",
+        "La baie d'Hudson"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-nato",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Année",
+      "prompt": "C'est en quelle année l'OTAN a été fondée?",
+      "choices": [
+        "1949",
+        "1945",
+        "1955",
+        "1939"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prado",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Art",
+      "prompt": "Le musée du Prado est dans quelle ville?",
+      "choices": [
+        "Madrid",
+        "Barcelone",
+        "Séville",
+        "Lisbonne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-se",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de la Suède?",
+      "choices": [
+        "46",
+        "47",
+        "45",
+        "358"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-gr",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de la Grèce?",
+      "choices": [
+        "30",
+        "39",
+        "90",
+        "40"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-arches",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "Le parc national Arches est dans quel État américain?",
+      "choices": [
+        "Utah",
+        "Arizona",
+        "Colorado",
+        "New Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-sequoia",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "Le parc national Sequoia est dans quel État américain?",
+      "choices": [
+        "California",
+        "Oregon",
+        "Washington",
+        "Colorado"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-sunflower",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Sunflower State »?",
+      "choices": [
+        "Kansas",
+        "Nebraska",
+        "Iowa",
+        "Oklahoma"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-silver",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Silver State »?",
+      "choices": [
+        "Nevada",
+        "Colorado",
+        "Arizona",
+        "Montana"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1958",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Quel pays a gagné la Coupe du monde masculine de la FIFA en 1958?",
+      "choices": [
+        "Le Brésil",
+        "La Suède",
+        "La France",
+        "L'Allemagne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-inv-braille",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "On attribue à qui l'invention du système de lecture braille?",
+      "choices": [
+        "Louis Braille",
+        "Helen Keller",
+        "Valentin Haüy",
+        "Samuel Morse"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-under",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "Dans le mythe grec, c'est qui le dieu des enfers?",
+      "choices": [
+        "Hades",
+        "Zeus",
+        "Poseidon",
+        "Ares"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-gaggle",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Nom",
+      "prompt": "Comment on appelle un groupe d'oies au sol?",
+      "choices": [
+        "Une bande",
+        "Un banc",
+        "Une troupe",
+        "Une meute"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-bahamas",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale des Bahamas?",
+      "choices": [
+        "Nassau",
+        "Freeport",
+        "Marsh Harbour",
+        "George Town"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-xian",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "La ville de Xi'an est dans quel pays?",
+      "choices": [
+        "La Chine",
+        "La Mongolie",
+        "Le Japon",
+        "Le Kazakhstan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-ams",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport AMS?",
+      "choices": [
+        "Amsterdam",
+        "Rotterdam",
+        "Brussels",
+        "Frankfurt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-bru",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport BRU?",
+      "choices": [
+        "Brussels",
+        "Antwerp",
+        "Amsterdam",
+        "Paris"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1908",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'été de 1908?",
+      "choices": [
+        "London",
+        "Paris",
+        "Rome",
+        "Tokyo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1992w",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'hiver de 1992?",
+      "choices": [
+        "Albertville",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-baltic",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle mer qui est à l'est de la Suède et au sud de la Finlande?",
+      "choices": [
+        "La mer Baltique",
+        "La mer du Nord",
+        "La mer de Norvège",
+        "La mer de Barents"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-trombone",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Art",
+      "prompt": "La famille d'instruments qui comprend un trombone, c'est laquelle?",
+      "choices": [
+        "Les cuivres",
+        "Les cordes",
+        "Les bois",
+        "Les percussions"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-month-7",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Année",
+      "prompt": "C'est quel mois qui vient juste après août?",
+      "choices": [
+        "septembre",
+        "octobre",
+        "novembre",
+        "décembre"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-iso-jp",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi le code de pays à deux lettres pour le Japon?",
+      "choices": [
+        "JP",
+        "US",
+        "CA",
+        "FR"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,734 @@
+{
+  "locale": "de",
+  "generation": "silent-generation",
+  "tier": "hard",
+  "set": "SET00003",
+  "held": 29,
+  "questions": [
+    {
+      "id": "s3-in-alhambra",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Alhambra?",
+      "choices": [
+        "Spanien",
+        "Marokko",
+        "Portugal",
+        "Italien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-lang-bangladesh-lang",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Was ist die Hauptsprache von Bangladesch?",
+      "choices": [
+        "Bengalisch",
+        "Hindi",
+        "Urdu",
+        "Tamil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-liberty-col",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Farbe",
+      "prompt": "Welche Farbe hat die Kupferoberfläche der Freiheitsstatue?",
+      "choices": [
+        "Grün",
+        "Orange",
+        "Grau",
+        "Rot"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-1964",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Sommerspiele 1964?",
+      "choices": [
+        "Tokyo",
+        "Osaka",
+        "Kyoto",
+        "Seoul"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-aida",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wer hat Aida komponiert?",
+      "choices": [
+        "Giuseppe Verdi",
+        "Giacomo Puccini",
+        "Gioachino Rossini",
+        "Georges Bizet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-rolex",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land wurde Rolex gegründet?",
+      "choices": [
+        "Schweiz",
+        "Frankreich",
+        "Deutschland",
+        "Italien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-river-st-lawrence",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welches Gewässer mündet der Sankt-Lorenz-Strom?",
+      "choices": [
+        "Der Atlantik",
+        "Die Hudson Bay",
+        "Der Pazifik",
+        "Der Golf von Mexiko"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-gutenberg",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Jahr",
+      "prompt": "In welchem Jahr vollendete Johannes Gutenberg seine Druckerpresse, um dieses Jahr?",
+      "choices": [
+        "1440",
+        "1492",
+        "1517",
+        "1350"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-uffizi",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Kunst",
+      "prompt": "In welcher Stadt steht die Uffizien?",
+      "choices": [
+        "Florenz",
+        "Rom",
+        "Venedig",
+        "Mailand"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-kr",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von Südkorea?",
+      "choices": [
+        "82",
+        "81",
+        "86",
+        "66"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-tr",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von der Türkei?",
+      "choices": [
+        "90",
+        "30",
+        "39",
+        "20"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-glacier",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Glacier?",
+      "choices": [
+        "Montana",
+        "Wyoming",
+        "Idaho",
+        "Washington"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-joshua",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Joshua Tree?",
+      "choices": [
+        "California",
+        "Arizona",
+        "Nevada",
+        "Utah"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-show-me",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher US-Bundesstaat trägt den Beinamen Show-Me State?",
+      "choices": [
+        "Missouri",
+        "Kansas",
+        "Arkansas",
+        "Iowa"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-green-mountain",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher US-Bundesstaat trägt den Beinamen Green Mountain State?",
+      "choices": [
+        "Vermont",
+        "New Hampshire",
+        "Maine",
+        "Colorado"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1950",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Welches Land gewann die Fußball-Weltmeisterschaft der Männer 1950?",
+      "choices": [
+        "Uruguay",
+        "Brasilien",
+        "Spanien",
+        "Schweden"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-inv-xray",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wem schreibt man die Entdeckung der Röntgenstrahlen zu?",
+      "choices": [
+        "Wilhelm Röntgen",
+        "Henri Becquerel",
+        "Marie Curie",
+        "Ernest Rutherford"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-hcl",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Labor",
+      "prompt": "Wie lautet die chemische Formel von Chlorwasserstoff?",
+      "choices": [
+        "HCl",
+        "NaCl",
+        "H2SO4",
+        "HF"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-cygnet",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wie heißt ein Schwanenbaby?",
+      "choices": [
+        "Ein Schwanenküken",
+        "Ein Entenküken",
+        "Eine Gansjunges",
+        "Ein Küken"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-barbados",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Barbados?",
+      "choices": [
+        "Bridgetown",
+        "Speightstown",
+        "Oistins",
+        "Holetown"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-glasgow",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Stadt Glasgow?",
+      "choices": [
+        "das Vereinigte Königreich",
+        "Irland",
+        "Kanada",
+        "Australien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-dxb",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode DXB?",
+      "choices": [
+        "Dubai",
+        "Abu Dhabi",
+        "Doha",
+        "Riyadh"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-vie",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode VIE?",
+      "choices": [
+        "Vienna",
+        "Salzburg",
+        "Budapest",
+        "Prague"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-ber",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode BER?",
+      "choices": [
+        "Berlin",
+        "Hamburg",
+        "Leipzig",
+        "Warsaw"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1972w",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Winterspiele 1972?",
+      "choices": [
+        "Sapporo",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-black",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welches Meer liegt nördlich der Türkei?",
+      "choices": [
+        "Das Schwarze Meer",
+        "Das Mittelmeer",
+        "Das Rote Meer",
+        "Das Kaspische Meer"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-home-lodge",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Was baut ein Biber in einem Bach?",
+      "choices": [
+        "Eine Biberburg",
+        "Einen Stock",
+        "Ein Netz",
+        "Nur ein Nest im Baum"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-edmonton-p",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welcher kanadischen Provinz liegt Edmonton?",
+      "choices": [
+        "Alberta",
+        "Saskatchewan",
+        "British Columbia",
+        "Manitoba"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-iso-gb",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Wie lautet der zweistellige Ländercode für das Vereinigte Königreich?",
+      "choices": [
+        "GB",
+        "US",
+        "CA",
+        "FR"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

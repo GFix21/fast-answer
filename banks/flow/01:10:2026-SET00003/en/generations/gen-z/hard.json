@@ -1,0 +1,709 @@
+{
+  "locale": "en",
+  "generation": "gen-z",
+  "tier": "hard",
+  "set": "SET00003",
+  "held": 28,
+  "questions": [
+    {
+      "id": "s3-wrote-brief-time",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Name",
+      "prompt": "Who wrote A Brief History of Time?",
+      "choices": [
+        "Stephen Hawking",
+        "Carl Sagan",
+        "Richard Feynman",
+        "Neil deGrasse Tyson"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-bromine",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical symbol for bromine?",
+      "choices": [
+        "Br",
+        "B",
+        "Bm",
+        "Bo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-1988w",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "gen-z",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1988 Winter Olympics?",
+      "choices": [
+        "Calgary",
+        "Vancouver",
+        "Edmonton",
+        "Montreal"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-rite",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "gen-z",
+      "categoryTitle": "Name",
+      "prompt": "Who composed The Rite of Spring?",
+      "choices": [
+        "Igor Stravinsky",
+        "Claude Debussy",
+        "Maurice Ravel",
+        "Béla Bartók"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-nestle",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "In which country was Nestlé founded?",
+      "choices": [
+        "Switzerland",
+        "France",
+        "Germany",
+        "Belgium"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-river-danube",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Into which body of water does the Danube empty?",
+      "choices": [
+        "the Black Sea",
+        "the Mediterranean Sea",
+        "the Baltic Sea",
+        "the North Sea"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-sputnik",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Year",
+      "prompt": "In which year did Sputnik 1 reach orbit?",
+      "choices": [
+        "1957",
+        "1961",
+        "1969",
+        "1945"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-biggest-province",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which Canadian province has the most people?",
+      "choices": [
+        "Ontario",
+        "Quebec",
+        "British Columbia",
+        "Alberta"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-cn",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for China?",
+      "choices": [
+        "86",
+        "81",
+        "82",
+        "91"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-nl",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for the Netherlands?",
+      "choices": [
+        "31",
+        "32",
+        "49",
+        "45"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-acadia",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "In which U.S. state is Acadia National Park?",
+      "choices": [
+        "Maine",
+        "Vermont",
+        "New Hampshire",
+        "Massachusetts"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-rainier",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "In which U.S. state is Mount Rainier National Park?",
+      "choices": [
+        "Washington",
+        "Oregon",
+        "Alaska",
+        "Montana"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-keystone",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Keystone State?",
+      "choices": [
+        "Pennsylvania",
+        "Ohio",
+        "New York",
+        "Virginia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-pelican",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Pelican State?",
+      "choices": [
+        "Louisiana",
+        "Florida",
+        "Mississippi",
+        "Texas"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-north-star",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the North Star State?",
+      "choices": [
+        "Minnesota",
+        "Wisconsin",
+        "Michigan",
+        "North Dakota"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-food-feta",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which country is most closely associated with feta cheese?",
+      "choices": [
+        "Greece",
+        "Italy",
+        "Turkey",
+        "Bulgaria"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The landmark sits in one country.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-ammonia",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical formula for ammonia?",
+      "choices": [
+        "NH3",
+        "NO2",
+        "H2O",
+        "CH4"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-messenger",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Name",
+      "prompt": "In Greek myth, who is the god of messengers?",
+      "choices": [
+        "Hermes",
+        "Apollo",
+        "Iris",
+        "Ares"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-andorra",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Andorra?",
+      "choices": [
+        "Andorra la Vella",
+        "Escaldes",
+        "La Massana",
+        "Encamp"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-trinidad",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Trinidad and Tobago?",
+      "choices": [
+        "Port of Spain",
+        "San Fernando",
+        "Chaguanas",
+        "Scarborough"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-ord",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which city is served by the airport code ORD?",
+      "choices": [
+        "Chicago",
+        "Detroit",
+        "Milwaukee",
+        "St. Louis"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-mex",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which city is served by the airport code MEX?",
+      "choices": [
+        "Mexico City",
+        "Guadalajara",
+        "Cancún",
+        "Monterrey"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-ist",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which city is served by the airport code IST?",
+      "choices": [
+        "Istanbul",
+        "Ankara",
+        "Athens",
+        "Izmir"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1960",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "gen-z",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1960 Summer Olympics?",
+      "choices": [
+        "Rome",
+        "London",
+        "Paris",
+        "Tokyo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-2006w",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "gen-z",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 2006 Winter Olympics?",
+      "choices": [
+        "Turin",
+        "Oslo",
+        "Innsbruck",
+        "Sochi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-play-puck",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Art",
+      "prompt": "In which Shakespeare play is Puck?",
+      "choices": [
+        "A Midsummer Night's Dream",
+        "The Tempest",
+        "Twelfth Night",
+        "Hamlet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-saskatoon-p",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "In which Canadian province is Saskatoon?",
+      "choices": [
+        "Saskatchewan",
+        "Alberta",
+        "Manitoba",
+        "British Columbia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-month-10",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Year",
+      "prompt": "Which month comes right after November?",
+      "choices": [
+        "December",
+        "January",
+        "February",
+        "March"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

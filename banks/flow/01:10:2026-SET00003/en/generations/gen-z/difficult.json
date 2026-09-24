@@ -1,0 +1,434 @@
+{
+  "locale": "en",
+  "generation": "gen-z",
+  "tier": "difficult",
+  "set": "SET00003",
+  "held": 17,
+  "questions": [
+    {
+      "id": "s3-cap-nt-au",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of the Northern Territory of Australia?",
+      "choices": [
+        "Darwin",
+        "Alice Springs",
+        "Katherine",
+        "Nhulunbuy"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap-pdl",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Pays de la Loire?",
+      "choices": [
+        "Nantes",
+        "Angers",
+        "Le Mans",
+        "Saint-Nazaire"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-barium",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical symbol for barium?",
+      "choices": [
+        "Ba",
+        "B",
+        "Br",
+        "Be"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-1924",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "gen-z",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1924 Summer Olympics?",
+      "choices": [
+        "Paris",
+        "London",
+        "Amsterdam",
+        "Berlin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-river-zambezi",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Into which body of water does the Zambezi empty?",
+      "choices": [
+        "the Indian Ocean",
+        "the Atlantic Ocean",
+        "the Mediterranean Sea",
+        "the Red Sea"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-za",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for South Africa?",
+      "choices": [
+        "27",
+        "20",
+        "254",
+        "234"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-fi",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Finland?",
+      "choices": [
+        "358",
+        "46",
+        "47",
+        "372"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-badlands",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "In which U.S. state is Badlands National Park?",
+      "choices": [
+        "South Dakota",
+        "North Dakota",
+        "Nebraska",
+        "Wyoming"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-cornhusker",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Cornhusker State?",
+      "choices": [
+        "Nebraska",
+        "Iowa",
+        "Kansas",
+        "South Dakota"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-enchantment",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Land of Enchantment?",
+      "choices": [
+        "New Mexico",
+        "Arizona",
+        "Colorado",
+        "Texas"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-glucose",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical formula for glucose?",
+      "choices": [
+        "C6H12O6",
+        "C2H5OH",
+        "CH4",
+        "NaHCO3"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-benin",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Benin?",
+      "choices": [
+        "Porto-Novo",
+        "Cotonou",
+        "Parakou",
+        "Abomey"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-djibouti",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Djibouti?",
+      "choices": [
+        "Djibouti",
+        "Ali Sabieh",
+        "Tadjoura",
+        "Obock"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-del",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "Which city is served by the airport code DEL?",
+      "choices": [
+        "Delhi",
+        "Mumbai",
+        "Kolkata",
+        "Bengaluru"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1936",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "gen-z",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1936 Summer Olympics?",
+      "choices": [
+        "Berlin",
+        "London",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1980w",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "gen-z",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1980 Winter Olympics?",
+      "choices": [
+        "Lake Placid",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-gatineau-p",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Place",
+      "prompt": "In which Canadian province is Gatineau?",
+      "choices": [
+        "Quebec",
+        "Ontario",
+        "New Brunswick",
+        "Manitoba"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

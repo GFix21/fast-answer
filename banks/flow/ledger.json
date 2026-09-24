@@ -51,6 +51,28 @@
         }
       },
       "filledAt": "2026-09-24T15:19:13.582Z"
+    },
+    {
+      "id": "SET00003",
+      "folder": "01:10:2026-SET00003",
+      "startedAt": "2026-10-01T00:00:00.000Z",
+      "playUntil": "2026-10-05T00:00:00.000Z",
+      "qualityUntil": "2026-09-25T21:52:27.149Z",
+      "status": "quality",
+      "counts": {
+        "en": {
+          "questions": 589,
+          "placement": 30
+        },
+        "fr-CA": {
+          "questions": 589,
+          "placement": 30
+        },
+        "de": {
+          "questions": 589,
+          "placement": 30
+        }
+      }
     }
   ]
 }

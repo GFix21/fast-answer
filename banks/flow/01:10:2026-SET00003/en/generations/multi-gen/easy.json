@@ -1,0 +1,734 @@
+{
+  "locale": "en",
+  "generation": "multi-gen",
+  "tier": "easy",
+  "set": "SET00003",
+  "held": 29,
+  "questions": [
+    {
+      "id": "s3-atom-helium-n",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Lab",
+      "prompt": "What is the atomic number of helium?",
+      "choices": [
+        "2",
+        "4",
+        "1",
+        "10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-flamingo",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Colour",
+      "prompt": "What colour is a typical flamingo?",
+      "choices": [
+        "Pink",
+        "White",
+        "Blue",
+        "Yellow"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-2016",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "multi-gen",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 2016 Summer Olympics?",
+      "choices": [
+        "Rio de Janeiro",
+        "São Paulo",
+        "Buenos Aires",
+        "Lima"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-bolero",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Who composed Boléro?",
+      "choices": [
+        "Maurice Ravel",
+        "Claude Debussy",
+        "Camille Saint-Saëns",
+        "Georges Bizet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-honda",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "In which country was Honda founded?",
+      "choices": [
+        "Japan",
+        "South Korea",
+        "Germany",
+        "the United States"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-confed",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Year",
+      "prompt": "In which year did Canadian Confederation take effect?",
+      "choices": [
+        "1867",
+        "1776",
+        "1967",
+        "1840"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-youtube",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Year",
+      "prompt": "In which year was YouTube launched?",
+      "choices": [
+        "2005",
+        "2003",
+        "2007",
+        "2010"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-skin",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Lab",
+      "prompt": "What is the largest organ of the human body?",
+      "choices": [
+        "The skin",
+        "The liver",
+        "The brain",
+        "The lungs"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-louvre-city",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Art",
+      "prompt": "In which city is the Louvre?",
+      "choices": [
+        "Paris",
+        "Lyon",
+        "Brussels",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-jp",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Japan?",
+      "choices": [
+        "81",
+        "82",
+        "86",
+        "66"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-zion",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "In which U.S. state is Zion National Park?",
+      "choices": [
+        "Utah",
+        "Arizona",
+        "Colorado",
+        "Nevada"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-aloha",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Aloha State?",
+      "choices": [
+        "Hawaii",
+        "Alaska",
+        "California",
+        "Florida"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-2006",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "multi-gen",
+      "categoryTitle": "Sport",
+      "prompt": "Which country won the men's FIFA World Cup in 2006?",
+      "choices": [
+        "Italy",
+        "France",
+        "Germany",
+        "Portugal"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-inv-relativity",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Who is credited with the theory of special relativity?",
+      "choices": [
+        "Albert Einstein",
+        "Isaac Newton",
+        "Niels Bohr",
+        "Max Planck"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-wisdom",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "In Greek myth, who is the god of wisdom?",
+      "choices": [
+        "Athena",
+        "Aphrodite",
+        "Hera",
+        "Artemis"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-kitten",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "What is a baby cat called?",
+      "choices": [
+        "A kitten",
+        "A puppy",
+        "A cub",
+        "A chick"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-hen",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "What is an adult female chicken called?",
+      "choices": [
+        "A hen",
+        "A rooster",
+        "A chick",
+        "A goose"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-february",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "Which month usually has 28 days?",
+      "choices": [
+        "February",
+        "April",
+        "June",
+        "November"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-boiling",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "At what temperature, in Celsius, does water boil at sea level?",
+      "choices": [
+        "100",
+        "90",
+        "212",
+        "0"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-san-francisco",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "In which country is the city of San Francisco?",
+      "choices": [
+        "the United States",
+        "Mexico",
+        "Spain",
+        "Canada"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The landmark sits in one country.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-naples",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "In which country is the city of Naples?",
+      "choices": [
+        "Italy",
+        "Greece",
+        "Spain",
+        "France"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The landmark sits in one country.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-lhr",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "Which city is served by the airport code LHR?",
+      "choices": [
+        "London",
+        "Manchester",
+        "Paris",
+        "Dublin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-2018w",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "multi-gen",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 2018 Winter Olympics?",
+      "choices": [
+        "Pyeongchang",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-play-iago",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Art",
+      "prompt": "In which Shakespeare play is Iago?",
+      "choices": [
+        "Othello",
+        "Hamlet",
+        "Macbeth",
+        "King Lear"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-trumpet",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Art",
+      "prompt": "Which instrument family includes the trumpet?",
+      "choices": [
+        "Brass",
+        "Strings",
+        "Woodwind",
+        "Percussion"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-montreal-p",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Place",
+      "prompt": "In which Canadian province is Montreal?",
+      "choices": [
+        "Quebec",
+        "Ontario",
+        "New Brunswick",
+        "Nova Scotia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-hot",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "What is the opposite of hot?",
+      "choices": [
+        "Cold",
+        "Warm",
+        "Wet",
+        "Fast"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-early",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "What is the opposite of early?",
+      "choices": [
+        "Late",
+        "Slow",
+        "Far",
+        "Low"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-de",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Name",
+      "prompt": "What do you call a person from Germany?",
+      "choices": [
+        "A German",
+        "A tourist",
+        "A neighbour",
+        "A captain"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

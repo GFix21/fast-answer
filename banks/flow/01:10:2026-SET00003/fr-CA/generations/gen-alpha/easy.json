@@ -1,0 +1,734 @@
+{
+  "locale": "fr-CA",
+  "generation": "gen-alpha",
+  "tier": "easy",
+  "set": "SET00003",
+  "held": 29,
+  "questions": [
+    {
+      "id": "s3-wrote-art-war",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a écrit L'Art de la guerre?",
+      "choices": [
+        "Sun Tzu",
+        "Confucius",
+        "Laozi",
+        "Mencius"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-sapphire",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-alpha",
+      "categoryTitle": "Couleur",
+      "prompt": "C'est quoi la couleur undefined?",
+      "choices": [
+        "Bleu",
+        "Rouge",
+        "Vert",
+        "Jaune"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-2000",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'été de 2000?",
+      "choices": [
+        "Sydney",
+        "Melbourne",
+        "Athens",
+        "Atlanta"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-carmen",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a composé Carmen?",
+      "choices": [
+        "Georges Bizet",
+        "Giuseppe Verdi",
+        "Giacomo Puccini",
+        "Charles Gounod"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-hyundai",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "Hyundai a été fondé dans quel pays?",
+      "choices": [
+        "Corée du Sud",
+        "Japon",
+        "Chine",
+        "Allemagne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-river-seine",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "Le Seine se jette dans quel plan d'eau?",
+      "choices": [
+        "La Manche",
+        "La mer Méditerranée",
+        "La mer du Nord",
+        "Le golfe de Gascogne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-wiki",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Année",
+      "prompt": "C'est en quelle année Wikipédia a été mis en ligne?",
+      "choices": [
+        "2001",
+        "1998",
+        "2004",
+        "1995"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-closest-star",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quelle étoile qui est la plus proche de la Terre?",
+      "choices": [
+        "Le Soleil",
+        "Proxima du Centaure",
+        "Sirius",
+        "L'étoile Polaire"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-roman-m",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nombre",
+      "prompt": "Le chiffre romain M veut dire quel nombre?",
+      "choices": [
+        "1000",
+        "100",
+        "500",
+        "50"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-de",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de l'Allemagne?",
+      "choices": [
+        "49",
+        "43",
+        "41",
+        "33"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-grand-canyon",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "Le parc national Grand Canyon est dans quel État américain?",
+      "choices": [
+        "Arizona",
+        "Utah",
+        "Nevada",
+        "New Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-sunshine",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Sunshine State »?",
+      "choices": [
+        "Florida",
+        "California",
+        "Arizona",
+        "Hawaii"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-2002",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sport",
+      "prompt": "Quel pays a gagné la Coupe du monde masculine de la FIFA en 2002?",
+      "choices": [
+        "Le Brésil",
+        "L'Allemagne",
+        "La Turquie",
+        "La Corée du Sud"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-inv-telephone",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "On attribue à qui le brevet du téléphone?",
+      "choices": [
+        "Alexander Graham Bell",
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-sky",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "Dans le mythe grec, c'est qui le dieu du ciel?",
+      "choices": [
+        "Zeus",
+        "Poseidon",
+        "Ares",
+        "Hermes"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-puppy",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "Comment on appelle un bébé chien?",
+      "choices": [
+        "Un chiot",
+        "Un chaton",
+        "Un petit",
+        "Un veau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-rooster",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "Comment on appelle un poulet mâle adulte?",
+      "choices": [
+        "Un coq",
+        "Une poule",
+        "Un poussin",
+        "Un malard"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-island",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "Comment on appelle une terre entourée d'eau de tous les côtés?",
+      "choices": [
+        "Une île",
+        "Une presqu'île",
+        "Un delta",
+        "Un cap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-freezing",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "À quelle température, en Celsius, l'eau gèle?",
+      "choices": [
+        "0",
+        "32",
+        "100",
+        "-10"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-new-orleans",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "La ville de La Nouvelle-Orléans est dans quel pays?",
+      "choices": [
+        "Les États-Unis",
+        "La France",
+        "Le Canada",
+        "Haïti"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-florence",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "La ville de Florence est dans quel pays?",
+      "choices": [
+        "L'Italie",
+        "La France",
+        "L'Espagne",
+        "La Grèce"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-lax",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport LAX?",
+      "choices": [
+        "Los Angeles",
+        "San Francisco",
+        "San Diego",
+        "Las Vegas"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-2002w",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'hiver de 2002?",
+      "choices": [
+        "Salt Lake City",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-play-ophelia",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Art",
+      "prompt": "Dans quelle pièce de Shakespeare est Ophelia?",
+      "choices": [
+        "Hamlet",
+        "Macbeth",
+        "Othello",
+        "King Lear"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-violin",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-alpha",
+      "categoryTitle": "Art",
+      "prompt": "La famille d'instruments qui comprend un violon, c'est laquelle?",
+      "choices": [
+        "Les cordes",
+        "Les cuivres",
+        "Les bois",
+        "Les percussions"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-ottawa-p",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "Ottawa est dans quelle province canadienne?",
+      "choices": [
+        "Ontario",
+        "Quebec",
+        "Manitoba",
+        "Alberta"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-month-4",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Année",
+      "prompt": "C'est quel mois qui vient juste après mai?",
+      "choices": [
+        "juin",
+        "juillet",
+        "août",
+        "septembre"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-wet",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "C'est quoi le contraire de mouillé?",
+      "choices": [
+        "Sec",
+        "Froid",
+        "Sombre",
+        "Mou"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-fr",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Nom",
+      "prompt": "Comment on appelle une personne de la France?",
+      "choices": [
+        "Un Français",
+        "Un touriste",
+        "Un voisin",
+        "Un capitaine"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

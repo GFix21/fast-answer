@@ -1,0 +1,759 @@
+{
+  "locale": "de",
+  "generation": "gen-y",
+  "tier": "easy",
+  "set": "SET00003",
+  "held": 30,
+  "questions": [
+    {
+      "id": "s3-wrote-catcher",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Wer hat Der Fänger im Roggen geschrieben?",
+      "choices": [
+        "J. D. Salinger",
+        "Jack Kerouac",
+        "John Updike",
+        "Philip Roth"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-emerald",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "gen-y",
+      "categoryTitle": "Farbe",
+      "prompt": "Welche Farbe hat ein typischer Smaragd?",
+      "choices": [
+        "Grün",
+        "Rot",
+        "Blau",
+        "Gelb"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-1976",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-y",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Sommerspiele 1976?",
+      "choices": [
+        "Montreal",
+        "Toronto",
+        "Quebec City",
+        "Vancouver"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-nutcracker",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Wer hat Der Nussknacker komponiert?",
+      "choices": [
+        "Pyotr Ilyich Tchaikovsky",
+        "Igor Stravinsky",
+        "Sergei Rachmaninoff",
+        "Modest Mussorgsky"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-lego",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land wurde Lego gegründet?",
+      "choices": [
+        "Dänemark",
+        "Schweden",
+        "Deutschland",
+        "Niederlande"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-river-amazon",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "In welches Gewässer mündet der Amazonas?",
+      "choices": [
+        "Der Atlantik",
+        "Der Pazifik",
+        "Die Karibik",
+        "Das Mittelmeer"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-wright",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Jahr",
+      "prompt": "In welchem Jahr machten die Gebrüder Wright ihren ersten Motorflug?",
+      "choices": [
+        "1903",
+        "1896",
+        "1914",
+        "1885"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-canada-pm",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Wie lautet der Titel des Regierungschefs von Kanada?",
+      "choices": [
+        "Premierminister",
+        "Präsident",
+        "Kanzler",
+        "Gouverneur"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-platypus",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Welches Säugetier legt Eier?",
+      "choices": [
+        "Das Schnabeltier",
+        "Die Fledermaus",
+        "Das Känguru",
+        "Die Robbe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-uk",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von dem Vereinigten Königreich?",
+      "choices": [
+        "44",
+        "33",
+        "49",
+        "1"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-yosemite",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Yosemite?",
+      "choices": [
+        "California",
+        "Nevada",
+        "Arizona",
+        "Oregon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-empire",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher US-Bundesstaat trägt den Beinamen Empire State?",
+      "choices": [
+        "New York",
+        "Pennsylvania",
+        "Massachusetts",
+        "Illinois"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1986",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-y",
+      "categoryTitle": "Sport",
+      "prompt": "Welches Land gewann die Fußball-Weltmeisterschaft der Männer 1986?",
+      "choices": [
+        "Argentinien",
+        "Deutschland",
+        "Frankreich",
+        "Brasilien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-2022",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-y",
+      "categoryTitle": "Sport",
+      "prompt": "Welches Land gewann die Fußball-Weltmeisterschaft der Männer 2022?",
+      "choices": [
+        "Argentinien",
+        "Frankreich",
+        "Kroatien",
+        "Marokko"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-co2",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Labor",
+      "prompt": "Wie lautet die chemische Formel von Kohlenstoffdioxid?",
+      "choices": [
+        "CO2",
+        "CO",
+        "O2",
+        "CH4"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-lamb",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Wie heißt ein Schafbaby?",
+      "choices": [
+        "Ein Lamm",
+        "Ein Kalb",
+        "Ein Ferkel",
+        "Ein Kitz"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-pack",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Wie heißt eine Gruppe Wölfe?",
+      "choices": [
+        "Ein Rudel",
+        "Ein Löwenrudel",
+        "Eine Herde",
+        "Ein Schwarm"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-moon-orbits",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Was umkreist der Mond?",
+      "choices": [
+        "Die Erde",
+        "Nur die Sonne",
+        "Mars",
+        "Die Venus"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-thanks-ca",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "In welchem Monat ist Thanksgiving in Kanada?",
+      "choices": [
+        "Oktober",
+        "November",
+        "September",
+        "Dezember"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-chicago",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Stadt Chicago?",
+      "choices": [
+        "die Vereinigten Staaten",
+        "Kanada",
+        "das Vereinigte Königreich",
+        "Australien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-venice",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Stadt Venedig?",
+      "choices": [
+        "Italien",
+        "Kroatien",
+        "Griechenland",
+        "Frankreich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-yvr",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode YVR?",
+      "choices": [
+        "Vancouver",
+        "Victoria",
+        "Calgary",
+        "Seattle"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-2004",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "gen-y",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Sommerspiele 2004?",
+      "choices": [
+        "Athens",
+        "London",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-pacific-ca",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher Ozean liegt an der Westküste Kanadas?",
+      "choices": [
+        "Der Pazifik",
+        "Der Atlantik",
+        "Das Nordpolarmeer",
+        "Der Indische Ozean"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-home-web",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Was spinnt eine Spinne, um Beute zu fangen?",
+      "choices": [
+        "Ein Netz",
+        "Einen Stock",
+        "Ein Nest",
+        "Einen Damm"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-calgary-p",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "In welcher kanadischen Provinz liegt Calgary?",
+      "choices": [
+        "Alberta",
+        "British Columbia",
+        "Saskatchewan",
+        "Manitoba"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-month-1",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Jahr",
+      "prompt": "Welcher Monat kommt direkt nach Februar?",
+      "choices": [
+        "März",
+        "April",
+        "Mai",
+        "Juni"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-fast",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Was ist das Gegenteil von schnell?",
+      "choices": [
+        "Langsam",
+        "Spät",
+        "Laut",
+        "Hart"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-ca",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Wie nennt man eine Person aus Kanada?",
+      "choices": [
+        "Ein Kanadier",
+        "Ein Tourist",
+        "Ein Nachbar",
+        "Ein Kapitän"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-br",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Name",
+      "prompt": "Wie nennt man eine Person aus Brasilien?",
+      "choices": [
+        "Ein Brasilianer",
+        "Ein Tourist",
+        "Ein Nachbar",
+        "Ein Kapitän"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

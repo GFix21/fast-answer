@@ -1,0 +1,734 @@
+{
+  "locale": "de",
+  "generation": "baby-boomer",
+  "tier": "hard",
+  "set": "SET00003",
+  "held": 29,
+  "questions": [
+    {
+      "id": "s3-in-hagia",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Hagia Sophia?",
+      "choices": [
+        "die Türkei",
+        "Griechenland",
+        "Italien",
+        "Ägypten"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-lang-ukraine-lang",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Was ist die Hauptsprache von der Ukraine?",
+      "choices": [
+        "Ukrainisch",
+        "Russisch",
+        "Polnisch",
+        "Belarussisch"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-chlorophyll",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Farbe",
+      "prompt": "Welche Farbe hat Gras, das Chlorophyll enthält?",
+      "choices": [
+        "Grün",
+        "Rot",
+        "Braun",
+        "Blau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-1968",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Sommerspiele 1968?",
+      "choices": [
+        "Mexico City",
+        "Rio de Janeiro",
+        "Madrid",
+        "Los Angeles"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-peer",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Wer hat Peer Gynt komponiert?",
+      "choices": [
+        "Edvard Grieg",
+        "Jean Sibelius",
+        "Carl Nielsen",
+        "Franz Liszt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-volvo",
+      "tier": "hard",
+      "topic": "cars",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land wurde Volvo gegründet?",
+      "choices": [
+        "Schweden",
+        "Deutschland",
+        "Japan",
+        "Vereinigte Staaten"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-river-mississippi",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welches Gewässer mündet der Mississippi?",
+      "choices": [
+        "Der Golf von Mexiko",
+        "Der Atlantik",
+        "Der Pazifik",
+        "Die Hudson Bay"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-nato",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Jahr",
+      "prompt": "In welchem Jahr wurde die NATO gegründet?",
+      "choices": [
+        "1949",
+        "1945",
+        "1955",
+        "1939"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prado",
+      "tier": "hard",
+      "topic": "art",
+      "generation": "baby-boomer",
+      "categoryTitle": "Kunst",
+      "prompt": "In welcher Stadt steht das Prado-Museum?",
+      "choices": [
+        "Madrid",
+        "Barcelona",
+        "Sevilla",
+        "Lissabon"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-se",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von Schweden?",
+      "choices": [
+        "46",
+        "47",
+        "45",
+        "358"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-gr",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von Griechenland?",
+      "choices": [
+        "30",
+        "39",
+        "90",
+        "40"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-arches",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Arches?",
+      "choices": [
+        "Utah",
+        "Arizona",
+        "Colorado",
+        "New Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-sequoia",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Sequoia?",
+      "choices": [
+        "California",
+        "Oregon",
+        "Washington",
+        "Colorado"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-sunflower",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher US-Bundesstaat trägt den Beinamen Sunflower State?",
+      "choices": [
+        "Kansas",
+        "Nebraska",
+        "Iowa",
+        "Oklahoma"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-silver",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher US-Bundesstaat trägt den Beinamen Silver State?",
+      "choices": [
+        "Nevada",
+        "Colorado",
+        "Arizona",
+        "Montana"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-1958",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Welches Land gewann die Fußball-Weltmeisterschaft der Männer 1958?",
+      "choices": [
+        "Brasilien",
+        "Schweden",
+        "Frankreich",
+        "Deutschland"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-inv-braille",
+      "tier": "hard",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Wem schreibt man die Erfindung der Brailleschrift zu?",
+      "choices": [
+        "Louis Braille",
+        "Helen Keller",
+        "Valentin Haüy",
+        "Samuel Morse"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-under",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Wer ist in der griechischen Sage der Gott der Unterwelt?",
+      "choices": [
+        "Hades",
+        "Zeus",
+        "Poseidon",
+        "Ares"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-gaggle",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Name",
+      "prompt": "Wie heißt eine Gruppe Gänse am Boden?",
+      "choices": [
+        "Eine Schar",
+        "Ein Schwarm",
+        "Ein Rudel",
+        "Ein Wolfsrudel"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-bahamas",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von den Bahamas?",
+      "choices": [
+        "Nassau",
+        "Freeport",
+        "Marsh Harbour",
+        "George Town"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-xian",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Stadt Xi'an?",
+      "choices": [
+        "China",
+        "die Mongolei",
+        "Japan",
+        "Kasachstan"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-ams",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode AMS?",
+      "choices": [
+        "Amsterdam",
+        "Rotterdam",
+        "Brussels",
+        "Frankfurt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-bru",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode BRU?",
+      "choices": [
+        "Brussels",
+        "Antwerp",
+        "Amsterdam",
+        "Paris"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1908",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Sommerspiele 1908?",
+      "choices": [
+        "London",
+        "Paris",
+        "Rome",
+        "Tokyo"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1992w",
+      "tier": "hard",
+      "topic": "sport",
+      "generation": "baby-boomer",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Winterspiele 1992?",
+      "choices": [
+        "Albertville",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-baltic",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Welches Meer liegt östlich von Schweden und südlich von Finnland?",
+      "choices": [
+        "Die Ostsee",
+        "Die Nordsee",
+        "Das Europäische Nordmeer",
+        "Die Barentssee"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-trombone",
+      "tier": "hard",
+      "topic": "music",
+      "generation": "baby-boomer",
+      "categoryTitle": "Kunst",
+      "prompt": "Zu welcher Instrumentenfamilie gehört eine Posaune?",
+      "choices": [
+        "Blechbläser",
+        "Streicher",
+        "Holzbläser",
+        "Schlagzeug"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-month-7",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Jahr",
+      "prompt": "Welcher Monat kommt direkt nach August?",
+      "choices": [
+        "September",
+        "Oktober",
+        "November",
+        "Dezember"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-iso-jp",
+      "tier": "hard",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Wie lautet der zweistellige Ländercode für Japan?",
+      "choices": [
+        "JP",
+        "US",
+        "CA",
+        "FR"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

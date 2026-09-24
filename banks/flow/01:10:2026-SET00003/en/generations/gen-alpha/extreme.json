@@ -1,0 +1,209 @@
+{
+  "locale": "en",
+  "generation": "gen-alpha",
+  "tier": "extreme",
+  "set": "SET00003",
+  "held": 8,
+  "questions": [
+    {
+      "id": "s3-cap-saarland",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Saarland?",
+      "choices": [
+        "Saarbrücken",
+        "Neunkirchen",
+        "Homburg",
+        "Völklingen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-arsenic",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical symbol for arsenic?",
+      "choices": [
+        "As",
+        "A",
+        "Ar",
+        "Ac"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-atom-platinum-n",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lab",
+      "prompt": "What is the atomic number of platinum?",
+      "choices": [
+        "78",
+        "47",
+        "79",
+        "82"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-ph",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for the Philippines?",
+      "choices": [
+        "63",
+        "62",
+        "60",
+        "66"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-great-basin",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Place",
+      "prompt": "In which U.S. state is Great Basin National Park?",
+      "choices": [
+        "Nevada",
+        "Utah",
+        "California",
+        "Idaho"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-chem-quartz",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical formula for quartz?",
+      "choices": [
+        "SiO2",
+        "CO2",
+        "CaCO3",
+        "Al2O3"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-togo",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Togo?",
+      "choices": [
+        "Lomé",
+        "Sokodé",
+        "Kara",
+        "Atakpamé"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1904",
+      "tier": "extreme",
+      "topic": "sport",
+      "generation": "gen-alpha",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1904 Summer Olympics?",
+      "choices": [
+        "St. Louis",
+        "London",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

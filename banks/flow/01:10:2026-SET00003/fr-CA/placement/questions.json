@@ -1,0 +1,758 @@
+{
+  "locale": "fr-CA",
+  "set": "SET00003",
+  "held": 30,
+  "target": 30,
+  "questions": [
+    {
+      "id": "place-s3-cap-alberta",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de l'Alberta?",
+      "choices": [
+        "Edmonton",
+        "Calgary",
+        "Red Deer",
+        "Banff"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-bc",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Colombie-Britannique?",
+      "choices": [
+        "Victoria",
+        "Vancouver",
+        "Kelowna",
+        "Prince George"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-manitoba",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Manitoba?",
+      "choices": [
+        "Winnipeg",
+        "Brandon",
+        "Thompson",
+        "Churchill"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nb",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Nouveau-Brunswick?",
+      "choices": [
+        "Fredericton",
+        "Moncton",
+        "Saint John",
+        "Dieppe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nl",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de Terre-Neuve-et-Labrador?",
+      "choices": [
+        "St. John's",
+        "Corner Brook",
+        "Gander",
+        "Happy Valley-Goose Bay"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-ns",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Nouvelle-Écosse?",
+      "choices": [
+        "Halifax",
+        "Sydney",
+        "Dartmouth",
+        "Truro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-ontario",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de l'Ontario?",
+      "choices": [
+        "Toronto",
+        "Ottawa",
+        "Hamilton",
+        "London"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-pei",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de l'Île-du-Prince-Édouard?",
+      "choices": [
+        "Charlottetown",
+        "Summerside",
+        "Montague",
+        "Souris"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-quebec",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Québec?",
+      "choices": [
+        "Quebec City",
+        "Montreal",
+        "Laval",
+        "Gatineau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-sk",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Saskatchewan?",
+      "choices": [
+        "Regina",
+        "Saskatoon",
+        "Moose Jaw",
+        "Prince Albert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nsw",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Nouvelle-Galles du Sud?",
+      "choices": [
+        "Sydney",
+        "Canberra",
+        "Newcastle",
+        "Wollongong"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-vic-au",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de l'État de Victoria, en Australie?",
+      "choices": [
+        "Melbourne",
+        "Sydney",
+        "Geelong",
+        "Ballarat"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-qld",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Queensland?",
+      "choices": [
+        "Brisbane",
+        "Cairns",
+        "Gold Coast",
+        "Townsville"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-wa",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de l'Australie-Occidentale?",
+      "choices": [
+        "Perth",
+        "Fremantle",
+        "Broome",
+        "Albany"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-sa-au",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de l'Australie-Méridionale?",
+      "choices": [
+        "Adelaide",
+        "Perth",
+        "Port Augusta",
+        "Mount Gambier"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-act",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale du Territoire de la capitale australienne?",
+      "choices": [
+        "Canberra",
+        "Sydney",
+        "Melbourne",
+        "Brisbane"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-bavaria",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Bavière?",
+      "choices": [
+        "Munich",
+        "Nuremberg",
+        "Augsburg",
+        "Regensburg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nrw",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Rhénanie-du-Nord-Westphalie?",
+      "choices": [
+        "Düsseldorf",
+        "Cologne",
+        "Dortmund",
+        "Bonn"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-lower-saxony",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Basse-Saxe?",
+      "choices": [
+        "Hanover",
+        "Bremen",
+        "Braunschweig",
+        "Osnabrück"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-bretagne",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Bretagne?",
+      "choices": [
+        "Rennes",
+        "Brest",
+        "Nantes",
+        "Vannes"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-normandie",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Normandie?",
+      "choices": [
+        "Rouen",
+        "Caen",
+        "Le Havre",
+        "Cherbourg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nouvelle-aquitaine",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Nouvelle-Aquitaine?",
+      "choices": [
+        "Bordeaux",
+        "Limoges",
+        "Poitiers",
+        "Pau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-aura",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale d'Auvergne-Rhône-Alpes?",
+      "choices": [
+        "Lyon",
+        "Grenoble",
+        "Clermont-Ferrand",
+        "Saint-Étienne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-corse",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Corse?",
+      "choices": [
+        "Ajaccio",
+        "Bastia",
+        "Porto-Vecchio",
+        "Calvi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-sagrada",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, la Sagrada Familia?",
+      "choices": [
+        "Espagne",
+        "Italie",
+        "Portugal",
+        "France"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-chichen",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, Chichen Itza?",
+      "choices": [
+        "Mexique",
+        "Guatemala",
+        "Pérou",
+        "Belize"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-giza",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, la grande pyramide de Gizeh?",
+      "choices": [
+        "Égypte",
+        "Soudan",
+        "Mexique",
+        "Irak"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-table",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, la Montagne de la Table?",
+      "choices": [
+        "l'Afrique du Sud",
+        "Namibie",
+        "Kenya",
+        "Australie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-uluru",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, Uluru?",
+      "choices": [
+        "Australie",
+        "Nouvelle-Zélande",
+        "l'Afrique du Sud",
+        "Namibie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-brandenburg",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est dans quel pays, la porte de Brandebourg?",
+      "choices": [
+        "Allemagne",
+        "Autriche",
+        "Pologne",
+        "Tchéquie"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le lieu est dans un seul pays.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

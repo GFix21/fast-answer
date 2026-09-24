@@ -1,0 +1,759 @@
+{
+  "locale": "de",
+  "generation": "silent-generation",
+  "tier": "easy",
+  "set": "SET00003",
+  "held": 30,
+  "questions": [
+    {
+      "id": "s3-in-rushmore",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt der Mount Rushmore?",
+      "choices": [
+        "die Vereinigten Staaten",
+        "Kanada",
+        "Mexiko",
+        "Frankreich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-stop",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Farbe",
+      "prompt": "Welche Farbe hat ein gewöhnliches Stoppschild?",
+      "choices": [
+        "Rot",
+        "Gelb",
+        "Blau",
+        "Grün"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-col-school-bus",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Farbe",
+      "prompt": "Welche Farbe hat ein typischer nordamerikanischer Schulbus?",
+      "choices": [
+        "Gelb",
+        "Orange",
+        "Rot",
+        "Blau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": "colour",
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-music-seasons",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wer hat Die vier Jahreszeiten komponiert?",
+      "choices": [
+        "Antonio Vivaldi",
+        "Johann Sebastian Bach",
+        "George Frideric Handel",
+        "Arcangelo Corelli"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-toyota",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land wurde Toyota gegründet?",
+      "choices": [
+        "Japan",
+        "Südkorea",
+        "Deutschland",
+        "Vereinigte Staaten"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-co-heineken",
+      "tier": "easy",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land wurde Heineken gegründet?",
+      "choices": [
+        "Niederlande",
+        "Belgien",
+        "Deutschland",
+        "Dänemark"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-expo",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Jahr",
+      "prompt": "In welchem Jahr öffnete die Expo 67 in Montreal?",
+      "choices": [
+        "1967",
+        "1976",
+        "1957",
+        "1980"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-year-un-year",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Jahr",
+      "prompt": "In welchem Jahr wurden die Vereinten Nationen gegründet?",
+      "choices": [
+        "1945",
+        "1919",
+        "1948",
+        "1955"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-longest-bone",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Labor",
+      "prompt": "Welcher Knochen ist der längste im menschlichen Körper?",
+      "choices": [
+        "Der Oberschenkelknochen",
+        "Das Schienbein",
+        "Der Oberarmknochen",
+        "Die Wirbelsäule"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-rijks",
+      "tier": "easy",
+      "topic": "art",
+      "generation": "silent-generation",
+      "categoryTitle": "Kunst",
+      "prompt": "In welcher Stadt steht das Rijksmuseum?",
+      "choices": [
+        "Amsterdam",
+        "Rotterdam",
+        "Den Haag",
+        "Brüssel"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-mx",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Zahl",
+      "prompt": "Wie lautet die internationale Vorwahl von Mexiko?",
+      "choices": [
+        "52",
+        "55",
+        "54",
+        "1"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-everglades",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem US-Bundesstaat liegt der Nationalpark Everglades?",
+      "choices": [
+        "Florida",
+        "Louisiana",
+        "Georgia",
+        "Texas"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-buckeye",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welcher US-Bundesstaat trägt den Beinamen Buckeye State?",
+      "choices": [
+        "Ohio",
+        "Indiana",
+        "Michigan",
+        "Pennsylvania"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wc-2010",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Welches Land gewann die Fußball-Weltmeisterschaft der Männer 2010?",
+      "choices": [
+        "Spanien",
+        "die Niederlande",
+        "Deutschland",
+        "Uruguay"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-inv-polio",
+      "tier": "easy",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wem schreibt man den ersten erfolgreichen Polio-Impfstoff zum Spritzen zu?",
+      "choices": [
+        "Jonas Salk",
+        "Albert Sabin",
+        "Edward Jenner",
+        "Louis Pasteur"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-music-god",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wer ist in der griechischen Sage der Gott der Musik?",
+      "choices": [
+        "Apollo",
+        "Hermes",
+        "Dionysus",
+        "Ares"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-duckling",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wie heißt ein Entenbaby?",
+      "choices": [
+        "Ein Entenküken",
+        "Ein Küken",
+        "Eine Gansjunges",
+        "Ein Schwanenküken"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-tadpole",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Was wird aus einer Kaulquappe?",
+      "choices": [
+        "Ein Frosch",
+        "Ein Fisch",
+        "Eine Schlange",
+        "Eine Schildkröte"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-canada-day",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "In welchem Monat ist der Canada Day?",
+      "choices": [
+        "Juli",
+        "Juni",
+        "August",
+        "Mai"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-kid-primary",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Welche drei Farben sind im Kunstunterricht die klassischen Grundfarben?",
+      "choices": [
+        "Rot, Gelb und Blau",
+        "Rot, Grün und Blau",
+        "Orange, Grün und Violett",
+        "Schwarz, Weiß und Grau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-miami",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Stadt Miami?",
+      "choices": [
+        "die Vereinigten Staaten",
+        "Kuba",
+        "Spanien",
+        "Mexiko"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-city-las-vegas",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Stadt Las Vegas?",
+      "choices": [
+        "die Vereinigten Staaten",
+        "Mexiko",
+        "Kanada",
+        "Spanien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-cdg",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Welche Stadt bedient der Flughafencode CDG?",
+      "choices": [
+        "Paris",
+        "Lyon",
+        "Brussels",
+        "Geneva"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-2022w",
+      "tier": "easy",
+      "topic": "sport",
+      "generation": "silent-generation",
+      "categoryTitle": "Sport",
+      "prompt": "Welche Stadt war Gastgeber der Olympischen Winterspiele 2022?",
+      "choices": [
+        "Beijing",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-play-cordelia",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Kunst",
+      "prompt": "In welchem Shakespeare-Stück kommt Cordelia vor?",
+      "choices": [
+        "King Lear",
+        "Hamlet",
+        "Othello",
+        "Macbeth"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-fam-flute",
+      "tier": "easy",
+      "topic": "music",
+      "generation": "silent-generation",
+      "categoryTitle": "Kunst",
+      "prompt": "Zu welcher Instrumentenfamilie gehört eine Flöte?",
+      "choices": [
+        "Holzbläser",
+        "Blechbläser",
+        "Streicher",
+        "Schlagzeug"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-winnipeg-p",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welcher kanadischen Provinz liegt Winnipeg?",
+      "choices": [
+        "Manitoba",
+        "Saskatchewan",
+        "Ontario",
+        "Alberta"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-up",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Was ist das Gegenteil von oben?",
+      "choices": [
+        "Unten",
+        "Links",
+        "Weit",
+        "Offen"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-opp-big",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Was ist das Gegenteil von groß?",
+      "choices": [
+        "Klein",
+        "Hoch",
+        "Breit",
+        "Schnell"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-from-it",
+      "tier": "easy",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Name",
+      "prompt": "Wie nennt man eine Person aus Italien?",
+      "choices": [
+        "Ein Italiener",
+        "Ein Tourist",
+        "Ein Nachbar",
+        "Ein Kapitän"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Eine Antwort ist die geltende.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

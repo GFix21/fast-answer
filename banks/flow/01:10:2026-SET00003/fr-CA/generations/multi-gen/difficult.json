@@ -1,0 +1,434 @@
+{
+  "locale": "fr-CA",
+  "generation": "multi-gen",
+  "tier": "difficult",
+  "set": "SET00003",
+  "held": 17,
+  "questions": [
+    {
+      "id": "s3-cap-hesse",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Hesse?",
+      "choices": [
+        "Wiesbaden",
+        "Frankfurt",
+        "Kassel",
+        "Darmstadt"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-wrote-comedy",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a écrit La Divine Comédie?",
+      "choices": [
+        "Dante Alighieri",
+        "Petrarch",
+        "Boccaccio",
+        "Virgil"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-cadmium",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "multi-gen",
+      "categoryTitle": "Labo",
+      "prompt": "C'est quoi le symbole chimique undefined?",
+      "choices": [
+        "Cd",
+        "C",
+        "Ca",
+        "Cm"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-made-piano",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "multi-gen",
+      "categoryTitle": "Nom",
+      "prompt": "C'est qui qui a réalisé La Leçon de piano?",
+      "choices": [
+        "Jane Campion",
+        "Sofia Coppola",
+        "Kathryn Bigelow",
+        "Greta Gerwig"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-roman-d",
+      "tier": "difficult",
+      "topic": "music",
+      "generation": "multi-gen",
+      "categoryTitle": "Nombre",
+      "prompt": "Le chiffre romain D veut dire quel nombre?",
+      "choices": [
+        "500",
+        "50",
+        "1000",
+        "100"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-pl",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de la Pologne?",
+      "choices": [
+        "48",
+        "49",
+        "420",
+        "36"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-ua",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Nombre",
+      "prompt": "C'est quoi l'indicatif téléphonique de l'Ukraine?",
+      "choices": [
+        "380",
+        "7",
+        "48",
+        "40"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-big-bend",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "Le parc national Big Bend est dans quel État américain?",
+      "choices": [
+        "Texas",
+        "New Mexico",
+        "Arizona",
+        "Oklahoma"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-volunteer",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Volunteer State »?",
+      "choices": [
+        "Tennessee",
+        "Kentucky",
+        "Alabama",
+        "North Carolina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-bluegrass",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quel État américain qu'on surnomme « Bluegrass State »?",
+      "choices": [
+        "Kentucky",
+        "Tennessee",
+        "Virginia",
+        "Indiana"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-god-harvest",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "multi-gen",
+      "categoryTitle": "Nom",
+      "prompt": "Dans le mythe grec, c'est qui le dieu de la moisson?",
+      "choices": [
+        "Demeter",
+        "Hera",
+        "Persephone",
+        "Artemis"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-mauritania",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la Mauritanie?",
+      "choices": [
+        "Nouakchott",
+        "Nouadhibou",
+        "Rosso",
+        "Kaédi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-congo",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quoi la capitale de la République du Congo?",
+      "choices": [
+        "Brazzaville",
+        "Pointe-Noire",
+        "Dolisie",
+        "Nkayi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-air-akl",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle ville que dessert le code d'aéroport AKL?",
+      "choices": [
+        "Auckland",
+        "Wellington",
+        "Christchurch",
+        "Sydney"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-s-1980",
+      "tier": "difficult",
+      "topic": "sport",
+      "generation": "multi-gen",
+      "categoryTitle": "Sport",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'été de 1980?",
+      "choices": [
+        "Moscow",
+        "London",
+        "Paris",
+        "Rome"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sea-adriatic",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "C'est quelle mer qui est entre l'Italie et la péninsule balkanique?",
+      "choices": [
+        "La mer Adriatique",
+        "La mer Tyrrhénienne",
+        "La mer Égée",
+        "La mer Noire"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Une réponse est la bonne.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-prov-fredericton-p",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Endroit",
+      "prompt": "Fredericton est dans quelle province canadienne?",
+      "choices": [
+        "New Brunswick",
+        "Nova Scotia",
+        "Prince Edward Island",
+        "Quebec"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La capitale, c'est le siège du gouvernement, pas toujours la plus grande ville.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

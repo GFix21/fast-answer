@@ -1,0 +1,758 @@
+{
+  "locale": "de",
+  "set": "SET00003",
+  "held": 30,
+  "target": 30,
+  "questions": [
+    {
+      "id": "place-s3-cap-alberta",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Alberta?",
+      "choices": [
+        "Edmonton",
+        "Calgary",
+        "Red Deer",
+        "Banff"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-bc",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von British Columbia?",
+      "choices": [
+        "Victoria",
+        "Vancouver",
+        "Kelowna",
+        "Prince George"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-manitoba",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Manitoba?",
+      "choices": [
+        "Winnipeg",
+        "Brandon",
+        "Thompson",
+        "Churchill"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nb",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von New Brunswick?",
+      "choices": [
+        "Fredericton",
+        "Moncton",
+        "Saint John",
+        "Dieppe"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nl",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Neufundland und Labrador?",
+      "choices": [
+        "St. John's",
+        "Corner Brook",
+        "Gander",
+        "Happy Valley-Goose Bay"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-ns",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Nova Scotia?",
+      "choices": [
+        "Halifax",
+        "Sydney",
+        "Dartmouth",
+        "Truro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-ontario",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Ontario?",
+      "choices": [
+        "Toronto",
+        "Ottawa",
+        "Hamilton",
+        "London"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-pei",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Prince Edward Island?",
+      "choices": [
+        "Charlottetown",
+        "Summerside",
+        "Montague",
+        "Souris"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-quebec",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Quebec?",
+      "choices": [
+        "Quebec City",
+        "Montreal",
+        "Laval",
+        "Gatineau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-sk",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Saskatchewan?",
+      "choices": [
+        "Regina",
+        "Saskatoon",
+        "Moose Jaw",
+        "Prince Albert"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nsw",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von New South Wales?",
+      "choices": [
+        "Sydney",
+        "Canberra",
+        "Newcastle",
+        "Wollongong"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-vic-au",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Victoria in Australien?",
+      "choices": [
+        "Melbourne",
+        "Sydney",
+        "Geelong",
+        "Ballarat"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-qld",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Queensland?",
+      "choices": [
+        "Brisbane",
+        "Cairns",
+        "Gold Coast",
+        "Townsville"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-wa",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Westaustralien?",
+      "choices": [
+        "Perth",
+        "Fremantle",
+        "Broome",
+        "Albany"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-sa-au",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Südaustralien?",
+      "choices": [
+        "Adelaide",
+        "Perth",
+        "Port Augusta",
+        "Mount Gambier"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-act",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von dem Australian Capital Territory?",
+      "choices": [
+        "Canberra",
+        "Sydney",
+        "Melbourne",
+        "Brisbane"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-bavaria",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Bayern?",
+      "choices": [
+        "Munich",
+        "Nuremberg",
+        "Augsburg",
+        "Regensburg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nrw",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Nordrhein-Westfalen?",
+      "choices": [
+        "Düsseldorf",
+        "Cologne",
+        "Dortmund",
+        "Bonn"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-lower-saxony",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Niedersachsen?",
+      "choices": [
+        "Hanover",
+        "Bremen",
+        "Braunschweig",
+        "Osnabrück"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-bretagne",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von der Bretagne?",
+      "choices": [
+        "Rennes",
+        "Brest",
+        "Nantes",
+        "Vannes"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-normandie",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von der Normandie?",
+      "choices": [
+        "Rouen",
+        "Caen",
+        "Le Havre",
+        "Cherbourg"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-nouvelle-aquitaine",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Nouvelle-Aquitaine?",
+      "choices": [
+        "Bordeaux",
+        "Limoges",
+        "Poitiers",
+        "Pau"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-aura",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Auvergne-Rhône-Alpes?",
+      "choices": [
+        "Lyon",
+        "Grenoble",
+        "Clermont-Ferrand",
+        "Saint-Étienne"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-cap-corse",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Ort",
+      "prompt": "Was ist die Hauptstadt von Korsika?",
+      "choices": [
+        "Ajaccio",
+        "Bastia",
+        "Porto-Vecchio",
+        "Calvi"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die Hauptstadt ist Regierungssitz, nicht immer die größte Stadt.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-sagrada",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Sagrada Familia?",
+      "choices": [
+        "Spanien",
+        "Italien",
+        "Portugal",
+        "Frankreich"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-chichen",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt Chichén Itzá?",
+      "choices": [
+        "Mexiko",
+        "Guatemala",
+        "Peru",
+        "Belize"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-giza",
+      "tier": "easy",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt die Große Pyramide von Gizeh?",
+      "choices": [
+        "Ägypten",
+        "Sudan",
+        "Mexiko",
+        "Irak"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-table",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt der Tafelberg?",
+      "choices": [
+        "Südafrika",
+        "Namibia",
+        "Kenia",
+        "Australien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-uluru",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt Uluru?",
+      "choices": [
+        "Australien",
+        "Neuseeland",
+        "Südafrika",
+        "Namibia"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "place-s3-in-brandenburg",
+      "tier": "hard",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Ort",
+      "prompt": "In welchem Land liegt das Brandenburger Tor?",
+      "choices": [
+        "Deutschland",
+        "Österreich",
+        "Polen",
+        "Tschechien"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Das Wahrzeichen liegt in einem Land.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}

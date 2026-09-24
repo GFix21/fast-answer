@@ -1,0 +1,234 @@
+{
+  "locale": "en",
+  "generation": "gen-x",
+  "tier": "extreme",
+  "set": "SET00003",
+  "held": 9,
+  "questions": [
+    {
+      "id": "s3-cap-thuringia",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Thuringia?",
+      "choices": [
+        "Erfurt",
+        "Jena",
+        "Weimar",
+        "Gera"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-beryllium",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical symbol for beryllium?",
+      "choices": [
+        "Be",
+        "B",
+        "Br",
+        "Ba"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-sym-bismuth",
+      "tier": "extreme",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Lab",
+      "prompt": "What is the chemical symbol for bismuth?",
+      "choices": [
+        "Bi",
+        "B",
+        "Bs",
+        "Bm"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-dial-is",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Count",
+      "prompt": "What is the international calling code for Iceland?",
+      "choices": [
+        "354",
+        "47",
+        "45",
+        "46"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-park-congaree",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "In which U.S. state is Congaree National Park?",
+      "choices": [
+        "South Carolina",
+        "Georgia",
+        "North Carolina",
+        "Alabama"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-nick-equality",
+      "tier": "extreme",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "Which U.S. state is known as the Equality State?",
+      "choices": [
+        "Wyoming",
+        "Colorado",
+        "Montana",
+        "Utah"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-malawi",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of Malawi?",
+      "choices": [
+        "Lilongwe",
+        "Blantyre",
+        "Mzuzu",
+        "Zomba"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-cap3-comoros",
+      "tier": "extreme",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Place",
+      "prompt": "What is the capital of the Comoros?",
+      "choices": [
+        "Moroni",
+        "Mutsamudu",
+        "Fomboni",
+        "Domoni"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The capital is a city with a government, not always the biggest.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    },
+    {
+      "id": "s3-host-w-1956w",
+      "tier": "extreme",
+      "topic": "sport",
+      "generation": "gen-x",
+      "categoryTitle": "Sport",
+      "prompt": "Which city hosted the 1956 Winter Olympics?",
+      "choices": [
+        "Cortina d'Ampezzo",
+        "Oslo",
+        "Innsbruck",
+        "Turin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "One answer is the accepted one.",
+      "funny": false,
+      "structure": null,
+      "addedSet": "SET00003",
+      "status": "pending",
+      "sources": [
+        {
+          "label": "Fast Answer creators — SET00003"
+        }
+      ]
+    }
+  ]
+}
