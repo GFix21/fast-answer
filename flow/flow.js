@@ -143,7 +143,10 @@ function archiveQItem(q) {
     <div class="q-item ${esc(status)}">
       <div class="q-meta">${esc(t("tier_" + (q.tier || "")))} · ${esc(q.topic)} · ${esc(q.generation || "")} · <b>${esc(statusText(status))}</b> · ${esc(q.id)}</div>
       <div class="q-prompt">${esc(q.categoryTitle || "")}${q.categoryTitle ? " — " : ""}${esc(q.prompt || "")}</div>
-      <div class="choices">${(q.choices || []).map((c, i) => `<div class="${i === q.correctIndex ? "hit" : ""}">${String.fromCharCode(65 + i)}. ${esc(c)}</div>`).join("")}</div>
+      <details class="ans-fold">
+        <summary>${t("answersFold")}</summary>
+        <div class="choices">${(q.choices || []).map((c, i) => `<div class="${i === q.correctIndex ? "hit" : ""}">${String.fromCharCode(65 + i)}. ${esc(c)}</div>`).join("")}</div>
+      </details>
       ${offer ? `
         <div class="replace-offer">
           <div>

@@ -251,8 +251,12 @@ const state = {
   lobbyOpen: "room",
   profile: null,
   profileUnlocked: false,
-  dojoMode: "home", // home | create | unlock | setpw
+  dojoMode: "home", // home | create | unlock | setpw | settings | place-sets
   dojoScroll: "scores",
+  beltDoor: false,
+  doorOpen: false,
+  placeSetOpen: 0,
+  settingsTier: "",
   genAlphaOpen: false,
   genAlphaAbout: "",
   genAlphaNote: "",
@@ -1089,7 +1093,10 @@ function beginPlacementSitting() {
   const usedSame = mandatory || state.profile?.cohortBuiltAt !== cohort?.builtAt
     ? 0
     : (Number(state.profile?.placementSittingsUsed) || 0);
-  const pool = placementSlice(cohort?.placement?.length ? cohort.placement : state.placementQs, usedSame);
+  const pinned = Number(state.profile?.placementSet);
+  const sitting = pinned === 0 || pinned === 1 || pinned === 2 ? pinned : usedSame;
+  const bank = placementBank();
+  const pool = placementSlice(bank.length ? bank : (cohort?.placement?.length ? cohort.placement : state.placementQs), sitting);
   saveProfile({
     cohortBuiltAt: cohort?.builtAt || "",
     placementSittingsUsed: usedSame + 1,
@@ -3081,6 +3088,154 @@ function medalHTML(tier) {
   </div>`;
 }
 
+const DOOR_PASSWORD = "D00r%\u20AC";
+
+function placementBank() {
+  const raw = (state.placementQs && state.placementQs.length)
+    ? state.placementQs
+    : (state.cohort?.placement || []);
+  return raw.filter((q) => q && q.id).slice(0, 30);
+}
+
+function placementSetIndex() {
+  const n = Number(state.profile?.placementSet);
+  return n === 1 || n === 2 ? n : 0;
+}
+
+function medalLabel(id) {
+  if (id === "silver") return tt("medalSilver");
+  if (id === "gold") return tt("medalGold");
+  return tt("medalBronze");
+}
+
+function beltStatusDoor(inner) {
+  return `
+    <div class="belt-door" id="beltDoor" role="button" tabindex="0">${inner}</div>
+    ${state.beltDoor ? `
+      <form class="belt-door-form" id="beltDoorForm" autocomplete="off">
+        <label class="field" for="beltDoorPw">${tt("doorPassword")}</label>
+        <input id="beltDoorPw" type="password" maxlength="32" autocomplete="off"/>
+        <button class="primary" type="submit">${tt("doorEnter")}</button>
+      </form>` : ""}`;
+}
+
+function beltStatusBlock(p) {
+  const medal = p?.abilityTier ? medalHTML(p.abilityTier) : `<p class="meta">${escapeHtml(tt("medalPending"))}</p>`;
+  const career = p?.abilityTier || p?.belt
+    ? `<p class="meta">${escapeHtml(tt("beltCareer", (BELT_META[p.belt || "white"] || BELT_META.white).label, p.abilityTier ? (ABILITY_META[p.abilityTier] || {}).label || "" : "", p.stats?.totalPoints || 0))}</p>`
+    : "";
+  return beltStatusDoor(`${beltStripHTML(p?.belt, p?.stats?.totalPoints)}${medal}${career}`);
+}
+
+function grantDoor() {
+  state.doorOpen = true;
+  state.beltDoor = false;
+  state.profileUnlocked = true;
+  state.dojoMode = "settings";
+  state.statusMsg = "";
+  try { sessionStorage.setItem("fa-door", "1"); sessionStorage.setItem("fa-dojo-mode", "settings"); } catch { /* ignore */ }
+}
+
+function submitBeltDoor(raw) {
+  const given = String(raw || "").trim().normalize("NFC");
+  if (given !== DOOR_PASSWORD.normalize("NFC")) {
+    state.statusMsg = tt("wrongPassword");
+    paint(true);
+    return;
+  }
+  grantDoor();
+  paint(true);
+}
+
+function applyPlacementSkip(tier) {
+  const picked = tier === "silver" || tier === "gold" ? tier : "bronze";
+  const now = new Date().toISOString();
+  const mandatoryAt = addYearsIso(now, PLACEMENT_MANDATORY_YEARS);
+  clearDojoTick();
+  saveProfile({
+    abilityTier: picked,
+    placementScore: picked === "gold" ? 8 : picked === "silver" ? 5 : 3,
+    placementCompletedAt: now,
+    placementMandatoryAt: mandatoryAt,
+    nextPlacementDueAt: mandatoryAt,
+    placementSkipped: true,
+  });
+  state.dojo = null;
+  state.dojoMode = "home";
+  state.statusMsg = tt("placementSkipped", medalLabel(picked));
+  try { sessionStorage.setItem("fa-dojo-mode", "home"); } catch { /* ignore */ }
+  paint(true);
+}
+
+function usePlacementSet(index) {
+  const n = index === 1 || index === 2 ? index : 0;
+  saveProfile({ placementSet: n });
+  state.placementPool = placementSlice(placementBank(), n);
+  state.statusMsg = tt("mainSetOn", n + 1);
+  paint(true);
+}
+
+function returnToDojo() {
+  state.dojoMode = "home";
+  state.beltDoor = false;
+  try { sessionStorage.setItem("fa-dojo-mode", "home"); } catch { /* ignore */ }
+  paint(true);
+}
+
+function profileSettingsHTML() {
+  const current = state.settingsTier || state.profile?.abilityTier || "bronze";
+  const tier = current === "silver" || current === "gold" ? current : "bronze";
+  return dojoChrome(`
+    <p class="dir-copy">${escapeHtml(tt("settingsLead"))}</p>
+    <p class="field-lab">${escapeHtml(tt("skipPlacement"))}</p>
+    <div class="medal-row" role="group">
+      ${["bronze", "silver", "gold"].map((id) => {
+        const m = ABILITY_META[id];
+        const label = medalLabel(id);
+        return `<button type="button" class="medal ${tier === id ? "on" : ""}" data-set-tier="${id}" style="--medal:${m.color}"><i></i><b>${escapeHtml(label)}</b></button>`;
+      }).join("")}
+    </div>
+    <button class="primary" id="skipPlacement" type="button">${escapeHtml(tt("skipPlacement"))}</button>
+    <button class="ghost" id="openPlaceSets" type="button">${escapeHtml(tt("placementSets"))}</button>
+    <button class="ghost" id="returnDojo" type="button">${escapeHtml(tt("returnDojo"))}</button>
+  `);
+}
+
+function placementSetsHTML() {
+  const bank = placementBank();
+  const active = placementSetIndex();
+  const open = state.placeSetOpen === 0 || state.placeSetOpen === 1 || state.placeSetOpen === 2 ? state.placeSetOpen : 0;
+  const sets = [0, 1, 2].map((i) => placementSlice(bank, i));
+  return dojoChrome(`
+    <p class="dir-copy">${escapeHtml(tt("placeArchiveLead"))}</p>
+    <div class="accord">
+      ${sets.map((qs, i) => `
+        <section class="acc ${open === i ? "open" : ""}">
+          <button type="button" class="acc-h" data-place-set="${i}">
+            <span>${escapeHtml(tt("placeSet", i + 1, qs.length))}</span>
+            <small>${i === active ? escapeHtml(tt("mainSet")) : ""}</small>
+          </button>
+          ${open === i ? `<div class="acc-body">
+            <button class="primary" type="button" data-use-set="${i}">${escapeHtml(tt("useMainSet"))}</button>
+            <ol class="place-archive">
+              ${qs.map((q) => `<li>
+                <p>${escapeHtml(q.prompt || "")}</p>
+                <details class="ans-fold">
+                  <summary>${escapeHtml(tt("answersHidden"))}</summary>
+                  <ol class="gen-alpha-choices">
+                    ${(q.choices || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}
+                  </ol>
+                </details>
+              </li>`).join("")}
+            </ol>
+          </div>` : ""}
+        </section>`).join("")}
+    </div>
+    <button class="ghost" id="backSettings" type="button">${escapeHtml(tt("backSettings"))}</button>
+    <button class="ghost" id="returnDojo" type="button">${escapeHtml(tt("returnDojo"))}</button>
+  `);
+}
+
 function dojoChrome(inner) {
   return `<div class="dojo-stage">${inner}${genAlphaReviewHTML()}</div>`;
 }
@@ -3133,9 +3288,11 @@ function genAlphaReviewHTML() {
         ${list.map((q) => `<li>
           ${q.slang ? `<p class="q-slang">${escapeHtml(q.slang)}</p>` : ""}
           <p>${escapeHtml(q.prompt)}</p>
-          <ol class="gen-alpha-choices">
-            ${(q.choices || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}
-          </ol>
+          <details class="ans-fold"><summary>${escapeHtml(tt("answersHidden"))}</summary>
+            <ol class="gen-alpha-choices">
+              ${(q.choices || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}
+            </ol>
+          </details>
         </li>`).join("")}
       </ol>` : `<p class="meta">${escapeHtml(tt("genAlphaReviewEmpty"))}</p>`}
       <div class="gen-alpha-ask">
@@ -3163,6 +3320,9 @@ function dojoBody() {
   const placed = isPlaced();
   const d = state.dojo;
   const mode = state.dojoMode || "home";
+
+  if (state.doorOpen && mode === "settings") return profileSettingsHTML();
+  if (state.doorOpen && mode === "place-sets") return placementSetsHTML();
 
   if (d && d.q && !d.done) {
     const n = d.answers.length + 1;
@@ -3216,8 +3376,7 @@ function dojoBody() {
     return dojoChrome(`
       <p class="dir-copy">${tt("setPasswordIntro")}</p>
       <p class="meta">${escapeHtml(p.displayName || "")}</p>
-      ${beltStripHTML(p.belt, p.stats?.totalPoints)}
-      ${p.abilityTier ? medalHTML(p.abilityTier) : ""}
+      ${beltStatusBlock(p)}
       <label class="field" for="pwNew">${tt("password")}</label>
       <input id="pwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
       <label class="field" for="pwConfirm">${tt("confirmPassword")}</label>
@@ -3234,8 +3393,7 @@ function dojoBody() {
     return dojoChrome(`
       <p class="dir-copy">${tt("unlockIntro")}</p>
       <p class="meta">${escapeHtml(p.displayName || "")}</p>
-      ${beltStripHTML(p.belt, p.stats?.totalPoints)}
-      ${p.abilityTier ? medalHTML(p.abilityTier) : `<p class="meta">${tt("medalPending")}</p>`}
+      ${beltStatusBlock(p)}
       <label class="field" for="pwUnlock">${tt("password")}</label>
       <input id="pwUnlock" type="password" maxlength="64" autocomplete="current-password"/>
       <button class="primary" id="unlockProfile" type="button">${tt("unlockProfile")}</button>
@@ -3251,9 +3409,7 @@ function dojoBody() {
   const scrollOpen = state.dojoScroll !== "closed";
   return dojoChrome(`
     <p class="dir-copy">${tt("dojoUnlockedIntro")}</p>
-    ${beltStripHTML(p.belt, p.stats?.totalPoints)}
-    ${medalHTML(p.abilityTier)}
-    <p class="meta">${escapeHtml(tt("beltCareer", (BELT_META[p.belt || "white"] || BELT_META.white).label, ab ? ab.label : "", p.stats?.totalPoints || 0))}</p>
+    ${beltStatusBlock(p)}
     <section class="scroll-acc ${scrollOpen ? "open" : ""}">
       <button type="button" class="scroll-h" id="scoreScroll">${escapeHtml(tt("topScores"))}</button>
       ${scrollOpen ? `<div class="scroll-roll">
@@ -4279,6 +4435,54 @@ function bindDojoSurface() {
   if (retake) retake.onclick = () => startDojo();
   const refreshPlacement = $("#refreshPlacement");
   if (refreshPlacement) refreshPlacement.onclick = () => { void refreshPlacementSet(); };
+  const beltDoor = $("#beltDoor");
+  if (beltDoor) {
+    const openDoor = () => {
+      state.beltDoor = !state.beltDoor;
+      paint(true);
+      requestAnimationFrame(() => { const el = $("#beltDoorPw"); if (el) el.focus(); });
+    };
+    beltDoor.onclick = openDoor;
+    beltDoor.onkeydown = (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDoor(); }
+    };
+  }
+  const beltDoorForm = $("#beltDoorForm");
+  if (beltDoorForm) beltDoorForm.onsubmit = (e) => {
+    e.preventDefault();
+    submitBeltDoor($("#beltDoorPw") && $("#beltDoorPw").value);
+  };
+  document.querySelectorAll("[data-set-tier]").forEach((b) => {
+    b.onclick = () => {
+      state.settingsTier = b.dataset.setTier;
+      paint(true);
+    };
+  });
+  const skipPlacement = $("#skipPlacement");
+  if (skipPlacement) skipPlacement.onclick = () => applyPlacementSkip(state.settingsTier || state.profile?.abilityTier);
+  const openPlaceSets = $("#openPlaceSets");
+  if (openPlaceSets) openPlaceSets.onclick = () => {
+    state.dojoMode = "place-sets";
+    try { sessionStorage.setItem("fa-dojo-mode", "place-sets"); } catch { /* ignore */ }
+    paint(true);
+  };
+  document.querySelectorAll("[data-place-set]").forEach((b) => {
+    b.onclick = () => {
+      state.placeSetOpen = Number(b.dataset.placeSet) || 0;
+      paint(true);
+    };
+  });
+  document.querySelectorAll("[data-use-set]").forEach((b) => {
+    b.onclick = () => usePlacementSet(Number(b.dataset.useSet));
+  });
+  const returnDojo = $("#returnDojo");
+  if (returnDojo) returnDojo.onclick = () => returnToDojo();
+  const backSettings = $("#backSettings");
+  if (backSettings) backSettings.onclick = () => {
+    state.dojoMode = "settings";
+    try { sessionStorage.setItem("fa-dojo-mode", "settings"); } catch { /* ignore */ }
+    paint(true);
+  };
   document.querySelectorAll("[data-dojo]").forEach((b) => {
     b.onclick = () => dojoPick(Number(b.dataset.dojo));
   });
@@ -5057,7 +5261,9 @@ function paint(force = false) {
     state.dojo?.answers?.length, state.dojo?.picked, state.dojo?.showAnswers, state.dojo?.readLeft,
     state.profile?.abilityTier, state.profile?.belt, state.profile?.thumb ? 1 : 0,
     state.profile?.dojoBg, (state.profile?.topScores || []).length, state.dojoScroll, state.forgotPassword ? 1 : 0,
-    state.profileUnlocked ? 1 : 0, state.dojoMode, state.roomDojoPanel, state.profile?.passwordHash ? 1 : 0,
+    state.profileUnlocked ? 1 : 0, state.dojoMode, state.beltDoor ? 1 : 0, state.doorOpen ? 1 : 0,
+    state.placeSetOpen, state.settingsTier, state.profile?.placementSet ?? "",
+    state.roomDojoPanel, state.profile?.passwordHash ? 1 : 0,
     state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
     state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => `${r.code}:${r.screen || ""}`).join(","),
@@ -5148,8 +5354,14 @@ if (isDirections) {
     const qMode = params.get("mode");
     let stored = "";
     try { stored = sessionStorage.getItem("fa-dojo-mode") || ""; } catch { /* ignore */ }
+    try { state.doorOpen = sessionStorage.getItem("fa-door") === "1"; } catch { /* ignore */ }
     const allowed = ["create", "unlock", "setpw", "home"];
-    state.dojoMode = allowed.includes(qMode) ? qMode : (allowed.includes(stored) ? stored : dojoModeForGate());
+    const doorModes = ["settings", "place-sets"];
+    if (state.doorOpen && (doorModes.includes(qMode) || doorModes.includes(stored))) {
+      state.dojoMode = doorModes.includes(qMode) ? qMode : stored;
+    } else {
+      state.dojoMode = allowed.includes(qMode) ? qMode : (allowed.includes(stored) ? stored : dojoModeForGate());
+    }
     await identifyCountry();
     paint(true);
     void syncTopScores();

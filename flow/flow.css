@@ -88,6 +88,8 @@ a.glow-link:hover{text-decoration:underline}
 .q-prompt{font-size:15px;line-height:1.35;margin-bottom:8px}
 .choices{font-size:13px;color:var(--mut);display:grid;grid-template-columns:1fr 1fr;gap:4px 12px}
 .choices .hit{color:#86efac;font-weight:600}
+.ans-fold{margin-top:8px}
+.ans-fold summary{cursor:pointer;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
 .banner{padding:10px 12px;border-radius:var(--radius-sm);background:color-mix(in oklab, var(--buzz) 25%, transparent);border:1px solid var(--buzz);margin-bottom:12px;font-size:13px}
 .ok-banner{background:color-mix(in oklab, var(--ok) 35%, transparent);border-color:#86efac}
 .idle-veil{
