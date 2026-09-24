@@ -201,6 +201,11 @@ export default async function handler(req, res) {
 
   if (body.action === "join") {
     const seat = body.seat === "view" ? "view" : "play";
+    const name = String(body.name || "").replace(/\s+/g, " ").trim();
+    if (!name) {
+      res.status(400).end(JSON.stringify({ error: "name", message: "A player needs a name." }));
+      return;
+    }
     if (seat === "play" && !ageIsAllowed(body.age, body.country, body.detectedCountry)) {
       const minimum = requiredAge(body.country, body.detectedCountry);
       res.status(403).end(JSON.stringify({
@@ -212,8 +217,8 @@ export default async function handler(req, res) {
     }
     cur.guests = cur.guests || [];
     const guest = {
-      name: body.name || "Player",
-      id: body.id || ("p-" + String(body.name || "pad")),
+      name,
+      id: body.id || ("p-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16)),
       thumb: body.thumb || "",
       seat,
       age: Number.isInteger(Number(body.age)) ? Number(body.age) : "",
@@ -357,14 +362,21 @@ export default async function handler(req, res) {
     await touch(latest);
     }
   } else if (body.action === "ready") {
+    const name = String(body.name || "").replace(/\s+/g, " ").trim();
+    if (!name) {
+      const saved = await getRoom(code);
+      sendRoom(res, saved, { host: hostMatches(saved, presentedHostKey(req, body)) });
+      return;
+    }
     cur.guests = cur.guests || [];
-    const id = body.id || ("p-" + String(body.name || "pad"));
-    let guest = cur.guests.find((g) => g.id === id || g.name === body.name);
+    const id = body.id || ("p-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16));
+    let guest = cur.guests.find((g) => g.id === id || g.name === name);
     if (!guest) {
-      guest = { name: body.name || "Player", id, ready: true, thumb: body.thumb || "" };
+      guest = { name, id, ready: true, thumb: body.thumb || "" };
       cur.guests.push(guest);
     } else {
       guest.ready = true;
+      guest.name = name;
       if (body.thumb) guest.thumb = body.thumb;
     }
     cur.state = cur.state || {};

@@ -586,7 +586,7 @@ async function copyText(value) {
   return Promise.race([attempt, timed]);
 }
 function humanPads() {
-  return (state.guests || []).filter((g) => g && g.id && g.seat !== "view");
+  return (state.guests || []).filter((g) => g && g.id && g.seat !== "view" && cleanSeatName(g.name));
 }
 function humanPlayerIds() {
   return (state.players || []).filter((p) => p && p.human).map((p) => p.id);
@@ -1490,8 +1490,9 @@ function abilityFromDojo(answers) {
   return "bronze";
 }
 function fillSeats() {
-  const guests = state.guests || [];
-  const empty = Math.max(0, (state.playerCount || 3) - 1 - guests.length);
+  const guests = (state.guests || []).filter((g) => g.seat !== "view" && cleanSeatName(g.name));
+  const you = cleanSeatName(state.name) ? 1 : 0;
+  const empty = Math.max(0, (state.playerCount || 3) - you - guests.length);
   const need = state.botFill ? Math.min(11, empty) : 0;
   const have = [...(state.seatBots || [])];
   const used = new Set(have.map((b) => b.id));
@@ -1500,23 +1501,25 @@ function fillSeats() {
   state.seatBots = have.slice(0, need);
 }
 function seatedPreview() {
-  const you = {
+  const youName = cleanSeatName(state.name);
+  const you = youName ? [{
     id: "you",
-    name: state.name || "Player",
+    name: youName,
     human: true,
     you: true,
     score: 0,
     generation: playerGeneration(state.profile),
     age: state.profile?.age ?? "",
     ageBracket: state.profile?.ageBracket || "",
-  };
-  const guests = (state.guests || []).filter((g) => g.seat !== "view");
-  const remain = Math.max(0, state.playerCount - 1 - guests.length);
+  }] : [];
+  const guests = (state.guests || []).filter((g) => g.seat !== "view" && cleanSeatName(g.name));
+  const remain = Math.max(0, state.playerCount - you.length - guests.length);
   const bots = (state.seatBots || []).slice(0, remain);
   return [
-    you,
+    ...you,
     ...guests.map((g) => ({
       ...g,
+      name: cleanSeatName(g.name),
       human: true,
       you: false,
       score: 0,
@@ -1527,9 +1530,17 @@ function seatedPreview() {
   ].slice(0, 12);
 }
 function seatSpan(s) {
+  const name = cleanSeatName(s.name);
+  if (s.human && !name) return "";
   const gen = genLabel(s.generation);
-  const label = gen ? `${s.name} · ${gen}` : s.name;
+  const label = gen ? `${name} · ${gen}` : name;
   return `<span class="seat ${s.you ? "you" : s.human ? "human" : "bot"}" title="${escapeHtml(s.blurb || label)}">${escapeHtml(label)}</span>`;
+}
+function cleanSeatName(name) {
+  return String(name || "").replace(/\s+/g, " ").trim();
+}
+function namedHumans(list) {
+  return (list || []).filter((p) => p && (!p.human || cleanSeatName(p.name)));
 }
 
 function ensureHostKey() {
@@ -1728,24 +1739,26 @@ function applyHostState(next) {
 function seatPlayers() {
   state.youId = "you";
   fillSeats();
-  const guests = (state.guests || []).filter((g) => g.seat !== "view");
-  const remain = Math.max(0, state.playerCount - 1 - guests.length);
+  const guests = (state.guests || []).filter((g) => g.seat !== "view" && cleanSeatName(g.name));
+  const youName = cleanSeatName(state.name);
+  const you = youName ? [{
+    id: "you",
+    name: youName,
+    score: 0,
+    human: true,
+    you: true,
+    thumb: state.profile?.thumb || "",
+    generation: playerGeneration(state.profile),
+    age: state.profile?.age ?? "",
+    ageBracket: state.profile?.ageBracket || "",
+  }] : [];
+  const remain = Math.max(0, state.playerCount - you.length - guests.length);
   const bots = (state.seatBots || []).slice(0, remain);
   state.players = [
-    {
-      id: "you",
-      name: state.name || "Player",
-      score: 0,
-      human: true,
-      you: true,
-      thumb: state.profile?.thumb || "",
-      generation: playerGeneration(state.profile),
-      age: state.profile?.age ?? "",
-      ageBracket: state.profile?.ageBracket || "",
-    },
+    ...you,
     ...guests.map((g) => ({
       id: g.id,
-      name: g.name,
+      name: cleanSeatName(g.name),
       score: 0,
       human: true,
       you: false,
@@ -2071,11 +2084,13 @@ function seatPendingJoins() {
   const pending = state.pendingJoins || [];
   if (!pending.length) return;
   for (const g of pending) {
-    if (state.players.some((p) => p.id === g.id || p.name === g.name)) continue;
+    const name = cleanSeatName(g.name);
+    if (!name) continue;
+    if (state.players.some((p) => p.id === g.id || cleanSeatName(p.name) === name)) continue;
     const bot = state.players.find((p) => !p.human);
     if (bot) {
       bot.id = g.id;
-      bot.name = g.name;
+      bot.name = name;
       bot.human = true;
       bot.you = false;
       bot.thumb = g.thumb || "";
@@ -2086,7 +2101,7 @@ function seatPendingJoins() {
     } else if (state.players.length < 12) {
       state.players.push({
         id: g.id,
-        name: g.name,
+        name,
         score: 0,
         human: true,
         you: false,
@@ -2138,9 +2153,8 @@ function continueRound() {
   state.picked = -1;
   state.phase = "between";
   state.pose = "next";
-  paint();
   publish();
-  setTimeout(startRead, 450);
+  startRead();
 }
 
 function startSetBreak(tier) {
@@ -2223,7 +2237,7 @@ function afterReveal(ok) {
   setTimeout(() => {
     if (shouldLock) startLockdown(state.buzzId);
     else continueRound();
-  }, 1400);
+  }, 2000);
 }
 
 function applyRemoteAnswer(id, index, lockdown = false) {
@@ -2610,7 +2624,7 @@ function applyHostSize() {
 }
 
 function scoreboard() {
-  const cells = state.players.map((p) => {
+  const cells = namedHumans(state.players).map((p) => {
     const src = playerThumb(p);
     const thumb = src
       ? `<img class="av" src="${src}" alt=""/>`
@@ -3563,6 +3577,23 @@ function lobbySetupBannerHTML() {
     </div>`;
 }
 
+function roomLinksHTML() {
+  if (!state.room) return "";
+  const silk = tvSilkUrl(state.room);
+  const join = shareUrl();
+  return `
+    <label class="field" for="silkUrl">${tt("silkLink")}</label>
+    <div class="copy-row">
+      <input id="silkUrl" type="text" readonly value="${escapeHtml(silk)}"/>
+      <button class="ghost" id="copySilk" type="button">${tt("copy")}</button>
+    </div>
+    <label class="field" for="joinUrl">${tt("joinLink")}</label>
+    <div class="copy-row">
+      <input id="joinUrl" type="text" readonly value="${escapeHtml(join)}"/>
+      <button class="ghost" id="copyJoin" type="button">${tt("copy")}</button>
+    </div>`;
+}
+
 function roomModeButtons() {
   if (isTvDisplay() && forcedDisplay) return "";
   const modes = [
@@ -3653,7 +3684,6 @@ function roomBody() {
   const seats = seatedPreview();
   const humans = seats.filter((s) => s.human).length;
   const bots = seats.length - humans;
-  const silk = state.room ? tvSilkUrl(state.room) : "";
   const mode = pad ? "join" : (state.mpMode || "host");
 
   if (pad || mode === "join") {
@@ -3676,6 +3706,7 @@ function roomBody() {
         <button class="primary" id="joinRoom" type="button">${tt("joinRoom")}</button>
       </div>
       <p class="meta">${tt("joinByCode")}</p>
+      ${roomLinksHTML()}
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
       ${offer ? `
@@ -3703,15 +3734,7 @@ function roomBody() {
         ${seats.map((s) => seatSpan(s)).join("")}
       </div>
       <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
-      ${state.room ? `
-        <label class="field" for="silkUrl">${tt("silkLink")}</label>
-        <div class="copy-row">
-          <input id="silkUrl" type="text" readonly value="${escapeHtml(silk)}"/>
-          <button class="ghost" id="copySilk" type="button">${tt("copy")}</button>
-        </div>
-        <img class="qr" alt="${escapeHtml(tt("qrOpenAlt"))}" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(silk)}"/>
-        <p class="meta">${escapeHtml(tt("padJoinMeta", state.room, humans, bots))}</p>
-      ` : `<p class="meta">${tt("makeTvLinkMeta")}</p>`}
+      ${roomLinksHTML()}
       <button class="primary" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
       <button class="ghost" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
       ${roomListHTML("off")}
@@ -3731,6 +3754,7 @@ function roomBody() {
       ${state.roomSetup ? `
         <p class="dir-copy">${tt("hostSetup")}</p>
         <p class="room-code">${tt("roomLabel", `<b>${escapeHtml(state.room || "····")}</b>`)}</p>
+        ${roomLinksHTML()}
         ${topicsBody()}
         <button class="primary" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
         <button class="ghost" id="castRoom" type="button">${tt("castThisRoom")}</button>
@@ -3757,20 +3781,14 @@ function roomBody() {
     ${state.onScreen || isTvDisplay() ? `
       <p class="dir-copy">${tt("onScreenOwns")}</p>
       <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
-      ${state.room ? `
-        <div class="copy-row">
-          <input id="silkUrl" type="text" readonly value="${escapeHtml(silk || tvSilkUrl(state.room))}"/>
-          <button class="ghost" id="copySilk" type="button">${tt("copy")}</button>
-        </div>
-        <img class="qr" alt="${escapeHtml(tt("qrJoinAlt"))}" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(shareUrl())}"/>
-      ` : ""}
+      ${roomLinksHTML()}
       <p class="meta">${escapeHtml(tt("humansBots", humans, bots))}</p>
       ${isTvDisplay() || state.onScreen ? `
         <div class="tv-players">
           <p class="rivals-lab">${tt("tvPlayers")}</p>
-          ${(state.guests || []).map((g) =>
+          ${(state.guests || []).filter((g) => cleanSeatName(g.name) && g.seat !== "view").map((g) =>
             `<div class="tv-player-row">
-              <span class="seat human">${escapeHtml(g.name)}</span>
+              <span class="seat human">${escapeHtml(cleanSeatName(g.name))}</span>
               <button type="button" class="ghost danger" data-kick="${escapeHtml(g.id)}">${tt("removePlayer")}</button>
             </div>`
           ).join("") || `<p class="meta">${tt("noPadsYet")}</p>`}
@@ -4724,6 +4742,13 @@ function bindLobby() {
     state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
     paint(true);
   };
+  const copyJoin = $("#copyJoin");
+  if (copyJoin) copyJoin.onclick = async () => {
+    const url = ($("#joinUrl") && $("#joinUrl").value) || shareUrl();
+    const ok = await copyText(url);
+    state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
+    paint(true);
+  };
   bindSliders();
   bindRules();
   const go = $("#go");
@@ -5090,10 +5115,10 @@ function bindPlay() {
 function ingestGuests(guests) {
   if (!Array.isArray(guests)) return;
   state.guests = guests
-    .filter((g) => g && (g.id || g.name) && String(g.id) !== "you")
+    .filter((g) => g && cleanSeatName(g.name) && String(g.id) !== "you")
     .map((g) => ({
-      id: g.id || ("p-" + String(g.name || "pad").toLowerCase().replace(/\s+/g, "")),
-      name: g.name || "Player",
+      id: g.id || ("p-" + cleanSeatName(g.name).toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16)),
+      name: cleanSeatName(g.name),
       thumb: g.thumb || "",
       seat: g.seat === "view" ? "view" : "play",
       age: Number.isInteger(Number(g.age)) ? Number(g.age) : "",
@@ -5101,6 +5126,7 @@ function ingestGuests(guests) {
       generation: String(g.generation || "").slice(0, 40),
     }))
     .slice(0, 11);
+  if (role !== "pad") state.players = namedHumans(state.players);
   if (state.phase === "lobby" || state.phase === "ready") return;
   if (role === "pad") return;
   const queued = [];
