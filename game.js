@@ -179,9 +179,24 @@ const GEN_KEYS = {
 
 const $ = (s, r = document) => r.querySelector(s);
 const params = new URLSearchParams(location.search);
+const pathRoom = ((location.pathname.match(/\/tv\/([A-Za-z0-9]{2,8})\/?$/i) || [])[1] || "").toUpperCase();
 let role = params.get("role") || (params.get("pad") ? "pad" : "host");
-const joinCode = (params.get("room") || "").toUpperCase();
+const joinCode = (params.get("room") || pathRoom || "").toUpperCase();
 const silkHostKey = String(params.get("k") || "").trim();
+function tvUserAgent() {
+  const ua = navigator.userAgent || "";
+  return /AFT[A-Z0-9]|FireTV|Silk\/|SmartTV|SMART-TV|BRAVIA|Web0S|WebOS|Tizen|AppleTV|Apple TV|CrKey|GoogleTV|Viera|NetCast|HbbTV|TV Safari/i.test(ua);
+}
+function wantsTv() {
+  const flag = params.get("tv") || params.get("display") || params.get("onscreen") || params.get("silk");
+  if (flag === "1" || flag === "true" || flag === "yes") return true;
+  if (pathRoom) return true;
+  if (silkHostKey.length >= 16 && joinCode) return true;
+  if (tvUserAgent()) return true;
+  return false;
+}
+// The Silk link is the pass. A TV, or anyone opening that link, does not log in again.
+if (wantsTv()) role = "host";
 if (silkHostKey.length >= 16 && joinCode) {
   try { localStorage.setItem(`fa-host-${joinCode}`, silkHostKey); } catch { /* private mode */ }
 }
@@ -195,15 +210,7 @@ const isDojoPage =
 const ROOM_API = location.pathname.includes("/fast-answer") ? "/api/fa/rooms" : "/api/rooms";
 
 function detectDisplayMode() {
-  if (role === "pad") return false;
-  const flag = params.get("tv") || params.get("display") || params.get("onscreen") || params.get("silk");
-  if (flag === "1" || flag === "true" || flag === "yes") return true;
-  const ua = navigator.userAgent || "";
-  // Fire TV Silk, smart TVs, Chromecast, Apple TV, etc.
-  if (/AFT[A-Z0-9]|FireTV|Silk\/|SmartTV|SMART-TV|BRAVIA|Web0S|WebOS|Tizen|AppleTV|Apple TV|CrKey|GoogleTV|Viera|NetCast|HbbTV|TV Safari/i.test(ua)) {
-    return true;
-  }
-  return false;
+  return wantsTv();
 }
 const forcedDisplay = detectDisplayMode();
 
@@ -434,7 +441,7 @@ function shareUrl() {
 }
 function tvSilkUrl(roomCode = state.room) {
   const code = String(roomCode || "").toUpperCase();
-  const u = new URL("/", location.origin);
+  const u = new URL(code ? `/tv/${code}` : "/", location.origin);
   u.searchParams.set("tv", "1");
   if (code) u.searchParams.set("room", code);
   if (code && !state.hostKey) ensureHostKey();
@@ -1359,7 +1366,7 @@ function entryActionLabel(name) {
   return entryIsExisting(name) ? tt("enterProfile") : tt("createProfileBtn");
 }
 function needsEntryGate() {
-  if (isDirections || forcedDisplay) return false;
+  if (isDirections || wantsTv() || isTvDisplay()) return false;
   return !state.entered;
 }
 async function activateGameProfile(profile) {
@@ -3076,6 +3083,7 @@ function dojoHref(mode) {
   return "/dojo.html?mode=" + encodeURIComponent(next);
 }
 function openDojoPage(mode) {
+  if (wantsTv() || isTvDisplay()) return;
   const next = mode || dojoModeForGate();
   state.dojoMode = next;
   try { sessionStorage.setItem("fa-dojo-mode", next); } catch { /* ignore */ }
@@ -5547,7 +5555,8 @@ if (isDirections) {
   window.__fa = state;
 } else if (isDojoPage) {
   if (forcedDisplay) {
-    location.replace("/");
+    const code = joinCode || pathRoom;
+    location.replace(code ? `/tv/${encodeURIComponent(code)}${location.search || "?tv=1"}` : "/?tv=1");
   } else {
     try {
       await loadBanksForLocale(state.locale);
