@@ -588,7 +588,9 @@ function canLeaveNow() {
 function isSeatedPlay() {
   if (state.viewing) return false;
   if (role !== "pad") return true;
-  return (state.players || []).some((p) => p.id === state.youId);
+  if ((state.players || []).some((p) => p.id === state.youId || (p.you && p.name === state.name))) return true;
+  // A joined phone is the buzzer even before the host copies that seat into the show.
+  return state.seatIntent !== "view" && Boolean(state.youId);
 }
 function allPadsReady() {
   const pads = humanPads();
@@ -1602,7 +1604,7 @@ function snapshot() {
 function publish() {
   const snap = snapshot();
   if (bc) bc.postMessage(snap);
-  if (state.onScreen && state.room && role !== "pad") {
+  if (role !== "pad" && state.room && state.hostKey) {
     void rooms("POST", { action: "state", code: state.room, state: snap });
   }
 }
@@ -3528,7 +3530,8 @@ function roomBody() {
         <img class="qr" alt="${escapeHtml(tt("qrOpenAlt"))}" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(silk)}"/>
         <p class="meta">${escapeHtml(tt("padJoinMeta", state.room, humans, bots))}</p>
       ` : `<p class="meta">${tt("makeTvLinkMeta")}</p>`}
-      <button class="primary" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
+      <button class="primary" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
+      <button class="ghost" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
       ${roomDojoEntryHTML()}
@@ -3547,7 +3550,8 @@ function roomBody() {
         <p class="dir-copy">${tt("hostSetup")}</p>
         <p class="room-code">${tt("roomLabel", `<b>${escapeHtml(state.room || "····")}</b>`)}</p>
         ${topicsBody()}
-        <button class="primary" id="castRoom" type="button">${tt("castThisRoom")}</button>
+        <button class="primary" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
+        <button class="ghost" id="castRoom" type="button">${tt("castThisRoom")}</button>
       ` : `
         <p class="dir-copy">${tt("offScreenHint")}</p>
         <button class="primary" id="createRoom" type="button">${tt("createRoom")}</button>
@@ -3610,7 +3614,7 @@ function lobbyGoLabel() {
   if (pad || mode === "join") return tt("goJoin");
   if (mode === "cast") return state.room ? tt("goCastCopy") : tt("goCastMake");
   if (isTvDisplay() || state.onScreen) return tt("goOpenTv");
-  if (state.roomSetup) return tt("castThisRoom");
+  if (state.roomSetup || state.room) return tt("openBuzzer");
   return tt("createRoom");
 }
 
@@ -4057,6 +4061,19 @@ async function createOffScreenRoom() {
   paint(true);
 }
 
+async function openBuzzer() {
+  if (!state.room) {
+    await createOffScreenRoom();
+  }
+  if (!state.room) return;
+  ensureHostKey();
+  state.onScreen = false;
+  state.roomSetup = false;
+  state.lobbyOpen = "room";
+  try { localStorage.setItem("fa-onscreen", "0"); } catch { /* ignore */ }
+  enterReady();
+}
+
 async function castThisRoom() {
   if (!state.room) return;
   ensureHostKey();
@@ -4395,6 +4412,9 @@ function bindLobby() {
   if (createRoomBtn) createRoomBtn.onclick = () => { void createOffScreenRoom(); };
   const castRoomBtn = $("#castRoom");
   if (castRoomBtn) castRoomBtn.onclick = () => { void castThisRoom(); };
+  document.querySelectorAll("#openBuzzer").forEach((b) => {
+    b.onclick = () => { void openBuzzer(); };
+  });
   document.querySelectorAll("[data-join-now]").forEach((b) => {
     b.onclick = () => {
       const code = String(b.dataset.joinNow || "");
@@ -4583,7 +4603,7 @@ async function joinAsBuzzer() {
   localStorage.setItem("fa-mp", "join");
   state.room = code;
   state.joinInput = code;
-  state.onScreen = true;
+  state.onScreen = false;
   state.youId = "p-" + (state.profile?.id || state.name || "pad").toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16);
   if (!state.youId || state.youId === "p-") state.youId = "p-" + uid().slice(0, 8);
   state.leftPad = false;
@@ -4614,8 +4634,7 @@ async function joinAsBuzzer() {
     applyHostState(live.state);
     if (live.guests) ingestGuests(live.guests);
   } else {
-    // TV still in lobby — stay as pad waiting; prefer ready UI once TV opens room.
-    state.phase = "lobby";
+    state.phase = "ready";
   }
   state.statusMsg = state.viewing
     ? tt("joinedView", code)
@@ -4671,7 +4690,7 @@ async function onLobbyGo() {
   }
 
   if (!isTvDisplay() && !state.onScreen) {
-    if (state.roomSetup && state.room) await castThisRoom();
+    if (state.roomSetup && state.room) await openBuzzer();
     else await createOffScreenRoom();
     return;
   }
@@ -4927,6 +4946,11 @@ function startPoll() {
         leaveToLobby();
         return;
       }
+      if (j.state.phase === "lobby") {
+        if (state.phase === "lobby") state.phase = "ready";
+        paint(true);
+        return;
+      }
       applyHostState(j.state);
       if (j.dropoutIds) state.dropoutIds = { ...(state.dropoutIds || {}), ...j.dropoutIds };
       if (Array.isArray(j.state.qs) && j.state.qs.length) state.qs = j.state.qs;
@@ -4962,7 +4986,7 @@ function startPoll() {
       }
     }
     // TV re-publishes periodically so pads on other serverless instances catch up.
-    if (role !== "pad" && state.onScreen && state.phase !== "lobby" && pollN % 5 === 0) {
+    if (role !== "pad" && state.hostKey && state.room && state.phase !== "lobby" && pollN % 5 === 0) {
       publish();
     }
   }, 400);
