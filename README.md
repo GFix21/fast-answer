@@ -26,7 +26,7 @@ Phones never receive the TV picture. Flow is hidden on the TV display. Same Wi�
 
 Lobby and Directions include an **EN / France / Québec / DE** switcher (saved in `localStorage` as `fa-locale`). France loads `fr`. Québec loads `fr-CA` and does not fall back to France.
 
-- Live questions: `questions.json` (EN), `questions.fr.json`, `questions.fr-CA.json`, `questions.de.json`
+- Live questions: `questions.json` (EN), `questions.fr.json`, `questions.fr-CA.json`, `questions.de.json`. The Vercel build copies the answer key into the server bundle and strips `correctIndex` from these public files. The TV host is dealt one show from `POST /api/deck`.
 - Placement / Dojo: `banks/placement/[fr|fr-CA|de]/generational-first-pass.json`
 - Weekly studio packs: `banks/weekly/[fr|de]/<weekKey>.json` (same layout as Q-and-A)
 - Flow admin has a matching locale switcher for weekly review, placement archive, and reject/regen
@@ -37,7 +37,7 @@ English remains the source of truth for ids and `correctIndex`. Sync locale pack
 
 One page. Collapsible menus. Jeremy and the studio stay live behind the card.
 
-- **Dojo (profile)** — below Join TV in the lobby (phone only; hidden on TV / `?tv=1`). Create a profile (name, age, email, photo) and a device lock. The lock stays on this phone. It is not an account. Create profile starts placement immediately.
+- **Dojo (profile)** — below Join TV in the lobby (phone only; hidden on TV / `?tv=1`). Create a profile (name, age, email, photo) and a password. The server checks the password and keeps scores with the profile when Redis is set. Without Redis on Vercel, the profile store says it is offline and the score stays on the phone. Create profile starts placement immediately. The age check uses the higher of the chosen country and the IP country.
 - **Karate belt** — white→black from career points, shown as a belt strip in Dojo.
 - **Medals** — Bronze / Silver / Gold from the 10-question placement. Placement is required again after two years.
 - **Placement** — ten questions. Prompt for 5s, then answers. No name/points on the live Dojo card. The questions stored on the device renew after three months.
@@ -83,7 +83,7 @@ sounds/
 api/rooms.js
 ```
 
-Import the repo in Vercel. Room routes are pinned to one region (`iad1`) so the runtime cache is the same copy for the TV and the phones. The TV holds a host key; only that key can write the show. Phones receive the current prompt and choices, and the correct choice only at the reveal. Two tabs on the same origin also sync over `BroadcastChannel`. Flow requires `FLOW_PASSWORD`. There is no password in the source.
+Import the repo in Vercel. The build strips answer keys from the public JSON. Room, profile, and score routes need `FAST_ANSWER_REDIS_KV_REST_API_URL` and `FAST_ANSWER_REDIS_KV_REST_API_TOKEN` (or the Upstash `KV_REST_API_*` names). Without them, profile and score writes return 503. Room routes are pinned to one region (`iad1`). The TV holds a host key; only that key can deal a show or write the room. Phones receive the current prompt and choices, and the correct choice only at the reveal. A public `GET /api/deck` does not include the answer. Two tabs on the same origin also sync over `BroadcastChannel`. Flow requires `FLOW_PASSWORD`. There is no password in the source.
 
 ## Maintenance
 

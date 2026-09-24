@@ -513,6 +513,7 @@ function clearStoredProfile() {
   try { localStorage.removeItem("fa-name"); } catch { /* ignore */ }
   try { sessionStorage.removeItem("fa-entered"); } catch { /* ignore */ }
   try { sessionStorage.removeItem("fa-dojo-mode"); } catch { /* ignore */ }
+  try { sessionStorage.removeItem("fa-profile-token"); } catch { /* ignore */ }
 }
 function applyProfileReset() {
   clearStoredProfile();
@@ -529,7 +530,7 @@ function applyProfileReset() {
   state.forgotPassword = false;
   state.statusMsg = tt("profileReset");
 }
-async function saveForgotPassword(email, pw, pw2) {
+async function saveForgotPassword(email, current, pw, pw2) {
   if (!hasPhoneProfile() || !state.profile?.email) {
     state.forgotPassword = false;
     state.statusMsg = tt("forgotNoProfile");
@@ -543,7 +544,7 @@ async function saveForgotPassword(email, pw, pw2) {
     paint(true);
     return;
   }
-  if (String(pw || "").length < 4) {
+  if (String(current || "").length < 4 || String(pw || "").length < 4) {
     state.statusMsg = tt("passwordHint");
     paint(true);
     return;
@@ -553,13 +554,24 @@ async function saveForgotPassword(email, pw, pw2) {
     paint(true);
     return;
   }
+  const remote = await profileApi({
+    action: "password",
+    email: typed,
+    current,
+    password: pw,
+  });
+  if (!remote.ok && remote.status !== 503) {
+    state.statusMsg = tt("wrongPassword");
+    paint(true);
+    return;
+  }
   const sealed = sealPassword(pw);
   saveProfile(sealed);
   state.forgotPassword = false;
   state.profileUnlocked = true;
   state.dojoMode = "home";
   state.roomDojoPanel = "";
-  state.statusMsg = tt("passwordSaved");
+  state.statusMsg = remote.status === 503 ? tt("profileStore") : tt("passwordSaved");
   markEntered();
   if (isDojoPage && needsPlacement(state.profile)) startDojo();
   else paint(true);
@@ -570,6 +582,8 @@ function forgotPasswordHTML() {
     <p class="meta">${tt("forgotLead")}</p>
     <label class="field" for="forgotEmail">${tt("email")}</label>
     <input id="forgotEmail" type="email" value="${escapeHtml(state.profile?.email || "")}" maxlength="120" autocomplete="email"/>
+    <label class="field" for="forgotCurrent">${tt("currentPassword")}</label>
+    <input id="forgotCurrent" type="password" maxlength="64" autocomplete="current-password"/>
     <label class="field" for="forgotPw">${tt("newPassword")}</label>
     <input id="forgotPw" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
     <label class="field" for="forgotPw2">${tt("confirmPassword")}</label>
@@ -595,6 +609,7 @@ function bindForgotPassword() {
   if (save) save.onclick = () => {
     void saveForgotPassword(
       $("#forgotEmail") && $("#forgotEmail").value,
+      $("#forgotCurrent") && $("#forgotCurrent").value,
       $("#forgotPw") && $("#forgotPw").value,
       $("#forgotPw2") && $("#forgotPw2").value,
     );
@@ -615,6 +630,14 @@ function maybeResetProfile() {
   if (fromQuery) applyProfileReset();
 }
 async function verifyProfilePassword(pw) {
+  const email = state.profile?.email;
+  if (email) {
+    try {
+      const remote = await profileApi({ action: "login", email, password: pw });
+      if (remote.ok) return true;
+      if (remote.status === 401 || remote.status === 409) return false;
+    } catch { /* device lock below */ }
+  }
   const want = state.profile?.passwordHash;
   if (!want) return false;
   const got = hashProfilePassword(pw, state.profile?.passwordSalt || "");
@@ -694,6 +717,7 @@ function shuffle(a) {
 /** Shuffle A–D at deal time so banks that store the key on A are not biased. */
 function shuffleQuestionChoices(q) {
   if (!q || !Array.isArray(q.choices) || q.choices.length < 2) return q;
+  if (!Number.isInteger(q.correctIndex)) return q;
   const correct = q.choices[q.correctIndex];
   const choices = shuffle(q.choices);
   let correctIndex = choices.indexOf(correct);
@@ -1173,6 +1197,14 @@ async function refreshQuestionSet() {
   const by = refreshPlayerName();
   if (state.qs?.length) rememberDealtIds(state.qs.map((q) => q.id));
   state.qs = dealFromPacks();
+  if (!bankHasKeys(state.qs)) {
+    const keyed = await requestHostDeck(state.replaySet ? "replay" : "show", {
+      again: true,
+      avoid: loadRecentQuestionIds(),
+      setId: state.replaySet || "",
+    });
+    if (keyed) state.qs = attributeSeats(keyed, playersForDeal());
+  }
   state.dealFresh = true;
   state.dealTopicKey = topicDealKey();
   const at = Date.now();
@@ -1389,22 +1421,8 @@ function needsEntryGate() {
   if (isDirections || wantsTv() || isTvDisplay()) return false;
   return !state.entered;
 }
-async function activateGameProfile(profile) {
-  if (!profile?.email || !profile?.displayName) return;
-  try {
-    await fetch("/api/profiles", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        id: profile.id,
-        displayName: profile.displayName,
-        email: profile.email,
-        age: profile.age,
-        country: profile.country,
-        detectedCountry: profile.detectedCountry || state.detectedCountry || "",
-      }),
-    });
-  } catch { /* lobby still opens if the list is unreachable */ }
+async function activateGameProfile() {
+  return;
 }
 function markEntered() {
   state.entered = true;
@@ -1472,12 +1490,28 @@ async function commitNewProfile(name, email, pw) {
     ageBracket: bracketForAge(form.age),
     generation,
   });
+  const remote = await profileApi({
+    action: "register",
+    id: state.profile.id,
+    displayName: cleanName,
+    email: cleanEmail,
+    password: pw,
+    age: form.age,
+    country: form.country,
+    detectedCountry: detected,
+  });
+  if (!remote.ok && remote.status !== 503) {
+    state.statusMsg = remote.data?.error === "age"
+      ? tt("ageTooYoung", remote.data.minimum || min, ageLimitPlace(form.country, detected))
+      : tt("wrongPassword");
+    paint(true);
+    return false;
+  }
   state.dojoMode = "home";
   state.roomDojoPanel = "";
-  state.statusMsg = tt("profileCreated");
+  state.statusMsg = remote.status === 503 ? tt("profileStore") : tt("profileCreated");
   state.entryDraft = null;
   markEntered();
-  await activateGameProfile(state.profile);
   paint(true);
   return true;
 }
@@ -1626,6 +1660,70 @@ function ensureHostKey() {
   }
   state.hostKey = key;
   return key;
+}
+function bankHasKeys(list) {
+  return Array.isArray(list) && list.some((q) => Number.isInteger(q?.correctIndex));
+}
+function profileToken() {
+  try { return sessionStorage.getItem("fa-profile-token") || ""; } catch { return ""; }
+}
+function keepProfileToken(token) {
+  if (!token) return;
+  try { sessionStorage.setItem("fa-profile-token", token); } catch { /* private mode */ }
+}
+async function profileApi(body) {
+  const headers = { "content-type": "application/json" };
+  const token = profileToken();
+  if (token) headers["x-fa-profile"] = token;
+  const res = await fetch("/api/profiles", {
+    method: "POST",
+    headers,
+    credentials: "same-origin",
+    body: JSON.stringify(body),
+  });
+  const data = await res.json().catch(() => null);
+  if (data?.token) keepProfileToken(data.token);
+  return { ok: res.ok, status: res.status, data };
+}
+async function ensureRoomForDeck() {
+  if (role === "pad") return false;
+  if (!state.room) state.room = code();
+  ensureHostKey();
+  const existing = await rooms("GET");
+  if (existing && !existing.error) return true;
+  const saved = await rooms("POST", {
+    action: "create",
+    code: state.room,
+    host: state.name || "TV",
+    hostKey: state.hostKey,
+    screen: state.onScreen ? "tv" : "off",
+    ...roomMeta(),
+  });
+  return Boolean(saved && !saved.error);
+}
+async function requestHostDeck(action, extra = {}) {
+  if (!(await ensureRoomForDeck())) return null;
+  try {
+    const res = await fetch("/api/deck", {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-fa-host": state.hostKey || "" },
+      body: JSON.stringify({
+        action,
+        code: state.room,
+        locale: state.locale,
+        hostKey: state.hostKey,
+        practice: Boolean(state.offline),
+        topics: state.topicsOn || [],
+        ...extra,
+      }),
+    });
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !Array.isArray(data?.questions) || !data.questions.length) return null;
+    if (data.practice && action === "show") state.practiceShow = true;
+    return data.questions;
+  } catch {
+    return null;
+  }
 }
 async function rooms(method, body) {
   try {
@@ -2097,25 +2195,18 @@ function recordCareer() {
     displayName: p.displayName || state.name,
   });
   saveProfile({ stats, topScores });
-  if (score > 0 && p.id) {
-    void fetch("/api/profiles", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        action: "score",
-        id: p.id,
-        displayName: p.displayName || state.name,
-        score,
-        at,
-      }),
-    }).catch(() => {});
+  if (score > 0 && profileToken() && !state.offline && !state.practiceShow) {
+    void profileApi({ action: "score", score, at });
   }
 }
 async function syncTopScores() {
   const id = state.profile?.id;
-  if (!id) return;
+  if (!id || !profileToken()) return;
   try {
-    const res = await fetch(`/api/profiles?scores=1&id=${encodeURIComponent(id)}`);
+    const res = await fetch("/api/profiles?scores=1", {
+      headers: { "x-fa-profile": profileToken() },
+      credentials: "same-origin",
+    });
     if (!res.ok) return;
     const data = await res.json();
     const combined = mergeTopScores([...(state.profile?.topScores || []), ...(data.scores || [])], null);
@@ -2435,17 +2526,22 @@ function pick(i, asId, fromRemote = false) {
   afterReveal(ok);
 }
 
-function startLockdown(playerId) {
+async function startLockdown(playerId) {
   const hero = playerById(playerId) || me();
   if (!hero) {
     continueRound();
     return;
   }
-  const qs = buildLockdownQuestions([
+  const avoid = [
     ...((state.qs) || []).map((q) => q.id),
     ...(state.spent ? [...state.spent] : []),
-  ]);
-  if (qs.length < LOCKDOWN_N) {
+  ];
+  let qs = buildLockdownQuestions(avoid);
+  if (!bankHasKeys(qs)) {
+    const keyed = await requestHostDeck("lockdown", { avoid });
+    if (keyed) qs = keyed;
+  }
+  if (!qs || qs.length < LOCKDOWN_N) {
     continueRound();
     return;
   }
@@ -3150,7 +3246,7 @@ function openDojoPage(mode) {
   }
   paint(true);
 }
-function startDojo() {
+async function startDojo() {
   clearDojoTick();
   const begun = beginPlacementSitting();
   if (begun.blocked) {
@@ -3159,7 +3255,17 @@ function startDojo() {
     if (isDojoPage) paint(true);
     return;
   }
-  state.placementPool = begun.pool;
+  let pool = begun.pool;
+  if (!bankHasKeys(pool)) {
+    const keyed = await requestHostDeck("placement");
+    if (keyed?.length) pool = keyed;
+  }
+  if (!bankHasKeys(pool)) {
+    state.statusMsg = tt("deckLocked");
+    if (isDojoPage) paint(true);
+    return;
+  }
+  state.placementPool = pool;
   const q = pickPlacementQuestion("hard", new Set());
   state.dojo = {
     q,
@@ -5341,7 +5447,7 @@ function ingestGuests(guests) {
   state.pendingJoins = queued;
 }
 
-function startGame() {
+async function startGame() {
   if (state.joinTick) {
     clearInterval(state.joinTick);
     state.joinTick = null;
@@ -5350,9 +5456,23 @@ function startGame() {
   state.botFill = true;
   seatPlayers();
   state.playOpen = "ask";
-  const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length)
+  const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length && bankHasKeys(state.qs))
     && state.dealTopicKey === topicDealKey();
   if (!reuse) state.qs = dealFromPacks();
+  if (!bankHasKeys(state.qs)) {
+    const again = Boolean(state.spent && state.spent.size);
+    const keyed = state.replaySet
+      ? await requestHostDeck("replay", { setId: state.replaySet, again })
+      : await requestHostDeck("show", { avoid: loadRecentQuestionIds(), again });
+    if (keyed) state.qs = attributeSeats(keyed, playersForDeal());
+  }
+  if (!bankHasKeys(state.qs)) {
+    state.statusMsg = tt("deckLocked");
+    state.phase = "lobby";
+    paint(true);
+    return;
+  }
+  if (state.offline) state.statusMsg = tt("practiceShow");
   state.dealFresh = false;
   state.spent = new Set(state.qs.map((q) => q.id));
   rememberDealtIds(state.qs.map((q) => q.id));

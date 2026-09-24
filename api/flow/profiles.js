@@ -1,5 +1,5 @@
 import { requireAuth } from "../../lib/flow-auth.js";
-import { listProfiles, mailingListCsv } from "../../lib/profile-store.js";
+import { listProfilesAsync, mailingListCsv } from "../../lib/profile-store.js";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") {
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   const url = new URL(req.url || "/", "http://localhost");
   const download = url.searchParams.get("download") === "1" || url.searchParams.get("format") === "csv";
   if (download) {
-    const csv = mailingListCsv();
+    const csv = await mailingListCsv();
     res.statusCode = 200;
     res.setHeader("content-type", "text/csv; charset=utf-8");
     res.setHeader("cache-control", "no-store");
@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const profiles = listProfiles();
+  const profiles = await listProfilesAsync();
   res.statusCode = 200;
   res.setHeader("content-type", "application/json");
   res.setHeader("cache-control", "no-store");

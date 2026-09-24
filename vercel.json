@@ -1,6 +1,7 @@
 {
   "functions": {
     "api/**/*.js": {
+      "includeFiles": "api/private-banks/**",
       "regions": ["iad1"]
     }
   },

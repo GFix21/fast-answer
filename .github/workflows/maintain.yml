@@ -41,6 +41,7 @@ jobs:
           node scripts/bots.check.mjs
           node scripts/flow-archive.check.mjs
           node scripts/room-wire.check.mjs
+          node scripts/release-blockers.check.mjs
 
   security:
     name: Security
