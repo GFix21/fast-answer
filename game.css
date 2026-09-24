@@ -653,6 +653,7 @@ html.tv-scroll, html.tv-scroll body{
   align-items:start;
   height:100%;
   overflow:auto;
+  padding-bottom:calc(18px + env(safe-area-inset-bottom));
 }
 .stage:not(.tv) .lobby .host{display:none}
 .stage:not(.tv) .lobby-copy{

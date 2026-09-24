@@ -3803,10 +3803,10 @@ function lobbyHTML() {
           ${acc("room", joining ? tt("joinRoom") : (mode === "cast" ? tt("castTv") : (!tv || !state.onScreen ? tt("offScreenRooms") : tt("room"))), `<small>${joining ? (state.room || "code") : state.playerCount + " seats"}</small>`, roomBody())}
           ${pad || (tv && forcedDisplay) ? "" : acc("set", tt("set"), "", setBody())}
         </div>
-        <div class="row">
+        ${!pad && !tv && !state.onScreen ? "" : `<div class="row">
           <button class="primary ${goGated ? "go-dojo-cta" : ""}" id="go" type="button">${goLabel}</button>
           ${state.onScreen && !forcedDisplay && role !== "pad" ? `<button class="ghost" data-off-screen type="button">${tt("offScreenReturn")}</button>` : ""}
-        </div>
+        </div>`}
         <p class="status" id="stt">${escapeHtml(status)}</p>
       </div>
       ${pad ? "" : `<div class="host" style="--host-h:${state.hostH}vh"><img src="${POSE.idle}" alt="Jeremy" style="height:var(--host-h)"/></div>`}
@@ -3885,7 +3885,7 @@ function playHTML() {
   else if (state.viewing) prompt = tt("viewingNow");
   else if (pad && !seated) prompt = tt("queuedPlay");
   else if (waiterPad) prompt = tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S);
-  else if (pad && !lockdownPlay && !lockdownIntro) prompt = state.phase === "read" ? tt("padRead") : tt("padBuzz");
+  else if (!q) prompt = tt("showEnd");
   else prompt = escapeHtml(q.prompt);
   const slang = q?.slang && prompt === escapeHtml(q.prompt)
     ? `<p class="q-slang">${escapeHtml(q.slang)}</p>`
@@ -3902,7 +3902,7 @@ function playHTML() {
           ? tt("setBreakCat")
           : (ld
             ? lockdownLogo(ld, backMore)
-            : (q && !pad ? escapeHtml([q.categoryTitle, questionCredit(q)].filter(Boolean).join(" · ")) : (pad ? tt("yourPad") : "")));
+            : (q ? escapeHtml([q.categoryTitle, questionCredit(q)].filter(Boolean).join(" · ")) : ""));
   const tier = readyPhase ? tt("logoReady") : (endPhase ? tt("logoEnd") : (between ? "" : (breaking ? tt("setBreakCat") : (ld ? tt("lockdownWord") : (q ? tierName(q.tier) : tt("logoEnd"))))));
   const n = readyPhase || ld || endPhase || breaking || between ? "" : ` · ${state.i + 1}/${state.qs.length || ROUND}`;
   const buzzLabel = readyPhase
@@ -3916,7 +3916,8 @@ function playHTML() {
   const dropoutBtn = !canLeaveNow() && !endPhase
     ? `<button class="ghost" id="dropout" type="button" ${dropped ? "disabled" : ""}>${dropped ? tt("dropoutPressed") : tt("dropout")}</button>`
     : "";
-  if (!tv && !pad && !state.onScreen) {
+  const phoneBoard = !tv && (pad || !state.onScreen);
+  if (phoneBoard) {
     const answersMarkup = showAns && q
       ? `<div class="answers phone-answers">${q.choices.map((c, i) => {
           let cls = "ans";
@@ -3956,7 +3957,7 @@ function playHTML() {
         <div class="buzzbar">
           ${rivalsHTML()}
           ${!ld && !endPhase && !breaking ? `<button class="buzzer ${canBuzz ? "lit" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
-          ${!ld && !endPhase && !breaking ? `<div class="dock set-dock">
+          ${!ld && !endPhase && !breaking && !pad ? `<div class="dock set-dock">
             <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
             <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
           </div>` : ""}
@@ -4959,8 +4960,13 @@ function startPoll() {
       }
       if (j.state.phase === "lobby") {
         if (state.phase === "lobby") state.phase = "ready";
+        if (state.showLive) return;
         paint(true);
         return;
+      }
+      if (state.showLive && (j.state.phase === "ready" || j.state.phase === "lobby")) return;
+      if (["read", "buzz", "answer", "reveal", "setbreak", "between", "end"].includes(j.state.phase)) {
+        state.showLive = true;
       }
       applyHostState(j.state);
       if (j.dropoutIds) state.dropoutIds = { ...(state.dropoutIds || {}), ...j.dropoutIds };
@@ -5024,7 +5030,7 @@ function paint(force = false) {
     + (role === "pad" ? " pad" : "")
     + (state.onScreen && role !== "pad" ? " tv" : "")
     + (state.phase === "lobby" && state.onScreen && role !== "pad" ? " tv-scroll" : "")
-    + (!state.onScreen && role !== "pad" && state.phase !== "lobby" ? " phone" : "")
+    + (state.phase !== "lobby" && (role === "pad" || !state.onScreen) ? " phone" : "")
     + (state.lockdown ? " lockdown" : "")
     + (state.rules ? " rules-open" : "");
   document.documentElement.classList.toggle("tv-scroll", app.classList.contains("tv-scroll"));
