@@ -3625,68 +3625,21 @@ function dojoGateChipsHTML() {
   return `<div class="dojo-gate-chips" role="status">${lockChip}${placeChip}</div>`;
 }
 
-/** Go to Dojo / Create / Unlock, always together on the Join TV (and Host/Cast) card. */
+/** Profile card on the phone lobby. Create and Unlock stay in the Dojo. */
 function roomDojoEntryHTML() {
   if (isTvDisplay()) return "";
-  const gate = lobbyGateReason();
-  const panel = state.roomDojoPanel || "";
   const p = state.profile || {};
-  let extra = "";
-  if (panel === "create") {
-    extra = `
-      <div class="dojo-inline">
-        <p class="dir-copy">${tt("createProfileIntro")}</p>
-        <label class="field" for="roomNm">${tt("name")}</label>
-        <input id="roomNm" type="text" value="${escapeHtml(hasPhoneProfile() ? (p.displayName || "") : (state.name || ""))}" maxlength="18" autocomplete="nickname"/>
-        ${generationSelectHTML("roomPlayerGen", p.generation, p.age || p.ageBracket)}
-        ${ageBracketHTML("roomPlayerAge", p)}
-        <label class="field" for="roomEm">${tt("email")}</label>
-        <input id="roomEm" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email"/>
-        <label class="field" for="roomPwNew">${tt("password")}</label>
-        <input id="roomPwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
-        <label class="field" for="roomTh">${tt("photoTv")}</label>
-        <input id="roomTh" type="file" accept="image/*"/>
-        <button class="primary" id="roomCreateSubmit" type="button">${tt("createProfileBtn")}</button>
-      </div>`;
-  } else if (panel === "unlock") {
-    if (!hasPhoneProfile()) {
-      extra = `<p class="meta">${tt("gateProfile")}</p>`;
-    } else if (needsPasswordSetup()) {
-      extra = `
-        <div class="dojo-inline">
-          <p class="dir-copy">${tt("setPasswordIntro")}</p>
-          <label class="field" for="roomPwNew">${tt("password")}</label>
-          <input id="roomPwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
-          <label class="field" for="roomPwConfirm">${tt("confirmPassword")}</label>
-          <input id="roomPwConfirm" type="password" maxlength="64" autocomplete="new-password"/>
-          <button class="primary" id="roomSetPw" type="button">${tt("savePassword")}</button>
-        </div>`;
-    } else if (!state.profileUnlocked) {
-      extra = state.forgotPassword ? forgotPasswordHTML() : `
-        <div class="dojo-unlock-mini">
-          <p class="dir-copy">${tt("unlockIntro")}</p>
-          <label class="field" for="pwUnlockRoom">${tt("password")}</label>
-          <div class="copy-row">
-            <input id="pwUnlockRoom" type="password" maxlength="64" autocomplete="current-password" placeholder="${tt("password")}"/>
-            <button class="primary" type="button" id="roomUnlockProfile">${tt("unlockShort")}</button>
-          </div>
-          <button class="word" id="forgotPassword" type="button">${tt("forgotPassword")}</button>
-        </div>`;
-    } else {
-      extra = `<p class="meta">${tt("joinReadyMeta")}</p>`;
-    }
-  }
+  const gen = genLabel(playerGeneration(p));
+  const grade = p.abilityTier ? medalHTML(p.abilityTier) : "";
   return `
     <div class="dojo-gate-panel">
       ${dojoGateChipsHTML()}
-      ${gate ? `<p class="dir-copy"><b>${escapeHtml(gate)}</b></p>` : ""}
       <div class="row dojo-gate-actions" role="group" aria-label="${escapeHtml(tt("dojo"))}">
         <a class="primary" id="goToDojo" href="${dojoHref()}">${tt("goToDojo")}</a>
-        <button class="ghost ${panel === "create" ? "on" : ""}" type="button" id="roomCreateProfile">${tt("createShort")}</button>
-        <button class="ghost ${panel === "unlock" ? "on" : ""}" type="button" id="roomShowUnlock">${tt("unlockShort")}</button>
       </div>
       ${hasPhoneProfile() ? `<p class="meta">${escapeHtml(p.displayName || "")}${p.email ? ` · ${escapeHtml(p.email)}` : ""}</p>` : ""}
-      ${extra}
+      ${gen ? `<p class="meta">${escapeHtml(gen)}</p>` : ""}
+      ${hasPhoneProfile() ? `${beltStripHTML(p.belt, p.stats?.totalPoints)}${grade}` : ""}
       ${genAlphaReviewHTML()}
     </div>`;
 }
@@ -3777,7 +3730,7 @@ function roomCreateFields() {
     </div>`;
 }
 function lobbyPlayExtras() {
-  if (isPad() || state.mpMode === "join") return "";
+  if (isPad() || isTvDisplay() || state.onScreen || state.mpMode !== "off") return "";
   return `<button class="ghost" id="playOffline" type="button">${tt("playOffline")}</button>`;
 }
 
@@ -3893,7 +3846,6 @@ function roomBody() {
       <button class="ghost" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
-      ${lobbyPlayExtras()}
       ${roomDojoEntryHTML()}
     `;
   }
@@ -3952,7 +3904,6 @@ function roomBody() {
     ` : `<p class="meta">${tt("offScreenHint")}</p>`}
     ${roomListHTML("off")}
     ${roomListHTML("tv")}
-    ${lobbyPlayExtras()}
     ${roomDojoEntryHTML()}
   `;
 }
