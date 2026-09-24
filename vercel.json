@@ -53,6 +53,6 @@
     {
       "source": "/tv/:code",
       "destination": "/index.html"
-    },
+    }
   ]
 }
