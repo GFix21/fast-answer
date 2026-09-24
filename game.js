@@ -2846,14 +2846,18 @@ function dojoPageHTML() {
     <img class="bg" alt="" src="${bg.src}"/>
     <div class="veil"></div>
     <div class="top">
+      <a class="primary dojo-lobby" href="./index.html">${tt("lobby")}</a>
       <div class="logo">Fast Answer!<small>${tt("dojo")}</small></div>
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
-      <a class="word" href="/">${tt("lobby")}</a>
       ${headerLinks()}
     </div>
     <div class="dojo-page">
       <div class="dojo-page-scroll">
+        <div class="dojo-head">
+          <div class="logo">Fast Answer!<small>${tt("dojo")}</small></div>
+          <a class="primary dojo-lobby" href="./index.html">${tt("lobby")}</a>
+        </div>
         ${dojoBody()}
         <p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>
       </div>
@@ -3219,14 +3223,17 @@ function placementSetsHTML() {
           ${open === i ? `<div class="acc-body">
             <button class="primary" type="button" data-use-set="${i}">${escapeHtml(tt("useMainSet"))}</button>
             <ol class="place-archive">
-              ${qs.map((q) => `<li>
-                <p>${escapeHtml(q.prompt || "")}</p>
-                <details class="ans-fold">
-                  <summary>${escapeHtml(tt("answersHidden"))}</summary>
-                  <ol class="gen-alpha-choices">
-                    ${(q.choices || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}
-                  </ol>
-                </details>
+              ${qs.map((q, n) => `<li class="q-row">
+                <span class="q-num">${n + 1}</span>
+                <div>
+                  <p>${escapeHtml(q.prompt || "")}</p>
+                  <details class="ans-fold">
+                    <summary>${escapeHtml(tt("answersHidden"))}</summary>
+                    <ol class="gen-alpha-choices">
+                      ${(q.choices || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}
+                    </ol>
+                  </details>
+                </div>
               </li>`).join("")}
             </ol>
           </div>` : ""}
@@ -3286,14 +3293,17 @@ function genAlphaReviewHTML() {
       </select>
       <p class="meta">${escapeHtml(lead)}</p>
       ${list.length ? `<ol class="gen-alpha-list">
-        ${list.map((q) => `<li>
-          ${q.slang ? `<p class="q-slang">${escapeHtml(q.slang)}</p>` : ""}
-          <p>${escapeHtml(q.prompt)}</p>
-          <details class="ans-fold"><summary>${escapeHtml(tt("answersHidden"))}</summary>
-            <ol class="gen-alpha-choices">
-              ${(q.choices || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}
-            </ol>
-          </details>
+        ${list.map((q, n) => `<li class="q-row">
+          <span class="q-num">${n + 1}</span>
+          <div>
+            ${q.slang ? `<p class="q-slang">${escapeHtml(q.slang)}</p>` : ""}
+            <p>${escapeHtml(q.prompt)}</p>
+            <details class="ans-fold"><summary>${escapeHtml(tt("answersHidden"))}</summary>
+              <ol class="gen-alpha-choices">
+                ${(q.choices || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}
+              </ol>
+            </details>
+          </div>
         </li>`).join("")}
       </ol>` : `<p class="meta">${escapeHtml(tt("genAlphaReviewEmpty"))}</p>`}
       <div class="gen-alpha-ask">
