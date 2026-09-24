@@ -440,12 +440,18 @@ function shareUrl() {
   return shareUrlFor(state.room);
 }
 function tvSilkUrl(roomCode = state.room) {
-  const code = String(roomCode || "").toUpperCase();
-  const u = new URL(code ? `/tv/${code}` : "/", location.origin);
+  const code = String(roomCode || state.room || "").toUpperCase();
+  const u = new URL("/", location.origin);
   u.searchParams.set("tv", "1");
   if (code) u.searchParams.set("room", code);
-  if (code && !state.hostKey) ensureHostKey();
-  if (state.hostKey) u.searchParams.set("k", state.hostKey);
+  let key = "";
+  if (code && code === String(state.room || "").toUpperCase()) {
+    if (!state.hostKey) ensureHostKey();
+    key = state.hostKey || "";
+  } else {
+    try { key = localStorage.getItem(`fa-host-${code}`) || ""; } catch { /* private mode */ }
+  }
+  if (key) u.searchParams.set("k", key);
   return u.toString();
 }
 function isTvDisplay() {
@@ -3664,15 +3670,15 @@ function roomLinksHTML() {
   const silk = tvSilkUrl(state.room);
   const join = shareUrl();
   return `
-    <label class="field" for="joinUrl">${tt("joinLink")}</label>
-    <div class="copy-row">
-      <input id="joinUrl" type="text" readonly value="${escapeHtml(join)}"/>
-      <button class="ghost" type="button" data-copy="join">${tt("copy")}</button>
-    </div>
     <label class="field" for="silkUrl">${tt("silkLink")}</label>
     <div class="copy-row">
       <input id="silkUrl" type="text" readonly value="${escapeHtml(silk)}"/>
-      <button class="ghost" type="button" data-copy="silk">${tt("copy")}</button>
+      <button class="primary" type="button" data-copy="silk">${tt("copyTv")}</button>
+    </div>
+    <label class="field" for="joinUrl">${tt("joinLink")}</label>
+    <div class="copy-row">
+      <input id="joinUrl" type="text" readonly value="${escapeHtml(join)}"/>
+      <button class="ghost" type="button" data-copy="join">${tt("copyPhone")}</button>
     </div>`;
 }
 
@@ -3700,7 +3706,7 @@ function roomListHTML(screen) {
     <div class="room-row">
       <span class="room-meta"><b>${escapeHtml(label)}</b>${r.host ? ` · ${escapeHtml(r.host)}` : ""}${r.guests ? ` · ${r.guests}` : ""}</span>
       <button type="button" class="primary" data-join-room="${escapeHtml(r.code)}">${tt("joinShort")}</button>
-      <button type="button" class="ghost" data-copy-room="${escapeHtml(r.code)}">${tt("copy")}</button>
+      <button type="button" class="ghost" data-copy-room="${escapeHtml(r.code)}">${tt("copyTv")}</button>
     </div>`;
   }).join("");
   return `
@@ -4104,7 +4110,7 @@ function lobbyHTML() {
       <div class="logo">Fast Answer!<small>${tt("tagline")}</small></div>
       <div class="grow"></div>
       ${languageSwitcherHtml(state.locale)}
-      ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span><button class="ghost top-copy" type="button" data-copy="join">${tt("copy")}</button>` : ""}
+      ${state.room ? `<span class="chip">${escapeHtml(state.room)}</span><button class="primary top-copy" type="button" data-copy="silk">${tt("copyTv")}</button>` : ""}
       ${headerLinks({ dojo: true, directions: true })}
       ${refreshNoticeHTML()}
     </div>
@@ -4253,7 +4259,7 @@ function playHTML() {
       <div class="top">
         <div class="logo">Fast Answer!<small>${tier}${n}</small></div>
         <div class="grow"></div>
-        ${!pad && state.room ? `<button class="ghost top-copy" type="button" data-copy="join">${tt("copy")}</button>` : ""}
+        ${!pad && state.room ? `<button class="primary top-copy" type="button" data-copy="silk">${tt("copyTv")}</button>` : ""}
         <button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>
         ${canLeaveNow() ? `<button class="word" id="quit" type="button">${leaveLabel}</button>` : ""}
         ${refreshNoticeHTML()}
@@ -4873,8 +4879,10 @@ function bindLobby() {
     b.onclick = async () => {
       const roomCode = b.dataset.copyRoom;
       const url = roomCode
-        ? shareUrlFor(roomCode)
-        : (b.dataset.copy === "silk" ? (($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room)) : (($("#joinUrl") && $("#joinUrl").value) || shareUrl()));
+        ? tvSilkUrl(roomCode)
+        : (b.dataset.copy === "join"
+          ? (($("#joinUrl") && $("#joinUrl").value) || shareUrl())
+          : (($("#silkUrl") && $("#silkUrl").value) || tvSilkUrl(state.room)));
       const ok = await copyText(url);
       state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
       paint(true);
@@ -5556,7 +5564,7 @@ if (isDirections) {
 } else if (isDojoPage) {
   if (forcedDisplay) {
     const code = joinCode || pathRoom;
-    location.replace(code ? `/tv/${encodeURIComponent(code)}${location.search || "?tv=1"}` : "/?tv=1");
+    location.replace(`/?tv=1&room=${encodeURIComponent(code)}${location.search.includes("k=") ? "&" + location.search.replace(/^\?/, "").split("&").filter((p) => p.startsWith("k=")).join("&") : ""}`);
   } else {
     try {
       await loadBanksForLocale(state.locale);
