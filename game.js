@@ -319,6 +319,7 @@ const state = {
 
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("fast-answer") : null;
 let poll = null;
+let lobbyListPoll = null;
 let pollN = 0;
 let refreshInFlight = false;
 let refreshHoldTimer = null;
@@ -1617,7 +1618,21 @@ async function rooms(method, body) {
 }
 async function refreshActiveRooms() {
   const data = await rooms("POST", { action: "lobby" });
-  state.activeRooms = Array.isArray(data?.rooms) ? data.rooms : [];
+  if (!data || !Array.isArray(data.rooms)) return false;
+  state.activeRooms = data.rooms;
+  return true;
+}
+function roomListKey() {
+  return (state.activeRooms || []).map((r) => `${r.code}:${r.screen || ""}:${r.name || ""}:${r.guests || 0}`).join(",");
+}
+function startLobbyList() {
+  if (lobbyListPoll) return;
+  lobbyListPoll = setInterval(async () => {
+    if (state.phase !== "lobby") return;
+    const before = roomListKey();
+    const ok = await refreshActiveRooms();
+    if (ok && roomListKey() !== before) paint(true);
+  }, 2000);
 }
 function submitAnswerToRoom(index, lockdown = false) {
   if (!state.room) return;
@@ -3686,13 +3701,6 @@ function roomListHTML(screen) {
       ${rows || `<p class="meta">${tt("noRooms")}</p>`}
     </div>`;
 }
-function deviceStoreLine() {
-  const c = state.cohort || readStoredCohort(state.locale);
-  const held = Number(c?.held) || 0;
-  const place = (c?.placement || []).length;
-  const show = (c?.shows?.[0] || []).length;
-  return `<p class="meta">${tt("deviceStore", held, place, show)}</p>`;
-}
 function roomCreateFields() {
   const wait = clamp(Number(state.joinWait) || 15, 5, 45);
   const waits = [10, 15, 20, 30, 45];
@@ -3712,7 +3720,7 @@ function roomCreateFields() {
 }
 function lobbyPlayExtras() {
   if (isPad() || state.mpMode === "join") return "";
-  return `${deviceStoreLine()}<button class="ghost" id="playOffline" type="button">${tt("playOffline")}</button>`;
+  return `<button class="ghost" id="playOffline" type="button">${tt("playOffline")}</button>`;
 }
 
 function screenModeHTML() {
@@ -4341,6 +4349,20 @@ async function openRoom(screen) {
   });
   if (!saved || saved.error) {
     state.statusMsg = tt("roomNotListed", state.room);
+  } else {
+    const meta = roomMeta();
+    const row = {
+      code: state.room,
+      host: state.name || "",
+      name: meta.name,
+      guests: 0,
+      phase: state.phase || "lobby",
+      screen: next,
+      joinWait: meta.joinWait,
+      ageFrom: meta.ageFrom,
+      ageTo: meta.ageTo,
+    };
+    state.activeRooms = [row, ...(state.activeRooms || []).filter((r) => r.code !== row.code)];
   }
   startPoll();
   return saved;
@@ -5609,6 +5631,7 @@ if (isDirections) {
     try { localStorage.setItem("fa-onscreen", "0"); } catch { /* ignore */ }
     void refreshActiveRooms().then(() => paint(true));
   }
+  startLobbyList();
   paint(true);
   window.__fa = state;
 }
