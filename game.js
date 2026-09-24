@@ -3943,20 +3943,23 @@ function playHTML() {
         ${refreshNoticeHTML()}
       </div>
       <div class="phone-lock">
-        <div class="accord">
-          ${acc("ask", tt("phoneAsk"), "", `
+        <div class="phone-board">
+          <div class="qcard ${ld ? "lock" : ""} ${breaking ? "setbreak" : ""} ${state.mapLive ? "map-on" : ""}">
             <p class="cat">${cat}</p>
             ${slang}
             <p class="qtext ${breaking ? "setbreak" : ""}">${prompt}</p>
             <p class="meta" id="clock">${endPhase ? scoreboard() : clockText()}</p>
-          `, "play")}
-          ${acc("answers", tt("phoneAnswers"), "", answersMarkup, "play")}
-          ${acc("players", tt("players"), "", scoreboard(), "play")}
-          ${acc("set", tt("set"), "", setBody(), "play")}
+          </div>
+          <div class="phone-answers">${answersMarkup}</div>
+          ${endPhase ? "" : `<div class="phone-scores">${scoreboard()}</div>`}
         </div>
         <div class="buzzbar">
           ${rivalsHTML()}
           ${!ld && !endPhase && !breaking ? `<button class="buzzer ${canBuzz ? "lit" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
+          ${!ld && !endPhase && !breaking ? `<div class="dock set-dock">
+            <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
+            <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
+          </div>` : ""}
           ${dropoutBtn}
           ${dropped && !canLeaveNow() ? `<p class="meta">${tt("dropoutWait")}</p>` : ""}
         </div>

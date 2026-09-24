@@ -250,9 +250,19 @@ img.brand{
   min-height:0;height:100%;overflow:hidden;
   display:flex;flex-direction:column;
   padding:0 12px 4px;
+  gap:8px;
 }
-.phone-lock .accord{flex:1;min-height:0}
+.phone-board{
+  flex:1;min-height:0;overflow:auto;
+  display:flex;flex-direction:column;gap:8px;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+}
+.phone-lock .qcard{flex-shrink:0;width:100%}
+.phone-lock .phone-answers{flex-shrink:0}
 .phone-lock .answers{max-height:none;padding:0}
+.phone-lock .phone-scores{flex-shrink:0}
+.phone-lock .scores-row{flex-wrap:wrap}
 .stage.phone{grid-template-rows:auto minmax(0,1fr)}
 .dojo-page{
   position:relative;z-index:2;
