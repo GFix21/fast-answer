@@ -252,6 +252,7 @@ const state = {
   setBreakTier: "",
   lockdownAt: [],
   lockdown: null,
+  lockdownRound: 0,
   rules: false,
   aiBuzzT: null,
   spent: new Set(),
@@ -287,6 +288,9 @@ const state = {
   joinWait: 15,
   joinLeft: 0,
   joinTick: null,
+  castForm: false,
+  connectOpen: false,
+  introCast: null,
   ageFrom: 13,
   ageTo: 99,
   offline: false,
@@ -1101,14 +1105,12 @@ function attributeSeats(questions, players) {
     };
   });
 }
-function buildLockdownQuestions(avoidIds) {
+function buildLockdownQuestions(avoidIds, which = 0) {
   const cohort = ensureCohort();
-  const prepared = cohort?.lockdownPrepared;
+  const prepared = cohort?.lockdownSets?.[which];
   if (Array.isArray(prepared) && prepared.length >= LOCKDOWN_N) return prepared.slice(0, LOCKDOWN_N);
   const players = playersForDeal();
-  const qs = lockdownSet(players, cohort?.packs, avoidIds, LOCKDOWN_N, {
-    refreshes: cohort?.lockdownRefreshes || 0,
-  });
+  const qs = lockdownSet(players, cohort?.packs, avoidIds, LOCKDOWN_N, { which });
   if (qs.length >= LOCKDOWN_N) return qs;
   return leftoverQs(true).slice(0, LOCKDOWN_N);
 }
@@ -1278,8 +1280,14 @@ function questionRefreshHTML() {
     </div>`;
 }
 function pickLockdownSlots() {
-  if ((state.qs?.length || 0) < 12) return [];
-  return lockdownSlots(state.qs);
+  const qs = state.qs || [];
+  if (qs.length < 8) return [];
+  const slots = lockdownSlots(qs);
+  if (slots.length >= 2) return slots.slice(0, 2);
+  const a = slots[0] ?? Math.min(qs.length - 1, Math.max(1, Math.floor(qs.length * 0.45)));
+  let b = Math.min(qs.length - 1, Math.max(a + 1, qs.length - 2));
+  if (b === a) return [a];
+  return [a, b];
 }
 function leftoverQs(preferHard = false) {
   const recent = new Set(loadRecentQuestionIds());
@@ -1844,6 +1852,10 @@ function snapshot() {
     setBreakTier: state.setBreakTier,
     lockdownAt: state.lockdownAt,
     lockdown: state.lockdown,
+    lockdownRound: state.lockdownRound || 0,
+    introName: state.introName || "",
+    introLeft: state.introLeft || 0,
+    introCast: state.introCast || null,
     playerCount: state.playerCount,
     readyIds: state.readyIds,
     guests: state.guests,
@@ -1912,6 +1924,7 @@ function clearAiBuzz() {
 
 function clockText() {
   const q = currentQ();
+  if (state.phase === "between" && state.introCast) return tt("castIntro", state.introName);
   if (state.phase === "between" && state.introName) return tt("introducing", state.introName, state.introLeft);
   if (state.phase === "ready" && state.joinLeft > 0) return tt("joinWaitClock", state.joinLeft);
   const ld = state.lockdown;
@@ -2143,7 +2156,7 @@ function armMap(targetId) {
   if (!turningOff && mapUsesLeft(state.mapUses?.[owner]) <= 0) return;
   if (turningOff) delete state.maps[owner];
   else state.maps[owner] = targetId;
-  if (state.phase === "answer") {
+  if (state.phase === "answer" || state.lockdown?.phase === "play" || state.lockdown?.phase === "wager") {
     state.mapLive = Boolean(state.maps[owner]) && mapUsesLeft(state.mapUses?.[owner]) > 0;
   }
   paint();
@@ -2318,7 +2331,7 @@ function finishShow() {
 
 function seatPendingJoins() {
   if (role === "pad") return;
-  if (state.i >= 4) return;
+  if (state.phase === "lobby" || state.phase === "ready" || state.phase === "end") return;
   const pending = state.pendingJoins || [];
   if (!pending.length) return;
   for (const g of pending) {
@@ -2326,28 +2339,17 @@ function seatPendingJoins() {
     if (!name) continue;
     if (state.players.some((p) => p.id === g.id || cleanSeatName(p.name) === name)) continue;
     const bot = state.players.find((p) => !p.human);
-    if (bot) {
-      bot.id = g.id;
-      bot.name = name;
-      bot.human = true;
-      bot.you = false;
-      bot.thumb = g.thumb || "";
-      bot.ageBracket = g.ageBracket || "";
-      bot.generation = generationForSeat(g) || defaultGeneration(g.id || g.name);
-      delete bot.skill;
-      delete bot.buzzDelayMs;
-    } else if (state.players.length < 12) {
-      state.players.push({
-        id: g.id,
-        name,
-        score: 0,
-        human: true,
-        you: false,
-        thumb: g.thumb || "",
-        ageBracket: g.ageBracket || "",
-        generation: generationForSeat(g) || defaultGeneration(g.id || g.name),
-      });
-    }
+    if (!bot) continue;
+    bot.id = g.id;
+    bot.name = name;
+    bot.human = true;
+    bot.you = false;
+    bot.score = 0;
+    bot.thumb = g.thumb || "";
+    bot.ageBracket = g.ageBracket || "";
+    bot.generation = generationForSeat(g) || defaultGeneration(g.id || g.name);
+    delete bot.skill;
+    delete bot.buzzDelayMs;
   }
   state.pendingJoins = pending.filter((g) => !state.players.some((p) => p.id === g.id));
 }
@@ -2448,11 +2450,13 @@ function lockdownLogo(ld, backMore = "") {
 }
 
 function mapPhaseOpen() {
-  if (state.lockdown || state.phase === "setbreak") return false;
-  return state.phase === "read" || state.phase === "buzz" || state.phase === "answer";
+  if (state.phase === "setbreak" || state.phase === "ready" || state.phase === "end" || state.phase === "lobby" || state.phase === "between") return false;
+  if (state.lockdown && state.lockdown.phase !== "play" && state.lockdown.phase !== "wager") return false;
+  return state.phase === "read" || state.phase === "buzz" || state.phase === "answer" || state.phase === "lockdown";
 }
 
 function mapOwnerId() {
+  if (state.lockdown && (state.lockdown.phase === "play" || state.lockdown.phase === "wager")) return state.lockdown.playerId;
   if (state.phase === "answer") return state.buzzId || state.youId;
   return state.youId;
 }
@@ -2472,33 +2476,6 @@ function applyRemoteMap(id, target) {
 
 function afterReveal(ok) {
   const shouldLock = ok && state.lockdownAt.includes(state.i) && !state.lockdown;
-  if (state.i < 4 && !shouldLock) {
-    state.phase = "between";
-    state.introName = cleanSeatName(state.buzzBy) || tt("player");
-    state.introLeft = 15;
-    paint(true);
-    publish();
-    if (state.introTick) clearInterval(state.introTick);
-    state.introTick = setInterval(() => {
-      if (state.phase !== "between") {
-        clearInterval(state.introTick);
-        state.introTick = null;
-        return;
-      }
-      state.introLeft -= 1;
-      if (state.introLeft <= 0) {
-        clearInterval(state.introTick);
-        state.introTick = null;
-        state.introName = "";
-        continueRound();
-        return;
-      }
-      const clock = $("#clock");
-      if (clock) clock.textContent = tt("introducing", state.introName, state.introLeft);
-      publish();
-    }, 1000);
-    return;
-  }
   setTimeout(() => {
     if (shouldLock) startLockdown(state.buzzId);
     else continueRound();
@@ -2579,7 +2556,8 @@ async function startLockdown(playerId) {
     ...((state.qs) || []).map((q) => q.id),
     ...(state.spent ? [...state.spent] : []),
   ];
-  let qs = buildLockdownQuestions(avoid);
+  const which = state.lockdownRound || 0;
+  let qs = buildLockdownQuestions(avoid, which);
   if (!bankHasKeys(qs)) {
     const keyed = await requestHostDeck("lockdown", { avoid });
     if (keyed) qs = keyed;
@@ -2588,10 +2566,8 @@ async function startLockdown(playerId) {
     continueRound();
     return;
   }
-  if (state.cohort?.lockdownPrepared) {
-    delete state.cohort.lockdownPrepared;
-    writeStoredCohort(state.cohort);
-  }
+  if (state.cohort?.lockdownSets) state.cohort.lockdownSets[which] = null;
+  state.lockdownRound = which + 1;
   qs.forEach((q) => state.spent.add(q.id));
   rememberDealtIds(qs.map((q) => q.id));
   state.wagerDraft = null;
@@ -2808,8 +2784,21 @@ function lockdownPick(i, forced = false) {
   state.picked = i;
   if (ok) {
     ld.hits += 1;
-    ld.earned = (ld.earned || 0) + pts;
-    addScore(ld.playerId, pts);
+    const stake = pts;
+    const targetId = state.mapLive ? state.maps[ld.playerId] : "";
+    const rival = targetId ? playerById(targetId) : null;
+    const mapped = Boolean(rival) && (rival.score || 0) >= stake && mapUsesLeft(state.mapUses?.[ld.playerId]) > 0;
+    if (mapped) {
+      addScore(ld.playerId, stake * 2);
+      addScore(targetId, -stake);
+      state.mapUses = { ...(state.mapUses || {}), [ld.playerId]: (Number(state.mapUses?.[ld.playerId]) || 0) + 1 };
+      state.mapLive = false;
+      delete state.maps[ld.playerId];
+      ld.earned = (ld.earned || 0) + stake * 2;
+    } else {
+      addScore(ld.playerId, pts);
+      ld.earned = (ld.earned || 0) + pts;
+    }
   }
   playSound(ok ? "correct" : "miss");
   state.pose = ok ? "win" : "loss";
@@ -3873,14 +3862,35 @@ function roomListHTML(screen) {
       ${rows || `<p class="meta">${tt("noRooms")}</p>`}
     </div>`;
 }
-function roomCreateFields() {
+function startWaitHTML() {
   const wait = clamp(Number(state.joinWait) || 15, 5, 45);
   const waits = [10, 15, 20, 30, 45];
   return `
+    <p class="field">${tt("joinWait")} <b>${wait}s</b></p>
+    <div class="seat-n" role="group">${waits.map((n) => `<button type="button" class="seat-n-btn ${wait === n ? "on" : ""}" data-wait="${n}">${n}</button>`).join("")}</div>`;
+}
+
+function tvShortMenu() {
+  fillSeats();
+  const seats = seatedPreview();
+  const humans = seats.filter((s) => s.human);
+  const bots = seats.filter((s) => !s.human);
+  return `
+    <div class="tv-menu">
+      <p class="field">${tt("players")}</p>
+      <div class="seats">${humans.map((s) => seatSpan(s)).join("") || `<span class="meta">${tt("noPadsYet")}</span>`}</div>
+      <p class="field">${tt("celebrityBots")}</p>
+      <div class="seats">${bots.map((s) => seatSpan(s)).join("") || `<span class="meta">—</span>`}</div>
+      <button class="primary" id="connectTv" type="button">${tt("connectTv")}</button>
+      ${state.room && state.connectOpen ? `<p class="room-code"><b>${escapeHtml(state.room)}</b></p>` : ""}
+    </div>`;
+}
+
+function roomCreateFields() {
+  return `
     <label class="field" for="roomName">${tt("roomName")}</label>
     <input id="roomName" maxlength="32" value="${escapeHtml(state.roomName || "")}" placeholder="${tt("roomNameHint")}"/>
-    <p class="field">${tt("joinWait")} <b>${wait}s</b></p>
-    <div class="seat-n" role="group">${waits.map((n) => `<button type="button" class="seat-n-btn ${wait === n ? "on" : ""}" data-wait="${n}">${n}</button>`).join("")}</div>
+    ${startWaitHTML()}
     <div class="copy-row">
       <label class="field" for="ageFrom">${tt("ageFrom")}
         <input id="ageFrom" type="number" min="10" max="99" value="${clamp(Number(state.ageFrom) || 13, 10, 99)}"/>
@@ -3952,9 +3962,6 @@ function playerCountHTML() {
 
 function roomBody() {
   const pad = isPad();
-  const seats = seatedPreview();
-  const humans = seats.filter((s) => s.human).length;
-  const bots = seats.length - humans;
   const mode = pad ? "join" : (state.mpMode || "host");
 
   if (pad || mode === "join") {
@@ -3994,20 +4001,21 @@ function roomBody() {
   }
 
   if (mode === "cast") {
+    if (state.castForm || !state.room) {
+      return `
+        ${roomModeButtons()}
+        <p class="dir-copy">${tt("castSetupLead")}</p>
+        ${startWaitHTML()}
+        ${playerCountHTML()}
+        ${topicsBody()}
+        <button class="primary" id="createTvCast" type="button">${tt("createRoom")}</button>
+      `;
+    }
     return `
       ${roomModeButtons()}
-      <p class="dir-copy"><b>${tt("castCopy")}</b></p>
-      ${playerCountHTML()}
-      <div class="seats">
-        ${seats.map((s) => seatSpan(s)).join("")}
-      </div>
-      <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
-      ${roomLinksHTML()}
-      <button class="primary" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
-      <button class="ghost" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
-      ${roomListHTML("off")}
-      ${roomListHTML("tv")}
-      ${roomDojoEntryHTML()}
+      <p class="meta">${tt("host")}: ${escapeHtml(cleanSeatName(state.name) || tt("host"))}</p>
+      ${tvShortMenu()}
+      <button class="ghost" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
     `;
   }
 
@@ -4043,29 +4051,7 @@ function roomBody() {
 
   return `
     ${roomModeButtons()}
-    <div class="seats">
-      ${seats.map((s) => seatSpan(s)).join("")}
-    </div>
-    ${state.onScreen || isTvDisplay() ? `
-      <p class="dir-copy">${tt("onScreenOwns")}</p>
-      <p class="meta">${tt("viewers", viewerCount())}</p>
-      <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.roomName ? state.roomName + " · " + (state.room || "····") : (state.room || "····"))}</b>`)}</p>
-      ${roomLinksHTML()}
-      <p class="meta">${escapeHtml(tt("humansBots", humans, bots))}</p>
-      ${isTvDisplay() || state.onScreen ? `
-        <div class="tv-players">
-          <p class="rivals-lab">${tt("tvPlayers")}</p>
-          ${(state.guests || []).filter((g) => cleanSeatName(g.name) && g.seat !== "view").map((g) =>
-            `<div class="tv-player-row">
-              <span class="seat human">${escapeHtml(cleanSeatName(g.name))}</span>
-              <button type="button" class="ghost danger" data-kick="${escapeHtml(g.id)}">${tt("removePlayer")}</button>
-            </div>`
-          ).join("") || `<p class="meta">${tt("noPadsYet")}</p>`}
-        </div>` : ""}
-    ` : `<p class="meta">${tt("offScreenHint")}</p>`}
-    ${roomListHTML("off")}
-    ${roomListHTML("tv")}
-    ${roomDojoEntryHTML()}
+    ${tvShortMenu()}
   `;
 }
 
@@ -4465,6 +4451,7 @@ function playHTML() {
       : state.phase === "answer" || (!state.onScreen && !pad && state.phase === "buzz");
   let prompt;
   if (readyPhase) prompt = "";
+  else if (state.phase === "between" && state.introCast) prompt = escapeHtml(tt("castIntro", (state.introCast || []).join(" · ")));
   else if (state.phase === "between") prompt = state.introName ? escapeHtml(tt("introducing", state.introName, state.introLeft)) : "";
   else if (endPhase) prompt = tt("showEnd");
   else if (ld?.phase === "wager") prompt = `LOCKDOWN — ${ld.name} · ${tt("lockdownWagers")}`;
@@ -4661,6 +4648,55 @@ async function openRoom(screen) {
   return saved;
 }
 
+async function createTvCast() {
+  if (!isTvDisplay()) {
+    const gate = lobbyGateReason();
+    if (gate) {
+      state.statusMsg = gate;
+      openDojoPage(dojoModeForGate());
+      return;
+    }
+  }
+  const hostName = cleanSeatName(state.profile?.displayName || state.name) || "Host";
+  state.name = hostName;
+  saveProfile({ displayName: hostName });
+  state.room = Math.random().toString(36).slice(2, 6).toUpperCase();
+  state.joinInput = state.room;
+  state.onScreen = isTvDisplay();
+  state.mpMode = "cast";
+  state.castForm = false;
+  state.connectOpen = true;
+  state.roomSetup = true;
+  state.lobbyOpen = "room";
+  fillSeats();
+  try {
+    localStorage.setItem("fa-mp", "cast");
+    localStorage.setItem("fa-onscreen", state.onScreen ? "1" : "0");
+  } catch { /* ignore */ }
+  const saved = await openRoom("tv");
+  state.roomSetup = true;
+  await refreshActiveRooms();
+  if (saved && !saved.error) state.statusMsg = tt("castListed", state.room);
+  paint(true);
+}
+
+async function connectToTv() {
+  if (!state.room) {
+    if (isTvDisplay() || state.onScreen) await openRoom("tv");
+    else {
+      state.castForm = true;
+      state.mpMode = "cast";
+      paint(true);
+      return;
+    }
+  }
+  state.connectOpen = true;
+  const url = tvSilkUrl(state.room);
+  const ok = await copyText(url);
+  state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
+  paint(true);
+}
+
 async function createOffScreenRoom() {
   if (!isTvDisplay()) {
     const gate = lobbyGateReason();
@@ -4708,6 +4744,7 @@ async function castThisRoom() {
   state.roomSetup = false;
   state.onScreen = isTvDisplay();
   state.mpMode = "cast";
+  state.castForm = false;
   state.lobbyOpen = "room";
   try {
     localStorage.setItem("fa-mp", "cast");
@@ -5028,6 +5065,7 @@ function bindLobby() {
       localStorage.setItem("fa-mp", state.mpMode);
       state.statusMsg = "";
       state.lobbyOpen = "room";
+      if (state.mpMode === "cast") state.castForm = true;
       if (state.mpMode === "off" || state.mpMode === "join" || state.mpMode === "cast") {
         void refreshActiveRooms().then(() => paint(true));
         return;
@@ -5141,6 +5179,10 @@ function bindLobby() {
   });
   const createRoomBtn = $("#createRoom");
   if (createRoomBtn) createRoomBtn.onclick = () => { void createOffScreenRoom(); };
+  const createTvCastBtn = $("#createTvCast");
+  if (createTvCastBtn) createTvCastBtn.onclick = () => { void createTvCast(); };
+  const connectTv = $("#connectTv");
+  if (connectTv) connectTv.onclick = () => { void connectToTv(); };
   const castRoomBtn = $("#castRoom");
   if (castRoomBtn) castRoomBtn.onclick = () => { void castThisRoom(); };
   document.querySelectorAll("#openBuzzer").forEach((b) => {
@@ -5699,6 +5741,49 @@ function ingestGuests(guests) {
     queued.push(g);
   });
   state.pendingJoins = queued;
+  seatPendingJoins();
+}
+
+function prepareLockdownSets() {
+  const cohort = ensureCohort();
+  if (!cohort?.packs) return;
+  const players = playersForDeal();
+  const used = (state.qs || []).map((q) => q.id);
+  const first = lockdownSet(players, cohort.packs, used, LOCKDOWN_N, { which: 0 });
+  const second = lockdownSet(players, cohort.packs, [...used, ...first.map((q) => q.id)], LOCKDOWN_N, { which: 1 });
+  cohort.lockdownSets = [first, second];
+  state.cohort = cohort;
+}
+
+function startCastIntro() {
+  const names = (state.players || []).map((p) => cleanSeatName(p.name)).filter(Boolean);
+  state.phase = "between";
+  state.introCast = names;
+  state.introName = names.join(" · ");
+  state.introLeft = Math.min(12, Math.max(6, names.length));
+  state.pose = "idle";
+  paint(true);
+  publish();
+  if (state.introTick) clearInterval(state.introTick);
+  state.introTick = setInterval(() => {
+    if (state.phase !== "between" || !state.introCast) {
+      clearInterval(state.introTick);
+      state.introTick = null;
+      return;
+    }
+    state.introLeft -= 1;
+    if (state.introLeft <= 0) {
+      clearInterval(state.introTick);
+      state.introTick = null;
+      state.introCast = null;
+      state.introName = "";
+      startRead();
+      return;
+    }
+    const clock = $("#clock");
+    if (clock) clock.textContent = tt("castIntro", state.introName);
+    publish();
+  }, 1000);
 }
 
 async function startGame() {
@@ -5733,6 +5818,8 @@ async function startGame() {
   state.i = 0;
   state.lockdownAt = pickLockdownSlots();
   state.lockdown = null;
+  state.lockdownRound = 0;
+  prepareLockdownSets();
   state.maps = {};
   state.mapUses = {};
   state.setBreakLeft = 0;
@@ -5742,7 +5829,7 @@ async function startGame() {
     if (state.onScreen && !state.room) state.room = code();
     startPoll();
   }
-  startRead();
+  startCastIntro();
 }
 
 function startPoll() {
@@ -5863,7 +5950,6 @@ function paint(force = false) {
   app.className = "stage"
     + (role === "pad" ? " pad" : "")
     + (state.onScreen && role !== "pad" ? " tv" : "")
-    + (state.phase === "lobby" && state.onScreen && role !== "pad" ? " tv-scroll" : "")
     + (state.phase !== "lobby" && (role === "pad" || !state.onScreen) ? " phone" : "")
     + (state.lockdown ? " lockdown" : "")
     + (state.rules ? " rules-open" : "");

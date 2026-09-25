@@ -711,7 +711,13 @@ html.tv-scroll, html.tv-scroll body{
 .topic-row input{margin-top:4px;flex-shrink:0}
 .topic-row b{display:block;color:var(--fg);font-size:14px;font-weight:600}
 .topic-row span{display:block;color:var(--mut);font-size:12px;line-height:1.35;margin-top:2px}
-.tv-players{display:flex;flex-direction:column;gap:6px;margin-top:8px;width:100%}
+.tv-menu{display:flex;flex-direction:column;gap:4px}
+.tv-menu .field{margin:4px 0 0}
+.tv-menu .seats{display:flex;flex-wrap:wrap;gap:6px}
+.tv-menu .primary{margin-top:8px}
+.stage.tv .acc-body{overflow:hidden}
+.stage.tv .lobby,
+.stage.tv .lobby-copy{overflow:hidden}
 .tv-player-row,.seat-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .ghost.danger{border-color:#fca5a5;color:#fecdd3}
 .seat-kick{min-height:32px;padding:4px 10px;font-size:11px}
