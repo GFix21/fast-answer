@@ -2,92 +2,93 @@
   "id": "10-gen-z-b",
   "generation": "gen-z",
   "opposite": "09-baby-boomer-b",
+  "sourceGeneration": "baby-boomer",
   "link": "banks/lockdown/fr-CA/10-gen-z-b.json",
   "questions": [
     {
-      "id": "cq-w39-gz-d-zm-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-z",
-      "categoryTitle": "Capitale",
-      "prompt": "C'est quoi la capitale de la Zambie?",
-      "choices": [
-        "Harare",
-        "Lusaka",
-        "Ndola",
-        "Kitwe"
-      ],
-      "correctIndex": 1,
-      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
-      "slang": "Sans chichi,"
-    },
-    {
-      "id": "cq-w39-gz-d-bulb-who",
+      "id": "cq-w39-bo-d-penicillin-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "gen-z",
+      "generation": "baby-boomer",
       "categoryTitle": "Fait clair",
-      "prompt": "On attribue à qui a practical incandescent light bulb sold widely in the United States ?",
-      "choices": [
-        "Nikola Tesla",
-        "George Westinghouse",
-        "Alexander Graham Bell",
-        "Thomas Edison"
-      ],
-      "correctIndex": 3,
-      "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Sans chichi,"
-    },
-    {
-      "id": "cq-w39-gz-d-pasteur-who",
-      "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-z",
-      "categoryTitle": "Fait clair",
-      "prompt": "On attribue à qui the process called pasteurization ?",
+      "prompt": "On attribue à qui the discovery of penicillin ?",
       "choices": [
         "Louis Pasteur",
-        "Robert Koch",
-        "Joseph Lister",
-        "Edward Jenner"
-      ],
-      "correctIndex": 0,
-      "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Sans chichi,"
-    },
-    {
-      "id": "cq-w39-gz-d-lovelace-who",
-      "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-z",
-      "categoryTitle": "Fait clair",
-      "prompt": "On attribue à qui the notes often called the first computer program, on Babbage's engine ?",
-      "choices": [
-        "Charles Babbage",
-        "Grace Hopper",
-        "Alan Turing",
-        "Ada Lovelace"
+        "Marie Curie",
+        "Jonas Salk",
+        "Alexander Fleming"
       ],
       "correctIndex": 3,
       "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Sans chichi,"
+      "slang": "Tout à fait,"
     },
     {
-      "id": "cq-w39-gz-d-shepard-who",
+      "id": "cq-w39-bo-d-evolution-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "gen-z",
+      "generation": "baby-boomer",
       "categoryTitle": "Fait clair",
-      "prompt": "On attribue à qui the first American in space ?",
+      "prompt": "On attribue à qui On the Origin of Species ?",
       "choices": [
-        "Gus Grissom",
-        "Alan Shepard",
-        "John Glenn",
-        "Neil Armstrong"
+        "Jean-Baptiste Lamarck",
+        "Charles Darwin",
+        "Alfred Russel Wallace",
+        "Gregor Mendel"
       ],
       "correctIndex": 1,
       "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Sans chichi,"
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-hertz-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui radio waves produced in the laboratory ?",
+      "choices": [
+        "Guglielmo Marconi",
+        "Nikola Tesla",
+        "Heinrich Hertz",
+        "James Clerk Maxwell"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-jemison-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first Black woman to travel in space ?",
+      "choices": [
+        "Sally Ride",
+        "Katherine Johnson",
+        "Mae Jemison",
+        "Guion Bluford"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-columbus",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Christophe Colomb a atteint les Amériques ?",
+      "choices": [
+        "1519",
+        "1607",
+        "1498",
+        "1492"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
     }
   ]
 }

@@ -2,91 +2,93 @@
   "id": "13-multi-gen",
   "generation": "multi-gen",
   "opposite": "14-gen-x-c",
+  "sourceGeneration": "gen-x",
   "link": "banks/lockdown/fr-CA/13-multi-gen.json",
   "questions": [
     {
-      "id": "w39-d-mix-louvre",
+      "id": "cq-w39-gx-d-y-shakespeare",
       "tier": "difficult",
-      "topic": "art",
-      "generation": "multi-gen",
-      "categoryTitle": "Problème de pyramide",
-      "prompt": "La pyramide de verre d’I. M. Pei est l’entrée moderne emblématique de quel musée ?",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que William Shakespeare est né ?",
       "choices": [
-        "Le Met (NYC)",
-        "Le Louvre",
-        "Le British Museum",
-        "Le Prado"
+        "1660",
+        "1564",
+        "1616",
+        "1500"
       ],
       "correctIndex": 1,
-      "banterHint": null
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Bref,"
     },
     {
-      "id": "cq-d-multi-everest",
+      "id": "cq-w39-gx-d-y-ww1-start",
       "tier": "difficult",
-      "topic": "geography",
-      "generation": "multi-gen",
-      "categoryTitle": "Sommet",
-      "prompt": "En quelle année Edmund Hillary et Tenzing Norgay ont atteint pour la première fois le sommet de l'Everest ?",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la Première Guerre mondiale a commencé ?",
       "choices": [
-        "1924",
-        "1963",
-        "1950",
-        "1953"
+        "1918",
+        "1905",
+        "1939",
+        "1914"
       ],
       "correctIndex": 3,
-      "banterHint": "Deux personnes, une arête, une année restée.",
-      "slang": "Pour tout le monde,"
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Bref,"
     },
     {
-      "id": "cq-w39-mu-d-ak-cap",
+      "id": "cq-w39-gx-d-y-ve",
       "tier": "difficult",
-      "topic": "geography",
-      "generation": "multi-gen",
-      "categoryTitle": "Capitale d'État",
-      "prompt": "C'est quoi la capitale de l'État américain de Alaska ?",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que le jour de la Victoire en Europe a marqué la fin de la guerre en Europe ?",
       "choices": [
-        "Nome",
-        "Juneau",
-        "Anchorage",
-        "Fairbanks"
+        "1941",
+        "1950",
+        "1945",
+        "1944"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-nixon",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Richard Nixon a démissionné de la présidence ?",
+      "choices": [
+        "1969",
+        "1974",
+        "1972",
+        "1976"
       ],
       "correctIndex": 1,
-      "banterHint": "La ville connue à côté peut être une autre place.",
-      "slang": "Pour tout le monde,"
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Bref,"
     },
     {
-      "id": "cq-w39-mu-d-de-cap",
+      "id": "cq-w39-gx-d-y-hongkong",
       "tier": "difficult",
-      "topic": "geography",
-      "generation": "multi-gen",
-      "categoryTitle": "Capitale d'État",
-      "prompt": "C'est quoi la capitale de l'État américain de Delaware ?",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Hong Kong a été remis à la Chine ?",
       "choices": [
-        "Dover",
-        "Newark",
-        "Wilmington",
-        "Rehoboth Beach"
+        "1997",
+        "1984",
+        "1999",
+        "2000"
       ],
       "correctIndex": 0,
-      "banterHint": "La ville connue à côté peut être une autre place.",
-      "slang": "Pour tout le monde,"
-    },
-    {
-      "id": "cq-w39-mu-d-ia-cap",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "multi-gen",
-      "categoryTitle": "Capitale d'État",
-      "prompt": "C'est quoi la capitale de l'État américain de Iowa ?",
-      "choices": [
-        "Cedar Rapids",
-        "Iowa City",
-        "Davenport",
-        "Des Moines"
-      ],
-      "correctIndex": 3,
-      "banterHint": "La ville connue à côté peut être une autre place.",
-      "slang": "Pour tout le monde,"
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Bref,"
     }
   ]
 }

@@ -2,91 +2,93 @@
   "id": "13-multi-gen",
   "generation": "multi-gen",
   "opposite": "14-gen-x-c",
+  "sourceGeneration": "gen-x",
   "link": "banks/lockdown/en/13-multi-gen.json",
   "questions": [
     {
-      "id": "w39-d-mix-louvre",
+      "id": "cq-w39-gx-d-y-shakespeare",
       "tier": "difficult",
-      "topic": "art",
-      "generation": "multi-gen",
-      "categoryTitle": "Pyramid Problem",
-      "prompt": "I. M. Pei’s glass pyramid is the modern entrance landmark of which museum?",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year William Shakespeare was born?",
       "choices": [
-        "Met (NYC)",
-        "Louvre",
-        "British Museum",
-        "Prado"
+        "1660",
+        "1564",
+        "1616",
+        "1500"
       ],
       "correctIndex": 1,
-      "banterHint": null
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
     },
     {
-      "id": "cq-d-multi-everest",
+      "id": "cq-w39-gx-d-y-ww1-start",
       "tier": "difficult",
-      "topic": "geography",
-      "generation": "multi-gen",
-      "categoryTitle": "Summit",
-      "prompt": "In which year did Edmund Hillary and Tenzing Norgay first reach the summit of Mount Everest?",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year World War I began?",
       "choices": [
-        "1924",
-        "1963",
-        "1950",
-        "1953"
+        "1918",
+        "1905",
+        "1939",
+        "1914"
       ],
       "correctIndex": 3,
-      "banterHint": "Two people, one ridge, one year that stuck.",
-      "slang": "For the room,"
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
     },
     {
-      "id": "cq-w39-mu-d-ak-cap",
+      "id": "cq-w39-gx-d-y-ve",
       "tier": "difficult",
-      "topic": "geography",
-      "generation": "multi-gen",
-      "categoryTitle": "State capital",
-      "prompt": "What is the capital of the U.S. state of Alaska?",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Victory in Europe Day marked the end of the war in Europe?",
       "choices": [
-        "Nome",
-        "Juneau",
-        "Anchorage",
-        "Fairbanks"
+        "1941",
+        "1950",
+        "1945",
+        "1944"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-nixon",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Richard Nixon resigned the presidency?",
+      "choices": [
+        "1969",
+        "1974",
+        "1972",
+        "1976"
       ],
       "correctIndex": 1,
-      "banterHint": "The famous city nearby can be a different place.",
-      "slang": "For the room,"
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
     },
     {
-      "id": "cq-w39-mu-d-de-cap",
+      "id": "cq-w39-gx-d-y-hongkong",
       "tier": "difficult",
-      "topic": "geography",
-      "generation": "multi-gen",
-      "categoryTitle": "State capital",
-      "prompt": "What is the capital of the U.S. state of Delaware?",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Hong Kong was handed over to China?",
       "choices": [
-        "Dover",
-        "Newark",
-        "Wilmington",
-        "Rehoboth Beach"
+        "1997",
+        "1984",
+        "1999",
+        "2000"
       ],
       "correctIndex": 0,
-      "banterHint": "The famous city nearby can be a different place.",
-      "slang": "For the room,"
-    },
-    {
-      "id": "cq-w39-mu-d-ia-cap",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "multi-gen",
-      "categoryTitle": "State capital",
-      "prompt": "What is the capital of the U.S. state of Iowa?",
-      "choices": [
-        "Cedar Rapids",
-        "Iowa City",
-        "Davenport",
-        "Des Moines"
-      ],
-      "correctIndex": 3,
-      "banterHint": "The famous city nearby can be a different place.",
-      "slang": "For the room,"
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
     }
   ]
 }

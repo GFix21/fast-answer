@@ -2,91 +2,92 @@
   "id": "02-gen-alpha",
   "generation": "gen-alpha",
   "opposite": "01-silent-generation",
+  "sourceGeneration": "silent-generation",
   "link": "banks/lockdown/en/02-gen-alpha.json",
   "questions": [
     {
-      "id": "w39-d-alpha-switch",
+      "id": "w39-d-silent-u2",
       "tier": "difficult",
-      "topic": "culture",
-      "generation": "gen-alpha",
-      "categoryTitle": "Hybrid Handheld",
-      "prompt": "Nintendo Switch launched worldwide in which year?",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Cold War Sky",
+      "prompt": "Francis Gary Powers was shot down in 1960 while flying which type of U.S. reconnaissance aircraft?",
       "choices": [
-        "2017",
-        "2019",
-        "2013",
-        "2015"
+        "SR-71 only",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "banterHint": null
     },
     {
-      "id": "cq-d-alpha-perseverance",
+      "id": "cq-d-silent-suez",
       "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-alpha",
-      "categoryTitle": "Jezero",
-      "prompt": "In which year did NASA's Perseverance rover land on Mars?",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Canal Year",
+      "prompt": "In which year did the Suez Crisis begin?",
       "choices": [
-        "2012",
-        "2021",
-        "2004",
-        "2020"
-      ],
-      "correctIndex": 1,
-      "banterHint": "A small helicopter came along for the ride.",
-      "slang": "Real quick,"
-    },
-    {
-      "id": "cq-w39-al-d-uz-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-alpha",
-      "categoryTitle": "Capital",
-      "prompt": "What is the capital of Uzbekistan?",
-      "choices": [
-        "Samarkand",
-        "Bukhara",
-        "Astana",
-        "Tashkent"
-      ],
-      "correctIndex": 3,
-      "banterHint": "The biggest city is not always the capital.",
-      "slang": "Real quick,"
-    },
-    {
-      "id": "cq-w39-al-d-ci-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-alpha",
-      "categoryTitle": "Capital",
-      "prompt": "What is the capital of Côte d'Ivoire?",
-      "choices": [
-        "Bouaké",
-        "Accra",
-        "Yamoussoukro",
-        "Abidjan"
+        "1967",
+        "1950",
+        "1956",
+        "1948"
       ],
       "correctIndex": 2,
-      "banterHint": "The biggest city is not always the capital.",
-      "slang": "Real quick,"
+      "banterHint": "The canal closed. The year is the earlier one.",
+      "slang": "Say,"
     },
     {
-      "id": "cq-w39-al-d-relativity-who",
+      "id": "cq-w39-si-d-kh-capital",
       "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-alpha",
-      "categoryTitle": "Fast fact",
-      "prompt": "Who is credited with the theory of relativity, as its main author?",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Cambodia?",
       "choices": [
-        "Isaac Newton",
-        "Stephen Hawking",
-        "Niels Bohr",
-        "Albert Einstein"
+        "Phnom Penh",
+        "Vientiane",
+        "Bangkok",
+        "Siem Reap"
       ],
-      "correctIndex": 3,
-      "banterHint": "The plain answer is the one that scores.",
-      "slang": "Real quick,"
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-mn-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Mongolia?",
+      "choices": [
+        "Ulaanbaatar",
+        "Beijing",
+        "Darkhan",
+        "Erdenet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-mz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Mozambique?",
+      "choices": [
+        "Maputo",
+        "Johannesburg",
+        "Nampula",
+        "Beira"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
     }
   ]
 }

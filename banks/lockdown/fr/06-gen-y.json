@@ -2,90 +2,91 @@
   "id": "06-gen-y",
   "generation": "gen-y",
   "opposite": "05-gen-x",
+  "sourceGeneration": "gen-x",
   "link": "banks/lockdown/fr/06-gen-y.json",
   "questions": [
     {
-      "id": "w39-d-geny-iphone",
+      "id": "w39-d-genx-gt-year",
       "tier": "difficult",
-      "topic": "culture",
-      "generation": "gen-y",
-      "categoryTitle": "Chronologie keynote",
-      "prompt": "En quelle année Apple a-t-il annoncé l’iPhone original ?",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Chronologie studio",
+      "prompt": "En quelle année The Grand Tour a-t-il été diffusé pour la première fois sur Amazon Prime Video ?",
       "choices": [
-        "2010",
-        "2007",
-        "2005",
-        "2009"
+        "2015",
+        "2018",
+        "2014",
+        "2016"
       ],
-      "correctIndex": 1,
-      "banterHint": null
+      "correctIndex": 3,
+      "banterHint": "Après la BBC, avant que tout le monde se dispute sur le camping."
     },
     {
-      "id": "w39-d-geny-inception",
+      "id": "w39-d-genx-berlin",
       "tier": "difficult",
-      "topic": "film-tv",
-      "generation": "gen-y",
-      "categoryTitle": "Couches de rêve",
-      "prompt": "Qui a réalisé le film Inception de 2010 ?",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Horloge du Mur",
+      "prompt": "En quelle année le mur de Berlin est-il tombé ?",
       "choices": [
-        "Christopher Nolan",
-        "James Cameron",
-        "Denis Villeneuve",
-        "Ridley Scott"
+        "1989",
+        "1979",
+        "1985",
+        "1991"
       ],
       "correctIndex": 0,
       "banterHint": null
     },
     {
-      "id": "cq-d-geny-wiki",
+      "id": "cq-d-genx-columbia",
       "tier": "difficult",
-      "topic": "culture",
-      "generation": "gen-y",
-      "categoryTitle": "Pages ouvertes",
-      "prompt": "En quelle année Wikipédia a-t-il été lancé ?",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Premier vol",
+      "prompt": "Quelle navette spatiale a effectué la première mission orbitale en 1981 ?",
       "choices": [
-        "1998",
-        "1995",
-        "2004",
-        "2001"
-      ],
-      "correctIndex": 3,
-      "banterHint": "Les pages sont nombreuses. Le départ est une année.",
-      "slang": "Je dis ça,"
-    },
-    {
-      "id": "cq-w39-gy-d-bd-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-y",
-      "categoryTitle": "Capitale",
-      "prompt": "Quelle est la capitale du Bangladesh?",
-      "choices": [
-        "Chittagong",
-        "Calcutta",
-        "Dhaka",
-        "Khulna"
+        "Discovery",
+        "Challenger",
+        "Columbia",
+        "Atlantis"
       ],
       "correctIndex": 2,
-      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
-      "slang": "Je dis ça,"
+      "banterHint": "Le programme a plusieurs noms. Celle-ci a volé la première.",
+      "slang": "Bref,"
     },
     {
-      "id": "cq-w39-gy-d-tj-capital",
+      "id": "cq-w39-gx-d-np-capital",
       "tier": "difficult",
       "topic": "geography",
-      "generation": "gen-y",
+      "generation": "gen-x",
       "categoryTitle": "Capitale",
-      "prompt": "Quelle est la capitale du Tadjikistan?",
+      "prompt": "Quelle est la capitale du Népal?",
       "choices": [
-        "Khujand",
-        "Dushanbe",
-        "Bishkek",
-        "Tashkent"
+        "Kathmandu",
+        "New Delhi",
+        "Lalitpur",
+        "Pokhara"
       ],
-      "correctIndex": 1,
+      "correctIndex": 0,
       "banterHint": "La plus grande ville n'est pas toujours la capitale.",
-      "slang": "Je dis ça,"
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-kg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Kirghizistan?",
+      "choices": [
+        "Bishkek",
+        "Almaty",
+        "Tashkent",
+        "Osh"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,"
     }
   ]
 }

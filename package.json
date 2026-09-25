@@ -8,6 +8,7 @@
   },
   "scripts": {
     "publish:week": "node scripts/publish-week.mjs",
+    "create:set": "node scripts/create-set.mjs",
     "handoff": "node scripts/handoff.mjs",
     "maintain": "node scripts/maintain.mjs",
     "build": "node scripts/seal-public-banks.mjs",

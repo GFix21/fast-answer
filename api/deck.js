@@ -10,8 +10,9 @@ import { stripBank, stripQuestion, shuffleKeyedQuestion } from "../lib/strip-ans
 import { dealShow } from "../lib/generation-deal.js";
 import { orderShowSets } from "../lib/show-pace.js";
 import { LOCKDOWN_GENERATION, lockdownSetPath } from "../lib/lockdown-sets.js";
-import { replayQuestions } from "../lib/set-archive.js";
+import { replayQuestions, loadSetQuestions } from "../lib/set-archive.js";
 import { questionDealable } from "../lib/content-freeze.js";
+import { readMainSetId } from "../lib/set-main.js";
 
 const LIVE = {
   en: "questions.json",
@@ -45,6 +46,20 @@ function placementQuestions(locale) {
   const data = readFullBank(PLACE[localeOf(locale)]);
   const list = Array.isArray(data) ? data : (data?.questions || []);
   return list.filter((q) => questionDealable(q));
+}
+
+async function activePool(locale) {
+  const main = await readMainSetId();
+  if (!main) return { questions: liveQuestions(locale), placement: placementQuestions(locale), main: "" };
+  const packed = loadSetQuestions(main, locale);
+  if (packed.error || !packed.questions?.length) {
+    return { questions: liveQuestions(locale), placement: placementQuestions(locale), main: "" };
+  }
+  return {
+    questions: packed.questions,
+    placement: packed.placement?.length ? packed.placement : placementQuestions(locale),
+    main,
+  };
 }
 
 function json(res, status, body) {
@@ -149,7 +164,8 @@ async function handleDeck(req, res) {
   if (body.action === "placement") {
     if ((room.placementDeals || 0) >= 3) return json(res, 429, { error: "limit" });
     if (!allow(ip, "placement", 6)) return json(res, 429, { error: "limit" });
-    const questions = keyed(placementQuestions(locale)).slice(0, 10);
+    const pool = (await activePool(locale)).placement;
+    const questions = keyed(pool).slice(0, 10);
     await saveRoom({ ...room, placementDeals: (room.placementDeals || 0) + 1 });
     return json(res, 200, { questions, practice: true });
   }
@@ -169,7 +185,7 @@ async function handleDeck(req, res) {
       ...(Array.isArray(body.avoid) ? body.avoid : []),
       ...((room.answerDeck || []).map((q) => q.id)),
     ].map(String));
-    const pool = liveQuestions(locale).filter((q) =>
+    const pool = (await activePool(locale)).questions.filter((q) =>
       q && !avoid.has(String(q.id)) && q.funny !== true && q.humorous !== true && q.structure !== "joke"
       && (q.tier === "hard" || q.tier === "difficult" || q.tier === "extreme"));
     const questions = keyed(pool).slice(0, 5);
@@ -194,8 +210,9 @@ async function handleDeck(req, res) {
     }
     source = packed.questions;
   } else {
-    const pool = liveQuestions(locale).filter((q) => inTopics(q, body.topics));
-    source = pool.length >= 8 ? pool : liveQuestions(locale);
+    const live = (await activePool(locale)).questions;
+    const pool = live.filter((q) => inTopics(q, body.topics));
+    source = pool.length >= 8 ? pool : live;
   }
   const questions = keyed(orderShowSets(dealShow(source, body.avoid || [])));
   await saveRoom({ ...room, answerDeck: questions, replayOf: replay ? setId : "" });

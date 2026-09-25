@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Write the 14 opposite lockdown sets from each locale's difficult bank. */
+/** Write the 14 opposite lockdown sets. Each set's 5 difficult questions come from the other generation. */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -67,12 +67,14 @@ function buildLocale(locale) {
     const opposite = LOCKDOWN_PAIRS.flat().includes(id)
       ? LOCKDOWN_PAIRS.find((pair) => pair.includes(id)).find((other) => other !== id)
       : "";
+    const sourceGeneration = LOCKDOWN_GENERATION[opposite];
     const body = {
       id,
       generation,
       opposite,
+      sourceGeneration,
       link: lockdownSetPath(id, locale),
-      questions: take(generation, 5),
+      questions: take(sourceGeneration, 5),
     };
     fs.writeFileSync(path.join(dir, `${id}.json`), JSON.stringify(body, null, 2) + "\n");
   }

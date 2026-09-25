@@ -2,92 +2,93 @@
   "id": "12-gen-y-b",
   "generation": "gen-y",
   "opposite": "11-gen-x-b",
+  "sourceGeneration": "gen-x",
   "link": "banks/lockdown/en/12-gen-y-b.json",
   "questions": [
     {
-      "id": "cq-w39-gy-d-zw-capital",
+      "id": "cq-w39-gx-d-bw-capital",
       "tier": "difficult",
       "topic": "geography",
-      "generation": "gen-y",
+      "generation": "gen-x",
       "categoryTitle": "Capital",
-      "prompt": "What is the capital of Zimbabwe?",
+      "prompt": "What is the capital of Botswana?",
       "choices": [
+        "Windhoek",
         "Gaborone",
-        "Lusaka",
-        "Harare",
-        "Bulawayo"
+        "Francistown",
+        "Maun"
       ],
-      "correctIndex": 2,
+      "correctIndex": 1,
       "banterHint": "The biggest city is not always the capital.",
-      "slang": "Just saying,"
+      "slang": "Whatever the case,"
     },
     {
-      "id": "cq-w39-gy-d-telephone-who",
+      "id": "cq-w39-gx-d-periodic-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "gen-y",
+      "generation": "gen-x",
       "categoryTitle": "Fast fact",
-      "prompt": "Who is credited with the telephone patent of 1876?",
+      "prompt": "Who is credited with the first widely used periodic table?",
       "choices": [
-        "Thomas Edison",
-        "Nikola Tesla",
-        "Guglielmo Marconi",
-        "Alexander Graham Bell"
+        "Antoine Lavoisier",
+        "John Dalton",
+        "Niels Bohr",
+        "Dmitri Mendeleev"
       ],
       "correctIndex": 3,
       "banterHint": "The plain answer is the one that scores.",
-      "slang": "Just saying,"
+      "slang": "Whatever the case,"
     },
     {
-      "id": "cq-w39-gy-d-smallpox-who",
+      "id": "cq-w39-gx-d-radium-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "gen-y",
+      "generation": "gen-x",
       "categoryTitle": "Fast fact",
-      "prompt": "Who is credited with the first smallpox vaccine?",
+      "prompt": "Who is credited with the discovery of radium, shared with Pierre Curie?",
       "choices": [
-        "Louis Pasteur",
-        "Edward Jenner",
-        "Alexander Fleming",
-        "Jonas Salk"
+        "Marie Curie",
+        "Lise Meitner",
+        "Irene Joliot-Curie",
+        "Dorothy Hodgkin"
       ],
-      "correctIndex": 1,
+      "correctIndex": 0,
       "banterHint": "The plain answer is the one that scores.",
-      "slang": "Just saying,"
+      "slang": "Whatever the case,"
     },
     {
-      "id": "cq-w39-gy-d-turing-who",
+      "id": "cq-w39-gx-d-marconi-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "gen-y",
+      "generation": "gen-x",
       "categoryTitle": "Fast fact",
-      "prompt": "Who is credited with the idea of a universal computing machine in 1936?",
+      "prompt": "Who is credited with the first practical radio system across distance?",
       "choices": [
-        "Ada Lovelace",
-        "John von Neumann",
-        "Alan Turing",
-        "Charles Babbage"
+        "Thomas Edison",
+        "Lee de Forest",
+        "Heinrich Hertz",
+        "Guglielmo Marconi"
       ],
-      "correctIndex": 2,
+      "correctIndex": 3,
       "banterHint": "The plain answer is the one that scores.",
-      "slang": "Just saying,"
+      "slang": "Whatever the case,"
     },
     {
-      "id": "cq-w39-gy-d-tereshkova-who",
+      "id": "cq-w39-gx-d-ride-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "gen-y",
+      "generation": "gen-x",
       "categoryTitle": "Fast fact",
-      "prompt": "Who is credited with the first woman in space?",
+      "prompt": "Who is credited with the first American woman in space?",
       "choices": [
-        "Mae Jemison",
-        "Valentina Tereshkova",
         "Sally Ride",
-        "Svetlana Savitskaya"
+        "Valentina Tereshkova",
+        "Eileen Collins",
+        "Mae Jemison"
       ],
-      "correctIndex": 1,
+      "correctIndex": 0,
       "banterHint": "The plain answer is the one that scores.",
-      "slang": "Just saying,"
+      "slang": "Whatever the case,"
     }
   ]
 }
