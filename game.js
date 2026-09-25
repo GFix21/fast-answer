@@ -4840,17 +4840,35 @@ function playHTML() {
     ? `<button class="ghost" id="dropout" type="button" ${dropped ? "disabled" : ""}>${dropped ? tt("dropoutPressed") : tt("dropout")}</button>`
     : "";
   const phoneBoard = !tv && (pad || !state.onScreen);
-  const tvPad = pad && state.roomScreen === "tv" && !state.viewing;
+  const tvPad = pad && !state.viewing;
   if (tvPad) {
     const map = rivalsHTML();
     const ldBubble = state.lockdown
       ? `<div class="pad-bubble">${(state.lockdown.phase === "wager" || state.lockdown.phase === "intro") ? wagerHTML() : `<p class="qtext">${escapeHtml(lockdownLogo(state.lockdown))}</p>`}</div>`
+      : "";
+    const note = !state.lockdown && !readyPhase && clockText()
+      ? `<div class="pad-bubble"><p class="qtext">${escapeHtml(clockText())}</p></div>`
+      : "";
+    const answers = showAns && q && Array.isArray(q.choices)
+      ? `<div class="answers phone-answers">${q.choices.map((c, i) => {
+          let cls = "ans";
+          const picked = ld ? ld.picked : state.picked;
+          const reveal = state.phase === "reveal" || ld?.phase === "flash" || ld?.phase === "result";
+          if (reveal) {
+            if (i === q.correctIndex) cls += " ok";
+            else if (i === picked) cls += " bad";
+          } else if (i === picked) cls += " on";
+          const dis = canPick && !reveal ? "" : "disabled";
+          return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
+        }).join("")}</div>`
       : "";
     return `
       <div class="tv-pad-screen">
         <div class="pad-bubbles">
           ${map ? `<div class="pad-bubble">${map}</div>` : ""}
           ${ldBubble}
+          ${note}
+          ${answers}
         </div>
         <div class="pad-buzz">
           ${readyPhase ? entryButtonsHTML() : buzzerButton(canBuzz, buzzLabel)}
