@@ -142,7 +142,8 @@ button:disabled{cursor:not-allowed}
 .pad-bubble .rivals{margin-top:0}
 .pad-bubbles .answers{padding:0}
 .pad-buzz{margin-top:auto;padding-top:16px}
-.tv-pad-screen .buzzer{width:100%;height:42vh;min-height:200px;font-size:32px}
+.tv-pad-screen .buzzer{width:100%;height:34vh;min-height:160px;font-size:32px}
+.read-clock{margin:0;text-align:center;font-size:28vw;line-height:.85;font-weight:800;letter-spacing:-.04em}
 .connect-sheet{
   position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
   padding:24px;background:rgba(0,0,0,.88);text-align:center;

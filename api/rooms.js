@@ -127,6 +127,26 @@ function sendRoom(res, room, { host = false, status = 200, guestKey = "" } = {})
   res.status(status).end(JSON.stringify(room ? publicRoom(room, { host, guestKey }) : { error: "missing" }));
 }
 
+function keepPlaySignals(prev, next) {
+  const before = prev && typeof prev === "object" ? prev : {};
+  const out = next && typeof next === "object" ? next : {};
+  const sameQ = Number(before.i) === Number(out.i);
+  if (sameQ && before.lastAnswer?.at && (!out.lastAnswer || out.lastAnswer.at < before.lastAnswer.at)) {
+    out.lastAnswer = before.lastAnswer;
+  }
+  if (sameQ && before.lastWager?.at && (!out.lastWager || out.lastWager.at < before.lastWager.at)) {
+    out.lastWager = before.lastWager;
+  }
+  if (sameQ && before.buzzed && !out.buzzed && (out.phase === "read" || out.phase === "buzz")) {
+    out.buzzed = true;
+    out.buzzBy = before.buzzBy || "";
+    out.buzzId = before.buzzId || "";
+    out.phase = "answer";
+  }
+  out.maps = { ...(before.maps || {}), ...(out.maps || {}) };
+  return out;
+}
+
 async function handleRoom(req, res) {
   res.setHeader("content-type", "application/json");
   applyCors(req, res);
@@ -401,7 +421,7 @@ async function handleRoom(req, res) {
       res.status(403).end(JSON.stringify({ error: "host" }));
       return;
     }
-    cur.state = redactState(body.state || {});
+    cur.state = keepPlaySignals(cur.state, redactState(body.state || {}));
     await touch(cur);
   } else if (body.action === "buzz") {
     const guest = actingGuest(cur, req, body);
