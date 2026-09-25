@@ -2008,6 +2008,7 @@ function submitAnswerToRoom(index, lockdown = false) {
     id: state.youId,
     name: state.name,
     index: Number(index),
+    q: state.i,
     lockdown: Boolean(lockdown),
   };
   if (bc) bc.postMessage({ type: "answer", ...payload });
@@ -2231,6 +2232,10 @@ function startRead() {
   state.studioI = (state.studioI + 1) % STUDIOS.length;
   paint();
   publish();
+  const sent = state.rev;
+  setTimeout(() => {
+    if (state.phase === "read" && state.rev === sent) publish();
+  }, 350);
   stopTick();
   state.tick = setInterval(() => {
     state.readLeft -= 1;
@@ -2265,7 +2270,7 @@ function scheduleAiBuzz() {
   }, first.delay);
 }
 
-function takeBuzz(id, name) {
+function takeBuzz(id, name, quiet = false) {
   if (state.phase !== "buzz" || state.buzzed) return;
   state.buzzed = true;
   state.buzzId = id;
@@ -2277,6 +2282,7 @@ function takeBuzz(id, name) {
   if (!state.mapLive) delete state.maps[id];
   clearAiBuzz();
   stopTick();
+  if (quiet) return;
   playSound("buzz");
   paint();
   publish();
@@ -2712,7 +2718,7 @@ function afterReveal(ok) {
   continueRound();
 }
 
-function applyRemoteAnswer(id, index, lockdown = false) {
+function applyRemoteAnswer(id, index, lockdown = false, question = null) {
   if (role === "pad") return;
   const i = Number(index);
   if (!Number.isFinite(i)) return;
@@ -2722,12 +2728,13 @@ function applyRemoteAnswer(id, index, lockdown = false) {
     lockdownPick(i, true);
     return;
   }
+  if (Number.isInteger(Number(question)) && Number(question) !== state.i) return;
   if (state.phase === "read") {
     stopTick();
     state.readLeft = 0;
     state.phase = "buzz";
   }
-  if (state.phase === "buzz" && !state.buzzed) takeBuzz(id || state.youId, "");
+  if (state.phase === "buzz" && !state.buzzed) takeBuzz(id || state.youId, "", true);
   if (state.phase !== "answer") return;
   pick(i, id || state.buzzId || state.youId, true);
 }
@@ -2735,16 +2742,18 @@ function applyRemoteAnswer(id, index, lockdown = false) {
 function pick(i, asId, fromRemote = false) {
   if (state.viewing) return;
   if (state.tvMirror && !state.hostKey) {
-    const answerId = state.lockdown?.playerId || state.buzzId || "";
-    if (!answerId || !state.room) return;
+    if (!state.room || state.answeredFor === state.i) return;
+    const answerId = state.lockdown?.playerId || state.buzzId || state.youId || "you";
+    state.answeredFor = state.i;
+    state.picked = Number(i);
     void rooms("POST", {
       action: "screen-answer",
       code: state.room,
       id: answerId,
       index: Number(i),
+      q: state.i,
       lockdown: state.lockdown?.phase === "play",
     });
-    state.picked = Number(i);
     paint();
     return;
   }
@@ -2763,7 +2772,7 @@ function pick(i, asId, fromRemote = false) {
     return;
   }
   if (state.phase === "reveal" || state.phase === "end" || state.phase === "lobby" || state.phase === "setbreak") return;
-  if (state.closingAnswer) return;
+  if (state.answeredFor === state.i) return;
   const open = state.phase === "read" || state.phase === "buzz" || state.phase === "answer";
   if (!open) return;
   if (role === "pad" && !fromRemote && !isSeatedPlay()) return;
@@ -2785,9 +2794,10 @@ function pick(i, asId, fromRemote = false) {
     state.readLeft = 0;
     state.phase = "buzz";
   }
-  if (state.phase === "buzz" && !state.buzzed) takeBuzz(asId || state.youId, state.name);
+  if (state.phase === "buzz" && !state.buzzed) takeBuzz(asId || state.youId, state.name, true);
   if (state.phase !== "answer") return;
   const q = currentQ();
+  state.answeredFor = state.i;
   if (!q) {
     afterReveal(false);
     return;
@@ -6250,7 +6260,11 @@ function bindRules() {
 
 function bindPlay() {
   document.querySelectorAll(".ans").forEach((b) => {
-    b.onclick = () => pick(Number(b.dataset.i));
+    b.addEventListener("pointerdown", (ev) => {
+      ev.preventDefault();
+      if (b.disabled) return;
+      pick(Number(b.dataset.i));
+    });
   });
   document.querySelectorAll("[data-map]").forEach((b) => {
     b.onclick = () => armMap(b.dataset.map);
@@ -6580,9 +6594,10 @@ function startPoll() {
     if (role !== "pad" && j.state?.lastAnswer) {
       const a = j.state.lastAnswer;
       const ready = state.phase === "read" || state.phase === "buzz" || state.phase === "answer" || state.lockdown?.phase === "play" || a.lockdown;
-      if (a && a.at && a.at !== state.lastAnswerAt && ready) {
+      const sameCard = !Number.isInteger(Number(a.q)) || Number(a.q) === state.i;
+      if (a && a.at && a.at !== state.lastAnswerAt && ready && sameCard && state.answeredFor !== state.i) {
         state.lastAnswerAt = a.at;
-        applyRemoteAnswer(a.id, a.index, Boolean(a.lockdown));
+        applyRemoteAnswer(a.id, a.index, Boolean(a.lockdown), a.q);
       }
     }
     // TV re-publishes periodically so pads on other serverless instances catch up.

@@ -108,6 +108,7 @@ button:disabled{cursor:not-allowed}
   flex-shrink:0;max-height:34vh;
 }
 .ans{
+  touch-action: manipulation;
   text-align:left;min-height:48px;
   background:color-mix(in oklab, var(--elev) 86%, transparent);
   border:1px solid var(--line);color:var(--fg);

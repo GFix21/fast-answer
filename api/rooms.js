@@ -449,6 +449,7 @@ async function handleRoom(req, res) {
     cur.state.lastAnswer = {
       id: guest.id || "",
       index: Number(body.index),
+      q: Number.isInteger(Number(body.q)) ? Number(body.q) : cur.state.i,
       at: Date.now(),
       lockdown: Boolean(body.lockdown),
       name: guest.name || "",
@@ -462,8 +463,9 @@ async function handleRoom(req, res) {
     }
     cur.state = cur.state || {};
     cur.state.lastAnswer = {
-      id: String(body.id || cur.state.buzzId || ""),
+      id: String(body.id || cur.state.buzzId || "you"),
       index,
+      q: Number.isInteger(Number(body.q)) ? Number(body.q) : cur.state.i,
       at: Date.now(),
       lockdown: Boolean(body.lockdown),
       name: String(body.name || ""),
