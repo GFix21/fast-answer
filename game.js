@@ -431,6 +431,9 @@ function roomMeta() {
     ageTo: to,
     playerCount: clamp(Number(state.playerCount) || 3, 2, 12),
     topics: (state.topicsOn || []).slice(0, 40),
+    hostGeneration: hostGeneration(),
+    hostAge: state.profile?.age ?? "",
+    hostAgeBracket: state.profile?.ageBracket || "",
   };
 }
 function roomGenerations() {
@@ -463,6 +466,9 @@ function applyRoomSetup(room) {
   if (room.ageTo) state.ageTo = clamp(Number(room.ageTo) || 99, 10, 99);
   if (Array.isArray(room.topics) && room.topics.length) state.topicsOn = room.topics.map(String);
   if (room.name) state.roomName = String(room.name);
+  if (room.hostGeneration) state.hostGeneration = String(room.hostGeneration);
+  if (room.hostAge != null && room.hostAge !== "") state.hostAge = room.hostAge;
+  if (room.hostAgeBracket) state.hostAgeBracket = String(room.hostAgeBracket);
 }
 function waitingLine() {
   if (role === "pad") return "";
@@ -503,8 +509,11 @@ function tvPageUrl(roomCode = state.room) {
   const code = String(roomCode || state.room || "").toUpperCase();
   return `${location.origin}/tv/${encodeURIComponent(code)}`;
 }
+function thisScreenIsTv() {
+  return Boolean(forcedDisplay || state.tvMirror || state.thisIsTv || tvUserAgent());
+}
 function connectSheetHTML() {
-  if (!state.connectOpen || !state.room || state.tvMirror || forcedDisplay) return "";
+  if (!state.connectOpen || !state.room || thisScreenIsTv()) return "";
   const url = tvPageUrl(state.room);
   const seen = state.tvSeenAt && Date.now() - Number(state.tvSeenAt) < 12000;
   return `
@@ -515,6 +524,7 @@ function connectSheetHTML() {
       <p class="meta">${escapeHtml(url)}</p>
       <p class="status">${seen ? tt("tvConnected") : tt("waitingTv")}</p>
       <button type="button" class="primary" id="shareTv">${tt("shareTv")}</button>
+      <button type="button" class="ghost" id="iAmTv">${tt("iAmTv")}</button>
     </div>`;
 }
 function tvCodeFormHTML() {
@@ -1000,7 +1010,22 @@ function questionCredit(q) {
   return gen || "";
 }
 function playerGeneration(profile) {
+  const saved = normalizeGeneration(profile?.generation);
+  if (GENERATIONS.includes(saved)) return saved;
   return generationForSeat(profile) || defaultGeneration(profile?.id || "you");
+}
+function knownGeneration(profile) {
+  const saved = normalizeGeneration(profile?.generation);
+  if (GENERATIONS.includes(saved)) return saved;
+  const fromSeat = generationForSeat(profile);
+  return fromSeat || "";
+}
+function hostGeneration() {
+  return knownGeneration({
+    generation: state.hostGeneration,
+    age: state.hostAge,
+    ageBracket: state.hostAgeBracket,
+  }) || knownGeneration(state.profile);
 }
 function readGeneration(el) {
   const g = normalizeGeneration(el && el.value);
@@ -1725,9 +1750,9 @@ function seatedPreview() {
     human: true,
     you: true,
     score: 0,
-    generation: playerGeneration(state.profile),
-    age: state.profile?.age ?? "",
-    ageBracket: state.profile?.ageBracket || "",
+    generation: hostGeneration(),
+    age: state.hostAge ?? state.profile?.age ?? "",
+    ageBracket: state.hostAgeBracket || state.profile?.ageBracket || "",
   }] : [];
   const guests = (state.guests || []).filter((g) => g.seat !== "view" && cleanSeatName(g.name));
   const remain = Math.max(0, state.playerCount - you.length - guests.length);
@@ -1741,7 +1766,7 @@ function seatedPreview() {
       you: false,
       score: 0,
       ageBracket: g.ageBracket || "",
-      generation: generationForSeat(g) || defaultGeneration(g.id || g.name),
+      generation: knownGeneration(g),
     })),
     ...bots.map((b) => ({ ...b, human: false, score: 0 })),
   ].slice(0, 12);
@@ -2129,9 +2154,9 @@ function seatPlayers() {
     human: true,
     you: true,
     thumb: state.profile?.thumb || "",
-    generation: playerGeneration(state.profile),
-    age: state.profile?.age ?? "",
-    ageBracket: state.profile?.ageBracket || "",
+    generation: hostGeneration(),
+    age: state.hostAge ?? state.profile?.age ?? "",
+    ageBracket: state.hostAgeBracket || state.profile?.ageBracket || "",
   }] : [];
   const remain = Math.max(0, state.playerCount - you.length - guests.length);
   const bots = (state.seatBots || []).slice(0, remain);
@@ -2145,7 +2170,7 @@ function seatPlayers() {
       you: false,
       thumb: g.thumb || "",
       ageBracket: g.ageBracket || "",
-      generation: generationForSeat(g) || defaultGeneration(g.id || g.name),
+      generation: knownGeneration(g) || playerGeneration(g),
     })),
     ...bots.map((b) => ({
       id: b.id,
@@ -2296,8 +2321,12 @@ async function goToTvRoom() {
     else await createTvCast();
   }
   if (!state.room) return;
-  if (state.tvMirror) {
-    state.statusMsg = tt("waitingTv");
+  if (thisScreenIsTv()) {
+    state.thisIsTv = true;
+    state.connectOpen = false;
+    state.onScreen = true;
+    void rooms("POST", { action: "tv-seen", code: state.room });
+    state.statusMsg = tt("tvHere");
     paint(true);
     return;
   }
@@ -4984,7 +5013,10 @@ async function createTvCast() {
   state.onScreen = isTvDisplay();
   state.mpMode = "cast";
   state.castForm = false;
-  state.connectOpen = true;
+  state.connectOpen = !thisScreenIsTv();
+  state.hostGeneration = hostGeneration();
+  state.hostAge = state.profile?.age ?? "";
+  state.hostAgeBracket = state.profile?.ageBracket || "";
   state.roomSetup = true;
   state.lobbyOpen = "room";
   fillSeats();
@@ -5031,9 +5063,15 @@ async function followTvRoom(code) {
     return;
   }
   state.tvMirror = true;
+  state.connectOpen = false;
   state.roomHost = cleanSeatName(live.host || "");
+  if (live.hostGeneration) state.hostGeneration = live.hostGeneration;
+  if (live.hostAge != null) state.hostAge = live.hostAge;
+  if (live.hostAgeBracket) state.hostAgeBracket = live.hostAgeBracket;
   if (live.guests) ingestGuests(live.guests);
   if (live.state && live.state.phase) applyHostState(live.state);
+  void rooms("POST", { action: "tv-seen", code: state.room });
+  state.statusMsg = tt("tvHere");
   try { history.replaceState(null, "", `/tv/${room}`); } catch { /* ignore */ }
   startPoll();
   paint(true);
@@ -5582,6 +5620,15 @@ function bindLobby() {
   if (connectTv) connectTv.onclick = () => { track("gameRoom"); void connectToTv(); };
   const shareTv = $("#shareTv");
   if (shareTv) shareTv.onclick = () => { void connectToTv(); };
+  const iAmTv = $("#iAmTv");
+  if (iAmTv) iAmTv.onclick = () => {
+    state.thisIsTv = true;
+    state.onScreen = true;
+    state.connectOpen = false;
+    void rooms("POST", { action: "tv-seen", code: state.room });
+    state.statusMsg = tt("tvHere");
+    paint(true);
+  };
   const tvConnect = $("#tvConnect");
   if (tvConnect) tvConnect.onclick = () => {
     const raw = ($("#tvCode") && $("#tvCode").value) || "";
@@ -6335,6 +6382,9 @@ function startPoll() {
     if (forcedDisplay && state.phase === "lobby") applyRoomSetup(j);
     pollN += 1;
     if (applyRefreshFromRoom(j)) paint(true);
+    if (j.hostGeneration) state.hostGeneration = j.hostGeneration;
+    if (j.hostAge != null && j.hostAge !== "") state.hostAge = j.hostAge;
+    if (j.hostAgeBracket) state.hostAgeBracket = j.hostAgeBracket;
     if (j.tvSeenAt && j.tvSeenAt !== state.tvSeenAt) {
       state.tvSeenAt = j.tvSeenAt;
       if (state.connectOpen) paint(true);
