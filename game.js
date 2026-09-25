@@ -93,7 +93,7 @@ const LOCKDOWN_ANSWER_S = 180; // 3 minutes per lockdown question
 const LOCKDOWN_INTRO_S = 7; // pre-question rules countdown
 const LOCKDOWN_WAIT_S = 60; // waiting players countdown during hero play
 const WAGER_S = 60;
-const WAGER_AMTS = [100, 500, 1000];
+const WAGER_PCTS = [10, 25, 45, 65];
 const LETTERS = "ABCD";
 const PLACE_N = 10;
 const PLACE_MS = 90 * 24 * 60 * 60 * 1000;
@@ -2586,9 +2586,9 @@ async function startLockdown(playerId) {
   paint();
   publish();
   state.players.filter((p) => !p.human && p.id !== hero.id).forEach((p) => {
-    const amt = Math.min(WAGER_AMTS[WAGER_AMTS.length - 1], Math.max(100, p.score || 100));
+    const pct = WAGER_PCTS[Math.floor(Math.random() * WAGER_PCTS.length)];
     const side = Math.random() < 0.55 ? "win" : "lose";
-    applyWager(p.id, side, amt, true);
+    applyWager(p.id, side, wagerStake(p.score, pct), true, pct);
   });
   maybeCloseWagers();
   stopTick();
@@ -2603,34 +2603,51 @@ async function startLockdown(playerId) {
   }, 1000);
 }
 
-function applyWager(id, side, amount, locked = true) {
+function wagerStake(score, pct) {
+  const points = Math.max(0, Math.round(Number(score) || 0));
+  const cut = WAGER_PCTS.includes(Number(pct)) ? Number(pct) : 10;
+  if (!points) return 0;
+  return Math.min(points, Math.max(1, Math.round(points * cut / 100)));
+}
+
+function applyWager(id, side, amount, locked = true, pct = 0) {
   const ld = state.lockdown;
   if (!ld || ld.phase !== "wager") return;
   if (id === ld.playerId) return;
   const p = playerById(id);
-  const capped = Math.min(Number(amount) || 100, Math.max(100, p?.score || 100));
-  const amt = WAGER_AMTS.includes(capped) ? capped : Math.min(WAGER_AMTS[WAGER_AMTS.length - 1], Math.max(WAGER_AMTS[0], capped));
-  ld.wagers[id] = { side, amount: amt, locked: Boolean(locked) };
+  const score = Math.max(0, Math.round(Number(p?.score) || 0));
+  let usePct = WAGER_PCTS.includes(Number(pct)) ? Number(pct) : 0;
+  if (!usePct) {
+    const target = Number(amount) || 0;
+    usePct = WAGER_PCTS.find((n) => wagerStake(score, n) === target) || 10;
+  }
+  const stake = wagerStake(score, usePct);
+  ld.wagers[id] = { side, amount: stake, pct: usePct, locked: Boolean(locked) };
   if (id === state.youId) {
-    state.wagerDraft = locked ? null : { side, amount: amt };
+    state.wagerDraft = locked ? null : { side, amount: stake, pct: usePct };
   }
   paint();
   publish();
   if (locked) maybeCloseWagers();
 }
 
-function setWagerDraft(side, amount) {
+function setWagerDraft(side, pct) {
   const ld = state.lockdown;
   if (!ld || ld.phase !== "wager") return;
   if (state.youId === ld.playerId) return;
-  const prev = state.wagerDraft || ld.wagers[state.youId] || { side: "win", amount: 100 };
-  const next = {
-    side: side || prev.side || "win",
-    amount: amount != null ? Number(amount) : (prev.amount || 100),
-    locked: false,
-  };
-  state.wagerDraft = next;
-  ld.wagers[state.youId] = { ...next, locked: false };
+  if (ld.wagers[state.youId]?.locked) return;
+  const prev = state.wagerDraft || {};
+  const nextSide = side ? String(side) : (prev.side || "");
+  const nextPct = WAGER_PCTS.includes(Number(pct)) ? Number(pct) : (prev.pct || 0);
+  const amount = nextPct ? wagerStake(me()?.score || 0, nextPct) : 0;
+  if (nextSide && nextPct) {
+    applyWager(state.youId, nextSide, amount, true, nextPct);
+    state.wagerDraft = null;
+    if (bc) bc.postMessage({ type: "wager", id: state.youId, side: nextSide, amount, pct: nextPct, locked: true });
+    if (state.room) void rooms("POST", { action: "wager", code: state.room, id: state.youId, side: nextSide, amount, pct: nextPct, locked: true });
+    return;
+  }
+  state.wagerDraft = { side: nextSide, pct: nextPct, amount, locked: false };
   paint(true);
 }
 
@@ -2657,11 +2674,13 @@ function closeWagers() {
   const ld = state.lockdown;
   if (!ld || ld.phase !== "wager") return;
   stopTick();
-  // Auto-lock any unfinished human drafts as lose@$100 so play can start.
+  // Anyone who did not finish gets LOSE at 10% so the round can start.
   state.players.filter((p) => p.id !== ld.playerId).forEach((p) => {
     if (!ld.wagers[p.id]?.locked) {
-      const d = ld.wagers[p.id] || { side: "lose", amount: 100 };
-      ld.wagers[p.id] = { side: d.side || "lose", amount: d.amount || 100, locked: true };
+      const d = ld.wagers[p.id] || state.wagerDraft || {};
+      const pct = WAGER_PCTS.includes(Number(d.pct)) ? Number(d.pct) : 10;
+      const side = d.side === "win" ? "win" : "lose";
+      ld.wagers[p.id] = { side, amount: wagerStake(p.score, pct), pct, locked: true };
     }
   });
   ld.phase = "intro";
@@ -2929,7 +2948,8 @@ function wagerHTML() {
   }
   const locked = Boolean(mine?.locked);
   const side = mine?.side || state.wagerDraft?.side || "";
-  const amount = mine?.amount || state.wagerDraft?.amount || 0;
+  const pct = mine?.pct || state.wagerDraft?.pct || 0;
+  const mineScore = me()?.score || 0;
   return `<div class="wager">
     <p class="wager-copy">${tt("lockdownWagerOpp", escapeHtml(ld.name))} · ${ld.wagerLeft}s</p>
     <div class="wager-row">
@@ -2937,14 +2957,14 @@ function wagerHTML() {
       <button type="button" class="side lose ${side === "lose" ? "on" : ""}" data-side="lose" ${locked ? "disabled" : ""}>${tt("lose")}</button>
     </div>
     <div class="wager-row">
-      ${WAGER_AMTS.map((n) =>
-        `<button type="button" class="amt ${amount === n ? "on" : ""}" data-amt="${n}" ${locked ? "disabled" : ""}>$${n}</button>`
-      ).join("")}
+      ${WAGER_PCTS.map((n) => {
+        const stake = wagerStake(mineScore, n);
+        return `<button type="button" class="amt ${pct === n ? "on" : ""}" data-pct="${n}" ${locked ? "disabled" : ""}>${n}% · $${stake}</button>`;
+      }).join("")}
     </div>
     ${locked
-      ? `<p class="meta">${tt("lockedSide", mine.side, mine.amount)}</p>`
-      : `<button type="button" class="primary" id="lockWager" ${side && amount ? "" : "disabled"}>${tt("lockIn")}</button>
-         <p class="meta">${tt("pickThenLock")}</p>`}
+      ? `<p class="meta">${tt("lockedSide", mine.side, mine.amount, mine.pct)}</p>`
+      : `<p class="meta">${tt("pickThenLock")}</p>`}
     ${lockdownRefreshButton()}
   </div>`;
 }
@@ -5660,21 +5680,19 @@ function bindPlay() {
       const ld = state.lockdown;
       if (!ld || ld.phase !== "wager") return;
       if (ld.wagers[state.youId]?.locked) return;
-      const prev = state.wagerDraft || ld.wagers[state.youId] || { amount: 100 };
-      setWagerDraft(b.dataset.side, prev.amount || 100);
+      const prev = state.wagerDraft || {};
+      setWagerDraft(b.dataset.side, prev.pct || 0);
     };
   });
-  document.querySelectorAll("[data-amt]").forEach((b) => {
+  document.querySelectorAll("[data-pct]").forEach((b) => {
     b.onclick = () => {
       const ld = state.lockdown;
       if (!ld || ld.phase !== "wager") return;
       if (ld.wagers[state.youId]?.locked) return;
-      const prev = state.wagerDraft || ld.wagers[state.youId] || { side: "win" };
-      setWagerDraft(prev.side || "win", Number(b.dataset.amt));
+      const prev = state.wagerDraft || {};
+      setWagerDraft(prev.side || "", Number(b.dataset.pct));
     };
   });
-  const lockWager = $("#lockWager");
-  if (lockWager) lockWager.onclick = () => lockInWager();
   document.querySelectorAll(".js-refresh-lock").forEach((b) => {
     b.onclick = () => refreshLockdownQuestions();
   });
