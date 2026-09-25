@@ -12,10 +12,12 @@ import {
   listChildren,
   findProfileById,
   publicProfile,
+  setDojoPhoto,
 } from "../lib/profile-store.js";
-import { openSession, sessionCookie, sessionProfileId } from "../lib/profile-session.js";
+import { openSession, sessionCookie, sessionProfileId, tokenFromRequest } from "../lib/profile-session.js";
 import { readScores, recordScore } from "../lib/score-vault.js";
 import { deployWelcome } from "../lib/fan-mail.js";
+import { ensureGmgBooth, pushDojoPhoto } from "../lib/gmg-profile.js";
 
 const SCORE_CAP = 200000;
 
@@ -80,6 +82,13 @@ export default async function handler(req, res) {
     if (!id) return json(res, 401, { error: "unauthorized" });
     return json(res, 200, { ok: true, scores: await readScores(id) });
   }
+  if (req.method === "GET" && String(query.me || "") === "1") {
+    const id = await sessionProfileId(req);
+    if (!id) return json(res, 401, { error: "unauthorized" });
+    const rec = await findProfileById(id);
+    if (!rec) return json(res, 401, { error: "unauthorized" });
+    return json(res, 200, { ok: true, profile: publicProfile(rec) });
+  }
   if (req.method !== "POST") return json(res, 405, { error: "method" });
   const body = await readBody(req);
   if (!body) return json(res, 400, { error: "Invalid JSON" });
@@ -105,6 +114,31 @@ export default async function handler(req, res) {
     }
   }
 
+  if (body.action === "link-dojo-photo" || body.action === "sync-dojo-photo") {
+    const id = await sessionProfileId(req);
+    if (!id) return json(res, 401, { error: "unauthorized" });
+    try {
+      if (body.action === "sync-dojo-photo") {
+        const photo = String(body.photo || "");
+        if (!photo.startsWith("data:image/") || photo.length > 120000) {
+          return json(res, 400, { error: "photo" });
+        }
+        const pushed = await pushDojoPhoto(tokenFromRequest(req), photo);
+        if (!pushed.ok) return json(res, pushed.skipped ? 204 : (pushed.status || 503), { ok: false, skipped: pushed.skipped });
+        const url = pushed.data?.dojoPhoto;
+        if (typeof url === "string" && url.startsWith("https://")) {
+          const profile = await setDojoPhoto(id, url);
+          return json(res, 200, { ok: true, profile });
+        }
+        return json(res, 200, { ok: true, skipped: true });
+      }
+      const profile = await setDojoPhoto(id, body.url);
+      return json(res, 200, { ok: true, profile });
+    } catch (err) {
+      return json(res, statusFor(err), { error: err.code || "invalid" });
+    }
+  }
+
   if (body.action === "login") {
     try {
       const rec = body.loginName
@@ -114,6 +148,7 @@ export default async function handler(req, res) {
           : null;
       if (!rec) return json(res, 400, { error: body.loginName ? "login" : "email" });
       const token = await openSession(rec.id);
+      void ensureGmgBooth(token);
       return json(res, 200, { ok: true, token, profile: publicProfile(rec) }, { cookie: sessionCookie(token) });
     } catch (err) {
       return json(res, statusFor(err), { error: err.code || "invalid" });
@@ -183,12 +218,14 @@ export default async function handler(req, res) {
       catch { welcome = null; }
     }
     const token = await openSession(profile.id);
+    void ensureGmgBooth(token);
     return json(res, 200, { ok: true, token, profile, welcome }, { cookie: sessionCookie(token) });
   } catch (err) {
     if (err.code === "exists") {
       try {
         const rec = await loginProfile(body.email, body.password);
         const token = await openSession(rec.id);
+        void ensureGmgBooth(token);
         return json(res, 200, { ok: true, token, profile: publicProfile(rec), existing: true }, { cookie: sessionCookie(token) });
       } catch {
         return json(res, 409, { error: "exists" });

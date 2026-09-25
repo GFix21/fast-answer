@@ -1543,6 +1543,7 @@ async function commitNewProfile(name, email, pw, joinList = true) {
     state.welcomeLetter = remote.data.welcome;
     try { sessionStorage.setItem("fa-welcome", JSON.stringify(remote.data.welcome)); } catch { /* ignore */ }
   }
+  if (String(state.profile?.thumb || "").startsWith("data:image/")) syncDojoThumb(state.profile.thumb);
   state.childrenLoaded = false;
   state.dojoMode = "home";
   state.roomDojoPanel = "";
@@ -1731,6 +1732,30 @@ async function profileApi(body) {
   const data = await res.json().catch(() => null);
   if (data?.token) keepProfileToken(data.token);
   return { ok: res.ok, status: res.status, data };
+}
+function syncDojoThumb(thumb) {
+  const photo = String(thumb || "");
+  if (!photo.startsWith("data:image/") || photo.length > 120000) return;
+  void profileApi({ action: "sync-dojo-photo", photo }).then((remote) => {
+    const url = remote.data?.profile?.dojoPhoto;
+    if (typeof url === "string" && url.startsWith("https://")) saveProfile({ dojoPhoto: url });
+  }).catch(() => {});
+}
+async function pullDojoPhoto() {
+  if (!profileToken() || state.profile?.thumb) return;
+  try {
+    const res = await fetch("/api/profiles?me=1", {
+      headers: { "x-fa-profile": profileToken() },
+      credentials: "same-origin",
+    });
+    if (!res.ok) return;
+    const data = await res.json().catch(() => null);
+    const url = data?.profile?.dojoPhoto;
+    if (typeof url === "string" && url.startsWith("https://") && !state.profile?.thumb) {
+      saveProfile({ thumb: url, dojoPhoto: url });
+      paint(true);
+    }
+  } catch { /* booth is optional */ }
 }
 async function ensureRoomForDeck() {
   if (role === "pad") return false;
@@ -3825,6 +3850,7 @@ function houseLinksHTML() {
     <button type="button" class="ghost" id="albumMusic">${state.albumOn ? tt("musicOff") : tt("musicOn")}</button>
     <button type="button" class="ghost" id="openChat">${tt("openChat")}</button>
     <a class="ghost" id="openGames" href="https://gmgbrand.vercel.app/games">${tt("games")}</a>
+    <a class="ghost" id="openBooth" href="https://gmgbrand.vercel.app/profile">${tt("gmgBooth")}</a>
   </div>
   ${state.chatOpen ? `<div class="wager"><p class="wager-copy">${tt("chatLead")}</p></div>` : ""}`;
 }
@@ -5033,6 +5059,7 @@ function bindDojoSurface() {
       if (!file) return;
       void fileToAvatar(file).then((thumb) => {
         saveProfile({ thumb });
+        syncDojoThumb(thumb);
         state.statusMsg = tt("profileSaved");
         paint(true);
       }).catch(() => {
@@ -5172,6 +5199,7 @@ function bindLobby() {
     if (!file) return;
     void fileToAvatar(file).then((thumb) => {
       saveProfile({ thumb });
+      syncDojoThumb(thumb);
       paint(true);
     }).catch(() => {
       state.statusMsg = tt("photoBig");
@@ -6193,6 +6221,7 @@ if (isDirections) {
     await identifyCountry();
     paint(true);
     void syncTopScores();
+    void pullDojoPhoto();
     window.__fa = state;
   }
 } else {
@@ -6224,6 +6253,7 @@ if (isDirections) {
   else if (needsPasswordSetup()) state.dojoMode = "setpw";
   else state.dojoMode = "unlock";
   await identifyCountry();
+  void pullDojoPhoto();
   if (forcedDisplay) {
     // ?tv=1 is the Silk link. It owns this room even if the browser last used Join TV.
     state.onScreen = true;
