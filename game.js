@@ -2207,6 +2207,7 @@ function startRead() {
   stopTick();
   state.tick = setInterval(() => {
     state.readLeft -= 1;
+    publish();
     if (state.readLeft <= 0) {
       stopTick();
       state.phase = "buzz";
@@ -2216,7 +2217,7 @@ function startRead() {
       scheduleAiBuzz();
     } else {
       const clock = $("#clock");
-      if (clock) clock.textContent = clockText();
+      if (clock) clock.textContent = clock.classList.contains("read-clock") ? String(state.readLeft) : clockText();
     }
   }, 1000);
 }
@@ -2674,9 +2675,14 @@ function applyRemoteMap(id, target) {
 
 function afterReveal(ok) {
   const shouldLock = ok && state.lockdownAt.includes(state.i) && !state.lockdown;
+  const from = state.i;
   setTimeout(() => {
-    if (shouldLock) startLockdown(state.buzzId);
-    else continueRound();
+    if (state.phase !== "reveal" || state.i !== from) return;
+    if (!shouldLock) {
+      continueRound();
+      return;
+    }
+    Promise.resolve(startLockdown(state.buzzId)).catch(() => continueRound());
   }, 2000);
 }
 
@@ -4840,14 +4846,17 @@ function playHTML() {
     ? `<button class="ghost" id="dropout" type="button" ${dropped ? "disabled" : ""}>${dropped ? tt("dropoutPressed") : tt("dropout")}</button>`
     : "";
   const phoneBoard = !tv && (pad || !state.onScreen);
-  const tvPad = pad && !state.viewing;
-  if (tvPad) {
+  const handheld = !state.viewing && !isTvDisplay() && !state.tvMirror && (role === "pad" || state.mpMode === "cast" || state.roomScreen === "tv");
+  if (handheld) {
     const map = rivalsHTML();
     const ldBubble = state.lockdown
       ? `<div class="pad-bubble">${(state.lockdown.phase === "wager" || state.lockdown.phase === "intro") ? wagerHTML() : `<p class="qtext">${escapeHtml(lockdownLogo(state.lockdown))}</p>`}</div>`
       : "";
-    const note = !state.lockdown && !readyPhase && clockText()
+    const note = !state.lockdown && !readyPhase && state.phase !== "read" && clockText()
       ? `<div class="pad-bubble"><p class="qtext">${escapeHtml(clockText())}</p></div>`
+      : "";
+    const readClock = state.phase === "read"
+      ? `<p class="read-clock" id="clock">${state.readLeft}</p>`
       : "";
     const answers = showAns && q && Array.isArray(q.choices)
       ? `<div class="answers phone-answers">${q.choices.map((c, i) => {
@@ -4866,6 +4875,7 @@ function playHTML() {
       <div class="tv-pad-screen">
         <div class="pad-bubbles">
           ${map ? `<div class="pad-bubble">${map}</div>` : ""}
+          ${readClock}
           ${ldBubble}
           ${note}
           ${answers}
@@ -6427,12 +6437,12 @@ function startPoll() {
     if (j.screen) state.roomScreen = j.screen;
     if (state.tvMirror) {
       if (pollN % 5 === 0) void rooms("POST", { action: "tv-seen", code: state.room });
-      const before = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
+      const before = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (j.host) state.roomHost = cleanSeatName(j.host);
       if (j.guests) ingestGuests(j.guests);
       if (j.screen) state.roomScreen = j.screen;
       if (j.state && j.state.phase) applyHostState(j.state);
-      const after = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
+      const after = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (before !== after) paint();
       return;
     }
