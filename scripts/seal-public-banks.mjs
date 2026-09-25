@@ -52,7 +52,7 @@ console.log("seal-public-banks: stripped public answer keys", { sealed });
 const PUBLIC = path.join(ROOT, "public");
 const SKIP = new Set([
   "node_modules", ".git", ".github", ".vercel", "api", "public",
-  "scripts", "lib", "q-and-a", "data",
+  "scripts", "data",
 ]);
 function copySite(src, dest) {
   fs.mkdirSync(dest, { recursive: true });
