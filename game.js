@@ -798,23 +798,32 @@ function escapeHtml(s) {
   d.textContent = String(s || "");
   return d.innerHTML;
 }
+function cardWithPrompt(q) {
+  if (!q) return null;
+  if (q.prompt && Array.isArray(q.choices) && q.choices.length) return q;
+  const full = (state.deck || []).find((item) => item && item.id === q.id)
+    || (state.questions || []).find((item) => item && item.id === q.id);
+  if (!full?.prompt) return q.prompt ? q : null;
+  return {
+    ...full,
+    ...q,
+    prompt: full.prompt,
+    choices: full.choices,
+    correctIndex: Number.isInteger(q.correctIndex) ? q.correctIndex : full.correctIndex,
+  };
+}
 function currentQ() {
   if (state.lockdown && (state.lockdown.phase === "play" || state.lockdown.phase === "flash")) {
     return state.lockdown.qs[state.lockdown.qi] || null;
   }
-  const q = state.qs?.[state.i] || null;
-  if (!q || (q.prompt && Array.isArray(q.choices) && q.choices.length)) return q;
-  const full = (state.questions || []).find((item) => item && item.id === q.id);
-  if (!full) return q;
-  const merged = {
-    ...full,
-    ...q,
-    prompt: q.prompt || full.prompt,
-    choices: Array.isArray(q.choices) && q.choices.length ? q.choices : full.choices,
-    correctIndex: Number.isInteger(q.correctIndex) ? q.correctIndex : full.correctIndex,
-  };
-  state.qs[state.i] = merged;
-  return merged;
+  const dealt = state.deck?.[state.i];
+  if (dealt?.prompt) {
+    if (Array.isArray(state.qs)) state.qs[state.i] = dealt;
+    return dealt;
+  }
+  const q = cardWithPrompt(state.qs?.[state.i]) || cardWithPrompt(state.q);
+  if (q?.prompt && Array.isArray(state.qs)) state.qs[state.i] = q;
+  return q;
 }
 function shuffle(a) {
   const x = [...a];
@@ -2042,13 +2051,20 @@ function snapshot() {
     buzzerColor: state.buzzerColor,
     joinLeft: state.joinLeft || 0,
     armTv: state.phase === "ready",
+    rev: state.rev || 0,
   });
 }
+let publishChain = Promise.resolve();
 function publish() {
+  currentQ();
+  state.rev = (Number(state.rev) || 0) + 1;
   const snap = snapshot();
   if (bc) bc.postMessage(snap);
   if (role !== "pad" && state.room && state.hostKey) {
-    void rooms("POST", { action: "state", code: state.room, state: snap });
+    const body = { action: "state", code: state.room, state: snap };
+    publishChain = publishChain
+      .then(() => rooms("POST", body))
+      .catch(() => null);
   }
 }
 if (bc) {
@@ -2594,23 +2610,20 @@ function continueRound() {
   state.lastAnswer = null;
   state.gapLeft = 0;
   state.i += 1;
-  if (!Array.isArray(state.qs) || state.i >= state.qs.length) {
+  const total = Math.max(Array.isArray(state.deck) ? state.deck.length : 0, Array.isArray(state.qs) ? state.qs.length : 0);
+  if (!total || state.i >= total) {
     finishShow();
     return;
   }
+  if (!Array.isArray(state.qs)) state.qs = [];
   seatPendingJoins();
   maybeEndFromDropout();
   if (state.phase === "end") return;
-  const prev = state.qs[state.i - 1];
-  const next = state.qs[state.i];
-  if (setBreakDue(prev?.tier, next?.tier, tierRunLength(state.qs, state.i))) {
-    startSetBreak(next.tier);
-    return;
-  }
   state.picked = -1;
   state.buzzed = false;
   state.buzzBy = "";
   state.buzzId = "";
+  state.lastAnswer = null;
   startRead();
 }
 
@@ -2628,10 +2641,12 @@ function beginGap() {
       return;
     }
     state.gapLeft -= 1;
-    publish();
-    const clock = $("#clock");
-    if (clock) clock.textContent = clock.classList.contains("read-clock") ? String(Math.max(state.gapLeft, 0)) : clockText();
-    if (state.gapLeft > 0) return;
+    if (state.gapLeft > 0) {
+      publish();
+      const clock = $("#clock");
+      if (clock) clock.textContent = clock.classList.contains("read-clock") ? String(state.gapLeft) : clockText();
+      return;
+    }
     stopTick();
     state.gapLeft = 0;
     const lock = state.gapLock === true;
@@ -6442,6 +6457,7 @@ async function startGame() {
   state.spent = new Set(state.qs.map((q) => q.id));
   rememberDealtIds(state.qs.map((q) => q.id));
   state.i = 0;
+  state.deck = (state.qs || []).map((q) => ({ ...q, choices: Array.isArray(q.choices) ? [...q.choices] : [] }));
   state.lockdownAt = pickLockdownSlots();
   state.lockdown = null;
   state.lockdownRound = 0;
@@ -6478,12 +6494,14 @@ function startPoll() {
     if (j.screen) state.roomScreen = j.screen;
     if (state.tvMirror) {
       if (pollN % 5 === 0) void rooms("POST", { action: "tv-seen", code: state.room });
-      const before = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.gapLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
+      const qid = state.qs?.[state.i]?.id || state.q?.id || "";
+      const before = `${state.phase}:${state.i}:${qid}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.gapLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (j.host) state.roomHost = cleanSeatName(j.host);
       if (j.guests) ingestGuests(j.guests);
       if (j.screen) state.roomScreen = j.screen;
       if (j.state && j.state.phase) applyHostState(j.state);
-      const after = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.gapLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
+      const qidNow = state.qs?.[state.i]?.id || state.q?.id || "";
+      const after = `${state.phase}:${state.i}:${qidNow}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.gapLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (before !== after) paint();
       return;
     }

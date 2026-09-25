@@ -130,6 +130,9 @@ function sendRoom(res, room, { host = false, status = 200, guestKey = "" } = {})
 function keepPlaySignals(prev, next) {
   const before = prev && typeof prev === "object" ? prev : {};
   const out = next && typeof next === "object" ? next : {};
+  const prevRev = Number(before.rev) || 0;
+  const nextRev = Number(out.rev) || 0;
+  if (prevRev && nextRev && nextRev < prevRev) return { ...before };
   const sameQ = Number(before.i) === Number(out.i);
   if (sameQ && before.lastAnswer?.at && (!out.lastAnswer || out.lastAnswer.at < before.lastAnswer.at)) {
     out.lastAnswer = before.lastAnswer;
