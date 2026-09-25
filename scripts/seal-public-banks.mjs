@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * On Vercel, copy full banks (with the answer key) into api/private-banks
- * and strip the key from the public JSON. Local and CI keep the full files.
+ * On Vercel, copy full banks (with the answer key) into api/private-banks,
+ * strip the key from the public JSON, and write that site into public/.
+ * Local and CI keep the full files. The Vercel project publishes public/.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -45,3 +46,25 @@ for (const file of targets) {
   sealed += 1;
 }
 console.log("seal-public-banks: stripped public answer keys", { sealed });
+
+// The Vercel project publishes the "public" output directory.
+// Static files stay at the repo root in git. Copy the stripped site after sealing.
+const PUBLIC = path.join(ROOT, "public");
+const SKIP = new Set([
+  "node_modules", ".git", ".github", ".vercel", "api", "public",
+  "scripts", "lib", "q-and-a", "data",
+]);
+function copySite(src, dest) {
+  fs.mkdirSync(dest, { recursive: true });
+  for (const name of fs.readdirSync(src)) {
+    if (SKIP.has(name) || name.startsWith(".")) continue;
+    if (name === "package.json" || name === "package-lock.json" || name === "vercel.json" || name === "README.md") continue;
+    const from = path.join(src, name);
+    const to = path.join(dest, name);
+    if (fs.statSync(from).isDirectory()) copySite(from, to);
+    else fs.copyFileSync(from, to);
+  }
+}
+fs.rmSync(PUBLIC, { recursive: true, force: true });
+copySite(ROOT, PUBLIC);
+console.log("seal-public-banks: wrote static site to public/");

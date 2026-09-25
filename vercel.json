@@ -1,4 +1,6 @@
 {
+  "buildCommand": "node scripts/seal-public-banks.mjs",
+  "outputDirectory": "public",
   "functions": {
     "api/**/*.js": {
       "includeFiles": "api/private-banks/**",
