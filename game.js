@@ -2907,16 +2907,20 @@ async function startLockdown(playerId) {
     applyWager(p.id, side, wagerStake(p.score, pct), true, pct);
   });
   maybeCloseWagers();
-  stopTick();
-  state.tick = setInterval(() => {
-    if (!state.lockdown || state.lockdown.phase !== "wager") return;
-    state.lockdown.wagerLeft -= 1;
-    if (state.lockdown.wagerLeft <= 0) closeWagers();
-    else {
-      const clock = $("#clock");
-      if (clock) clock.textContent = clockText();
-    }
-  }, 1000);
+  if (state.lockdown?.phase === "wager") {
+    stopTick();
+    state.tick = setInterval(() => {
+      if (!state.lockdown || state.lockdown.phase !== "wager") return;
+      state.lockdown.wagerLeft -= 1;
+      if (state.lockdown.wagerLeft <= 0) closeWagers();
+      else {
+        const clock = $("#clock");
+        if (clock) clock.textContent = clockText();
+        paint();
+        publish();
+      }
+    }, 1000);
+  }
 }
 
 function wagerStake(score, pct) {
@@ -3027,8 +3031,9 @@ function runLockdownIntro() {
       beginLockdownQuestion();
     } else {
       const clock = $("#clock");
-      if (clock) clock.textContent = clockText();
+      if (clock) clock.textContent = String(state.lockdown.introLeft);
       paint();
+      publish();
     }
   }, 1000);
 }
@@ -4946,9 +4951,11 @@ function playHTML() {
     const note = !state.lockdown && !readyPhase && state.phase !== "read" && clockText()
       ? `<div class="pad-bubble"><p class="qtext">${escapeHtml(clockText())}</p></div>`
       : "";
-    const readClock = state.phase === "read" || state.phase === "reveal"
-      ? `<p class="read-clock" id="clock">${state.phase === "reveal" ? (state.gapLeft || 0) : state.readLeft}</p>`
-      : "";
+    const readClock = state.lockdown?.phase === "intro"
+      ? `<p class="read-clock" id="clock">${state.lockdown.introLeft}</p>`
+      : (state.phase === "read" || state.phase === "reveal"
+        ? `<p class="read-clock" id="clock">${state.phase === "reveal" ? (state.gapLeft || 0) : state.readLeft}</p>`
+        : "");
     const phoneAns = (showAns || state.phase === "read") && q && Array.isArray(q.choices);
     const answers = phoneAns
       ? `<div class="answers phone-answers">${q.choices.map((c, i) => {
