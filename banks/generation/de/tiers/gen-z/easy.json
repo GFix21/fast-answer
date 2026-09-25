@@ -26,7 +26,7 @@
       "topic": "music",
       "generation": "gen-z",
       "categoryTitle": "Stream-Maschine",
-      "prompt": "Welches schwedische Unternehmen ist vor allem für die Musik-Streaming-App Spotify bekannt?",
+      "prompt": "Welches schwedische Unternehmen ist vor allem für eine Musik-Streaming-App bekannt?",
       "choices": [
         "Netflix",
         "Skype",

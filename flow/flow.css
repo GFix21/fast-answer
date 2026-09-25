@@ -35,6 +35,8 @@ nav.tabs button, nav.tabs a{
   text-decoration:none;
 }
 nav.tabs button.on{background:#e8a87c;color:#1a120c;border-color:transparent}
+button.btn.on{background:#e8a87c;color:#1a120c;border-color:transparent}
+.leak-flag{margin-top:6px;color:#e8a87c;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
 nav.tabs a{border-color:color-mix(in oklab, #e8a87c 55%, var(--line));color:#e8a87c}
 button.btn, a.btn{
   border:1px solid var(--line);background:color-mix(in oklab, var(--elev) 80%, transparent);

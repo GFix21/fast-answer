@@ -105,7 +105,7 @@ add(cap("easy", "cz-capital", land("Czechia", "de la Tchéquie", "Tschechien"), 
 add(cap("easy", "hu-capital", land("Hungary", "de la Hongrie", "Ungarn"), city("Budapest"), city("Vienna", "Vienne", "Wien"), city("Debrecen"), city("Prague", "Prague", "Prag")));
 add(cap("easy", "fi-capital", land("Finland", "de la Finlande", "Finnland"), city("Helsinki"), city("Tampere"), city("Turku"), city("Stockholm")));
 add(cap("easy", "is-capital", land("Iceland", "de l'Islande", "Island"), city("Reykjavík", "Reykjavik", "Reykjavík"), city("Akureyri"), city("Oslo"), city("Copenhagen", "Copenhague", "Kopenhagen")));
-add(cap("easy", "sg-capital", land("Singapore", "de Singapour", "Singapur"), city("Singapore", "Singapour", "Singapur"), city("Kuala Lumpur"), city("Jakarta"), city("Bangkok")));
+add(cap("easy", "sg-capital", land("the city-state at the southern tip of the Malay Peninsula", "de la cité-État au sud de la péninsule malaise", "des Stadtstaats an der Südspitze der Malaiischen Halbinsel"), city("Singapore", "Singapour", "Singapur"), city("Kuala Lumpur"), city("Jakarta"), city("Bangkok")));
 add(cap("easy", "id-capital", land("Indonesia", "de l'Indonésie", "Indonesien"), city("Jakarta"), city("Bali"), city("Surabaya"), city("Bandung")));
 add(cap("easy", "ph-capital", land("the Philippines", "des Philippines", "den Philippinen"), city("Manila", "Manille", "Manila"), city("Cebu"), city("Davao"), city("Quezon City", "Quezon City", "Quezon City")));
 add(cap("easy", "tr-capital", land("Turkey", "de la Turquie", "der Türkei"), city("Ankara"), city("Istanbul"), city("Izmir", "Izmir", "Izmir"), city("Antalya")));
@@ -151,7 +151,7 @@ add(cap("hard", "rs-capital", land("Serbia", "de la Serbie", "Serbien"), city("B
 add(cap("hard", "sk-capital", land("Slovakia", "de la Slovaquie", "der Slowakei"), city("Bratislava"), city("Kosice", "Košice", "Kaschau"), city("Prague", "Prague", "Prag"), city("Vienna", "Vienne", "Wien")));
 add(cap("hard", "my-capital", land("Malaysia", "de la Malaisie", "Malaysia"), city("Kuala Lumpur"), city("George Town"), city("Johor Bahru"), city("Singapore", "Singapour", "Singapur")));
 add(cap("hard", "qa-capital", land("Qatar", "du Qatar", "Katar"), city("Doha"), city("Dubai", "Dubaï", "Dubai"), city("Abu Dhabi", "Abou Dhabi", "Abu Dhabi"), city("Manama")));
-add(cap("hard", "kw-capital", land("Kuwait", "du Koweït", "Kuwait"), city("Kuwait City", "Koweït", "Kuwait-Stadt"), city("Doha"), city("Manama"), city("Riyadh", "Riyad", "Riad")));
+add(cap("hard", "kw-capital", land("Kuwait", "du Koweït", "Kuwait"), city("Kuwait City", "Koweït City", "Kuwait-Stadt"), city("Doha"), city("Manama"), city("Riyadh", "Riyad", "Riad")));
 add(cap("hard", "jo-capital", land("Jordan", "de la Jordanie", "Jordanien"), city("Amman"), city("Petra", "Pétra", "Petra"), city("Aqaba"), city("Jerusalem", "Jérusalem", "Jerusalem")));
 add(cap("hard", "lb-capital", land("Lebanon", "du Liban", "Libanon"), city("Beirut", "Beyrouth", "Beirut"), city("Tripoli", "Tripoli", "Tripoli"), city("Sidon", "Sidon", "Sidon"), city("Damascus", "Damas", "Damaskus")));
 add(cap("hard", "et-capital", land("Ethiopia", "de l'Éthiopie", "Äthiopien"), city("Addis Ababa", "Addis-Abeba", "Addis Abeba"), city("Dire Dawa"), city("Nairobi"), city("Gondar")));
@@ -212,8 +212,8 @@ add(cap("extreme", "ht-capital", land("Haiti", "d'Haïti", "Haiti"), city("Port-
 add(cap("extreme", "jm-capital", land("Jamaica", "de la Jamaïque", "Jamaika"), city("Kingston"), city("Montego Bay"), city("Spanish Town"), city("Port-au-Prince")));
 add(cap("extreme", "do-capital", land("the Dominican Republic", "de la République dominicaine", "der Dominikanischen Republik"), city("Santo Domingo"), city("Santiago de los Caballeros"), city("Punta Cana"), city("Port-au-Prince")));
 add(cap("extreme", "cr-capital", land("Costa Rica", "du Costa Rica", "Costa Rica"), city("San José", "San José", "San José"), city("Liberia"), city("Limón", "Limón", "Limón"), city("Panama City", "Panama", "Panama-Stadt")));
-add(cap("extreme", "pa-capital", land("Panama", "du Panama", "Panama"), city("Panama City", "Panama", "Panama-Stadt"), city("Colón", "Colón", "Colón"), city("David"), city("San José", "San José", "San José")));
-add(cap("extreme", "gt-capital", land("Guatemala", "du Guatemala", "Guatemala"), city("Guatemala City", "Guatemala", "Guatemala-Stadt"), city("Antigua"), city("Quetzaltenango"), city("San Salvador")));
+add(cap("extreme", "pa-capital", land("Panama", "du Panama", "Panama"), city("Panama City", "Panama City", "Panama-Stadt"), city("Colón", "Colón", "Colón"), city("David"), city("San José", "San José", "San José")));
+add(cap("extreme", "gt-capital", land("Guatemala", "du Guatemala", "Guatemala"), city("Guatemala City", "Guatemala City", "Guatemala-Stadt"), city("Antigua"), city("Quetzaltenango"), city("San Salvador")));
 add(cap("extreme", "hn-capital", land("Honduras", "du Honduras", "Honduras"), city("Tegucigalpa"), city("San Pedro Sula"), city("La Ceiba"), city("San Salvador")));
 add(cap("extreme", "sv-capital", land("El Salvador", "du Salvador", "El Salvador"), city("San Salvador"), city("Santa Ana"), city("Tegucigalpa"), city("Guatemala City", "Guatemala", "Guatemala-Stadt")));
 add(cap("extreme", "ni-capital", land("Nicaragua", "du Nicaragua", "Nicaragua"), city("Managua"), city("León", "León", "León"), city("Granada"), city("San José", "San José", "San José")));
@@ -224,7 +224,7 @@ add(cap("extreme", "si-capital", land("Slovenia", "de la Slovénie", "Slowenien"
 add(cap("extreme", "ee-capital", land("Estonia", "de l'Estonie", "Estland"), city("Tallinn"), city("Tartu"), city("Riga"), city("Helsinki")));
 add(cap("extreme", "lv-capital", land("Latvia", "de la Lettonie", "Lettland"), city("Riga"), city("Daugavpils"), city("Tallinn"), city("Vilnius")));
 add(cap("extreme", "lt-capital", land("Lithuania", "de la Lituanie", "Litauen"), city("Vilnius"), city("Kaunas"), city("Riga"), city("Warsaw", "Varsovie", "Warschau")));
-add(cap("extreme", "lu-capital", land("Luxembourg", "du Luxembourg", "Luxemburg"), city("Luxembourg", "Luxembourg", "Luxemburg"), city("Esch-sur-Alzette"), city("Brussels", "Bruxelles", "Brüssel"), city("Metz")));
+add(cap("extreme", "lu-capital", land("the Grand Duchy between France, Belgium, and Germany", "du grand-duché entre la France, la Belgique et l'Allemagne", "des Großherzogtums zwischen Frankreich, Belgien und Deutschland"), city("Luxembourg", "Luxembourg", "Luxemburg"), city("Esch-sur-Alzette"), city("Brussels", "Bruxelles", "Brüssel"), city("Metz")));
 add(cap("extreme", "mt-capital", land("Malta", "de Malte", "Malta"), city("Valletta", "La Valette", "Valletta"), city("Mdina"), city("Sliema"), city("Rome", "Rome", "Rom")));
 add(cap("extreme", "al-capital", land("Albania", "de l'Albanie", "Albanien"), city("Tirana"), city("Durrës", "Durrës", "Durrës"), city("Vlorë", "Vlorë", "Vlora"), city("Podgorica")));
 add(cap("extreme", "mk-capital", land("North Macedonia", "de la Macédoine du Nord", "Nordmazedonien"), city("Skopje"), city("Ohrid"), city("Bitola"), city("Tirana")));

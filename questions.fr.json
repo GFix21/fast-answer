@@ -373,7 +373,7 @@
     "topic": "culture",
     "generation": "gen-y",
     "categoryTitle": "Partie de recherche",
-    "prompt": "Quelle entreprise a lancé un moteur de recherche nommé Google à la fin des années 1990 ?",
+    "prompt": "Quelle entreprise a lancé un moteur de recherche à la fin des années 1990 ?",
     "choices": [
       "AltaVista",
       "Ask Jeeves",
@@ -405,7 +405,7 @@
     "topic": "music",
     "generation": "gen-z",
     "categoryTitle": "Machine à streams",
-    "prompt": "Quelle entreprise suédoise est surtout connue pour l’appli de streaming musical Spotify ?",
+    "prompt": "Quelle entreprise suédoise est surtout connue pour une appli de streaming musical ?",
     "choices": [
       "Netflix",
       "Skype",

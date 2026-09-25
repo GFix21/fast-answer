@@ -1,11 +1,13 @@
 /**
  * Checker. A question needs a real shape before it can enter a pack.
  * Jokes stay on easy or hard, which is general play. A colour question
- * asks what colour something is.
+ * asks what colour something is. The correct choice must not already
+ * be written in the prompt.
  */
 
 import { isColourPrompt, isRenegadeJoke, isWhenPrompt, PLAY_TIERS, STRUCTURES } from "./structures.js";
 import { INJECTION_FRAMES } from "../crackd-kerr.js";
+import { answerInQuestion } from "../../lib/answer-in-question.js";
 
 const TIERS = new Set(["easy", "hard", "difficult", "extreme"]);
 
@@ -21,6 +23,7 @@ export function checkQuestion(q) {
     reasons.push("correctIndex");
   }
   if (!TIERS.has(q?.tier)) reasons.push("tier");
+  if (answerInQuestion(q)) reasons.push("answer-in-question");
   if (!q?.generation) reasons.push("generation");
   if (q?.funny === true && !PLAY_TIERS.has(q?.tier)) reasons.push("play-tier");
   if (q?.structure === "joke" && q?.funny !== true) reasons.push("joke-flag");
