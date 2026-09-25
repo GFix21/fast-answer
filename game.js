@@ -797,6 +797,32 @@ function escapeHtml(s) {
   d.textContent = String(s || "");
   return d.innerHTML;
 }
+function choiceList(q) {
+  const from = (item) => (Array.isArray(item?.choices) ? item.choices.slice(0, 4).map((c) => String(c)) : []);
+  let list = from(q);
+  if (list.length >= 2) return list;
+  const id = q?.id;
+  const full = (state.deck || []).find((item) => item && item.id === id)
+    || (state.questions || []).find((item) => item && item.id === id)
+    || state.qs?.[state.i];
+  list = from(full);
+  return list.length ? list : ["A", "B", "C", "D"];
+}
+function choiceButtons(q) {
+  const list = choiceList(q);
+  const picked = state.lockdown?.phase === "play" ? state.lockdown.picked : state.picked;
+  const reveal = state.phase === "reveal" || state.lockdown?.phase === "flash" || state.lockdown?.phase === "result";
+  const open = state.phase === "read" || state.phase === "buzz" || state.phase === "answer";
+  return `<div class="answers phone-answers">${list.map((c, i) => {
+    let cls = "ans";
+    if (reveal) {
+      if (i === q?.correctIndex) cls += " ok";
+      else if (i === picked) cls += " bad";
+    } else if (i === picked) cls += " on";
+    const dis = open && !reveal ? "" : "disabled";
+    return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i] || ""}</small>${escapeHtml(c)}</button>`;
+  }).join("")}</div>`;
+}
 function cardWithPrompt(q) {
   if (!q) return null;
   if (q.prompt && Array.isArray(q.choices) && q.choices.length) return q;
@@ -2266,7 +2292,7 @@ function scheduleAiBuzz() {
   state.aiBuzzT = setTimeout(() => {
     if (state.phase !== "buzz" || state.buzzed) return;
     takeBuzz(first.bot.id, first.bot.name);
-    setTimeout(() => aiPick(first.bot), 500 + Math.random() * 400);
+    setTimeout(() => aiPick(first.bot), 4000);
   }, first.delay);
 }
 
@@ -2371,7 +2397,18 @@ function buzz() {
     markReady();
     return;
   }
-  if (!isSeatedPlay()) return;
+  if (!isSeatedPlay() && !(state.tvMirror && !state.hostKey)) return;
+  if (state.tvMirror && !state.hostKey) {
+    if (!state.room || (state.phase !== "buzz" && state.phase !== "read")) return;
+    playSound("buzz");
+    void rooms("POST", { action: "buzz", code: state.room, name: state.name, id: state.youId || "you" });
+    return;
+  }
+  if (state.phase === "read") {
+    stopTick();
+    state.readLeft = 0;
+    state.phase = "buzz";
+  }
   if (state.phase !== "buzz" || state.buzzed) return;
   takeBuzz(state.youId, state.name);
   if (bc) bc.postMessage({ type: "buzz", name: state.name, id: state.youId, room: state.room });
@@ -4933,8 +4970,8 @@ function playHTML() {
           ${readClock}
           ${ldBubble}
           ${note}
-          ${answers}
         </div>
+        ${q && (state.phase === "read" || state.phase === "buzz" || state.phase === "answer" || state.phase === "reveal") ? choiceButtons(q) : ""}
         <div class="pad-buzz">
           ${readyPhase ? entryButtonsHTML() : buzzerButton(canBuzz, buzzLabel)}
         </div>
@@ -4943,18 +4980,8 @@ function playHTML() {
     `;
   }
   if (phoneBoard) {
-    const answersMarkup = showAns && q
-      ? `<div class="answers phone-answers">${q.choices.map((c, i) => {
-          let cls = "ans";
-          const picked = ld ? ld.picked : state.picked;
-          const reveal = state.phase === "reveal" || ld?.phase === "flash" || ld?.phase === "result";
-          if (reveal) {
-            if (i === q.correctIndex) cls += " ok";
-            else if (i === picked) cls += " bad";
-          } else if (i === picked) cls += " on";
-          const dis = canPick && !reveal ? "" : "disabled";
-          return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
-        }).join("")}</div>`
+    const answersMarkup = q && ["read", "buzz", "answer", "reveal"].includes(state.phase)
+      ? choiceButtons(q)
       : (breaking
         ? `<p class="meta">${escapeHtml(tt("setBreakClock", state.setBreakLeft))}</p>`
         : `<p class="meta">${tt("answersWait")}</p>`);
@@ -5027,19 +5054,7 @@ function playHTML() {
       </div>`)}
       ${pad ? "" : `<div class="host"><img src="${POSE[state.pose] || POSE.idle}" alt="Jeremy" style="height:var(--host-h)"/></div>`}
     </div>
-    ${readyPhase || endPhase ? `<div></div>` : (ld?.phase === "wager" || ld?.phase === "intro" ? wagerHTML() : (showAns && q ? `<div class="answers">${q.choices.map((c, i) => {
-      let cls = "ans";
-      const picked = ld ? ld.picked : state.picked;
-      const reveal = state.phase === "reveal" || ld?.phase === "flash" || ld?.phase === "result";
-      // Waiters must not see hero's response until flash/result
-      const hidePick = waiterPad && !reveal;
-      if (reveal) {
-        if (i === q.correctIndex) cls += " ok";
-        else if (i === picked && !hidePick) cls += " bad";
-      } else if (i === picked && !hidePick) cls += " on";
-      const dis = canPick && !reveal ? "" : "disabled";
-      return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
-    }).join("")}${mapStealHTML()}</div>` : (waiterPad ? `<div class="wager"><p class="wager-copy">${tt("lockdownWait", ld.waitLeft ?? LOCKDOWN_WAIT_S)}</p><p class="meta">${tt("glimpseOnly")}</p></div>` : `<div></div>`)))}
+    ${readyPhase || endPhase ? `<div></div>` : (ld?.phase === "wager" || ld?.phase === "intro" ? wagerHTML() : (q && ["read", "buzz", "answer", "reveal"].includes(state.phase) ? `${choiceButtons(q)}${mapStealHTML()}` : `<div></div>`))}
     <div class="buzzbar">
       ${!state.onScreen && !pad && !ld && !readyPhase && !endPhase ? `<div class="dock set-dock">
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
@@ -6570,8 +6585,13 @@ function startPoll() {
       if (j.guests) ingestGuests(j.guests);
       paint();
     }
-    if (role !== "pad" && j.state?.buzzed && !state.buzzed && state.phase === "buzz") {
-      takeBuzz(j.state.buzzId || "", j.state.buzzBy || "Player");
+    if (role !== "pad" && j.state?.buzzed && !state.buzzed && (state.phase === "read" || state.phase === "buzz")) {
+      if (state.phase === "read") {
+        stopTick();
+        state.readLeft = 0;
+        state.phase = "buzz";
+      }
+      takeBuzz(j.state.buzzId || "you", j.state.buzzBy || "Player");
     }
     if (role !== "pad" && j.state?.maps && mapPhaseOpen()) {
       Object.entries(j.state.maps).forEach(([id, target]) => {
