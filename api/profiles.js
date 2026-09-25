@@ -214,7 +214,7 @@ export default async function handler(req, res) {
     });
     let welcome = null;
     if (body.mailingList === true) {
-      try { welcome = await deployWelcome({ email: profile.email, name: profile.displayName }); }
+      try { welcome = await deployWelcome({ email: profile.email, name: profile.displayName, locale: body.locale }); }
       catch { welcome = null; }
     }
     const token = await openSession(profile.id);
