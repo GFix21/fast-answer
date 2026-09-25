@@ -2213,6 +2213,7 @@ function seatPlayers() {
 }
 
 function startRead() {
+  state.closingAnswer = false;
   const q = currentQ();
   if (!q) {
     finishShow();
@@ -2545,6 +2546,7 @@ function leaveToLobby() {
 }
 
 function finishShow() {
+  state.closingAnswer = false;
 
   state.phase = "end";
   state.pose = (me()?.score || 0) >= 4000 ? "win" : "idle";
@@ -2720,8 +2722,13 @@ function applyRemoteAnswer(id, index, lockdown = false) {
     lockdownPick(i, true);
     return;
   }
+  if (state.phase === "read") {
+    stopTick();
+    state.readLeft = 0;
+    state.phase = "buzz";
+  }
+  if (state.phase === "buzz" && !state.buzzed) takeBuzz(id || state.youId, "");
   if (state.phase !== "answer") return;
-  if (state.buzzed && id && state.buzzId && id !== state.buzzId) return;
   pick(i, id || state.buzzId || state.youId, true);
 }
 
@@ -2755,23 +2762,37 @@ function pick(i, asId, fromRemote = false) {
     lockdownPick(i, fromRemote);
     return;
   }
-  if (state.phase === "reveal" || state.phase === "end" || state.phase === "read" || state.phase === "lobby" || state.phase === "setbreak") return;
-  if (role === "pad" && !state.buzzed) return;
-  if (!state.onScreen && state.phase === "buzz" && !asId && !fromRemote) {
-    takeBuzz(state.youId, state.name);
-  }
-  if (state.phase !== "answer") return;
-  // Pad answers must reach the TV room (voice + tap).
+  if (state.phase === "reveal" || state.phase === "end" || state.phase === "lobby" || state.phase === "setbreak") return;
+  if (state.closingAnswer) return;
+  const open = state.phase === "read" || state.phase === "buzz" || state.phase === "answer";
+  if (!open) return;
+  if (role === "pad" && !fromRemote && !isSeatedPlay()) return;
   if (role === "pad" && !fromRemote && state.room) {
     const answerer = state.buzzId || state.youId;
-    if (answerer !== state.youId) return;
+    if (state.buzzed && answerer && answerer !== state.youId) return;
+    if (!state.buzzed) {
+      state.buzzed = true;
+      state.phase = "answer";
+      void rooms("POST", { action: "buzz", code: state.room, id: state.youId, name: state.name });
+    }
     submitAnswerToRoom(i, false);
     state.picked = i;
     paint();
     return;
   }
+  if (state.phase === "read") {
+    stopTick();
+    state.readLeft = 0;
+    state.phase = "buzz";
+  }
+  if (state.phase === "buzz" && !state.buzzed) takeBuzz(asId || state.youId, state.name);
+  if (state.phase !== "answer") return;
   const q = currentQ();
-  if (!q) return;
+  if (!q) {
+    afterReveal(false);
+    return;
+  }
+  state.closingAnswer = true;
   const answerer = asId || state.buzzId || state.youId;
   state.picked = i;
   const ok = i === q.correctIndex;
@@ -2787,6 +2808,7 @@ function pick(i, asId, fromRemote = false) {
 }
 
 async function startLockdown(playerId) {
+  state.closingAnswer = false;
   const hero = playerById(playerId) || me();
   if (!hero) {
     continueRound();
@@ -4820,7 +4842,7 @@ function playHTML() {
     ? false
     : ld
       ? lockdownPlay && isHero && ld.phase === "play"
-      : state.phase === "answer" || (!state.onScreen && !pad && state.phase === "buzz");
+      : state.phase === "answer" || state.phase === "read" || state.phase === "buzz";
   let prompt;
   if (readyPhase) prompt = "";
   else if (state.phase === "between" && state.introCast) prompt = escapeHtml(tt("castIntro", (state.introCast || []).join(" · ")));
@@ -4880,7 +4902,8 @@ function playHTML() {
     const readClock = state.phase === "read" || state.phase === "reveal"
       ? `<p class="read-clock" id="clock">${state.phase === "reveal" ? (state.gapLeft || 0) : state.readLeft}</p>`
       : "";
-    const answers = showAns && q && Array.isArray(q.choices)
+    const phoneAns = (showAns || state.phase === "read") && q && Array.isArray(q.choices);
+    const answers = phoneAns
       ? `<div class="answers phone-answers">${q.choices.map((c, i) => {
           let cls = "ans";
           const picked = ld ? ld.picked : state.picked;
@@ -6556,7 +6579,7 @@ function startPoll() {
     }
     if (role !== "pad" && j.state?.lastAnswer) {
       const a = j.state.lastAnswer;
-      const ready = state.phase === "answer" || state.lockdown?.phase === "play" || a.lockdown;
+      const ready = state.phase === "read" || state.phase === "buzz" || state.phase === "answer" || state.lockdown?.phase === "play" || a.lockdown;
       if (a && a.at && a.at !== state.lastAnswerAt && ready) {
         state.lastAnswerAt = a.at;
         applyRemoteAnswer(a.id, a.index, Boolean(a.lockdown));
