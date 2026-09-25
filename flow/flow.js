@@ -1378,7 +1378,7 @@ function renderFan(panel) {
   panel.innerHTML = `
     <div class="card">
       <h2>${t("fanTitle")}</h2>
-      <p class="mut">${t("fanLead")}</p>
+      <p class="mut">${t("fanLead")} ${esc(letter.from || "gmgbrandlabel@gmail.com")}</p>
       <label class="field">${t("fanSubject")}</label>
       <input id="fanSubject" maxlength="120" value="${esc(letter.subject || "")}"/>
       <label class="field">${t("fanBody")}</label>

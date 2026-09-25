@@ -3580,14 +3580,14 @@ function genAlphaMailHref() {
   const note = String(state.genAlphaNote || "").trim();
   const subject = q ? `Question on ${q.id}` : "Gen Alpha questions";
   const body = [
-    "To: gmgbrandlable",
+    "To: " + LOUIS_MAIL,
     q ? `Question: ${q.prompt}` : "Gen Alpha questions",
     note ? `Question on this question: ${note}` : "",
   ].filter(Boolean).join("\n");
   return `mailto:${LOUIS_MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-/** Read-only list for the generation picked in Dojo, then a note that emails gmgbrandlable. */
+/** Read-only list for the generation picked in Dojo, then a note that emails the house inbox. */
 function genAlphaReviewHTML() {
   const open = state.genAlphaOpen === true;
   const gen = reviewGeneration();
@@ -3812,6 +3812,7 @@ function welcomeLetterHTML() {
     : "";
   return `<section class="wager intro">
     <p class="wager-copy"><b>${escapeHtml(letter.subject)}</b></p>
+    <p class="meta">${escapeHtml(letter.from || LOUIS_MAIL)}</p>
     <p class="wager-copy">${escapeHtml(letter.body)}</p>
     ${song}
     <button class="ghost" id="dismissWelcome" type="button">${tt("dismissWelcome")}</button>

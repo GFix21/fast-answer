@@ -22,8 +22,8 @@ const THREAT = /\b(you will fail|everyone will laugh at you|what'?s wrong with y
 
 export const LOUIS_BOT = "Louis Liberty";
 
-/** Mailbox named for notes about these questions. */
-export const LOUIS_MAIL = "gmgbrandlable";
+/** House inbox. Notes and the welcome letter use this address. */
+export const LOUIS_MAIL = "gmgbrandlabel@gmail.com";
 
 function textOf(q) {
   const choices = Array.isArray(q?.choices) ? q.choices.join(" ") : "";

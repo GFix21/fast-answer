@@ -10,6 +10,7 @@ const letter = await saveLetter({
   attachmentName: "theme.mp3",
 });
 assert.equal(letter.subject, "Hello");
+assert.equal(letter.from, "gmgbrandlabel@gmail.com");
 assert.equal(letter.attachment.kind, "link");
 assert.equal(letter.attachment.href, "https://example.com/song.mp3");
 
