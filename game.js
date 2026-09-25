@@ -452,6 +452,9 @@ function shareUrlFor(code) {
   u.search = `?role=pad&room=${encodeURIComponent(code || state.room)}`;
   return u.toString();
 }
+function shareUrl() {
+  return shareUrlFor(state.room);
+}
 function applyRoomSetup(room) {
   if (!room || room.error) return;
   if (room.playerCount) state.playerCount = clamp(Number(room.playerCount) || 3, 2, 12);
@@ -496,8 +499,32 @@ function buzzerEditorHTML() {
     <div class="seat-n" role="group">${BUZZ_COLOURS.map((c) => `<button type="button" class="bz-swatch ${look.colour === c ? "on" : ""}" data-bzc="${c}" style="background:${c}" aria-label="${c}"></button>`).join("")}</div>
     <button class="ghost" id="openBuzzer" type="button">${tt("openBuzzer")}</button>`;
 }
-function shareUrl() {
-  return shareUrlFor(state.room);
+function tvPageUrl(roomCode = state.room) {
+  const code = String(roomCode || state.room || "").toUpperCase();
+  return `${location.origin}/tv/${encodeURIComponent(code)}`;
+}
+function connectSheetHTML() {
+  if (!state.connectOpen || !state.room || state.tvMirror || forcedDisplay) return "";
+  const url = tvPageUrl(state.room);
+  const seen = state.tvSeenAt && Date.now() - Number(state.tvSeenAt) < 12000;
+  return `
+    <div class="connect-sheet" role="dialog">
+      <p class="field">${tt("openOnTv")}</p>
+      <p class="room-code"><b>${escapeHtml(state.room)}</b></p>
+      <img class="connect-qr" alt="" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(url)}"/>
+      <p class="meta">${escapeHtml(url)}</p>
+      <p class="status">${seen ? tt("tvConnected") : tt("waitingTv")}</p>
+      <button type="button" class="primary" id="shareTv">${tt("shareTv")}</button>
+    </div>`;
+}
+function tvCodeFormHTML() {
+  if (!state.tvNeedsCode) return "";
+  return `
+    <div class="connect-sheet" role="dialog">
+      <p class="field">${tt("tvCodeLead")}</p>
+      <input id="tvCode" maxlength="8" autocapitalize="characters" placeholder="CODE"/>
+      <button type="button" class="primary" id="tvConnect">${tt("connectTv")}</button>
+    </div>`;
 }
 function tvSilkUrl(roomCode = state.room) {
   const code = String(roomCode || state.room || "").toUpperCase();
@@ -2269,6 +2296,11 @@ async function goToTvRoom() {
     else await createTvCast();
   }
   if (!state.room) return;
+  if (state.tvMirror) {
+    state.statusMsg = tt("waitingTv");
+    paint(true);
+    return;
+  }
   if (isTvDisplay() || state.onScreen || forcedDisplay) {
     enterReady();
     return;
@@ -4661,6 +4693,8 @@ function lobbyHTML() {
     </div>
     <div></div>
     ${joinQrChip(140)}
+    ${connectSheetHTML()}
+    ${tvCodeFormHTML()}
     ${footHTML()}
     ${rulesHTML()}
   `;
@@ -4968,17 +5002,40 @@ async function createTvCast() {
 async function connectToTv() {
   if (!state.room) {
     if (isTvDisplay() || state.onScreen) await openRoom("tv");
-    else {
-      state.castForm = true;
-      state.mpMode = "cast";
-      paint(true);
-      return;
-    }
+    else await createTvCast();
   }
+  if (!state.room) return;
   state.connectOpen = true;
-  const url = tvSilkUrl(state.room);
+  const url = tvPageUrl(state.room);
+  paint(true);
+  if (navigator.share) {
+    try { await navigator.share({ title: "Fast Answer", url }); } catch { /* dismissed */ }
+  }
   const ok = await copyText(url);
   state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
+  paint(true);
+}
+
+async function followTvRoom(code) {
+  const room = String(code || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8);
+  if (room.length < 3) return;
+  state.room = room;
+  state.onScreen = true;
+  state.mpMode = "host";
+  state.tvNeedsCode = false;
+  const live = await rooms("GET");
+  if (!live || live.error) {
+    state.statusMsg = tt("roomMissing", room);
+    state.tvNeedsCode = true;
+    paint(true);
+    return;
+  }
+  state.tvMirror = true;
+  state.roomHost = cleanSeatName(live.host || "");
+  if (live.guests) ingestGuests(live.guests);
+  if (live.state && live.state.phase) applyHostState(live.state);
+  try { history.replaceState(null, "", `/tv/${room}`); } catch { /* ignore */ }
+  startPoll();
   paint(true);
 }
 
@@ -5523,6 +5580,13 @@ function bindLobby() {
   if (createTvCastBtn) createTvCastBtn.onclick = () => { track("gameRoom"); void createTvCast(); };
   const connectTv = $("#connectTv");
   if (connectTv) connectTv.onclick = () => { track("gameRoom"); void connectToTv(); };
+  const shareTv = $("#shareTv");
+  if (shareTv) shareTv.onclick = () => { void connectToTv(); };
+  const tvConnect = $("#tvConnect");
+  if (tvConnect) tvConnect.onclick = () => {
+    const raw = ($("#tvCode") && $("#tvCode").value) || "";
+    void followTvRoom(raw);
+  };
   const goTv = $("#goTvRoom");
   if (goTv) goTv.onclick = () => { track("gameRoom"); void goToTvRoom(); };
   document.querySelectorAll("#readyEnter").forEach((b) => {
@@ -6271,6 +6335,20 @@ function startPoll() {
     if (forcedDisplay && state.phase === "lobby") applyRoomSetup(j);
     pollN += 1;
     if (applyRefreshFromRoom(j)) paint(true);
+    if (j.tvSeenAt && j.tvSeenAt !== state.tvSeenAt) {
+      state.tvSeenAt = j.tvSeenAt;
+      if (state.connectOpen) paint(true);
+    }
+    if (state.tvMirror) {
+      if (pollN % 5 === 0) void rooms("POST", { action: "tv-seen", code: state.room });
+      const before = `${state.phase}:${state.joinLeft}:${(state.guests || []).map((g) => g.id).join(",")}`;
+      if (j.host) state.roomHost = cleanSeatName(j.host);
+      if (j.guests) ingestGuests(j.guests);
+      if (j.state && j.state.phase) applyHostState(j.state);
+      const after = `${state.phase}:${state.joinLeft}:${(state.guests || []).map((g) => g.id).join(",")}`;
+      if (before !== after) paint();
+      return;
+    }
     if (j.host) state.roomHost = cleanSeatName(j.host);
     if (role !== "pad" && state.phase === "lobby" && j.state?.armTv) {
       state.joinWait = clamp(Number(j.state.joinLeft) || state.joinWait || 35, 5, 45);
@@ -6542,16 +6620,16 @@ if (isDirections) {
   await identifyCountry();
   void pullDojoPhoto();
   if (forcedDisplay) {
-    // ?tv=1 is the Silk link. It owns this room even if the browser last used Join TV.
     state.onScreen = true;
     state.mpMode = "host";
     state.lobbyOpen = "room";
-    if (joinCode) state.room = joinCode;
-    try {
-      localStorage.setItem("fa-onscreen", "1");
-      localStorage.setItem("fa-mp", "host");
-    } catch { /* ignore */ }
-    void openRoom("tv").then(() => refreshActiveRooms()).then(() => paint(true));
+    if (joinCode) {
+      state.room = joinCode;
+      void followTvRoom(joinCode);
+    } else {
+      state.tvNeedsCode = true;
+      paint(true);
+    }
   } else if (role === "pad") {
     state.onScreen = true; // pad follows the room; the chrome stays a phone pad
     state.mpMode = "join";
