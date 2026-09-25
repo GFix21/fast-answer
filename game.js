@@ -280,6 +280,9 @@ const state = {
   readyIds: {},
   mpMode: (role === "pad" || joinCode) ? "join" : (forcedDisplay ? "host" : "off"),
   statusMsg: "",
+  welcomeLetter: null,
+  chatOpen: false,
+  albumOn: false,
   placementQs: [],
   botFill: true,
   locale: loadStoredLocale(),
@@ -1460,7 +1463,7 @@ function markEntered() {
     try { localStorage.setItem("fa-mp", "join"); } catch { /* ignore */ }
   }
 }
-async function commitNewProfile(name, email, pw) {
+async function commitNewProfile(name, email, pw, joinList = true) {
   const cleanName = String(name || "").trim().slice(0, 18);
   const cleanEmail = String(email || "").trim();
   if (!cleanName) {
@@ -1500,6 +1503,7 @@ async function commitNewProfile(name, email, pw) {
     age: form.age,
     country: form.country,
     detectedCountry: detected,
+    mailingList: joinList === true,
   });
   if (!remote.ok && remote.status !== 503) {
     state.statusMsg = remote.data?.error === "age"
@@ -1535,6 +1539,10 @@ async function commitNewProfile(name, email, pw) {
     consent: true,
     playLocked: false,
   });
+  if (remote.data?.welcome) {
+    state.welcomeLetter = remote.data.welcome;
+    try { sessionStorage.setItem("fa-welcome", JSON.stringify(remote.data.welcome)); } catch { /* ignore */ }
+  }
   state.childrenLoaded = false;
   state.dojoMode = "home";
   state.roomDojoPanel = "";
@@ -3674,6 +3682,10 @@ function dojoBody() {
       <input id="emNew" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
       <label class="field" for="pwNew">${tt("password")}</label>
       <input id="pwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
+      <label class="topic-row">
+        <input id="joinMail" type="checkbox" checked/>
+        <span>${tt("joinMail")}</span>
+      </label>
       <label class="field" for="thDojo">${tt("photoTv")}</label>
       <div class="thumb-row">
         ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
@@ -3725,6 +3737,7 @@ function dojoBody() {
   const scores = p.topScores || [];
   const scrollOpen = state.dojoScroll !== "closed";
   return dojoChrome(`
+    ${welcomeLetterHTML()}
     <p class="dir-copy">${tt("dojoUnlockedIntro")}</p>
     ${beltStatusBlock(p)}
     <section class="scroll-acc ${scrollOpen ? "open" : ""}">
@@ -3788,6 +3801,60 @@ function dojoGateChipsHTML() {
     ? `<span class="chip ok">${tt("placed")}</span>`
     : `<span class="chip hot">${tt("placementNeeded")}</span>`;
   return `<div class="dojo-gate-chips" role="status">${lockChip}${placeChip}</div>`;
+}
+
+/** Profile card on the phone lobby. Create and Unlock stay in the Dojo. */
+function welcomeLetterHTML() {
+  const letter = state.welcomeLetter;
+  if (!letter?.subject) return "";
+  const song = letter.attachment?.href
+    ? `<p class="meta"><a href="${escapeHtml(letter.attachment.href)}">${escapeHtml(letter.attachment.name || tt("musicOn"))}</a></p>`
+    : "";
+  return `<section class="wager intro">
+    <p class="wager-copy"><b>${escapeHtml(letter.subject)}</b></p>
+    <p class="wager-copy">${escapeHtml(letter.body)}</p>
+    ${song}
+    <button class="ghost" id="dismissWelcome" type="button">${tt("dismissWelcome")}</button>
+  </section>`;
+}
+
+function houseLinksHTML() {
+  if (isTvDisplay() && forcedDisplay) return "";
+  return `<div class="house-links">
+    <button type="button" class="ghost" id="albumMusic">${state.albumOn ? tt("musicOff") : tt("musicOn")}</button>
+    <button type="button" class="ghost" id="openChat">${tt("openChat")}</button>
+    <a class="ghost" id="openGames" href="https://gmgbrand.vercel.app/games">${tt("games")}</a>
+  </div>
+  ${state.chatOpen ? `<div class="wager"><p class="wager-copy">${tt("chatLead")}</p></div>` : ""}`;
+}
+
+function track(event) {
+  fetch("/api/metrics", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ event }),
+  }).catch(() => {});
+}
+
+let albumAudio = null;
+function toggleAlbumMusic() {
+  if (state.albumOn && albumAudio) {
+    albumAudio.pause();
+    state.albumOn = false;
+    paint(true);
+    return;
+  }
+  track("musicOn");
+  const audio = albumAudio || new Audio("/api/welcome?song=1");
+  albumAudio = audio;
+  audio.play().then(() => {
+    state.albumOn = true;
+    paint(true);
+  }).catch(() => {
+    state.albumOn = false;
+    state.statusMsg = tt("musicMissing");
+    paint(true);
+  });
 }
 
 /** Profile card on the phone lobby. Create and Unlock stay in the Dojo. */
@@ -4003,6 +4070,7 @@ function roomBody() {
       ${roomLinksHTML()}
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
+      ${houseLinksHTML()}
       ${offer ? `
         <div class="join-offer">
           <p class="dir-copy"><b>${tt("joinInAction")}</b> ${escapeHtml(String(offer.tier || offer.phase || "").toUpperCase())}</p>
@@ -4059,6 +4127,7 @@ function roomBody() {
       `}
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
+      ${houseLinksHTML()}
       ${lobbyPlayExtras()}
       ${roomDojoEntryHTML()}
     `;
@@ -4784,14 +4853,14 @@ function bindDojoSurface() {
     const name = String(($("#nm") && $("#nm").value) || "").trim().slice(0, 18);
     const email = String(($("#emNew") && $("#emNew").value) || "");
     const pw = String(($("#pwNew") && $("#pwNew").value) || "");
-    await commitNewProfile(name, email, pw);
+    await commitNewProfile(name, email, pw, !($("#joinMail") && $("#joinMail").checked === false));
   };
   const roomCreateSubmit = $("#roomCreateSubmit");
   if (roomCreateSubmit) roomCreateSubmit.onclick = async () => {
     const name = String(($("#roomNm") && $("#roomNm").value) || "").trim().slice(0, 18);
     const email = String(($("#roomEm") && $("#roomEm").value) || "");
     const pw = String(($("#roomPwNew") && $("#roomPwNew").value) || "");
-    await commitNewProfile(name, email, pw);
+    await commitNewProfile(name, email, pw, !($("#joinMail") && $("#joinMail").checked === false));
   };
   const commitPassword = async (pw, pw2) => {
     if (pw.length < 4) {
@@ -5179,6 +5248,7 @@ function bindLobby() {
   });
   const joinRoomBtn = $("#joinRoom");
   if (joinRoomBtn) joinRoomBtn.onclick = () => {
+    track("gameRoom");
     const jc = $("#jc");
     const code = jc ? String(jc.value || "") : (state.joinInput || "");
     void beginJoin(code);
@@ -5189,15 +5259,16 @@ function bindLobby() {
       if (!code) return;
       const jc = $("#jc");
       if (jc) jc.value = code.toUpperCase();
+      track("gameRoom");
       void beginJoin(code);
     };
   });
   const createRoomBtn = $("#createRoom");
-  if (createRoomBtn) createRoomBtn.onclick = () => { void createOffScreenRoom(); };
+  if (createRoomBtn) createRoomBtn.onclick = () => { track("gameRoom"); void createOffScreenRoom(); };
   const createTvCastBtn = $("#createTvCast");
-  if (createTvCastBtn) createTvCastBtn.onclick = () => { void createTvCast(); };
+  if (createTvCastBtn) createTvCastBtn.onclick = () => { track("gameRoom"); void createTvCast(); };
   const connectTv = $("#connectTv");
-  if (connectTv) connectTv.onclick = () => { void connectToTv(); };
+  if (connectTv) connectTv.onclick = () => { track("gameRoom"); void connectToTv(); };
   const castRoomBtn = $("#castRoom");
   if (castRoomBtn) castRoomBtn.onclick = () => { void castThisRoom(); };
   document.querySelectorAll("#openBuzzer").forEach((b) => {
@@ -5286,7 +5357,23 @@ function bindLobby() {
   bindSliders();
   bindRules();
   const playOffline = $("#playOffline");
-  if (playOffline) playOffline.onclick = () => { void startOffline(); };
+  if (playOffline) playOffline.onclick = () => { track("games"); void startOffline(); };
+  const albumMusic = $("#albumMusic");
+  if (albumMusic) albumMusic.onclick = () => toggleAlbumMusic();
+  const openChat = $("#openChat");
+  if (openChat) openChat.onclick = () => {
+    state.chatOpen = !state.chatOpen;
+    if (state.chatOpen) track("openChat");
+    paint(true);
+  };
+  const openGames = $("#openGames");
+  if (openGames) openGames.onclick = () => track("games");
+  const dismissWelcome = $("#dismissWelcome");
+  if (dismissWelcome) dismissWelcome.onclick = () => {
+    state.welcomeLetter = null;
+    try { sessionStorage.removeItem("fa-welcome"); } catch { /* ignore */ }
+    paint(true);
+  };
   const roomName = $("#roomName");
   if (roomName) roomName.onchange = () => {
     state.roomName = roomName.value;
@@ -6115,6 +6202,10 @@ if (isDirections) {
   }
   await loadReplaySet();
   state.profile = loadProfile();
+  try {
+    const savedWelcome = sessionStorage.getItem("fa-welcome");
+    if (savedWelcome) state.welcomeLetter = JSON.parse(savedWelcome);
+  } catch { /* ignore */ }
   if (state.profile?.displayName) state.name = state.profile.displayName;
   state.botFill = true;
   fillSeats();

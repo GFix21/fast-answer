@@ -15,6 +15,7 @@ import {
 } from "../lib/profile-store.js";
 import { openSession, sessionCookie, sessionProfileId } from "../lib/profile-session.js";
 import { readScores, recordScore } from "../lib/score-vault.js";
+import { deployWelcome } from "../lib/fan-mail.js";
 
 const SCORE_CAP = 200000;
 
@@ -174,9 +175,15 @@ export default async function handler(req, res) {
       password: body.password,
       age: body.age,
       country: body.country,
+      mailingList: body.mailingList === true,
     });
+    let welcome = null;
+    if (body.mailingList === true) {
+      try { welcome = await deployWelcome({ email: profile.email, name: profile.displayName }); }
+      catch { welcome = null; }
+    }
     const token = await openSession(profile.id);
-    return json(res, 200, { ok: true, token, profile }, { cookie: sessionCookie(token) });
+    return json(res, 200, { ok: true, token, profile, welcome }, { cookie: sessionCookie(token) });
   } catch (err) {
     if (err.code === "exists") {
       try {

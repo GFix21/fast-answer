@@ -42,6 +42,7 @@ const state = {
     loading: false,
   },
   rejectReady: null,
+  fan: null,
   archive: {
     months: null,
     placementPages: null,
@@ -60,7 +61,7 @@ const state = {
 
 function withLocale(path) {
   const loc = state.locale || "en";
-  if (!path || path.startsWith("login") || path.startsWith("logout") || path.startsWith("session") || path.startsWith("topics") || path.startsWith("profiles")) {
+  if (!path || path.startsWith("login") || path.startsWith("logout") || path.startsWith("session") || path.startsWith("topics") || path.startsWith("profiles") || path.startsWith("fan-mail")) {
     return path;
   }
   const join = path.includes("?") ? "&" : "?";
@@ -227,6 +228,7 @@ function render() {
         ["metrics", t("tab_metrics")],
         ["queue", t("tab_queue")],
         ["profiles", t("tab_profiles")],
+        ["fan", t("tab_fan")],
         ["rooms", t("tab_rooms")],
         ["bank", t("tab_bank")],
         ["archive", t("tab_archive")],
@@ -248,7 +250,14 @@ function render() {
     b.addEventListener("click", () => {
       state.tab = b.dataset.tab;
       state.message = "";
-      if (state.tab === "queue" || state.tab === "console" || state.tab === "rooms" || state.tab === "metrics" || state.tab === "reject") {
+      if (state.tab === "metrics") {
+        Promise.all([loadQueue(false), loadFan(false)]).then(() => render()).catch((e) => {
+          state.message = e.message || "Could not load metrics";
+          render();
+        });
+        return;
+      }
+      if (state.tab === "queue" || state.tab === "console" || state.tab === "rooms" || state.tab === "reject") {
         if (state.tab !== "console" || !state.week) loadQueue(true);
         else render();
         return;
@@ -259,6 +268,10 @@ function render() {
       }
       if (state.tab === "profiles") {
         loadProfiles(true);
+        return;
+      }
+      if (state.tab === "fan" || state.tab === "metrics") {
+        loadFan(true);
         return;
       }
       render();
@@ -281,6 +294,13 @@ function render() {
           <div class="stat"><b>${sc.hard||0}</b><span>${t("tier_hard")}</span></div>
           <div class="stat"><b>${sc.difficult||0}</b><span>${t("tier_difficult")}</span></div>
           <div class="stat"><b>${sc.finale||0}</b><span>${t("tier_finale")}</span></div>
+        </div>
+        <div class="row" style="margin-bottom:16px">
+          <div class="stat"><b>${state.fan?.metrics?.mailingJoins || 0}</b><span>${t("metricJoins")}</span></div>
+          <div class="stat"><b>${state.fan?.metrics?.musicOn || 0}</b><span>${t("metricMusic")}</span></div>
+          <div class="stat"><b>${state.fan?.metrics?.openChat || 0}</b><span>${t("metricChat")}</span></div>
+          <div class="stat"><b>${state.fan?.metrics?.gameRoom || 0}</b><span>${t("metricRoom")}</span></div>
+          <div class="stat"><b>${state.fan?.metrics?.games || 0}</b><span>${t("metricGames")}</span></div>
         </div>
         <div class="row" style="margin-bottom:16px">
           <div class="stat"><b>${st.active||0}</b><span>${t("active")}</span></div>
@@ -332,6 +352,8 @@ function render() {
       </div>`;
     document.getElementById("refreshProfiles")?.addEventListener("click", () => loadProfiles(true));
     document.getElementById("downloadMail")?.addEventListener("click", downloadMailingList);
+  } else if (state.tab === "fan") {
+    renderFan(panel);
   } else if (state.tab === "bank") {
     const tiers = ["all", "easy", "hard", "difficult", "finale"];
     const qs = (pack?.questions || []).filter(
@@ -1337,6 +1359,75 @@ async function deleteFlowRoom(code) {
     state.message = t("deletedRoom", { code });
   } catch (e) {
     state.message = e.message || "Could not delete room";
+  }
+  render();
+}
+
+async function loadFan(rerender) {
+  const data = await api("fan-mail");
+  state.fan = data;
+  if (rerender) render();
+}
+
+function renderFan(panel) {
+  const letter = state.fan?.letter || { subject: "", body: "", attachment: null };
+  const sends = state.fan?.sends || [];
+  const song = letter.attachment
+    ? `<p class="mut">${esc(letter.attachment.name)} · ${esc(letter.attachment.href || "")}</p>`
+    : "";
+  panel.innerHTML = `
+    <div class="card">
+      <h2>${t("fanTitle")}</h2>
+      <p class="mut">${t("fanLead")}</p>
+      <label class="field">${t("fanSubject")}</label>
+      <input id="fanSubject" maxlength="120" value="${esc(letter.subject || "")}"/>
+      <label class="field">${t("fanBody")}</label>
+      <textarea id="fanBody" class="letter-box" maxlength="4000">${esc(letter.body || "")}</textarea>
+      ${song}
+      <label class="field">${t("fanSong")}</label>
+      <input id="fanSong" type="file" accept="audio/*"/>
+      <input id="fanSongUrl" type="url" placeholder="https://"/>
+      <p class="mut">${t("fanSongNote")}</p>
+      <label class="topic-row"><input id="fanClear" type="checkbox"/> ${t("fanClear")}</label>
+      <div class="row" style="margin-top:12px">
+        <button class="btn primary" id="fanSave" type="button">${t("fanSave")}</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>${t("fanSends")}</h2>
+      ${sends.length ? `<table class="plist"><thead><tr><th>${t("name")}</th><th>${t("email")}</th><th>${t("activated")}</th></tr></thead><tbody>
+        ${sends.map((row) => `<tr><td>${esc(row.name)}</td><td>${esc(row.email)}</td><td>${esc(String(row.at || "").replace("T", " ").slice(0, 16))}</td></tr>`).join("")}
+      </tbody></table>` : `<p class="mut">${t("fanNone")}</p>`}
+    </div>`;
+  document.getElementById("fanSave")?.addEventListener("click", saveFan);
+}
+
+async function saveFan() {
+  const subject = document.getElementById("fanSubject")?.value || "";
+  const body = document.getElementById("fanBody")?.value || "";
+  const url = document.getElementById("fanSongUrl")?.value || "";
+  const clearSong = Boolean(document.getElementById("fanClear")?.checked);
+  const file = document.getElementById("fanSong")?.files?.[0];
+  const payload = { subject, body, attachmentUrl: url, clearSong };
+  if (file) {
+    if (file.size > 140000) {
+      state.message = t("fanSongNote");
+      render();
+      return;
+    }
+    const data = await file.arrayBuffer();
+    const bytes = new Uint8Array(data);
+    let binary = "";
+    for (const byte of bytes) binary += String.fromCharCode(byte);
+    payload.songBase64 = btoa(binary);
+    payload.songType = file.type || "audio/mpeg";
+    payload.attachmentName = file.name || "song";
+  }
+  try {
+    state.fan = await api("fan-mail", { method: "POST", body: JSON.stringify(payload) });
+    state.message = t("fanSaved");
+  } catch (e) {
+    state.message = e.message || "Could not save the letter";
   }
   render();
 }

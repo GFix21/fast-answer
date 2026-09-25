@@ -36,6 +36,7 @@ jobs:
           node scripts/age-safe.check.mjs
           node scripts/generation-packs.check.mjs
           node scripts/lockdown-sets.check.mjs
+          node scripts/fan-mail.check.mjs
       - name: Q&A module
         run: |
           node scripts/q-and-a.check.mjs

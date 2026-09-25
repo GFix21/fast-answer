@@ -114,5 +114,5 @@ button.arch-row b{font-family:var(--font-display);font-size:16px}
 .plist td:nth-child(3){font-variant-numeric:tabular-nums;color:var(--mut);white-space:nowrap}
 .queue-sec{margin:18px 0 8px;font-size:18px}
 .q-list.cap{max-height:64vh;overflow:auto;padding-right:4px}
-.room-admin{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.letter-box{width:100%;min-height:160px;margin-top:6px;padding:10px;border-radius:12px;border:1px solid var(--line);background:transparent;color:inherit;font:inherit}
 
