@@ -1539,6 +1539,8 @@ async function commitNewProfile(name, email, pw, joinList = true) {
     role: accepted?.role || "player",
     consent: true,
     playLocked: false,
+    trialEndsAt: accepted?.trialEndsAt || "",
+    mailingList: joinList === true,
   });
   if (remote.data?.welcome) {
     state.welcomeLetter = remote.data.welcome;
@@ -1733,6 +1735,25 @@ async function profileApi(body) {
   const data = await res.json().catch(() => null);
   if (data?.token) keepProfileToken(data.token);
   return { ok: res.ok, status: res.status, data };
+}
+async function refreshServerProfile() {
+  const token = profileToken();
+  if (!token) return;
+  try {
+    const res = await fetch("/api/profiles?me=1", {
+      headers: { "x-fa-profile": token },
+      credentials: "same-origin",
+    });
+    const data = await res.json().catch(() => null);
+    const profile = data && data.profile;
+    if (!res.ok || !profile) return;
+    saveProfile({
+      trialEndsAt: profile.trialEndsAt || "",
+      mailingList: profile.mailingList === true,
+      country: profile.country || state.profile?.country || "",
+      activatedAt: profile.activatedAt || state.profile?.activatedAt,
+    });
+  } catch { /* the booth still opens */ }
 }
 function syncDojoThumb(thumb) {
   const photo = String(thumb || "");
@@ -3709,7 +3730,7 @@ function dojoBody() {
       <label class="field" for="pwNew">${tt("password")}</label>
       <input id="pwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
       <label class="topic-row">
-        <input id="joinMail" type="checkbox" checked/>
+        <input id="joinMail" type="checkbox"/>
         <span>${tt("joinMail")}</span>
       </label>
       <label class="field" for="thDojo">${tt("photoTv")}</label>
@@ -3800,6 +3821,7 @@ function dojoBody() {
     <label class="field" for="pwConfirm">${tt("confirmPassword")}</label>
     <input id="pwConfirm" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("optional")}"/>
     <button class="ghost" id="saveProfileEdit" type="button">${tt("saveProfile")}</button>
+    ${accountRightsHTML(p)}
     ${placed
       ? `<p class="meta">${escapeHtml(tt("abilityRetake", (ab && ab.label) || tt("placed"), formatDue(mandatoryPlacementDue(p) || p.placementCompletedAt)))}</p>`
       : ""}
@@ -3811,6 +3833,24 @@ function dojoBody() {
   `);
 }
 
+
+function accountRightsHTML(p) {
+  const end = Date.parse(p?.trialEndsAt || "");
+  const open = Number.isFinite(end) && Date.now() <= end;
+  const country = String(p?.country || state.detectedCountry || "").toUpperCase();
+  const eu = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"].includes(country);
+  const withdraw = open && (eu || state.locale === "fr" || state.locale === "de");
+  return `<section class="wager">
+    ${open ? `<p class="meta">${escapeHtml(tt("demoBill"))}</p>` : ""}
+    <label class="topic-row">
+      <input id="mailConsent" type="checkbox" ${p?.mailingList ? "checked" : ""}/>
+      <span>${tt("mailConsent")}</span>
+    </label>
+    <p class="meta">${escapeHtml(tt("deleteLead"))}</p>
+    ${withdraw ? `<button class="primary" id="withdraw14" type="button">${tt("withdraw14")}</button>` : ""}
+    <button class="ghost" id="deleteAccount" type="button">${tt("deleteAccount")}</button>
+  </section>`;
+}
 
 function dojoGateChipsHTML() {
   if (isTvDisplay()) return "";
@@ -4934,6 +4974,7 @@ function bindDojoSurface() {
     state.profileUnlocked = true;
     state.dojoMode = "home";
     state.statusMsg = "";
+    await refreshServerProfile();
     if (needsPlacement(state.profile)) startDojo();
     else paint(true);
   };
@@ -4945,6 +4986,32 @@ function bindDojoSurface() {
     state.statusMsg = tt("profileLocked");
     paint(true);
   };
+  const mailConsent = $("#mailConsent");
+  if (mailConsent) mailConsent.onchange = () => {
+    void profileApi({ action: "mail-consent", mailingList: mailConsent.checked === true }).then((remote) => {
+      if (remote.ok) saveProfile({ mailingList: mailConsent.checked === true });
+    });
+  };
+  const closeAccount = async (action) => {
+    const word = action === "withdraw" ? tt("withdraw14") : tt("deleteAccount");
+    if (!window.confirm(word)) return;
+    const remote = await profileApi({ action, locale: state.locale });
+    if (!remote.ok) {
+      state.statusMsg = tt("wrongPassword");
+      paint(true);
+      return;
+    }
+    try { sessionStorage.removeItem("fa-profile-token"); } catch { /* ignore */ }
+    state.profile = seedProfile();
+    state.profileUnlocked = false;
+    state.entered = false;
+    state.dojoMode = "create";
+    paint(true);
+  };
+  const deleteAccount = $("#deleteAccount");
+  if (deleteAccount) deleteAccount.onclick = () => { void closeAccount("delete-account"); };
+  const withdraw14 = $("#withdraw14");
+  if (withdraw14) withdraw14.onclick = () => { void closeAccount("withdraw"); };
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
   bindForgotPassword();
@@ -6222,6 +6289,7 @@ if (isDirections) {
     await identifyCountry();
     paint(true);
     void syncTopScores();
+    void refreshServerProfile().then(() => { if (state.profileUnlocked) paint(true); });
     void pullDojoPhoto();
     window.__fa = state;
   }
