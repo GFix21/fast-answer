@@ -1,0 +1,93 @@
+{
+  "id": "12-gen-y-b",
+  "generation": "gen-y",
+  "opposite": "11-gen-x-b",
+  "link": "banks/lockdown/fr-CA/12-gen-y-b.json",
+  "questions": [
+    {
+      "id": "cq-w39-gy-d-zw-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Zimbabwe?",
+      "choices": [
+        "Gaborone",
+        "Lusaka",
+        "Harare",
+        "Bulawayo"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-telephone-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the telephone patent of 1876 ?",
+      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi",
+        "Alexander Graham Bell"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-smallpox-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first smallpox vaccine ?",
+      "choices": [
+        "Louis Pasteur",
+        "Edward Jenner",
+        "Alexander Fleming",
+        "Jonas Salk"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-turing-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the idea of a universal computing machine in 1936 ?",
+      "choices": [
+        "Ada Lovelace",
+        "John von Neumann",
+        "Alan Turing",
+        "Charles Babbage"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-tereshkova-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-y",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first woman in space ?",
+      "choices": [
+        "Mae Jemison",
+        "Valentina Tereshkova",
+        "Sally Ride",
+        "Svetlana Savitskaya"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Je dis ça,"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "03-baby-boomer",
+  "generation": "baby-boomer",
+  "opposite": "04-gen-z",
+  "link": "banks/lockdown/de/03-baby-boomer.json",
+  "questions": [
+    {
+      "id": "w39-d-boomer-apollo13",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Versagen ist keine…",
+      "prompt": "In welchem Jahr explodierte der Sauerstofftank von Apollo 13?",
+      "choices": [
+        "1968",
+        "1972",
+        "1970",
+        "1969"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-boomer-salt",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Vertrag 1972",
+      "prompt": "Welches Rüstungskontrollabkommen unterzeichneten die USA und die Sowjetunion 1972?",
+      "choices": [
+        "Camp-David-Abkommen",
+        "Schlussakte von Helsinki",
+        "SALT I",
+        "Warschauer Pakt"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die Initialen sind der kurze Name. Das Jahr ist 1972.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-la-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Laos?",
+      "choices": [
+        "Luang Prabang",
+        "Hanoi",
+        "Vientiane",
+        "Phnom Penh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-bt-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Bhutan?",
+      "choices": [
+        "Thimphu",
+        "Punakha",
+        "Kathmandu",
+        "Paro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,"
+    },
+    {
+      "id": "cq-w39-bo-d-na-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Namibia?",
+      "choices": [
+        "Walfischbucht",
+        "Gaborone",
+        "Swakopmund",
+        "Windhoek"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na klar,"
+    }
+  ]
+}

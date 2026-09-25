@@ -1,0 +1,93 @@
+{
+  "id": "14-gen-x-c",
+  "generation": "gen-x",
+  "opposite": "13-multi-gen",
+  "link": "banks/lockdown/en/14-gen-x-c.json",
+  "questions": [
+    {
+      "id": "cq-w39-gx-d-y-shakespeare",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year William Shakespeare was born?",
+      "choices": [
+        "1660",
+        "1564",
+        "1616",
+        "1500"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-ww1-start",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year World War I began?",
+      "choices": [
+        "1918",
+        "1905",
+        "1939",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-ve",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Victory in Europe Day marked the end of the war in Europe?",
+      "choices": [
+        "1941",
+        "1950",
+        "1945",
+        "1944"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-nixon",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Richard Nixon resigned the presidency?",
+      "choices": [
+        "1969",
+        "1974",
+        "1972",
+        "1976"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-hongkong",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fast fact",
+      "prompt": "In which year Hong Kong was handed over to China?",
+      "choices": [
+        "1997",
+        "1984",
+        "1999",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Whatever the case,"
+    }
+  ]
+}

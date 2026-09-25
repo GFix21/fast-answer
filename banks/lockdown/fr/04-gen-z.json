@@ -1,0 +1,91 @@
+{
+  "id": "04-gen-z",
+  "generation": "gen-z",
+  "opposite": "03-baby-boomer",
+  "link": "banks/lockdown/fr/04-gen-z.json",
+  "questions": [
+    {
+      "id": "w39-d-genz-openai",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Manières de modèles",
+      "prompt": "En quelle année OpenAI a-t-il mis ChatGPT à disposition du public ?",
+      "choices": [
+        "2018",
+        "2024",
+        "2022",
+        "2020"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-genz-parasite",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Escaliers et sous-titres",
+      "prompt": "Le film Parasite, de quel pays, a remporté l’Oscar du meilleur film ?",
+      "choices": [
+        "Corée du Sud",
+        "Japon",
+        "France",
+        "Mexique"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-genz-webb",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Œil lointain",
+      "prompt": "En quelle année le télescope spatial James-Webb a-t-il été lancé ?",
+      "choices": [
+        "2021",
+        "2024",
+        "2016",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Le jour de Noël, depuis un port spatial en Amérique du Sud.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-af-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Afghanistan?",
+      "choices": [
+        "Kandahar",
+        "Mazar-i-Sharif",
+        "Herat",
+        "Kabul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    },
+    {
+      "id": "cq-w39-gz-d-mg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de Madagascar?",
+      "choices": [
+        "Antananarivo",
+        "Nairobi",
+        "Antsirabe",
+        "Toamasina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Sans chichi,"
+    }
+  ]
+}

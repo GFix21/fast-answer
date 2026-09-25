@@ -9,6 +9,7 @@ import { readFullBank } from "../lib/sealed-bank.js";
 import { stripBank, stripQuestion, shuffleKeyedQuestion } from "../lib/strip-answers.js";
 import { dealShow } from "../lib/generation-deal.js";
 import { orderShowSets } from "../lib/show-pace.js";
+import { LOCKDOWN_GENERATION, lockdownSetPath } from "../lib/lockdown-sets.js";
 import { replayQuestions } from "../lib/set-archive.js";
 import { questionDealable } from "../lib/content-freeze.js";
 
@@ -155,6 +156,15 @@ async function handleDeck(req, res) {
 
   if (body.action === "lockdown") {
     if (!allow(ip, "lockdown", 20)) return json(res, 429, { error: "limit" });
+    const setId = String(body.setId || "");
+    if (LOCKDOWN_GENERATION[setId]) {
+      const packed = readFullBank(lockdownSetPath(setId, locale));
+      const questions = keyed(packed?.questions || []).filter((q) => Number.isInteger(q?.correctIndex)).slice(0, 5);
+      if (questions.length >= 5) {
+        await saveRoom({ ...room, lockdownDeck: questions });
+        return json(res, 200, { questions, setId, generation: packed.generation, link: packed.link || "" });
+      }
+    }
     const avoid = new Set([
       ...(Array.isArray(body.avoid) ? body.avoid : []),
       ...((room.answerDeck || []).map((q) => q.id)),

@@ -1,0 +1,92 @@
+{
+  "id": "03-baby-boomer",
+  "generation": "baby-boomer",
+  "opposite": "04-gen-z",
+  "link": "banks/lockdown/en/03-baby-boomer.json",
+  "questions": [
+    {
+      "id": "w39-d-boomer-apollo13",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Failure Is Not…",
+      "prompt": "Apollo 13’s oxygen-tank explosion happened in which year?",
+      "choices": [
+        "1968",
+        "1972",
+        "1970",
+        "1969"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-boomer-salt",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "1972 Treaty",
+      "prompt": "Which arms-control agreement did the United States and the Soviet Union sign in 1972?",
+      "choices": [
+        "Camp David Accords",
+        "Helsinki Final Act",
+        "SALT I",
+        "Warsaw Pact"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The initials are the short name. The year is 1972.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-d-la-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Laos?",
+      "choices": [
+        "Luang Prabang",
+        "Hanoi",
+        "Vientiane",
+        "Phnom Penh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-d-bt-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Bhutan?",
+      "choices": [
+        "Thimphu",
+        "Punakha",
+        "Kathmandu",
+        "Paro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-d-na-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Namibia?",
+      "choices": [
+        "Walvis Bay",
+        "Gaborone",
+        "Swakopmund",
+        "Windhoek"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    }
+  ]
+}

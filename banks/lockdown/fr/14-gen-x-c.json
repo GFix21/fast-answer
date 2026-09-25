@@ -1,0 +1,93 @@
+{
+  "id": "14-gen-x-c",
+  "generation": "gen-x",
+  "opposite": "13-multi-gen",
+  "link": "banks/lockdown/fr/14-gen-x-c.json",
+  "questions": [
+    {
+      "id": "cq-w39-gx-d-y-shakespeare",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année William Shakespeare est né ?",
+      "choices": [
+        "1660",
+        "1564",
+        "1616",
+        "1500"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-ww1-start",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année la Première Guerre mondiale a commencé ?",
+      "choices": [
+        "1918",
+        "1905",
+        "1939",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-ve",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année le jour de la Victoire en Europe a marqué la fin de la guerre en Europe ?",
+      "choices": [
+        "1941",
+        "1950",
+        "1945",
+        "1944"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-nixon",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année Richard Nixon a démissionné de la présidence ?",
+      "choices": [
+        "1969",
+        "1974",
+        "1972",
+        "1976"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-hongkong",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "En quelle année Hong Kong a été remis à la Chine ?",
+      "choices": [
+        "1997",
+        "1984",
+        "1999",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    }
+  ]
+}

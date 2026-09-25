@@ -14,11 +14,11 @@ import {
   orderShowSets,
   setBreakDue,
   tierRunLength,
-  lockdownSlots,
   mapUsesLeft,
   MAP_USES_PER_ROUND,
   SET_BREAK_S,
 } from "./lib/show-pace.js";
+import { evokeLockdownSlots, lockdownSetPath, pickOppositePair } from "./lib/lockdown-sets.js";
 import { dealRamp } from "./lib/generation-deal.js";
 import { slangFor } from "./q-and-a/bots/slang.js";
 import { hashProfilePassword, hashesMatch } from "./lib/password.js";
@@ -1280,14 +1280,7 @@ function questionRefreshHTML() {
     </div>`;
 }
 function pickLockdownSlots() {
-  const qs = state.qs || [];
-  if (qs.length < 8) return [];
-  const slots = lockdownSlots(qs);
-  if (slots.length >= 2) return slots.slice(0, 2);
-  const a = slots[0] ?? Math.min(qs.length - 1, Math.max(1, Math.floor(qs.length * 0.45)));
-  let b = Math.min(qs.length - 1, Math.max(a + 1, qs.length - 2));
-  if (b === a) return [a];
-  return [a, b];
+  return evokeLockdownSlots(state.qs?.length || 0);
 }
 function leftoverQs(preferHard = false) {
   const recent = new Set(loadRecentQuestionIds());
@@ -2557,9 +2550,10 @@ async function startLockdown(playerId) {
     ...(state.spent ? [...state.spent] : []),
   ];
   const which = state.lockdownRound || 0;
+  const setId = state.lockdownPair?.[which] || "";
   let qs = buildLockdownQuestions(avoid, which);
   if (!bankHasKeys(qs)) {
-    const keyed = await requestHostDeck("lockdown", { avoid });
+    const keyed = await requestHostDeck("lockdown", { avoid, setId });
     if (keyed) qs = keyed;
   }
   if (!qs || qs.length < LOCKDOWN_N) {
@@ -2830,11 +2824,12 @@ function finishLockdown() {
   }
   ld.won = ld.hits >= LOCKDOWN_WIN_AT;
   ld.phase = "result";
-  // Points already banked per-hit via decaying value; wager settles now.
+  // A correct call doubles the stake (pay the stake). A wrong call loses it.
   Object.entries(ld.wagers).forEach(([id, w]) => {
     if (!w?.locked) return;
     const hit = (w.side === "win" && ld.won) || (w.side === "lose" && !ld.won);
-    addScore(id, hit ? w.amount : -w.amount);
+    const stake = Number(w.amount) || 0;
+    addScore(id, hit ? stake : -stake);
   });
   state.pose = ld.won ? "win" : "loss";
   paint();
@@ -5744,8 +5739,28 @@ function ingestGuests(guests) {
   seatPendingJoins();
 }
 
-function prepareLockdownSets() {
+async function loadLockdownFile(setId) {
+  try {
+    const res = await fetch(`/${lockdownSetPath(setId, state.locale)}`);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data?.questions) ? data.questions.slice(0, LOCKDOWN_N) : [];
+  } catch {
+    return [];
+  }
+}
+
+async function prepareLockdownSets() {
   const cohort = ensureCohort();
+  const pair = state.lockdownPair || pickOppositePair();
+  state.lockdownPair = pair;
+  const loaded = [];
+  for (const id of pair) loaded.push(await loadLockdownFile(id));
+  if (loaded.every((list) => list.length >= LOCKDOWN_N)) {
+    cohort.lockdownSets = loaded;
+    state.cohort = cohort;
+    return;
+  }
   if (!cohort?.packs) return;
   const players = playersForDeal();
   const used = (state.qs || []).map((q) => q.id);
@@ -5819,7 +5834,8 @@ async function startGame() {
   state.lockdownAt = pickLockdownSlots();
   state.lockdown = null;
   state.lockdownRound = 0;
-  prepareLockdownSets();
+  state.lockdownPair = pickOppositePair();
+  await prepareLockdownSets();
   state.maps = {};
   state.mapUses = {};
   state.setBreakLeft = 0;

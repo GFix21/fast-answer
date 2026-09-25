@@ -1,0 +1,93 @@
+{
+  "id": "08-gen-alpha-b",
+  "generation": "gen-alpha",
+  "opposite": "07-silent-generation-b",
+  "link": "banks/lockdown/fr-CA/08-gen-alpha-b.json",
+  "questions": [
+    {
+      "id": "cq-w39-al-d-plane-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first powered airplane flight, in 1903 ?",
+      "choices": [
+        "the Wright brothers",
+        "Amelia Earhart",
+        "Charles Lindbergh",
+        "Alberto Santos-Dumont"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-tesla-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the alternating-current induction motor, as its inventor ?",
+      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Michael Faraday",
+        "George Westinghouse"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-hopper-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the compiler work that helped create COBOL ?",
+      "choices": [
+        "Grace Hopper",
+        "Margaret Hamilton",
+        "Ada Lovelace",
+        "Katherine Johnson"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-glenn-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first American to orbit Earth ?",
+      "choices": [
+        "John Glenn",
+        "Scott Carpenter",
+        "Neil Armstrong",
+        "Alan Shepard"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-constitution",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la Constitution des États-Unis a été signée à Philadelphie ?",
+      "choices": [
+        "1787",
+        "1791",
+        "1783",
+        "1776"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    }
+  ]
+}

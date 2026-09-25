@@ -1,0 +1,91 @@
+{
+  "id": "04-gen-z",
+  "generation": "gen-z",
+  "opposite": "03-baby-boomer",
+  "link": "banks/lockdown/en/04-gen-z.json",
+  "questions": [
+    {
+      "id": "w39-d-genz-openai",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Model Manners",
+      "prompt": "OpenAI released ChatGPT to the public in which year?",
+      "choices": [
+        "2018",
+        "2024",
+        "2022",
+        "2020"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-genz-parasite",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Stairs & Subtitles",
+      "prompt": "Which country’s film Parasite won the Academy Award for Best Picture?",
+      "choices": [
+        "South Korea",
+        "Japan",
+        "France",
+        "Mexico"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-genz-webb",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Deep Eye",
+      "prompt": "In which year did the James Webb Space Telescope launch?",
+      "choices": [
+        "2021",
+        "2024",
+        "2016",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Christmas Day, from a spaceport in South America.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-af-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Afghanistan?",
+      "choices": [
+        "Kandahar",
+        "Mazar-i-Sharif",
+        "Herat",
+        "Kabul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    },
+    {
+      "id": "cq-w39-gz-d-mg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Madagascar?",
+      "choices": [
+        "Antananarivo",
+        "Nairobi",
+        "Antsirabe",
+        "Toamasina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Low-key,"
+    }
+  ]
+}

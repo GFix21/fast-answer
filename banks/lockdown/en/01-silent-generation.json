@@ -1,0 +1,92 @@
+{
+  "id": "01-silent-generation",
+  "generation": "silent-generation",
+  "opposite": "02-gen-alpha",
+  "link": "banks/lockdown/en/01-silent-generation.json",
+  "questions": [
+    {
+      "id": "w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Cold War Sky",
+      "prompt": "Francis Gary Powers was shot down in 1960 while flying which type of U.S. reconnaissance aircraft?",
+      "choices": [
+        "SR-71 only",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-silent-suez",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Canal Year",
+      "prompt": "In which year did the Suez Crisis begin?",
+      "choices": [
+        "1967",
+        "1950",
+        "1956",
+        "1948"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The canal closed. The year is the earlier one.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-kh-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Cambodia?",
+      "choices": [
+        "Phnom Penh",
+        "Vientiane",
+        "Bangkok",
+        "Siem Reap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-mn-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Mongolia?",
+      "choices": [
+        "Ulaanbaatar",
+        "Beijing",
+        "Darkhan",
+        "Erdenet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-mz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Mozambique?",
+      "choices": [
+        "Maputo",
+        "Johannesburg",
+        "Nampula",
+        "Beira"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Say,"
+    }
+  ]
+}

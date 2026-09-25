@@ -1,0 +1,91 @@
+{
+  "id": "06-gen-y",
+  "generation": "gen-y",
+  "opposite": "05-gen-x",
+  "link": "banks/lockdown/de/06-gen-y.json",
+  "questions": [
+    {
+      "id": "w39-d-geny-iphone",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Keynote-Chronologie",
+      "prompt": "In welchem Jahr kündigte Apple das originale iPhone an?",
+      "choices": [
+        "2010",
+        "2007",
+        "2005",
+        "2009"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-geny-inception",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Traumschichten",
+      "prompt": "Wer führte Regie beim Film Inception (2010)?",
+      "choices": [
+        "Christopher Nolan",
+        "James Cameron",
+        "Denis Villeneuve",
+        "Ridley Scott"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-geny-wiki",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Offene Seiten",
+      "prompt": "In welchem Jahr startete Wikipedia?",
+      "choices": [
+        "1998",
+        "1995",
+        "2004",
+        "2001"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die Seiten sind viele. Der Anfang ist ein Jahr.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-bd-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Bangladesch?",
+      "choices": [
+        "Chittagong",
+        "Kalkutta",
+        "Dhaka",
+        "Khulna"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    },
+    {
+      "id": "cq-w39-gy-d-tj-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Tadschikistan?",
+      "choices": [
+        "Khujand",
+        "Dushanbe",
+        "Bishkek",
+        "Tashkent"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Nur so,"
+    }
+  ]
+}
