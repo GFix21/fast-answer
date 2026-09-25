@@ -62,7 +62,7 @@ const STRINGS = {
     castTv: "Cast TV",
     name: "Name",
     email: "Email",
-    joinMail: "Join the mailing list. The welcome letter is sent when you sign up.",
+    joinMail: "Join the club. Creating your profile sends the welcome letter.",
     dismissWelcome: "Close letter",
     musicOn: "Music",
     musicOff: "Music off",
@@ -514,7 +514,7 @@ const STRINGS = {
     castTv: "Caster TV",
     name: "Nom",
     email: "Courriel",
-    joinMail: "Joindre la liste d'envoi. La lettre de bienvenue part à l'inscription.",
+    joinMail: "Rejoindre le club. Créer le profil envoie la lettre de bienvenue.",
     dismissWelcome: "Fermer la lettre",
     musicOn: "Musique",
     musicOff: "Musique arrêtée",
@@ -966,7 +966,7 @@ const STRINGS = {
     castTv: "TV casten",
     name: "Name",
     email: "E-Mail",
-    joinMail: "Mailingliste beitreten. Der Willkommensbrief geht beim Anmelden raus.",
+    joinMail: "Dem Club beitreten. Beim Anlegen des Profils geht der Willkommensbrief raus.",
     dismissWelcome: "Brief schließen",
     musicOn: "Musik",
     musicOff: "Musik aus",
@@ -1405,6 +1405,7 @@ const STRINGS = {
 };
 
 const QC_UI = {
+  joinMail: "Joins le club. Créer ton profil envoie la lettre de bienvenue.",
   dirLangBody: "Choisis EN, France ou Québec dans le lobby. La préférence est enregistrée sur cet appareil. Québec charge la banque en français du Québec. France charge la banque de France. Mêmes ids et bonnes réponses.",
   pickGen: "Choisis une autre génération",
   genReviewLead: "Lecture seule. C'est la génération que tu as choisie.",

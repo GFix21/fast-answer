@@ -1504,6 +1504,7 @@ async function commitNewProfile(name, email, pw, joinList = true) {
     country: form.country,
     detectedCountry: detected,
     mailingList: joinList === true,
+    locale: state.locale,
   });
   if (!remote.ok && remote.status !== 503) {
     state.statusMsg = remote.data?.error === "age"
