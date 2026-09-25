@@ -2645,6 +2645,10 @@ function maybeEndFromDropout() {
 }
 
 function continueRound() {
+  if (state.revealT) {
+    clearTimeout(state.revealT);
+    state.revealT = null;
+  }
   state.lockdown = null;
   state.lastAnswer = null;
   state.gapLeft = 0;
@@ -2746,13 +2750,23 @@ function applyRemoteMap(id, target) {
 function afterReveal(ok) {
   stopTick();
   clearAiBuzz();
+  state.phase = "reveal";
+  state.pose = ok ? "win" : "loss";
   state.gapLeft = 0;
-  const lock = ok && Array.isArray(state.lockdownAt) && state.lockdownAt.includes(state.i) && !state.lockdown;
-  if (lock) {
-    Promise.resolve(startLockdown(state.buzzId)).catch(() => continueRound());
-    return;
-  }
-  continueRound();
+  paint();
+  publish();
+  const from = state.i;
+  if (state.revealT) clearTimeout(state.revealT);
+  state.revealT = setTimeout(() => {
+    state.revealT = null;
+    if (state.i !== from || state.phase !== "reveal") return;
+    const lock = ok && Array.isArray(state.lockdownAt) && state.lockdownAt.includes(from) && !state.lockdown;
+    if (lock) {
+      Promise.resolve(startLockdown(state.buzzId)).catch(() => continueRound());
+      return;
+    }
+    continueRound();
+  }, 1200);
 }
 
 function applyRemoteAnswer(id, index, lockdown = false, question = null) {
@@ -4970,6 +4984,10 @@ function playHTML() {
           return `<button class="${cls}" data-i="${i}" type="button" ${dis}><small>${LETTERS[i]}</small>${escapeHtml(c)}</button>`;
         }).join("")}</div>`
       : "";
+    const showChoices = q && (
+      ["read", "buzz", "answer", "reveal"].includes(state.phase)
+      || (state.phase === "lockdown" && ["play", "flash", "result"].includes(state.lockdown?.phase))
+    );
     return `
       <div class="tv-pad-screen">
         <div class="pad-bubbles">
@@ -4978,9 +4996,11 @@ function playHTML() {
           ${ldBubble}
           ${note}
         </div>
-        ${q && (state.phase === "read" || state.phase === "buzz" || state.phase === "answer" || state.phase === "reveal") ? choiceButtons(q) : ""}
-        <div class="pad-buzz">
-          ${readyPhase ? entryButtonsHTML() : buzzerButton(canBuzz, buzzLabel)}
+        <div class="pad-dock">
+          ${showChoices ? choiceButtons(q) : ""}
+          <div class="pad-buzz">
+            ${readyPhase ? entryButtonsHTML() : buzzerButton(canBuzz, buzzLabel)}
+          </div>
         </div>
       </div>
       ${rulesHTML()}

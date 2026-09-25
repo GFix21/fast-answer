@@ -116,10 +116,12 @@ button:disabled{cursor:not-allowed}
   font-size:clamp(13px,1.8vw,16px);font-weight:600;line-height:1.25;
 }
 .ans small{display:block;font-size:10px;letter-spacing:.14em;color:var(--mut);font-weight:500;margin-bottom:2px}
-.ans.on{border-color:var(--accent)}
-.ans.ok{background:var(--ok);border-color:#86efac}
-.ans.bad{background:var(--bad);border-color:#fca5a5}
+.ans.on{border-color:#fff;box-shadow:0 0 0 2px #fff}
+.ans.ok,.ans.bad{opacity:1;color:#fff}
+.ans.ok{background:#15803d;border-color:#86efac}
+.ans.bad{background:#b91c1c;border-color:#fecaca}
 .ans:disabled{opacity:.85}
+.ans.ok:disabled,.ans.bad:disabled{opacity:1}
 
 .buzzbar{
   position:relative;z-index:4;
@@ -142,7 +144,8 @@ button:disabled{cursor:not-allowed}
 .pad-bubbles{flex:0 1 auto;min-height:0;display:flex;flex-direction:column;gap:10px;overflow:auto}
 .pad-bubble{background:rgba(255,255,255,.1);border-radius:18px;padding:14px 16px}
 .pad-bubble .rivals{margin-top:0}
-.tv-pad-screen > .answers{margin-top:auto;position:relative;z-index:5;max-height:none;padding:8px 0 0}
+.tv-pad-screen > .answers,.pad-dock .answers{margin-top:0;position:relative;z-index:5;max-height:none;padding:8px 0 0}
+.pad-dock{margin-top:auto;display:flex;flex-direction:column}
 .pad-buzz{flex:0 0 auto;padding-top:10px}
 .tv-pad-screen .buzzer{width:100%;height:22vh;min-height:96px;font-size:28px}
 .read-clock{margin:0;text-align:center;font-size:18vw;line-height:.85;font-weight:800;letter-spacing:-.04em}
