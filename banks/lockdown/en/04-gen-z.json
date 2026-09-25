@@ -2,90 +2,92 @@
   "id": "04-gen-z",
   "generation": "gen-z",
   "opposite": "03-baby-boomer",
+  "sourceGeneration": "baby-boomer",
   "link": "banks/lockdown/en/04-gen-z.json",
   "questions": [
     {
-      "id": "w39-d-genz-openai",
+      "id": "w39-d-boomer-apollo13",
       "tier": "difficult",
-      "topic": "culture",
-      "generation": "gen-z",
-      "categoryTitle": "Model Manners",
-      "prompt": "OpenAI released ChatGPT to the public in which year?",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Failure Is Not…",
+      "prompt": "Apollo 13’s oxygen-tank explosion happened in which year?",
       "choices": [
-        "2018",
-        "2024",
-        "2022",
-        "2020"
+        "1968",
+        "1972",
+        "1970",
+        "1969"
       ],
       "correctIndex": 2,
       "banterHint": null
     },
     {
-      "id": "w39-d-genz-parasite",
+      "id": "cq-d-boomer-salt",
       "tier": "difficult",
-      "topic": "film-tv",
-      "generation": "gen-z",
-      "categoryTitle": "Stairs & Subtitles",
-      "prompt": "Which country’s film Parasite won the Academy Award for Best Picture?",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "1972 Treaty",
+      "prompt": "Which arms-control agreement did the United States and the Soviet Union sign in 1972?",
       "choices": [
-        "South Korea",
-        "Japan",
-        "France",
-        "Mexico"
+        "Camp David Accords",
+        "Helsinki Final Act",
+        "SALT I",
+        "Warsaw Pact"
       ],
-      "correctIndex": 0,
-      "banterHint": null
+      "correctIndex": 2,
+      "banterHint": "The initials are the short name. The year is 1972.",
+      "slang": "Right on,"
     },
     {
-      "id": "cq-d-genz-webb",
-      "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-z",
-      "categoryTitle": "Deep Eye",
-      "prompt": "In which year did the James Webb Space Telescope launch?",
-      "choices": [
-        "2021",
-        "2024",
-        "2016",
-        "2018"
-      ],
-      "correctIndex": 0,
-      "banterHint": "Christmas Day, from a spaceport in South America.",
-      "slang": "Low-key,"
-    },
-    {
-      "id": "cq-w39-gz-d-af-capital",
+      "id": "cq-w39-bo-d-la-capital",
       "tier": "difficult",
       "topic": "geography",
-      "generation": "gen-z",
+      "generation": "baby-boomer",
       "categoryTitle": "Capital",
-      "prompt": "What is the capital of Afghanistan?",
+      "prompt": "What is the capital of Laos?",
       "choices": [
-        "Kandahar",
-        "Mazar-i-Sharif",
-        "Herat",
-        "Kabul"
+        "Luang Prabang",
+        "Hanoi",
+        "Vientiane",
+        "Phnom Penh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-d-bt-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Bhutan?",
+      "choices": [
+        "Thimphu",
+        "Punakha",
+        "Kathmandu",
+        "Paro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The biggest city is not always the capital.",
+      "slang": "Right on,"
+    },
+    {
+      "id": "cq-w39-bo-d-na-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Namibia?",
+      "choices": [
+        "Walvis Bay",
+        "Gaborone",
+        "Swakopmund",
+        "Windhoek"
       ],
       "correctIndex": 3,
       "banterHint": "The biggest city is not always the capital.",
-      "slang": "Low-key,"
-    },
-    {
-      "id": "cq-w39-gz-d-mg-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-z",
-      "categoryTitle": "Capital",
-      "prompt": "What is the capital of Madagascar?",
-      "choices": [
-        "Antananarivo",
-        "Nairobi",
-        "Antsirabe",
-        "Toamasina"
-      ],
-      "correctIndex": 0,
-      "banterHint": "The biggest city is not always the capital.",
-      "slang": "Low-key,"
+      "slang": "Right on,"
     }
   ]
 }

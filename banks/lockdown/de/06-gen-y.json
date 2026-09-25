@@ -2,90 +2,91 @@
   "id": "06-gen-y",
   "generation": "gen-y",
   "opposite": "05-gen-x",
+  "sourceGeneration": "gen-x",
   "link": "banks/lockdown/de/06-gen-y.json",
   "questions": [
     {
-      "id": "w39-d-geny-iphone",
+      "id": "w39-d-genx-gt-year",
       "tier": "difficult",
-      "topic": "culture",
-      "generation": "gen-y",
-      "categoryTitle": "Keynote-Chronologie",
-      "prompt": "In welchem Jahr kündigte Apple das originale iPhone an?",
+      "topic": "grand-tour",
+      "generation": "gen-x",
+      "categoryTitle": "Studio-Chronologie",
+      "prompt": "In welchem Jahr hatte The Grand Tour Premiere auf Amazon Prime Video?",
       "choices": [
-        "2010",
-        "2007",
-        "2005",
-        "2009"
+        "2015",
+        "2018",
+        "2014",
+        "2016"
       ],
-      "correctIndex": 1,
-      "banterHint": null
+      "correctIndex": 3,
+      "banterHint": "Nach der BBC, bevor alle übers Campen stritten."
     },
     {
-      "id": "w39-d-geny-inception",
+      "id": "w39-d-genx-berlin",
       "tier": "difficult",
-      "topic": "film-tv",
-      "generation": "gen-y",
-      "categoryTitle": "Traumschichten",
-      "prompt": "Wer führte Regie beim Film Inception (2010)?",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Mauer-Uhr",
+      "prompt": "In welchem Jahr fiel die Berliner Mauer?",
       "choices": [
-        "Christopher Nolan",
-        "James Cameron",
-        "Denis Villeneuve",
-        "Ridley Scott"
+        "1989",
+        "1979",
+        "1985",
+        "1991"
       ],
       "correctIndex": 0,
       "banterHint": null
     },
     {
-      "id": "cq-d-geny-wiki",
+      "id": "cq-d-genx-columbia",
       "tier": "difficult",
-      "topic": "culture",
-      "generation": "gen-y",
-      "categoryTitle": "Offene Seiten",
-      "prompt": "In welchem Jahr startete Wikipedia?",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Erster Flug",
+      "prompt": "Welches Space Shuttle flog 1981 die erste Orbitalmission?",
       "choices": [
-        "1998",
-        "1995",
-        "2004",
-        "2001"
-      ],
-      "correctIndex": 3,
-      "banterHint": "Die Seiten sind viele. Der Anfang ist ein Jahr.",
-      "slang": "Nur so,"
-    },
-    {
-      "id": "cq-w39-gy-d-bd-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-y",
-      "categoryTitle": "Hauptstadt",
-      "prompt": "Was ist die Hauptstadt von Bangladesch?",
-      "choices": [
-        "Chittagong",
-        "Kalkutta",
-        "Dhaka",
-        "Khulna"
+        "Discovery",
+        "Challenger",
+        "Columbia",
+        "Atlantis"
       ],
       "correctIndex": 2,
-      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
-      "slang": "Nur so,"
+      "banterHint": "Das Programm hatte mehrere Namen. Dieses flog zuerst.",
+      "slang": "Na ja,"
     },
     {
-      "id": "cq-w39-gy-d-tj-capital",
+      "id": "cq-w39-gx-d-np-capital",
       "tier": "difficult",
       "topic": "geography",
-      "generation": "gen-y",
+      "generation": "gen-x",
       "categoryTitle": "Hauptstadt",
-      "prompt": "Was ist die Hauptstadt von Tadschikistan?",
+      "prompt": "Was ist die Hauptstadt von Nepal?",
       "choices": [
-        "Khujand",
-        "Dushanbe",
-        "Bishkek",
-        "Tashkent"
+        "Kathmandu",
+        "Neu-Delhi",
+        "Lalitpur",
+        "Pokhara"
       ],
-      "correctIndex": 1,
+      "correctIndex": 0,
       "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
-      "slang": "Nur so,"
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-d-kg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Kirgisistan?",
+      "choices": [
+        "Bishkek",
+        "Almaty",
+        "Tashkent",
+        "Osh"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Na ja,"
     }
   ]
 }

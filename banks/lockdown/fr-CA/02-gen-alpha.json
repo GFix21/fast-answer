@@ -2,91 +2,92 @@
   "id": "02-gen-alpha",
   "generation": "gen-alpha",
   "opposite": "01-silent-generation",
+  "sourceGeneration": "silent-generation",
   "link": "banks/lockdown/fr-CA/02-gen-alpha.json",
   "questions": [
     {
-      "id": "w39-d-alpha-switch",
+      "id": "w39-d-silent-u2",
       "tier": "difficult",
-      "topic": "culture",
-      "generation": "gen-alpha",
-      "categoryTitle": "Portative hybride",
-      "prompt": "En quelle année la Nintendo Switch est sortie dans le monde ?",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Ciel de Guerre froide",
+      "prompt": "Francis Gary Powers a été abattu en 1960 à bord de quel type d’avion de reconnaissance américain ?",
       "choices": [
-        "2017",
-        "2019",
-        "2013",
-        "2015"
+        "SR-71 uniquement",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "banterHint": null
     },
     {
-      "id": "cq-d-alpha-perseverance",
+      "id": "cq-d-silent-suez",
       "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-alpha",
-      "categoryTitle": "Jezero",
-      "prompt": "En quelle année le rover Perseverance de la NASA s'est posé sur Mars ?",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Année du canal",
+      "prompt": "En quelle année la crise de Suez a commencé ?",
       "choices": [
-        "2012",
-        "2021",
-        "2004",
-        "2020"
-      ],
-      "correctIndex": 1,
-      "banterHint": "Un petit hélicoptère est venu pour la promenade.",
-      "slang": "Vite fait,"
-    },
-    {
-      "id": "cq-w39-al-d-uz-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-alpha",
-      "categoryTitle": "Capitale",
-      "prompt": "C'est quoi la capitale de l'Ouzbékistan?",
-      "choices": [
-        "Samarcande",
-        "Boukhara",
-        "Astana",
-        "Tashkent"
-      ],
-      "correctIndex": 3,
-      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
-      "slang": "Vite fait,"
-    },
-    {
-      "id": "cq-w39-al-d-ci-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-alpha",
-      "categoryTitle": "Capitale",
-      "prompt": "C'est quoi la capitale de la Côte d'Ivoire?",
-      "choices": [
-        "Bouaké",
-        "Accra",
-        "Yamoussoukro",
-        "Abidjan"
+        "1967",
+        "1950",
+        "1956",
+        "1948"
       ],
       "correctIndex": 2,
-      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
-      "slang": "Vite fait,"
+      "banterHint": "Le canal a fermé. L'année est la plus ancienne.",
+      "slang": "Dites,"
     },
     {
-      "id": "cq-w39-al-d-relativity-who",
+      "id": "cq-w39-si-d-kh-capital",
       "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-alpha",
-      "categoryTitle": "Fait clair",
-      "prompt": "On attribue à qui the theory of relativity, as its main author ?",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Cambodge?",
       "choices": [
-        "Isaac Newton",
-        "Stephen Hawking",
-        "Niels Bohr",
-        "Albert Einstein"
+        "Phnom Penh",
+        "Vientiane",
+        "Bangkok",
+        "Siem Reap"
       ],
-      "correctIndex": 3,
-      "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Vite fait,"
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-mn-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Mongolie?",
+      "choices": [
+        "Ulaanbaatar",
+        "Pékin",
+        "Darkhan",
+        "Erdenet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-mz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Mozambique?",
+      "choices": [
+        "Maputo",
+        "Johannesburg",
+        "Nampula",
+        "Beira"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
     }
   ]
 }

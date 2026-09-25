@@ -2,90 +2,92 @@
   "id": "04-gen-z",
   "generation": "gen-z",
   "opposite": "03-baby-boomer",
+  "sourceGeneration": "baby-boomer",
   "link": "banks/lockdown/fr-CA/04-gen-z.json",
   "questions": [
     {
-      "id": "w39-d-genz-openai",
+      "id": "w39-d-boomer-apollo13",
       "tier": "difficult",
-      "topic": "culture",
-      "generation": "gen-z",
-      "categoryTitle": "Manières de modèles",
-      "prompt": "En quelle année OpenAI a mis ChatGPT à disposition du public ?",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "L’échec n’est pas…",
+      "prompt": "L’explosion du réservoir d’oxygène d’Apollo 13 s’est produite en quelle année ?",
       "choices": [
-        "2018",
-        "2024",
-        "2022",
-        "2020"
+        "1968",
+        "1972",
+        "1970",
+        "1969"
       ],
       "correctIndex": 2,
       "banterHint": null
     },
     {
-      "id": "w39-d-genz-parasite",
+      "id": "cq-d-boomer-salt",
       "tier": "difficult",
-      "topic": "film-tv",
-      "generation": "gen-z",
-      "categoryTitle": "Escaliers et sous-titres",
-      "prompt": "Le film Parasite, de quel pays, a remporté l’Oscar du meilleur film ?",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Traité de 1972",
+      "prompt": "Quel accord de maîtrise des armements les États-Unis et l'Union soviétique ont signé en 1972 ?",
       "choices": [
-        "Corée du Sud",
-        "Japon",
-        "France",
-        "Mexique"
+        "Accords de Camp David",
+        "Acte final d'Helsinki",
+        "SALT I",
+        "Pacte de Varsovie"
       ],
-      "correctIndex": 0,
-      "banterHint": null
+      "correctIndex": 2,
+      "banterHint": "Les initiales sont le nom court. L'année est 1972.",
+      "slang": "Tout à fait,"
     },
     {
-      "id": "cq-d-genz-webb",
-      "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-z",
-      "categoryTitle": "Œil lointain",
-      "prompt": "En quelle année le télescope spatial James-Webb a été lancé ?",
-      "choices": [
-        "2021",
-        "2024",
-        "2016",
-        "2018"
-      ],
-      "correctIndex": 0,
-      "banterHint": "Le jour de Noël, depuis un port spatial en Amérique du Sud.",
-      "slang": "Sans chichi,"
-    },
-    {
-      "id": "cq-w39-gz-d-af-capital",
+      "id": "cq-w39-bo-d-la-capital",
       "tier": "difficult",
       "topic": "geography",
-      "generation": "gen-z",
+      "generation": "baby-boomer",
       "categoryTitle": "Capitale",
-      "prompt": "C'est quoi la capitale de l'Afghanistan?",
+      "prompt": "C'est quoi la capitale du Laos?",
       "choices": [
-        "Kandahar",
-        "Mazar-i-Sharif",
-        "Herat",
-        "Kabul"
+        "Luang Prabang",
+        "Hanoï",
+        "Vientiane",
+        "Phnom Penh"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-bt-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Bhoutan?",
+      "choices": [
+        "Thimphu",
+        "Punakha",
+        "Kathmandu",
+        "Paro"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-na-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "baby-boomer",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Namibie?",
+      "choices": [
+        "Walvis Bay",
+        "Gaborone",
+        "Swakopmund",
+        "Windhoek"
       ],
       "correctIndex": 3,
       "banterHint": "La plus grande ville n'est pas toujours la capitale.",
-      "slang": "Sans chichi,"
-    },
-    {
-      "id": "cq-w39-gz-d-mg-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-z",
-      "categoryTitle": "Capitale",
-      "prompt": "C'est quoi la capitale de Madagascar?",
-      "choices": [
-        "Antananarivo",
-        "Nairobi",
-        "Antsirabe",
-        "Toamasina"
-      ],
-      "correctIndex": 0,
-      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
-      "slang": "Sans chichi,"
+      "slang": "Tout à fait,"
     }
   ]
 }

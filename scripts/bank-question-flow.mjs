@@ -149,6 +149,13 @@ function openQualitySet(index, playAt, now) {
 }
 
 const liveStart = "2026-09-23T00:00:00.000Z";
+if (fs.existsSync(LEDGER)) {
+  const existing = readJson(LEDGER);
+  if (Array.isArray(existing?.sets) && existing.sets.length) {
+    console.error("ledger already has sets. Use node scripts/create-set.mjs so SET00001 and later stay put.");
+    process.exit(1);
+  }
+}
 const first = setFolderName(liveStart, 1);
 const counts = bankLiveSet(first.folder, liveStart);
 const now = new Date();

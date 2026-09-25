@@ -21,10 +21,12 @@ for (const locale of ["en", "fr", "fr-CA", "de"]) {
     const file = new URL(`../${lockdownSetPath(id, locale)}`, import.meta.url);
     const set = JSON.parse(fs.readFileSync(file, "utf8"));
     assert.equal(set.generation, LOCKDOWN_GENERATION[id]);
+    assert.equal(set.sourceGeneration, LOCKDOWN_GENERATION[set.opposite]);
+    assert.notEqual(set.sourceGeneration, set.generation);
     assert.equal(set.questions.length, LOCKDOWN_SET_SIZE);
     assert.ok(set.link.includes(id));
     for (const q of set.questions) {
-      assert.equal(q.generation, set.generation);
+      assert.equal(q.generation, set.sourceGeneration);
       assert.equal(q.tier, "difficult");
       assert.equal(Number.isInteger(q.correctIndex), true);
       assert.equal(seen.has(q.id), false);

@@ -2,92 +2,93 @@
   "id": "07-silent-generation-b",
   "generation": "silent-generation",
   "opposite": "08-gen-alpha-b",
+  "sourceGeneration": "gen-alpha",
   "link": "banks/lockdown/fr-CA/07-silent-generation-b.json",
   "questions": [
     {
-      "id": "cq-w39-si-d-heliocentric-who",
+      "id": "cq-w39-al-d-plane-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "silent-generation",
+      "generation": "gen-alpha",
       "categoryTitle": "Fait clair",
-      "prompt": "On attribue à qui the book On the Revolutions of the Heavenly Spheres ?",
+      "prompt": "On attribue à qui the first powered airplane flight, in 1903 ?",
       "choices": [
-        "Nicolaus Copernicus",
-        "Johannes Kepler",
-        "Tycho Brahe",
-        "Galileo Galilei"
+        "the Wright brothers",
+        "Amelia Earhart",
+        "Charles Lindbergh",
+        "Alberto Santos-Dumont"
       ],
       "correctIndex": 0,
       "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Dites,"
+      "slang": "Vite fait,"
     },
     {
-      "id": "cq-w39-si-d-dna-who",
+      "id": "cq-w39-al-d-tesla-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "silent-generation",
+      "generation": "gen-alpha",
       "categoryTitle": "Fait clair",
-      "prompt": "On attribue à qui the 1953 model of the DNA double helix, with the scored pair ?",
+      "prompt": "On attribue à qui the alternating-current induction motor, as its inventor ?",
       "choices": [
-        "Linus Pauling",
-        "Rosalind Franklin and Maurice Wilkins",
-        "James Watson and Francis Crick",
-        "Gregor Mendel"
-      ],
-      "correctIndex": 2,
-      "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Dites,"
-    },
-    {
-      "id": "cq-w39-si-d-maxwell-who",
-      "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "silent-generation",
-      "categoryTitle": "Fait clair",
-      "prompt": "On attribue à qui the equations that united electricity and magnetism ?",
-      "choices": [
+        "Thomas Edison",
+        "Nikola Tesla",
         "Michael Faraday",
-        "James Clerk Maxwell",
-        "Oliver Heaviside",
-        "Heinrich Hertz"
+        "George Westinghouse"
       ],
       "correctIndex": 1,
       "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Dites,"
+      "slang": "Vite fait,"
     },
     {
-      "id": "cq-w39-si-d-johnson-who",
+      "id": "cq-w39-al-d-hopper-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "silent-generation",
+      "generation": "gen-alpha",
       "categoryTitle": "Fait clair",
-      "prompt": "On attribue à qui the orbital calculations celebrated in Hidden Figures ?",
+      "prompt": "On attribue à qui the compiler work that helped create COBOL ?",
       "choices": [
-        "Mary Jackson",
+        "Grace Hopper",
         "Margaret Hamilton",
-        "Katherine Johnson",
-        "Dorothy Vaughan"
-      ],
-      "correctIndex": 2,
-      "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Dites,"
-    },
-    {
-      "id": "cq-w39-si-d-benz-car",
-      "tier": "difficult",
-      "topic": "cars",
-      "generation": "silent-generation",
-      "categoryTitle": "Fait clair",
-      "prompt": "C'est qui qui a construit la Benz Patent-Motorwagen ?",
-      "choices": [
-        "Karl Benz",
-        "Henry Ford",
-        "Nikolaus Otto",
-        "Gottlieb Daimler"
+        "Ada Lovelace",
+        "Katherine Johnson"
       ],
       "correctIndex": 0,
       "banterHint": "La réponse simple, c'est celle qui compte.",
-      "slang": "Dites,"
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-glenn-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first American to orbit Earth ?",
+      "choices": [
+        "John Glenn",
+        "Scott Carpenter",
+        "Neil Armstrong",
+        "Alan Shepard"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-y-constitution",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que la Constitution des États-Unis a été signée à Philadelphie ?",
+      "choices": [
+        "1787",
+        "1791",
+        "1783",
+        "1776"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Vite fait,"
     }
   ]
 }

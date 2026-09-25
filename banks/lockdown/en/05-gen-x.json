@@ -2,90 +2,91 @@
   "id": "05-gen-x",
   "generation": "gen-x",
   "opposite": "06-gen-y",
+  "sourceGeneration": "gen-y",
   "link": "banks/lockdown/en/05-gen-x.json",
   "questions": [
     {
-      "id": "w39-d-genx-gt-year",
+      "id": "w39-d-geny-iphone",
       "tier": "difficult",
-      "topic": "grand-tour",
-      "generation": "gen-x",
-      "categoryTitle": "Studio Chronology",
-      "prompt": "In which year did The Grand Tour first premiere on Amazon Prime Video?",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Keynote Chronology",
+      "prompt": "Apple announced the original iPhone in which year?",
       "choices": [
-        "2015",
-        "2018",
-        "2014",
-        "2016"
+        "2010",
+        "2007",
+        "2005",
+        "2009"
       ],
-      "correctIndex": 3,
-      "banterHint": "Post-BBC, pre-everyone-arguing-about-camping."
+      "correctIndex": 1,
+      "banterHint": null
     },
     {
-      "id": "w39-d-genx-berlin",
+      "id": "w39-d-geny-inception",
       "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-x",
-      "categoryTitle": "Wall Clock",
-      "prompt": "In which year did the Berlin Wall fall?",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Dream Layers",
+      "prompt": "Who directed the 2010 film Inception?",
       "choices": [
-        "1989",
-        "1979",
-        "1985",
-        "1991"
+        "Christopher Nolan",
+        "James Cameron",
+        "Denis Villeneuve",
+        "Ridley Scott"
       ],
       "correctIndex": 0,
       "banterHint": null
     },
     {
-      "id": "cq-d-genx-columbia",
+      "id": "cq-d-geny-wiki",
       "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-x",
-      "categoryTitle": "First Flight",
-      "prompt": "Which space shuttle flew the first orbital shuttle mission in 1981?",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Open Pages",
+      "prompt": "In which year did Wikipedia launch?",
       "choices": [
-        "Discovery",
-        "Challenger",
-        "Columbia",
-        "Atlantis"
+        "1998",
+        "1995",
+        "2004",
+        "2001"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The pages are many. The start is one year.",
+      "slang": "Just saying,"
+    },
+    {
+      "id": "cq-w39-gy-d-bd-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capital",
+      "prompt": "What is the capital of Bangladesh?",
+      "choices": [
+        "Chittagong",
+        "Kolkata",
+        "Dhaka",
+        "Khulna"
       ],
       "correctIndex": 2,
-      "banterHint": "The program had several names. This one flew first.",
-      "slang": "Whatever the case,"
-    },
-    {
-      "id": "cq-w39-gx-d-np-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-x",
-      "categoryTitle": "Capital",
-      "prompt": "What is the capital of Nepal?",
-      "choices": [
-        "Kathmandu",
-        "New Delhi",
-        "Lalitpur",
-        "Pokhara"
-      ],
-      "correctIndex": 0,
       "banterHint": "The biggest city is not always the capital.",
-      "slang": "Whatever the case,"
+      "slang": "Just saying,"
     },
     {
-      "id": "cq-w39-gx-d-kg-capital",
+      "id": "cq-w39-gy-d-tj-capital",
       "tier": "difficult",
       "topic": "geography",
-      "generation": "gen-x",
+      "generation": "gen-y",
       "categoryTitle": "Capital",
-      "prompt": "What is the capital of Kyrgyzstan?",
+      "prompt": "What is the capital of Tajikistan?",
       "choices": [
+        "Khujand",
+        "Dushanbe",
         "Bishkek",
-        "Almaty",
-        "Tashkent",
-        "Osh"
+        "Tashkent"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "banterHint": "The biggest city is not always the capital.",
-      "slang": "Whatever the case,"
+      "slang": "Just saying,"
     }
   ]
 }

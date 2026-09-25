@@ -753,6 +753,43 @@ function renderArchivePanel(panel) {
     return;
   }
 
+  // A banked set, including one still in quality, opened for review.
+  if (a.kind === "set" && a.pack) {
+    const tiers = ["all", "easy", "hard", "difficult", "extreme", "finale"];
+    const qs = filteredArchiveQuestions(a);
+    panel.innerHTML = `
+      <div class="card">
+        <div class="row spread">
+          <div>
+            <button class="btn" id="setBack">${t("backArchives")}</button>
+            <h2 style="margin-top:12px">${esc(a.setId || "")}</h2>
+            <p class="mut">${esc(a.pack.folder || "")} · ${t("localeUsed", { locale: a.pack.locale || state.locale })} · ${(a.pack.questions || []).length} / ${a.pack.target || 1050}</p>
+            <p class="mut">${t("placementHeld", { n: a.pack.placementCount || 0 })}</p>
+          </div>
+          <div>
+            ${a.pack.isMain ? `<span class="mut">${t("mainNow")}</span>` : `<button class="btn primary" id="setMain" type="button">${t("setMain")}</button>`}
+          </div>
+        </div>
+        ${archiveFiltersHTML(a, tiers)}
+        <div class="q-list" style="margin-top:12px">
+          ${qs.map((q) => archiveQItem(q)).join("") || `<p class="mut">${t("noFilter")}</p>`}
+        </div>
+      </div>`;
+    document.getElementById("setBack")?.addEventListener("click", () => {
+      a.kind = null;
+      a.pack = null;
+      a.setId = null;
+      a.filterTier = "all";
+      a.filterTopic = "";
+      a.filterLeak = false;
+      render();
+    });
+    document.getElementById("setMain")?.addEventListener("click", () => makeSetMain(a.setId));
+    bindArchiveFilters(a);
+    bindArchiveQuestionActions(panel);
+    return;
+  }
+
   // Placement archive page (reject / regen enabled)
   if (a.kind === "placement" && a.pack) {
     const tiers = ["all", "easy", "hard", "difficult", "extreme"];
@@ -894,20 +931,28 @@ function renderArchivePanel(panel) {
       <h2>${t("setsTitle")}</h2>
       <p class="mut">${t("setsNote")}</p>
       <div class="arch-list" style="margin-top:14px">
-        ${(a.sets || []).map((s) => `
+        ${(a.sets || []).map((s) => {
+          const counts = s.counts || {};
+          const langs = Object.keys(counts);
+          const line = langs.map((loc) => `${loc} ${counts[loc]?.questions || 0}/${s.target || 1050} · ${t("placeShort")} ${counts[loc]?.placement || 0}`).join(" · ");
+          return `
           <div class="arch-row">
             <div class="row spread">
               <div>
-                <b>${esc(s.id)}</b>
-                <div class="mut">${esc(s.folder)} · ${s.questions || 0} ${t("questions")}</div>
+                <b>${esc(s.id)}</b>${s.main ? ` · ${t("mainNow")}` : ""}
+                <div class="mut">${esc(s.folder)} · ${esc(s.status || "")}</div>
+                <div class="mut">${esc(line || `${s.questions || 0} ${t("questions")}`)}</div>
                 <div class="mut">${s.archived ? t("setArchived") : t("setRunning", { until: (s.playUntil || "").slice(0, 10) })}</div>
               </div>
               <span>
+                <button class="btn" type="button" data-set-review="${esc(s.id)}">${t("reviewSet")}</button>
+                ${s.main ? "" : `<button class="btn primary" type="button" data-set-main="${esc(s.id)}">${t("setMain")}</button>`}
                 ${s.archived ? `<button class="btn" type="button" data-set-zip="${esc(s.id)}">${t("downloadSet")}</button>
-                <a class="btn primary" href="/?replay=${encodeURIComponent(s.id)}">${t("replaySet")}</a>` : ""}
+                <a class="btn" href="/?replay=${encodeURIComponent(s.id)}">${t("replaySet")}</a>` : ""}
               </span>
             </div>
-          </div>`).join("") || `<p class="mut">${t("setsEmpty")}</p>`}
+          </div>`;
+        }).join("") || `<p class="mut">${t("setsEmpty")}</p>`}
       </div>
     </div>
     <div class="card" style="margin-top:16px">
@@ -932,9 +977,57 @@ function renderArchivePanel(panel) {
   panel.querySelectorAll("[data-set-zip]").forEach((b) =>
     b.addEventListener("click", () => downloadSetZip(b.dataset.setZip)),
   );
+  panel.querySelectorAll("[data-set-review]").forEach((b) =>
+    b.addEventListener("click", () => openSetReview(b.dataset.setReview)),
+  );
+  panel.querySelectorAll("[data-set-main]").forEach((b) =>
+    b.addEventListener("click", () => makeSetMain(b.dataset.setMain)),
+  );
   panel.querySelectorAll("[data-placement]").forEach((b) =>
     b.addEventListener("click", () => openPlacementPage(b.dataset.placement)),
   );
+}
+
+async function openSetReview(id) {
+  state.archive.loading = true;
+  render();
+  try {
+    const data = await api(`sets?review=${encodeURIComponent(id)}`);
+    state.archive.kind = "set";
+    state.archive.setId = data.id;
+    state.archive.monthKey = null;
+    state.archive.weekKey = null;
+    state.archive.filterTier = "all";
+    state.archive.filterTopic = "";
+    state.archive.filterLeak = false;
+    state.archive.pack = {
+      id: data.id,
+      folder: data.folder,
+      locale: data.locale,
+      target: data.target,
+      placementCount: (data.placement || []).length,
+      isMain: data.isMain,
+      questions: data.questions || [],
+    };
+  } catch (e) {
+    state.message = e.message || "set";
+  } finally {
+    state.archive.loading = false;
+    render();
+  }
+}
+
+async function makeSetMain(id) {
+  try {
+    const data = await api("sets", { method: "POST", body: JSON.stringify({ id }) });
+    state.message = t("mainSetDone", { id: data.main || id });
+    state.archive.sets = null;
+    if (state.archive.kind === "set" && state.archive.pack) state.archive.pack.isMain = true;
+    await loadArchiveMonths(true);
+  } catch (e) {
+    state.message = e.message || "set";
+    render();
+  }
 }
 
 async function loadArchiveMonths(rerender) {

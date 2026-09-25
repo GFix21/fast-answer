@@ -2,92 +2,93 @@
   "id": "08-gen-alpha-b",
   "generation": "gen-alpha",
   "opposite": "07-silent-generation-b",
+  "sourceGeneration": "silent-generation",
   "link": "banks/lockdown/de/08-gen-alpha-b.json",
   "questions": [
     {
-      "id": "cq-w39-al-d-plane-who",
+      "id": "cq-w39-si-d-heliocentric-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "gen-alpha",
+      "generation": "silent-generation",
       "categoryTitle": "Klare Tatsache",
-      "prompt": "Wem schreibt man zu the first powered airplane flight, in 1903?",
+      "prompt": "Wem schreibt man zu the book On the Revolutions of the Heavenly Spheres?",
       "choices": [
-        "the Wright brothers",
-        "Amelia Earhart",
-        "Charles Lindbergh",
-        "Alberto Santos-Dumont"
+        "Nicolaus Copernicus",
+        "Johannes Kepler",
+        "Tycho Brahe",
+        "Galileo Galilei"
       ],
       "correctIndex": 0,
       "banterHint": "Die schlichte Antwort ist die gezählte.",
-      "slang": "Kurz mal,"
+      "slang": "Sagen Sie,"
     },
     {
-      "id": "cq-w39-al-d-tesla-who",
+      "id": "cq-w39-si-d-dna-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "gen-alpha",
+      "generation": "silent-generation",
       "categoryTitle": "Klare Tatsache",
-      "prompt": "Wem schreibt man zu the alternating-current induction motor, as its inventor?",
+      "prompt": "Wem schreibt man zu the 1953 model of the DNA double helix, with the scored pair?",
       "choices": [
-        "Thomas Edison",
-        "Nikola Tesla",
+        "Linus Pauling",
+        "Rosalind Franklin and Maurice Wilkins",
+        "James Watson and Francis Crick",
+        "Gregor Mendel"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-d-maxwell-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the equations that united electricity and magnetism?",
+      "choices": [
         "Michael Faraday",
-        "George Westinghouse"
+        "James Clerk Maxwell",
+        "Oliver Heaviside",
+        "Heinrich Hertz"
       ],
       "correctIndex": 1,
       "banterHint": "Die schlichte Antwort ist die gezählte.",
-      "slang": "Kurz mal,"
+      "slang": "Sagen Sie,"
     },
     {
-      "id": "cq-w39-al-d-hopper-who",
+      "id": "cq-w39-si-d-johnson-who",
       "tier": "difficult",
       "topic": "sci-fi",
-      "generation": "gen-alpha",
+      "generation": "silent-generation",
       "categoryTitle": "Klare Tatsache",
-      "prompt": "Wem schreibt man zu the compiler work that helped create COBOL?",
+      "prompt": "Wem schreibt man zu the orbital calculations celebrated in Hidden Figures?",
       "choices": [
-        "Grace Hopper",
+        "Mary Jackson",
         "Margaret Hamilton",
-        "Ada Lovelace",
-        "Katherine Johnson"
+        "Katherine Johnson",
+        "Dorothy Vaughan"
       ],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "banterHint": "Die schlichte Antwort ist die gezählte.",
-      "slang": "Kurz mal,"
+      "slang": "Sagen Sie,"
     },
     {
-      "id": "cq-w39-al-d-glenn-who",
+      "id": "cq-w39-si-d-benz-car",
       "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-alpha",
+      "topic": "cars",
+      "generation": "silent-generation",
       "categoryTitle": "Klare Tatsache",
-      "prompt": "Wem schreibt man zu the first American to orbit Earth?",
+      "prompt": "Wer baute den Benz Patent-Motorwagen?",
       "choices": [
-        "John Glenn",
-        "Scott Carpenter",
-        "Neil Armstrong",
-        "Alan Shepard"
+        "Karl Benz",
+        "Henry Ford",
+        "Nikolaus Otto",
+        "Gottlieb Daimler"
       ],
       "correctIndex": 0,
       "banterHint": "Die schlichte Antwort ist die gezählte.",
-      "slang": "Kurz mal,"
-    },
-    {
-      "id": "cq-w39-al-d-y-constitution",
-      "tier": "difficult",
-      "topic": "culture",
-      "generation": "gen-alpha",
-      "categoryTitle": "Klare Tatsache",
-      "prompt": "In welchem Jahr die US-Verfassung in Philadelphia unterzeichnet wurde?",
-      "choices": [
-        "1787",
-        "1791",
-        "1783",
-        "1776"
-      ],
-      "correctIndex": 0,
-      "banterHint": "Die schlichte Antwort ist die gezählte.",
-      "slang": "Kurz mal,"
+      "slang": "Sagen Sie,"
     }
   ]
 }

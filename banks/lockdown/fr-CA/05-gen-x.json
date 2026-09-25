@@ -2,90 +2,91 @@
   "id": "05-gen-x",
   "generation": "gen-x",
   "opposite": "06-gen-y",
+  "sourceGeneration": "gen-y",
   "link": "banks/lockdown/fr-CA/05-gen-x.json",
   "questions": [
     {
-      "id": "w39-d-genx-gt-year",
+      "id": "w39-d-geny-iphone",
       "tier": "difficult",
-      "topic": "grand-tour",
-      "generation": "gen-x",
-      "categoryTitle": "Chronologie studio",
-      "prompt": "En quelle année The Grand Tour a été diffusé pour la première fois sur Amazon Prime Video ?",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Chronologie keynote",
+      "prompt": "En quelle année Apple a annoncé l’iPhone original ?",
       "choices": [
-        "2015",
-        "2018",
-        "2014",
-        "2016"
+        "2010",
+        "2007",
+        "2005",
+        "2009"
       ],
-      "correctIndex": 3,
-      "banterHint": "Après la BBC, avant que tout le monde se dispute sur le camping."
+      "correctIndex": 1,
+      "banterHint": null
     },
     {
-      "id": "w39-d-genx-berlin",
+      "id": "w39-d-geny-inception",
       "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-x",
-      "categoryTitle": "Horloge du Mur",
-      "prompt": "En quelle année le mur de Berlin est tombé ?",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Couches de rêve",
+      "prompt": "Qui a réalisé le film Inception de 2010 ?",
       "choices": [
-        "1989",
-        "1979",
-        "1985",
-        "1991"
+        "Christopher Nolan",
+        "James Cameron",
+        "Denis Villeneuve",
+        "Ridley Scott"
       ],
       "correctIndex": 0,
       "banterHint": null
     },
     {
-      "id": "cq-d-genx-columbia",
+      "id": "cq-d-geny-wiki",
       "tier": "difficult",
-      "topic": "sci-fi",
-      "generation": "gen-x",
-      "categoryTitle": "Premier vol",
-      "prompt": "Quelle navette spatiale a fait la première mission orbitale en 1981 ?",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Pages ouvertes",
+      "prompt": "En quelle année Wikipédia a été lancé ?",
       "choices": [
-        "Discovery",
-        "Challenger",
-        "Columbia",
-        "Atlantis"
+        "1998",
+        "1995",
+        "2004",
+        "2001"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les pages sont nombreuses. Le départ est une année.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-bd-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Bangladesh?",
+      "choices": [
+        "Chittagong",
+        "Calcutta",
+        "Dhaka",
+        "Khulna"
       ],
       "correctIndex": 2,
-      "banterHint": "Le programme a plusieurs noms. Celle-ci a volé la première.",
-      "slang": "Bref,"
-    },
-    {
-      "id": "cq-w39-gx-d-np-capital",
-      "tier": "difficult",
-      "topic": "geography",
-      "generation": "gen-x",
-      "categoryTitle": "Capitale",
-      "prompt": "C'est quoi la capitale du Népal?",
-      "choices": [
-        "Kathmandu",
-        "New Delhi",
-        "Lalitpur",
-        "Pokhara"
-      ],
-      "correctIndex": 0,
       "banterHint": "La plus grande ville n'est pas toujours la capitale.",
-      "slang": "Bref,"
+      "slang": "Je dis ça,"
     },
     {
-      "id": "cq-w39-gx-d-kg-capital",
+      "id": "cq-w39-gy-d-tj-capital",
       "tier": "difficult",
       "topic": "geography",
-      "generation": "gen-x",
+      "generation": "gen-y",
       "categoryTitle": "Capitale",
-      "prompt": "C'est quoi la capitale du Kirghizistan?",
+      "prompt": "C'est quoi la capitale du Tadjikistan?",
       "choices": [
+        "Khujand",
+        "Dushanbe",
         "Bishkek",
-        "Almaty",
-        "Tashkent",
-        "Osh"
+        "Tashkent"
       ],
-      "correctIndex": 0,
+      "correctIndex": 1,
       "banterHint": "La plus grande ville n'est pas toujours la capitale.",
-      "slang": "Bref,"
+      "slang": "Je dis ça,"
     }
   ]
 }
