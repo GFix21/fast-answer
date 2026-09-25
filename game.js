@@ -6590,6 +6590,7 @@ if (isDirections) {
     window.__fa = state;
   }
 } else {
+  paint(true);
   try {
     await loadBanksForLocale(state.locale);
   } catch {
