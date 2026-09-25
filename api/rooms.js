@@ -295,6 +295,22 @@ async function handleRoom(req, res) {
       return;
     }
     cur.guests = cur.guests || [];
+    const phase = String(cur.state?.phase || "lobby");
+    const index = Number(cur.state?.i) || 0;
+    const live = phase !== "lobby" && phase !== "ready" && phase !== "end";
+    if (seat === "play" && live && index >= 4) {
+      res.status(403).end(JSON.stringify({
+        error: "play",
+        message: "Play is open for the first four questions. You can view.",
+      }));
+      return;
+    }
+    const viewers = cur.guests.filter((g) => g && g.seat === "view").length;
+    const known = cur.guests.find((g) => g.name === name || (body.id && g.id === body.id));
+    if (seat === "view" && !known && viewers >= 20) {
+      res.status(403).end(JSON.stringify({ error: "viewers", message: "This show already has 20 viewers." }));
+      return;
+    }
     const guestKey = newGuestKey();
     const guest = {
       name,
