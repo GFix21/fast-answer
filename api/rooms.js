@@ -428,15 +428,18 @@ async function handleRoom(req, res) {
     await touch(cur);
   } else if (body.action === "buzz") {
     const guest = actingGuest(cur, req, body);
-    if (!guest || guest.seat === "view") {
+    const asHost = hostMatches(cur, presentedHostKey(req, body));
+    if (!asHost && (!guest || guest.seat === "view")) {
       res.status(403).end(JSON.stringify({ error: "guest" }));
       return;
     }
     cur.state = cur.state || {};
     cur.buzzes = cur.buzzes || [];
-    cur.buzzes.push({ name: guest.name, at: Date.now() });
+    const buzzName = guest?.name || String(body.name || "Player");
+    const buzzId = guest?.id || String(body.id || "you");
+    cur.buzzes.push({ name: buzzName, at: Date.now() });
     if (!cur.state.buzzed) {
-      cur.state = { ...cur.state, buzzed: true, buzzBy: guest.name, buzzId: guest.id || "", phase: "answer" };
+      cur.state = { ...cur.state, buzzed: true, buzzBy: buzzName, buzzId, phase: "answer", rev: (Number(cur.state.rev) || 0) + 1 };
     }
     await touch(cur);
   } else if (body.action === "answer") {
