@@ -193,7 +193,6 @@ function wantsTv() {
   if (flag === "1" || flag === "true" || flag === "yes") return true;
   if (pathRoom) return true;
   if (silkHostKey.length >= 16 && joinCode) return true;
-  if (tvUserAgent()) return true;
   return false;
 }
 // The Silk link is the pass. A TV, or anyone opening that link, does not log in again.
@@ -2350,9 +2349,8 @@ async function goToTvRoom() {
     else await createTvCast();
   }
   if (!state.room) return;
-  if (state.tvMirror && !state.hostKey) {
-    state.statusMsg = tt("tvHere");
-    paint(true);
+  if (state.tvMirror || (thisScreenIsTv() && !state.hostKey)) {
+    await followTvRoom(state.room);
     return;
   }
   enterReady();
@@ -5131,6 +5129,7 @@ async function followTvRoom(code) {
     return;
   }
   state.tvMirror = true;
+  state.hostKey = "";
   state.connectOpen = false;
   state.roomHost = cleanSeatName(live.host || "");
   if (live.hostGeneration) state.hostGeneration = live.hostGeneration;
@@ -6463,7 +6462,6 @@ function startPoll() {
     if (j.screen) state.roomScreen = j.screen;
     if (state.tvMirror) {
       if (pollN % 5 === 0) void rooms("POST", { action: "tv-seen", code: state.room });
-      if (state.hostKey) return;
       const qid = state.qs?.[state.i]?.id || state.q?.id || "";
       const before = `${state.phase}:${state.i}:${qid}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.gapLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (j.host) state.roomHost = cleanSeatName(j.host);
