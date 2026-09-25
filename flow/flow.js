@@ -1,4 +1,5 @@
 import { normalizeFlowLocale, FLOW_LOCALES } from "../lib/flow-locale.js";
+import { answerInQuestion } from "../lib/answer-in-question.js";
 import { flowLocaleLabel, t as translate } from "./strings.js";
 
 const IDLE_MS = 30_000;
@@ -55,6 +56,7 @@ const state = {
     studioCounts: null,
     filterTier: "all",
     filterTopic: "",
+    filterLeak: false,
     loading: false,
   },
 };
@@ -137,6 +139,48 @@ function weekProgress(row) {
   return complete ? t("weekFull", { n, target }) : t("weekOpen", { n, target });
 }
 
+function filteredArchiveQuestions(a) {
+  const topicQ = (a.filterTopic || "").trim().toLowerCase();
+  return (a.pack?.questions || []).filter((q) => {
+    if (a.filterTier !== "all" && q.tier !== a.filterTier) return false;
+    if (a.filterLeak && !answerInQuestion(q)) return false;
+    if (!topicQ) return true;
+    const hay = `${q.topic || ""} ${q.categoryTitle || ""} ${q.prompt || ""} ${q.id || ""} ${q.generation || ""}`.toLowerCase();
+    return hay.includes(topicQ);
+  });
+}
+
+function archiveFiltersHTML(a, tiers) {
+  const leaks = (a.pack?.questions || []).filter((q) => answerInQuestion(q)).length;
+  return `
+        <div class="row" style="margin-top:12px;gap:12px">
+          <select id="archTier" style="width:auto;margin:0">${tiers.map((tier) => `<option value="${tier}" ${a.filterTier === tier ? "selected" : ""}>${t("tier_" + tier)}</option>`).join("")}</select>
+          <input id="archSearch" style="width:min(280px,100%);margin:0" placeholder="${t("searchPh")}" value="${esc(a.filterTopic)}"/>
+          <button class="btn ${a.filterLeak ? "on" : ""}" id="archLeak" type="button">${t("leakToggle")}</button>
+          <span class="mut">${t("leakCount", { n: leaks })}</span>
+        </div>`;
+}
+
+function bindArchiveFilters(a) {
+  document.getElementById("archTier")?.addEventListener("change", (e) => {
+    a.filterTier = e.target.value;
+    render();
+  });
+  document.getElementById("archSearch")?.addEventListener("input", (e) => {
+    const pos = e.target.selectionStart;
+    a.filterTopic = e.target.value;
+    render();
+    const next = document.getElementById("archSearch");
+    if (!next) return;
+    next.focus();
+    next.setSelectionRange(pos, pos);
+  });
+  document.getElementById("archLeak")?.addEventListener("click", () => {
+    a.filterLeak = !a.filterLeak;
+    render();
+  });
+}
+
 function archiveQItem(q) {
   const offer = potentialReplacement(q.id);
   const status = q.status || "active";
@@ -144,6 +188,7 @@ function archiveQItem(q) {
     <div class="q-item ${esc(status)}">
       <div class="q-meta">${esc(t("tier_" + (q.tier || "")))} · ${esc(q.topic)} · ${esc(q.generation || "")} · <b>${esc(statusText(status))}</b> · ${esc(q.id)}</div>
       <div class="q-prompt">${esc(q.categoryTitle || "")}${q.categoryTitle ? " — " : ""}${esc(q.prompt || "")}</div>
+      ${answerInQuestion(q) ? `<div class="leak-flag">${t("leakFlag")}</div>` : ""}
       <details class="ans-fold">
         <summary>${t("answersFold")}</summary>
         <div class="choices">${(q.choices || []).map((c, i) => `<div class="${i === q.correctIndex ? "hit" : ""}">${String.fromCharCode(65 + i)}. ${esc(c)}</div>`).join("")}</div>
@@ -711,13 +756,7 @@ function renderArchivePanel(panel) {
   // Placement archive page (reject / regen enabled)
   if (a.kind === "placement" && a.pack) {
     const tiers = ["all", "easy", "hard", "difficult", "extreme"];
-    const topicQ = (a.filterTopic || "").trim().toLowerCase();
-    const qs = (a.pack.questions || []).filter((q) => {
-      if (a.filterTier !== "all" && q.tier !== a.filterTier) return false;
-      if (!topicQ) return true;
-      const hay = `${q.topic || ""} ${q.categoryTitle || ""} ${q.prompt || ""} ${q.id || ""} ${q.generation || ""}`.toLowerCase();
-      return hay.includes(topicQ);
-    });
+    const qs = filteredArchiveQuestions(a);
     const sc = a.studioCounts || {};
     panel.innerHTML = `
       <div class="card">
@@ -730,10 +769,7 @@ function renderArchivePanel(panel) {
             ${readyBenchHTML()}
           </div>
         </div>
-        <div class="row" style="margin-top:12px;gap:12px">
-          <select id="archTier" style="width:auto;margin:0">${tiers.map((tier)=>`<option value="${tier}" ${a.filterTier===tier?"selected":""}>${t("tier_"+tier)}</option>`).join("")}</select>
-          <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="${t("filterPh")}" value="${esc(a.filterTopic)}"/>
-        </div>
+        ${archiveFiltersHTML(a, tiers)}
         <div class="q-list" style="margin-top:12px">
           ${qs.map((q) => archiveQItem(q)).join("") || `<p class="mut">${t("noFilter")}</p>`}
         </div>
@@ -746,16 +782,10 @@ function renderArchivePanel(panel) {
       a.studioCounts = null;
       a.filterTier = "all";
       a.filterTopic = "";
+      a.filterLeak = false;
       render();
     });
-    document.getElementById("archTier")?.addEventListener("change", (e) => {
-      a.filterTier = e.target.value;
-      render();
-    });
-    document.getElementById("archTopic")?.addEventListener("input", (e) => {
-      a.filterTopic = e.target.value;
-      render();
-    });
+    bindArchiveFilters(a);
     panel.querySelectorAll("[data-p-approve]").forEach((b) =>
       b.addEventListener("click", () => setPlacementStatus(b.dataset.pApprove, "approved")),
     );
@@ -769,13 +799,7 @@ function renderArchivePanel(panel) {
   // Week detail (reject / regenerate)
   if (a.pack && a.weekKey && a.monthKey) {
     const tiers = ["all", "easy", "hard", "difficult", "finale"];
-    const topicQ = (a.filterTopic || "").trim().toLowerCase();
-    const qs = (a.pack.questions || []).filter((q) => {
-      if (a.filterTier !== "all" && q.tier !== a.filterTier) return false;
-      if (!topicQ) return true;
-      const hay = `${q.topic || ""} ${q.categoryTitle || ""} ${q.prompt || ""} ${q.id || ""}`.toLowerCase();
-      return hay.includes(topicQ);
-    });
+    const qs = filteredArchiveQuestions(a);
     const sc = a.studioCounts || {};
     panel.innerHTML = `
       <div class="card">
@@ -789,10 +813,7 @@ function renderArchivePanel(panel) {
             ${readyBenchHTML()}
           </div>
         </div>
-        <div class="row" style="margin-top:12px;gap:12px">
-          <select id="archTier" style="width:auto;margin:0">${tiers.map((tier)=>`<option value="${tier}" ${a.filterTier===tier?"selected":""}>${t("tier_"+tier)}</option>`).join("")}</select>
-          <input id="archTopic" style="width:min(280px,100%);margin:0" placeholder="${t("filterPh")}" value="${esc(a.filterTopic)}"/>
-        </div>
+        ${archiveFiltersHTML(a, tiers)}
         <div class="q-list" style="margin-top:12px">
           ${qs.map((q) => archiveQItem(q)).join("") || `<p class="mut">${t("noFilter")}</p>`}
         </div>
@@ -803,27 +824,10 @@ function renderArchivePanel(panel) {
       a.studioCounts = null;
       a.filterTier = "all";
       a.filterTopic = "";
+      a.filterLeak = false;
       render();
     });
-    document.getElementById("archTier")?.addEventListener("change", (e) => {
-      a.filterTier = e.target.value;
-      render();
-    });
-    const topicInput = document.getElementById("archTopic");
-    topicInput?.addEventListener("input", (e) => {
-      a.filterTopic = e.target.value;
-      const topicQ = (a.filterTopic || "").trim().toLowerCase();
-      const filtered = (a.pack.questions || []).filter((q) => {
-        if (a.filterTier !== "all" && q.tier !== a.filterTier) return false;
-        if (!topicQ) return true;
-        const hay = `${q.topic || ""} ${q.categoryTitle || ""} ${q.prompt || ""} ${q.id || ""}`.toLowerCase();
-        return hay.includes(topicQ);
-      });
-      const list = panel.querySelector(".q-list");
-      if (!list) return;
-      list.innerHTML = filtered.map((q) => archiveQItem(q)).join("") || `<p class="mut">${t("noFilter")}</p>`;
-      bindArchiveQuestionActions(panel);
-    });
+    bindArchiveFilters(a);
     bindArchiveQuestionActions(panel);
     return;
   }
@@ -986,6 +990,7 @@ async function openArchiveWeek(monthKey, weekKey) {
     state.archive.studioCounts = data.studioCounts;
     state.archive.filterTier = "all";
     state.archive.filterTopic = "";
+    state.archive.filterLeak = false;
     if (data.rejectReady) state.rejectReady = data.rejectReady;
   } catch (e) {
     state.message = e.message;
@@ -1029,6 +1034,7 @@ async function doLogout() {
     studioCounts: null,
     filterTier: "all",
     filterTopic: "",
+    filterLeak: false,
     loading: false,
   };
   render();
@@ -1259,6 +1265,7 @@ async function openPlacementPage(pageId) {
     state.archive.studioCounts = data.studioCounts;
     state.archive.filterTier = "all";
     state.archive.filterTopic = "";
+    state.archive.filterLeak = false;
     if (data.rejectReady) state.rejectReady = data.rejectReady;
     if (data.pages) state.archive.placementPages = data.pages;
   } catch (e) {

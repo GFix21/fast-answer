@@ -36,7 +36,7 @@ const continents = [
   ["Morocco", "le Maroc", "Marokko", "Africa", "Afrique", "Afrika"],
   ["Ghana", "le Ghana", "Ghana", "Africa", "Afrique", "Afrika"],
   ["Ethiopia", "l'Éthiopie", "Äthiopien", "Africa", "Afrique", "Afrika"],
-  ["South Africa", "l'Afrique du Sud", "Südafrika", "Africa", "Afrique", "Afrika"],
+  ["Pretoria", "Pretoria", "Pretoria", "Africa", "Afrique", "Afrika"],
   ["China", "la Chine", "China", "Asia", "Asie", "Asien"],
   ["India", "l'Inde", "Indien", "Asia", "Asie", "Asien"],
   ["Japan", "le Japon", "Japan", "Asia", "Asie", "Asien"],
@@ -189,10 +189,10 @@ const animals = [
 
 const animalsClean = animals.filter((row) => row[0] !== "animal with a pouch, besides the kangaroo");
 animalsClean.push(["small Australian eucalyptus animal", "le petit animal australien de l'eucalyptus", "das kleine australische Eukalyptustier", "the koala", "le koala", "der Koala", ["the panda", "the sloth", "the wombat"]]);
-animalsClean.push(["spiny anteater of Australia", "l'échidné d'Australie", "der australische Ameisenigel", "the echidna", "l'échidné", "der Ameisenigel", ["the platypus", "the hedgehog", "the porcupine"]]);
+animalsClean.push(["spiny anteater of Australia", "le fourmilier épineux d'Australie", "der australische Ameisenigel", "the echidna", "l'échidné", "der Ameisenigel", ["the platypus", "the hedgehog", "the porcupine"]]);
 animalsClean.push(["egg-laying mammal with a bill", "le mammifère à bec qui pond des œufs", "das eierlegende Säugetier mit einem Schnabel", "the platypus", "l'ornithorynque", "das Schnabeltier", ["the echidna", "the duck", "the beaver"]]);
 animalsClean.push(["largest fish", "le plus grand poisson", "der größte Fisch", "the whale shark", "le requin-baleine", "der Walhai", ["the great white shark", "the blue whale", "the manta ray"]]);
-animalsClean.push(["animal whose babies are joeys when it is a kangaroo", "le nom des petits du kangourou", "der Name der Känguru-Jungen", "joeys", "des joeys", "Joeys", ["cubs", "calves", "pups"]]);
+animalsClean.push(["a baby kangaroo", "le nom des petits du kangourou", "der Name der Känguru-Jungen", "joeys", "des joeys", "Joeys", ["cubs", "calves", "pups"]]);
 
 const easyExtra = [
   ["seasons-four", "How many seasons do temperate regions usually name?", "Combien de saisons les régions tempérées nomment-elles d'habitude ?", "Les régions tempérées nomment d'habitude combien de saisons ?", "Wie viele Jahreszeiten nennen gemäßigte Regionen gewöhnlich?", ["4", "3", "2", "5"]],

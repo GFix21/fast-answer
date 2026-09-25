@@ -7,6 +7,7 @@ import assert from "node:assert/strict";
 import { GENERATIONS } from "../q-and-a/map.js";
 import { CREATORS, creatorQuestions } from "../q-and-a/bots/creators.js";
 import { checkQuestion } from "../q-and-a/bots/checker.js";
+import { answerInQuestion } from "../lib/answer-in-question.js";
 import { isColourPrompt, PLAY_TIERS } from "../q-and-a/bots/structures.js";
 import { COMEDY_STRUCTURES, injectHumor } from "../q-and-a/crackd-kerr.js";
 import { SHOW_JOKES, SHOW_RENEGADE_MAX } from "../lib/generation-deal.js";
@@ -37,6 +38,25 @@ assert.equal(injected.fromStructure, "when");
 assert.equal(injected.renegade, false);
 assert.match(injected.prompt, /When did the Titanic sink\?/);
 assert.match(injected.prompt, /The other answers/);
+
+const leaked = {
+  id: "leak-spotify",
+  tier: "easy",
+  generation: "gen-z",
+  correctIndex: 2,
+  choices: ["Netflix", "Skype", "Spotify", "IKEA"],
+  prompt: "Which Swedish company is best known for a music streaming app called Spotify?",
+};
+assert.equal(answerInQuestion(leaked), true);
+const leakedCheck = checkQuestion(leaked);
+assert.equal(leakedCheck.ok, false);
+assert.ok(leakedCheck.reasons.includes("answer-in-question"));
+const sealed = {
+  ...leaked,
+  prompt: "Which Swedish company is best known for a music streaming app?",
+};
+assert.equal(answerInQuestion(sealed), false);
+assert.equal(checkQuestion(sealed).reasons.includes("answer-in-question"), false);
 for (const style of ["dialogue", "straight-man", "rule-of-three", "misdirection", "wordplay", "callback", "escalation", "reverse", "aside"]) {
   const wrapped = injectHumor({ ...straight, injection: style });
   assert.equal(wrapped.injection, style, style);
