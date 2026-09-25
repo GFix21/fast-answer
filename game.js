@@ -2054,18 +2054,14 @@ function snapshot() {
     rev: state.rev || 0,
   });
 }
-let publishChain = Promise.resolve();
 function publish() {
   currentQ();
   state.rev = (Number(state.rev) || 0) + 1;
   const snap = snapshot();
   if (bc) bc.postMessage(snap);
-  if (role !== "pad" && state.room && state.hostKey) {
-    const body = { action: "state", code: state.room, state: snap };
-    publishChain = publishChain
-      .then(() => rooms("POST", body))
-      .catch(() => null);
-  }
+  if (role === "pad" || !state.room || !state.hostKey) return;
+  const body = { action: "state", code: state.room, state: snap };
+  void rooms("POST", body);
 }
 if (bc) {
   bc.onmessage = (ev) => {
@@ -2627,38 +2623,6 @@ function continueRound() {
   startRead();
 }
 
-function beginGap() {
-  stopTick();
-  clearAiBuzz();
-  const from = state.i;
-  state.gapLeft = 3;
-  state.phase = "reveal";
-  paint();
-  publish();
-  state.tick = setInterval(() => {
-    if (state.i !== from) {
-      stopTick();
-      return;
-    }
-    state.gapLeft -= 1;
-    if (state.gapLeft > 0) {
-      publish();
-      const clock = $("#clock");
-      if (clock) clock.textContent = clock.classList.contains("read-clock") ? String(state.gapLeft) : clockText();
-      return;
-    }
-    stopTick();
-    state.gapLeft = 0;
-    const lock = state.gapLock === true;
-    state.gapLock = false;
-    if (lock) {
-      Promise.resolve(startLockdown(state.buzzId)).catch(() => continueRound());
-      return;
-    }
-    continueRound();
-  }, 1000);
-}
-
 function startSetBreak(tier) {
   state.phase = "setbreak";
   state.pose = "next";
@@ -2737,8 +2701,15 @@ function applyRemoteMap(id, target) {
 }
 
 function afterReveal(ok) {
-  state.gapLock = Boolean(ok && Array.isArray(state.lockdownAt) && state.lockdownAt.includes(state.i) && !state.lockdown);
-  beginGap();
+  stopTick();
+  clearAiBuzz();
+  state.gapLeft = 0;
+  const lock = ok && Array.isArray(state.lockdownAt) && state.lockdownAt.includes(state.i) && !state.lockdown;
+  if (lock) {
+    Promise.resolve(startLockdown(state.buzzId)).catch(() => continueRound());
+    return;
+  }
+  continueRound();
 }
 
 function applyRemoteAnswer(id, index, lockdown = false) {
@@ -2758,7 +2729,7 @@ function applyRemoteAnswer(id, index, lockdown = false) {
 
 function pick(i, asId, fromRemote = false) {
   if (state.viewing) return;
-  if (state.tvMirror) {
+  if (state.tvMirror && !state.hostKey) {
     const answerId = state.lockdown?.playerId || state.buzzId || "";
     if (!answerId || !state.room) return;
     void rooms("POST", {
@@ -2813,9 +2784,7 @@ function pick(i, asId, fromRemote = false) {
     if (ok) state.tally.correct += 1;
     else state.tally.wrong += 1;
   }
-  state.phase = "reveal";
-  paint();
-  publish();
+  state.lastAnswer = null;
   afterReveal(ok);
 }
 
@@ -6494,6 +6463,7 @@ function startPoll() {
     if (j.screen) state.roomScreen = j.screen;
     if (state.tvMirror) {
       if (pollN % 5 === 0) void rooms("POST", { action: "tv-seen", code: state.room });
+      if (state.hostKey) return;
       const qid = state.qs?.[state.i]?.id || state.q?.id || "";
       const before = `${state.phase}:${state.i}:${qid}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.gapLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (j.host) state.roomHost = cleanSeatName(j.host);
