@@ -9,7 +9,7 @@ import {
   t,
   languageSwitcherHtml,
 } from "./i18n.js";
-import { dropoutEndsGame, nextQuestionAllowsJoin } from "./lib/seat-rules.js";
+import { flexerAnswer, flexerPack } from "./lib/flexer.js";
 import {
   orderShowSets,
   setBreakDue,
@@ -1735,6 +1735,23 @@ async function profileApi(body) {
   const data = await res.json().catch(() => null);
   if (data?.token) keepProfileToken(data.token);
   return { ok: res.ok, status: res.status, data };
+}
+async function closeFastAnswerAccount(action) {
+  const word = action === "withdraw" ? tt("withdraw14") : tt("deleteAccount");
+  if (!window.confirm(word)) return;
+  const remote = await profileApi({ action, locale: state.locale });
+  if (!remote.ok) {
+    state.statusMsg = tt("wrongPassword");
+    paint(true);
+    return;
+  }
+  try { sessionStorage.removeItem("fa-profile-token"); } catch { /* ignore */ }
+  state.profile = seedProfile();
+  state.profileUnlocked = false;
+  state.entered = false;
+  state.dojoMode = "create";
+  state.chatOpen = false;
+  paint(true);
 }
 async function refreshServerProfile() {
   const token = profileToken();
@@ -3893,7 +3910,14 @@ function houseLinksHTML() {
     <a class="ghost" id="openGames" href="https://gmgbrand.vercel.app/games">${tt("games")}</a>
     <a class="ghost" id="openBooth" href="https://gmgbrand.vercel.app/profile">${tt("gmgBooth")}</a>
   </div>
-  ${state.chatOpen ? `<div class="wager"><p class="wager-copy">${tt("chatLead")}</p></div>` : ""}`;
+  ${state.chatOpen ? `<div class="wager" id="flexerBox">
+    <p class="wager-copy">${escapeHtml(tt("openChat"))} · Flexer</p>
+    ${(state.flexerLines || [`${flexerPack(state.locale).hello}\n\n${flexerPack(state.locale).why}`]).map((line) => `<p class="meta">${escapeHtml(line)}</p>`).join("")}
+    <div class="wager-row">
+      ${(state.flexerChoices || flexerPack(state.locale).choices).map(([id, label]) => `<button type="button" class="ghost" data-flex="${id}">${escapeHtml(label)}</button>`).join("")}
+    </div>
+    <button class="primary" id="flexerCancel" type="button">${escapeHtml(flexerPack(state.locale).cancel)}</button>
+  </div>` : ""}`;
 }
 
 function track(event) {
@@ -5009,9 +5033,17 @@ function bindDojoSurface() {
     paint(true);
   };
   const deleteAccount = $("#deleteAccount");
-  if (deleteAccount) deleteAccount.onclick = () => { void closeAccount("delete-account"); };
+  if (deleteAccount) deleteAccount.onclick = () => {
+    state.flexerAction = "delete-account";
+    state.chatOpen = true;
+    paint(true);
+  };
   const withdraw14 = $("#withdraw14");
-  if (withdraw14) withdraw14.onclick = () => { void closeAccount("withdraw"); };
+  if (withdraw14) withdraw14.onclick = () => {
+    state.flexerAction = "withdraw";
+    state.chatOpen = true;
+    paint(true);
+  };
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
   bindForgotPassword();
@@ -5463,6 +5495,35 @@ function bindLobby() {
     if (state.chatOpen) track("openChat");
     paint(true);
   };
+  document.querySelectorAll("[data-flex]").forEach((btn) => {
+    btn.onclick = async () => {
+      const id = btn.getAttribute("data-flex");
+      const pack = flexerPack(state.locale);
+      if (id === "mail") {
+        const email = (state.profile && state.profile.email) || "";
+        let text = pack.mailFail;
+        try {
+          const res = await fetch("https://gmgbrand.vercel.app/api/support", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ email, page: "fast-answer", note: (state.flexerLines || []).join("\n").slice(0, 2000) }),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (data.ok) text = pack.mailed;
+        } catch { /* keep mailFail */ }
+        state.flexerLines = [...(state.flexerLines || []), text];
+        state.flexerChoices = [];
+        paint(true);
+        return;
+      }
+      const next = flexerAnswer(state.locale, id);
+      state.flexerLines = [...(state.flexerLines || []), next.text];
+      state.flexerChoices = next.choices;
+      paint(true);
+    };
+  });
+  const flexerCancel = $("#flexerCancel");
+  if (flexerCancel) flexerCancel.onclick = () => { void closeFastAnswerAccount(state.flexerAction || "delete-account"); };
   const openGames = $("#openGames");
   if (openGames) openGames.onclick = () => track("games");
   const dismissWelcome = $("#dismissWelcome");
