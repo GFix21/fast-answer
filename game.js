@@ -309,6 +309,8 @@ const state = {
   seatIntent: "play",
   joinOffer: null,
   pendingJoins: [],
+  buzzerStyle: localStorage.getItem("fa-bz-style") || "classic",
+  buzzerColor: localStorage.getItem("fa-bz-color") || "#e11d48",
   dropoutIds: {},
   /** Phone entry gate (name, email, password) before the lobby. */
   entered: false,
@@ -459,8 +461,40 @@ function applyRoomSetup(room) {
   if (Array.isArray(room.topics) && room.topics.length) state.topicsOn = room.topics.map(String);
   if (room.name) state.roomName = String(room.name);
 }
+function waitingLine() {
+  if (role === "pad") return "";
+  const names = (state.pendingJoins || []).map((g) => cleanSeatName(g.name)).filter(Boolean);
+  if (!names.length) return "";
+  return `<p class="meta">${escapeHtml(tt("waitingToEnter", names.join(", ")))}</p>`;
+}
 function viewerCount() {
   return (state.guests || []).filter((g) => g && g.seat === "view" && cleanSeatName(g.name)).length;
+}
+const BUZZ_STYLES = [
+  ["classic", "Classic"],
+  ["round", "Round"],
+  ["square", "Square"],
+  ["stadium", "Wide"],
+  ["ring", "Ring"],
+  ["slam", "Slam"],
+];
+const BUZZ_COLOURS = ["#e11d48", "#f59e0b", "#2563eb", "#16a34a", "#7c3aed", "#f8fafc"];
+function buzzerLook() {
+  const style = BUZZ_STYLES.some(([id]) => id === state.buzzerStyle) ? state.buzzerStyle : "classic";
+  const colour = BUZZ_COLOURS.includes(state.buzzerColor) ? state.buzzerColor : BUZZ_COLOURS[0];
+  return { style, colour };
+}
+function buzzerButton(canBuzz, label, extra = "") {
+  const look = buzzerLook();
+  return `<button class="buzzer bz-${look.style} ${canBuzz ? "lit" : ""} ${extra}" id="buzz" type="button" style="--buzz-c:${look.colour}" ${canBuzz ? "" : "disabled"}>${label}</button>`;
+}
+function buzzerEditorHTML() {
+  const look = buzzerLook();
+  return `
+    <p class="field">${tt("buzzerLook")}</p>
+    <div class="seat-n" role="group">${BUZZ_STYLES.map(([id, label]) => `<button type="button" class="seat-n-btn ${look.style === id ? "on" : ""}" data-bz="${id}">${label}</button>`).join("")}</div>
+    <div class="seat-n" role="group">${BUZZ_COLOURS.map((c) => `<button type="button" class="bz-swatch ${look.colour === c ? "on" : ""}" data-bzc="${c}" style="background:${c}" aria-label="${c}"></button>`).join("")}</div>
+    <button class="ghost" id="openBuzzer" type="button">${tt("openBuzzer")}</button>`;
 }
 function shareUrl() {
   return shareUrlFor(state.room);
@@ -1633,11 +1667,21 @@ function abilityFromDojo(answers) {
   if (pct >= 0.4) return "silver";
   return "bronze";
 }
+function rosterName(name) {
+  const n = cleanSeatName(name);
+  if (!n || /^player(\s*0)?$/i.test(n)) return "";
+  return n;
+}
+function hostPlaysLocal() {
+  if (role === "pad") return false;
+  if (state.onScreen || isTvDisplay() || state.mpMode === "cast") return false;
+  return true;
+}
 function fillSeats() {
   const guests = (state.guests || []).filter((g) => g.seat !== "view" && cleanSeatName(g.name));
-  const you = cleanSeatName(state.name) ? 1 : 0;
+  const you = hostPlaysLocal() && rosterName(state.name) ? 1 : 0;
   const empty = Math.max(0, (state.playerCount || 3) - you - guests.length);
-  const need = state.botFill ? Math.min(11, empty) : 0;
+  const need = state.botFill && (you + guests.length) > 0 ? Math.min(11, empty) : 0;
   const have = [...(state.seatBots || [])];
   const used = new Set(have.map((b) => b.id));
   const extra = shuffle(CELEB_BOTS.filter((b) => !used.has(b.id)));
@@ -1645,7 +1689,7 @@ function fillSeats() {
   state.seatBots = have.slice(0, need);
 }
 function seatedPreview() {
-  const youName = cleanSeatName(state.name);
+  const youName = hostPlaysLocal() ? rosterName(state.name) : "";
   const you = youName ? [{
     id: "you",
     name: youName,
@@ -1926,6 +1970,8 @@ function snapshot() {
     guests: state.guests,
     dropoutIds: state.dropoutIds || {},
     pendingJoins: (state.pendingJoins || []).map((g) => g.id),
+    buzzerStyle: state.buzzerStyle,
+    buzzerColor: state.buzzerColor,
   });
 }
 function publish() {
@@ -2044,7 +2090,7 @@ function seatPlayers() {
   state.youId = "you";
   fillSeats();
   const guests = (state.guests || []).filter((g) => g.seat !== "view" && cleanSeatName(g.name));
-  const youName = cleanSeatName(state.name);
+  const youName = hostPlaysLocal() ? rosterName(state.name) : "";
   const you = youName ? [{
     id: "you",
     name: youName,
@@ -2397,6 +2443,7 @@ function finishShow() {
 function seatPendingJoins() {
   if (role === "pad") return;
   if (state.phase === "lobby" || state.phase === "ready" || state.phase === "end") return;
+  if (["read", "buzz", "answer"].includes(state.phase)) return;
   const pending = state.pendingJoins || [];
   if (!pending.length) return;
   for (const g of pending) {
@@ -4183,6 +4230,7 @@ function roomBody() {
         ${startWaitHTML()}
         ${playerCountHTML()}
         ${topicsBody()}
+        ${buzzerEditorHTML()}
         <button class="primary" id="createTvCast" type="button">${tt("createRoom")}</button>
       `;
     }
@@ -4190,7 +4238,7 @@ function roomBody() {
       ${roomModeButtons()}
       <p class="meta">${tt("host")}: ${escapeHtml(cleanSeatName(state.name) || tt("host"))}</p>
       ${tvShortMenu()}
-      <button class="ghost" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
+      ${buzzerEditorHTML()}
     `;
   }
 
@@ -4228,6 +4276,7 @@ function roomBody() {
   return `
     ${roomModeButtons()}
     ${tvShortMenu()}
+    ${buzzerEditorHTML()}
   `;
 }
 
@@ -4713,7 +4762,7 @@ function playHTML() {
         </div>
         <div class="buzzbar">
           ${rivalsHTML()}
-          ${!ld && !endPhase && !breaking ? `<button class="buzzer ${canBuzz ? "lit" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
+          ${!ld && !endPhase && !breaking ? buzzerButton(canBuzz, buzzLabel) : ""}
           ${!ld && !endPhase && !breaking && !pad ? `<div class="dock set-dock">
             <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
             <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
@@ -4750,6 +4799,7 @@ function playHTML() {
           ${slang}
           <p class="qtext">${prompt}</p>
           <p class="meta" id="clock">${clockText()}</p>
+          ${waitingLine()}
           <p class="meta">${tt("viewers", viewerCount())}</p>
           ${rivalsHTML()}
         </div>
@@ -4774,7 +4824,7 @@ function playHTML() {
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
         <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
       </div>` : ""}
-      ${(pad || !tv) && !ld && !endPhase && !breaking && !state.viewing && seated ? `<button class="buzzer ${canBuzz ? "lit" : ""} ${readyPhase && state.readyIds[state.youId] ? "ready-on" : ""}" id="buzz" type="button" ${canBuzz ? "" : "disabled"}>${buzzLabel}</button>` : ""}
+      ${(pad || !tv) && !ld && !endPhase && !breaking && !state.viewing && seated ? buzzerButton(canBuzz, buzzLabel, readyPhase && state.readyIds[state.youId] ? "ready-on" : "") : ""}
       ${ld ? `<div class="lock-flag">${ld.phase === "wager" ? tt("lockdownWagers") : ld.phase === "intro" ? escapeHtml(tt("lockRulesClock", ld.introLeft)) : escapeHtml(tt("lockFlag", ld.name, ld.hits, ld.earned || 0))}</div>` : ""}
       ${(pad && (state.phase === "answer" || (ld?.phase === "play" && isHero))) ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
       ${dropoutBtn}
@@ -5318,6 +5368,22 @@ function bindLobby() {
       state.playerCount = clamp(Number(b.dataset.seats), 2, 12);
       localStorage.setItem("fa-seats", String(state.playerCount));
       fillSeats();
+      paint(true);
+    };
+  });
+  document.querySelectorAll("[data-bz]").forEach((b) => {
+    b.onclick = () => {
+      state.buzzerStyle = b.dataset.bz;
+      try { localStorage.setItem("fa-bz-style", state.buzzerStyle); } catch { /* ignore */ }
+      publish();
+      paint(true);
+    };
+  });
+  document.querySelectorAll("[data-bzc]").forEach((b) => {
+    b.onclick = () => {
+      state.buzzerColor = b.dataset.bzc;
+      try { localStorage.setItem("fa-bz-color", state.buzzerColor); } catch { /* ignore */ }
+      publish();
       paint(true);
     };
   });
@@ -5984,7 +6050,10 @@ function ingestGuests(guests) {
       ageBracket: String(g.ageBracket || "").slice(0, 8),
       generation: String(g.generation || "").slice(0, 40),
     }))
-    .slice(0, 11);
+    .slice(0, 32);
+  const play = state.guests.filter((g) => g.seat !== "view").slice(0, 12);
+  const view = state.guests.filter((g) => g.seat === "view").slice(0, 20);
+  state.guests = [...play, ...view];
   if (role !== "pad") state.players = namedHumans(state.players);
   if (state.phase === "lobby" || state.phase === "ready") return;
   if (role === "pad") return;
@@ -5999,7 +6068,7 @@ function ingestGuests(guests) {
     queued.push(g);
   });
   state.pendingJoins = queued;
-  seatPendingJoins();
+  if (!["read", "buzz", "answer"].includes(state.phase)) seatPendingJoins();
 }
 
 async function loadLockdownFile(setId) {
@@ -6070,8 +6139,19 @@ async function startGame() {
     state.joinTick = null;
   }
   state.joinLeft = 0;
-  state.botFill = true;
   seatPlayers();
+  const humans = (state.players || []).filter((p) => p && p.human && cleanSeatName(p.name));
+  if (!humans.length) {
+    state.botFill = false;
+    state.seatBots = [];
+    state.players = [];
+    state.phase = "lobby";
+    state.statusMsg = tt("needHuman");
+    paint(true);
+    publish();
+    return;
+  }
+  state.botFill = true;
   state.playOpen = "ask";
   const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length && bankHasKeys(state.qs))
     && state.dealTopicKey === topicDealKey();
@@ -6122,9 +6202,11 @@ function startPoll() {
     if (applyRefreshFromRoom(j)) paint(true);
     if (j.guests) {
       const before = (state.guests || []).map((g) => g.id).join(",");
+      const waitingBefore = (state.pendingJoins || []).map((g) => g.id).join(",");
       ingestGuests(j.guests);
       const after = (state.guests || []).map((g) => g.id).join(",");
-      if ((state.phase === "lobby" || state.phase === "ready") && before !== after) paint(true);
+      const waitingAfter = (state.pendingJoins || []).map((g) => g.id).join(",");
+      if (((state.phase === "lobby" || state.phase === "ready") && before !== after) || waitingBefore !== waitingAfter) paint(true);
     }
     if (role !== "pad" && j.state?.readyIds && state.phase === "ready") {
       const incoming = j.state.readyIds || {};
