@@ -44,7 +44,7 @@ One page. Collapsible menus. Jeremy and the studio stay live behind the card.
 - **Room** — 2 to 12 seats. TV owns the room on On Screen / Silk / `?tv=1`. Phones join as pads (corner QR), Buzz to ready, all-buzz starts the show. Empty seats are celebrity bots. On Vercel the room store fails closed without Redis. A stranger cannot rewrite a room or buzz as someone else. Browser access is this app's origin, not every site.
 - **Set** — Jeremy height and studio angle, live on this phone (sliders work on mobile).
 
-Discreet **Flow** + © GMG Brand Label sit at the bottom on phone/desktop (hidden on TV). Flow on GMGbrand stays password-gated.
+The mailing list does not live in this repo anymore. A profile can still opt in, and that address is forwarded to [GMG Brand](https://gmgbrand.vercel.app) (`POST /api/house`). Flow can download a CSV copy or, once `LIST_SYNC_SECRET` matches on both Vercel projects, copy the existing list to GMG. The welcome letter and `GMAIL_PASSWORD` are set on GMG Brand.
 
 ## Play
 

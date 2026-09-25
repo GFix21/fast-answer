@@ -332,7 +332,8 @@ function render() {
           <h2>${t("activatedProfiles")}</h2>
           <div class="row">
             <button class="btn" id="refreshProfiles">Refresh</button>
-            <button class="btn primary" id="downloadMail">${t("downloadMail")}</button>
+            <button class="btn" id="downloadMail">${t("downloadMail")}</button>
+            <button class="btn primary" id="copyList">${t("copyList")}</button>
           </div>
         </div>
         <p class="mut">${t("profilesNote")}</p>
@@ -352,6 +353,7 @@ function render() {
       </div>`;
     document.getElementById("refreshProfiles")?.addEventListener("click", () => loadProfiles(true));
     document.getElementById("downloadMail")?.addEventListener("click", downloadMailingList);
+    document.getElementById("copyList")?.addEventListener("click", pushMailingList);
   } else if (state.tab === "fan") {
     renderFan(panel);
   } else if (state.tab === "bank") {
@@ -659,7 +661,8 @@ function renderQueue(panel) {
     <div class="card">
       <div class="row spread">
         <h2>${t("profiles")}</h2>
-        <button class="btn primary" id="downloadMail">${t("downloadMail")}</button>
+        <button class="btn" id="downloadMail">${t("downloadMail")}</button>
+        <button class="btn primary" id="copyList">${t("copyList")}</button>
       </div>
       <p class="mut">${profiles.length === 1 ? t("mailOne", { n: profiles.length }) : t("mailLine", { n: profiles.length })}</p>
       ${profiles.length ? `
@@ -687,6 +690,7 @@ function renderQueue(panel) {
   document.getElementById("refreshQueue")?.addEventListener("click", () => loadQueue(true));
   document.getElementById("refreshRooms")?.addEventListener("click", () => loadQueue(true));
   document.getElementById("downloadMail")?.addEventListener("click", downloadMailingList);
+  document.getElementById("copyList")?.addEventListener("click", pushMailingList);
   panel.querySelectorAll("[data-delete-room]").forEach((b) =>
     b.addEventListener("click", () => deleteFlowRoom(b.dataset.deleteRoom)),
   );
@@ -1465,6 +1469,28 @@ async function downloadSetZip(id) {
     state.message = t("setDownloaded", { id });
   } catch (e) {
     state.message = e.message || "Could not download that set";
+  }
+  render();
+}
+
+async function pushMailingList() {
+  try {
+    const res = await fetch("/api/flow/profiles", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ action: "push-list" }),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (data.reason === "secret") {
+      state.message = t("listSecret");
+    } else if (!res.ok) {
+      throw new Error(data.reason || "Could not copy the mailing list");
+    } else {
+      state.message = t("listCopied", { added: data.added ?? 0 });
+    }
+  } catch (e) {
+    state.message = e.message;
   }
   render();
 }
