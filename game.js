@@ -14,11 +14,11 @@ import {
   orderShowSets,
   setBreakDue,
   tierRunLength,
-  lockdownSlots,
   mapUsesLeft,
   MAP_USES_PER_ROUND,
   SET_BREAK_S,
 } from "./lib/show-pace.js";
+import { evokeLockdownSlots, lockdownSetPath, pickOppositePair } from "./lib/lockdown-sets.js";
 import { dealRamp } from "./lib/generation-deal.js";
 import { slangFor } from "./q-and-a/bots/slang.js";
 import { hashProfilePassword, hashesMatch } from "./lib/password.js";
@@ -56,6 +56,7 @@ import {
   detectCountry,
   normalizeCountry,
 } from "./lib/age-gate.js";
+import { PARENT_MIN_AGE, CHILD_MIN_AGE } from "./lib/parental.js";
 import { GENERATIONS, normalizeGeneration } from "./q-and-a/map.js";
 import { LOUIS_MAIL } from "./q-and-a/louis-liberty.js";
 
@@ -92,7 +93,7 @@ const LOCKDOWN_ANSWER_S = 180; // 3 minutes per lockdown question
 const LOCKDOWN_INTRO_S = 7; // pre-question rules countdown
 const LOCKDOWN_WAIT_S = 60; // waiting players countdown during hero play
 const WAGER_S = 60;
-const WAGER_AMTS = [100, 500, 1000];
+const WAGER_PCTS = [10, 25, 45, 65];
 const LETTERS = "ABCD";
 const PLACE_N = 10;
 const PLACE_MS = 90 * 24 * 60 * 60 * 1000;
@@ -251,6 +252,7 @@ const state = {
   setBreakTier: "",
   lockdownAt: [],
   lockdown: null,
+  lockdownRound: 0,
   rules: false,
   aiBuzzT: null,
   spent: new Set(),
@@ -278,6 +280,9 @@ const state = {
   readyIds: {},
   mpMode: (role === "pad" || joinCode) ? "join" : (forcedDisplay ? "host" : "off"),
   statusMsg: "",
+  welcomeLetter: null,
+  chatOpen: false,
+  albumOn: false,
   placementQs: [],
   botFill: true,
   locale: loadStoredLocale(),
@@ -286,6 +291,9 @@ const state = {
   joinWait: 15,
   joinLeft: 0,
   joinTick: null,
+  castForm: false,
+  connectOpen: false,
+  introCast: null,
   ageFrom: 13,
   ageTo: 99,
   offline: false,
@@ -310,6 +318,10 @@ const state = {
   countrySource: "",
   /** Confirm the profile email, then set a new on-device password. */
   forgotPassword: false,
+  /** Child sign-in uses the player name a parent set, not an email. */
+  childSignIn: false,
+  children: [],
+  childrenLoaded: false,
   topicCatalog: [],
   topicsOn: loadStoredTopicIds(),
   dealFresh: false,
@@ -513,6 +525,7 @@ function clearStoredProfile() {
   try { localStorage.removeItem("fa-name"); } catch { /* ignore */ }
   try { sessionStorage.removeItem("fa-entered"); } catch { /* ignore */ }
   try { sessionStorage.removeItem("fa-dojo-mode"); } catch { /* ignore */ }
+  try { sessionStorage.removeItem("fa-profile-token"); } catch { /* ignore */ }
 }
 function applyProfileReset() {
   clearStoredProfile();
@@ -529,7 +542,7 @@ function applyProfileReset() {
   state.forgotPassword = false;
   state.statusMsg = tt("profileReset");
 }
-async function saveForgotPassword(email, pw, pw2) {
+async function saveForgotPassword(email, current, pw, pw2) {
   if (!hasPhoneProfile() || !state.profile?.email) {
     state.forgotPassword = false;
     state.statusMsg = tt("forgotNoProfile");
@@ -543,7 +556,7 @@ async function saveForgotPassword(email, pw, pw2) {
     paint(true);
     return;
   }
-  if (String(pw || "").length < 4) {
+  if (String(current || "").length < 4 || String(pw || "").length < 4) {
     state.statusMsg = tt("passwordHint");
     paint(true);
     return;
@@ -553,13 +566,24 @@ async function saveForgotPassword(email, pw, pw2) {
     paint(true);
     return;
   }
+  const remote = await profileApi({
+    action: "password",
+    email: typed,
+    current,
+    password: pw,
+  });
+  if (!remote.ok && remote.status !== 503) {
+    state.statusMsg = tt("wrongPassword");
+    paint(true);
+    return;
+  }
   const sealed = sealPassword(pw);
   saveProfile(sealed);
   state.forgotPassword = false;
   state.profileUnlocked = true;
   state.dojoMode = "home";
   state.roomDojoPanel = "";
-  state.statusMsg = tt("passwordSaved");
+  state.statusMsg = remote.status === 503 ? tt("profileStore") : tt("passwordSaved");
   markEntered();
   if (isDojoPage && needsPlacement(state.profile)) startDojo();
   else paint(true);
@@ -570,6 +594,8 @@ function forgotPasswordHTML() {
     <p class="meta">${tt("forgotLead")}</p>
     <label class="field" for="forgotEmail">${tt("email")}</label>
     <input id="forgotEmail" type="email" value="${escapeHtml(state.profile?.email || "")}" maxlength="120" autocomplete="email"/>
+    <label class="field" for="forgotCurrent">${tt("currentPassword")}</label>
+    <input id="forgotCurrent" type="password" maxlength="64" autocomplete="current-password"/>
     <label class="field" for="forgotPw">${tt("newPassword")}</label>
     <input id="forgotPw" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
     <label class="field" for="forgotPw2">${tt("confirmPassword")}</label>
@@ -595,6 +621,7 @@ function bindForgotPassword() {
   if (save) save.onclick = () => {
     void saveForgotPassword(
       $("#forgotEmail") && $("#forgotEmail").value,
+      $("#forgotCurrent") && $("#forgotCurrent").value,
       $("#forgotPw") && $("#forgotPw").value,
       $("#forgotPw2") && $("#forgotPw2").value,
     );
@@ -615,6 +642,28 @@ function maybeResetProfile() {
   if (fromQuery) applyProfileReset();
 }
 async function verifyProfilePassword(pw) {
+  const email = state.profile?.email;
+  const child = state.profile?.role === "child" && state.profile?.loginName;
+  if (email || child) {
+    try {
+      const remote = await profileApi(child
+        ? { action: "login", loginName: state.profile.loginName, password: pw }
+        : { action: "login", email, password: pw });
+      if (remote.ok) {
+        if (remote.data?.profile) {
+          saveProfile({
+            serverAge: remote.data.profile.age,
+            role: remote.data.profile.role || "player",
+            consent: Boolean(remote.data.profile.consent),
+            playLocked: Boolean(remote.data.profile.playLocked),
+            loginName: remote.data.profile.loginName || "",
+          });
+        }
+        return true;
+      }
+      if (remote.status === 401 || remote.status === 403 || remote.status === 409) return false;
+    } catch { /* device lock below */ }
+  }
   const want = state.profile?.passwordHash;
   if (!want) return false;
   const got = hashProfilePassword(pw, state.profile?.passwordSalt || "");
@@ -694,6 +743,7 @@ function shuffle(a) {
 /** Shuffle A–D at deal time so banks that store the key on A are not biased. */
 function shuffleQuestionChoices(q) {
   if (!q || !Array.isArray(q.choices) || q.choices.length < 2) return q;
+  if (!Number.isInteger(q.correctIndex)) return q;
   const correct = q.choices[q.correctIndex];
   const choices = shuffle(q.choices);
   let correctIndex = choices.indexOf(correct);
@@ -962,7 +1012,7 @@ function bindAgeToPack(prefix, genSel, opts = {}) {
       if (sel && gen) sel.value = gen;
     }
     if (note) note.textContent = gen ? tt("packFromAge", genLabel(gen)) : "";
-    if (opts.save !== false && gen && state.profileUnlocked && hasPhoneProfile()) {
+    if (opts.save !== false && gen && state.profileUnlocked && hasPhoneProfile() && !Number.isInteger(Number(state.profile?.serverAge))) {
       saveProfile({
         age,
         country: chosen,
@@ -1058,14 +1108,12 @@ function attributeSeats(questions, players) {
     };
   });
 }
-function buildLockdownQuestions(avoidIds) {
+function buildLockdownQuestions(avoidIds, which = 0) {
   const cohort = ensureCohort();
-  const prepared = cohort?.lockdownPrepared;
+  const prepared = cohort?.lockdownSets?.[which];
   if (Array.isArray(prepared) && prepared.length >= LOCKDOWN_N) return prepared.slice(0, LOCKDOWN_N);
   const players = playersForDeal();
-  const qs = lockdownSet(players, cohort?.packs, avoidIds, LOCKDOWN_N, {
-    refreshes: cohort?.lockdownRefreshes || 0,
-  });
+  const qs = lockdownSet(players, cohort?.packs, avoidIds, LOCKDOWN_N, { which });
   if (qs.length >= LOCKDOWN_N) return qs;
   return leftoverQs(true).slice(0, LOCKDOWN_N);
 }
@@ -1173,6 +1221,14 @@ async function refreshQuestionSet() {
   const by = refreshPlayerName();
   if (state.qs?.length) rememberDealtIds(state.qs.map((q) => q.id));
   state.qs = dealFromPacks();
+  if (!bankHasKeys(state.qs)) {
+    const keyed = await requestHostDeck(state.replaySet ? "replay" : "show", {
+      again: true,
+      avoid: loadRecentQuestionIds(),
+      setId: state.replaySet || "",
+    });
+    if (keyed) state.qs = attributeSeats(keyed, playersForDeal());
+  }
   state.dealFresh = true;
   state.dealTopicKey = topicDealKey();
   const at = Date.now();
@@ -1227,8 +1283,7 @@ function questionRefreshHTML() {
     </div>`;
 }
 function pickLockdownSlots() {
-  if ((state.qs?.length || 0) < 12) return [];
-  return lockdownSlots(state.qs);
+  return evokeLockdownSlots(state.qs?.length || 0);
 }
 function leftoverQs(preferHard = false) {
   const recent = new Set(loadRecentQuestionIds());
@@ -1389,22 +1444,8 @@ function needsEntryGate() {
   if (isDirections || wantsTv() || isTvDisplay()) return false;
   return !state.entered;
 }
-async function activateGameProfile(profile) {
-  if (!profile?.email || !profile?.displayName) return;
-  try {
-    await fetch("/api/profiles", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        id: profile.id,
-        displayName: profile.displayName,
-        email: profile.email,
-        age: profile.age,
-        country: profile.country,
-        detectedCountry: profile.detectedCountry || state.detectedCountry || "",
-      }),
-    });
-  } catch { /* lobby still opens if the list is unreachable */ }
+async function activateGameProfile() {
+  return;
 }
 function markEntered() {
   state.entered = true;
@@ -1422,7 +1463,7 @@ function markEntered() {
     try { localStorage.setItem("fa-mp", "join"); } catch { /* ignore */ }
   }
 }
-async function commitNewProfile(name, email, pw) {
+async function commitNewProfile(name, email, pw, joinList = true) {
   const cleanName = String(name || "").trim().slice(0, 18);
   const cleanEmail = String(email || "").trim();
   if (!cleanName) {
@@ -1440,44 +1481,74 @@ async function commitNewProfile(name, email, pw) {
     paint(true);
     return false;
   }
+  const form = readAgeForm();
+  const detected = state.detectedCountry || "";
+  const min = requiredAge(form.country, detected);
+  const place = ageLimitPlace(form.country, detected);
+  if (!ageIsAllowed(form.age, form.country, detected)) {
+    state.statusMsg = tt("parentNeeded", min, place);
+    paint(true);
+    return false;
+  }
   const sealed = sealPassword(pw);
   const keepLegacy = Boolean(state.profile && !state.profile.passwordHash);
   const base = keepLegacy ? state.profile : seedProfile();
+  const id = base.id || uid();
+  const remote = await profileApi({
+    action: "register",
+    id,
+    displayName: cleanName,
+    email: cleanEmail,
+    password: pw,
+    age: form.age,
+    country: form.country,
+    detectedCountry: detected,
+    mailingList: joinList === true,
+  });
+  if (!remote.ok && remote.status !== 503) {
+    state.statusMsg = remote.data?.error === "age"
+      ? (remote.data.parent
+        ? tt("parentNeeded", remote.data.minimum || min, place)
+        : tt("ageTooYoung", remote.data.minimum || min, place))
+      : tt("wrongPassword");
+    paint(true);
+    return false;
+  }
+  const accepted = remote.data?.profile;
   state.profile = {
     ...base,
-    id: base.id || uid(),
+    id: accepted?.id || id,
     displayName: cleanName,
     email: cleanEmail,
     passwordHash: sealed.passwordHash,
     passwordSalt: sealed.passwordSalt,
     createdAt: keepLegacy && base.createdAt ? base.createdAt : new Date().toISOString(),
   };
-  const form = readAgeForm();
-  const detected = state.detectedCountry || "";
-  const min = requiredAge(form.country, detected);
-  if (!ageIsAllowed(form.age, form.country, detected)) {
-    state.statusMsg = tt("ageTooYoung", min, ageLimitPlace(form.country, detected));
-    paint(true);
-    return false;
-  }
-  const generation = generationForYears(form.age);
   saveProfile({
     displayName: cleanName,
     email: cleanEmail,
     passwordHash: sealed.passwordHash,
     passwordSalt: sealed.passwordSalt,
-    age: form.age,
+    age: accepted?.age || form.age,
+    serverAge: remote.ok ? (accepted?.age || form.age) : "",
     country: form.country,
     detectedCountry: detected,
     ageBracket: bracketForAge(form.age),
-    generation,
+    generation: generationForYears(form.age),
+    role: accepted?.role || "player",
+    consent: true,
+    playLocked: false,
   });
+  if (remote.data?.welcome) {
+    state.welcomeLetter = remote.data.welcome;
+    try { sessionStorage.setItem("fa-welcome", JSON.stringify(remote.data.welcome)); } catch { /* ignore */ }
+  }
+  state.childrenLoaded = false;
   state.dojoMode = "home";
   state.roomDojoPanel = "";
-  state.statusMsg = tt("profileCreated");
+  state.statusMsg = remote.status === 503 ? tt("profileStore") : tt("profileCreated");
   state.entryDraft = null;
   markEntered();
-  await activateGameProfile(state.profile);
   paint(true);
   return true;
 }
@@ -1627,6 +1698,80 @@ function ensureHostKey() {
   state.hostKey = key;
   return key;
 }
+function bankHasKeys(list) {
+  return Array.isArray(list) && list.some((q) => Number.isInteger(q?.correctIndex));
+}
+function profileToken() {
+  try { return sessionStorage.getItem("fa-profile-token") || ""; } catch { return ""; }
+}
+function keepProfileToken(token) {
+  if (!token) return;
+  try { sessionStorage.setItem("fa-profile-token", token); } catch { /* private mode */ }
+}
+function guestKeyFor(code) {
+  const room = String(code || "");
+  if (!room) return "";
+  try { return sessionStorage.getItem(`fa-guest-${room}`) || ""; } catch { return ""; }
+}
+function keepGuestKey(code, key) {
+  const room = String(code || "");
+  if (!room || !key) return;
+  try { sessionStorage.setItem(`fa-guest-${room}`, key); } catch { /* private mode */ }
+}
+async function profileApi(body) {
+  const headers = { "content-type": "application/json" };
+  const token = profileToken();
+  if (token) headers["x-fa-profile"] = token;
+  const res = await fetch("/api/profiles", {
+    method: "POST",
+    headers,
+    credentials: "same-origin",
+    body: JSON.stringify(body),
+  });
+  const data = await res.json().catch(() => null);
+  if (data?.token) keepProfileToken(data.token);
+  return { ok: res.ok, status: res.status, data };
+}
+async function ensureRoomForDeck() {
+  if (role === "pad") return false;
+  if (!state.room) state.room = code();
+  ensureHostKey();
+  const existing = await rooms("GET");
+  if (existing && !existing.error) return true;
+  const saved = await rooms("POST", {
+    action: "create",
+    code: state.room,
+    host: state.name || "TV",
+    hostKey: state.hostKey,
+    screen: state.onScreen ? "tv" : "off",
+    ...roomMeta(),
+  });
+  return Boolean(saved && !saved.error);
+}
+async function requestHostDeck(action, extra = {}) {
+  if (!(await ensureRoomForDeck())) return null;
+  try {
+    const res = await fetch("/api/deck", {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-fa-host": state.hostKey || "" },
+      body: JSON.stringify({
+        action,
+        code: state.room,
+        locale: state.locale,
+        hostKey: state.hostKey,
+        practice: Boolean(state.offline),
+        topics: state.topicsOn || [],
+        ...extra,
+      }),
+    });
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !Array.isArray(data?.questions) || !data.questions.length) return null;
+    if (data.practice && action === "show") state.practiceShow = true;
+    return data.questions;
+  } catch {
+    return null;
+  }
+}
 async function rooms(method, body) {
   try {
     let qs = "";
@@ -1637,12 +1782,17 @@ async function rooms(method, body) {
     }
     const headers = { "content-type": "application/json" };
     if (state.hostKey) headers["x-fa-host"] = state.hostKey;
+    const token = profileToken();
+    if (token) headers["x-fa-profile"] = token;
+    const guest = guestKeyFor(body?.code || state.room);
+    if (guest) headers["x-fa-guest"] = guest;
     const res = await fetch(ROOM_API + qs, {
       method: method === "GET" ? "GET" : "POST",
       headers,
       body: method === "GET" ? undefined : JSON.stringify({ ...body, hostKey: state.hostKey || body?.hostKey || "" }),
     });
     const data = await res.json().catch(() => null);
+    if (data?.guestKey) keepGuestKey(body?.code || state.room, data.guestKey);
     if (!res.ok) return data || { error: "http", status: res.status };
     return data;
   } catch {
@@ -1703,6 +1853,10 @@ function snapshot() {
     setBreakTier: state.setBreakTier,
     lockdownAt: state.lockdownAt,
     lockdown: state.lockdown,
+    lockdownRound: state.lockdownRound || 0,
+    introName: state.introName || "",
+    introLeft: state.introLeft || 0,
+    introCast: state.introCast || null,
     playerCount: state.playerCount,
     readyIds: state.readyIds,
     guests: state.guests,
@@ -1771,6 +1925,7 @@ function clearAiBuzz() {
 
 function clockText() {
   const q = currentQ();
+  if (state.phase === "between" && state.introCast) return tt("castIntro", state.introName);
   if (state.phase === "between" && state.introName) return tt("introducing", state.introName, state.introLeft);
   if (state.phase === "ready" && state.joinLeft > 0) return tt("joinWaitClock", state.joinLeft);
   const ld = state.lockdown;
@@ -2002,7 +2157,7 @@ function armMap(targetId) {
   if (!turningOff && mapUsesLeft(state.mapUses?.[owner]) <= 0) return;
   if (turningOff) delete state.maps[owner];
   else state.maps[owner] = targetId;
-  if (state.phase === "answer") {
+  if (state.phase === "answer" || state.lockdown?.phase === "play" || state.lockdown?.phase === "wager") {
     state.mapLive = Boolean(state.maps[owner]) && mapUsesLeft(state.mapUses?.[owner]) > 0;
   }
   paint();
@@ -2097,25 +2252,18 @@ function recordCareer() {
     displayName: p.displayName || state.name,
   });
   saveProfile({ stats, topScores });
-  if (score > 0 && p.id) {
-    void fetch("/api/profiles", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        action: "score",
-        id: p.id,
-        displayName: p.displayName || state.name,
-        score,
-        at,
-      }),
-    }).catch(() => {});
+  if (score > 0 && profileToken() && !state.offline && !state.practiceShow && profileMayPlay()) {
+    void profileApi({ action: "score", score, at });
   }
 }
 async function syncTopScores() {
   const id = state.profile?.id;
-  if (!id) return;
+  if (!id || !profileToken()) return;
   try {
-    const res = await fetch(`/api/profiles?scores=1&id=${encodeURIComponent(id)}`);
+    const res = await fetch("/api/profiles?scores=1", {
+      headers: { "x-fa-profile": profileToken() },
+      credentials: "same-origin",
+    });
     if (!res.ok) return;
     const data = await res.json();
     const combined = mergeTopScores([...(state.profile?.topScores || []), ...(data.scores || [])], null);
@@ -2184,7 +2332,7 @@ function finishShow() {
 
 function seatPendingJoins() {
   if (role === "pad") return;
-  if (state.i >= 4) return;
+  if (state.phase === "lobby" || state.phase === "ready" || state.phase === "end") return;
   const pending = state.pendingJoins || [];
   if (!pending.length) return;
   for (const g of pending) {
@@ -2192,28 +2340,17 @@ function seatPendingJoins() {
     if (!name) continue;
     if (state.players.some((p) => p.id === g.id || cleanSeatName(p.name) === name)) continue;
     const bot = state.players.find((p) => !p.human);
-    if (bot) {
-      bot.id = g.id;
-      bot.name = name;
-      bot.human = true;
-      bot.you = false;
-      bot.thumb = g.thumb || "";
-      bot.ageBracket = g.ageBracket || "";
-      bot.generation = generationForSeat(g) || defaultGeneration(g.id || g.name);
-      delete bot.skill;
-      delete bot.buzzDelayMs;
-    } else if (state.players.length < 12) {
-      state.players.push({
-        id: g.id,
-        name,
-        score: 0,
-        human: true,
-        you: false,
-        thumb: g.thumb || "",
-        ageBracket: g.ageBracket || "",
-        generation: generationForSeat(g) || defaultGeneration(g.id || g.name),
-      });
-    }
+    if (!bot) continue;
+    bot.id = g.id;
+    bot.name = name;
+    bot.human = true;
+    bot.you = false;
+    bot.score = 0;
+    bot.thumb = g.thumb || "";
+    bot.ageBracket = g.ageBracket || "";
+    bot.generation = generationForSeat(g) || defaultGeneration(g.id || g.name);
+    delete bot.skill;
+    delete bot.buzzDelayMs;
   }
   state.pendingJoins = pending.filter((g) => !state.players.some((p) => p.id === g.id));
 }
@@ -2314,11 +2451,13 @@ function lockdownLogo(ld, backMore = "") {
 }
 
 function mapPhaseOpen() {
-  if (state.lockdown || state.phase === "setbreak") return false;
-  return state.phase === "read" || state.phase === "buzz" || state.phase === "answer";
+  if (state.phase === "setbreak" || state.phase === "ready" || state.phase === "end" || state.phase === "lobby" || state.phase === "between") return false;
+  if (state.lockdown && state.lockdown.phase !== "play" && state.lockdown.phase !== "wager") return false;
+  return state.phase === "read" || state.phase === "buzz" || state.phase === "answer" || state.phase === "lockdown";
 }
 
 function mapOwnerId() {
+  if (state.lockdown && (state.lockdown.phase === "play" || state.lockdown.phase === "wager")) return state.lockdown.playerId;
   if (state.phase === "answer") return state.buzzId || state.youId;
   return state.youId;
 }
@@ -2338,33 +2477,6 @@ function applyRemoteMap(id, target) {
 
 function afterReveal(ok) {
   const shouldLock = ok && state.lockdownAt.includes(state.i) && !state.lockdown;
-  if (state.i < 4 && !shouldLock) {
-    state.phase = "between";
-    state.introName = cleanSeatName(state.buzzBy) || tt("player");
-    state.introLeft = 15;
-    paint(true);
-    publish();
-    if (state.introTick) clearInterval(state.introTick);
-    state.introTick = setInterval(() => {
-      if (state.phase !== "between") {
-        clearInterval(state.introTick);
-        state.introTick = null;
-        return;
-      }
-      state.introLeft -= 1;
-      if (state.introLeft <= 0) {
-        clearInterval(state.introTick);
-        state.introTick = null;
-        state.introName = "";
-        continueRound();
-        return;
-      }
-      const clock = $("#clock");
-      if (clock) clock.textContent = tt("introducing", state.introName, state.introLeft);
-      publish();
-    }, 1000);
-    return;
-  }
   setTimeout(() => {
     if (shouldLock) startLockdown(state.buzzId);
     else continueRound();
@@ -2435,24 +2547,29 @@ function pick(i, asId, fromRemote = false) {
   afterReveal(ok);
 }
 
-function startLockdown(playerId) {
+async function startLockdown(playerId) {
   const hero = playerById(playerId) || me();
   if (!hero) {
     continueRound();
     return;
   }
-  const qs = buildLockdownQuestions([
+  const avoid = [
     ...((state.qs) || []).map((q) => q.id),
     ...(state.spent ? [...state.spent] : []),
-  ]);
-  if (qs.length < LOCKDOWN_N) {
+  ];
+  const which = state.lockdownRound || 0;
+  const setId = state.lockdownPair?.[which] || "";
+  let qs = buildLockdownQuestions(avoid, which);
+  if (!bankHasKeys(qs)) {
+    const keyed = await requestHostDeck("lockdown", { avoid, setId });
+    if (keyed) qs = keyed;
+  }
+  if (!qs || qs.length < LOCKDOWN_N) {
     continueRound();
     return;
   }
-  if (state.cohort?.lockdownPrepared) {
-    delete state.cohort.lockdownPrepared;
-    writeStoredCohort(state.cohort);
-  }
+  if (state.cohort?.lockdownSets) state.cohort.lockdownSets[which] = null;
+  state.lockdownRound = which + 1;
   qs.forEach((q) => state.spent.add(q.id));
   rememberDealtIds(qs.map((q) => q.id));
   state.wagerDraft = null;
@@ -2477,9 +2594,9 @@ function startLockdown(playerId) {
   paint();
   publish();
   state.players.filter((p) => !p.human && p.id !== hero.id).forEach((p) => {
-    const amt = Math.min(WAGER_AMTS[WAGER_AMTS.length - 1], Math.max(100, p.score || 100));
+    const pct = WAGER_PCTS[Math.floor(Math.random() * WAGER_PCTS.length)];
     const side = Math.random() < 0.55 ? "win" : "lose";
-    applyWager(p.id, side, amt, true);
+    applyWager(p.id, side, wagerStake(p.score, pct), true, pct);
   });
   maybeCloseWagers();
   stopTick();
@@ -2494,34 +2611,51 @@ function startLockdown(playerId) {
   }, 1000);
 }
 
-function applyWager(id, side, amount, locked = true) {
+function wagerStake(score, pct) {
+  const points = Math.max(0, Math.round(Number(score) || 0));
+  const cut = WAGER_PCTS.includes(Number(pct)) ? Number(pct) : 10;
+  if (!points) return 0;
+  return Math.min(points, Math.max(1, Math.round(points * cut / 100)));
+}
+
+function applyWager(id, side, amount, locked = true, pct = 0) {
   const ld = state.lockdown;
   if (!ld || ld.phase !== "wager") return;
   if (id === ld.playerId) return;
   const p = playerById(id);
-  const capped = Math.min(Number(amount) || 100, Math.max(100, p?.score || 100));
-  const amt = WAGER_AMTS.includes(capped) ? capped : Math.min(WAGER_AMTS[WAGER_AMTS.length - 1], Math.max(WAGER_AMTS[0], capped));
-  ld.wagers[id] = { side, amount: amt, locked: Boolean(locked) };
+  const score = Math.max(0, Math.round(Number(p?.score) || 0));
+  let usePct = WAGER_PCTS.includes(Number(pct)) ? Number(pct) : 0;
+  if (!usePct) {
+    const target = Number(amount) || 0;
+    usePct = WAGER_PCTS.find((n) => wagerStake(score, n) === target) || 10;
+  }
+  const stake = wagerStake(score, usePct);
+  ld.wagers[id] = { side, amount: stake, pct: usePct, locked: Boolean(locked) };
   if (id === state.youId) {
-    state.wagerDraft = locked ? null : { side, amount: amt };
+    state.wagerDraft = locked ? null : { side, amount: stake, pct: usePct };
   }
   paint();
   publish();
   if (locked) maybeCloseWagers();
 }
 
-function setWagerDraft(side, amount) {
+function setWagerDraft(side, pct) {
   const ld = state.lockdown;
   if (!ld || ld.phase !== "wager") return;
   if (state.youId === ld.playerId) return;
-  const prev = state.wagerDraft || ld.wagers[state.youId] || { side: "win", amount: 100 };
-  const next = {
-    side: side || prev.side || "win",
-    amount: amount != null ? Number(amount) : (prev.amount || 100),
-    locked: false,
-  };
-  state.wagerDraft = next;
-  ld.wagers[state.youId] = { ...next, locked: false };
+  if (ld.wagers[state.youId]?.locked) return;
+  const prev = state.wagerDraft || {};
+  const nextSide = side ? String(side) : (prev.side || "");
+  const nextPct = WAGER_PCTS.includes(Number(pct)) ? Number(pct) : (prev.pct || 0);
+  const amount = nextPct ? wagerStake(me()?.score || 0, nextPct) : 0;
+  if (nextSide && nextPct) {
+    applyWager(state.youId, nextSide, amount, true, nextPct);
+    state.wagerDraft = null;
+    if (bc) bc.postMessage({ type: "wager", id: state.youId, side: nextSide, amount, pct: nextPct, locked: true });
+    if (state.room) void rooms("POST", { action: "wager", code: state.room, id: state.youId, side: nextSide, amount, pct: nextPct, locked: true });
+    return;
+  }
+  state.wagerDraft = { side: nextSide, pct: nextPct, amount, locked: false };
   paint(true);
 }
 
@@ -2548,11 +2682,13 @@ function closeWagers() {
   const ld = state.lockdown;
   if (!ld || ld.phase !== "wager") return;
   stopTick();
-  // Auto-lock any unfinished human drafts as lose@$100 so play can start.
+  // Anyone who did not finish gets LOSE at 10% so the round can start.
   state.players.filter((p) => p.id !== ld.playerId).forEach((p) => {
     if (!ld.wagers[p.id]?.locked) {
-      const d = ld.wagers[p.id] || { side: "lose", amount: 100 };
-      ld.wagers[p.id] = { side: d.side || "lose", amount: d.amount || 100, locked: true };
+      const d = ld.wagers[p.id] || state.wagerDraft || {};
+      const pct = WAGER_PCTS.includes(Number(d.pct)) ? Number(d.pct) : 10;
+      const side = d.side === "win" ? "win" : "lose";
+      ld.wagers[p.id] = { side, amount: wagerStake(p.score, pct), pct, locked: true };
     }
   });
   ld.phase = "intro";
@@ -2669,8 +2805,21 @@ function lockdownPick(i, forced = false) {
   state.picked = i;
   if (ok) {
     ld.hits += 1;
-    ld.earned = (ld.earned || 0) + pts;
-    addScore(ld.playerId, pts);
+    const stake = pts;
+    const targetId = state.mapLive ? state.maps[ld.playerId] : "";
+    const rival = targetId ? playerById(targetId) : null;
+    const mapped = Boolean(rival) && (rival.score || 0) >= stake && mapUsesLeft(state.mapUses?.[ld.playerId]) > 0;
+    if (mapped) {
+      addScore(ld.playerId, stake * 2);
+      addScore(targetId, -stake);
+      state.mapUses = { ...(state.mapUses || {}), [ld.playerId]: (Number(state.mapUses?.[ld.playerId]) || 0) + 1 };
+      state.mapLive = false;
+      delete state.maps[ld.playerId];
+      ld.earned = (ld.earned || 0) + stake * 2;
+    } else {
+      addScore(ld.playerId, pts);
+      ld.earned = (ld.earned || 0) + pts;
+    }
   }
   playSound(ok ? "correct" : "miss");
   state.pose = ok ? "win" : "loss";
@@ -2702,11 +2851,12 @@ function finishLockdown() {
   }
   ld.won = ld.hits >= LOCKDOWN_WIN_AT;
   ld.phase = "result";
-  // Points already banked per-hit via decaying value; wager settles now.
+  // A correct call doubles the stake (pay the stake). A wrong call loses it.
   Object.entries(ld.wagers).forEach(([id, w]) => {
     if (!w?.locked) return;
     const hit = (w.side === "win" && ld.won) || (w.side === "lose" && !ld.won);
-    addScore(id, hit ? w.amount : -w.amount);
+    const stake = Number(w.amount) || 0;
+    addScore(id, hit ? stake : -stake);
   });
   state.pose = ld.won ? "win" : "loss";
   paint();
@@ -2806,7 +2956,8 @@ function wagerHTML() {
   }
   const locked = Boolean(mine?.locked);
   const side = mine?.side || state.wagerDraft?.side || "";
-  const amount = mine?.amount || state.wagerDraft?.amount || 0;
+  const pct = mine?.pct || state.wagerDraft?.pct || 0;
+  const mineScore = me()?.score || 0;
   return `<div class="wager">
     <p class="wager-copy">${tt("lockdownWagerOpp", escapeHtml(ld.name))} · ${ld.wagerLeft}s</p>
     <div class="wager-row">
@@ -2814,14 +2965,14 @@ function wagerHTML() {
       <button type="button" class="side lose ${side === "lose" ? "on" : ""}" data-side="lose" ${locked ? "disabled" : ""}>${tt("lose")}</button>
     </div>
     <div class="wager-row">
-      ${WAGER_AMTS.map((n) =>
-        `<button type="button" class="amt ${amount === n ? "on" : ""}" data-amt="${n}" ${locked ? "disabled" : ""}>$${n}</button>`
-      ).join("")}
+      ${WAGER_PCTS.map((n) => {
+        const stake = wagerStake(mineScore, n);
+        return `<button type="button" class="amt ${pct === n ? "on" : ""}" data-pct="${n}" ${locked ? "disabled" : ""}>${n}% · $${stake}</button>`;
+      }).join("")}
     </div>
     ${locked
-      ? `<p class="meta">${tt("lockedSide", mine.side, mine.amount)}</p>`
-      : `<button type="button" class="primary" id="lockWager" ${side && amount ? "" : "disabled"}>${tt("lockIn")}</button>
-         <p class="meta">${tt("pickThenLock")}</p>`}
+      ? `<p class="meta">${tt("lockedSide", mine.side, mine.amount, mine.pct)}</p>`
+      : `<p class="meta">${tt("pickThenLock")}</p>`}
     ${lockdownRefreshButton()}
   </div>`;
 }
@@ -3150,7 +3301,7 @@ function openDojoPage(mode) {
   }
   paint(true);
 }
-function startDojo() {
+async function startDojo() {
   clearDojoTick();
   const begun = beginPlacementSitting();
   if (begun.blocked) {
@@ -3159,7 +3310,17 @@ function startDojo() {
     if (isDojoPage) paint(true);
     return;
   }
-  state.placementPool = begun.pool;
+  let pool = begun.pool;
+  if (!bankHasKeys(pool)) {
+    const keyed = await requestHostDeck("placement");
+    if (keyed?.length) pool = keyed;
+  }
+  if (!bankHasKeys(pool)) {
+    state.statusMsg = tt("deckLocked");
+    if (isDojoPage) paint(true);
+    return;
+  }
+  state.placementPool = pool;
   const q = pickPlacementQuestion("hard", new Set());
   state.dojo = {
     q,
@@ -3419,14 +3580,14 @@ function genAlphaMailHref() {
   const note = String(state.genAlphaNote || "").trim();
   const subject = q ? `Question on ${q.id}` : "Gen Alpha questions";
   const body = [
-    "To: gmgbrandlable",
+    "To: " + LOUIS_MAIL,
     q ? `Question: ${q.prompt}` : "Gen Alpha questions",
     note ? `Question on this question: ${note}` : "",
   ].filter(Boolean).join("\n");
   return `mailto:${LOUIS_MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-/** Read-only list for the generation picked in Dojo, then a note that emails gmgbrandlable. */
+/** Read-only list for the generation picked in Dojo, then a note that emails the house inbox. */
 function genAlphaReviewHTML() {
   const open = state.genAlphaOpen === true;
   const gen = reviewGeneration();
@@ -3521,6 +3682,10 @@ function dojoBody() {
       <input id="emNew" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("email")}"/>
       <label class="field" for="pwNew">${tt("password")}</label>
       <input id="pwNew" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
+      <label class="topic-row">
+        <input id="joinMail" type="checkbox" checked/>
+        <span>${tt("joinMail")}</span>
+      </label>
       <label class="field" for="thDojo">${tt("photoTv")}</label>
       <div class="thumb-row">
         ${p.thumb ? `<img class="thumb" src="${p.thumb}" alt=""/>` : `<span class="thumb empty"></span>`}
@@ -3550,6 +3715,9 @@ function dojoBody() {
     if (state.forgotPassword) {
       return dojoChrome(`${forgotPasswordHTML()}<p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>`);
     }
+    if (state.childSignIn) {
+      return dojoChrome(`${childSignInHTML()}<p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>`);
+    }
     return dojoChrome(`
       <p class="dir-copy">${tt("unlockIntro")}</p>
       <p class="meta">${escapeHtml(p.displayName || "")}</p>
@@ -3558,6 +3726,7 @@ function dojoBody() {
       <input id="pwUnlock" type="password" maxlength="64" autocomplete="current-password"/>
       <button class="primary" id="unlockProfile" type="button">${tt("unlockProfile")}</button>
       <button class="word" id="forgotPassword" type="button">${tt("forgotPassword")}</button>
+      <button class="word" id="childSignIn" type="button">${tt("childSignIn")}</button>
       <button class="ghost" id="resetProfile" type="button">${tt("resetProfile")}</button>
       <button class="ghost" id="dojoCreateAlt" type="button">${tt("createProfile")}</button>
     `);
@@ -3568,6 +3737,7 @@ function dojoBody() {
   const scores = p.topScores || [];
   const scrollOpen = state.dojoScroll !== "closed";
   return dojoChrome(`
+    ${welcomeLetterHTML()}
     <p class="dir-copy">${tt("dojoUnlockedIntro")}</p>
     ${beltStatusBlock(p)}
     <section class="scroll-acc ${scrollOpen ? "open" : ""}">
@@ -3591,6 +3761,7 @@ function dojoBody() {
     <input id="nm" type="text" value="${escapeHtml(p.displayName || "")}" maxlength="18" autocomplete="nickname"/>
     ${generationSelectHTML("playerGen", p.generation, p.age || p.ageBracket)}
     ${ageBracketHTML("playerAge", p)}
+    ${Number.isInteger(Number(p.serverAge)) ? `<p class="meta">${escapeHtml(tt("ageStays"))}</p>` : ""}
     <label class="field" for="em">${tt("email")}</label>
     <input id="em" type="email" value="${escapeHtml(p.email || "")}" maxlength="120" autocomplete="email" placeholder="${tt("optional")}"/>
     <label class="field" for="thDojo">${tt("photoTv")}</label>
@@ -3609,6 +3780,7 @@ function dojoBody() {
     ${placementNoteHTML()}
     <button class="primary" id="${p.abilityTier ? "retake" : "dojoGo"}" type="button" ${placementAttemptsLeft() <= 0 && placed ? "disabled" : ""}>${p.abilityTier ? tt("retakeMedal") : tt("startDojo")}</button>
     <button class="ghost" id="refreshPlacement" type="button" ${placementAttemptsLeft() <= 0 ? "disabled" : ""}>${tt("refreshPlacement")}</button>
+    ${parentPanelHTML()}
     <button class="ghost" id="lockProfile" type="button">${tt("lockProfile")}</button>
   `);
 }
@@ -3629,6 +3801,61 @@ function dojoGateChipsHTML() {
     ? `<span class="chip ok">${tt("placed")}</span>`
     : `<span class="chip hot">${tt("placementNeeded")}</span>`;
   return `<div class="dojo-gate-chips" role="status">${lockChip}${placeChip}</div>`;
+}
+
+/** Profile card on the phone lobby. Create and Unlock stay in the Dojo. */
+function welcomeLetterHTML() {
+  const letter = state.welcomeLetter;
+  if (!letter?.subject) return "";
+  const song = letter.attachment?.href
+    ? `<p class="meta"><a href="${escapeHtml(letter.attachment.href)}">${escapeHtml(letter.attachment.name || tt("musicOn"))}</a></p>`
+    : "";
+  return `<section class="wager intro">
+    <p class="wager-copy"><b>${escapeHtml(letter.subject)}</b></p>
+    <p class="meta">${escapeHtml(letter.from || LOUIS_MAIL)}</p>
+    <p class="wager-copy">${escapeHtml(letter.body)}</p>
+    ${song}
+    <button class="ghost" id="dismissWelcome" type="button">${tt("dismissWelcome")}</button>
+  </section>`;
+}
+
+function houseLinksHTML() {
+  if (isTvDisplay() && forcedDisplay) return "";
+  return `<div class="house-links">
+    <button type="button" class="ghost" id="albumMusic">${state.albumOn ? tt("musicOff") : tt("musicOn")}</button>
+    <button type="button" class="ghost" id="openChat">${tt("openChat")}</button>
+    <a class="ghost" id="openGames" href="https://gmgbrand.vercel.app/games">${tt("games")}</a>
+  </div>
+  ${state.chatOpen ? `<div class="wager"><p class="wager-copy">${tt("chatLead")}</p></div>` : ""}`;
+}
+
+function track(event) {
+  fetch("/api/metrics", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ event }),
+  }).catch(() => {});
+}
+
+let albumAudio = null;
+function toggleAlbumMusic() {
+  if (state.albumOn && albumAudio) {
+    albumAudio.pause();
+    state.albumOn = false;
+    paint(true);
+    return;
+  }
+  track("musicOn");
+  const audio = albumAudio || new Audio("/api/welcome?song=1");
+  albumAudio = audio;
+  audio.play().then(() => {
+    state.albumOn = true;
+    paint(true);
+  }).catch(() => {
+    state.albumOn = false;
+    state.statusMsg = tt("musicMissing");
+    paint(true);
+  });
 }
 
 /** Profile card on the phone lobby. Create and Unlock stay in the Dojo. */
@@ -3718,14 +3945,35 @@ function roomListHTML(screen) {
       ${rows || `<p class="meta">${tt("noRooms")}</p>`}
     </div>`;
 }
-function roomCreateFields() {
+function startWaitHTML() {
   const wait = clamp(Number(state.joinWait) || 15, 5, 45);
   const waits = [10, 15, 20, 30, 45];
   return `
+    <p class="field">${tt("joinWait")} <b>${wait}s</b></p>
+    <div class="seat-n" role="group">${waits.map((n) => `<button type="button" class="seat-n-btn ${wait === n ? "on" : ""}" data-wait="${n}">${n}</button>`).join("")}</div>`;
+}
+
+function tvShortMenu() {
+  fillSeats();
+  const seats = seatedPreview();
+  const humans = seats.filter((s) => s.human);
+  const bots = seats.filter((s) => !s.human);
+  return `
+    <div class="tv-menu">
+      <p class="field">${tt("players")}</p>
+      <div class="seats">${humans.map((s) => seatSpan(s)).join("") || `<span class="meta">${tt("noPadsYet")}</span>`}</div>
+      <p class="field">${tt("celebrityBots")}</p>
+      <div class="seats">${bots.map((s) => seatSpan(s)).join("") || `<span class="meta">—</span>`}</div>
+      <button class="primary" id="connectTv" type="button">${tt("connectTv")}</button>
+      ${state.room && state.connectOpen ? `<p class="room-code"><b>${escapeHtml(state.room)}</b></p>` : ""}
+    </div>`;
+}
+
+function roomCreateFields() {
+  return `
     <label class="field" for="roomName">${tt("roomName")}</label>
     <input id="roomName" maxlength="32" value="${escapeHtml(state.roomName || "")}" placeholder="${tt("roomNameHint")}"/>
-    <p class="field">${tt("joinWait")} <b>${wait}s</b></p>
-    <div class="seat-n" role="group">${waits.map((n) => `<button type="button" class="seat-n-btn ${wait === n ? "on" : ""}" data-wait="${n}">${n}</button>`).join("")}</div>
+    ${startWaitHTML()}
     <div class="copy-row">
       <label class="field" for="ageFrom">${tt("ageFrom")}
         <input id="ageFrom" type="number" min="10" max="99" value="${clamp(Number(state.ageFrom) || 13, 10, 99)}"/>
@@ -3797,9 +4045,6 @@ function playerCountHTML() {
 
 function roomBody() {
   const pad = isPad();
-  const seats = seatedPreview();
-  const humans = seats.filter((s) => s.human).length;
-  const bots = seats.length - humans;
   const mode = pad ? "join" : (state.mpMode || "host");
 
   if (pad || mode === "join") {
@@ -3826,6 +4071,7 @@ function roomBody() {
       ${roomLinksHTML()}
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
+      ${houseLinksHTML()}
       ${offer ? `
         <div class="join-offer">
           <p class="dir-copy"><b>${tt("joinInAction")}</b> ${escapeHtml(String(offer.tier || offer.phase || "").toUpperCase())}</p>
@@ -3839,20 +4085,21 @@ function roomBody() {
   }
 
   if (mode === "cast") {
+    if (state.castForm || !state.room) {
+      return `
+        ${roomModeButtons()}
+        <p class="dir-copy">${tt("castSetupLead")}</p>
+        ${startWaitHTML()}
+        ${playerCountHTML()}
+        ${topicsBody()}
+        <button class="primary" id="createTvCast" type="button">${tt("createRoom")}</button>
+      `;
+    }
     return `
       ${roomModeButtons()}
-      <p class="dir-copy"><b>${tt("castCopy")}</b></p>
-      ${playerCountHTML()}
-      <div class="seats">
-        ${seats.map((s) => seatSpan(s)).join("")}
-      </div>
-      <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.room || "····")}</b>`)}</p>
-      ${roomLinksHTML()}
-      <button class="primary" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
-      <button class="ghost" id="castGo" type="button">${state.room ? tt("goCastCopy") : tt("goCastMake")}</button>
-      ${roomListHTML("off")}
-      ${roomListHTML("tv")}
-      ${roomDojoEntryHTML()}
+      <p class="meta">${tt("host")}: ${escapeHtml(cleanSeatName(state.name) || tt("host"))}</p>
+      ${tvShortMenu()}
+      <button class="ghost" id="openBuzzer" type="button">${tt("openBuzzer")}</button>
     `;
   }
 
@@ -3881,6 +4128,7 @@ function roomBody() {
       `}
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
+      ${houseLinksHTML()}
       ${lobbyPlayExtras()}
       ${roomDojoEntryHTML()}
     `;
@@ -3888,29 +4136,7 @@ function roomBody() {
 
   return `
     ${roomModeButtons()}
-    <div class="seats">
-      ${seats.map((s) => seatSpan(s)).join("")}
-    </div>
-    ${state.onScreen || isTvDisplay() ? `
-      <p class="dir-copy">${tt("onScreenOwns")}</p>
-      <p class="meta">${tt("viewers", viewerCount())}</p>
-      <p class="room-code">${tt("roomLabel", `<b id="codeCopy">${escapeHtml(state.roomName ? state.roomName + " · " + (state.room || "····") : (state.room || "····"))}</b>`)}</p>
-      ${roomLinksHTML()}
-      <p class="meta">${escapeHtml(tt("humansBots", humans, bots))}</p>
-      ${isTvDisplay() || state.onScreen ? `
-        <div class="tv-players">
-          <p class="rivals-lab">${tt("tvPlayers")}</p>
-          ${(state.guests || []).filter((g) => cleanSeatName(g.name) && g.seat !== "view").map((g) =>
-            `<div class="tv-player-row">
-              <span class="seat human">${escapeHtml(cleanSeatName(g.name))}</span>
-              <button type="button" class="ghost danger" data-kick="${escapeHtml(g.id)}">${tt("removePlayer")}</button>
-            </div>`
-          ).join("") || `<p class="meta">${tt("noPadsYet")}</p>`}
-        </div>` : ""}
-    ` : `<p class="meta">${tt("offScreenHint")}</p>`}
-    ${roomListHTML("off")}
-    ${roomListHTML("tv")}
-    ${roomDojoEntryHTML()}
+    ${tvShortMenu()}
   `;
 }
 
@@ -3934,11 +4160,124 @@ function lobbyGoLabel() {
   return tt("createRoom");
 }
 
+function childSignInHTML() {
+  return `
+    <p class="dir-copy">${tt("childSignInLead")}</p>
+    <label class="field" for="entryLogin">${tt("childLogin")}</label>
+    <input id="entryLogin" type="text" maxlength="20" autocapitalize="none" autocomplete="username" placeholder="${tt("childLogin")}"/>
+    <label class="field" for="entryPw">${tt("password")}</label>
+    <input id="entryPw" type="password" maxlength="64" autocomplete="current-password" placeholder="${tt("passwordHint")}"/>
+    <button class="primary" id="enterChild" type="button">${tt("childSignIn")}</button>
+    <button class="ghost" id="cancelChild" type="button">${tt("cancel")}</button>
+  `;
+}
+async function submitChildSignIn() {
+  const loginName = String(($("#entryLogin") && $("#entryLogin").value) || "").trim();
+  const pw = String(($("#entryPw") && $("#entryPw").value) || "");
+  if (loginName.length < 3 || pw.length < 4) {
+    state.statusMsg = tt("childLoginHint");
+    paint(true);
+    return;
+  }
+  const remote = await profileApi({ action: "login", loginName, password: pw });
+  if (!remote.ok || !remote.data?.profile) {
+    state.statusMsg = remote.data?.error === "revoked"
+      ? tt("parentRevoked")
+      : (remote.status === 503 ? tt("profileStore") : tt("wrongPassword"));
+    paint(true);
+    return;
+  }
+  const profile = remote.data.profile;
+  const sealed = sealPassword(pw);
+  state.profile = seedProfile();
+  saveProfile({
+    id: profile.id,
+    displayName: profile.displayName,
+    email: "",
+    age: profile.age,
+    serverAge: profile.age,
+    country: profile.country || "",
+    role: "child",
+    loginName: profile.loginName || loginName,
+    consent: Boolean(profile.consent),
+    playLocked: Boolean(profile.playLocked),
+    ...sealed,
+  });
+  state.name = profile.displayName || loginName;
+  state.childSignIn = false;
+  state.profileUnlocked = true;
+  state.dojoMode = "home";
+  state.statusMsg = tt("profileEntered");
+  state.entryDraft = null;
+  markEntered();
+  paint(true);
+}
+function bindChildSignIn() {
+  const open = $("#childSignIn");
+  if (open) open.onclick = () => {
+    state.childSignIn = true;
+    state.statusMsg = "";
+    paint(true);
+  };
+  const cancel = $("#cancelChild");
+  if (cancel) cancel.onclick = () => {
+    state.childSignIn = false;
+    state.statusMsg = "";
+    paint(true);
+  };
+  const enter = $("#enterChild");
+  if (enter) enter.onclick = () => { void submitChildSignIn(); };
+}
+function parentPanelHTML() {
+  if (!parentMayAdd()) return "";
+  if (!state.childrenLoaded && profileToken()) {
+    state.childrenLoaded = true;
+    void profileApi({ action: "children" }).then((remote) => {
+      if (!remote.ok || (state.children || []).length) return;
+      state.children = remote.data.children || [];
+      paint(true);
+    });
+  }
+  const kids = state.children || [];
+  return `
+    <section class="q-refresh">
+      <p class="field">${escapeHtml(tt("parentTitle"))}</p>
+      <p class="meta">${escapeHtml(tt("parentLead"))}</p>
+      <label class="field" for="childName">${tt("name")}</label>
+      <input id="childName" type="text" maxlength="18" autocomplete="off"/>
+      <label class="field" for="childLogin">${tt("childLogin")}</label>
+      <input id="childLogin" type="text" maxlength="20" autocapitalize="none" autocomplete="off"/>
+      <p class="meta">${escapeHtml(tt("childLoginHint"))}</p>
+      <label class="field" for="childYears">${tt("ageYears")}</label>
+      <input id="childYears" type="number" min="${CHILD_MIN_AGE}" max="120" inputmode="numeric"/>
+      <p class="meta">${escapeHtml(tt("childAgeHint"))}</p>
+      <label class="field" for="childCountry">${tt("country")}</label>
+      <select id="childCountry">
+        ${COUNTRIES.map((c) => `<option value="${c}">${escapeHtml(tt("country" + c))}</option>`).join("")}
+      </select>
+      <label class="field" for="childPw">${tt("password")}</label>
+      <input id="childPw" type="password" maxlength="64" autocomplete="new-password" placeholder="${tt("passwordHint")}"/>
+      <button class="primary" id="addChild" type="button">${tt("addChild")}</button>
+      ${kids.map((kid) => `
+        <div class="room-row">
+          <span class="room-meta"><b>${escapeHtml(kid.displayName || "")}</b> · ${escapeHtml(kid.loginName || "")} · ${escapeHtml(String(kid.age ?? ""))}${kid.playLocked ? ` · ${escapeHtml(tt("parentOff"))}` : ""}</span>
+          ${kid.playLocked ? "" : `
+            <input data-child-pw="${escapeHtml(kid.id)}" type="password" maxlength="64" autocomplete="new-password" placeholder="${escapeHtml(tt("newPassword"))}"/>
+            <button type="button" class="ghost" data-child-pw-save="${escapeHtml(kid.id)}">${tt("savePassword")}</button>
+            <button type="button" class="ghost danger" data-child-off="${escapeHtml(kid.id)}">${tt("revokeChild")}</button>
+          `}
+        </div>`).join("")}
+    </section>`;
+}
 function lobbyGateReason() {
   if (isTvDisplay()) return "";
   if (!hasPhoneProfile()) return tt("gateProfile");
   if (needsPasswordSetup()) return tt("gateSetPassword");
   if (!state.profileUnlocked) return tt("gatePassword");
+  if (state.profile?.role === "child" && !state.profile?.consent) return tt("parentRevoked");
+  if (state.profile?.role !== "child" && Number.isInteger(Number(state.profile?.serverAge)) && !profileMayPlay()) {
+    return tt("parentNeeded", requiredAge(state.profile?.country, state.profile?.detectedCountry || state.detectedCountry), ageLimitPlace(state.profile?.country, state.detectedCountry || state.detectedCountry));
+  }
   if (!isPlaced()) return tt("gateDojo");
   return "";
 }
@@ -3966,7 +4305,7 @@ function entryHTML() {
       <form class="entry-card" id="entryForm" autocomplete="on">
         <p class="dir-copy">${tt("entryLead")}</p>
         ${stored ? `<p class="meta">${tt("entryCreateHint")}</p>` : ""}
-        ${state.forgotPassword && existing ? forgotPasswordHTML() : `
+        ${state.childSignIn ? childSignInHTML() : state.forgotPassword && existing ? forgotPasswordHTML() : `
         <label class="field" for="entryName">${tt("name")}</label>
         <input id="entryName" type="text" value="${escapeHtml(name)}" maxlength="18" autocomplete="nickname" placeholder="${tt("name")}"/>
         <label class="field" for="entryEmail">${tt("email")}</label>
@@ -3978,6 +4317,7 @@ function entryHTML() {
         <button class="primary ${ready ? "" : "hidden"}" id="enterProfile" type="button">${entryActionLabel(name)}</button>
         ${stored ? `<button class="word ${existing ? "" : "hidden"}" id="forgotPassword" type="button">${tt("forgotPassword")}</button>` : ""}
         ${stored ? `<button class="word" id="entryCreateNew" type="button">${tt("createNewProfile")}</button>` : ""}
+        <button class="word" id="childSignIn" type="button">${tt("childSignIn")}</button>
         <button class="ghost" id="resetProfile" type="button">${tt("resetProfile")}</button>
         `}
         <p class="status" id="stt">${escapeHtml(state.statusMsg || "")}</p>
@@ -4004,10 +4344,12 @@ function bindEntry() {
     const em = emailEl && emailEl.value;
     const pw = pwEl && pwEl.value;
     const existing = entryIsExisting(nm);
-    const ageOk = existing || ageIsAllowed(readYears($("#entryAgeYears")), readCountry($("#entryAgeCountry")), state.detectedCountry);
+    const years = readYears($("#entryAgeYears"));
+    const ageOk = existing || ageIsAllowed(years, readCountry($("#entryAgeCountry")), state.detectedCountry);
+    const tooYoung = !existing && Number.isInteger(years) && !ageOk;
     if (btn) {
-      btn.classList.toggle("hidden", !entryReady(nm, em, pw) || !ageOk);
-      btn.textContent = entryActionLabel(nm);
+      btn.classList.toggle("hidden", !entryReady(nm, em, pw) || (!ageOk && !tooYoung));
+      btn.textContent = tooYoung ? tt("askParent") : entryActionLabel(nm);
     }
     if (pwEl) pwEl.autocomplete = existing ? "current-password" : "new-password";
     if (forgot) forgot.classList.toggle("hidden", !existing);
@@ -4017,10 +4359,19 @@ function bindEntry() {
   if (emailEl) emailEl.oninput = sync;
   if (pwEl) {
     pwEl.oninput = sync;
-    pwEl.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); void submitEntry(); } };
+    pwEl.onkeydown = (e) => {
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      if (state.childSignIn) void submitChildSignIn();
+      else void submitEntry();
+    };
   }
   const form = $("#entryForm");
-  if (form) form.onsubmit = (e) => { e.preventDefault(); void submitEntry(); };
+  if (form) form.onsubmit = (e) => {
+    e.preventDefault();
+    if (state.childSignIn) void submitChildSignIn();
+    else void submitEntry();
+  };
   if (btn) btn.onclick = () => { void submitEntry(); };
   const createNew = $("#entryCreateNew");
   if (createNew) createNew.onclick = () => {
@@ -4036,6 +4387,7 @@ function bindEntry() {
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
   bindForgotPassword();
+  bindChildSignIn();
   bindRules();
 }
 
@@ -4184,6 +4536,7 @@ function playHTML() {
       : state.phase === "answer" || (!state.onScreen && !pad && state.phase === "buzz");
   let prompt;
   if (readyPhase) prompt = "";
+  else if (state.phase === "between" && state.introCast) prompt = escapeHtml(tt("castIntro", (state.introCast || []).join(" · ")));
   else if (state.phase === "between") prompt = state.introName ? escapeHtml(tt("introducing", state.introName, state.introLeft)) : "";
   else if (endPhase) prompt = tt("showEnd");
   else if (ld?.phase === "wager") prompt = `LOCKDOWN — ${ld.name} · ${tt("lockdownWagers")}`;
@@ -4355,7 +4708,11 @@ async function openRoom(screen) {
     ...roomMeta(),
   });
   if (!saved || saved.error) {
-    state.statusMsg = tt("roomNotListed", state.room);
+    state.statusMsg = saved?.error === "store"
+      ? tt("roomStore")
+      : saved?.error === "host"
+        ? tt("roomHost")
+        : tt("roomNotListed", state.room);
   } else {
     applyRoomSetup(saved);
     const meta = roomMeta();
@@ -4374,6 +4731,55 @@ async function openRoom(screen) {
   }
   startPoll();
   return saved;
+}
+
+async function createTvCast() {
+  if (!isTvDisplay()) {
+    const gate = lobbyGateReason();
+    if (gate) {
+      state.statusMsg = gate;
+      openDojoPage(dojoModeForGate());
+      return;
+    }
+  }
+  const hostName = cleanSeatName(state.profile?.displayName || state.name) || "Host";
+  state.name = hostName;
+  saveProfile({ displayName: hostName });
+  state.room = Math.random().toString(36).slice(2, 6).toUpperCase();
+  state.joinInput = state.room;
+  state.onScreen = isTvDisplay();
+  state.mpMode = "cast";
+  state.castForm = false;
+  state.connectOpen = true;
+  state.roomSetup = true;
+  state.lobbyOpen = "room";
+  fillSeats();
+  try {
+    localStorage.setItem("fa-mp", "cast");
+    localStorage.setItem("fa-onscreen", state.onScreen ? "1" : "0");
+  } catch { /* ignore */ }
+  const saved = await openRoom("tv");
+  state.roomSetup = true;
+  await refreshActiveRooms();
+  if (saved && !saved.error) state.statusMsg = tt("castListed", state.room);
+  paint(true);
+}
+
+async function connectToTv() {
+  if (!state.room) {
+    if (isTvDisplay() || state.onScreen) await openRoom("tv");
+    else {
+      state.castForm = true;
+      state.mpMode = "cast";
+      paint(true);
+      return;
+    }
+  }
+  state.connectOpen = true;
+  const url = tvSilkUrl(state.room);
+  const ok = await copyText(url);
+  state.statusMsg = ok ? tt("silkCopied") : tt("copyFail", url);
+  paint(true);
 }
 
 async function createOffScreenRoom() {
@@ -4423,6 +4829,7 @@ async function castThisRoom() {
   state.roomSetup = false;
   state.onScreen = isTvDisplay();
   state.mpMode = "cast";
+  state.castForm = false;
   state.lobbyOpen = "room";
   try {
     localStorage.setItem("fa-mp", "cast");
@@ -4447,14 +4854,14 @@ function bindDojoSurface() {
     const name = String(($("#nm") && $("#nm").value) || "").trim().slice(0, 18);
     const email = String(($("#emNew") && $("#emNew").value) || "");
     const pw = String(($("#pwNew") && $("#pwNew").value) || "");
-    await commitNewProfile(name, email, pw);
+    await commitNewProfile(name, email, pw, !($("#joinMail") && $("#joinMail").checked === false));
   };
   const roomCreateSubmit = $("#roomCreateSubmit");
   if (roomCreateSubmit) roomCreateSubmit.onclick = async () => {
     const name = String(($("#roomNm") && $("#roomNm").value) || "").trim().slice(0, 18);
     const email = String(($("#roomEm") && $("#roomEm").value) || "");
     const pw = String(($("#roomPwNew") && $("#roomPwNew").value) || "");
-    await commitNewProfile(name, email, pw);
+    await commitNewProfile(name, email, pw, !($("#joinMail") && $("#joinMail").checked === false));
   };
   const commitPassword = async (pw, pw2) => {
     if (pw.length < 4) {
@@ -4514,6 +4921,59 @@ function bindDojoSurface() {
   const resetProfile = $("#resetProfile");
   if (resetProfile) resetProfile.onclick = () => { applyProfileReset(); paint(true); };
   bindForgotPassword();
+  bindChildSignIn();
+  const addChild = $("#addChild");
+  if (addChild) addChild.onclick = async () => {
+    const remote = await profileApi({
+      action: "child",
+      displayName: ($("#childName") && $("#childName").value) || "",
+      loginName: ($("#childLogin") && $("#childLogin").value) || "",
+      age: Number($("#childYears") && $("#childYears").value),
+      country: ($("#childCountry") && $("#childCountry").value) || "",
+      password: ($("#childPw") && $("#childPw").value) || "",
+    });
+    if (!remote.ok || !remote.data?.profile) {
+      const code = remote.data?.error;
+      state.statusMsg = code === "parent" ? tt("notAParent")
+        : code === "exists" ? tt("childExists")
+        : code === "age" ? tt("childAgeHint")
+        : code === "login" ? tt("childLoginHint")
+        : remote.status === 503 ? tt("profileStore")
+        : tt("passwordHint");
+      paint(true);
+      return;
+    }
+    state.children = [remote.data.profile, ...(state.children || []).filter((c) => c.id !== remote.data.profile.id)];
+    state.statusMsg = tt("childAdded", remote.data.profile.loginName || remote.data.profile.displayName);
+    paint(true);
+  };
+  document.querySelectorAll("[data-child-off]").forEach((b) => {
+    b.onclick = async () => {
+      const remote = await profileApi({ action: "revoke", childId: b.dataset.childOff });
+      if (!remote.ok) {
+        state.statusMsg = remote.status === 503 ? tt("profileStore") : tt("wrongPassword");
+        paint(true);
+        return;
+      }
+      state.children = (state.children || []).map((c) => (
+        c.id === b.dataset.childOff ? { ...c, playLocked: true, consent: false } : c
+      ));
+      state.statusMsg = tt("childRevoked");
+      paint(true);
+    };
+  });
+  document.querySelectorAll("[data-child-pw-save]").forEach((b) => {
+    b.onclick = async () => {
+      const field = document.querySelector(`[data-child-pw="${b.dataset.childPwSave}"]`);
+      const remote = await profileApi({
+        action: "child-password",
+        childId: b.dataset.childPwSave,
+        password: field ? field.value : "",
+      });
+      state.statusMsg = remote.ok ? tt("passwordSaved") : (remote.data?.error === "revoked" ? tt("parentRevoked") : tt("passwordHint"));
+      paint(true);
+    };
+  });
   const dojoCreateAlt = $("#dojoCreateAlt");
   if (dojoCreateAlt) dojoCreateAlt.onclick = () => openDojoPage("create");
   const dojoCancelMode = $("#dojoCancelMode");
@@ -4532,19 +4992,22 @@ function bindDojoSurface() {
     const generation = readGeneration($("#playerGen"));
     const form = readAgeForm("playerAge");
     const detected = state.detectedCountry || "";
-    if (!ageIsAllowed(form.age, form.country, detected)) {
-      state.statusMsg = tt("ageTooYoung", requiredAge(form.country, detected), ageLimitPlace(form.country, detected));
+    const lockedAge = Number.isInteger(Number(state.profile?.serverAge)) ? Number(state.profile.serverAge) : form.age;
+    const child = state.profile?.role === "child";
+    if (!child && !ageIsAllowed(lockedAge, form.country, detected)) {
+      state.statusMsg = tt("parentNeeded", requiredAge(form.country, detected), ageLimitPlace(form.country, detected));
       paint(true);
       return;
     }
     const patch = {
       displayName: name || state.name,
-      email,
-      age: form.age,
-      country: form.country,
+      email: child ? (state.profile?.email || "") : email,
+      age: child ? state.profile.age : lockedAge,
+      serverAge: state.profile?.serverAge ?? "",
+      country: child ? (state.profile?.country || form.country) : form.country,
       detectedCountry: detected,
-      ageBracket: bracketForAge(form.age),
-      generation: generationForYears(form.age) || generation,
+      ageBracket: bracketForAge(child ? state.profile.age : lockedAge),
+      generation: generationForYears(child ? state.profile.age : lockedAge) || generation,
     };
     if (pw || pw2) {
       if (pw.length < 4) {
@@ -4687,6 +5150,7 @@ function bindLobby() {
       localStorage.setItem("fa-mp", state.mpMode);
       state.statusMsg = "";
       state.lobbyOpen = "room";
+      if (state.mpMode === "cast") state.castForm = true;
       if (state.mpMode === "off" || state.mpMode === "join" || state.mpMode === "cast") {
         void refreshActiveRooms().then(() => paint(true));
         return;
@@ -4785,6 +5249,7 @@ function bindLobby() {
   });
   const joinRoomBtn = $("#joinRoom");
   if (joinRoomBtn) joinRoomBtn.onclick = () => {
+    track("gameRoom");
     const jc = $("#jc");
     const code = jc ? String(jc.value || "") : (state.joinInput || "");
     void beginJoin(code);
@@ -4795,11 +5260,16 @@ function bindLobby() {
       if (!code) return;
       const jc = $("#jc");
       if (jc) jc.value = code.toUpperCase();
+      track("gameRoom");
       void beginJoin(code);
     };
   });
   const createRoomBtn = $("#createRoom");
-  if (createRoomBtn) createRoomBtn.onclick = () => { void createOffScreenRoom(); };
+  if (createRoomBtn) createRoomBtn.onclick = () => { track("gameRoom"); void createOffScreenRoom(); };
+  const createTvCastBtn = $("#createTvCast");
+  if (createTvCastBtn) createTvCastBtn.onclick = () => { track("gameRoom"); void createTvCast(); };
+  const connectTv = $("#connectTv");
+  if (connectTv) connectTv.onclick = () => { track("gameRoom"); void connectToTv(); };
   const castRoomBtn = $("#castRoom");
   if (castRoomBtn) castRoomBtn.onclick = () => { void castThisRoom(); };
   document.querySelectorAll("#openBuzzer").forEach((b) => {
@@ -4888,7 +5358,23 @@ function bindLobby() {
   bindSliders();
   bindRules();
   const playOffline = $("#playOffline");
-  if (playOffline) playOffline.onclick = () => { void startOffline(); };
+  if (playOffline) playOffline.onclick = () => { track("games"); void startOffline(); };
+  const albumMusic = $("#albumMusic");
+  if (albumMusic) albumMusic.onclick = () => toggleAlbumMusic();
+  const openChat = $("#openChat");
+  if (openChat) openChat.onclick = () => {
+    state.chatOpen = !state.chatOpen;
+    if (state.chatOpen) track("openChat");
+    paint(true);
+  };
+  const openGames = $("#openGames");
+  if (openGames) openGames.onclick = () => track("games");
+  const dismissWelcome = $("#dismissWelcome");
+  if (dismissWelcome) dismissWelcome.onclick = () => {
+    state.welcomeLetter = null;
+    try { sessionStorage.removeItem("fa-welcome"); } catch { /* ignore */ }
+    paint(true);
+  };
   const roomName = $("#roomName");
   if (roomName) roomName.onchange = () => {
     state.roomName = roomName.value;
@@ -4990,6 +5476,19 @@ function ageGateMessage() {
   const detected = state.profile?.detectedCountry || state.detectedCountry;
   return tt("ageTooYoung", requiredAge(state.profile?.country, detected), ageLimitPlace(state.profile?.country, detected));
 }
+function profileMayPlay() {
+  const p = state.profile;
+  if (!p || p.playLocked) return false;
+  if (p.role === "child") return Boolean(p.consent);
+  const age = Number.isInteger(Number(p.serverAge)) ? Number(p.serverAge) : Number(p.age);
+  return ageIsAllowed(age, p.country, p.detectedCountry || state.detectedCountry);
+}
+function parentMayAdd() {
+  const p = state.profile;
+  if (!p || p.role === "child" || !state.profileUnlocked) return false;
+  const age = Number.isInteger(Number(p.serverAge)) ? Number(p.serverAge) : Number(p.age);
+  return age >= PARENT_MIN_AGE && ageIsAllowed(age, p.country, p.detectedCountry || state.detectedCountry);
+}
 async function joinAsBuzzer() {
   const code = String(state.room || state.joinInput || joinCode || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
   if (!code || code.length < 3) {
@@ -5014,8 +5513,11 @@ async function joinAsBuzzer() {
     openDojoPage("home");
     return false;
   }
-  if (!state.viewing && !ageIsAllowed(state.profile?.age, state.profile?.country, state.profile?.detectedCountry || state.detectedCountry)) {
-    state.statusMsg = ageGateMessage();
+  if (!state.viewing && !profileMayPlay()) {
+    const detected = state.profile?.detectedCountry || state.detectedCountry;
+    state.statusMsg = state.profile?.role === "child" || state.profile?.playLocked
+      ? tt("parentRevoked")
+      : tt("parentNeeded", requiredAge(state.profile?.country, detected), ageLimitPlace(state.profile?.country, detected));
     openDojoPage("home");
     return false;
   }
@@ -5045,8 +5547,11 @@ async function joinAsBuzzer() {
     generation: playerGeneration(state.profile),
   });
   if (!joined || joined.error) {
-    state.statusMsg = (joined && joined.message)
-      || tt("roomMissing", code);
+    state.statusMsg = joined?.error === "unauthorized"
+      ? tt("parentSignIn")
+      : joined?.error === "revoked"
+        ? tt("parentRevoked")
+        : ((joined && joined.message) || tt("roomMissing", code));
     role = prevRole;
     paint(true);
     return false;
@@ -5263,21 +5768,19 @@ function bindPlay() {
       const ld = state.lockdown;
       if (!ld || ld.phase !== "wager") return;
       if (ld.wagers[state.youId]?.locked) return;
-      const prev = state.wagerDraft || ld.wagers[state.youId] || { amount: 100 };
-      setWagerDraft(b.dataset.side, prev.amount || 100);
+      const prev = state.wagerDraft || {};
+      setWagerDraft(b.dataset.side, prev.pct || 0);
     };
   });
-  document.querySelectorAll("[data-amt]").forEach((b) => {
+  document.querySelectorAll("[data-pct]").forEach((b) => {
     b.onclick = () => {
       const ld = state.lockdown;
       if (!ld || ld.phase !== "wager") return;
       if (ld.wagers[state.youId]?.locked) return;
-      const prev = state.wagerDraft || ld.wagers[state.youId] || { side: "win" };
-      setWagerDraft(prev.side || "win", Number(b.dataset.amt));
+      const prev = state.wagerDraft || {};
+      setWagerDraft(prev.side || "", Number(b.dataset.pct));
     };
   });
-  const lockWager = $("#lockWager");
-  if (lockWager) lockWager.onclick = () => lockInWager();
   document.querySelectorAll(".js-refresh-lock").forEach((b) => {
     b.onclick = () => refreshLockdownQuestions();
   });
@@ -5339,9 +5842,72 @@ function ingestGuests(guests) {
     queued.push(g);
   });
   state.pendingJoins = queued;
+  seatPendingJoins();
 }
 
-function startGame() {
+async function loadLockdownFile(setId) {
+  try {
+    const res = await fetch(`/${lockdownSetPath(setId, state.locale)}`);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data?.questions) ? data.questions.slice(0, LOCKDOWN_N) : [];
+  } catch {
+    return [];
+  }
+}
+
+async function prepareLockdownSets() {
+  const cohort = ensureCohort();
+  const pair = state.lockdownPair || pickOppositePair();
+  state.lockdownPair = pair;
+  const loaded = [];
+  for (const id of pair) loaded.push(await loadLockdownFile(id));
+  if (loaded.every((list) => list.length >= LOCKDOWN_N)) {
+    cohort.lockdownSets = loaded;
+    state.cohort = cohort;
+    return;
+  }
+  if (!cohort?.packs) return;
+  const players = playersForDeal();
+  const used = (state.qs || []).map((q) => q.id);
+  const first = lockdownSet(players, cohort.packs, used, LOCKDOWN_N, { which: 0 });
+  const second = lockdownSet(players, cohort.packs, [...used, ...first.map((q) => q.id)], LOCKDOWN_N, { which: 1 });
+  cohort.lockdownSets = [first, second];
+  state.cohort = cohort;
+}
+
+function startCastIntro() {
+  const names = (state.players || []).map((p) => cleanSeatName(p.name)).filter(Boolean);
+  state.phase = "between";
+  state.introCast = names;
+  state.introName = names.join(" · ");
+  state.introLeft = Math.min(12, Math.max(6, names.length));
+  state.pose = "idle";
+  paint(true);
+  publish();
+  if (state.introTick) clearInterval(state.introTick);
+  state.introTick = setInterval(() => {
+    if (state.phase !== "between" || !state.introCast) {
+      clearInterval(state.introTick);
+      state.introTick = null;
+      return;
+    }
+    state.introLeft -= 1;
+    if (state.introLeft <= 0) {
+      clearInterval(state.introTick);
+      state.introTick = null;
+      state.introCast = null;
+      state.introName = "";
+      startRead();
+      return;
+    }
+    const clock = $("#clock");
+    if (clock) clock.textContent = tt("castIntro", state.introName);
+    publish();
+  }, 1000);
+}
+
+async function startGame() {
   if (state.joinTick) {
     clearInterval(state.joinTick);
     state.joinTick = null;
@@ -5350,15 +5916,32 @@ function startGame() {
   state.botFill = true;
   seatPlayers();
   state.playOpen = "ask";
-  const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length)
+  const reuse = Boolean(state.dealFresh && Array.isArray(state.qs) && state.qs.length && bankHasKeys(state.qs))
     && state.dealTopicKey === topicDealKey();
   if (!reuse) state.qs = dealFromPacks();
+  if (!bankHasKeys(state.qs)) {
+    const again = Boolean(state.spent && state.spent.size);
+    const keyed = state.replaySet
+      ? await requestHostDeck("replay", { setId: state.replaySet, again })
+      : await requestHostDeck("show", { avoid: loadRecentQuestionIds(), again });
+    if (keyed) state.qs = attributeSeats(keyed, playersForDeal());
+  }
+  if (!bankHasKeys(state.qs)) {
+    state.statusMsg = tt("deckLocked");
+    state.phase = "lobby";
+    paint(true);
+    return;
+  }
+  if (state.offline) state.statusMsg = tt("practiceShow");
   state.dealFresh = false;
   state.spent = new Set(state.qs.map((q) => q.id));
   rememberDealtIds(state.qs.map((q) => q.id));
   state.i = 0;
   state.lockdownAt = pickLockdownSlots();
   state.lockdown = null;
+  state.lockdownRound = 0;
+  state.lockdownPair = pickOppositePair();
+  await prepareLockdownSets();
   state.maps = {};
   state.mapUses = {};
   state.setBreakLeft = 0;
@@ -5368,7 +5951,7 @@ function startGame() {
     if (state.onScreen && !state.room) state.room = code();
     startPoll();
   }
-  startRead();
+  startCastIntro();
 }
 
 function startPoll() {
@@ -5489,7 +6072,6 @@ function paint(force = false) {
   app.className = "stage"
     + (role === "pad" ? " pad" : "")
     + (state.onScreen && role !== "pad" ? " tv" : "")
-    + (state.phase === "lobby" && state.onScreen && role !== "pad" ? " tv-scroll" : "")
     + (state.phase !== "lobby" && (role === "pad" || !state.onScreen) ? " phone" : "")
     + (state.lockdown ? " lockdown" : "")
     + (state.rules ? " rules-open" : "");
@@ -5621,6 +6203,10 @@ if (isDirections) {
   }
   await loadReplaySet();
   state.profile = loadProfile();
+  try {
+    const savedWelcome = sessionStorage.getItem("fa-welcome");
+    if (savedWelcome) state.welcomeLetter = JSON.parse(savedWelcome);
+  } catch { /* ignore */ }
   if (state.profile?.displayName) state.name = state.profile.displayName;
   state.botFill = true;
   fillSeats();

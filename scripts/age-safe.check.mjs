@@ -68,7 +68,7 @@ assert.equal(generationForYears(14), "gen-alpha");
 assert.equal(generationForYears(16), "gen-alpha");
 assert.equal(generationForYears(17), "gen-z");
 assert.equal(LOUIS_BOT, "Louis Liberty");
-assert.equal(LOUIS_MAIL, "gmgbrandlable");
+assert.equal(LOUIS_MAIL, "gmgbrandlabel@gmail.com");
 
 const clock = {
   id: "ga-joke-clock",

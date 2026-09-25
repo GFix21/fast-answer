@@ -1,0 +1,93 @@
+{
+  "id": "10-gen-z-b",
+  "generation": "gen-z",
+  "opposite": "09-baby-boomer-b",
+  "link": "banks/lockdown/de/10-gen-z-b.json",
+  "questions": [
+    {
+      "id": "cq-w39-gz-d-zm-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Sambia?",
+      "choices": [
+        "Harare",
+        "Lusaka",
+        "Ndola",
+        "Kitwe"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-bulb-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu a practical incandescent light bulb sold widely in the United States?",
+      "choices": [
+        "Nikola Tesla",
+        "George Westinghouse",
+        "Alexander Graham Bell",
+        "Thomas Edison"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-pasteur-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the process called pasteurization?",
+      "choices": [
+        "Louis Pasteur",
+        "Robert Koch",
+        "Joseph Lister",
+        "Edward Jenner"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-lovelace-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the notes often called the first computer program, on Babbage's engine?",
+      "choices": [
+        "Charles Babbage",
+        "Grace Hopper",
+        "Alan Turing",
+        "Ada Lovelace"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-shepard-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "Wem schreibt man zu the first American in space?",
+      "choices": [
+        "Gus Grissom",
+        "Alan Shepard",
+        "John Glenn",
+        "Neil Armstrong"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Ganz ehrlich,"
+    }
+  ]
+}

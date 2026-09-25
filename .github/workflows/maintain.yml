@@ -35,12 +35,18 @@ jobs:
         run: |
           node scripts/age-safe.check.mjs
           node scripts/generation-packs.check.mjs
+          node scripts/lockdown-sets.check.mjs
+          node scripts/fan-mail.check.mjs
       - name: Q&A module
         run: |
           node scripts/q-and-a.check.mjs
           node scripts/bots.check.mjs
           node scripts/flow-archive.check.mjs
           node scripts/room-wire.check.mjs
+          node scripts/release-blockers.check.mjs
+          node scripts/parental.check.mjs
+          node scripts/room-guard.check.mjs
+          node scripts/content-freeze.check.mjs
 
   security:
     name: Security

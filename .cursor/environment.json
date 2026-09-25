@@ -1,0 +1,11 @@
+{
+  "name": "Fast Answer",
+  "install": "node --version && npm --version",
+  "terminals": [
+    {
+      "name": "dev-server",
+      "command": "npm run dev"
+    }
+  ],
+  "ports": [3000]
+}

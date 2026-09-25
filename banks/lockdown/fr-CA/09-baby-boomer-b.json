@@ -1,0 +1,93 @@
+{
+  "id": "09-baby-boomer-b",
+  "generation": "baby-boomer",
+  "opposite": "10-gen-z-b",
+  "link": "banks/lockdown/fr-CA/09-baby-boomer-b.json",
+  "questions": [
+    {
+      "id": "cq-w39-bo-d-penicillin-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the discovery of penicillin ?",
+      "choices": [
+        "Louis Pasteur",
+        "Marie Curie",
+        "Jonas Salk",
+        "Alexander Fleming"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-evolution-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui On the Origin of Species ?",
+      "choices": [
+        "Jean-Baptiste Lamarck",
+        "Charles Darwin",
+        "Alfred Russel Wallace",
+        "Gregor Mendel"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-hertz-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui radio waves produced in the laboratory ?",
+      "choices": [
+        "Guglielmo Marconi",
+        "Nikola Tesla",
+        "Heinrich Hertz",
+        "James Clerk Maxwell"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-jemison-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "On attribue à qui the first Black woman to travel in space ?",
+      "choices": [
+        "Sally Ride",
+        "Katherine Johnson",
+        "Mae Jemison",
+        "Guion Bluford"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    },
+    {
+      "id": "cq-w39-bo-d-y-columbus",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "baby-boomer",
+      "categoryTitle": "Fait clair",
+      "prompt": "C'est en quelle année que Christophe Colomb a atteint les Amériques ?",
+      "choices": [
+        "1519",
+        "1607",
+        "1498",
+        "1492"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple, c'est celle qui compte.",
+      "slang": "Tout à fait,"
+    }
+  ]
+}

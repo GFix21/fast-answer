@@ -1,11 +1,29 @@
-import { activateProfile, isEmail } from "../lib/profile-store.js";
-import { ageIsAllowed, requiredAge } from "../lib/age-gate.js";
+import { ageIsAllowed, countryFromIpHeaders, requiredAge } from "../lib/age-gate.js";
+import { CHILD_MIN_AGE, canBeParent, canPlay } from "../lib/parental.js";
+import {
+  isEmail,
+  registerProfile,
+  loginProfile,
+  loginChild,
+  changePassword,
+  createChildProfile,
+  revokeChild,
+  resetChildPassword,
+  listChildren,
+  findProfileById,
+  publicProfile,
+} from "../lib/profile-store.js";
+import { openSession, sessionCookie, sessionProfileId } from "../lib/profile-session.js";
 import { readScores, recordScore } from "../lib/score-vault.js";
+import { deployWelcome } from "../lib/fan-mail.js";
 
-function json(res, status, body) {
+const SCORE_CAP = 200000;
+
+function json(res, status, body, extra = {}) {
   res.statusCode = status;
   res.setHeader("content-type", "application/json");
   res.setHeader("cache-control", "no-store");
+  if (extra.cookie) res.setHeader("set-cookie", extra.cookie);
   res.end(JSON.stringify(body));
 }
 
@@ -18,62 +36,164 @@ function queryOf(req) {
   }
 }
 
-export default async function handler(req, res) {
-  const query = queryOf(req);
-  if (req.method === "GET" && String(query.scores || "") === "1") {
-    return json(res, 200, { ok: true, scores: readScores(query.id) });
-  }
-  if (req.method !== "POST") return json(res, 405, { error: "method" });
-  let body = req.body;
-  if (body == null) {
-    body = await new Promise((resolve, reject) => {
+async function readBody(req) {
+  if (req.body == null) {
+    return new Promise((resolve) => {
       let raw = "";
       req.on("data", (c) => { raw += c; });
       req.on("end", () => {
         try { resolve(raw ? JSON.parse(raw) : {}); }
-        catch (e) { reject(e); }
+        catch { resolve(null); }
       });
-      req.on("error", reject);
-    }).catch(() => null);
-  } else if (typeof body === "string") {
-    try { body = JSON.parse(body || "{}"); }
-    catch { body = null; }
+      req.on("error", () => resolve(null));
+    });
   }
+  if (typeof req.body === "string") {
+    try { return JSON.parse(req.body || "{}"); }
+    catch { return null; }
+  }
+  return req.body;
+}
+
+function statusFor(err) {
+  if (err?.code === "store") return 503;
+  if (err?.code === "exists") return 409;
+  if (err?.code === "password") return 401;
+  if (err?.code === "age" || err?.code === "parent" || err?.code === "revoked") return 403;
+  if (err?.code === "child") return 404;
+  return 400;
+}
+
+async function parentFromSession(req) {
+  const id = await sessionProfileId(req);
+  if (!id) return { error: "unauthorized", status: 401 };
+  const parent = await findProfileById(id);
+  const ipCountry = countryFromIpHeaders(req.headers);
+  if (!parent || !canBeParent(parent, ipCountry)) return { error: "parent", status: 403 };
+  return { parent, ipCountry };
+}
+
+export default async function handler(req, res) {
+  const query = queryOf(req);
+  if (req.method === "GET" && String(query.scores || "") === "1") {
+    const id = await sessionProfileId(req);
+    if (!id) return json(res, 401, { error: "unauthorized" });
+    return json(res, 200, { ok: true, scores: await readScores(id) });
+  }
+  if (req.method !== "POST") return json(res, 405, { error: "method" });
+  const body = await readBody(req);
   if (!body) return json(res, 400, { error: "Invalid JSON" });
+
   if (body.action === "score") {
+    const id = await sessionProfileId(req);
+    if (!id) return json(res, 401, { error: "unauthorized" });
+    const profile = await findProfileById(id);
+    const ipCountry = countryFromIpHeaders(req.headers);
+    if (!profile) return json(res, 401, { error: "unauthorized" });
+    if (!canPlay(profile, ipCountry)) {
+      return json(res, 403, { error: profile.playLocked || profile.role === "child" ? "revoked" : "age" });
+    }
+    const score = Math.round(Number(body.score));
+    if (!Number.isFinite(score) || score < 0 || score > SCORE_CAP) {
+      return json(res, 400, { error: "score" });
+    }
     try {
-      const scores = recordScore(body.id, {
-        score: body.score,
-        at: body.at,
-        displayName: body.displayName,
-      });
+      const scores = await recordScore(id, { score, at: body.at });
       return json(res, 200, { ok: true, scores });
     } catch (err) {
-      return json(res, 400, { error: err.code || "invalid" });
+      return json(res, statusFor(err), { error: err.code || "invalid" });
     }
   }
+
+  if (body.action === "login") {
+    try {
+      const rec = body.loginName
+        ? await loginChild(body.loginName, body.password)
+        : isEmail(body.email)
+          ? await loginProfile(body.email, body.password)
+          : null;
+      if (!rec) return json(res, 400, { error: body.loginName ? "login" : "email" });
+      const token = await openSession(rec.id);
+      return json(res, 200, { ok: true, token, profile: publicProfile(rec) }, { cookie: sessionCookie(token) });
+    } catch (err) {
+      return json(res, statusFor(err), { error: err.code || "invalid" });
+    }
+  }
+
+  if (body.action === "password") {
+    if (!isEmail(body.email)) return json(res, 400, { error: "email" });
+    try {
+      const profile = await changePassword(body.email, body.current, body.password);
+      const token = await openSession(profile.id);
+      return json(res, 200, { ok: true, token, profile }, { cookie: sessionCookie(token) });
+    } catch (err) {
+      return json(res, statusFor(err), { error: err.code || "invalid" });
+    }
+  }
+
+  if (body.action === "children" || body.action === "child" || body.action === "revoke" || body.action === "child-password") {
+    const gate = await parentFromSession(req);
+    if (gate.error) return json(res, gate.status, { error: gate.error });
+    try {
+      if (body.action === "children") {
+        return json(res, 200, { ok: true, children: await listChildren(gate.parent.id) });
+      }
+      if (body.action === "revoke") {
+        const profile = await revokeChild(gate.parent.id, body.childId);
+        return json(res, 200, { ok: true, profile });
+      }
+      if (body.action === "child-password") {
+        const profile = await resetChildPassword(gate.parent.id, body.childId, body.password);
+        return json(res, 200, { ok: true, profile });
+      }
+      const profile = await createChildProfile(gate.parent, body);
+      return json(res, 200, { ok: true, profile });
+    } catch (err) {
+      const status = statusFor(err);
+      return json(res, status, {
+        error: err.code || "invalid",
+        minimum: err.code === "age" ? CHILD_MIN_AGE : undefined,
+      });
+    }
+  }
+
+  if (body.action !== "register") return json(res, 400, { error: "action" });
   if (!isEmail(body.email)) return json(res, 400, { error: "email" });
-  if (body.age != null && body.age !== "" && !ageIsAllowed(body.age, body.country, body.detectedCountry)) {
-    const minimum = requiredAge(body.country, body.detectedCountry);
-    return json(res, 403, { error: "age", minimum });
+  const ipCountry = countryFromIpHeaders(req.headers);
+  const detected = ipCountry || body.detectedCountry || "";
+  if (!ageIsAllowed(body.age, body.country, detected)) {
+    const minimum = requiredAge(body.country, detected);
+    const n = Number(body.age);
+    const parent = Number.isInteger(n) && n >= CHILD_MIN_AGE && n < minimum;
+    return json(res, 403, { error: "age", minimum, parent });
   }
   try {
-    const profile = activateProfile({
+    const profile = await registerProfile({
       id: body.id,
       displayName: body.displayName,
       email: body.email,
+      password: body.password,
+      age: body.age,
+      country: body.country,
+      mailingList: body.mailingList === true,
     });
-    return json(res, 200, {
-      ok: true,
-      profile: {
-        id: profile.id,
-        displayName: profile.displayName,
-        email: profile.email,
-        activated: true,
-        activatedAt: profile.activatedAt,
-      },
-    });
+    let welcome = null;
+    if (body.mailingList === true) {
+      try { welcome = await deployWelcome({ email: profile.email, name: profile.displayName }); }
+      catch { welcome = null; }
+    }
+    const token = await openSession(profile.id);
+    return json(res, 200, { ok: true, token, profile, welcome }, { cookie: sessionCookie(token) });
   } catch (err) {
-    return json(res, 400, { error: err.code || "invalid" });
+    if (err.code === "exists") {
+      try {
+        const rec = await loginProfile(body.email, body.password);
+        const token = await openSession(rec.id);
+        return json(res, 200, { ok: true, token, profile: publicProfile(rec), existing: true }, { cookie: sessionCookie(token) });
+      } catch {
+        return json(res, 409, { error: "exists" });
+      }
+    }
+    return json(res, statusFor(err), { error: err.code || "invalid" });
   }
 }

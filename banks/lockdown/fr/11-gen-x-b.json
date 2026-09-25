@@ -1,0 +1,93 @@
+{
+  "id": "11-gen-x-b",
+  "generation": "gen-x",
+  "opposite": "12-gen-y-b",
+  "link": "banks/lockdown/fr/11-gen-x-b.json",
+  "questions": [
+    {
+      "id": "cq-w39-gx-d-bw-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-x",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale du Botswana?",
+      "choices": [
+        "Windhoek",
+        "Gaborone",
+        "Francistown",
+        "Maun"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-periodic-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the first widely used periodic table ?",
+      "choices": [
+        "Antoine Lavoisier",
+        "John Dalton",
+        "Niels Bohr",
+        "Dmitri Mendeleev"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-radium-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the discovery of radium, shared with Pierre Curie ?",
+      "choices": [
+        "Marie Curie",
+        "Lise Meitner",
+        "Irene Joliot-Curie",
+        "Dorothy Hodgkin"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-marconi-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the first practical radio system across distance ?",
+      "choices": [
+        "Thomas Edison",
+        "Lee de Forest",
+        "Heinrich Hertz",
+        "Guglielmo Marconi"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    },
+    {
+      "id": "cq-w39-gx-d-ride-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-x",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the first American woman in space ?",
+      "choices": [
+        "Sally Ride",
+        "Valentina Tereshkova",
+        "Eileen Collins",
+        "Mae Jemison"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Bref,"
+    }
+  ]
+}

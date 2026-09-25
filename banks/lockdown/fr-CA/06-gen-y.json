@@ -1,0 +1,91 @@
+{
+  "id": "06-gen-y",
+  "generation": "gen-y",
+  "opposite": "05-gen-x",
+  "link": "banks/lockdown/fr-CA/06-gen-y.json",
+  "questions": [
+    {
+      "id": "w39-d-geny-iphone",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Chronologie keynote",
+      "prompt": "En quelle année Apple a annoncé l’iPhone original ?",
+      "choices": [
+        "2010",
+        "2007",
+        "2005",
+        "2009"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-geny-inception",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-y",
+      "categoryTitle": "Couches de rêve",
+      "prompt": "Qui a réalisé le film Inception de 2010 ?",
+      "choices": [
+        "Christopher Nolan",
+        "James Cameron",
+        "Denis Villeneuve",
+        "Ridley Scott"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-geny-wiki",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-y",
+      "categoryTitle": "Pages ouvertes",
+      "prompt": "En quelle année Wikipédia a été lancé ?",
+      "choices": [
+        "1998",
+        "1995",
+        "2004",
+        "2001"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Les pages sont nombreuses. Le départ est une année.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-bd-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Bangladesh?",
+      "choices": [
+        "Chittagong",
+        "Calcutta",
+        "Dhaka",
+        "Khulna"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    },
+    {
+      "id": "cq-w39-gy-d-tj-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-y",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Tadjikistan?",
+      "choices": [
+        "Khujand",
+        "Dushanbe",
+        "Bishkek",
+        "Tashkent"
+      ],
+      "correctIndex": 1,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Je dis ça,"
+    }
+  ]
+}

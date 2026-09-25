@@ -1,0 +1,92 @@
+{
+  "id": "13-multi-gen",
+  "generation": "multi-gen",
+  "opposite": "14-gen-x-c",
+  "link": "banks/lockdown/en/13-multi-gen.json",
+  "questions": [
+    {
+      "id": "w39-d-mix-louvre",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Pyramid Problem",
+      "prompt": "I. M. Pei’s glass pyramid is the modern entrance landmark of which museum?",
+      "choices": [
+        "Met (NYC)",
+        "Louvre",
+        "British Museum",
+        "Prado"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-multi-everest",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Summit",
+      "prompt": "In which year did Edmund Hillary and Tenzing Norgay first reach the summit of Mount Everest?",
+      "choices": [
+        "1924",
+        "1963",
+        "1950",
+        "1953"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Two people, one ridge, one year that stuck.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ak-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Alaska?",
+      "choices": [
+        "Nome",
+        "Juneau",
+        "Anchorage",
+        "Fairbanks"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-de-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Delaware?",
+      "choices": [
+        "Dover",
+        "Newark",
+        "Wilmington",
+        "Rehoboth Beach"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    },
+    {
+      "id": "cq-w39-mu-d-ia-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "State capital",
+      "prompt": "What is the capital of the U.S. state of Iowa?",
+      "choices": [
+        "Cedar Rapids",
+        "Iowa City",
+        "Davenport",
+        "Des Moines"
+      ],
+      "correctIndex": 3,
+      "banterHint": "The famous city nearby can be a different place.",
+      "slang": "For the room,"
+    }
+  ]
+}

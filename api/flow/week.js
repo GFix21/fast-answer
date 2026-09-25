@@ -14,6 +14,7 @@ import { listRejectLog } from "../../lib/reject-log.js";
 import { compileLessons, overlayPackWithLog } from "../../lib/reject-learn.js";
 import { collectQuestionPool } from "../../lib/reject-actions.js";
 import { readyBench } from "../../lib/reject-ready.js";
+import { editsOpenForQuestion } from "../../lib/content-freeze.js";
 
 export default async function handler(req, res) {
   if (!requireAuth(req, res)) return;
@@ -70,6 +71,11 @@ export default async function handler(req, res) {
     if (body.action === "status" && body.id && body.status) {
       if (!["active", "pending", "approved", "rejected"].includes(body.status)) {
         return json(res, 400, { error: "bad status" });
+      }
+      const pack = loadCurrentPack(loc);
+      const question = (pack?.questions || []).find((item) => item.id === body.id);
+      if (question && !editsOpenForQuestion(question)) {
+        return json(res, 409, { error: "frozen" });
       }
       setQuestionStatus(body.id, body.status, loc);
       return json(res, 200, { ok: true, id: body.id, status: body.status, locale: loc });

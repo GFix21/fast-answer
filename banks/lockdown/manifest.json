@@ -1,0 +1,62 @@
+{
+  "size": 5,
+  "sets": 14,
+  "pairs": [
+    {
+      "a": "01-silent-generation",
+      "b": "02-gen-alpha",
+      "generationA": "silent-generation",
+      "generationB": "gen-alpha",
+      "linkA": "banks/lockdown/en/01-silent-generation.json",
+      "linkB": "banks/lockdown/en/02-gen-alpha.json"
+    },
+    {
+      "a": "03-baby-boomer",
+      "b": "04-gen-z",
+      "generationA": "baby-boomer",
+      "generationB": "gen-z",
+      "linkA": "banks/lockdown/en/03-baby-boomer.json",
+      "linkB": "banks/lockdown/en/04-gen-z.json"
+    },
+    {
+      "a": "05-gen-x",
+      "b": "06-gen-y",
+      "generationA": "gen-x",
+      "generationB": "gen-y",
+      "linkA": "banks/lockdown/en/05-gen-x.json",
+      "linkB": "banks/lockdown/en/06-gen-y.json"
+    },
+    {
+      "a": "07-silent-generation-b",
+      "b": "08-gen-alpha-b",
+      "generationA": "silent-generation",
+      "generationB": "gen-alpha",
+      "linkA": "banks/lockdown/en/07-silent-generation-b.json",
+      "linkB": "banks/lockdown/en/08-gen-alpha-b.json"
+    },
+    {
+      "a": "09-baby-boomer-b",
+      "b": "10-gen-z-b",
+      "generationA": "baby-boomer",
+      "generationB": "gen-z",
+      "linkA": "banks/lockdown/en/09-baby-boomer-b.json",
+      "linkB": "banks/lockdown/en/10-gen-z-b.json"
+    },
+    {
+      "a": "11-gen-x-b",
+      "b": "12-gen-y-b",
+      "generationA": "gen-x",
+      "generationB": "gen-y",
+      "linkA": "banks/lockdown/en/11-gen-x-b.json",
+      "linkB": "banks/lockdown/en/12-gen-y-b.json"
+    },
+    {
+      "a": "13-multi-gen",
+      "b": "14-gen-x-c",
+      "generationA": "multi-gen",
+      "generationB": "gen-x",
+      "linkA": "banks/lockdown/en/13-multi-gen.json",
+      "linkB": "banks/lockdown/en/14-gen-x-c.json"
+    }
+  ]
+}

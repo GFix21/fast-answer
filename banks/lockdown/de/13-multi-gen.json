@@ -1,0 +1,92 @@
+{
+  "id": "13-multi-gen",
+  "generation": "multi-gen",
+  "opposite": "14-gen-x-c",
+  "link": "banks/lockdown/de/13-multi-gen.json",
+  "questions": [
+    {
+      "id": "w39-d-mix-louvre",
+      "tier": "difficult",
+      "topic": "art",
+      "generation": "multi-gen",
+      "categoryTitle": "Pyramiden-Problem",
+      "prompt": "I. M. Peis Glaspyramide ist das moderne Eingangs-Wahrzeichen welches Museums?",
+      "choices": [
+        "Met (NYC)",
+        "Louvre",
+        "British Museum",
+        "Prado"
+      ],
+      "correctIndex": 1,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-multi-everest",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Gipfel",
+      "prompt": "In welchem Jahr erreichten Edmund Hillary und Tenzing Norgay erstmals den Gipfel des Mount Everest?",
+      "choices": [
+        "1924",
+        "1963",
+        "1950",
+        "1953"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Zwei Menschen, ein Grat, ein Jahr, das blieb.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-d-ak-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Alaska?",
+      "choices": [
+        "Nome",
+        "Juneau",
+        "Anchorage",
+        "Fairbanks"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-d-de-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Delaware?",
+      "choices": [
+        "Dover",
+        "Newark",
+        "Wilmington",
+        "Rehoboth Beach"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    },
+    {
+      "id": "cq-w39-mu-d-ia-cap",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "multi-gen",
+      "categoryTitle": "Staatshauptstadt",
+      "prompt": "Was ist die Hauptstadt des US-Bundesstaats Iowa?",
+      "choices": [
+        "Cedar Rapids",
+        "Iowa City",
+        "Davenport",
+        "Des Moines"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die berühmte Stadt daneben kann ein anderer Ort sein.",
+      "slang": "Für alle,"
+    }
+  ]
+}

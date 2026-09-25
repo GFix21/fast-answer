@@ -1,0 +1,91 @@
+{
+  "id": "04-gen-z",
+  "generation": "gen-z",
+  "opposite": "03-baby-boomer",
+  "link": "banks/lockdown/de/04-gen-z.json",
+  "questions": [
+    {
+      "id": "w39-d-genz-openai",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-z",
+      "categoryTitle": "Modell-Manieren",
+      "prompt": "In welchem Jahr veröffentlichte OpenAI ChatGPT für die Öffentlichkeit?",
+      "choices": [
+        "2018",
+        "2024",
+        "2022",
+        "2020"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "w39-d-genz-parasite",
+      "tier": "difficult",
+      "topic": "film-tv",
+      "generation": "gen-z",
+      "categoryTitle": "Treppen & Untertitel",
+      "prompt": "Aus welchem Land stammt der Film Parasite, der den Oscar als Bester Film gewann?",
+      "choices": [
+        "Südkorea",
+        "Japan",
+        "Frankreich",
+        "Mexiko"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-genz-webb",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-z",
+      "categoryTitle": "Fernes Auge",
+      "prompt": "In welchem Jahr startete das James-Webb-Weltraumteleskop?",
+      "choices": [
+        "2021",
+        "2024",
+        "2016",
+        "2018"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Am ersten Weihnachtstag, von einem Weltraumbahnhof in Südamerika.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-af-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Afghanistan?",
+      "choices": [
+        "Kandahar",
+        "Mazar-i-Sharif",
+        "Herat",
+        "Kabul"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    },
+    {
+      "id": "cq-w39-gz-d-mg-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-z",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Madagaskar?",
+      "choices": [
+        "Antananarivo",
+        "Nairobi",
+        "Antsirabe",
+        "Toamasina"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Ganz ehrlich,"
+    }
+  ]
+}

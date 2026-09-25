@@ -1,0 +1,93 @@
+{
+  "id": "14-gen-x-c",
+  "generation": "gen-x",
+  "opposite": "13-multi-gen",
+  "link": "banks/lockdown/de/14-gen-x-c.json",
+  "questions": [
+    {
+      "id": "cq-w39-gx-d-y-shakespeare",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr William Shakespeare geboren wurde?",
+      "choices": [
+        "1660",
+        "1564",
+        "1616",
+        "1500"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-ww1-start",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr der Erste Weltkrieg begann?",
+      "choices": [
+        "1918",
+        "1905",
+        "1939",
+        "1914"
+      ],
+      "correctIndex": 3,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-ve",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr der Tag des Sieges in Europa das Ende des Krieges in Europa markierte?",
+      "choices": [
+        "1941",
+        "1950",
+        "1945",
+        "1944"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-nixon",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Richard Nixon vom Präsidentenamt zurücktrat?",
+      "choices": [
+        "1969",
+        "1974",
+        "1972",
+        "1976"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,"
+    },
+    {
+      "id": "cq-w39-gx-d-y-hongkong",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-x",
+      "categoryTitle": "Klare Tatsache",
+      "prompt": "In welchem Jahr Hongkong an China übergeben wurde?",
+      "choices": [
+        "1997",
+        "1984",
+        "1999",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die schlichte Antwort ist die gezählte.",
+      "slang": "Na ja,"
+    }
+  ]
+}

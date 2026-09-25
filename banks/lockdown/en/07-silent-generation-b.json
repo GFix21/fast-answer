@@ -1,0 +1,93 @@
+{
+  "id": "07-silent-generation-b",
+  "generation": "silent-generation",
+  "opposite": "08-gen-alpha-b",
+  "link": "banks/lockdown/en/07-silent-generation-b.json",
+  "questions": [
+    {
+      "id": "cq-w39-si-d-heliocentric-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the book On the Revolutions of the Heavenly Spheres?",
+      "choices": [
+        "Nicolaus Copernicus",
+        "Johannes Kepler",
+        "Tycho Brahe",
+        "Galileo Galilei"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-dna-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the 1953 model of the DNA double helix, with the scored pair?",
+      "choices": [
+        "Linus Pauling",
+        "Rosalind Franklin and Maurice Wilkins",
+        "James Watson and Francis Crick",
+        "Gregor Mendel"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-maxwell-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the equations that united electricity and magnetism?",
+      "choices": [
+        "Michael Faraday",
+        "James Clerk Maxwell",
+        "Oliver Heaviside",
+        "Heinrich Hertz"
+      ],
+      "correctIndex": 1,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-johnson-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who is credited with the orbital calculations celebrated in Hidden Figures?",
+      "choices": [
+        "Mary Jackson",
+        "Margaret Hamilton",
+        "Katherine Johnson",
+        "Dorothy Vaughan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    },
+    {
+      "id": "cq-w39-si-d-benz-car",
+      "tier": "difficult",
+      "topic": "cars",
+      "generation": "silent-generation",
+      "categoryTitle": "Fast fact",
+      "prompt": "Who built the Benz Patent-Motorwagen?",
+      "choices": [
+        "Karl Benz",
+        "Henry Ford",
+        "Nikolaus Otto",
+        "Gottlieb Daimler"
+      ],
+      "correctIndex": 0,
+      "banterHint": "The plain answer is the one that scores.",
+      "slang": "Say,"
+    }
+  ]
+}

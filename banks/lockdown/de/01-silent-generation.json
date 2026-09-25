@@ -1,0 +1,92 @@
+{
+  "id": "01-silent-generation",
+  "generation": "silent-generation",
+  "opposite": "02-gen-alpha",
+  "link": "banks/lockdown/de/01-silent-generation.json",
+  "questions": [
+    {
+      "id": "w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Kalter-Krieg-Himmel",
+      "prompt": "Francis Gary Powers wurde 1960 in welchem Typ US-Aufklärungsflugzeug abgeschossen?",
+      "choices": [
+        "Nur SR-71",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-silent-suez",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Kanaljahr",
+      "prompt": "In welchem Jahr begann die Suezkrise?",
+      "choices": [
+        "1967",
+        "1950",
+        "1956",
+        "1948"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Der Kanal schloss. Das Jahr ist das frühere.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-d-kh-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Kambodscha?",
+      "choices": [
+        "Phnom Penh",
+        "Vientiane",
+        "Bangkok",
+        "Siem Reap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-d-mn-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von der Mongolei?",
+      "choices": [
+        "Ulaanbaatar",
+        "Peking",
+        "Darkhan",
+        "Erdenet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,"
+    },
+    {
+      "id": "cq-w39-si-d-mz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Hauptstadt",
+      "prompt": "Was ist die Hauptstadt von Mosambik?",
+      "choices": [
+        "Maputo",
+        "Johannesburg",
+        "Nampula",
+        "Beira"
+      ],
+      "correctIndex": 0,
+      "banterHint": "Die größte Stadt ist nicht immer die Hauptstadt.",
+      "slang": "Sagen Sie,"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "01-silent-generation",
+  "generation": "silent-generation",
+  "opposite": "02-gen-alpha",
+  "link": "banks/lockdown/fr-CA/01-silent-generation.json",
+  "questions": [
+    {
+      "id": "w39-d-silent-u2",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "silent-generation",
+      "categoryTitle": "Ciel de Guerre froide",
+      "prompt": "Francis Gary Powers a été abattu en 1960 à bord de quel type d’avion de reconnaissance américain ?",
+      "choices": [
+        "SR-71 uniquement",
+        "B-29 Superfortress",
+        "U-2",
+        "P-51 Mustang"
+      ],
+      "correctIndex": 2,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-silent-suez",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "silent-generation",
+      "categoryTitle": "Année du canal",
+      "prompt": "En quelle année la crise de Suez a commencé ?",
+      "choices": [
+        "1967",
+        "1950",
+        "1956",
+        "1948"
+      ],
+      "correctIndex": 2,
+      "banterHint": "Le canal a fermé. L'année est la plus ancienne.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-kh-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Cambodge?",
+      "choices": [
+        "Phnom Penh",
+        "Vientiane",
+        "Bangkok",
+        "Siem Reap"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-mn-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale de la Mongolie?",
+      "choices": [
+        "Ulaanbaatar",
+        "Pékin",
+        "Darkhan",
+        "Erdenet"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    },
+    {
+      "id": "cq-w39-si-d-mz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "silent-generation",
+      "categoryTitle": "Capitale",
+      "prompt": "C'est quoi la capitale du Mozambique?",
+      "choices": [
+        "Maputo",
+        "Johannesburg",
+        "Nampula",
+        "Beira"
+      ],
+      "correctIndex": 0,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Dites,"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { replayQuestions } from "../lib/set-archive.js";
+import { stripQuestion } from "../lib/strip-answers.js";
 
 function json(res, status, body) {
   res.statusCode = status;
@@ -13,5 +14,8 @@ export default async function handler(req, res) {
   if (!id) return json(res, 400, { error: "missing set" });
   const packed = replayQuestions(id, url.searchParams.get("locale") || "en");
   if (packed.error) return json(res, packed.status || 404, { error: packed.error });
-  return json(res, 200, packed);
+  return json(res, 200, {
+    ...packed,
+    questions: (packed.questions || []).map(stripQuestion),
+  });
 }

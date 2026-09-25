@@ -6,6 +6,7 @@ import {
   PACK_TARGET,
   LOCKDOWN_REFRESHES,
   lockdownJumpGeneration,
+  lockdownPairGenerations,
   lockdownSet,
   buildGenerationPacks,
   packSummary,
@@ -155,6 +156,29 @@ assert.equal(lockdownJumpGeneration("baby-boomer", "behind"), "silent-generation
 assert.equal(lockdownJumpGeneration("silent-generation", "ahead"), "baby-boomer");
 assert.equal(lockdownJumpGeneration("silent-generation", "behind"), "silent-generation");
 assert.equal(lockdownJumpGeneration("gen-alpha", "ahead"), "gen-alpha");
+assert.deepEqual(lockdownPairGenerations("gen-x"), ["gen-y", "baby-boomer"]);
+assert.deepEqual(lockdownPairGenerations("silent-generation"), ["gen-y", "gen-z"]);
+assert.deepEqual(lockdownPairGenerations("gen-alpha"), ["gen-z", "gen-y"]);
+const paired = lockdownSet(
+  [{ id: "meryl", name: "Meryl", generation: "silent-generation" }],
+  packs,
+  [],
+  5,
+  { which: 0 },
+);
+assert.equal(paired.length, 5);
+assert.ok(paired.every((q) => q.fromGeneration === "gen-y" && q.lockdownJump === "down-3"));
+assert.ok(paired.every((q) => q.tier === "difficult" || q.tier === "extreme" || q.tier === "hard"));
+const pairedLater = lockdownSet(
+  [{ id: "meryl", name: "Meryl", generation: "silent-generation" }],
+  packs,
+  paired.map((q) => q.id),
+  5,
+  { which: 1 },
+);
+assert.equal(pairedLater.length, 5);
+assert.ok(pairedLater.every((q) => q.fromGeneration === "gen-z" && q.lockdownJump === "down-4"));
+assert.ok(paired.every((q) => !pairedLater.some((n) => n.id === q.id)));
 const ahead = lockdownSet(players, packs, [], 3, { refreshes: 0 });
 assert.deepEqual(ahead.map((q) => q.fromGeneration), ["gen-y", "gen-alpha", "gen-x"]);
 assert.ok(ahead.every((q) => q.lockdownJump === "ahead" && q.tier !== "easy"));

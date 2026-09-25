@@ -1,0 +1,92 @@
+{
+  "id": "02-gen-alpha",
+  "generation": "gen-alpha",
+  "opposite": "01-silent-generation",
+  "link": "banks/lockdown/fr/02-gen-alpha.json",
+  "questions": [
+    {
+      "id": "w39-d-alpha-switch",
+      "tier": "difficult",
+      "topic": "culture",
+      "generation": "gen-alpha",
+      "categoryTitle": "Portable hybride",
+      "prompt": "En quelle année la Nintendo Switch est-elle sortie dans le monde ?",
+      "choices": [
+        "2017",
+        "2019",
+        "2013",
+        "2015"
+      ],
+      "correctIndex": 0,
+      "banterHint": null
+    },
+    {
+      "id": "cq-d-alpha-perseverance",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Jezero",
+      "prompt": "En quelle année le rover Perseverance de la NASA s'est-il posé sur Mars ?",
+      "choices": [
+        "2012",
+        "2021",
+        "2004",
+        "2020"
+      ],
+      "correctIndex": 1,
+      "banterHint": "Un petit hélicoptère est venu pour la promenade.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-uz-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de l'Ouzbékistan?",
+      "choices": [
+        "Samarcande",
+        "Boukhara",
+        "Astana",
+        "Tashkent"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-ci-capital",
+      "tier": "difficult",
+      "topic": "geography",
+      "generation": "gen-alpha",
+      "categoryTitle": "Capitale",
+      "prompt": "Quelle est la capitale de la Côte d'Ivoire?",
+      "choices": [
+        "Bouaké",
+        "Accra",
+        "Yamoussoukro",
+        "Abidjan"
+      ],
+      "correctIndex": 2,
+      "banterHint": "La plus grande ville n'est pas toujours la capitale.",
+      "slang": "Vite fait,"
+    },
+    {
+      "id": "cq-w39-al-d-relativity-who",
+      "tier": "difficult",
+      "topic": "sci-fi",
+      "generation": "gen-alpha",
+      "categoryTitle": "Fait net",
+      "prompt": "À qui attribue-t-on the theory of relativity, as its main author ?",
+      "choices": [
+        "Isaac Newton",
+        "Stephen Hawking",
+        "Niels Bohr",
+        "Albert Einstein"
+      ],
+      "correctIndex": 3,
+      "banterHint": "La réponse simple est celle qui compte.",
+      "slang": "Vite fait,"
+    }
+  ]
+}

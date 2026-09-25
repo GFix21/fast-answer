@@ -3,10 +3,14 @@ import { requireAuth } from "../lib/flow-auth.js";
 import { loadCurrentPack } from "../lib/week-store.js";
 import { exportPack } from "../q-and-a/map.js";
 import { generationForSeat } from "../lib/generation-packs.js";
-import { ageIsAllowed, requiredAge } from "../lib/age-gate.js";
+import { countryFromIpHeaders, requiredAge } from "../lib/age-gate.js";
+import { canPlay } from "../lib/parental.js";
+import { findProfileById } from "../lib/profile-store.js";
+import { sessionProfileId } from "../lib/profile-session.js";
 import { dealRamp, SHOW_DEAL } from "../lib/generation-deal.js";
 import { orderShowSets } from "../lib/show-pace.js";
 import { publicRoom, redactState } from "../lib/room-wire.js";
+import { randomBytes, timingSafeEqual } from "node:crypto";
 
 const SHOW_N = Object.values(SHOW_DEAL).reduce((sum, n) => sum + n, 0);
 
@@ -77,18 +81,55 @@ function presentedHostKey(req, body) {
 }
 
 function hostMatches(room, key) {
-  return Boolean(room?.hostKey && key && room.hostKey === key);
+  const a = Buffer.from(String(room?.hostKey || ""));
+  const b = Buffer.from(String(key || ""));
+  if (a.length < 16 || a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
 }
 
-function sendRoom(res, room, { host = false, status = 200 } = {}) {
-  res.status(status).end(JSON.stringify(room ? publicRoom(room, { host }) : { error: "missing" }));
+function presentedGuestKey(req, body) {
+  const header = req.headers?.["x-fa-guest"] || req.headers?.["X-Fa-Guest"] || "";
+  return String(header || body?.guestKey || "").trim().slice(0, 80);
 }
 
-export default async function handler(req, res) {
-  res.setHeader("content-type", "application/json");
-  res.setHeader("access-control-allow-origin", "*");
+function actingGuest(room, req, body) {
+  const key = presentedGuestKey(req, body);
+  if (key.length < 16) return null;
+  return (room?.guests || []).find((guest) => guest && guest.guestKey === key) || null;
+}
+
+function newGuestKey() {
+  return randomBytes(16).toString("hex");
+}
+
+function corsOrigin(req) {
+  const origin = String(req.headers?.origin || req.headers?.Origin || "");
+  if (!origin) return "";
+  if (origin === "https://fast-answer-seven.vercel.app") return origin;
+  if (origin === "https://gmgbrand.vercel.app") return origin;
+  if (/^https:\/\/fast-answer-[a-z0-9-]+\.vercel\.app$/i.test(origin)) return origin;
+  const extra = process.env.FAST_ANSWER_ORIGIN || "";
+  if (extra && origin === extra) return origin;
+  return "";
+}
+
+function applyCors(req, res) {
+  const origin = corsOrigin(req);
+  if (origin) {
+    res.setHeader("access-control-allow-origin", origin);
+    res.setHeader("vary", "Origin");
+  }
   res.setHeader("access-control-allow-methods", "GET,POST,OPTIONS");
-  res.setHeader("access-control-allow-headers", "content-type, x-fa-host");
+  res.setHeader("access-control-allow-headers", "content-type, x-fa-host, x-fa-profile, x-fa-guest");
+}
+
+function sendRoom(res, room, { host = false, status = 200, guestKey = "" } = {}) {
+  res.status(status).end(JSON.stringify(room ? publicRoom(room, { host, guestKey }) : { error: "missing" }));
+}
+
+async function handleRoom(req, res) {
+  res.setHeader("content-type", "application/json");
+  applyCors(req, res);
   if (req.method === "OPTIONS") {
     res.status(204).end();
     return;
@@ -157,6 +198,10 @@ export default async function handler(req, res) {
   if (body.action === "create") {
     const key = presentedHostKey(req, body);
     const cur = (await getRoom(code)) || { code, host: "", state: {}, buzzes: [], guests: [] };
+    if (cur.hostKey && !hostMatches(cur, key)) {
+      res.status(403).end(JSON.stringify({ error: "host" }));
+      return;
+    }
     if (!cur.hostKey) {
       if (key.length < 16) {
         res.status(400).end(JSON.stringify({ error: "host" }));
@@ -207,6 +252,7 @@ export default async function handler(req, res) {
     return;
   }
 
+  let issuedGuestKey = "";
   const cur = await getRoom(code);
 
   if (body.action === "join") {
@@ -217,56 +263,79 @@ export default async function handler(req, res) {
       return;
     }
     const age = Number(body.age);
+    let playAge = Number.isInteger(age) ? age : "";
+    let playCountry = String(body.country || "").slice(0, 8);
+    let profileId = "";
+    if (seat === "play") {
+      profileId = await sessionProfileId(req) || "";
+      const profile = profileId ? await findProfileById(profileId) : null;
+      const ipCountry = countryFromIpHeaders(req.headers);
+      if (!profile) {
+        res.status(401).end(JSON.stringify({ error: "unauthorized", message: "Sign in before playing." }));
+        return;
+      }
+      if (!canPlay(profile, ipCountry)) {
+        res.status(403).end(JSON.stringify({
+          error: profile.playLocked || profile.role === "child" ? "revoked" : "age",
+          minimum: requiredAge(profile.country, ipCountry),
+          message: profile.playLocked ? "A parent turned this profile off." : "This profile cannot play.",
+        }));
+        return;
+      }
+      playAge = Number(profile.age);
+      playCountry = String(profile.country || "").slice(0, 8);
+    }
     const from = Number(cur.ageFrom);
     const to = Number(cur.ageTo);
-    const ageKnown = Number.isFinite(age) && age >= 10 && age <= 99;
-    if (seat === "play" && ageKnown && Number.isFinite(from) && Number.isFinite(to) && (age < from || age > to)) {
+    if (seat === "play" && Number.isFinite(from) && Number.isFinite(to) && (playAge < from || playAge > to)) {
       res.status(403).end(JSON.stringify({
         error: "age",
         message: `This room is for ages ${from} to ${to}.`,
       }));
       return;
     }
-    if (seat === "play" && !ageIsAllowed(body.age, body.country, body.detectedCountry)) {
-      const minimum = requiredAge(body.country, body.detectedCountry);
-      res.status(403).end(JSON.stringify({
-        error: "age",
-        minimum,
-        message: `A profile starts at ${minimum}.`,
-      }));
-      return;
-    }
     cur.guests = cur.guests || [];
+    const guestKey = newGuestKey();
     const guest = {
       name,
       id: body.id || ("p-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 16)),
       thumb: body.thumb || "",
       seat,
-      age: Number.isInteger(Number(body.age)) ? Number(body.age) : "",
-      country: String(body.country || "").slice(0, 8),
+      age: playAge === "" ? "" : playAge,
+      country: playCountry,
       ageBracket: String(body.ageBracket || "").slice(0, 8),
       generation: generationForSeat({
-        age: body.age,
+        age: playAge,
         ageBracket: body.ageBracket,
         generation: body.generation,
       }).slice(0, 40),
+      guestKey,
     };
+    if (seat === "play" && profileId) guest.profileId = profileId;
     const existing = cur.guests.find((g) => g.id === guest.id || g.name === guest.name);
     if (existing) {
       existing.name = guest.name;
       existing.seat = guest.seat;
+      existing.guestKey = guestKey;
       if (guest.thumb) existing.thumb = guest.thumb;
       if (guest.age !== "") existing.age = guest.age;
       if (guest.country) existing.country = guest.country;
       if (guest.ageBracket) existing.ageBracket = guest.ageBracket;
       if (guest.generation) existing.generation = guest.generation;
+      if (seat === "play" && profileId) existing.profileId = profileId;
     } else {
       cur.guests.push(guest);
     }
+    issuedGuestKey = guestKey;
     await touch(cur);
   } else if (body.action === "leave") {
-    const id = body.id || "";
-    cur.guests = (cur.guests || []).filter((g) => g.id !== id && g.name !== body.name);
+    const guest = actingGuest(cur, req, body);
+    if (!guest) {
+      res.status(403).end(JSON.stringify({ error: "guest" }));
+      return;
+    }
+    const id = guest.id || "";
+    cur.guests = (cur.guests || []).filter((g) => g !== guest && g.id !== id);
     if (cur.dropoutIds && id) {
       const next = { ...cur.dropoutIds };
       delete next[id];
@@ -296,7 +365,12 @@ export default async function handler(req, res) {
     cur.state.kickedAt = Date.now();
     await touch(cur);
   } else if (body.action === "dropout") {
-    const id = body.id || "";
+    const guest = actingGuest(cur, req, body);
+    if (!guest) {
+      res.status(403).end(JSON.stringify({ error: "guest" }));
+      return;
+    }
+    const id = guest.id || "";
     if (!id) {
       res.status(400).end(JSON.stringify({ error: "id" }));
       return;
@@ -311,33 +385,53 @@ export default async function handler(req, res) {
     cur.state = redactState(body.state || {});
     await touch(cur);
   } else if (body.action === "buzz") {
+    const guest = actingGuest(cur, req, body);
+    if (!guest || guest.seat === "view") {
+      res.status(403).end(JSON.stringify({ error: "guest" }));
+      return;
+    }
+    cur.state = cur.state || {};
     cur.buzzes = cur.buzzes || [];
-    cur.buzzes.push({ name: body.name, at: Date.now() });
+    cur.buzzes.push({ name: guest.name, at: Date.now() });
     if (!cur.state.buzzed) {
-      cur.state = { ...cur.state, buzzed: true, buzzBy: body.name, buzzId: body.id || "", phase: "answer" };
+      cur.state = { ...cur.state, buzzed: true, buzzBy: guest.name, buzzId: guest.id || "", phase: "answer" };
     }
     await touch(cur);
   } else if (body.action === "answer") {
-    // Pad / voice submit — host applies via poll.
+    const guest = actingGuest(cur, req, body);
+    if (!guest || guest.seat === "view") {
+      res.status(403).end(JSON.stringify({ error: "guest" }));
+      return;
+    }
     cur.state = cur.state || {};
     cur.state.lastAnswer = {
-      id: body.id || "",
+      id: guest.id || "",
       index: Number(body.index),
       at: Date.now(),
       lockdown: Boolean(body.lockdown),
-      name: body.name || "",
+      name: guest.name || "",
     };
     await touch(cur);
   } else if (body.action === "map") {
+    const guest = actingGuest(cur, req, body);
+    if (!guest || guest.seat === "view") {
+      res.status(403).end(JSON.stringify({ error: "guest" }));
+      return;
+    }
     cur.state = cur.state || {};
     cur.state.maps = { ...(cur.state.maps || {}) };
-    if (body.target) cur.state.maps[body.id] = body.target;
-    else delete cur.state.maps[body.id];
+    if (body.target) cur.state.maps[guest.id] = body.target;
+    else delete cur.state.maps[guest.id];
     await touch(cur);
   } else if (body.action === "wager") {
+    const guest = actingGuest(cur, req, body);
+    if (!guest || guest.seat === "view") {
+      res.status(403).end(JSON.stringify({ error: "guest" }));
+      return;
+    }
     cur.state = cur.state || {};
     cur.state.lastWager = {
-      id: body.id,
+      id: guest.id,
       side: body.side,
       amount: body.amount,
       locked: body.locked !== false,
@@ -408,5 +502,18 @@ export default async function handler(req, res) {
     return;
   }
   const saved = await getRoom(code);
-  sendRoom(res, saved, { host: hostMatches(saved, presentedHostKey(req, body)) });
+  sendRoom(res, saved, { host: hostMatches(saved, presentedHostKey(req, body)), guestKey: issuedGuestKey });
+}
+
+export default async function handler(req, res) {
+  try {
+    await handleRoom(req, res);
+  } catch (err) {
+    if (err && err.code === "store") {
+      res.setHeader("content-type", "application/json");
+      res.status(503).end(JSON.stringify({ error: "store" }));
+      return;
+    }
+    throw err;
+  }
 }
