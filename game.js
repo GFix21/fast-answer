@@ -802,7 +802,19 @@ function currentQ() {
   if (state.lockdown && (state.lockdown.phase === "play" || state.lockdown.phase === "flash")) {
     return state.lockdown.qs[state.lockdown.qi] || null;
   }
-  return state.qs[state.i] || null;
+  const q = state.qs?.[state.i] || null;
+  if (!q || (q.prompt && Array.isArray(q.choices) && q.choices.length)) return q;
+  const full = (state.questions || []).find((item) => item && item.id === q.id);
+  if (!full) return q;
+  const merged = {
+    ...full,
+    ...q,
+    prompt: q.prompt || full.prompt,
+    choices: Array.isArray(q.choices) && q.choices.length ? q.choices : full.choices,
+    correctIndex: Number.isInteger(q.correctIndex) ? q.correctIndex : full.correctIndex,
+  };
+  state.qs[state.i] = merged;
+  return merged;
 }
 function shuffle(a) {
   const x = [...a];
@@ -2004,6 +2016,7 @@ function snapshot() {
     buzzId: state.buzzId,
     picked: state.picked,
     readLeft: state.readLeft,
+    gapLeft: state.gapLeft || 0,
     studioI: state.studioI,
     hostH: state.hostH,
     room: state.room,
@@ -2119,7 +2132,8 @@ function clockText() {
   if (state.phase === "answer") return state.buzzBy ? tt("answerBy", state.buzzBy) : tt("yourAnswer");
   if (state.phase === "reveal") {
     if (!q) return "";
-    return state.picked === q.correctIndex ? tt("correct") : tt("wrong");
+    const mark = state.picked === q.correctIndex ? tt("correct") : tt("wrong");
+    return state.gapLeft > 0 ? `${mark} · ${state.gapLeft}` : mark;
   }
   if (state.phase === "end") return tt("showOver");
   return "";
@@ -2250,6 +2264,7 @@ function takeBuzz(id, name) {
   state.mapLive = Boolean(armedId) && mapUsesLeft(state.mapUses?.[id]) > 0;
   if (!state.mapLive) delete state.maps[id];
   clearAiBuzz();
+  stopTick();
   playSound("buzz");
   paint();
   publish();
@@ -2576,8 +2591,10 @@ function maybeEndFromDropout() {
 
 function continueRound() {
   state.lockdown = null;
+  state.lastAnswer = null;
+  state.gapLeft = 0;
   state.i += 1;
-  if (state.i >= state.qs.length) {
+  if (!Array.isArray(state.qs) || state.i >= state.qs.length) {
     finishShow();
     return;
   }
@@ -2591,10 +2608,40 @@ function continueRound() {
     return;
   }
   state.picked = -1;
-  state.phase = "between";
-  state.pose = "next";
-  publish();
+  state.buzzed = false;
+  state.buzzBy = "";
+  state.buzzId = "";
   startRead();
+}
+
+function beginGap() {
+  stopTick();
+  clearAiBuzz();
+  const from = state.i;
+  state.gapLeft = 3;
+  state.phase = "reveal";
+  paint();
+  publish();
+  state.tick = setInterval(() => {
+    if (state.i !== from) {
+      stopTick();
+      return;
+    }
+    state.gapLeft -= 1;
+    publish();
+    const clock = $("#clock");
+    if (clock) clock.textContent = clock.classList.contains("read-clock") ? String(Math.max(state.gapLeft, 0)) : clockText();
+    if (state.gapLeft > 0) return;
+    stopTick();
+    state.gapLeft = 0;
+    const lock = state.gapLock === true;
+    state.gapLock = false;
+    if (lock) {
+      Promise.resolve(startLockdown(state.buzzId)).catch(() => continueRound());
+      return;
+    }
+    continueRound();
+  }, 1000);
 }
 
 function startSetBreak(tier) {
@@ -2675,16 +2722,8 @@ function applyRemoteMap(id, target) {
 }
 
 function afterReveal(ok) {
-  const shouldLock = ok && state.lockdownAt.includes(state.i) && !state.lockdown;
-  const from = state.i;
-  setTimeout(() => {
-    if (state.phase !== "reveal" || state.i !== from) return;
-    if (!shouldLock) {
-      continueRound();
-      return;
-    }
-    Promise.resolve(startLockdown(state.buzzId)).catch(() => continueRound());
-  }, 2000);
+  state.gapLock = Boolean(ok && Array.isArray(state.lockdownAt) && state.lockdownAt.includes(state.i) && !state.lockdown);
+  beginGap();
 }
 
 function applyRemoteAnswer(id, index, lockdown = false) {
@@ -4856,8 +4895,8 @@ function playHTML() {
     const note = !state.lockdown && !readyPhase && state.phase !== "read" && clockText()
       ? `<div class="pad-bubble"><p class="qtext">${escapeHtml(clockText())}</p></div>`
       : "";
-    const readClock = state.phase === "read"
-      ? `<p class="read-clock" id="clock">${state.readLeft}</p>`
+    const readClock = state.phase === "read" || state.phase === "reveal"
+      ? `<p class="read-clock" id="clock">${state.phase === "reveal" ? (state.gapLeft || 0) : state.readLeft}</p>`
       : "";
     const answers = showAns && q && Array.isArray(q.choices)
       ? `<div class="answers phone-answers">${q.choices.map((c, i) => {
@@ -6439,12 +6478,12 @@ function startPoll() {
     if (j.screen) state.roomScreen = j.screen;
     if (state.tvMirror) {
       if (pollN % 5 === 0) void rooms("POST", { action: "tv-seen", code: state.room });
-      const before = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
+      const before = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.gapLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (j.host) state.roomHost = cleanSeatName(j.host);
       if (j.guests) ingestGuests(j.guests);
       if (j.screen) state.roomScreen = j.screen;
       if (j.state && j.state.phase) applyHostState(j.state);
-      const after = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
+      const after = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.gapLeft}:${state.setBreakLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (before !== after) paint();
       return;
     }
