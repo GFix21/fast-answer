@@ -513,6 +513,9 @@ async function handleRoom(req, res) {
     cur.state = cur.state || {};
     cur.state.readyIds = { ...(cur.state.readyIds || {}), [id]: true };
     await touch(cur);
+  } else if (body.action === "tv-seen") {
+    cur.tvSeenAt = Date.now();
+    await touch(cur);
   } else {
     res.status(400).end(JSON.stringify({ error: "action" }));
     return;

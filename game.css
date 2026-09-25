@@ -136,7 +136,12 @@ button:disabled{cursor:not-allowed}
 .buzzer.bz-square{border-radius:10px}
 .buzzer.bz-stadium{height:64px;border-radius:14px;letter-spacing:.28em}
 .buzzer.bz-ring{background:transparent;color:var(--buzz-c, var(--buzz));border:4px solid var(--buzz-c, var(--buzz));box-shadow:none}
-.buzzer.bz-slam{height:96px;border-radius:6px;letter-spacing:.32em}
+.connect-sheet{
+  position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  padding:24px;background:rgba(0,0,0,.88);text-align:center;
+}
+.connect-sheet .room-code{font-size:42px;letter-spacing:.2em}
+.connect-qr{width:220px;height:220px;background:#fff;border-radius:12px}
 .bz-swatch{width:36px;height:36px;border-radius:50%;border:2px solid transparent}
 .bz-swatch.on{border-color:#fff}
 .buzzer.lit{animation:pulse .55s var(--ease) infinite alternate}
