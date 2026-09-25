@@ -13,11 +13,15 @@ import {
   findProfileById,
   publicProfile,
   setDojoPhoto,
+  setMailConsent,
+  markTrialNotice,
+  deleteAccount,
 } from "../lib/profile-store.js";
-import { openSession, sessionCookie, sessionProfileId, tokenFromRequest } from "../lib/profile-session.js";
+import { openSession, sessionCookie, sessionProfileId, tokenFromRequest, dropSession } from "../lib/profile-session.js";
 import { readScores, recordScore } from "../lib/score-vault.js";
 import { deployWelcome } from "../lib/fan-mail.js";
-import { ensureGmgBooth, pushDojoPhoto } from "../lib/gmg-profile.js";
+import { withdrawalOpen, trialNoticeDue } from "../lib/account-rights.js";
+import { ensureGmgBooth, pushDojoPhoto, syncMailConsent, wipeGmgAccount, sendTrialNotice } from "../lib/gmg-profile.js";
 
 const SCORE_CAP = 200000;
 
@@ -87,7 +91,13 @@ export default async function handler(req, res) {
     if (!id) return json(res, 401, { error: "unauthorized" });
     const rec = await findProfileById(id);
     if (!rec) return json(res, 401, { error: "unauthorized" });
-    return json(res, 200, { ok: true, profile: publicProfile(rec) });
+    if (trialNoticeDue(rec)) {
+      const notice = await sendTrialNotice(tokenFromRequest(req), rec);
+      if (notice.ok || notice.skipped) await markTrialNotice(rec.id);
+    }
+    const profile = publicProfile(rec);
+    profile.withdrawalOpen = withdrawalOpen(rec, "");
+    return json(res, 200, { ok: true, profile });
   }
   if (req.method !== "POST") return json(res, 405, { error: "method" });
   const body = await readBody(req);
@@ -134,6 +144,36 @@ export default async function handler(req, res) {
       }
       const profile = await setDojoPhoto(id, body.url);
       return json(res, 200, { ok: true, profile });
+    } catch (err) {
+      return json(res, statusFor(err), { error: err.code || "invalid" });
+    }
+  }
+
+  if (body.action === "mail-consent" || body.action === "delete-account" || body.action === "withdraw") {
+    const id = await sessionProfileId(req);
+    if (!id) return json(res, 401, { error: "unauthorized" });
+    const token = tokenFromRequest(req);
+    try {
+      if (body.action === "mail-consent") {
+        const on = body.mailingList === true;
+        const profile = await setMailConsent(id, on);
+        void syncMailConsent(token, on);
+        return json(res, 200, { ok: true, profile });
+      }
+      const rec = await findProfileById(id);
+      if (!rec) return json(res, 401, { error: "unauthorized" });
+      if (body.action === "withdraw" && !withdrawalOpen(rec, body.locale)) {
+        return json(res, 403, { error: "withdrawal" });
+      }
+      await wipeGmgAccount(token);
+      const entry = await deleteAccount(id, {
+        action: body.action === "withdraw" ? "withdrawal" : "delete",
+        locale: body.locale,
+      });
+      await dropSession(token);
+      return json(res, 200, { ok: true, deleted: entry }, {
+        cookie: "fa_profile=; HttpOnly; Path=/; SameSite=Lax; Max-Age=0",
+      });
     } catch (err) {
       return json(res, statusFor(err), { error: err.code || "invalid" });
     }
