@@ -16,6 +16,7 @@ assert.equal(letter.attachment.href, "https://example.com/song.mp3");
 
 const sent = await deployWelcome({ email: "fan@example.com", name: "Fan" });
 assert.equal(sent.subject, "Hello");
+assert.equal(sent.mailed, false);
 const mail = await readFanMail();
 assert.equal(mail.metrics.mailingJoins, 1);
 assert.equal(mail.sends[0].email, "fan@example.com");

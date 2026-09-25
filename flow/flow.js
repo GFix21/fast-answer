@@ -1396,7 +1396,7 @@ function renderFan(panel) {
     <div class="card">
       <h2>${t("fanSends")}</h2>
       ${sends.length ? `<table class="plist"><thead><tr><th>${t("name")}</th><th>${t("email")}</th><th>${t("activated")}</th></tr></thead><tbody>
-        ${sends.map((row) => `<tr><td>${esc(row.name)}</td><td>${esc(row.email)}</td><td>${esc(String(row.at || "").replace("T", " ").slice(0, 16))}</td></tr>`).join("")}
+        ${sends.map((row) => `<tr><td>${esc(row.name)}</td><td>${esc(row.email)}</td><td>${esc(String(row.at || "").replace("T", " ").slice(0, 16))}${row.mailed ? " · sent" : ""}</td></tr>`).join("")}
       </tbody></table>` : `<p class="mut">${t("fanNone")}</p>`}
     </div>`;
   document.getElementById("fanSave")?.addEventListener("click", saveFan);
