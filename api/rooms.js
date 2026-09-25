@@ -431,6 +431,21 @@ async function handleRoom(req, res) {
       name: guest.name || "",
     };
     await touch(cur);
+  } else if (body.action === "screen-answer") {
+    const index = Number(body.index);
+    if (!Number.isInteger(index) || index < 0 || index > 3) {
+      res.status(400).end(JSON.stringify({ error: "index" }));
+      return;
+    }
+    cur.state = cur.state || {};
+    cur.state.lastAnswer = {
+      id: String(body.id || cur.state.buzzId || ""),
+      index,
+      at: Date.now(),
+      lockdown: Boolean(body.lockdown),
+      name: String(body.name || ""),
+    };
+    await touch(cur);
   } else if (body.action === "map") {
     const guest = actingGuest(cur, req, body);
     if (!guest || guest.seat === "view") {

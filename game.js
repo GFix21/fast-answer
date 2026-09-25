@@ -2321,29 +2321,12 @@ async function goToTvRoom() {
     else await createTvCast();
   }
   if (!state.room) return;
-  if (thisScreenIsTv()) {
-    state.thisIsTv = true;
-    state.connectOpen = false;
-    state.onScreen = true;
-    void rooms("POST", { action: "tv-seen", code: state.room });
+  if (state.tvMirror && !state.hostKey) {
     state.statusMsg = tt("tvHere");
     paint(true);
     return;
   }
-  if (isTvDisplay() || state.onScreen || forcedDisplay) {
-    enterReady();
-    return;
-  }
-  ensureHostKey();
-  const hold = clamp(Number(state.joinWait) || 35, 5, 45);
-  await rooms("POST", {
-    action: "state",
-    code: state.room,
-    hostKey: state.hostKey,
-    state: { phase: "ready", joinLeft: hold, armTv: true, readyIds: {} },
-  });
-  state.statusMsg = tt("tvRoomOpened");
-  paint(true);
+  enterReady();
 }
 
 function buzz() {
@@ -2714,6 +2697,20 @@ function applyRemoteAnswer(id, index, lockdown = false) {
 
 function pick(i, asId, fromRemote = false) {
   if (state.viewing) return;
+  if (state.tvMirror) {
+    const answerId = state.lockdown?.playerId || state.buzzId || "";
+    if (!answerId || !state.room) return;
+    void rooms("POST", {
+      action: "screen-answer",
+      code: state.room,
+      id: answerId,
+      index: Number(i),
+      lockdown: state.lockdown?.phase === "play",
+    });
+    state.picked = Number(i);
+    paint();
+    return;
+  }
   if (role === "pad" && !fromRemote && !isSeatedPlay()) return;
   if (state.lockdown?.phase === "wager" || state.lockdown?.phase === "intro") return;
   if (state.lockdown?.phase === "play") {
@@ -4843,6 +4840,25 @@ function playHTML() {
     ? `<button class="ghost" id="dropout" type="button" ${dropped ? "disabled" : ""}>${dropped ? tt("dropoutPressed") : tt("dropout")}</button>`
     : "";
   const phoneBoard = !tv && (pad || !state.onScreen);
+  const tvPad = pad && state.roomScreen === "tv" && !state.viewing;
+  if (tvPad) {
+    const map = rivalsHTML();
+    const ldBubble = state.lockdown
+      ? `<div class="pad-bubble">${(state.lockdown.phase === "wager" || state.lockdown.phase === "intro") ? wagerHTML() : `<p class="qtext">${escapeHtml(lockdownLogo(state.lockdown))}</p>`}</div>`
+      : "";
+    return `
+      <div class="tv-pad-screen">
+        <div class="pad-bubbles">
+          ${map ? `<div class="pad-bubble">${map}</div>` : ""}
+          ${ldBubble}
+        </div>
+        <div class="pad-buzz">
+          ${readyPhase ? entryButtonsHTML() : buzzerButton(canBuzz, buzzLabel)}
+        </div>
+      </div>
+      ${rulesHTML()}
+    `;
+  }
   if (phoneBoard) {
     const answersMarkup = showAns && q
       ? `<div class="answers phone-answers">${q.choices.map((c, i) => {
@@ -5959,6 +5975,7 @@ async function joinAsBuzzer() {
   }
   startPoll();
   const live = await rooms("GET");
+  if (live?.screen) state.roomScreen = live.screen;
   if (live?.guests) ingestGuests(live.guests);
   if (live?.state?.phase && live.state.phase !== "lobby") {
     applyHostState(live.state);
@@ -6389,13 +6406,15 @@ function startPoll() {
       state.tvSeenAt = j.tvSeenAt;
       if (state.connectOpen) paint(true);
     }
+    if (j.screen) state.roomScreen = j.screen;
     if (state.tvMirror) {
       if (pollN % 5 === 0) void rooms("POST", { action: "tv-seen", code: state.room });
-      const before = `${state.phase}:${state.joinLeft}:${(state.guests || []).map((g) => g.id).join(",")}`;
+      const before = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (j.host) state.roomHost = cleanSeatName(j.host);
       if (j.guests) ingestGuests(j.guests);
+      if (j.screen) state.roomScreen = j.screen;
       if (j.state && j.state.phase) applyHostState(j.state);
-      const after = `${state.phase}:${state.joinLeft}:${(state.guests || []).map((g) => g.id).join(",")}`;
+      const after = `${state.phase}:${state.i}:${state.picked}:${state.buzzed}:${state.readLeft}:${state.lockdown?.phase || ""}:${state.lockdown?.qi || 0}`;
       if (before !== after) paint();
       return;
     }
@@ -6482,7 +6501,8 @@ function startPoll() {
     }
     if (role !== "pad" && j.state?.lastAnswer) {
       const a = j.state.lastAnswer;
-      if (a && a.at && a.at !== state.lastAnswerAt) {
+      const ready = state.phase === "answer" || state.lockdown?.phase === "play" || a.lockdown;
+      if (a && a.at && a.at !== state.lastAnswerAt && ready) {
         state.lastAnswerAt = a.at;
         applyRemoteAnswer(a.id, a.index, Boolean(a.lockdown));
       }
@@ -6513,6 +6533,7 @@ function paint(force = false) {
   }
   app.className = "stage"
     + (role === "pad" ? " pad" : "")
+    + (role === "pad" && state.roomScreen === "tv" ? " tv-pad" : "")
     + (state.onScreen && role !== "pad" ? " tv" : "")
     + (state.phase !== "lobby" && (role === "pad" || !state.onScreen) ? " phone" : "")
     + (state.lockdown ? " lockdown" : "")
