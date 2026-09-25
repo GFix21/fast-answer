@@ -2759,14 +2759,15 @@ function afterReveal(ok) {
   if (state.revealT) clearTimeout(state.revealT);
   state.revealT = setTimeout(() => {
     state.revealT = null;
-    if (state.i !== from || state.phase !== "reveal") return;
+    if (state.i !== from) return;
+    if (state.phase === "end" || state.phase === "lockdown") return;
     const lock = ok && Array.isArray(state.lockdownAt) && state.lockdownAt.includes(from) && !state.lockdown;
     if (lock) {
       Promise.resolve(startLockdown(state.buzzId)).catch(() => continueRound());
       return;
     }
     continueRound();
-  }, 1200);
+  }, 2000);
 }
 
 function applyRemoteAnswer(id, index, lockdown = false, question = null) {
@@ -3247,18 +3248,18 @@ function rivalsHTML() {
   if (!q || !mapPhaseOpen()) return "";
   const owner = mapOwnerId();
   if (owner !== state.youId) return "";
-  const phoneBoard = !isTvDisplay() && role !== "pad" && !state.onScreen;
-  const show = state.phase === "read" || state.phase === "buzz" || (phoneBoard && state.phase === "answer");
-  if (!show) return "";
+  if (!["read", "buzz", "answer"].includes(state.phase)) return "";
   const left = mapUsesLeft(state.mapUses?.[owner]);
   const armed = state.maps[owner];
+  const people = others();
+  if (!people.length && left <= 0 && !armed) return "";
   if (left <= 0 && !armed) {
     return `<div class="rivals"><span class="rivals-lab">${escapeHtml(tt("mapSpent"))}</span></div>`;
   }
   const stake = stakeOf(q);
   return `<div class="rivals">
     <span class="rivals-lab">${tt("mapLab", stake, left, MAP_USES_PER_ROUND)}</span>
-    ${others().map((p) =>
+    ${people.map((p) =>
       `<button type="button" class="rival ${armed === p.id ? "on" : ""}" data-map="${p.id}">${escapeHtml(p.name)} <b>$${p.score}</b></button>`
     ).join("")}
   </div>`;
@@ -4991,12 +4992,12 @@ function playHTML() {
     return `
       <div class="tv-pad-screen">
         <div class="pad-bubbles">
-          ${map ? `<div class="pad-bubble">${map}</div>` : ""}
           ${readClock}
           ${ldBubble}
           ${note}
         </div>
         <div class="pad-dock">
+          ${map ? `<div class="pad-bubble">${map}</div>` : ""}
           ${showChoices ? choiceButtons(q) : ""}
           <div class="pad-buzz">
             ${readyPhase ? entryButtonsHTML() : buzzerButton(canBuzz, buzzLabel)}
@@ -6612,12 +6613,7 @@ function startPoll() {
       if (j.guests) ingestGuests(j.guests);
       paint();
     }
-    if (role !== "pad" && j.state?.buzzed && !state.buzzed && (state.phase === "read" || state.phase === "buzz")) {
-      if (state.phase === "read") {
-        stopTick();
-        state.readLeft = 0;
-        state.phase = "buzz";
-      }
+    if (role !== "pad" && j.state?.buzzed && !state.buzzed && state.phase === "buzz" && Number(j.state.i) === Number(state.i)) {
       takeBuzz(j.state.buzzId || "you", j.state.buzzBy || "Player");
     }
     if (role !== "pad" && j.state?.maps && mapPhaseOpen()) {
@@ -6641,7 +6637,7 @@ function startPoll() {
     if (role !== "pad" && j.state?.lastAnswer) {
       const a = j.state.lastAnswer;
       const ready = state.phase === "read" || state.phase === "buzz" || state.phase === "answer" || state.lockdown?.phase === "play" || a.lockdown;
-      const sameCard = !Number.isInteger(Number(a.q)) || Number(a.q) === state.i;
+      const sameCard = Number(a.q) === Number(state.i);
       if (a && a.at && a.at !== state.lastAnswerAt && ready && sameCard && state.answeredFor !== state.i) {
         state.lastAnswerAt = a.at;
         applyRemoteAnswer(a.id, a.index, Boolean(a.lockdown), a.q);
