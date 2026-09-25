@@ -524,6 +524,7 @@ function connectSheetHTML() {
       <p class="meta">${escapeHtml(url)}</p>
       <p class="status">${seen ? tt("tvConnected") : tt("waitingTv")}</p>
       <button type="button" class="primary" id="shareTv">${tt("shareTv")}</button>
+      <button type="button" class="primary" id="openBuzzer">${tt("openBuzzer")}</button>
       <button type="button" class="ghost" id="iAmTv">${tt("iAmTv")}</button>
     </div>`;
 }
@@ -5149,6 +5150,7 @@ async function createOffScreenRoom() {
 }
 
 async function openBuzzer() {
+  state.connectOpen = false;
   if (!state.room) {
     await createOffScreenRoom();
   }
