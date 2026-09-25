@@ -288,7 +288,7 @@ const state = {
   locale: loadStoredLocale(),
   activeRooms: [],
   roomName: "",
-  joinWait: 15,
+  joinWait: 35,
   joinLeft: 0,
   joinTick: null,
   castForm: false,
@@ -749,11 +749,11 @@ function isSeatedPlay() {
   return state.seatIntent !== "view" && Boolean(state.youId);
 }
 function allPadsReady() {
-  const pads = humanPads();
-  const hostPlays = role !== "pad" && !state.onScreen && !isTvDisplay();
-  if (!pads.length && !hostPlays) return false;
-  if (hostPlays && !state.readyIds[state.youId]) return false;
-  return pads.every((g) => state.readyIds[g.id]);
+  const people = [];
+  if (hostOnRoster()) people.push({ id: "you" });
+  humanPads().forEach((g) => people.push(g));
+  if (!people.length) return false;
+  return people.every((g) => state.readyIds[g.id]);
 }
 function escapeHtml(s) {
   const d = document.createElement("div");
@@ -1672,16 +1672,18 @@ function rosterName(name) {
   if (!n || /^player(\s*0)?$/i.test(n)) return "";
   return n;
 }
-function hostPlaysLocal() {
-  if (role === "pad") return false;
-  if (state.onScreen || isTvDisplay() || state.mpMode === "cast") return false;
-  return true;
+function hostSeatName() {
+  return rosterName(state.profile?.displayName || state.name) || rosterName(state.roomHost);
+}
+function hostOnRoster() {
+  if (role === "pad" || state.hostSatOut) return false;
+  return Boolean(hostSeatName());
 }
 function fillSeats() {
   const guests = (state.guests || []).filter((g) => g.seat !== "view" && cleanSeatName(g.name));
-  const you = hostPlaysLocal() && rosterName(state.name) ? 1 : 0;
+  const you = hostOnRoster() ? 1 : 0;
   const empty = Math.max(0, (state.playerCount || 3) - you - guests.length);
-  const need = state.botFill && (you + guests.length) > 0 ? Math.min(11, empty) : 0;
+  const need = state.phase === "lobby" ? 0 : (state.botFill && (you + guests.length) > 0 ? Math.min(11, empty) : 0);
   const have = [...(state.seatBots || [])];
   const used = new Set(have.map((b) => b.id));
   const extra = shuffle(CELEB_BOTS.filter((b) => !used.has(b.id)));
@@ -1689,7 +1691,7 @@ function fillSeats() {
   state.seatBots = have.slice(0, need);
 }
 function seatedPreview() {
-  const youName = hostPlaysLocal() ? rosterName(state.name) : "";
+  const youName = hostOnRoster() ? hostSeatName() : "";
   const you = youName ? [{
     id: "you",
     name: youName,
@@ -1972,6 +1974,8 @@ function snapshot() {
     pendingJoins: (state.pendingJoins || []).map((g) => g.id),
     buzzerStyle: state.buzzerStyle,
     buzzerColor: state.buzzerColor,
+    joinLeft: state.joinLeft || 0,
+    armTv: state.phase === "ready",
   });
 }
 function publish() {
@@ -2090,7 +2094,7 @@ function seatPlayers() {
   state.youId = "you";
   fillSeats();
   const guests = (state.guests || []).filter((g) => g.seat !== "view" && cleanSeatName(g.name));
-  const youName = hostPlaysLocal() ? rosterName(state.name) : "";
+  const youName = hostOnRoster() ? hostSeatName() : "";
   const you = youName ? [{
     id: "you",
     name: youName,
@@ -2199,13 +2203,16 @@ function takeBuzz(id, name) {
 
 function markReady() {
   if (state.phase !== "ready") return;
-  const id = state.youId;
+  const id = role === "pad" ? state.youId : "you";
   if (!id) return;
   state.readyIds = { ...(state.readyIds || {}), [id]: true };
   paint(true);
   if (bc) bc.postMessage({ type: "ready", id, name: state.name, room: state.room });
-  if (state.room) void rooms("POST", { action: "ready", code: state.room, id, name: state.name });
-  if (role !== "pad") maybeStartFromReady();
+  if (state.room && role === "pad") void rooms("POST", { action: "ready", code: state.room, id, name: state.name });
+  if (role !== "pad") {
+    publish();
+    maybeStartFromReady();
+  }
 }
 
 function maybeStartFromReady() {
@@ -2214,13 +2221,25 @@ function maybeStartFromReady() {
   startGame();
 }
 
+function dropUnstarted() {
+  const keep = new Set(Object.keys(state.readyIds || {}).filter((id) => state.readyIds[id]));
+  if (hostOnRoster() && !keep.has("you")) state.hostSatOut = true;
+  const dropped = (state.guests || []).filter((g) => g.seat !== "view" && g.id && !keep.has(g.id));
+  state.guests = (state.guests || []).filter((g) => g.seat === "view" || keep.has(g.id));
+  dropped.forEach((g) => {
+    if (state.room) void rooms("POST", { action: "kick", code: state.room, id: g.id, name: g.name });
+  });
+}
+
 function enterReady() {
+  if (state.phase === "ready" && state.joinTick) return;
   state.phase = "ready";
   state.pose = "idle";
   state.readyIds = {};
   state.qrOpen = false;
+  state.hostSatOut = false;
   if (state.joinTick) clearInterval(state.joinTick);
-  state.joinLeft = state.offline ? 0 : clamp(Number(state.joinWait) || 15, 5, 45);
+  state.joinLeft = state.offline ? 0 : clamp(Number(state.joinWait) || 35, 5, 45);
   paint(true);
   publish();
   if (!state.joinLeft || role === "pad") return;
@@ -2234,6 +2253,7 @@ function enterReady() {
     if (state.joinLeft <= 0) {
       clearInterval(state.joinTick);
       state.joinTick = null;
+      dropUnstarted();
       startGame();
       return;
     }
@@ -2241,6 +2261,28 @@ function enterReady() {
     if (clock) clock.textContent = clockText();
     publish();
   }, 1000);
+}
+
+async function goToTvRoom() {
+  if (!state.room) {
+    if (isTvDisplay() || state.onScreen) await openRoom("tv");
+    else await createTvCast();
+  }
+  if (!state.room) return;
+  if (isTvDisplay() || state.onScreen || forcedDisplay) {
+    enterReady();
+    return;
+  }
+  ensureHostKey();
+  const hold = clamp(Number(state.joinWait) || 35, 5, 45);
+  await rooms("POST", {
+    action: "state",
+    code: state.room,
+    hostKey: state.hostKey,
+    state: { phase: "ready", joinLeft: hold, armTv: true, readyIds: {} },
+  });
+  state.statusMsg = tt("tvRoomOpened");
+  paint(true);
 }
 
 function buzz() {
@@ -4085,7 +4127,7 @@ function roomListHTML(screen) {
 }
 function startWaitHTML() {
   const wait = clamp(Number(state.joinWait) || 15, 5, 45);
-  const waits = [10, 15, 20, 30, 45];
+  const waits = [10, 15, 20, 30, 35, 45];
   return `
     <p class="field">${tt("joinWait")} <b>${wait}s</b></p>
     <div class="seat-n" role="group">${waits.map((n) => `<button type="button" class="seat-n-btn ${wait === n ? "on" : ""}" data-wait="${n}">${n}</button>`).join("")}</div>`;
@@ -4102,6 +4144,7 @@ function tvShortMenu() {
       <div class="seats">${humans.map((s) => seatSpan(s)).join("") || `<span class="meta">${tt("noPadsYet")}</span>`}</div>
       <p class="field">${tt("celebrityBots")}</p>
       <div class="seats">${bots.map((s) => seatSpan(s)).join("") || `<span class="meta">—</span>`}</div>
+      <button class="primary" id="goTvRoom" type="button">${tt("goTvRoom")}</button>
       <button class="primary" id="connectTv" type="button">${tt("connectTv")}</button>
       ${state.room && state.connectOpen ? `<p class="room-code"><b>${escapeHtml(state.room)}</b></p>` : ""}
     </div>`;
@@ -4210,6 +4253,7 @@ function roomBody() {
       ${roomListHTML("off")}
       ${roomListHTML("tv")}
       ${houseLinksHTML()}
+      ${state.joinedCode && state.joinedCode === (state.room || joinCode) ? entryButtonsHTML() : ""}
       ${offer ? `
         <div class="join-offer">
           <p class="dir-copy"><b>${tt("joinInAction")}</b> ${escapeHtml(String(offer.tier || offer.phase || "").toUpperCase())}</p>
@@ -4295,7 +4339,7 @@ function lobbyGoLabel() {
   const mode = pad ? "join" : (state.mpMode || "off");
   if (pad || mode === "join") return tt("goJoin");
   if (mode === "cast") return state.room ? tt("goCastCopy") : tt("goCastMake");
-  if (isTvDisplay() || state.onScreen) return tt("goOpenTv");
+  if (isTvDisplay() || state.onScreen) return tt("goTvRoom");
   if (state.roomSetup || state.room) return tt("openBuzzer");
   return tt("createRoom");
 }
@@ -4622,29 +4666,44 @@ function lobbyHTML() {
   `;
 }
 
+function entryButtonsHTML() {
+  const pad = role === "pad";
+  const entered = pad ? Boolean(state.joinedCode && state.joinedCode === state.room) : hostOnRoster();
+  const id = pad ? state.youId : "you";
+  const started = Boolean(state.readyIds[id]);
+  const canStart = entered && state.phase === "ready" && !started;
+  const hold = clamp(Number(state.joinWait) || 35, 5, 45);
+  return `
+    <div class="row">
+      <button class="${entered ? "ghost" : "primary"}" id="readyEnter" type="button" ${entered ? "disabled" : ""}>${entered ? tt("enteredRoom") : tt("readyEnter")}</button>
+      <button class="primary" id="pressStart" type="button" ${canStart ? "" : "disabled"}>${started ? tt("startedPlay") : tt("pressStart")}</button>
+    </div>
+    <p class="meta">${tt("startHold", hold)}</p>`;
+}
+
 function readyCardHTML() {
-  const pads = humanPads();
+  const pads = [];
+  if (hostOnRoster()) pads.push({ id: "you", name: hostSeatName() });
+  humanPads().forEach((g) => pads.push(g));
   const readyN = pads.filter((g) => state.readyIds[g.id]).length;
   const rows = pads.length
     ? pads.map((g) => {
         const on = Boolean(state.readyIds[g.id]);
-        const kick = role !== "pad"
+        const kick = role !== "pad" && g.id !== "you"
           ? `<button type="button" class="ghost danger seat-kick" data-kick="${escapeHtml(g.id)}">${tt("removePlayer")}</button>`
           : "";
         return `<span class="seat-row"><span class="seat ${on ? "human" : "bot"}">${escapeHtml(g.name)}${on ? tt("phoneReady") : ""}</span>${kick}</span>`;
       }).join("")
     : `<span class="seat bot">${tt("waitingPhones")}</span>`;
   const pad = role === "pad";
-  const mine = Boolean(state.readyIds[state.youId]);
   return `
     <div class="qwrap">
       <div class="qcard">
         <p class="cat">${tt("tvRoom", escapeHtml(state.room || "····"))}</p>
-        <p class="qtext">${pad
-          ? (mine ? tt("readyYou") : tt("readyPress"))
-          : tt("readyTv")}</p>
-        <p class="meta" id="clock">${tt("readyMeta", readyN, Math.max(pads.length, 1))}</p>
+        <p class="qtext">${pad ? tt("readyPress") : tt("readyTv")}</p>
+        <p class="meta" id="clock">${tt("readyMeta", readyN, Math.max(pads.length, 1))} · ${tt("joinWaitClock", state.joinLeft || 0)}</p>
         <div class="seats ready-seats">${rows}</div>
+        ${entryButtonsHTML()}
       </div>
     </div>
   `;
@@ -4762,7 +4821,7 @@ function playHTML() {
         </div>
         <div class="buzzbar">
           ${rivalsHTML()}
-          ${!ld && !endPhase && !breaking ? buzzerButton(canBuzz, buzzLabel) : ""}
+          ${readyPhase ? entryButtonsHTML() : (!ld && !endPhase && !breaking ? buzzerButton(canBuzz, buzzLabel) : "")}
           ${!ld && !endPhase && !breaking && !pad ? `<div class="dock set-dock">
             <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
             <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
@@ -4824,7 +4883,7 @@ function playHTML() {
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
         <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
       </div>` : ""}
-      ${(pad || !tv) && !ld && !endPhase && !breaking && !state.viewing && seated ? buzzerButton(canBuzz, buzzLabel, readyPhase && state.readyIds[state.youId] ? "ready-on" : "") : ""}
+      ${readyPhase ? entryButtonsHTML() : ((pad || !tv) && !ld && !endPhase && !breaking && !state.viewing && seated ? buzzerButton(canBuzz, buzzLabel, "") : "")}
       ${ld ? `<div class="lock-flag">${ld.phase === "wager" ? tt("lockdownWagers") : ld.phase === "intro" ? escapeHtml(tt("lockRulesClock", ld.introLeft)) : escapeHtml(tt("lockFlag", ld.name, ld.hits, ld.earned || 0))}</div>` : ""}
       ${(pad && (state.phase === "answer" || (ld?.phase === "play" && isHero))) ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
       ${dropoutBtn}
@@ -5464,6 +5523,14 @@ function bindLobby() {
   if (createTvCastBtn) createTvCastBtn.onclick = () => { track("gameRoom"); void createTvCast(); };
   const connectTv = $("#connectTv");
   if (connectTv) connectTv.onclick = () => { track("gameRoom"); void connectToTv(); };
+  const goTv = $("#goTvRoom");
+  if (goTv) goTv.onclick = () => { track("gameRoom"); void goToTvRoom(); };
+  document.querySelectorAll("#readyEnter").forEach((b) => {
+    b.onclick = () => { void beginJoin(state.room || state.joinInput || joinCode); };
+  });
+  document.querySelectorAll("#pressStart").forEach((b) => {
+    b.onclick = () => markReady();
+  });
   const castRoomBtn = $("#castRoom");
   if (castRoomBtn) castRoomBtn.onclick = () => { void castThisRoom(); };
   document.querySelectorAll("#openBuzzer").forEach((b) => {
@@ -5786,7 +5853,7 @@ async function joinAsBuzzer() {
     applyHostState(live.state);
     if (live.guests) ingestGuests(live.guests);
   } else {
-    state.phase = "ready";
+    state.phase = "lobby";
   }
   state.statusMsg = state.viewing
     ? tt("joinedView", code)
@@ -5857,8 +5924,7 @@ async function onLobbyGo() {
   }
   saveProfile({ displayName: state.name });
   if (state.onScreen || isTvDisplay()) {
-    await openRoom("tv");
-    enterReady();
+    if (state.phase === "lobby") await goToTvRoom();
     return;
   }
   startGame();
@@ -6018,8 +6084,13 @@ function bindPlay() {
   const force = $("#forceStart");
   if (force) force.onclick = () => {
     if (role === "pad" || state.phase !== "ready") return;
+    dropUnstarted();
     startGame();
   };
+  document.querySelectorAll("#pressStart").forEach((b) => { b.onclick = () => markReady(); });
+  document.querySelectorAll("#readyEnter").forEach((b) => {
+    b.onclick = () => { void beginJoin(state.room || state.joinInput || joinCode); };
+  });
   document.querySelectorAll("[data-kick]").forEach((b) => {
     b.onclick = async () => {
       const id = b.dataset.kick;
@@ -6200,6 +6271,11 @@ function startPoll() {
     if (forcedDisplay && state.phase === "lobby") applyRoomSetup(j);
     pollN += 1;
     if (applyRefreshFromRoom(j)) paint(true);
+    if (j.host) state.roomHost = cleanSeatName(j.host);
+    if (role !== "pad" && state.phase === "lobby" && j.state?.armTv) {
+      state.joinWait = clamp(Number(j.state.joinLeft) || state.joinWait || 35, 5, 45);
+      enterReady();
+    }
     if (j.guests) {
       const before = (state.guests || []).map((g) => g.id).join(",");
       const waitingBefore = (state.pendingJoins || []).map((g) => g.id).join(",");
@@ -6241,7 +6317,6 @@ function startPoll() {
         return;
       }
       if (j.state.phase === "lobby") {
-        if (state.phase === "lobby") state.phase = "ready";
         if (state.showLive) return;
         paint(true);
         return;
