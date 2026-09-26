@@ -129,6 +129,24 @@ button:disabled{cursor:not-allowed}
   padding:8px 12px calc(10px + env(safe-area-inset-bottom));
   flex-shrink:0;
 }
+.show-status{
+  width:min(100%,960px);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:12px 20px;border-radius:999px;
+  background:color-mix(in oklab, var(--elev) 90%, transparent);
+  border:1px solid var(--line);
+  font-variant-numeric:tabular-nums;
+}
+.show-tier{
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(20px,2.4vw,34px);letter-spacing:.04em;text-transform:uppercase;line-height:1;
+}
+.show-count{font-size:clamp(16px,1.8vw,26px);font-weight:650}
+.show-count b{font-weight:750}
+.show-status[data-tier="easy"] .show-tier{color:#bbf7d0}
+.show-status[data-tier="hard"] .show-tier{color:#fde68a}
+.show-status[data-tier="difficult"] .show-tier{color:#fdba74}
+.show-status[data-tier="extreme"] .show-tier{color:#fecdd3}
 .buzzer{
   width:min(100%,440px);height:76px;border:0;border-radius:999px;
   background:radial-gradient(circle at 50% 28%, color-mix(in oklab, var(--buzz-c, var(--buzz)) 70%, white) 0%, var(--buzz-c, var(--buzz)) 62%);

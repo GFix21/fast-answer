@@ -290,6 +290,7 @@ const state = {
   activeRooms: [],
   roomName: "",
   joinWait: 45,
+  botPace: "hard",
   joinLeft: 0,
   joinTick: null,
   castForm: false,
@@ -415,6 +416,19 @@ function playerById(id) {
 function stakeOf(q) {
   return POINTS[(q && q.tier) || "easy"] || 100;
 }
+function cleanBotPace(value) {
+  return ["easy", "hard", "difficult", "extreme"].includes(value) ? value : "hard";
+}
+function botPaceScale(pace = state.botPace) {
+  return { easy: 1, hard: 0.5, difficult: 0.28, extreme: 0.12 }[cleanBotPace(pace)];
+}
+function botBuzzWindow(bot) {
+  const [lo, hi] = bot?.buzzDelayMs || [1800, 3600];
+  const scale = botPaceScale();
+  const a = Math.max(90, Math.round(lo * scale));
+  const b = Math.max(a + 40, Math.round(hi * scale));
+  return a + Math.random() * (b - a);
+}
 function others() {
   return state.players.filter((p) => p.id !== state.youId);
 }
@@ -428,6 +442,7 @@ function roomMeta() {
   return {
     name: String(state.roomName || "").trim().slice(0, 32),
     joinWait: clamp(Number(state.joinWait) || 45, 15, 45),
+    botPace: cleanBotPace(state.botPace),
     ageFrom: from,
     ageTo: to,
     playerCount: clamp(Number(state.playerCount) || 3, 2, 12),
@@ -463,6 +478,7 @@ function applyRoomSetup(room) {
   if (!room || room.error) return;
   if (room.playerCount) state.playerCount = clamp(Number(room.playerCount) || 3, 2, 12);
   if (room.joinWait) state.joinWait = clamp(Number(room.joinWait) || 45, 15, 45);
+  if (room.botPace) state.botPace = cleanBotPace(room.botPace);
   if (room.ageFrom) state.ageFrom = clamp(Number(room.ageFrom) || 13, 10, 99);
   if (room.ageTo) state.ageTo = clamp(Number(room.ageTo) || 99, 10, 99);
   if (Array.isArray(room.topics) && room.topics.length) state.topicsOn = room.topics.map(String);
@@ -2292,15 +2308,13 @@ function scheduleAiBuzz() {
   clearAiBuzz();
   const ais = state.players.filter((p) => !p.human);
   if (!ais.length) return;
-  const ranked = ais.map((bot) => {
-    const [a, b] = bot.buzzDelayMs || [1800, 3600];
-    return { bot, delay: a + Math.random() * (b - a) };
-  }).sort((x, y) => x.delay - y.delay);
+  const ranked = ais.map((bot) => ({ bot, delay: botBuzzWindow(bot) })).sort((x, y) => x.delay - y.delay);
   const first = ranked[0];
+  const think = Math.max(800, Math.round(4000 * botPaceScale()));
   state.aiBuzzT = setTimeout(() => {
     if (state.phase !== "buzz" || state.buzzed) return;
     takeBuzz(first.bot.id, first.bot.name);
-    setTimeout(() => aiPick(first.bot), 4000);
+    setTimeout(() => aiPick(first.bot), think);
   }, first.delay);
 }
 
@@ -2722,6 +2736,40 @@ function startSetBreak(tier) {
     if (clock) clock.textContent = clockText();
     publish();
   }, 1000);
+}
+
+function showStatusHTML() {
+  if (state.phase === "lobby") return "";
+  const lock = Boolean(state.lockdown) && state.lockdown.phase !== "result";
+  const q = state.phase === "setbreak" ? null : currentQ();
+  const tier = state.phase === "setbreak" ? (state.setBreakTier || "") : (q?.tier || "");
+  const name = tier ? tierName(tier) : (lock ? tt("lockdownWord") : "");
+  const stake = !lock && q ? stakeOf(q) : 0;
+  const total = Math.max(
+    Array.isArray(state.deck) ? state.deck.length : 0,
+    Array.isArray(state.qs) ? state.qs.length : 0,
+  );
+  const done = state.phase === "end"
+    ? total
+    : Math.min(total, state.phase === "reveal" ? state.i + 1 : state.i);
+  const left = Math.max(0, total - done);
+  if (!name && !total) return "";
+  const tierLine = lock && name
+    ? `${tt("lockdownWord")} · ${name}`
+    : name;
+  return `<div class="show-status" data-tier="${escapeHtml(tier || (lock ? "extreme" : ""))}">
+    <span class="show-tier">${escapeHtml(tierLine)}${stake ? ` · $${stake}` : ""}</span>
+    <span class="show-count"><b>${done}</b> ${escapeHtml(tt("qAnswered"))} · <b>${left}</b> ${escapeHtml(tt("qLeftLabel"))}</span>
+  </div>`;
+}
+
+function botPaceHTML() {
+  const pace = cleanBotPace(state.botPace);
+  const paces = ["easy", "hard", "difficult", "extreme"];
+  return `
+    <p class="field">${tt("botPace")} <b>${tierName(pace)}</b></p>
+    <div class="seat-n" role="group">${paces.map((id) => `<button type="button" class="seat-n-btn ${pace === id ? "on" : ""}" data-pace="${id}">${tierName(id)}</button>`).join("")}</div>
+    <p class="meta">${tt("botPaceHint")}</p>`;
 }
 
 function tierName(tier) {
@@ -4364,6 +4412,7 @@ function tvShortMenu() {
       <p class="field">${tt("celebrityBots")}</p>
       <div class="seats">${bots.map((s) => seatSpan(s)).join("") || `<span class="meta">—</span>`}</div>
       ${startWaitHTML()}
+      ${botPaceHTML()}
       <button class="primary" id="goTvRoom" type="button">${tt("goTvRoom")}</button>
       <button class="primary" id="connectTv" type="button">${tt("connectTv")}</button>
       ${state.room && state.connectOpen ? `<p class="room-code"><b>${escapeHtml(state.room)}</b></p>` : ""}
@@ -4375,6 +4424,7 @@ function roomCreateFields() {
     <label class="field" for="roomName">${tt("roomName")}</label>
     <input id="roomName" maxlength="32" value="${escapeHtml(state.roomName || "")}" placeholder="${tt("roomNameHint")}"/>
     ${startWaitHTML()}
+    ${botPaceHTML()}
     <div class="copy-row">
       <label class="field" for="ageFrom">${tt("ageFrom")}
         <input id="ageFrom" type="number" min="10" max="99" value="${clamp(Number(state.ageFrom) || 13, 10, 99)}"/>
@@ -5113,7 +5163,6 @@ function playHTML() {
       ${readyPhase || endPhase ? "" : scoreboard()}
       <button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>
       ${skipBtn}
-      ${leaveTop}
       ${refreshNoticeHTML()}
     </div>
     <div class="play">
@@ -5121,9 +5170,6 @@ function playHTML() {
         <p class="cat">${tt("logoEnd")}</p>
         <p class="qtext">${tt("showEnd")}</p>
         <p class="meta" id="clock">${scoreboard()}</p>
-        <div class="row" style="margin-top:12px">
-          <button class="primary" id="quit" type="button">${tt("lobby")}</button>
-        </div>
       </div></div>` : `<div class="qwrap">
         <div class="qcard ${ld ? "lock" : ""} ${breaking ? "setbreak" : ""} ${state.mapLive ? "map-on" : ""}">
           <p class="cat">${cat}</p>
@@ -5139,6 +5185,7 @@ function playHTML() {
     </div>
     ${readyPhase || endPhase ? `<div></div>` : (ld?.phase === "wager" || ld?.phase === "intro" ? wagerHTML() : (q && (["read", "buzz", "answer", "reveal"].includes(state.phase) || ld?.phase === "play" || ld?.phase === "flash") ? `${choiceButtons(q)}${ld ? "" : mapStealHTML()}` : `<div></div>`))}
     <div class="buzzbar">
+      ${showStatusHTML()}
       ${!state.onScreen && !pad && !ld && !readyPhase && !endPhase ? `<div class="dock set-dock">
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
         <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
@@ -5148,7 +5195,7 @@ function playHTML() {
       ${(pad && (state.phase === "answer" || (ld?.phase === "play" && isHero))) ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
       ${dropoutBtn}
       ${dropped && !canLeaveNow() ? `<p class="meta">${tt("dropoutWait")}</p>` : ""}
-      ${(canLeaveNow() && (pad || endPhase || state.viewing)) ? `<button class="ghost" id="quitBar" type="button">${leaveLabel}</button>` : ""}
+      ${(canLeaveNow() && (tv || pad || endPhase || state.viewing)) ? `<button class="ghost" id="quitBar" type="button">${leaveLabel}</button>` : ""}
     </div>
     ${joinQrChip(140)}
     ${rulesHTML()}
@@ -5987,6 +6034,13 @@ function bindLobby() {
       else paint(true);
     };
   });
+  document.querySelectorAll("[data-pace]").forEach((b) => {
+    b.onclick = () => {
+      state.botPace = cleanBotPace(b.dataset.pace);
+      if (state.room) void openRoom(state.onScreen ? "tv" : "off");
+      else paint(true);
+    };
+  });
   const ageFrom = $("#ageFrom");
   const ageTo = $("#ageTo");
   const saveAges = () => {
@@ -6769,7 +6823,7 @@ function paint(force = false) {
     state.profileUnlocked ? 1 : 0, state.dojoMode, state.beltDoor ? 1 : 0, state.doorOpen ? 1 : 0,
     state.placeSetOpen, state.settingsTier, state.profile?.placementSet ?? "",
     state.roomDojoPanel, state.profile?.passwordHash ? 1 : 0,
-    state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.locale,
+    state.dirOpen, state.qrOpen, state.mpMode, state.statusMsg, state.botFill, state.botPace, state.locale,
     Object.keys(state.readyIds || {}).filter((k) => state.readyIds[k]).join(","),
     state.wagerDraft?.side, state.wagerDraft?.amount, (state.activeRooms || []).map((r) => `${r.code}:${r.screen || ""}`).join(","),
     state.roomSetup ? 1 : 0,
