@@ -146,7 +146,29 @@ function keepPlaySignals(prev, next) {
     out.buzzId = before.buzzId || "";
     out.phase = "answer";
   }
-  out.maps = { ...(before.maps || {}), ...(out.maps || {}) };
+  const beforeMaps = before.maps && typeof before.maps === "object" ? before.maps : {};
+  const nextMaps = out.maps && typeof out.maps === "object" ? out.maps : {};
+  const clearIds = new Set(
+    [...(Array.isArray(before.mapClear) ? before.mapClear : []), ...(Array.isArray(out.mapClear) ? out.mapClear : [])]
+      .map((id) => String(id || ""))
+      .filter(Boolean),
+  );
+  const nextQuestion = Number(before.i) !== Number(out.i)
+    || (out.phase === "read" && before.phase && before.phase !== "read");
+  if (nextQuestion) {
+    out.maps = { ...nextMaps };
+    out.mapClear = [];
+  } else {
+    const merged = { ...beforeMaps, ...nextMaps };
+    clearIds.forEach((id) => {
+      const nextTarget = nextMaps[id] || "";
+      const prevTarget = beforeMaps[id] || "";
+      if (nextTarget && nextTarget !== prevTarget) return;
+      delete merged[id];
+    });
+    out.maps = merged;
+    out.mapClear = [...clearIds];
+  }
   return out;
 }
 

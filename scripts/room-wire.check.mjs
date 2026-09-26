@@ -142,6 +142,37 @@ assert.equal(posted.json.state.qs[2].prompt, undefined);
 assert.deepEqual(posted.json.state.lockdownAt, []);
 assert.equal(Object.hasOwn(posted.json, "hostKey"), false);
 
+const armed = await call("POST", {
+  body: {
+    action: "state",
+    code: "ROOM1",
+    hostKey: key,
+    state: { phase: "answer", i: 1, qs: deck, maps: { p1: "rival" }, rev: 2 },
+  },
+  headers: { "x-fa-host": key },
+});
+assert.equal(armed.json.state.maps.p1, "rival");
+const released = await call("POST", {
+  body: {
+    action: "state",
+    code: "ROOM1",
+    hostKey: key,
+    state: { phase: "reveal", i: 1, qs: deck, maps: {}, mapClear: ["p1"], rev: 3 },
+  },
+  headers: { "x-fa-host": key },
+});
+assert.equal(released.json.state.maps.p1, undefined);
+const again = await call("POST", {
+  body: {
+    action: "state",
+    code: "ROOM1",
+    hostKey: key,
+    state: { phase: "read", i: 2, qs: deck, maps: { p1: "rival" }, rev: 4 },
+  },
+  headers: { "x-fa-host": key },
+});
+assert.equal(again.json.state.maps.p1, "rival");
+
 const listed = await call("GET", { query: { list: "1" } });
 assert.equal(listed.status, 401);
 
