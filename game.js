@@ -287,7 +287,7 @@ const state = {
   locale: loadStoredLocale(),
   activeRooms: [],
   roomName: "",
-  joinWait: 35,
+  joinWait: 45,
   joinLeft: 0,
   joinTick: null,
   castForm: false,
@@ -425,7 +425,7 @@ function roomMeta() {
   if (from > to) [from, to] = [to, from];
   return {
     name: String(state.roomName || "").trim().slice(0, 32),
-    joinWait: clamp(Number(state.joinWait) || 15, 5, 45),
+    joinWait: clamp(Number(state.joinWait) || 45, 15, 45),
     ageFrom: from,
     ageTo: to,
     playerCount: clamp(Number(state.playerCount) || 3, 2, 12),
@@ -460,7 +460,7 @@ function shareUrl() {
 function applyRoomSetup(room) {
   if (!room || room.error) return;
   if (room.playerCount) state.playerCount = clamp(Number(room.playerCount) || 3, 2, 12);
-  if (room.joinWait) state.joinWait = clamp(Number(room.joinWait) || 15, 5, 45);
+  if (room.joinWait) state.joinWait = clamp(Number(room.joinWait) || 45, 15, 45);
   if (room.ageFrom) state.ageFrom = clamp(Number(room.ageFrom) || 13, 10, 99);
   if (room.ageTo) state.ageTo = clamp(Number(room.ageTo) || 99, 10, 99);
   if (Array.isArray(room.topics) && room.topics.length) state.topicsOn = room.topics.map(String);
@@ -2331,6 +2331,11 @@ function markReady() {
 function maybeStartFromReady() {
   if (state.phase !== "ready" || role === "pad") return;
   if (!allPadsReady()) return;
+  // Hold the room open for the whole join window so latecomers can still take a
+  // seat: a lone ready host waits for the clock (or for phones to join and press
+  // Start). Once at least one phone has joined and everyone present is ready, or
+  // the clock runs out (handled in enterReady), the show begins.
+  if (state.joinLeft > 0 && humanPads().length === 0) return;
   startGame();
 }
 
@@ -2352,7 +2357,7 @@ function enterReady() {
   state.qrOpen = false;
   state.hostSatOut = false;
   if (state.joinTick) clearInterval(state.joinTick);
-  state.joinLeft = state.offline ? 0 : clamp(Number(state.joinWait) || 35, 5, 45);
+  state.joinLeft = state.offline ? 0 : clamp(Number(state.joinWait) || 45, 15, 45);
   paint(true);
   publish();
   if (!state.joinLeft || role === "pad") return;
@@ -4301,8 +4306,8 @@ function roomListHTML(screen) {
     </div>`;
 }
 function startWaitHTML() {
-  const wait = clamp(Number(state.joinWait) || 15, 5, 45);
-  const waits = [10, 15, 20, 30, 35, 45];
+  const wait = clamp(Number(state.joinWait) || 45, 15, 45);
+  const waits = [15, 20, 25, 30, 35, 45];
   return `
     <p class="field">${tt("joinWait")} <b>${wait}s</b></p>
     <div class="seat-n" role="group">${waits.map((n) => `<button type="button" class="seat-n-btn ${wait === n ? "on" : ""}" data-wait="${n}">${n}</button>`).join("")}</div>`;
@@ -4319,6 +4324,7 @@ function tvShortMenu() {
       <div class="seats">${humans.map((s) => seatSpan(s)).join("") || `<span class="meta">${tt("noPadsYet")}</span>`}</div>
       <p class="field">${tt("celebrityBots")}</p>
       <div class="seats">${bots.map((s) => seatSpan(s)).join("") || `<span class="meta">—</span>`}</div>
+      ${startWaitHTML()}
       <button class="primary" id="goTvRoom" type="button">${tt("goTvRoom")}</button>
       <button class="primary" id="connectTv" type="button">${tt("connectTv")}</button>
       ${state.room && state.connectOpen ? `<p class="room-code"><b>${escapeHtml(state.room)}</b></p>` : ""}
@@ -4849,7 +4855,7 @@ function entryButtonsHTML() {
   const id = pad ? state.youId : "you";
   const started = Boolean(state.readyIds[id]);
   const canStart = entered && state.phase === "ready" && !started;
-  const hold = clamp(Number(state.joinWait) || 35, 5, 45);
+  const hold = clamp(Number(state.joinWait) || 45, 15, 45);
   return `
     <div class="row">
       <button class="${entered ? "ghost" : "primary"}" id="readyEnter" type="button" ${entered ? "disabled" : ""}>${entered ? tt("enteredRoom") : tt("readyEnter")}</button>
@@ -5781,7 +5787,7 @@ function bindLobby() {
   const goTv = $("#goTvRoom");
   if (goTv) goTv.onclick = () => { track("gameRoom"); void goToTvRoom(); };
   document.querySelectorAll("#readyEnter").forEach((b) => {
-    b.onclick = () => { void beginJoin(state.room || state.joinInput || joinCode); };
+    b.onclick = () => { void (isPad() ? padEnterRoom() : beginJoin(state.room || state.joinInput || joinCode)); };
   });
   document.querySelectorAll("#pressStart").forEach((b) => {
     b.onclick = () => markReady();
@@ -5927,7 +5933,7 @@ function bindLobby() {
   };
   document.querySelectorAll("[data-wait]").forEach((b) => {
     b.onclick = () => {
-      state.joinWait = clamp(Number(b.dataset.wait) || 15, 5, 45);
+      state.joinWait = clamp(Number(b.dataset.wait) || 45, 15, 45);
       if (state.room) void openRoom(state.onScreen ? "tv" : "off");
       else paint(true);
     };
@@ -5999,6 +6005,22 @@ async function beginJoin(raw) {
   state.statusMsg = "";
   paint(true);
   return false;
+}
+
+async function padEnterRoom() {
+  // "Ready to enter" during the join window: a phone joins as a player directly
+  // (skip the view/play offer) so latecomers can get in while the clock runs.
+  // The offer UI only renders in the lobby, and the ready/waiting card is not
+  // the lobby, so without this a phone could never complete the join in time.
+  const code = String(state.room || state.joinInput || joinCode || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+  if (!code || code.length < 3) return beginJoin(code);
+  if (state.joinedCode === code) return true;
+  state.viewing = false;
+  state.seatIntent = "play";
+  state.room = code;
+  state.joinInput = code;
+  state.joinOffer = null;
+  return joinAsBuzzer();
 }
 
 async function confirmJoin(intent) {
@@ -6349,7 +6371,7 @@ function bindPlay() {
   };
   document.querySelectorAll("#pressStart").forEach((b) => { b.onclick = () => markReady(); });
   document.querySelectorAll("#readyEnter").forEach((b) => {
-    b.onclick = () => { void beginJoin(state.room || state.joinInput || joinCode); };
+    b.onclick = () => { void (isPad() ? padEnterRoom() : beginJoin(state.room || state.joinInput || joinCode)); };
   });
   document.querySelectorAll("[data-kick]").forEach((b) => {
     b.onclick = async () => {
@@ -6555,7 +6577,7 @@ function startPoll() {
     }
     if (j.host) state.roomHost = cleanSeatName(j.host);
     if (role !== "pad" && state.phase === "lobby" && j.state?.armTv) {
-      state.joinWait = clamp(Number(j.state.joinLeft) || state.joinWait || 35, 5, 45);
+      state.joinWait = clamp(Number(j.state.joinLeft) || state.joinWait || 45, 15, 45);
       enterReady();
     }
     if (j.guests) {
