@@ -100,7 +100,7 @@ const PLACE_N = 10;
 const PLACE_MS = 90 * 24 * 60 * 60 * 1000;
 const TIER_LADDER = ["easy", "hard", "difficult", "extreme"];
 const BELT_ORDER = ["white", "yellow", "orange", "green", "blue", "purple", "brown", "black"];
-const BELT_STEP = 10000;
+const BELT_STEP = 100000;
 const BELT_META = {
   white: { label: "White", color: "#f5f5f5" },
   yellow: { label: "Yellow", color: "#f5d76e" },
@@ -2779,10 +2779,10 @@ function showStatusHTML() {
   const tierLine = lock && name
     ? `${tt("lockdownWord")} · ${name}`
     : name;
-  return `<div class="show-status" data-tier="${escapeHtml(tier || (lock ? "extreme" : ""))}">
-    <span class="show-tier">${escapeHtml(tierLine)}${stake ? ` · $${stake}` : ""}</span>
-    <span class="show-count"><b>${done}</b> ${escapeHtml(tt("qAnswered"))} · <b>${left}</b> ${escapeHtml(tt("qLeftLabel"))}</span>
-  </div>`;
+  return `<span class="show-status" data-tier="${escapeHtml(tier || (lock ? "extreme" : ""))}">
+    <b class="show-tier">${escapeHtml(tierLine)}${stake ? ` $${stake}` : ""}</b>
+    <span class="show-count">${total} · ${left} ${escapeHtml(tt("qLeftLabel"))}</span>
+  </span>`;
 }
 
 function botPaceHTML() {
@@ -5209,7 +5209,6 @@ function playHTML() {
     </div>
     ${readyPhase || endPhase ? `<div></div>` : (ld?.phase === "wager" || ld?.phase === "intro" ? wagerHTML() : (q && (["read", "buzz", "answer", "reveal"].includes(state.phase) || ld?.phase === "play" || ld?.phase === "flash") ? `${choiceButtons(q)}${ld ? "" : mapStealHTML()}` : `<div></div>`))}
     <div class="buzzbar">
-      ${showStatusHTML()}
       ${!state.onScreen && !pad && !ld && !readyPhase && !endPhase ? `<div class="dock set-dock">
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
         <label class="slider-lab">${tt("studio")} <input id="st" type="range" min="0" max="${STUDIOS.length - 1}" value="${state.studioI}" step="1"/></label>
@@ -5219,8 +5218,10 @@ function playHTML() {
       ${(pad && (state.phase === "answer" || (ld?.phase === "play" && isHero))) ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
       ${dropoutBtn}
       ${dropped && !canLeaveNow() ? `<p class="meta">${tt("dropoutWait")}</p>` : ""}
-      ${endPhase ? endActionsHTML() : ""}
-      ${(canLeaveNow() && (tv || pad || endPhase || state.viewing)) ? `<button class="ghost" id="quitBar" type="button">${leaveLabel}</button>` : ""}
+      <div class="tv-foot">
+        ${showStatusHTML()}
+        ${(canLeaveNow() && (tv || pad || endPhase || state.viewing)) ? `<button class="ghost" id="quitBar" type="button">${leaveLabel}</button>` : ""}
+      </div>
     </div>
     ${joinQrChip(140)}
     ${rulesHTML()}
