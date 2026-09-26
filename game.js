@@ -2576,6 +2576,28 @@ async function syncTopScores() {
   } catch { /* vault unreachable; local scores stay */ }
 }
 
+function endActionsHTML() {
+  if (state.phase !== "end") return "";
+  return `<div class="end-actions">
+    <button class="ghost" type="button" data-end="off">${tt("offScreenReturn")}</button>
+    <a class="primary" href="${dojoHref()}">${tt("goDojo")}</a>
+  </div>`;
+}
+async function returnOffScreen() {
+  try {
+    localStorage.setItem("fa-onscreen", "0");
+    localStorage.setItem("fa-mp", "off");
+  } catch { /* ignore */ }
+  if (forcedDisplay || wantsTv()) {
+    location.assign("/");
+    return;
+  }
+  leaveToLobby();
+  state.onScreen = false;
+  state.mpMode = "off";
+  role = "host";
+  paint(true);
+}
 function leaveToLobby() {
   stopTick();
   clearAiBuzz();
@@ -5102,7 +5124,7 @@ function playHTML() {
           ${map ? `<div class="pad-bubble">${map}</div>` : ""}
           ${showChoices ? choiceButtons(q) : ""}
           <div class="pad-buzz">
-            ${readyPhase ? entryButtonsHTML() : (ld ? "" : buzzerButton(canBuzz, buzzLabel))}
+            ${endPhase ? endActionsHTML() : (readyPhase ? entryButtonsHTML() : (ld ? "" : buzzerButton(canBuzz, buzzLabel)))}
             ${skipBtn}
           </div>
         </div>
@@ -5135,6 +5157,7 @@ function playHTML() {
             ${slang}
             <p class="qtext ${breaking ? "setbreak" : ""}">${prompt}</p>
             <p class="meta" id="clock">${endPhase ? scoreboard() : clockText()}</p>
+            ${endPhase ? endActionsHTML() : ""}
             ${state.viewing ? `<p class="meta">${tt("viewers", viewerCount())}</p>` : ""}
           </div>
           <div class="phone-answers">${answersMarkup}</div>
@@ -5170,6 +5193,7 @@ function playHTML() {
         <p class="cat">${tt("logoEnd")}</p>
         <p class="qtext">${tt("showEnd")}</p>
         <p class="meta" id="clock">${scoreboard()}</p>
+        ${endActionsHTML()}
       </div></div>` : `<div class="qwrap">
         <div class="qcard ${ld ? "lock" : ""} ${breaking ? "setbreak" : ""} ${state.mapLive ? "map-on" : ""}">
           <p class="cat">${cat}</p>
@@ -5195,6 +5219,7 @@ function playHTML() {
       ${(pad && (state.phase === "answer" || (ld?.phase === "play" && isHero))) ? `<button class="ghost mic" id="mic" type="button">${tt("speak")}</button>` : ""}
       ${dropoutBtn}
       ${dropped && !canLeaveNow() ? `<p class="meta">${tt("dropoutWait")}</p>` : ""}
+      ${endPhase ? endActionsHTML() : ""}
       ${(canLeaveNow() && (tv || pad || endPhase || state.viewing)) ? `<button class="ghost" id="quitBar" type="button">${leaveLabel}</button>` : ""}
     </div>
     ${joinQrChip(140)}
@@ -5818,6 +5843,9 @@ function bindLobby() {
   if (os) os.onchange = () => { if (os.checked) void bindScreen(true); };
   const osOff = $("#osOff");
   if (osOff) osOff.onchange = () => { if (osOff.checked) void bindScreen(false); };
+  document.querySelectorAll("[data-end='off']").forEach((b) => {
+    b.onclick = () => { void returnOffScreen(); };
+  });
   document.querySelectorAll("[data-off-screen]").forEach((b) => {
     b.onclick = () => void bindScreen(false);
   });
@@ -6427,6 +6455,9 @@ function bindRules() {
 }
 
 function bindPlay() {
+  document.querySelectorAll("[data-end='off']").forEach((b) => {
+    b.onclick = () => { void returnOffScreen(); };
+  });
   document.querySelectorAll(".ans").forEach((b) => {
     b.addEventListener("pointerdown", (ev) => {
       ev.preventDefault();
