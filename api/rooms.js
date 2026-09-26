@@ -131,7 +131,18 @@ export default async function handler(req, res) {
     cur.dropoutIds = { ...(cur.dropoutIds || {}), [id]: true };
     touch(cur);
   } else if (body.action === "state") {
-    cur.state = body.state || {};
+    // The TV publishes an authoritative full-state snapshot, but that snapshot
+    // does not carry pad-authored transient inputs (answer / wager). Preserve
+    // them when the incoming snapshot omits them so a periodic TV republish
+    // cannot wipe a pad submission the TV has not polled yet (which would stall
+    // the round). The TV dedupes by `at`, so keeping an already-consumed value
+    // is harmless and a newer submission simply overwrites it.
+    const incoming = body.state || {};
+    const prev = cur.state || {};
+    for (const k of ["lastAnswer", "lastWager"]) {
+      if (incoming[k] == null && prev[k] != null) incoming[k] = prev[k];
+    }
+    cur.state = incoming;
     touch(cur);
   } else if (body.action === "buzz") {
     cur.buzzes = cur.buzzes || [];
