@@ -248,6 +248,7 @@ const state = {
   maps: {},
   mapUses: {},
   mapLive: false,
+  mapClear: [],
   setBreakLeft: 0,
   setBreakTier: "",
   lockdownAt: [],
@@ -811,9 +812,13 @@ function choiceList(q) {
 }
 function choiceButtons(q) {
   const list = choiceList(q);
-  const picked = state.lockdown?.phase === "play" ? state.lockdown.picked : state.picked;
-  const reveal = state.phase === "reveal" || state.lockdown?.phase === "flash" || state.lockdown?.phase === "result";
-  const open = state.phase === "read" || state.phase === "buzz" || state.phase === "answer";
+  const ld = state.lockdown;
+  const picked = ld?.phase === "play" || ld?.phase === "flash" ? ld.picked : state.picked;
+  const reveal = state.phase === "reveal" || ld?.phase === "flash" || ld?.phase === "result";
+  const lockdownPlay = ld?.phase === "play" && state.phase === "lockdown";
+  const isHero = !ld || ld.playerId === state.youId;
+  const open = state.phase === "read" || state.phase === "buzz" || state.phase === "answer"
+    || (lockdownPlay && isHero);
   return `<div class="answers phone-answers">${list.map((c, i) => {
     let cls = "ans";
     if (reveal) {
@@ -2061,6 +2066,7 @@ function snapshot() {
     maps: state.maps,
     mapUses: state.mapUses,
     mapLive: state.mapLive,
+    mapClear: state.mapClear || [],
     setBreakLeft: state.setBreakLeft,
     setBreakTier: state.setBreakTier,
     lockdownAt: state.lockdownAt,
@@ -2255,6 +2261,7 @@ function startRead() {
   state.buzzId = "";
   state.mapLive = false;
   state.maps = {};
+  state.mapClear = [];
   state.readLeft = READ_S;
   state.studioI = (state.studioI + 1) % STUDIOS.length;
   paint();
@@ -2480,6 +2487,14 @@ function settleMain(ok, q, answererId) {
   if (mapped) {
     state.mapUses = { ...(state.mapUses || {}), [answererId]: (Number(state.mapUses?.[answererId]) || 0) + 1 };
   }
+  releaseMap(answererId);
+}
+
+function releaseMap(id) {
+  if (!id) return;
+  delete state.maps[id];
+  state.mapClear = [...new Set([...(state.mapClear || []), id])];
+  if (state.buzzId === id || state.youId === id || mapOwnerId() === id) state.mapLive = false;
 }
 
 function mergeTopScores(existing, row) {
@@ -2685,6 +2700,7 @@ function startSetBreak(tier) {
   state.buzzId = "";
   state.mapLive = false;
   state.maps = {};
+  state.mapClear = [];
   state.setBreakTier = tier || "";
   state.setBreakLeft = SET_BREAK_S;
   clearAiBuzz();
@@ -3113,8 +3129,8 @@ function runLockdownClock() {
       }
       state.lockdown.qLeft = Math.max(0, state.lockdown.qLeft - 1);
       state.lockdown.waitLeft = Math.max(0, (state.lockdown.waitLeft || 0) - 1);
-      const clock = $("#clock");
-      if (clock) clock.textContent = clockText();
+      paintLockMoney();
+      publish();
     }, 1000);
     state._ldWait = waitTick;
     return;
@@ -3127,12 +3143,18 @@ function runLockdownClock() {
       stopTick();
       lockdownPick(-1, true);
     } else {
-      const clock = $("#clock");
-      if (clock) clock.textContent = clockText();
-      // Force paint every ~5s so decaying points show on pads
-      if (state.lockdown.qLeft % 5 === 0) paint();
+      paintLockMoney();
+      publish();
     }
   }, 1000);
+}
+
+function paintLockMoney() {
+  const ld = state.lockdown;
+  const money = $("#lockMoney");
+  if (money && ld) money.textContent = `$${lockdownPointsNow(ld)}`;
+  const clock = $("#clock");
+  if (clock) clock.textContent = clockText();
 }
 
 function lockdownPick(i, forced = false) {
@@ -3170,6 +3192,7 @@ function lockdownPick(i, forced = false) {
       ld.earned = (ld.earned || 0) + pts;
     }
   }
+  releaseMap(ld.playerId);
   playSound(ok ? "correct" : "miss");
   state.pose = ok ? "win" : "loss";
   ld.phase = "flash";
@@ -4993,7 +5016,9 @@ function playHTML() {
     const note = !state.lockdown && !readyPhase && state.phase !== "read" && clockText()
       ? `<div class="pad-bubble"><p class="qtext">${escapeHtml(clockText())}</p></div>`
       : "";
-    const readClock = state.lockdown?.phase === "intro"
+    const readClock = state.lockdown?.phase === "play" || state.lockdown?.phase === "flash"
+      ? `<p class="read-clock" id="lockMoney">$${lockdownPointsNow(state.lockdown)}</p>`
+      : state.lockdown?.phase === "intro"
       ? `<p class="read-clock" id="clock">${state.lockdown.introLeft}</p>`
       : (state.phase === "read" || state.phase === "reveal"
         ? `<p class="read-clock" id="clock">${state.phase === "reveal" ? (state.gapLeft || 0) : state.readLeft}</p>`
@@ -5027,7 +5052,7 @@ function playHTML() {
           ${map ? `<div class="pad-bubble">${map}</div>` : ""}
           ${showChoices ? choiceButtons(q) : ""}
           <div class="pad-buzz">
-            ${readyPhase ? entryButtonsHTML() : buzzerButton(canBuzz, buzzLabel)}
+            ${readyPhase ? entryButtonsHTML() : (ld ? "" : buzzerButton(canBuzz, buzzLabel))}
             ${skipBtn}
           </div>
         </div>
@@ -5036,7 +5061,7 @@ function playHTML() {
     `;
   }
   if (phoneBoard) {
-    const answersMarkup = q && ["read", "buzz", "answer", "reveal"].includes(state.phase)
+    const answersMarkup = q && (["read", "buzz", "answer", "reveal"].includes(state.phase) || ld?.phase === "play" || ld?.phase === "flash")
       ? choiceButtons(q)
       : (breaking
         ? `<p class="meta">${escapeHtml(tt("setBreakClock", state.setBreakLeft))}</p>`
@@ -5112,7 +5137,7 @@ function playHTML() {
       </div>`)}
       ${pad ? "" : `<div class="host"><img src="${POSE[state.pose] || POSE.idle}" alt="Jeremy" style="height:var(--host-h)"/></div>`}
     </div>
-    ${readyPhase || endPhase ? `<div></div>` : (ld?.phase === "wager" || ld?.phase === "intro" ? wagerHTML() : (q && ["read", "buzz", "answer", "reveal"].includes(state.phase) ? `${choiceButtons(q)}${mapStealHTML()}` : `<div></div>`))}
+    ${readyPhase || endPhase ? `<div></div>` : (ld?.phase === "wager" || ld?.phase === "intro" ? wagerHTML() : (q && (["read", "buzz", "answer", "reveal"].includes(state.phase) || ld?.phase === "play" || ld?.phase === "flash") ? `${choiceButtons(q)}${ld ? "" : mapStealHTML()}` : `<div></div>`))}
     <div class="buzzbar">
       ${!state.onScreen && !pad && !ld && !readyPhase && !endPhase ? `<div class="dock set-dock">
         <label class="slider-lab">${tt("jeremy")} <input id="hs" type="range" min="24" max="62" value="${state.hostH}" step="1"/></label>
@@ -6664,14 +6689,19 @@ function startPoll() {
       takeBuzz(j.state.buzzId || "you", j.state.buzzBy || "Player");
     }
     if (role !== "pad" && j.state?.maps && mapPhaseOpen()) {
+      const cleared = new Set([...(j.state.mapClear || []), ...(state.mapClear || [])].map((id) => String(id || "")));
       Object.entries(j.state.maps).forEach(([id, target]) => {
-        if (!target) {
+        if (!target || cleared.has(id)) {
           delete state.maps[id];
           return;
         }
         if (state.maps[id] === target) return;
         if (mapUsesLeft(state.mapUses?.[id]) <= 0) return;
         state.maps[id] = target;
+        state.mapClear = (state.mapClear || []).filter((x) => x !== id);
+      });
+      cleared.forEach((id) => {
+        if (!j.state.maps[id]) delete state.maps[id];
       });
     }
     if (role !== "pad" && j.state?.lastWager && state.lockdown?.phase === "wager") {
@@ -6683,9 +6713,11 @@ function startPoll() {
     }
     if (role !== "pad" && j.state?.lastAnswer) {
       const a = j.state.lastAnswer;
-      const ready = state.phase === "read" || state.phase === "buzz" || state.phase === "answer" || state.lockdown?.phase === "play" || a.lockdown;
-      const sameCard = Number(a.q) === Number(state.i);
-      if (a && a.at && a.at !== state.lastAnswerAt && ready && sameCard && state.answeredFor !== state.i) {
+      const lockdownAnswer = Boolean(a.lockdown) && state.lockdown?.phase === "play";
+      const ready = state.phase === "read" || state.phase === "buzz" || state.phase === "answer" || lockdownAnswer;
+      const sameCard = lockdownAnswer || Number(a.q) === Number(state.i);
+      const fresh = lockdownAnswer || state.answeredFor !== state.i;
+      if (a && a.at && a.at !== state.lastAnswerAt && ready && sameCard && fresh) {
         state.lastAnswerAt = a.at;
         applyRemoteAnswer(a.id, a.index, Boolean(a.lockdown), a.q);
       }
@@ -6756,8 +6788,7 @@ function paint(force = false) {
     ld?.wagers?.[state.youId]?.locked, ld?.wagers?.[state.youId]?.side, ld?.wagers?.[state.youId]?.amount,
   ].join("|");
   if (!force && key === lastKey && frame === "play") {
-    const clock = $("#clock");
-    if (clock) clock.textContent = clockText();
+    paintLockMoney();
     return;
   }
   lastKey = key;
