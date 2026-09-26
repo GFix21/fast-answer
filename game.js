@@ -23,6 +23,7 @@ import { dealRamp } from "./lib/generation-deal.js";
 import { slangFor } from "./q-and-a/bots/slang.js";
 import { hashProfilePassword, hashesMatch } from "./lib/password.js";
 import { redactState } from "./lib/room-wire.js";
+import { dropoutEndsGame } from "./lib/seat-rules.js";
 import { spreadByGeneration } from "./lib/generation-deal.js";
 import {
   buildDeviceCohort,
