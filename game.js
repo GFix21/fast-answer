@@ -6866,6 +6866,66 @@ window.addEventListener("keydown", (e) => {
   if (n >= 0) pick(n);
 });
 
+let wakeSentinel = null;
+let wakeVideo = null;
+function ensureWakeVideo() {
+  if (wakeVideo) return wakeVideo;
+  const video = document.createElement("video");
+  video.id = "keepAwake";
+  video.src = "/keep-awake.mp4";
+  video.loop = true;
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+  video.setAttribute("playsinline", "");
+  video.setAttribute("webkit-playsinline", "");
+  video.autoplay = true;
+  video.preload = "auto";
+  video.setAttribute("aria-hidden", "true");
+  video.tabIndex = -1;
+  video.style.cssText = "position:fixed;left:0;bottom:0;width:8px;height:8px;opacity:.02;pointer-events:none;z-index:0";
+  video.addEventListener("ended", () => { void video.play().catch(() => {}); });
+  document.body.appendChild(video);
+  wakeVideo = video;
+  return video;
+}
+async function holdScreen() {
+  if (document.visibilityState === "hidden") {
+    if (wakeVideo && !wakeVideo.paused) wakeVideo.pause();
+    return;
+  }
+  const video = ensureWakeVideo();
+  if (video.paused) {
+    try {
+      await video.play();
+    } catch {
+      video.muted = true;
+      try { await video.play(); } catch { /* a tap will start it */ }
+    }
+  }
+  try {
+    if (!wakeSentinel && navigator.wakeLock?.request) {
+      wakeSentinel = await navigator.wakeLock.request("screen");
+      wakeSentinel.addEventListener("release", () => { wakeSentinel = null; });
+    }
+  } catch { /* denied until a gesture, or this browser has no wake lock */ }
+}
+function armScreen() {
+  const kick = () => {
+    const video = ensureWakeVideo();
+    video.muted = false;
+    video.volume = 0.05;
+    void holdScreen();
+  };
+  window.addEventListener("pointerdown", kick, { capture: true, passive: true });
+  window.addEventListener("touchstart", kick, { capture: true, passive: true });
+  window.addEventListener("keydown", kick, { capture: true });
+  document.addEventListener("visibilitychange", () => { void holdScreen(); });
+  void holdScreen();
+  setInterval(() => { void holdScreen(); }, 20000);
+}
+armScreen();
+
 async function identifyCountry() {
   const tz = detectCountry();
   let fromIp = "";
