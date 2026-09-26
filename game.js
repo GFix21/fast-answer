@@ -81,7 +81,7 @@ const FLOW_URL = "/flow/index.html";
 const PROFILE_KEY = "fa-profile-v1";
 const RECENT_Q_KEY = "fa-recent-qids-v1";
 const RECENT_Q_MAX = 240;
-const READ_S = 10;
+const READ_S = 5;
 const PLACE_READ_S = 5;
 const POINTS = { easy: 100, hard: 500, difficult: 1000, extreme: 5000 };
 const DEAL = { easy: 20, hard: 10, difficult: 5, extreme: 2 };
@@ -2753,6 +2753,21 @@ function applyRemoteMap(id, target) {
   publish();
 }
 
+function nextQuestion() {
+  // Host manual advance / safeguard: jump to the next question from any live
+  // question phase. Only the room host controls the show.
+  if (role === "pad" || state.viewing) return;
+  if (state.lockdown) return;
+  if (!["read", "buzz", "answer", "reveal"].includes(state.phase)) return;
+  stopTick();
+  clearAiBuzz();
+  if (state.revealT) {
+    clearTimeout(state.revealT);
+    state.revealT = null;
+  }
+  continueRound();
+}
+
 function afterReveal(ok) {
   stopTick();
   clearAiBuzz();
@@ -4917,6 +4932,11 @@ function playHTML() {
     : ld
       ? lockdownPlay && isHero && ld.phase === "play"
       : state.phase === "answer" || state.phase === "read" || state.phase === "buzz";
+  // Host-only manual advance: skip straight to the next question from any live
+  // question phase (a safeguard so the show never gets stuck on a question).
+  const canSkip = role !== "pad" && !state.viewing && !ld
+    && ["read", "buzz", "answer", "reveal"].includes(state.phase);
+  const skipBtn = canSkip ? `<button class="ghost" id="nextQ" type="button">${tt("nextQuestion")}</button>` : "";
   let prompt;
   if (readyPhase) prompt = "";
   else if (state.phase === "between" && state.introCast) prompt = escapeHtml(tt("castIntro", (state.introCast || []).join(" · ")));
@@ -5008,6 +5028,7 @@ function playHTML() {
           ${showChoices ? choiceButtons(q) : ""}
           <div class="pad-buzz">
             ${readyPhase ? entryButtonsHTML() : buzzerButton(canBuzz, buzzLabel)}
+            ${skipBtn}
           </div>
         </div>
       </div>
@@ -5028,6 +5049,7 @@ function playHTML() {
         <div class="grow"></div>
         ${!pad && state.room ? `<button class="primary top-copy" type="button" data-copy="silk">${tt("copyTv")}</button>` : ""}
         <button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>
+        ${skipBtn}
         ${canLeaveNow() ? `<button class="word" id="quit" type="button">${leaveLabel}</button>` : ""}
         ${refreshNoticeHTML()}
       </div>
@@ -5065,6 +5087,7 @@ function playHTML() {
       <div class="grow"></div>
       ${readyPhase || endPhase ? "" : scoreboard()}
       <button class="word rules-link" id="rulesBtn" type="button">${tt("rules")}</button>
+      ${skipBtn}
       ${leaveTop}
       ${refreshNoticeHTML()}
     </div>
@@ -6362,6 +6385,7 @@ function bindPlay() {
   if (mic) mic.onclick = listenVoice;
   const goLobby = () => leaveToLobby();
   document.querySelectorAll("#quit, #quitBar").forEach((el) => { el.onclick = goLobby; });
+  document.querySelectorAll("#nextQ").forEach((el) => { el.onclick = () => nextQuestion(); });
   const dropout = $("#dropout");
   if (dropout) dropout.onclick = () => pressDropout();
   const force = $("#forceStart");
