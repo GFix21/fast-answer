@@ -259,6 +259,7 @@ async function handleRoom(req, res) {
       host: body.host || cur.host,
       name: body.name != null ? String(body.name).trim().slice(0, 32) : (cur.name || ""),
       joinWait: Math.min(45, Math.max(5, Number(body.joinWait ?? cur.joinWait) || 15)),
+      botPace: ["easy", "hard", "difficult", "extreme"].includes(body.botPace) ? body.botPace : (cur.botPace || "hard"),
       ageFrom: Math.min(99, Math.max(10, Number(body.ageFrom ?? cur.ageFrom) || 13)),
       ageTo: Math.min(99, Math.max(10, Number(body.ageTo ?? cur.ageTo) || 99)),
       playerCount: Math.min(12, Math.max(2, Number(body.playerCount ?? cur.playerCount) || 3)),
